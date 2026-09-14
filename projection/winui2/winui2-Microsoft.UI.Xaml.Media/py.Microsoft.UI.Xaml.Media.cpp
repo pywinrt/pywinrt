@@ -112,23 +112,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintTransitionDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintTransitionDuration();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintTransitionDuration", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintTransitionDuration();
             }());
         }
         catch (...)
@@ -148,24 +135,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintTransitionDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintTransitionDuration(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintTransitionDuration", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintTransitionDuration(param0);
             }
 
             return 0;
@@ -181,23 +155,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintOpacity();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintOpacity", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintOpacity();
             }());
         }
         catch (...)
@@ -217,24 +178,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintOpacity(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintOpacity", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintOpacity(param0);
             }
 
             return 0;
@@ -250,23 +198,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintColor();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintColor", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintColor();
             }());
         }
         catch (...)
@@ -286,24 +221,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintColor(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintColor", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintColor(param0);
             }
 
             return 0;
@@ -319,23 +241,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"BackgroundSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().BackgroundSource();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "BackgroundSource", "Microsoft.UI.Xaml.Media.IAcrylicBrush").BackgroundSource();
             }());
         }
         catch (...)
@@ -355,24 +264,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"BackgroundSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::AcrylicBackgroundSource>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().BackgroundSource(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "BackgroundSource", "Microsoft.UI.Xaml.Media.IAcrylicBrush").BackgroundSource(param0);
             }
 
             return 0;
@@ -388,23 +284,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"AlwaysUseFallback");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().AlwaysUseFallback();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "AlwaysUseFallback", "Microsoft.UI.Xaml.Media.IAcrylicBrush").AlwaysUseFallback();
             }());
         }
         catch (...)
@@ -424,24 +307,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"AlwaysUseFallback");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().AlwaysUseFallback(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "AlwaysUseFallback", "Microsoft.UI.Xaml.Media.IAcrylicBrush").AlwaysUseFallback(param0);
             }
 
             return 0;
@@ -457,23 +327,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintLuminosityOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintLuminosityOpacity();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintLuminosityOpacity", "Microsoft.UI.Xaml.Media.IAcrylicBrush2").TintLuminosityOpacity();
             }());
         }
         catch (...)
@@ -493,24 +350,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintLuminosityOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintLuminosityOpacity(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintLuminosityOpacity", "Microsoft.UI.Xaml.Media.IAcrylicBrush2").TintLuminosityOpacity(param0);
             }
 
             return 0;
@@ -889,23 +733,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"SpreadMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().SpreadMethod();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "SpreadMethod", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").SpreadMethod();
             }());
         }
         catch (...)
@@ -925,24 +756,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"SpreadMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::GradientSpreadMethod>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().SpreadMethod(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "SpreadMethod", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").SpreadMethod(param0);
             }
 
             return 0;
@@ -958,23 +776,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"RadiusY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusY();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "RadiusY", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").RadiusY();
             }());
         }
         catch (...)
@@ -994,24 +799,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"RadiusY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusY(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "RadiusY", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").RadiusY(param0);
             }
 
             return 0;
@@ -1027,23 +819,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"RadiusX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusX();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "RadiusX", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").RadiusX();
             }());
         }
         catch (...)
@@ -1063,24 +842,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"RadiusX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusX(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "RadiusX", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").RadiusX(param0);
             }
 
             return 0;
@@ -1096,23 +862,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"MappingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().MappingMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "MappingMode", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").MappingMode();
             }());
         }
         catch (...)
@@ -1132,24 +885,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"MappingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::BrushMappingMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().MappingMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "MappingMode", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").MappingMode(param0);
             }
 
             return 0;
@@ -1165,23 +905,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"InterpolationSpace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().InterpolationSpace();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "InterpolationSpace", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").InterpolationSpace();
             }());
         }
         catch (...)
@@ -1201,24 +928,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"InterpolationSpace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionColorSpace>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().InterpolationSpace(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "InterpolationSpace", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").InterpolationSpace(param0);
             }
 
             return 0;
@@ -1234,23 +948,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"GradientOrigin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().GradientOrigin();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "GradientOrigin", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").GradientOrigin();
             }());
         }
         catch (...)
@@ -1270,24 +971,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"GradientOrigin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().GradientOrigin(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "GradientOrigin", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").GradientOrigin(param0);
             }
 
             return 0;
@@ -1303,23 +991,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"Center");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().Center();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "Center", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").Center();
             }());
         }
         catch (...)
@@ -1339,24 +1014,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"Center");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().Center(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "Center", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").Center(param0);
             }
 
             return 0;
@@ -1372,23 +1034,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"GradientStops");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().GradientStops();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "GradientStops", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").GradientStops();
             }());
         }
         catch (...)
@@ -2173,23 +1822,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"TargetTheme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().TargetTheme();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RevealBrush", "TargetTheme", "Microsoft.UI.Xaml.Media.IRevealBrush").TargetTheme();
             }());
         }
         catch (...)
@@ -2209,24 +1845,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"TargetTheme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ApplicationTheme>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().TargetTheme(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RevealBrush", "TargetTheme", "Microsoft.UI.Xaml.Media.IRevealBrush").TargetTheme(param0);
             }
 
             return 0;
@@ -2242,23 +1865,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().Color();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RevealBrush", "Color", "Microsoft.UI.Xaml.Media.IRevealBrush").Color();
             }());
         }
         catch (...)
@@ -2278,24 +1888,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().Color(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RevealBrush", "Color", "Microsoft.UI.Xaml.Media.IRevealBrush").Color(param0);
             }
 
             return 0;
@@ -2311,23 +1908,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"AlwaysUseFallback");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().AlwaysUseFallback();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RevealBrush", "AlwaysUseFallback", "Microsoft.UI.Xaml.Media.IRevealBrush").AlwaysUseFallback();
             }());
         }
         catch (...)
@@ -2347,24 +1931,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"AlwaysUseFallback");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().AlwaysUseFallback(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RevealBrush", "AlwaysUseFallback", "Microsoft.UI.Xaml.Media.IRevealBrush").AlwaysUseFallback(param0);
             }
 
             return 0;

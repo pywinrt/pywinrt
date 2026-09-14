@@ -29,19 +29,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails", L"ReportCanMakePaymentResult", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>(args, 0);
 
                 {
@@ -68,19 +55,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails", L"Request");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -167,19 +141,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentAppManager", L"RegisterAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -209,19 +170,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentAppManager", L"UnregisterAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -366,19 +314,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"AcceptAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentToken>(args, 0);
 
                 return py::convert([&]()
@@ -450,19 +385,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"Reject", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Reject();
@@ -491,19 +413,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"UpdateSelectedShippingOptionAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>(args, 0);
 
                 return py::convert([&]()
@@ -533,19 +442,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"UpdateShippingAddressAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentAddress>(args, 0);
 
                 return py::convert([&]()
@@ -571,19 +467,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"PayerPhoneNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -607,19 +490,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"PayerPhoneNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -640,19 +510,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"PayerName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -676,19 +533,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"PayerName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -709,19 +553,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"PayerEmail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -745,19 +576,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"PayerEmail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -778,19 +596,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransaction", L"PaymentRequest");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -901,19 +706,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

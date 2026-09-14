@@ -53,19 +53,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUI", L"CaptureFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Media::Capture::CameraCaptureUIMode>(args, 0);
 
                 return py::convert([&]()
@@ -91,19 +78,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUI", L"PhotoSettings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -121,19 +95,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUI", L"VideoSettings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -239,19 +200,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"MaxResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -275,19 +223,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"MaxResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution>(arg);
 
             {
@@ -308,19 +243,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -344,19 +266,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Media::Capture::CameraCaptureUIPhotoFormat>(arg);
 
             {
@@ -377,19 +286,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedSizeInPixels");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -413,19 +309,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedSizeInPixels");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             {
@@ -446,19 +329,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedAspectRatio");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -482,19 +352,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"CroppedAspectRatio");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             {
@@ -515,19 +372,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"AllowCropping");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -551,19 +395,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings", L"AllowCropping");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -674,19 +505,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -710,19 +528,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Media::Capture::CameraCaptureUIMaxVideoResolution>(arg);
 
             {
@@ -743,19 +548,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxDurationInSeconds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -779,19 +571,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"MaxDurationInSeconds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -812,19 +591,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -848,19 +614,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Media::Capture::CameraCaptureUIVideoFormat>(arg);
 
             {
@@ -881,19 +634,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"AllowTrimming");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -917,19 +657,6 @@ namespace py::cpp::Microsoft::Windows::Media::Capture
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings", L"AllowTrimming");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {

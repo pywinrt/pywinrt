@@ -69,19 +69,6 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Holographic.HolographicKeyboard", L"ResetPlacementOverride", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ResetPlacementOverride();
@@ -110,19 +97,6 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Holographic.HolographicKeyboard", L"SetPlacementOverride", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 2);
@@ -144,19 +118,6 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Holographic.HolographicKeyboard", L"SetPlacementOverride", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 2);

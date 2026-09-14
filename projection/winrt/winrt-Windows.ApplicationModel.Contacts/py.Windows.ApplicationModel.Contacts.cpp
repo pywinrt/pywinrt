@@ -29,19 +29,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.AggregateContactManager", L"FindRawContactsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert([&]()
@@ -71,19 +58,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.AggregateContactManager", L"SetRemoteIdentificationInformationAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -91,7 +65,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetRemoteIdentificationInformationAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IAggregateContactManager2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.AggregateContactManager", "SetRemoteIdentificationInformationAsync", "Windows.ApplicationModel.Contacts.IAggregateContactManager2", 3).SetRemoteIdentificationInformationAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -115,19 +89,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.AggregateContactManager", L"TryLinkContactsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 1);
 
@@ -158,19 +119,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.AggregateContactManager", L"TrySetPreferredSourceForPictureAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 1);
 
@@ -201,19 +149,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.AggregateContactManager", L"UnlinkRawContactAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert([&]()
@@ -329,19 +264,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -365,19 +287,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
@@ -398,19 +307,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -434,19 +330,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -467,19 +350,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Fields");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -497,23 +367,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "Id", "Windows.ApplicationModel.Contacts.IContact2").Id();
             }());
         }
         catch (...)
@@ -533,24 +390,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Id(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "Id", "Windows.ApplicationModel.Contacts.IContact2").Id(param0);
             }
 
             return 0;
@@ -566,23 +410,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Notes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Notes();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "Notes", "Windows.ApplicationModel.Contacts.IContact2").Notes();
             }());
         }
         catch (...)
@@ -602,24 +433,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Notes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Notes(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "Notes", "Windows.ApplicationModel.Contacts.IContact2").Notes(param0);
             }
 
             return 0;
@@ -635,23 +453,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"ConnectedServiceAccounts");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConnectedServiceAccounts();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "ConnectedServiceAccounts", "Windows.ApplicationModel.Contacts.IContact2").ConnectedServiceAccounts();
             }());
         }
         catch (...)
@@ -665,23 +470,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Emails");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emails();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "Emails", "Windows.ApplicationModel.Contacts.IContact2").Emails();
             }());
         }
         catch (...)
@@ -695,23 +487,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Addresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Addresses();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "Addresses", "Windows.ApplicationModel.Contacts.IContact2").Addresses();
             }());
         }
         catch (...)
@@ -725,23 +504,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"ImportantDates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ImportantDates();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "ImportantDates", "Windows.ApplicationModel.Contacts.IContact2").ImportantDates();
             }());
         }
         catch (...)
@@ -755,23 +521,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"JobInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.JobInfo();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "JobInfo", "Windows.ApplicationModel.Contacts.IContact2").JobInfo();
             }());
         }
         catch (...)
@@ -785,23 +538,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"DataSuppliers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DataSuppliers();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "DataSuppliers", "Windows.ApplicationModel.Contacts.IContact2").DataSuppliers();
             }());
         }
         catch (...)
@@ -815,23 +555,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Phones");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Phones();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "Phones", "Windows.ApplicationModel.Contacts.IContact2").Phones();
             }());
         }
         catch (...)
@@ -845,23 +572,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"ProviderProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProviderProperties();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "ProviderProperties", "Windows.ApplicationModel.Contacts.IContact2").ProviderProperties();
             }());
         }
         catch (...)
@@ -875,23 +589,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"SignificantOthers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SignificantOthers();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "SignificantOthers", "Windows.ApplicationModel.Contacts.IContact2").SignificantOthers();
             }());
         }
         catch (...)
@@ -905,23 +606,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Websites");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Websites();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "Websites", "Windows.ApplicationModel.Contacts.IContact2").Websites();
             }());
         }
         catch (...)
@@ -935,23 +623,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"SourceDisplayPicture");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SourceDisplayPicture();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "SourceDisplayPicture", "Windows.ApplicationModel.Contacts.IContact3").SourceDisplayPicture();
             }());
         }
         catch (...)
@@ -971,24 +646,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"SourceDisplayPicture");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SourceDisplayPicture(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "SourceDisplayPicture", "Windows.ApplicationModel.Contacts.IContact3").SourceDisplayPicture(param0);
             }
 
             return 0;
@@ -1004,23 +666,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"TextToneToken");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TextToneToken();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "TextToneToken", "Windows.ApplicationModel.Contacts.IContact3").TextToneToken();
             }());
         }
         catch (...)
@@ -1040,24 +689,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"TextToneToken");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TextToneToken(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "TextToneToken", "Windows.ApplicationModel.Contacts.IContact3").TextToneToken(param0);
             }
 
             return 0;
@@ -1073,23 +709,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"DisplayNameOverride");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayNameOverride();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "DisplayNameOverride", "Windows.ApplicationModel.Contacts.IContact3").DisplayNameOverride();
             }());
         }
         catch (...)
@@ -1109,24 +732,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"DisplayNameOverride");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DisplayNameOverride(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "DisplayNameOverride", "Windows.ApplicationModel.Contacts.IContact3").DisplayNameOverride(param0);
             }
 
             return 0;
@@ -1142,23 +752,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"DisplayPictureUserUpdateTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayPictureUserUpdateTime();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "DisplayPictureUserUpdateTime", "Windows.ApplicationModel.Contacts.IContact3").DisplayPictureUserUpdateTime();
             }());
         }
         catch (...)
@@ -1178,24 +775,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"DisplayPictureUserUpdateTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DisplayPictureUserUpdateTime(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "DisplayPictureUserUpdateTime", "Windows.ApplicationModel.Contacts.IContact3").DisplayPictureUserUpdateTime(param0);
             }
 
             return 0;
@@ -1211,23 +795,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Nickname");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Nickname();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "Nickname", "Windows.ApplicationModel.Contacts.IContact3").Nickname();
             }());
         }
         catch (...)
@@ -1247,24 +818,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"Nickname");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Nickname(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "Nickname", "Windows.ApplicationModel.Contacts.IContact3").Nickname(param0);
             }
 
             return 0;
@@ -1280,23 +838,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RemoteId();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "RemoteId", "Windows.ApplicationModel.Contacts.IContact3").RemoteId();
             }());
         }
         catch (...)
@@ -1316,24 +861,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RemoteId(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "RemoteId", "Windows.ApplicationModel.Contacts.IContact3").RemoteId(param0);
             }
 
             return 0;
@@ -1349,23 +881,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"RingToneToken");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RingToneToken();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "RingToneToken", "Windows.ApplicationModel.Contacts.IContact3").RingToneToken();
             }());
         }
         catch (...)
@@ -1385,24 +904,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"RingToneToken");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RingToneToken(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "RingToneToken", "Windows.ApplicationModel.Contacts.IContact3").RingToneToken(param0);
             }
 
             return 0;
@@ -1418,23 +924,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"ContactListId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContactListId();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "ContactListId", "Windows.ApplicationModel.Contacts.IContact3").ContactListId();
             }());
         }
         catch (...)
@@ -1448,23 +941,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"LargeDisplayPicture");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LargeDisplayPicture();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "LargeDisplayPicture", "Windows.ApplicationModel.Contacts.IContact3").LargeDisplayPicture();
             }());
         }
         catch (...)
@@ -1478,23 +958,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"SmallDisplayPicture");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SmallDisplayPicture();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "SmallDisplayPicture", "Windows.ApplicationModel.Contacts.IContact3").SmallDisplayPicture();
             }());
         }
         catch (...)
@@ -1508,23 +975,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"SortName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SortName();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "SortName", "Windows.ApplicationModel.Contacts.IContact3").SortName();
             }());
         }
         catch (...)
@@ -1538,23 +992,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"AggregateId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AggregateId();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "AggregateId", "Windows.ApplicationModel.Contacts.IContact3").AggregateId();
             }());
         }
         catch (...)
@@ -1568,23 +1009,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"FullName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FullName();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "FullName", "Windows.ApplicationModel.Contacts.IContact3").FullName();
             }());
         }
         catch (...)
@@ -1598,23 +1026,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"IsAggregate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsAggregate();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "IsAggregate", "Windows.ApplicationModel.Contacts.IContact3").IsAggregate();
             }());
         }
         catch (...)
@@ -1628,23 +1043,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"IsDisplayPictureManuallySet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDisplayPictureManuallySet();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "IsDisplayPictureManuallySet", "Windows.ApplicationModel.Contacts.IContact3").IsDisplayPictureManuallySet();
             }());
         }
         catch (...)
@@ -1658,23 +1060,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"IsMe");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsMe();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContact3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "IsMe", "Windows.ApplicationModel.Contacts.IContact3").IsMe();
             }());
         }
         catch (...)
@@ -1688,23 +1077,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"YomiGivenName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.YomiGivenName();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "YomiGivenName", "Windows.ApplicationModel.Contacts.IContactName").YomiGivenName();
             }());
         }
         catch (...)
@@ -1724,24 +1100,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"YomiGivenName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.YomiGivenName(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "YomiGivenName", "Windows.ApplicationModel.Contacts.IContactName").YomiGivenName(param0);
             }
 
             return 0;
@@ -1757,23 +1120,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"HonorificNameSuffix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HonorificNameSuffix();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "HonorificNameSuffix", "Windows.ApplicationModel.Contacts.IContactName").HonorificNameSuffix();
             }());
         }
         catch (...)
@@ -1793,24 +1143,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"HonorificNameSuffix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HonorificNameSuffix(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "HonorificNameSuffix", "Windows.ApplicationModel.Contacts.IContactName").HonorificNameSuffix(param0);
             }
 
             return 0;
@@ -1826,23 +1163,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"YomiFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.YomiFamilyName();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "YomiFamilyName", "Windows.ApplicationModel.Contacts.IContactName").YomiFamilyName();
             }());
         }
         catch (...)
@@ -1862,24 +1186,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"YomiFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.YomiFamilyName(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "YomiFamilyName", "Windows.ApplicationModel.Contacts.IContactName").YomiFamilyName(param0);
             }
 
             return 0;
@@ -1895,23 +1206,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"MiddleName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MiddleName();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "MiddleName", "Windows.ApplicationModel.Contacts.IContactName").MiddleName();
             }());
         }
         catch (...)
@@ -1931,24 +1229,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"MiddleName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MiddleName(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "MiddleName", "Windows.ApplicationModel.Contacts.IContactName").MiddleName(param0);
             }
 
             return 0;
@@ -1964,23 +1249,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"LastName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LastName();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "LastName", "Windows.ApplicationModel.Contacts.IContactName").LastName();
             }());
         }
         catch (...)
@@ -2000,24 +1272,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"LastName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LastName(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "LastName", "Windows.ApplicationModel.Contacts.IContactName").LastName(param0);
             }
 
             return 0;
@@ -2033,23 +1292,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"HonorificNamePrefix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HonorificNamePrefix();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "HonorificNamePrefix", "Windows.ApplicationModel.Contacts.IContactName").HonorificNamePrefix();
             }());
         }
         catch (...)
@@ -2069,24 +1315,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"HonorificNamePrefix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HonorificNamePrefix(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "HonorificNamePrefix", "Windows.ApplicationModel.Contacts.IContactName").HonorificNamePrefix(param0);
             }
 
             return 0;
@@ -2102,23 +1335,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"FirstName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FirstName();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "FirstName", "Windows.ApplicationModel.Contacts.IContactName").FirstName();
             }());
         }
         catch (...)
@@ -2138,24 +1358,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"FirstName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.FirstName(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "FirstName", "Windows.ApplicationModel.Contacts.IContactName").FirstName(param0);
             }
 
             return 0;
@@ -2171,23 +1378,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "DisplayName", "Windows.ApplicationModel.Contacts.IContactName").DisplayName();
             }());
         }
         catch (...)
@@ -2201,23 +1395,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.Contact", L"YomiDisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.YomiDisplayName();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactName>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.Contact", "YomiDisplayName", "Windows.ApplicationModel.Contacts.IContactName").YomiDisplayName();
             }());
         }
         catch (...)
@@ -2356,19 +1537,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"StreetAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2392,19 +1560,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"StreetAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2425,19 +1580,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"Region");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2461,19 +1603,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"Region");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2494,19 +1623,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"PostalCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2530,19 +1646,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"PostalCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2563,19 +1666,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"Locality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2599,19 +1689,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"Locality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2632,19 +1709,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2668,19 +1732,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactAddressKind>(arg);
 
             {
@@ -2701,19 +1752,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2737,19 +1775,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2770,19 +1795,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"Country");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2806,19 +1818,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAddress", L"Country");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2931,19 +1930,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"SupportedOperations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2967,19 +1953,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"SupportedOperations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationOperations>(arg);
 
             {
@@ -3000,19 +1973,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3036,19 +1996,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3069,19 +2016,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"ContactId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3105,19 +2039,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"ContactId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3138,19 +2059,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"AnnotationListId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3168,19 +2076,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3198,19 +2093,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"IsDisabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3228,19 +2110,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"ProviderProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3258,23 +2127,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"ContactListId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContactListId();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactAnnotation2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactAnnotation", "ContactListId", "Windows.ApplicationModel.Contacts.IContactAnnotation2").ContactListId();
             }());
         }
         catch (...)
@@ -3294,24 +2150,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotation", L"ContactListId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContactListId(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactAnnotation2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactAnnotation", "ContactListId", "Windows.ApplicationModel.Contacts.IContactAnnotation2").ContactListId(param0);
             }
 
             return 0;
@@ -3402,19 +2245,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationList", L"DeleteAnnotationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>(args, 0);
 
                 return py::convert([&]()
@@ -3444,19 +2274,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationList", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3484,19 +2301,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationList", L"FindAnnotationsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3524,19 +2328,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationList", L"FindAnnotationsByRemoteIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3566,19 +2357,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationList", L"GetAnnotationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3608,19 +2386,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationList", L"TrySaveAnnotationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>(args, 0);
 
                 return py::convert([&]()
@@ -3646,19 +2411,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationList", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3676,19 +2428,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationList", L"ProviderPackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3706,19 +2445,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationList", L"UserDataAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3812,19 +2538,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationStore", L"CreateAnnotationListAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3841,19 +2554,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationStore", L"CreateAnnotationListAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3883,19 +2583,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationStore", L"DisableAnnotationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>(args, 0);
 
                 return py::convert([&]()
@@ -3925,19 +2612,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationStore", L"FindAnnotationListsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3965,19 +2639,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationStore", L"FindAnnotationsForContactAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert([&]()
@@ -4007,25 +2668,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationStore", L"FindAnnotationsForContactListAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindAnnotationsForContactListAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactAnnotationStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactAnnotationStore", "FindAnnotationsForContactListAsync", "Windows.ApplicationModel.Contacts.IContactAnnotationStore2", 1).FindAnnotationsForContactListAsync(param0);
                 }());
             }
             catch (...)
@@ -4049,19 +2697,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationStore", L"FindContactIdsByEmailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4091,19 +2726,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationStore", L"FindContactIdsByPhoneNumberAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4133,19 +2755,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactAnnotationStore", L"GetAnnotationListAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4242,19 +2851,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactBatch", L"Contacts");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4272,19 +2868,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactBatch", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4371,22 +2954,9 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -4412,19 +2982,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader", L"SetData", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 {
@@ -4482,7 +3039,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -4563,19 +3120,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactCardOptions", L"InitialTabKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4599,19 +3143,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactCardOptions", L"InitialTabKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactCardTabKind>(arg);
 
             {
@@ -4632,19 +3163,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactCardOptions", L"HeaderKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4668,19 +3186,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactCardOptions", L"HeaderKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactCardHeaderKind>(arg);
 
             {
@@ -4701,23 +3206,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactCardOptions", L"ServerSearchContactListIds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerSearchContactListIds();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactCardOptions2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactCardOptions", "ServerSearchContactListIds", "Windows.ApplicationModel.Contacts.IContactCardOptions2").ServerSearchContactListIds();
             }());
         }
         catch (...)
@@ -4797,19 +3289,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactChange", L"ChangeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4827,19 +3306,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactChange", L"Contact");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4926,19 +3392,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactChangeReader", L"AcceptChanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.AcceptChanges();
@@ -4967,19 +3420,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactChangeReader", L"AcceptChangesThrough", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactChange>(args, 0);
 
                 {
@@ -5010,19 +3450,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactChangeReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5116,19 +3543,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactChangeTracker", L"Enable", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Enable();
@@ -5157,19 +3571,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactChangeTracker", L"GetChangeReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5197,19 +3598,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactChangeTracker", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Reset();
@@ -5234,23 +3622,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactChangeTracker", L"IsTracking");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsTracking();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactChangeTracker2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactChangeTracker", "IsTracking", "Windows.ApplicationModel.Contacts.IContactChangeTracker2").IsTracking();
             }());
         }
         catch (...)
@@ -5335,19 +3710,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactChangedDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -5440,19 +3802,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactChangedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5562,19 +3911,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount", L"ServiceName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5598,19 +3934,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount", L"ServiceName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5631,19 +3954,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5667,19 +3977,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5787,19 +4084,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactDate", L"Year");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5823,19 +4107,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactDate", L"Year");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -5856,19 +4127,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactDate", L"Month");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5892,19 +4150,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactDate", L"Month");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             {
@@ -5925,19 +4170,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactDate", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5961,19 +4193,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactDate", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactDateKind>(arg);
 
             {
@@ -5994,19 +4213,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactDate", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6030,19 +4236,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactDate", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6063,19 +4256,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactDate", L"Day");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6099,19 +4279,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactDate", L"Day");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             {
@@ -6222,19 +4389,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactEmail", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6258,19 +4412,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactEmail", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactEmailKind>(arg);
 
             {
@@ -6291,19 +4432,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactEmail", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6327,19 +4455,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactEmail", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6360,19 +4475,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactEmail", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6396,19 +4498,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactEmail", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6555,19 +4644,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactField", L"Category");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6585,19 +4661,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactField", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6615,19 +4678,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactField", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6645,19 +4695,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactField", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6768,19 +4805,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateField", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 1);
 
@@ -6800,19 +4824,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateField", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 2);
@@ -6833,19 +4844,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateField", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 2);
@@ -6878,25 +4876,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateInstantMessage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateInstantMessage(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactFieldFactory", "CreateInstantMessage", "Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory", 1).CreateInstantMessage(param0);
                 }());
             }
             catch (...)
@@ -6909,26 +4894,13 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateInstantMessage", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateInstantMessage(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactFieldFactory", "CreateInstantMessage", "Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory", 2).CreateInstantMessage(param0, param1);
                 }());
             }
             catch (...)
@@ -6941,19 +4913,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateInstantMessage", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -6963,7 +4922,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateInstantMessage(param0, param1, param2, param3, param4);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactFieldFactory", "CreateInstantMessage", "Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory", 5).CreateInstantMessage(param0, param1, param2, param3, param4);
                 }());
             }
             catch (...)
@@ -6987,25 +4946,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateLocation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateLocation(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactFieldFactory", "CreateLocation", "Windows.ApplicationModel.Contacts.IContactLocationFieldFactory", 1).CreateLocation(param0);
                 }());
             }
             catch (...)
@@ -7018,26 +4964,13 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateLocation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateLocation(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactFieldFactory", "CreateLocation", "Windows.ApplicationModel.Contacts.IContactLocationFieldFactory", 2).CreateLocation(param0, param1);
                 }());
             }
             catch (...)
@@ -7050,19 +4983,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateLocation", 7);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(7);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -7074,7 +4994,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateLocation(param0, param1, param2, param3, param4, param5, param6);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactFieldFactory", "CreateLocation", "Windows.ApplicationModel.Contacts.IContactLocationFieldFactory", 7).CreateLocation(param0, param1, param2, param3, param4, param5, param6);
                 }());
             }
             catch (...)
@@ -7227,19 +5147,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactInformation", L"GetThumbnailAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7267,19 +5174,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactInformation", L"QueryCustomFields", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7305,19 +5199,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInformation", L"CustomFields");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7335,19 +5216,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInformation", L"Emails");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7365,19 +5233,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInformation", L"InstantMessages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7395,19 +5250,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInformation", L"Locations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7425,19 +5267,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInformation", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7455,19 +5284,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInformation", L"PhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7615,23 +5431,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInstantMessageField", L"Category");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Category();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactField>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactInstantMessageField", "Category", "Windows.ApplicationModel.Contacts.IContactField").Category();
             }());
         }
         catch (...)
@@ -7645,23 +5448,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInstantMessageField", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactField>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactInstantMessageField", "Name", "Windows.ApplicationModel.Contacts.IContactField").Name();
             }());
         }
         catch (...)
@@ -7675,23 +5465,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInstantMessageField", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactField>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactInstantMessageField", "Type", "Windows.ApplicationModel.Contacts.IContactField").Type();
             }());
         }
         catch (...)
@@ -7705,23 +5482,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInstantMessageField", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Value();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactField>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactInstantMessageField", "Value", "Windows.ApplicationModel.Contacts.IContactField").Value();
             }());
         }
         catch (...)
@@ -7735,19 +5499,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInstantMessageField", L"DisplayText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7765,19 +5516,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInstantMessageField", L"LaunchUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7795,19 +5533,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInstantMessageField", L"Service");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7825,19 +5550,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactInstantMessageField", L"UserName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7948,19 +5660,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7984,19 +5683,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8017,19 +5703,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"Office");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8053,19 +5726,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"Office");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8086,19 +5746,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"Manager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8122,19 +5769,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"Manager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8155,19 +5789,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8191,19 +5812,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8224,19 +5832,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"Department");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8260,19 +5855,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"Department");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8293,19 +5875,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"CompanyYomiName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8329,19 +5898,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"CompanyYomiName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8362,19 +5918,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"CompanyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8398,19 +5941,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"CompanyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8431,19 +5961,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"CompanyAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8467,19 +5984,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactJobInfo", L"CompanyAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8779,19 +6283,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8819,19 +6310,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"DeleteContactAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert([&]()
@@ -8861,25 +6339,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"GetChangeTracker", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetChangeTracker(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactList3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactList", "GetChangeTracker", "Windows.ApplicationModel.Contacts.IContactList3", 1).GetChangeTracker(param0);
                 }());
             }
             catch (...)
@@ -8903,19 +6368,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"GetContactAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -8945,19 +6397,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"GetContactFromRemoteIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -8987,19 +6426,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"GetContactReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9016,19 +6442,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"GetContactReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions>(args, 0);
 
                 return py::convert([&]()
@@ -9058,19 +6471,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"GetMeContactAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9098,23 +6498,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"RegisterSyncManagerAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RegisterSyncManagerAsync();
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactList2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactList", "RegisterSyncManagerAsync", "Windows.ApplicationModel.Contacts.IContactList2", 0).RegisterSyncManagerAsync();
                 }());
             }
             catch (...)
@@ -9138,19 +6525,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"SaveAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9178,19 +6552,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"SaveContactAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert([&]()
@@ -9216,19 +6577,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"SupportsServerSearch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9252,24 +6600,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"SupportsServerSearch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SupportsServerSearch(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactList2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactList", "SupportsServerSearch", "Windows.ApplicationModel.Contacts.IContactList2").SupportsServerSearch(param0);
             }
 
             return 0;
@@ -9285,19 +6620,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"IsHidden");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9321,19 +6643,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"IsHidden");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -9354,19 +6663,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"OtherAppWriteAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9390,19 +6686,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"OtherAppWriteAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactListOtherAppWriteAccess>(arg);
 
             {
@@ -9423,19 +6706,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9459,19 +6729,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -9492,19 +6749,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"OtherAppReadAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9528,19 +6772,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"OtherAppReadAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactListOtherAppReadAccess>(arg);
 
             {
@@ -9561,19 +6792,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"ChangeTracker");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9591,19 +6809,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"SourceDisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9621,19 +6826,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9651,19 +6843,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"SyncManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9681,19 +6860,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"UserDataAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9711,23 +6877,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"SyncConstraints");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SyncConstraints();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactList2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactList", "SyncConstraints", "Windows.ApplicationModel.Contacts.IContactList2").SyncConstraints();
             }());
         }
         catch (...)
@@ -9741,23 +6894,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"LimitedWriteOperations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LimitedWriteOperations();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactList3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactList", "LimitedWriteOperations", "Windows.ApplicationModel.Contacts.IContactList3").LimitedWriteOperations();
             }());
         }
         catch (...)
@@ -9771,19 +6911,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"ContactChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactList, winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -9803,19 +6930,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.ContactList", L"ContactChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9927,19 +7041,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations", L"TryCreateOrUpdateContactAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert([&]()
@@ -9969,19 +7070,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations", L"TryDeleteContactAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -10072,19 +7160,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"CanSyncDescriptions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10108,19 +7183,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"CanSyncDescriptions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10141,19 +7203,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxCompanyPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10177,19 +7226,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxCompanyPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10210,19 +7246,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxChildRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10246,19 +7269,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxChildRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10279,19 +7289,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxBusinessFaxPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10315,19 +7312,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxBusinessFaxPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10348,19 +7332,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxBirthdayDates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10384,19 +7355,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxBirthdayDates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10417,19 +7375,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxAssistantPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10453,19 +7398,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxAssistantPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10486,19 +7418,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxOtherAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10522,19 +7441,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxOtherAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10555,19 +7461,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxAnniversaryDates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10591,19 +7484,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxAnniversaryDates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10624,19 +7504,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxHomeAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10660,19 +7527,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxHomeAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10693,19 +7547,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxOtherDates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10729,19 +7570,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxOtherDates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10762,19 +7590,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxMobilePhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10798,19 +7613,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxMobilePhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10831,19 +7633,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxJobInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10867,19 +7656,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxJobInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10900,19 +7676,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxHomePhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10936,19 +7699,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxHomePhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -10969,19 +7719,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxHomeFaxPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11005,19 +7742,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxHomeFaxPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11038,19 +7762,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxOtherEmailAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11074,19 +7785,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxOtherEmailAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11107,19 +7805,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxPersonalEmailAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11143,19 +7828,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxPersonalEmailAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11176,19 +7848,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxPartnerRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11212,19 +7871,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxPartnerRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11245,19 +7891,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxParentRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11281,19 +7914,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxParentRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11314,19 +7934,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxPagerPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11350,19 +7957,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxPagerPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11383,19 +7977,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxOtherRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11419,19 +8000,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxOtherRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11452,19 +8020,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxOtherPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11488,19 +8043,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxOtherPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11521,19 +8063,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxRadioPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11557,19 +8086,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxRadioPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11590,19 +8106,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxWorkPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11626,19 +8129,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxWorkPhoneNumbers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11659,19 +8149,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxWorkEmailAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11695,19 +8172,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxWorkEmailAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11728,19 +8192,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxWorkAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11764,19 +8215,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxWorkAddresses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11797,19 +8235,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxWebsites");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11833,19 +8258,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxWebsites");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11866,19 +8278,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxSpouseRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11902,19 +8301,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxSpouseRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -11935,19 +8321,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxSiblingRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11971,19 +8344,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncConstraints", L"MaxSiblingRelationships");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -12099,19 +8459,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncManager", L"SyncAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -12135,19 +8482,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncManager", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12171,24 +8505,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncManager", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactListSyncStatus>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Status(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactListSyncManager2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactListSyncManager", "Status", "Windows.ApplicationModel.Contacts.IContactListSyncManager2").Status(param0);
             }
 
             return 0;
@@ -12204,19 +8525,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncManager", L"LastSuccessfulSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12240,24 +8548,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncManager", L"LastSuccessfulSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LastSuccessfulSyncTime(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactListSyncManager2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactListSyncManager", "LastSuccessfulSyncTime", "Windows.ApplicationModel.Contacts.IContactListSyncManager2").LastSuccessfulSyncTime(param0);
             }
 
             return 0;
@@ -12273,19 +8568,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncManager", L"LastAttemptedSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12309,24 +8591,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncManager", L"LastAttemptedSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LastAttemptedSyncTime(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactListSyncManager2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactListSyncManager", "LastAttemptedSyncTime", "Windows.ApplicationModel.Contacts.IContactListSyncManager2").LastAttemptedSyncTime(param0);
             }
 
             return 0;
@@ -12342,19 +8611,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncManager", L"SyncStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -12374,19 +8630,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.ContactListSyncManager", L"SyncStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -12537,23 +8780,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactLocationField", L"Category");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Category();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactField>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactLocationField", "Category", "Windows.ApplicationModel.Contacts.IContactField").Category();
             }());
         }
         catch (...)
@@ -12567,23 +8797,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactLocationField", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactField>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactLocationField", "Name", "Windows.ApplicationModel.Contacts.IContactField").Name();
             }());
         }
         catch (...)
@@ -12597,23 +8814,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactLocationField", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactField>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactLocationField", "Type", "Windows.ApplicationModel.Contacts.IContactField").Type();
             }());
         }
         catch (...)
@@ -12627,23 +8831,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactLocationField", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Value();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactField>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactLocationField", "Value", "Windows.ApplicationModel.Contacts.IContactField").Value();
             }());
         }
         catch (...)
@@ -12657,19 +8848,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactLocationField", L"City");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12687,19 +8865,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactLocationField", L"Country");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12717,19 +8882,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactLocationField", L"PostalCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12747,19 +8899,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactLocationField", L"Region");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12777,19 +8916,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactLocationField", L"Street");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12807,19 +8933,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactLocationField", L"UnstructuredAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13810,19 +9923,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"ConvertContactToVCardAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert([&]()
@@ -13841,19 +9941,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"ConvertContactToVCardAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -13884,19 +9971,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"ConvertVCardToContactAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
                 return py::convert([&]()
@@ -13926,19 +10000,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"RequestAnnotationStoreAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStoreAccessType>(args, 0);
 
                 return py::convert([&]()
@@ -13968,19 +10029,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"RequestStoreAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactStoreAccessType>(args, 0);
 
                 return py::convert([&]()
@@ -14010,25 +10058,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"ShowFullContactCard", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ShowFullContactCard(param0, param1);
+                    py::require<winrt::Windows::ApplicationModel::Contacts::IContactManagerForUser2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactManagerForUser", "ShowFullContactCard", "Windows.ApplicationModel.Contacts.IContactManagerForUser2", 2).ShowFullContactCard(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -14050,19 +10085,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"SystemSortOrder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14086,19 +10108,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"SystemSortOrder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactNameOrder>(arg);
 
             {
@@ -14119,19 +10128,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"SystemDisplayNameOrder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14155,19 +10151,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"SystemDisplayNameOrder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactNameOrder>(arg);
 
             {
@@ -14188,19 +10171,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactManagerForUser", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14289,19 +10259,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactMatchReason", L"Field");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14319,19 +10276,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactMatchReason", L"Segments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14349,19 +10293,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactMatchReason", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14449,19 +10380,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactPanel", L"ClosePanel", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ClosePanel();
@@ -14486,19 +10404,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPanel", L"HeaderColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14522,19 +10427,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPanel", L"HeaderColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             {
@@ -14555,19 +10447,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.ContactPanel", L"Closing");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactPanel, winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -14587,19 +10466,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.ContactPanel", L"Closing");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14620,19 +10486,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.ContactPanel", L"LaunchFullAppRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactPanel, winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -14652,19 +10505,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.ContactPanel", L"LaunchFullAppRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14758,19 +10598,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -14858,19 +10685,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14894,19 +10708,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -15013,19 +10814,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPhone", L"Number");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15049,19 +10837,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPhone", L"Number");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -15082,19 +10857,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPhone", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15118,19 +10880,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPhone", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactPhoneKind>(arg);
 
             {
@@ -15151,19 +10900,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPhone", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15187,19 +10923,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPhone", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -15394,23 +11117,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"PickContactAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.PickContactAsync();
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactPicker2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactPicker", "PickContactAsync", "Windows.ApplicationModel.Contacts.IContactPicker2", 0).PickContactAsync();
                 }());
             }
             catch (...)
@@ -15434,23 +11144,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"PickContactsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.PickContactsAsync();
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactPicker2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactPicker", "PickContactsAsync", "Windows.ApplicationModel.Contacts.IContactPicker2", 0).PickContactsAsync();
                 }());
             }
             catch (...)
@@ -15474,19 +11171,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"PickMultipleContactsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -15514,19 +11198,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"PickSingleContactAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -15550,19 +11221,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"SelectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15586,19 +11244,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"SelectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactSelectionMode>(arg);
 
             {
@@ -15619,19 +11264,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"CommitButtonText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15655,19 +11287,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"CommitButtonText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -15688,19 +11307,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"DesiredFields");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15718,23 +11324,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"DesiredFieldsWithContactFieldType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DesiredFieldsWithContactFieldType();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactPicker2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactPicker", "DesiredFieldsWithContactFieldType", "Windows.ApplicationModel.Contacts.IContactPicker2").DesiredFieldsWithContactFieldType();
             }());
         }
         catch (...)
@@ -15748,23 +11341,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactPicker", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactPicker3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactPicker", "User", "Windows.ApplicationModel.Contacts.IContactPicker3").User();
             }());
         }
         catch (...)
@@ -15926,19 +11506,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryOptions", L"IncludeContactsFromHiddenLists");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15962,19 +11529,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryOptions", L"IncludeContactsFromHiddenLists");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -15995,19 +11549,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryOptions", L"DesiredOperations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16031,19 +11572,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryOptions", L"DesiredOperations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationOperations>(arg);
 
             {
@@ -16064,19 +11592,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryOptions", L"DesiredFields");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16100,19 +11615,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryOptions", L"DesiredFields");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactQueryDesiredFields>(arg);
 
             {
@@ -16133,19 +11635,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryOptions", L"AnnotationListIds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16163,19 +11652,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryOptions", L"ContactListIds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16193,19 +11669,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryOptions", L"TextSearch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16292,19 +11755,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryTextSearch", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16328,19 +11778,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryTextSearch", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -16361,19 +11798,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryTextSearch", L"SearchScope");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16397,19 +11821,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryTextSearch", L"SearchScope");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchScope>(arg);
 
             {
@@ -16430,19 +11841,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryTextSearch", L"Fields");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16466,19 +11864,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactQueryTextSearch", L"Fields");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields>(arg);
 
             {
@@ -16569,19 +11954,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactReader", L"GetMatchingPropertiesWithMatchReason", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert([&]()
@@ -16611,19 +11983,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -16734,19 +12093,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactSignificantOther", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16770,19 +12116,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactSignificantOther", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -16803,19 +12136,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactSignificantOther", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16839,19 +12159,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactSignificantOther", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -16872,23 +12179,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactSignificantOther", L"Relationship");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Relationship();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactSignificantOther2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactSignificantOther", "Relationship", "Windows.ApplicationModel.Contacts.IContactSignificantOther2").Relationship();
             }());
         }
         catch (...)
@@ -16908,24 +12202,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactSignificantOther", L"Relationship");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactRelationship>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Relationship(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactSignificantOther2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactSignificantOther", "Relationship", "Windows.ApplicationModel.Contacts.IContactSignificantOther2").Relationship(param0);
             }
 
             return 0;
@@ -17011,25 +12292,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"CreateContactListAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateContactListAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactStore", "CreateContactListAsync", "Windows.ApplicationModel.Contacts.IContactStore2", 1).CreateContactListAsync(param0);
                 }());
             }
             catch (...)
@@ -17042,26 +12310,13 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"CreateContactListAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateContactListAsync(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactStore", "CreateContactListAsync", "Windows.ApplicationModel.Contacts.IContactStore2", 2).CreateContactListAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -17085,23 +12340,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"FindContactListsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindContactListsAsync();
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactStore", "FindContactListsAsync", "Windows.ApplicationModel.Contacts.IContactStore2", 0).FindContactListsAsync();
                 }());
             }
             catch (...)
@@ -17125,19 +12367,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"FindContactsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -17154,19 +12383,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"FindContactsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -17196,25 +12412,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"GetChangeTracker", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetChangeTracker(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactStore", "GetChangeTracker", "Windows.ApplicationModel.Contacts.IContactStore3", 1).GetChangeTracker(param0);
                 }());
             }
             catch (...)
@@ -17238,19 +12441,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"GetContactAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -17280,25 +12470,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"GetContactListAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetContactListAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactStore", "GetContactListAsync", "Windows.ApplicationModel.Contacts.IContactStore2", 1).GetContactListAsync(param0);
                 }());
             }
             catch (...)
@@ -17322,23 +12499,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"GetContactReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetContactReader();
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactStore", "GetContactReader", "Windows.ApplicationModel.Contacts.IContactStore2", 0).GetContactReader();
                 }());
             }
             catch (...)
@@ -17351,25 +12515,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"GetContactReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetContactReader(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactStore", "GetContactReader", "Windows.ApplicationModel.Contacts.IContactStore2", 1).GetContactReader(param0);
                 }());
             }
             catch (...)
@@ -17393,23 +12544,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"GetMeContactAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMeContactAsync();
+                    return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Contacts.ContactStore", "GetMeContactAsync", "Windows.ApplicationModel.Contacts.IContactStore2", 0).GetMeContactAsync();
                 }());
             }
             catch (...)
@@ -17429,23 +12567,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"AggregateContactManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AggregateContactManager();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactStore", "AggregateContactManager", "Windows.ApplicationModel.Contacts.IContactStore2").AggregateContactManager();
             }());
         }
         catch (...)
@@ -17459,23 +12584,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"ChangeTracker");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChangeTracker();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactStore", "ChangeTracker", "Windows.ApplicationModel.Contacts.IContactStore2").ChangeTracker();
             }());
         }
         catch (...)
@@ -17489,25 +12601,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"ContactChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactStore, winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContactChanged(param0);
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Contacts.ContactStore", "ContactChanged", "Windows.ApplicationModel.Contacts.IContactStore2").ContactChanged(param0);
             }());
         }
         catch (...)
@@ -17521,24 +12620,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.ContactStore", L"ContactChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContactChanged(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactStore2>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Contacts.ContactStore", "ContactChanged", "Windows.ApplicationModel.Contacts.IContactStore2").ContactChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -17714,19 +12800,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactWebsite", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17750,19 +12823,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactWebsite", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -17783,19 +12843,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactWebsite", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17819,19 +12866,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactWebsite", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -17852,23 +12886,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactWebsite", L"RawValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RawValue();
+                return py::require<winrt::Windows::ApplicationModel::Contacts::IContactWebsite2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactWebsite", "RawValue", "Windows.ApplicationModel.Contacts.IContactWebsite2").RawValue();
             }());
         }
         catch (...)
@@ -17888,24 +12909,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactWebsite", L"RawValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RawValue(param0);
+                py::require<winrt::Windows::ApplicationModel::Contacts::IContactWebsite2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Contacts.ContactWebsite", "RawValue", "Windows.ApplicationModel.Contacts.IContactWebsite2").RawValue(param0);
             }
 
             return 0;
@@ -18009,19 +13017,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.FullContactCardOptions", L"DesiredRemainingView");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18045,19 +13040,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.FullContactCardOptions", L"DesiredRemainingView");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::ViewManagement::ViewSizePreference>(arg);
 
             {
@@ -18401,19 +13383,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult", L"ContactIds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18581,19 +13550,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.PinnedContactManager", L"GetPinnedContactIdsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -18621,19 +13577,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.PinnedContactManager", L"IsContactPinned", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface>(args, 1);
 
@@ -18664,19 +13607,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.PinnedContactManager", L"IsPinSurfaceSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface>(args, 0);
 
                 return py::convert([&]()
@@ -18746,19 +13676,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.PinnedContactManager", L"RequestPinContactAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface>(args, 1);
 
@@ -18789,19 +13706,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.PinnedContactManager", L"RequestPinContactsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Contacts::Contact>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface>(args, 1);
 
@@ -18832,19 +13736,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.PinnedContactManager", L"RequestUnpinContactAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface>(args, 1);
 
@@ -18875,19 +13766,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.PinnedContactManager", L"SignalContactActivity", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 {
@@ -18914,19 +13792,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.PinnedContactManager", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19041,19 +13906,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.IContactField", L"Category");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19071,19 +13923,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.IContactField", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19101,19 +13940,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.IContactField", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19131,19 +13957,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.IContactField", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19384,19 +14197,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactFieldFactory", L"CreateField", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 1);
 
@@ -19416,19 +14216,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactFieldFactory", L"CreateField", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 2);
@@ -19449,19 +14236,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactFieldFactory", L"CreateField", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 2);
@@ -19810,19 +14584,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory", L"CreateInstantMessage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -19841,19 +14602,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory", L"CreateInstantMessage", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
 
@@ -19873,19 +14621,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory", L"CreateInstantMessage", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -20223,19 +14958,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactLocationFieldFactory", L"CreateLocation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -20254,19 +14976,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactLocationFieldFactory", L"CreateLocation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
 
@@ -20286,19 +14995,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactLocationFieldFactory", L"CreateLocation", 7);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(7);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);

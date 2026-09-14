@@ -47,19 +47,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"EmailAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -83,19 +70,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"EmailAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -116,19 +90,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"Domain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -152,19 +113,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"Domain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -185,19 +133,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"DeviceAccountTypeId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -221,19 +156,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"DeviceAccountTypeId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -254,19 +176,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -290,19 +199,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -323,19 +219,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"ContactsSyncEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -359,19 +242,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"ContactsSyncEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -392,19 +262,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CalendarSyncEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -428,19 +285,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CalendarSyncEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -461,19 +305,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AccountName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -497,19 +328,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AccountName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -530,19 +348,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerUsername");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -566,19 +371,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerUsername");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -599,19 +391,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerRequiresSsl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -635,19 +414,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerRequiresSsl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -668,19 +434,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerPort");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -704,19 +457,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerPort");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -737,19 +477,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -773,19 +500,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -806,19 +520,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"EmailSyncEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -842,19 +543,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"EmailSyncEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -875,19 +563,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"ServerType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -911,19 +586,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"ServerType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType>(arg);
 
             {
@@ -944,19 +606,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerUsername");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -980,19 +629,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerUsername");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1013,19 +649,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerRequiresSsl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1049,19 +672,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerRequiresSsl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1082,19 +692,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerPort");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1118,19 +715,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerPort");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -1151,23 +735,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AccountIconId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AccountIconId();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "AccountIconId", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").AccountIconId();
             }());
         }
         catch (...)
@@ -1187,24 +758,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AccountIconId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AccountIconId(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "AccountIconId", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").AccountIconId(param0);
             }
 
             return 0;
@@ -1220,23 +778,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CalDavServerUrl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CalDavServerUrl();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CalDavServerUrl", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CalDavServerUrl();
             }());
         }
         catch (...)
@@ -1256,24 +801,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CalDavServerUrl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CalDavServerUrl(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CalDavServerUrl", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CalDavServerUrl(param0);
             }
 
             return 0;
@@ -1289,23 +821,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CalDavRequiresSsl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CalDavRequiresSsl();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CalDavRequiresSsl", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CalDavRequiresSsl();
             }());
         }
         catch (...)
@@ -1325,24 +844,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CalDavRequiresSsl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CalDavRequiresSsl(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CalDavRequiresSsl", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CalDavRequiresSsl(param0);
             }
 
             return 0;
@@ -1358,23 +864,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AutoSelectAuthenticationCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AutoSelectAuthenticationCertificate();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "AutoSelectAuthenticationCertificate", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").AutoSelectAuthenticationCertificate();
             }());
         }
         catch (...)
@@ -1394,24 +887,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AutoSelectAuthenticationCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AutoSelectAuthenticationCertificate(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "AutoSelectAuthenticationCertificate", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").AutoSelectAuthenticationCertificate(param0);
             }
 
             return 0;
@@ -1427,23 +907,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AuthenticationType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AuthenticationType();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "AuthenticationType", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").AuthenticationType();
             }());
         }
         catch (...)
@@ -1463,24 +930,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AuthenticationType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AuthenticationType(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "AuthenticationType", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").AuthenticationType(param0);
             }
 
             return 0;
@@ -1496,23 +950,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AuthenticationCertificateId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AuthenticationCertificateId();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "AuthenticationCertificateId", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").AuthenticationCertificateId();
             }());
         }
         catch (...)
@@ -1532,24 +973,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AuthenticationCertificateId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AuthenticationCertificateId(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "AuthenticationCertificateId", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").AuthenticationCertificateId(param0);
             }
 
             return 0;
@@ -1565,23 +993,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsOutgoingServerAuthenticationEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsOutgoingServerAuthenticationEnabled();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsOutgoingServerAuthenticationEnabled", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsOutgoingServerAuthenticationEnabled();
             }());
         }
         catch (...)
@@ -1601,24 +1016,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsOutgoingServerAuthenticationEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsOutgoingServerAuthenticationEnabled(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsOutgoingServerAuthenticationEnabled", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsOutgoingServerAuthenticationEnabled(param0);
             }
 
             return 0;
@@ -1634,23 +1036,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsClientAuthenticationCertificateRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsClientAuthenticationCertificateRequired();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsClientAuthenticationCertificateRequired", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsClientAuthenticationCertificateRequired();
             }());
         }
         catch (...)
@@ -1670,24 +1059,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsClientAuthenticationCertificateRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsClientAuthenticationCertificateRequired(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsClientAuthenticationCertificateRequired", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsClientAuthenticationCertificateRequired(param0);
             }
 
             return 0;
@@ -1703,23 +1079,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IncomingServerCredential();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IncomingServerCredential", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IncomingServerCredential();
             }());
         }
         catch (...)
@@ -1739,24 +1102,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IncomingServerCredential(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IncomingServerCredential", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IncomingServerCredential(param0);
             }
 
             return 0;
@@ -1772,23 +1122,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsOutgoingServerAuthenticationRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsOutgoingServerAuthenticationRequired();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsOutgoingServerAuthenticationRequired", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsOutgoingServerAuthenticationRequired();
             }());
         }
         catch (...)
@@ -1808,24 +1145,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsOutgoingServerAuthenticationRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsOutgoingServerAuthenticationRequired(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsOutgoingServerAuthenticationRequired", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsOutgoingServerAuthenticationRequired(param0);
             }
 
             return 0;
@@ -1841,23 +1165,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CardDavSyncScheduleKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CardDavSyncScheduleKind();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CardDavSyncScheduleKind", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CardDavSyncScheduleKind();
             }());
         }
         catch (...)
@@ -1877,24 +1188,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CardDavSyncScheduleKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CardDavSyncScheduleKind(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CardDavSyncScheduleKind", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CardDavSyncScheduleKind(param0);
             }
 
             return 0;
@@ -1910,23 +1208,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AlwaysDownloadFullMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AlwaysDownloadFullMessage();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "AlwaysDownloadFullMessage", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").AlwaysDownloadFullMessage();
             }());
         }
         catch (...)
@@ -1946,24 +1231,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"AlwaysDownloadFullMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AlwaysDownloadFullMessage(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "AlwaysDownloadFullMessage", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").AlwaysDownloadFullMessage(param0);
             }
 
             return 0;
@@ -1979,23 +1251,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CardDavServerUrl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CardDavServerUrl();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CardDavServerUrl", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CardDavServerUrl();
             }());
         }
         catch (...)
@@ -2015,24 +1274,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CardDavServerUrl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CardDavServerUrl(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CardDavServerUrl", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CardDavServerUrl(param0);
             }
 
             return 0;
@@ -2048,23 +1294,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CardDavRequiresSsl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CardDavRequiresSsl();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CardDavRequiresSsl", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CardDavRequiresSsl();
             }());
         }
         catch (...)
@@ -2084,24 +1317,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CardDavRequiresSsl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CardDavRequiresSsl(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CardDavRequiresSsl", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CardDavRequiresSsl(param0);
             }
 
             return 0;
@@ -2117,23 +1337,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CalDavSyncScheduleKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CalDavSyncScheduleKind();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CalDavSyncScheduleKind", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CalDavSyncScheduleKind();
             }());
         }
         catch (...)
@@ -2153,24 +1360,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"CalDavSyncScheduleKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CalDavSyncScheduleKind(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "CalDavSyncScheduleKind", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").CalDavSyncScheduleKind(param0);
             }
 
             return 0;
@@ -2186,23 +1380,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerCertificateHash");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IncomingServerCertificateHash();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IncomingServerCertificateHash", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IncomingServerCertificateHash();
             }());
         }
         catch (...)
@@ -2222,24 +1403,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IncomingServerCertificateHash");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IncomingServerCertificateHash(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IncomingServerCertificateHash", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IncomingServerCertificateHash(param0);
             }
 
             return 0;
@@ -2255,23 +1423,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"WasOutgoingServerCertificateHashConfirmed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.WasOutgoingServerCertificateHashConfirmed();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "WasOutgoingServerCertificateHashConfirmed", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").WasOutgoingServerCertificateHashConfirmed();
             }());
         }
         catch (...)
@@ -2291,24 +1446,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"WasOutgoingServerCertificateHashConfirmed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.WasOutgoingServerCertificateHashConfirmed(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "WasOutgoingServerCertificateHashConfirmed", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").WasOutgoingServerCertificateHashConfirmed(param0);
             }
 
             return 0;
@@ -2324,23 +1466,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"WasModifiedByUser");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.WasModifiedByUser();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "WasModifiedByUser", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").WasModifiedByUser();
             }());
         }
         catch (...)
@@ -2360,24 +1489,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"WasModifiedByUser");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.WasModifiedByUser(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "WasModifiedByUser", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").WasModifiedByUser(param0);
             }
 
             return 0;
@@ -2393,23 +1509,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"SyncScheduleKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SyncScheduleKind();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "SyncScheduleKind", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").SyncScheduleKind();
             }());
         }
         catch (...)
@@ -2429,24 +1532,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"SyncScheduleKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SyncScheduleKind(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "SyncScheduleKind", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").SyncScheduleKind(param0);
             }
 
             return 0;
@@ -2462,23 +1552,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"SsoAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SsoAccountId();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "SsoAccountId", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").SsoAccountId();
             }());
         }
         catch (...)
@@ -2498,24 +1575,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"SsoAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SsoAccountId(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "SsoAccountId", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").SsoAccountId(param0);
             }
 
             return 0;
@@ -2531,23 +1595,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"WasIncomingServerCertificateHashConfirmed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.WasIncomingServerCertificateHashConfirmed();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "WasIncomingServerCertificateHashConfirmed", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").WasIncomingServerCertificateHashConfirmed();
             }());
         }
         catch (...)
@@ -2567,24 +1618,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"WasIncomingServerCertificateHashConfirmed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.WasIncomingServerCertificateHashConfirmed(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "WasIncomingServerCertificateHashConfirmed", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").WasIncomingServerCertificateHashConfirmed(param0);
             }
 
             return 0;
@@ -2600,23 +1638,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OAuthRefreshToken");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OAuthRefreshToken();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "OAuthRefreshToken", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").OAuthRefreshToken();
             }());
         }
         catch (...)
@@ -2636,24 +1661,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OAuthRefreshToken");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OAuthRefreshToken(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "OAuthRefreshToken", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").OAuthRefreshToken(param0);
             }
 
             return 0;
@@ -2669,23 +1681,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsExternallyManaged");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsExternallyManaged();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsExternallyManaged", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsExternallyManaged();
             }());
         }
         catch (...)
@@ -2705,24 +1704,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsExternallyManaged");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsExternallyManaged(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsExternallyManaged", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsExternallyManaged(param0);
             }
 
             return 0;
@@ -2738,23 +1724,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"MailAgeFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MailAgeFilter();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "MailAgeFilter", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").MailAgeFilter();
             }());
         }
         catch (...)
@@ -2774,24 +1747,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"MailAgeFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MailAgeFilter(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "MailAgeFilter", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").MailAgeFilter(param0);
             }
 
             return 0;
@@ -2807,23 +1767,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsSyncScheduleManagedBySystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSyncScheduleManagedBySystem();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsSyncScheduleManagedBySystem", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsSyncScheduleManagedBySystem();
             }());
         }
         catch (...)
@@ -2843,24 +1790,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsSyncScheduleManagedBySystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsSyncScheduleManagedBySystem(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsSyncScheduleManagedBySystem", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsSyncScheduleManagedBySystem(param0);
             }
 
             return 0;
@@ -2876,23 +1810,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerCertificateHash");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingServerCertificateHash();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "OutgoingServerCertificateHash", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").OutgoingServerCertificateHash();
             }());
         }
         catch (...)
@@ -2912,24 +1833,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerCertificateHash");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingServerCertificateHash(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "OutgoingServerCertificateHash", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").OutgoingServerCertificateHash(param0);
             }
 
             return 0;
@@ -2945,23 +1853,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutgoingServerCredential();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "OutgoingServerCredential", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").OutgoingServerCredential();
             }());
         }
         catch (...)
@@ -2981,24 +1876,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"OutgoingServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutgoingServerCredential(param0);
+                py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "OutgoingServerCredential", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").OutgoingServerCredential(param0);
             }
 
             return 0;
@@ -3014,23 +1896,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"DoesPolicyAllowMailSync");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DoesPolicyAllowMailSync();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "DoesPolicyAllowMailSync", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").DoesPolicyAllowMailSync();
             }());
         }
         catch (...)
@@ -3044,23 +1913,10 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", L"IsSsoAuthenticationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSsoAuthenticationSupported();
+                return py::require<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration", "IsSsoAuthenticationSupported", "Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2").IsSsoAuthenticationSupported();
             }());
         }
         catch (...)

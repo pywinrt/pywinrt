@@ -112,23 +112,10 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.FrameNavigationOptions", L"TransitionInfoOverride");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().TransitionInfoOverride();
+                return py::require<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptions>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Navigation.FrameNavigationOptions", "TransitionInfoOverride", "Windows.UI.Xaml.Navigation.IFrameNavigationOptions").TransitionInfoOverride();
             }());
         }
         catch (...)
@@ -148,24 +135,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.FrameNavigationOptions", L"TransitionInfoOverride");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().TransitionInfoOverride(param0);
+                py::require<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptions>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Navigation.FrameNavigationOptions", "TransitionInfoOverride", "Windows.UI.Xaml.Navigation.IFrameNavigationOptions").TransitionInfoOverride(param0);
             }
 
             return 0;
@@ -181,23 +155,10 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.FrameNavigationOptions", L"IsNavigationStackEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().IsNavigationStackEnabled();
+                return py::require<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptions>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Navigation.FrameNavigationOptions", "IsNavigationStackEnabled", "Windows.UI.Xaml.Navigation.IFrameNavigationOptions").IsNavigationStackEnabled();
             }());
         }
         catch (...)
@@ -217,24 +178,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.FrameNavigationOptions", L"IsNavigationStackEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().IsNavigationStackEnabled(param0);
+                py::require<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptions>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Navigation.FrameNavigationOptions", "IsNavigationStackEnabled", "Windows.UI.Xaml.Navigation.IFrameNavigationOptions").IsNavigationStackEnabled(param0);
             }
 
             return 0;
@@ -336,19 +284,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -372,19 +307,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -405,19 +327,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs", L"NavigationMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -435,19 +344,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs", L"SourcePageType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -465,23 +361,10 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs", L"NavigationTransitionInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NavigationTransitionInfo();
+                return py::require<winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs", "NavigationTransitionInfo", "Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs2").NavigationTransitionInfo();
             }());
         }
         catch (...)
@@ -495,23 +378,10 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs", L"Parameter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Parameter();
+                return py::require<winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs", "Parameter", "Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs2").Parameter();
             }());
         }
         catch (...)
@@ -593,19 +463,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationEventArgs", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -629,19 +486,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationEventArgs", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -662,19 +506,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationEventArgs", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -692,19 +523,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationEventArgs", L"NavigationMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -722,19 +540,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationEventArgs", L"Parameter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -752,19 +557,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationEventArgs", L"SourcePageType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -782,23 +574,10 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationEventArgs", L"NavigationTransitionInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NavigationTransitionInfo();
+                return py::require<winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Navigation.NavigationEventArgs", "NavigationTransitionInfo", "Windows.UI.Xaml.Navigation.INavigationEventArgs2").NavigationTransitionInfo();
             }());
         }
         catch (...)
@@ -881,19 +660,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationFailedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -917,19 +683,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationFailedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -950,19 +703,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationFailedEventArgs", L"Exception");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -980,19 +720,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.NavigationFailedEventArgs", L"SourcePageType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1102,19 +829,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.PageStackEntry", L"NavigationTransitionInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1132,19 +846,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.PageStackEntry", L"Parameter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1162,19 +863,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Navigation.PageStackEntry", L"SourcePageType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

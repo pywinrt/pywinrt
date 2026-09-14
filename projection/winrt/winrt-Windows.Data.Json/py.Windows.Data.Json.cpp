@@ -51,24 +51,11 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "Append", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -94,22 +81,9 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "Clear", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -135,23 +109,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "First", "Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue>", 0).First();
                 }());
             }
             catch (...)
@@ -175,23 +136,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetArray", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetArray();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetArray", "Windows.Data.Json.IJsonValue", 0).GetArray();
                 }());
             }
             catch (...)
@@ -215,19 +163,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetArrayAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -257,25 +192,12 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -299,23 +221,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetBoolean", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBoolean();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetBoolean", "Windows.Data.Json.IJsonValue", 0).GetBoolean();
                 }());
             }
             catch (...)
@@ -339,19 +248,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetBooleanAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -381,26 +277,13 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Data::Json::IJsonValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -424,23 +307,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetNumber", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetNumber();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetNumber", "Windows.Data.Json.IJsonValue", 0).GetNumber();
                 }());
             }
             catch (...)
@@ -464,19 +334,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetNumberAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -506,23 +363,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetObject", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetObject();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetObject", "Windows.Data.Json.IJsonValue", 0).GetObject();
                 }());
             }
             catch (...)
@@ -546,19 +390,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetObjectAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -588,23 +419,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetString();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetString", "Windows.Data.Json.IJsonValue", 0).GetString();
                 }());
             }
             catch (...)
@@ -628,19 +446,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetStringAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -670,23 +475,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetView", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -710,26 +502,13 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -766,25 +545,12 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -852,24 +618,11 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -895,22 +648,9 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -936,24 +676,11 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Data::Json::IJsonValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -979,25 +706,12 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1023,23 +737,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"Stringify", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Stringify();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "Stringify", "Windows.Data.Json.IJsonValue", 0).Stringify();
                 }());
             }
             catch (...)
@@ -1063,23 +764,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonArray", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -1155,23 +843,10 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Json.JsonArray", L"ValueType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ValueType();
+                return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::property, "Windows.Data.Json.JsonArray", "ValueType", "Windows.Data.Json.IJsonValue").ValueType();
             }());
         }
         catch (...)
@@ -1185,23 +860,10 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Json.JsonArray", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::property, "Windows.Data.Json.JsonArray", "Size", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>").Size();
             }());
         }
         catch (...)
@@ -1242,7 +904,7 @@ namespace py::cpp::Windows::Data::Json
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -1259,7 +921,7 @@ namespace py::cpp::Windows::Data::Json
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "First", "Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue>", 0).First();
             }());
         }
         catch (...)
@@ -1274,7 +936,7 @@ namespace py::cpp::Windows::Data::Json
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::property, "Windows.Data.Json.JsonArray", "Size", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>").Size());
         }
         catch (...)
         {
@@ -1290,7 +952,7 @@ namespace py::cpp::Windows::Data::Json
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -1333,7 +995,7 @@ namespace py::cpp::Windows::Data::Json
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -1351,7 +1013,7 @@ namespace py::cpp::Windows::Data::Json
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -1376,14 +1038,14 @@ namespace py::cpp::Windows::Data::Json
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonArray", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -1612,22 +1274,9 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "Clear", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -1653,23 +1302,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Windows.Data.Json.IJsonValue>>", 0).First();
                 }());
             }
             catch (...)
@@ -1693,23 +1329,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetArray", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetArray();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetArray", "Windows.Data.Json.IJsonValue", 0).GetArray();
                 }());
             }
             catch (...)
@@ -1733,23 +1356,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetBoolean", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBoolean();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetBoolean", "Windows.Data.Json.IJsonValue", 0).GetBoolean();
                 }());
             }
             catch (...)
@@ -1773,19 +1383,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedArray", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1804,26 +1401,13 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::JsonArray>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetNamedArray(param0, param1);
+                    return py::require<winrt::Windows::Data::Json::IJsonObjectWithDefaultValues>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetNamedArray", "Windows.Data.Json.IJsonObjectWithDefaultValues", 2).GetNamedArray(param0, param1);
                 }());
             }
             catch (...)
@@ -1847,19 +1431,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedBoolean", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1878,26 +1449,13 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedBoolean", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetNamedBoolean(param0, param1);
+                    return py::require<winrt::Windows::Data::Json::IJsonObjectWithDefaultValues>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetNamedBoolean", "Windows.Data.Json.IJsonObjectWithDefaultValues", 2).GetNamedBoolean(param0, param1);
                 }());
             }
             catch (...)
@@ -1921,19 +1479,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedNumber", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1952,26 +1497,13 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedNumber", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetNamedNumber(param0, param1);
+                    return py::require<winrt::Windows::Data::Json::IJsonObjectWithDefaultValues>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetNamedNumber", "Windows.Data.Json.IJsonObjectWithDefaultValues", 2).GetNamedNumber(param0, param1);
                 }());
             }
             catch (...)
@@ -1995,19 +1527,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedObject", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2026,26 +1545,13 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedObject", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::JsonObject>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetNamedObject(param0, param1);
+                    return py::require<winrt::Windows::Data::Json::IJsonObjectWithDefaultValues>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetNamedObject", "Windows.Data.Json.IJsonObjectWithDefaultValues", 2).GetNamedObject(param0, param1);
                 }());
             }
             catch (...)
@@ -2069,19 +1575,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedString", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2100,26 +1593,13 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedString", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetNamedString(param0, param1);
+                    return py::require<winrt::Windows::Data::Json::IJsonObjectWithDefaultValues>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetNamedString", "Windows.Data.Json.IJsonObjectWithDefaultValues", 2).GetNamedString(param0, param1);
                 }());
             }
             catch (...)
@@ -2143,19 +1623,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2174,26 +1641,13 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNamedValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::JsonValue>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetNamedValue(param0, param1);
+                    return py::require<winrt::Windows::Data::Json::IJsonObjectWithDefaultValues>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetNamedValue", "Windows.Data.Json.IJsonObjectWithDefaultValues", 2).GetNamedValue(param0, param1);
                 }());
             }
             catch (...)
@@ -2217,23 +1671,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetNumber", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetNumber();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetNumber", "Windows.Data.Json.IJsonValue", 0).GetNumber();
                 }());
             }
             catch (...)
@@ -2257,23 +1698,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetObject", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetObject();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetObject", "Windows.Data.Json.IJsonValue", 0).GetObject();
                 }());
             }
             catch (...)
@@ -2297,23 +1725,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetString();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetString", "Windows.Data.Json.IJsonValue", 0).GetString();
                 }());
             }
             catch (...)
@@ -2337,23 +1752,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "GetView", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -2377,25 +1779,12 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "HasKey", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -2419,26 +1808,13 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"Insert", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Insert(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "Insert", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 2).Insert(param0, param1);
                 }());
             }
             catch (...)
@@ -2462,25 +1838,12 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "Lookup", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -2546,24 +1909,11 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Remove(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "Remove", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 1).Remove(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2589,19 +1939,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"SetNamedValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 1);
 
@@ -2633,23 +1970,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"Stringify", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Stringify();
+                    return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "Stringify", "Windows.Data.Json.IJsonValue", 0).Stringify();
                 }());
             }
             catch (...)
@@ -2673,23 +1997,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonObject", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -2765,23 +2076,10 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Json.JsonObject", L"ValueType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ValueType();
+                return py::require<winrt::Windows::Data::Json::IJsonValue>(self->obj, py::member_kind::property, "Windows.Data.Json.JsonObject", "ValueType", "Windows.Data.Json.IJsonValue").ValueType();
             }());
         }
         catch (...)
@@ -2795,23 +2093,10 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Json.JsonObject", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::property, "Windows.Data.Json.JsonObject", "Size", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>").Size();
             }());
         }
         catch (...)
@@ -2852,7 +2137,7 @@ namespace py::cpp::Windows::Data::Json
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -2869,7 +2154,7 @@ namespace py::cpp::Windows::Data::Json
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Windows.Data.Json.IJsonValue>>", 0).First();
             }())};
 
             if (!iter)
@@ -2893,7 +2178,7 @@ namespace py::cpp::Windows::Data::Json
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "HasKey", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -2908,7 +2193,7 @@ namespace py::cpp::Windows::Data::Json
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::property, "Windows.Data.Json.JsonObject", "Size", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>").Size());
         }
         catch (...)
         {
@@ -2925,7 +2210,7 @@ namespace py::cpp::Windows::Data::Json
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "Lookup", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -2935,7 +2220,7 @@ namespace py::cpp::Windows::Data::Json
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "Lookup", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -2968,7 +2253,7 @@ namespace py::cpp::Windows::Data::Json
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
-                    did_remove = self->obj.TryRemove(_key);
+                    did_remove = py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "Lookup", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 1).TryRemove(_key);
                 }
                 if (!did_remove)
                 {
@@ -2982,7 +2267,7 @@ namespace py::cpp::Windows::Data::Json
             auto _value = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(value);
             {
                 auto _gil = py::release_gil();
-                self->obj.Insert(_key, _value);
+                py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Data::Json::IJsonValue>>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonObject", "Lookup", "Windows.Foundation.Collections.IMap<String, Windows.Data.Json.IJsonValue>", 1).Insert(_key, _value);
             }
 
             return 0;
@@ -3259,19 +2544,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonValue", L"GetArray", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3299,19 +2571,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonValue", L"GetBoolean", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3339,19 +2598,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonValue", L"GetNumber", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3379,19 +2625,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonValue", L"GetObject", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3419,19 +2652,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonValue", L"GetString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3501,19 +2721,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonValue", L"Stringify", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3541,23 +2748,10 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.JsonValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -3633,19 +2827,6 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Json.JsonValue", L"ValueType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3690,7 +2871,7 @@ namespace py::cpp::Windows::Data::Json
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Data.Json.JsonValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -3785,19 +2966,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.IJsonValue", L"GetArray", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3825,19 +2993,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.IJsonValue", L"GetBoolean", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3865,19 +3020,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.IJsonValue", L"GetNumber", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3905,19 +3047,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.IJsonValue", L"GetObject", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3945,19 +3074,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.IJsonValue", L"GetString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3985,19 +3101,6 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Json.IJsonValue", L"Stringify", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4021,19 +3124,6 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Json.IJsonValue", L"ValueType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

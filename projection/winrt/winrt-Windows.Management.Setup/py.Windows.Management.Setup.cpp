@@ -47,19 +47,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -83,19 +70,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Management::Setup::DeploymentAgentProgressState>(arg);
 
             {
@@ -116,19 +90,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"ProgressPercentage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -152,19 +113,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"ProgressPercentage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -185,19 +133,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"EstimatedTimeRemaining");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -221,19 +156,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"EstimatedTimeRemaining");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -254,19 +176,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"DisplayProgressSecondary");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -290,19 +199,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"DisplayProgressSecondary");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -323,19 +219,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"DisplayProgress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -359,19 +242,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"DisplayProgress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -392,19 +262,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"CurrentBatchIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -428,19 +285,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"CurrentBatchIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -461,19 +305,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.AgentProvisioningProgressReport", L"Batches");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -561,19 +392,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs", L"Change");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -591,19 +409,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs", L"SessionId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -686,19 +491,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -722,19 +514,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -819,19 +598,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentSessionStateChangedEventArgs", L"Change");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -849,19 +615,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentSessionStateChangedEventArgs", L"SessionId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -968,19 +721,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"StateDetails");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1004,19 +744,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"StateDetails");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1037,19 +764,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1073,19 +787,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Management::Setup::DeploymentWorkloadState>(arg);
 
             {
@@ -1106,19 +807,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1142,19 +830,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -1175,19 +850,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"PossibleResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1211,19 +873,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"PossibleResolution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1244,19 +893,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"PossibleCause");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1280,19 +916,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"PossibleCause");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1313,19 +936,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"ErrorMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1349,19 +959,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"ErrorMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1382,19 +979,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"ErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1418,19 +1002,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"ErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -1451,19 +1022,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"EndTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1487,19 +1045,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"EndTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -1520,19 +1065,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"DisplayFriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1556,19 +1088,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"DisplayFriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1589,19 +1108,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkload", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1716,19 +1222,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkloadBatch", L"DisplayCategoryTitle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1752,19 +1245,6 @@ namespace py::cpp::Windows::Management::Setup
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkloadBatch", L"DisplayCategoryTitle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1785,19 +1265,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkloadBatch", L"BatchWorkloads");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1815,19 +1282,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DeploymentWorkloadBatch", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1911,19 +1365,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.DevicePreparationExecutionContext", L"Context");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2009,19 +1450,6 @@ namespace py::cpp::Windows::Management::Setup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Setup.MachineProvisioningProgressReporter", L"GetDevicePreparationExecutionContextAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2092,19 +1520,6 @@ namespace py::cpp::Windows::Management::Setup
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Setup.MachineProvisioningProgressReporter", L"ReportProgress", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Management::Setup::AgentProvisioningProgressReport>(args, 0);
 
                 {
@@ -2131,19 +1546,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.MachineProvisioningProgressReporter", L"SessionConnection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2161,19 +1563,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.MachineProvisioningProgressReporter", L"SessionId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2191,19 +1580,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Setup.MachineProvisioningProgressReporter", L"SessionState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2221,19 +1597,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Setup.MachineProvisioningProgressReporter", L"SessionConnectionChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Setup::MachineProvisioningProgressReporter, winrt::Windows::Management::Setup::DeploymentSessionConnectionChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -2253,19 +1616,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Setup.MachineProvisioningProgressReporter", L"SessionConnectionChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -2286,19 +1636,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Setup.MachineProvisioningProgressReporter", L"SessionStateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Setup::MachineProvisioningProgressReporter, winrt::Windows::Management::Setup::DeploymentSessionStateChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -2318,19 +1655,6 @@ namespace py::cpp::Windows::Management::Setup
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Management.Setup.MachineProvisioningProgressReporter", L"SessionStateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {

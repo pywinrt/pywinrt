@@ -51,19 +51,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"AddCondition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>(args, 0);
 
                 {
@@ -94,19 +81,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Register", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -123,19 +97,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Register", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -165,19 +126,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"SetTaskEntryPointClsid", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 {
@@ -208,19 +156,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"SetTrigger", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>(args, 0);
 
                 {
@@ -247,19 +182,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"TaskGroup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -283,19 +205,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"TaskGroup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup>(arg);
 
             {
@@ -316,19 +225,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -352,19 +248,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {

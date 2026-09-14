@@ -55,19 +55,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Close();
@@ -96,19 +83,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"LicenseFetchAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 0);
 
                 return py::convert([&]()
@@ -138,19 +112,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"ReRegistrationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDCustomData>(args, 0);
 
                 return py::convert([&]()
@@ -180,19 +141,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"StartAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDCustomData>(args, 2);
@@ -221,19 +169,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"ClosedCaptionDataReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -253,19 +188,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"ClosedCaptionDataReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -286,19 +208,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"LicenseFetchCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -318,19 +227,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"LicenseFetchCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -351,19 +247,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"ProximityDetectionCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -383,19 +266,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"ProximityDetectionCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -416,19 +286,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"ReRegistrationNeeded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -448,19 +305,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"ReRegistrationNeeded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -481,19 +325,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"RegistrationCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -513,19 +344,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.PlayReady.NDClient", L"RegistrationCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -648,19 +466,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.NDCustomData", L"CustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -678,19 +483,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.NDCustomData", L"CustomDataTypeID");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -799,19 +591,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier", L"OnContentIDReceived", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 0);
 
                 {
@@ -842,19 +621,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier", L"OnDataReceived", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -886,19 +652,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier", L"OnEndOfStream", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.OnEndOfStream();
@@ -927,19 +680,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier", L"OnNetworkError", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.OnNetworkError();
@@ -968,19 +708,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier", L"OnPlayReadyObjectReceived", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 {
@@ -1011,19 +738,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier", L"OnStreamOpened", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.OnStreamOpened();
@@ -1143,19 +857,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor", L"LicenseFetchChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1179,19 +880,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor", L"LicenseFetchChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDCustomData>(arg);
 
             {
@@ -1212,19 +900,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor", L"ContentID");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1242,19 +917,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor", L"ContentIDType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1364,19 +1026,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDStorageFileHelper", L"GetFileURLs", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
@@ -1492,19 +1141,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDStreamParserNotifier", L"OnBeginSetupDecryptor", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaStreamDescriptor>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -1537,19 +1173,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDStreamParserNotifier", L"OnContentIDReceived", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 0);
 
                 {
@@ -1580,19 +1203,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDStreamParserNotifier", L"OnMediaStreamDescriptorCreated", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::AudioStreamDescriptor>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::VideoStreamDescriptor>>(args, 1);
 
@@ -1624,19 +1234,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDStreamParserNotifier", L"OnSampleParsed", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::NDMediaStreamType>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Core::MediaStreamSample>(args, 2);
@@ -1764,19 +1361,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDTCPMessenger", L"SendLicenseFetchRequestAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -1807,19 +1391,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDTCPMessenger", L"SendProximityDetectionResponseAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::NDProximityDetectionType>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -1852,19 +1423,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDTCPMessenger", L"SendProximityDetectionStartAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::NDProximityDetectionType>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -1897,19 +1455,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.NDTCPMessenger", L"SendRegistrationRequestAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -2093,19 +1638,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"GetSerializedHeader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2129,19 +1661,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"CustomAttributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2159,19 +1678,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"DecryptorSetup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2189,19 +1695,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"DomainServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2219,19 +1712,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"EncryptionType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2249,19 +1729,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"HeaderWithEmbeddedUpdates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2279,19 +1746,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"KeyId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2309,19 +1763,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"KeyIdString");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2339,19 +1780,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"LicenseAcquisitionUrl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2369,19 +1797,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"LicenseAcquisitionUserInterfaceUrl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2399,23 +1814,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"KeyIdStrings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.KeyIdStrings();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyContentHeader2>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyContentHeader", "KeyIdStrings", "Windows.Media.Protection.PlayReady.IPlayReadyContentHeader2").KeyIdStrings();
             }());
         }
         catch (...)
@@ -2429,23 +1831,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyContentHeader", L"KeyIds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.KeyIds();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyContentHeader2>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyContentHeader", "KeyIds", "Windows.Media.Protection.PlayReady.IPlayReadyContentHeader2").KeyIds();
             }());
         }
         catch (...)
@@ -2626,19 +2015,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomain", L"AccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2656,19 +2032,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomain", L"DomainJoinUrl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2686,19 +2049,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomain", L"FriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2716,19 +2066,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomain", L"Revision");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2746,19 +2083,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomain", L"ServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2872,19 +2196,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainIterable", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2994,19 +2305,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainIterator", L"GetMany", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain, true>>(args, 0);
 
                 return py::convert([&]()
@@ -3036,19 +2334,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainIterator", L"MoveNext", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3072,19 +2357,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainIterator", L"Current");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3102,19 +2374,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainIterator", L"HasCurrent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3258,23 +2517,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"BeginServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BeginServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "BeginServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).BeginServiceRequest();
                 }());
             }
             catch (...)
@@ -3298,23 +2544,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"GenerateManualEnablingChallenge", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GenerateManualEnablingChallenge();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "GenerateManualEnablingChallenge", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).GenerateManualEnablingChallenge();
                 }());
             }
             catch (...)
@@ -3338,23 +2571,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"NextServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.NextServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "NextServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).NextServiceRequest();
                 }());
             }
             catch (...)
@@ -3378,25 +2598,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"ProcessManualEnablingResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProcessManualEnablingResponse(param0);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "ProcessManualEnablingResponse", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 1).ProcessManualEnablingResponse(param0);
                 }());
             }
             catch (...)
@@ -3416,23 +2623,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"ProtectionSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionSystem();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "ProtectionSystem", "Windows.Media.Protection.IMediaProtectionServiceRequest").ProtectionSystem();
             }());
         }
         catch (...)
@@ -3446,23 +2640,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "Type", "Windows.Media.Protection.IMediaProtectionServiceRequest").Type();
             }());
         }
         catch (...)
@@ -3476,19 +2657,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"DomainServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3512,19 +2680,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"DomainServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             {
@@ -3545,19 +2700,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"DomainFriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3581,19 +2723,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"DomainFriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3614,19 +2743,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"DomainAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3650,19 +2766,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"DomainAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             {
@@ -3683,23 +2786,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Uri();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri();
             }());
         }
         catch (...)
@@ -3719,24 +2809,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Uri(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri(param0);
             }
 
             return 0;
@@ -3752,23 +2829,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChallengeCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData();
             }());
         }
         catch (...)
@@ -3788,24 +2852,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ChallengeCustomData(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData(param0);
             }
 
             return 0;
@@ -3821,23 +2872,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ResponseCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest", "ResponseCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ResponseCustomData();
             }());
         }
         catch (...)
@@ -3952,23 +2990,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"BeginServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BeginServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "BeginServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).BeginServiceRequest();
                 }());
             }
             catch (...)
@@ -3992,23 +3017,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"GenerateManualEnablingChallenge", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GenerateManualEnablingChallenge();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "GenerateManualEnablingChallenge", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).GenerateManualEnablingChallenge();
                 }());
             }
             catch (...)
@@ -4032,23 +3044,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"NextServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.NextServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "NextServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).NextServiceRequest();
                 }());
             }
             catch (...)
@@ -4072,25 +3071,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"ProcessManualEnablingResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProcessManualEnablingResponse(param0);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "ProcessManualEnablingResponse", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 1).ProcessManualEnablingResponse(param0);
                 }());
             }
             catch (...)
@@ -4110,23 +3096,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"ProtectionSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionSystem();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "ProtectionSystem", "Windows.Media.Protection.IMediaProtectionServiceRequest").ProtectionSystem();
             }());
         }
         catch (...)
@@ -4140,23 +3113,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "Type", "Windows.Media.Protection.IMediaProtectionServiceRequest").Type();
             }());
         }
         catch (...)
@@ -4170,19 +3130,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"DomainServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4206,19 +3153,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"DomainServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             {
@@ -4239,19 +3173,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"DomainAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4275,19 +3196,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"DomainAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             {
@@ -4308,23 +3216,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Uri();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri();
             }());
         }
         catch (...)
@@ -4344,24 +3239,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Uri(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri(param0);
             }
 
             return 0;
@@ -4377,23 +3259,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChallengeCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData();
             }());
         }
         catch (...)
@@ -4413,24 +3282,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ChallengeCustomData(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData(param0);
             }
 
             return 0;
@@ -4446,23 +3302,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ResponseCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest", "ResponseCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ResponseCustomData();
             }());
         }
         catch (...)
@@ -4576,19 +3419,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyITADataGenerator", L"GenerateData", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
@@ -4707,23 +3537,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"BeginServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BeginServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "BeginServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).BeginServiceRequest();
                 }());
             }
             catch (...)
@@ -4747,23 +3564,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"GenerateManualEnablingChallenge", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GenerateManualEnablingChallenge();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "GenerateManualEnablingChallenge", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).GenerateManualEnablingChallenge();
                 }());
             }
             catch (...)
@@ -4787,23 +3591,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"NextServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.NextServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "NextServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).NextServiceRequest();
                 }());
             }
             catch (...)
@@ -4827,25 +3618,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"ProcessManualEnablingResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProcessManualEnablingResponse(param0);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "ProcessManualEnablingResponse", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 1).ProcessManualEnablingResponse(param0);
                 }());
             }
             catch (...)
@@ -4865,23 +3643,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"ProtectionSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionSystem();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "ProtectionSystem", "Windows.Media.Protection.IMediaProtectionServiceRequest").ProtectionSystem();
             }());
         }
         catch (...)
@@ -4895,23 +3660,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "Type", "Windows.Media.Protection.IMediaProtectionServiceRequest").Type();
             }());
         }
         catch (...)
@@ -4925,23 +3677,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Uri();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri();
             }());
         }
         catch (...)
@@ -4961,24 +3700,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Uri(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri(param0);
             }
 
             return 0;
@@ -4994,23 +3720,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChallengeCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData();
             }());
         }
         catch (...)
@@ -5030,24 +3743,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ChallengeCustomData(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData(param0);
             }
 
             return 0;
@@ -5063,23 +3763,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ResponseCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest", "ResponseCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ResponseCustomData();
             }());
         }
         catch (...)
@@ -5169,19 +3856,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"GetKIDAtChainDepth", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -5207,19 +3881,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"ChainDepth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5237,19 +3898,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"DomainAccountID");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5267,19 +3915,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"ExpirationDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5297,19 +3932,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"ExpireAfterFirstPlay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5327,19 +3949,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"FullyEvaluated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5357,19 +3966,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"UsableForPlay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5387,23 +3983,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"ExpiresInRealTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExpiresInRealTime();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense2>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicense", "ExpiresInRealTime", "Windows.Media.Protection.PlayReady.IPlayReadyLicense2").ExpiresInRealTime();
             }());
         }
         catch (...)
@@ -5417,23 +4000,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"InMemoryOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.InMemoryOnly();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense2>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicense", "InMemoryOnly", "Windows.Media.Protection.PlayReady.IPlayReadyLicense2").InMemoryOnly();
             }());
         }
         catch (...)
@@ -5447,23 +4017,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"SecureStopId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SecureStopId();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense2>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicense", "SecureStopId", "Windows.Media.Protection.PlayReady.IPlayReadyLicense2").SecureStopId();
             }());
         }
         catch (...)
@@ -5477,23 +4034,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicense", L"SecurityLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SecurityLevel();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense2>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicense", "SecurityLevel", "Windows.Media.Protection.PlayReady.IPlayReadyLicense2").SecurityLevel();
             }());
         }
         catch (...)
@@ -5607,23 +4151,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"BeginServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BeginServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "BeginServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).BeginServiceRequest();
                 }());
             }
             catch (...)
@@ -5647,26 +4178,13 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"CreateLicenseIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateLicenseIterable(param0, param1);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest3>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "CreateLicenseIterable", "Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest3", 2).CreateLicenseIterable(param0, param1);
                 }());
             }
             catch (...)
@@ -5690,23 +4208,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"GenerateManualEnablingChallenge", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GenerateManualEnablingChallenge();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "GenerateManualEnablingChallenge", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).GenerateManualEnablingChallenge();
                 }());
             }
             catch (...)
@@ -5730,23 +4235,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"NextServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.NextServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "NextServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).NextServiceRequest();
                 }());
             }
             catch (...)
@@ -5770,25 +4262,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"ProcessManualEnablingResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProcessManualEnablingResponse(param0);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "ProcessManualEnablingResponse", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 1).ProcessManualEnablingResponse(param0);
                 }());
             }
             catch (...)
@@ -5808,23 +4287,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"ProtectionSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionSystem();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "ProtectionSystem", "Windows.Media.Protection.IMediaProtectionServiceRequest").ProtectionSystem();
             }());
         }
         catch (...)
@@ -5838,23 +4304,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "Type", "Windows.Media.Protection.IMediaProtectionServiceRequest").Type();
             }());
         }
         catch (...)
@@ -5868,19 +4321,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"DomainServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5904,19 +4344,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"DomainServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             {
@@ -5937,19 +4364,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"ContentHeader");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5973,19 +4387,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"ContentHeader");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(arg);
 
             {
@@ -6006,23 +4407,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"SessionId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SessionId();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest2>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "SessionId", "Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest2").SessionId();
             }());
         }
         catch (...)
@@ -6036,23 +4424,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Uri();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri();
             }());
         }
         catch (...)
@@ -6072,24 +4447,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Uri(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri(param0);
             }
 
             return 0;
@@ -6105,23 +4467,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChallengeCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData();
             }());
         }
         catch (...)
@@ -6141,24 +4490,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ChallengeCustomData(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData(param0);
             }
 
             return 0;
@@ -6174,23 +4510,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ResponseCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest", "ResponseCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ResponseCustomData();
             }());
         }
         catch (...)
@@ -6322,19 +4645,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6444,19 +4754,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator", L"GetMany", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense, true>>(args, 0);
 
                 return py::convert([&]()
@@ -6486,19 +4783,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator", L"MoveNext", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6522,19 +4806,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator", L"Current");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6552,19 +4823,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator", L"HasCurrent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6802,19 +5060,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseSession", L"ConfigureMediaProtectionManager", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::MediaProtectionManager>(args, 0);
 
                 {
@@ -6845,19 +5090,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseSession", L"CreateLAServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6885,26 +5117,13 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyLicenseSession", L"CreateLicenseIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateLicenseIterable(param0, param1);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyLicenseSession", "CreateLicenseIterable", "Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2", 2).CreateLicenseIterable(param0, param1);
                 }());
             }
             catch (...)
@@ -7016,23 +5235,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"BeginServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BeginServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "BeginServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).BeginServiceRequest();
                 }());
             }
             catch (...)
@@ -7056,23 +5262,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"GenerateManualEnablingChallenge", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GenerateManualEnablingChallenge();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "GenerateManualEnablingChallenge", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).GenerateManualEnablingChallenge();
                 }());
             }
             catch (...)
@@ -7096,23 +5289,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"NextServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.NextServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "NextServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).NextServiceRequest();
                 }());
             }
             catch (...)
@@ -7136,25 +5316,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"ProcessManualEnablingResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProcessManualEnablingResponse(param0);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "ProcessManualEnablingResponse", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 1).ProcessManualEnablingResponse(param0);
                 }());
             }
             catch (...)
@@ -7174,23 +5341,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"ProtectionSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionSystem();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "ProtectionSystem", "Windows.Media.Protection.IMediaProtectionServiceRequest").ProtectionSystem();
             }());
         }
         catch (...)
@@ -7204,23 +5358,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "Type", "Windows.Media.Protection.IMediaProtectionServiceRequest").Type();
             }());
         }
         catch (...)
@@ -7234,19 +5375,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"MeteringCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7270,19 +5398,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"MeteringCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
             {
@@ -7303,23 +5418,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Uri();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri();
             }());
         }
         catch (...)
@@ -7339,24 +5441,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Uri(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri(param0);
             }
 
             return 0;
@@ -7372,23 +5461,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChallengeCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData();
             }());
         }
         catch (...)
@@ -7408,24 +5484,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ChallengeCustomData(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData(param0);
             }
 
             return 0;
@@ -7441,23 +5504,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ResponseCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest", "ResponseCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ResponseCustomData();
             }());
         }
         catch (...)
@@ -7570,23 +5620,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"BeginServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BeginServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "BeginServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).BeginServiceRequest();
                 }());
             }
             catch (...)
@@ -7610,23 +5647,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"GenerateManualEnablingChallenge", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GenerateManualEnablingChallenge();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "GenerateManualEnablingChallenge", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).GenerateManualEnablingChallenge();
                 }());
             }
             catch (...)
@@ -7650,23 +5674,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"NextServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.NextServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "NextServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).NextServiceRequest();
                 }());
             }
             catch (...)
@@ -7690,25 +5701,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"ProcessManualEnablingResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProcessManualEnablingResponse(param0);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "ProcessManualEnablingResponse", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 1).ProcessManualEnablingResponse(param0);
                 }());
             }
             catch (...)
@@ -7728,23 +5726,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"ProtectionSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionSystem();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "ProtectionSystem", "Windows.Media.Protection.IMediaProtectionServiceRequest").ProtectionSystem();
             }());
         }
         catch (...)
@@ -7758,23 +5743,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "Type", "Windows.Media.Protection.IMediaProtectionServiceRequest").Type();
             }());
         }
         catch (...)
@@ -7788,23 +5760,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Uri();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri();
             }());
         }
         catch (...)
@@ -7824,24 +5783,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Uri(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri(param0);
             }
 
             return 0;
@@ -7857,23 +5803,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChallengeCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData();
             }());
         }
         catch (...)
@@ -7893,24 +5826,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ChallengeCustomData(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData(param0);
             }
 
             return 0;
@@ -7926,23 +5846,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ResponseCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest", "ResponseCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ResponseCustomData();
             }());
         }
         catch (...)
@@ -8056,19 +5963,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopIterable", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8178,19 +6072,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator", L"GetMany", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest, true>>(args, 0);
 
                 return py::convert([&]()
@@ -8220,19 +6101,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator", L"MoveNext", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8256,19 +6124,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator", L"Current");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8286,19 +6141,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator", L"HasCurrent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8460,23 +6302,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"BeginServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BeginServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "BeginServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).BeginServiceRequest();
                 }());
             }
             catch (...)
@@ -8500,23 +6329,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"GenerateManualEnablingChallenge", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GenerateManualEnablingChallenge();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "GenerateManualEnablingChallenge", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).GenerateManualEnablingChallenge();
                 }());
             }
             catch (...)
@@ -8540,23 +6356,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"NextServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.NextServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "NextServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).NextServiceRequest();
                 }());
             }
             catch (...)
@@ -8580,25 +6383,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"ProcessManualEnablingResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProcessManualEnablingResponse(param0);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "ProcessManualEnablingResponse", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 1).ProcessManualEnablingResponse(param0);
                 }());
             }
             catch (...)
@@ -8618,23 +6408,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"ProtectionSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionSystem();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "ProtectionSystem", "Windows.Media.Protection.IMediaProtectionServiceRequest").ProtectionSystem();
             }());
         }
         catch (...)
@@ -8648,23 +6425,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "Type", "Windows.Media.Protection.IMediaProtectionServiceRequest").Type();
             }());
         }
         catch (...)
@@ -8678,19 +6442,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"PublisherCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8708,19 +6459,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"SessionID");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8738,19 +6476,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8768,19 +6493,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"Stopped");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8798,19 +6510,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"UpdateTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8828,23 +6527,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Uri();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri();
             }());
         }
         catch (...)
@@ -8864,24 +6550,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Uri(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri(param0);
             }
 
             return 0;
@@ -8897,23 +6570,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChallengeCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData();
             }());
         }
         catch (...)
@@ -8933,24 +6593,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ChallengeCustomData(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData(param0);
             }
 
             return 0;
@@ -8966,23 +6613,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ResponseCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest", "ResponseCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ResponseCustomData();
             }());
         }
         catch (...)
@@ -9077,19 +6711,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.PlayReadySoapMessage", L"GetMessageBody", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9113,19 +6734,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySoapMessage", L"MessageHeaders");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9143,19 +6751,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.PlayReadySoapMessage", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9809,19 +7404,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs", L"ClosedCaptionData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9839,19 +7421,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs", L"ClosedCaptionDataFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9869,19 +7438,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs", L"PresentationTimestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10098,19 +7654,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDCustomData", L"CustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10128,19 +7671,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDCustomData", L"CustomDataTypeID");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10341,19 +7871,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngine", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Close();
@@ -10382,19 +7899,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngine", L"Open", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -10426,19 +7930,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngine", L"Pause", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Pause();
@@ -10467,19 +7958,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngine", L"Resume", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Resume();
@@ -10508,19 +7986,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngine", L"Seek", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 {
@@ -10547,19 +8012,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngine", L"BufferFullMaxThresholdInSamples");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10577,19 +8029,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngine", L"BufferFullMinThresholdInSamples");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10607,19 +8046,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngine", L"CanSeek");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10637,19 +8063,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngine", L"Notifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11039,19 +8452,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier", L"OnContentIDReceived", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 0);
 
                 {
@@ -11082,19 +8482,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier", L"OnDataReceived", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -11126,19 +8513,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier", L"OnEndOfStream", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.OnEndOfStream();
@@ -11167,19 +8541,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier", L"OnNetworkError", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.OnNetworkError();
@@ -11208,19 +8569,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier", L"OnPlayReadyObjectReceived", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 {
@@ -11251,19 +8599,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier", L"OnStreamOpened", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.OnStreamOpened();
@@ -11603,19 +8938,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDLicenseFetchCompletedEventArgs", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11789,19 +9111,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor", L"ContentID");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11819,19 +9128,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor", L"ContentIDType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11849,19 +9145,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor", L"LicenseFetchChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11885,19 +9168,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor", L"LicenseFetchChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDCustomData>(arg);
 
             {
@@ -12140,19 +9410,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDLicenseFetchResult", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12330,19 +9587,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDMessenger", L"SendLicenseFetchRequestAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -12373,19 +9617,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDMessenger", L"SendProximityDetectionResponseAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::NDProximityDetectionType>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -12418,19 +9649,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDMessenger", L"SendProximityDetectionStartAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::NDProximityDetectionType>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -12463,19 +9681,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDMessenger", L"SendRegistrationRequestAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -12841,19 +10046,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDProximityDetectionCompletedEventArgs", L"ProximityDetectionRetryCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13027,19 +10219,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13057,19 +10236,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs", L"TransmitterCertificateAccepted");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13093,19 +10259,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs", L"TransmitterCertificateAccepted");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -13126,19 +10279,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs", L"TransmitterProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13377,19 +10517,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDSendResult", L"Response");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13564,19 +10691,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDStartResult", L"MediaStreamSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13754,19 +10868,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDStorageFileHelper", L"GetFileURLs", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
@@ -13964,19 +11065,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDStreamParser", L"BeginOfStream", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.BeginOfStream();
@@ -14005,19 +11093,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDStreamParser", L"EndOfStream", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.EndOfStream();
@@ -14046,19 +11121,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDStreamParser", L"GetStreamInformation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaStreamDescriptor>(args, 0);
                 winrt::Windows::Media::Protection::PlayReady::NDMediaStreamType param1{};
 
@@ -14102,19 +11164,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDStreamParser", L"ParseData", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 {
@@ -14141,19 +11190,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDStreamParser", L"Notifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14447,19 +11483,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDStreamParserNotifier", L"OnBeginSetupDecryptor", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaStreamDescriptor>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -14492,19 +11515,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDStreamParserNotifier", L"OnContentIDReceived", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 0);
 
                 {
@@ -14535,19 +11545,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDStreamParserNotifier", L"OnMediaStreamDescriptorCreated", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::AudioStreamDescriptor>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::VideoStreamDescriptor>>(args, 1);
 
@@ -14579,19 +11576,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.INDStreamParserNotifier", L"OnSampleParsed", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::NDMediaStreamType>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Core::MediaStreamSample>(args, 2);
@@ -14948,19 +11932,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"CertificateType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14978,19 +11949,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"ClientID");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15008,19 +11966,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"ExpirationDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15038,19 +11983,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"ModelDigest");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15068,19 +12000,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"ModelManufacturerName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15098,19 +12017,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"ModelName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15128,19 +12034,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"ModelNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15158,19 +12051,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"PlatformIdentifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15188,19 +12068,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"SecurityLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15218,19 +12085,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"SecurityVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15248,19 +12102,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.INDTransmitterProperties", L"SupportedFeatures");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15647,19 +12488,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyDomain", L"AccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15677,19 +12505,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyDomain", L"DomainJoinUrl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15707,19 +12522,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyDomain", L"FriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15737,19 +12539,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyDomain", L"Revision");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15767,19 +12556,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyDomain", L"ServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16041,19 +12817,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicense", L"GetKIDAtChainDepth", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -16079,19 +12842,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicense", L"ChainDepth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16109,19 +12859,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicense", L"DomainAccountID");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16139,19 +12876,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicense", L"ExpirationDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16169,19 +12893,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicense", L"ExpireAfterFirstPlay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16199,19 +12910,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicense", L"FullyEvaluated");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16229,19 +12927,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicense", L"UsableForPlay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16557,23 +13242,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"BeginServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BeginServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "BeginServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).BeginServiceRequest();
                 }());
             }
             catch (...)
@@ -16597,23 +13269,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"GenerateManualEnablingChallenge", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GenerateManualEnablingChallenge();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "GenerateManualEnablingChallenge", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).GenerateManualEnablingChallenge();
                 }());
             }
             catch (...)
@@ -16637,23 +13296,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"NextServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.NextServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "NextServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).NextServiceRequest();
                 }());
             }
             catch (...)
@@ -16677,25 +13323,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ProcessManualEnablingResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProcessManualEnablingResponse(param0);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "ProcessManualEnablingResponse", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 1).ProcessManualEnablingResponse(param0);
                 }());
             }
             catch (...)
@@ -16715,19 +13348,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest", L"ContentHeader");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16751,19 +13371,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest", L"ContentHeader");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(arg);
 
             {
@@ -16784,19 +13391,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest", L"DomainServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16820,19 +13414,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest", L"DomainServiceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             {
@@ -16853,23 +13434,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChallengeCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData();
             }());
         }
         catch (...)
@@ -16889,24 +13457,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ChallengeCustomData(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData(param0);
             }
 
             return 0;
@@ -16922,23 +13477,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ResponseCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "ResponseCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ResponseCustomData();
             }());
         }
         catch (...)
@@ -16952,23 +13494,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Uri();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri();
             }());
         }
         catch (...)
@@ -16988,24 +13517,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Uri(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri(param0);
             }
 
             return 0;
@@ -17021,23 +13537,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.IMediaProtectionServiceRequest", L"ProtectionSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionSystem();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.IMediaProtectionServiceRequest", "ProtectionSystem", "Windows.Media.Protection.IMediaProtectionServiceRequest").ProtectionSystem();
             }());
         }
         catch (...)
@@ -17051,23 +13554,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.IMediaProtectionServiceRequest", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.IMediaProtectionServiceRequest", "Type", "Windows.Media.Protection.IMediaProtectionServiceRequest").Type();
             }());
         }
         catch (...)
@@ -17573,19 +14063,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession", L"ConfigureMediaProtectionManager", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::MediaProtectionManager>(args, 0);
 
                 {
@@ -17616,19 +14093,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession", L"CreateLAServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -17849,24 +14313,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession", L"ConfigureMediaProtectionManager", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::MediaProtectionManager>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ConfigureMediaProtectionManager(param0);
+                    py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession", "ConfigureMediaProtectionManager", "Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession", 1).ConfigureMediaProtectionManager(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -17892,23 +14343,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession", L"CreateLAServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateLAServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession", "CreateLAServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession", 0).CreateLAServiceRequest();
                 }());
             }
             catch (...)
@@ -17932,19 +14370,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2", L"CreateLicenseIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -18213,23 +14638,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"BeginServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BeginServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "BeginServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).BeginServiceRequest();
                 }());
             }
             catch (...)
@@ -18253,23 +14665,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"GenerateManualEnablingChallenge", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GenerateManualEnablingChallenge();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "GenerateManualEnablingChallenge", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).GenerateManualEnablingChallenge();
                 }());
             }
             catch (...)
@@ -18293,23 +14692,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"NextServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.NextServiceRequest();
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "NextServiceRequest", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 0).NextServiceRequest();
                 }());
             }
             catch (...)
@@ -18333,25 +14719,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ProcessManualEnablingResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProcessManualEnablingResponse(param0);
+                    return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::method, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "ProcessManualEnablingResponse", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", 1).ProcessManualEnablingResponse(param0);
                 }());
             }
             catch (...)
@@ -18371,19 +14744,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest", L"PublisherCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18401,19 +14761,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest", L"SessionID");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18431,19 +14778,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18461,19 +14795,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest", L"Stopped");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18491,19 +14812,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest", L"UpdateTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18521,23 +14829,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChallengeCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData();
             }());
         }
         catch (...)
@@ -18557,24 +14852,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ChallengeCustomData(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "ChallengeCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ChallengeCustomData(param0);
             }
 
             return 0;
@@ -18590,23 +14872,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ResponseCustomData();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "ResponseCustomData", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").ResponseCustomData();
             }());
         }
         catch (...)
@@ -18620,23 +14889,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Uri();
+                return py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri();
             }());
         }
         catch (...)
@@ -18656,24 +14912,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Uri(param0);
+                py::require<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", "Uri", "Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest").Uri(param0);
             }
 
             return 0;
@@ -18689,23 +14932,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.IMediaProtectionServiceRequest", L"ProtectionSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionSystem();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.IMediaProtectionServiceRequest", "ProtectionSystem", "Windows.Media.Protection.IMediaProtectionServiceRequest").ProtectionSystem();
             }());
         }
         catch (...)
@@ -18719,23 +14949,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.IMediaProtectionServiceRequest", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.IMediaProtectionServiceRequest", "Type", "Windows.Media.Protection.IMediaProtectionServiceRequest").Type();
             }());
         }
         catch (...)
@@ -19259,19 +15476,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"BeginServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -19299,19 +15503,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"GenerateManualEnablingChallenge", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -19339,19 +15530,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"NextServiceRequest", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -19379,19 +15557,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ProcessManualEnablingResponse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
@@ -19417,19 +15582,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19453,19 +15605,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ChallengeCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -19486,19 +15625,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"ResponseCustomData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19516,19 +15642,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19552,19 +15665,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -19585,23 +15685,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.IMediaProtectionServiceRequest", L"ProtectionSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionSystem();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.IMediaProtectionServiceRequest", "ProtectionSystem", "Windows.Media.Protection.IMediaProtectionServiceRequest").ProtectionSystem();
             }());
         }
         catch (...)
@@ -19615,23 +15702,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.IMediaProtectionServiceRequest", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>(self->obj, py::member_kind::property, "Windows.Media.Protection.IMediaProtectionServiceRequest", "Type", "Windows.Media.Protection.IMediaProtectionServiceRequest").Type();
             }());
         }
         catch (...)

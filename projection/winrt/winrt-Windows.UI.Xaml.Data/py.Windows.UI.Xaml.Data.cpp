@@ -112,23 +112,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Source();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "Source", "Windows.UI.Xaml.Data.IBinding").Source();
             }());
         }
         catch (...)
@@ -148,24 +135,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Source(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "Source", "Windows.UI.Xaml.Data.IBinding").Source(param0);
             }
 
             return 0;
@@ -181,23 +155,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"RelativeSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().RelativeSource();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "RelativeSource", "Windows.UI.Xaml.Data.IBinding").RelativeSource();
             }());
         }
         catch (...)
@@ -217,24 +178,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"RelativeSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::RelativeSource>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().RelativeSource(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "RelativeSource", "Windows.UI.Xaml.Data.IBinding").RelativeSource(param0);
             }
 
             return 0;
@@ -250,23 +198,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Path();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "Path", "Windows.UI.Xaml.Data.IBinding").Path();
             }());
         }
         catch (...)
@@ -286,24 +221,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::PropertyPath>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Path(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "Path", "Windows.UI.Xaml.Data.IBinding").Path(param0);
             }
 
             return 0;
@@ -319,23 +241,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"Mode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Mode();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "Mode", "Windows.UI.Xaml.Data.IBinding").Mode();
             }());
         }
         catch (...)
@@ -355,24 +264,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"Mode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::BindingMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Mode(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "Mode", "Windows.UI.Xaml.Data.IBinding").Mode(param0);
             }
 
             return 0;
@@ -388,23 +284,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"ElementName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ElementName();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "ElementName", "Windows.UI.Xaml.Data.IBinding").ElementName();
             }());
         }
         catch (...)
@@ -424,24 +307,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"ElementName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ElementName(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "ElementName", "Windows.UI.Xaml.Data.IBinding").ElementName(param0);
             }
 
             return 0;
@@ -457,23 +327,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"ConverterParameter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ConverterParameter();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "ConverterParameter", "Windows.UI.Xaml.Data.IBinding").ConverterParameter();
             }());
         }
         catch (...)
@@ -493,24 +350,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"ConverterParameter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ConverterParameter(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "ConverterParameter", "Windows.UI.Xaml.Data.IBinding").ConverterParameter(param0);
             }
 
             return 0;
@@ -526,23 +370,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"ConverterLanguage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ConverterLanguage();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "ConverterLanguage", "Windows.UI.Xaml.Data.IBinding").ConverterLanguage();
             }());
         }
         catch (...)
@@ -562,24 +393,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"ConverterLanguage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ConverterLanguage(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "ConverterLanguage", "Windows.UI.Xaml.Data.IBinding").ConverterLanguage(param0);
             }
 
             return 0;
@@ -595,23 +413,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"Converter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Converter();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "Converter", "Windows.UI.Xaml.Data.IBinding").Converter();
             }());
         }
         catch (...)
@@ -631,24 +436,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"Converter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::IValueConverter>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Converter(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "Converter", "Windows.UI.Xaml.Data.IBinding").Converter(param0);
             }
 
             return 0;
@@ -664,23 +456,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"UpdateSourceTrigger");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().UpdateSourceTrigger();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "UpdateSourceTrigger", "Windows.UI.Xaml.Data.IBinding2").UpdateSourceTrigger();
             }());
         }
         catch (...)
@@ -700,24 +479,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"UpdateSourceTrigger");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::UpdateSourceTrigger>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().UpdateSourceTrigger(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "UpdateSourceTrigger", "Windows.UI.Xaml.Data.IBinding2").UpdateSourceTrigger(param0);
             }
 
             return 0;
@@ -733,23 +499,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"TargetNullValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().TargetNullValue();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "TargetNullValue", "Windows.UI.Xaml.Data.IBinding2").TargetNullValue();
             }());
         }
         catch (...)
@@ -769,24 +522,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"TargetNullValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().TargetNullValue(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "TargetNullValue", "Windows.UI.Xaml.Data.IBinding2").TargetNullValue(param0);
             }
 
             return 0;
@@ -802,23 +542,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"FallbackValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().FallbackValue();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBinding2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "FallbackValue", "Windows.UI.Xaml.Data.IBinding2").FallbackValue();
             }());
         }
         catch (...)
@@ -838,24 +565,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.Binding", L"FallbackValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().FallbackValue(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IBinding2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.Binding", "FallbackValue", "Windows.UI.Xaml.Data.IBinding2").FallbackValue(param0);
             }
 
             return 0;
@@ -1141,22 +855,9 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.BindingExpression", L"UpdateSource", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Data::BindingExpression>().UpdateSource();
+                    py::require<winrt::Windows::UI::Xaml::Data::IBindingExpression>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Data.BindingExpression", "UpdateSource", "Windows.UI.Xaml.Data.IBindingExpression", 0).UpdateSource();
                 }
 
                 Py_RETURN_NONE;
@@ -1178,23 +879,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.BindingExpression", L"DataItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::BindingExpression>().DataItem();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBindingExpression>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.BindingExpression", "DataItem", "Windows.UI.Xaml.Data.IBindingExpression").DataItem();
             }());
         }
         catch (...)
@@ -1208,23 +896,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.BindingExpression", L"ParentBinding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::BindingExpression>().ParentBinding();
+                return py::require<winrt::Windows::UI::Xaml::Data::IBindingExpression>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.BindingExpression", "ParentBinding", "Windows.UI.Xaml.Data.IBindingExpression").ParentBinding();
             }());
         }
         catch (...)
@@ -1561,19 +1236,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.CollectionViewSource", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1597,19 +1259,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.CollectionViewSource", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
@@ -1630,19 +1279,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.CollectionViewSource", L"ItemsPath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1666,19 +1302,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.CollectionViewSource", L"ItemsPath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::PropertyPath>(arg);
 
             {
@@ -1699,19 +1322,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.CollectionViewSource", L"IsSourceGrouped");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1735,19 +1345,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.CollectionViewSource", L"IsSourceGrouped");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1768,19 +1365,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.CollectionViewSource", L"View");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2136,23 +1720,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.CurrentChangingEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs>().Cancel();
+                return py::require<winrt::Windows::UI::Xaml::Data::ICurrentChangingEventArgs>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.CurrentChangingEventArgs", "Cancel", "Windows.UI.Xaml.Data.ICurrentChangingEventArgs").Cancel();
             }());
         }
         catch (...)
@@ -2172,24 +1743,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.CurrentChangingEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs>().Cancel(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::ICurrentChangingEventArgs>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.CurrentChangingEventArgs", "Cancel", "Windows.UI.Xaml.Data.ICurrentChangingEventArgs").Cancel(param0);
             }
 
             return 0;
@@ -2205,23 +1763,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.CurrentChangingEventArgs", L"IsCancelable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs>().IsCancelable();
+                return py::require<winrt::Windows::UI::Xaml::Data::ICurrentChangingEventArgs>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.CurrentChangingEventArgs", "IsCancelable", "Windows.UI.Xaml.Data.ICurrentChangingEventArgs").IsCancelable();
             }());
         }
         catch (...)
@@ -2411,23 +1956,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ItemIndexRange", L"FirstIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::ItemIndexRange>().FirstIndex();
+                return py::require<winrt::Windows::UI::Xaml::Data::IItemIndexRange>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.ItemIndexRange", "FirstIndex", "Windows.UI.Xaml.Data.IItemIndexRange").FirstIndex();
             }());
         }
         catch (...)
@@ -2441,23 +1973,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ItemIndexRange", L"LastIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::ItemIndexRange>().LastIndex();
+                return py::require<winrt::Windows::UI::Xaml::Data::IItemIndexRange>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.ItemIndexRange", "LastIndex", "Windows.UI.Xaml.Data.IItemIndexRange").LastIndex();
             }());
         }
         catch (...)
@@ -2471,23 +1990,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ItemIndexRange", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::ItemIndexRange>().Length();
+                return py::require<winrt::Windows::UI::Xaml::Data::IItemIndexRange>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.ItemIndexRange", "Length", "Windows.UI.Xaml.Data.IItemIndexRange").Length();
             }());
         }
         catch (...)
@@ -2677,23 +2183,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.PropertyChangedEventArgs", L"PropertyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::PropertyChangedEventArgs>().PropertyName();
+                return py::require<winrt::Windows::UI::Xaml::Data::IPropertyChangedEventArgs>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.PropertyChangedEventArgs", "PropertyName", "Windows.UI.Xaml.Data.IPropertyChangedEventArgs").PropertyName();
             }());
         }
         catch (...)
@@ -2879,23 +2372,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.RelativeSource", L"Mode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Data::RelativeSource>().Mode();
+                return py::require<winrt::Windows::UI::Xaml::Data::IRelativeSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.RelativeSource", "Mode", "Windows.UI.Xaml.Data.IRelativeSource").Mode();
             }());
         }
         catch (...)
@@ -2915,24 +2395,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.RelativeSource", L"Mode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::RelativeSourceMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Data::RelativeSource>().Mode(param0);
+                py::require<winrt::Windows::UI::Xaml::Data::IRelativeSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Data.RelativeSource", "Mode", "Windows.UI.Xaml.Data.IRelativeSource").Mode(param0);
             }
 
             return 0;
@@ -3039,24 +2506,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "Append", "Windows.Foundation.Collections.IVector<Object>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3082,22 +2536,9 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "Clear", "Windows.Foundation.Collections.IVector<Object>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -3123,23 +2564,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<Object>", 0).First();
                 }());
             }
             catch (...)
@@ -3163,25 +2591,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "GetAt", "Windows.Foundation.Collections.IVector<Object>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -3205,26 +2620,13 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::IInspectable, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "GetMany", "Windows.Foundation.Collections.IVector<Object>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -3248,23 +2650,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "GetView", "Windows.Foundation.Collections.IVector<Object>", 0).GetView();
                 }());
             }
             catch (...)
@@ -3288,26 +2677,13 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "IndexOf", "Windows.Foundation.Collections.IVector<Object>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -3344,25 +2720,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "InsertAt", "Windows.Foundation.Collections.IVector<Object>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -3388,19 +2751,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"LoadMoreItemsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -3430,19 +2780,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"MoveCurrentTo", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
@@ -3472,19 +2809,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"MoveCurrentToFirst", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3512,19 +2836,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"MoveCurrentToLast", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3552,19 +2863,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"MoveCurrentToNext", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3592,19 +2890,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"MoveCurrentToPosition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -3634,19 +2919,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"MoveCurrentToPrevious", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3674,24 +2946,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "RemoveAt", "Windows.Foundation.Collections.IVector<Object>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3717,22 +2976,9 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Object>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -3758,24 +3004,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::IInspectable, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "ReplaceAll", "Windows.Foundation.Collections.IVector<Object>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3801,25 +3034,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "SetAt", "Windows.Foundation.Collections.IVector<Object>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -3841,19 +3061,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"CollectionGroups");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3871,19 +3078,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"CurrentItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3901,19 +3095,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"CurrentPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3931,19 +3112,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"HasMoreItems");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3961,19 +3129,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"IsCurrentAfterLast");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3991,19 +3146,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"IsCurrentBeforeFirst");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4021,23 +3163,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Collections.IVector`1", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, nullptr, "Size", "Windows.Foundation.Collections.IVector<Object>").Size();
             }());
         }
         catch (...)
@@ -4051,19 +3180,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"CurrentChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -4083,19 +3199,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"CurrentChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4116,19 +3219,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"CurrentChanging");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::CurrentChangingEventHandler>(arg);
 
             return py::convert([&]()
@@ -4148,19 +3238,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Data.ICollectionView", L"CurrentChanging");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4181,25 +3258,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableVector`1", L"VectorChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::VectorChangedEventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VectorChanged(param0);
+                return py::require<winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::event, nullptr, "VectorChanged", "Windows.Foundation.Collections.IObservableVector<Object>").VectorChanged(param0);
             }());
         }
         catch (...)
@@ -4213,24 +3277,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Collections.IObservableVector`1", L"VectorChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.VectorChanged(param0);
+                py::require<winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::event, nullptr, "VectorChanged", "Windows.Foundation.Collections.IObservableVector<Object>").VectorChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -4249,7 +3300,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<Object>", 0).First();
             }());
         }
         catch (...)
@@ -4264,7 +3315,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, nullptr, "Size", "Windows.Foundation.Collections.IVector<Object>").Size());
         }
         catch (...)
         {
@@ -4280,7 +3331,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "GetAt", "Windows.Foundation.Collections.IVector<Object>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -4323,7 +3374,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "GetAt", "Windows.Foundation.Collections.IVector<Object>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -4341,7 +3392,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "GetAt", "Windows.Foundation.Collections.IVector<Object>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -4366,14 +3417,14 @@ namespace py::cpp::Windows::UI::Xaml::Data
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "SetAt", "Windows.Foundation.Collections.IVector<Object>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Foundation::IInspectable>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, nullptr, "SetAt", "Windows.Foundation.Collections.IVector<Object>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -5476,19 +4527,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICollectionViewFactory", L"CreateView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5674,19 +4712,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICollectionViewGroup", L"Group");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5704,19 +4729,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICollectionViewGroup", L"GroupItems");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5915,19 +4927,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICustomProperty", L"GetIndexedValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -5958,19 +4957,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICustomProperty", L"GetValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
@@ -6000,19 +4986,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICustomProperty", L"SetIndexedValue", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -6045,19 +5018,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICustomProperty", L"SetValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -6085,19 +5045,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICustomProperty", L"CanRead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6115,19 +5062,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICustomProperty", L"CanWrite");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6145,19 +5079,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICustomProperty", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6175,19 +5096,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICustomProperty", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6598,19 +5506,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICustomPropertyProvider", L"GetCustomProperty", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -6640,19 +5535,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICustomPropertyProvider", L"GetIndexedProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
 
@@ -6683,19 +5565,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ICustomPropertyProvider", L"GetStringRepresentation", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6719,19 +5588,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ICustomPropertyProvider", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7014,22 +5870,9 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -7055,19 +5898,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.IItemsRangeInfo", L"RangesChanged", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::ItemIndexRange>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Xaml::Data::ItemIndexRange>>(args, 1);
 
@@ -7102,7 +5932,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -7323,19 +6153,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Data.INotifyPropertyChanged", L"PropertyChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::PropertyChangedEventHandler>(arg);
 
             return py::convert([&]()
@@ -7355,19 +6172,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Data.INotifyPropertyChanged", L"PropertyChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7591,19 +6395,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ISelectionInfo", L"DeselectRange", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::ItemIndexRange>(args, 0);
 
                 {
@@ -7634,19 +6425,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ISelectionInfo", L"GetSelectedRanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7674,19 +6452,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ISelectionInfo", L"IsSelected", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -7716,19 +6481,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ISelectionInfo", L"SelectRange", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::ItemIndexRange>(args, 0);
 
                 {
@@ -8016,19 +6768,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.ISupportIncrementalLoading", L"LoadMoreItemsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -8054,19 +6793,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Data.ISupportIncrementalLoading", L"HasMoreItems");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8277,19 +7003,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.IValueConverter", L"Convert", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -8322,19 +7035,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Data.IValueConverter", L"ConvertBack", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);

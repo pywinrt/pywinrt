@@ -112,25 +112,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource", L"BitmapRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>().BitmapRequested(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::ICustomMapTileDataSource>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource", "BitmapRequested", "Windows.UI.Xaml.Controls.Maps.ICustomMapTileDataSource").BitmapRequested(param0);
             }());
         }
         catch (...)
@@ -144,24 +131,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource", L"BitmapRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>().BitmapRequested(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::ICustomMapTileDataSource>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource", "BitmapRequested", "Windows.UI.Xaml.Controls.Maps.ICustomMapTileDataSource").BitmapRequested(param0);
             }
 
             Py_RETURN_NONE;
@@ -389,23 +363,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", L"UriFormatString");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().UriFormatString();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", "UriFormatString", "Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource").UriFormatString();
             }());
         }
         catch (...)
@@ -425,24 +386,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", L"UriFormatString");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().UriFormatString(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", "UriFormatString", "Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource").UriFormatString(param0);
             }
 
             return 0;
@@ -458,23 +406,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", L"AllowCaching");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().AllowCaching();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", "AllowCaching", "Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource").AllowCaching();
             }());
         }
         catch (...)
@@ -494,24 +429,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", L"AllowCaching");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().AllowCaching(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", "AllowCaching", "Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource").AllowCaching(param0);
             }
 
             return 0;
@@ -527,23 +449,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", L"AdditionalRequestHeaders");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().AdditionalRequestHeaders();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", "AdditionalRequestHeaders", "Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource").AdditionalRequestHeaders();
             }());
         }
         catch (...)
@@ -557,25 +466,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", L"UriRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().UriRequested(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSource>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", "UriRequested", "Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource").UriRequested(param0);
             }());
         }
         catch (...)
@@ -589,24 +485,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", L"UriRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().UriRequested(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSource>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource", "UriRequested", "Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource").UriRequested(param0);
             }
 
             Py_RETURN_NONE;
@@ -837,23 +720,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource", L"UriFormatString");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>().UriFormatString();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::ILocalMapTileDataSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource", "UriFormatString", "Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSource").UriFormatString();
             }());
         }
         catch (...)
@@ -873,24 +743,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource", L"UriFormatString");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>().UriFormatString(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::ILocalMapTileDataSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource", "UriFormatString", "Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSource").UriFormatString(param0);
             }
 
             return 0;
@@ -906,25 +763,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource", L"UriRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>().UriRequested(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::ILocalMapTileDataSource>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource", "UriRequested", "Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSource").UriRequested(param0);
             }());
         }
         catch (...)
@@ -938,24 +782,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource", L"UriRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>().UriRequested(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::ILocalMapTileDataSource>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource", "UriRequested", "Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSource").UriRequested(param0);
             }
 
             Py_RETURN_NONE;
@@ -1080,19 +911,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs", L"Camera");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1110,23 +928,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs", L"ChangeReason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChangeReason();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapActualCameraChangedEventArgs2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs", "ChangeReason", "Windows.UI.Xaml.Controls.Maps.IMapActualCameraChangedEventArgs2").ChangeReason();
             }());
         }
         catch (...)
@@ -1227,19 +1032,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs", L"Camera");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1257,23 +1049,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs", L"ChangeReason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChangeReason();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapActualCameraChangingEventArgs2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs", "ChangeReason", "Windows.UI.Xaml.Controls.Maps.IMapActualCameraChangingEventArgs2").ChangeReason();
             }());
         }
         catch (...)
@@ -1376,19 +1155,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapBillboard", L"NormalizedAnchorPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1412,19 +1178,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapBillboard", L"NormalizedAnchorPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -1445,19 +1198,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapBillboard", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1481,19 +1221,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapBillboard", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(arg);
 
             {
@@ -1514,19 +1241,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapBillboard", L"Image");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1550,19 +1264,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapBillboard", L"Image");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
@@ -1583,19 +1284,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapBillboard", L"CollisionBehaviorDesired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1619,19 +1307,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapBillboard", L"CollisionBehaviorDesired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapElementCollisionBehavior>(arg);
 
             {
@@ -1652,19 +1327,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapBillboard", L"ReferenceCamera");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1940,19 +1602,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapCamera", L"Roll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1976,19 +1625,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapCamera", L"Roll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -2009,19 +1645,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapCamera", L"Pitch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2045,19 +1668,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapCamera", L"Pitch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -2078,19 +1688,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapCamera", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2114,19 +1711,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapCamera", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(arg);
 
             {
@@ -2147,19 +1731,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapCamera", L"Heading");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2183,19 +1754,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapCamera", L"Heading");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -2216,19 +1774,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapCamera", L"FieldOfView");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2252,19 +1797,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapCamera", L"FieldOfView");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -2375,19 +1907,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2405,19 +1924,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs", L"MapElements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2435,19 +1941,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2557,19 +2050,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"FindMapElementsAtOffset", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
@@ -2588,26 +2068,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"FindMapElementsAtOffset", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindMapElementsAtOffset(param0, param1);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "FindMapElementsAtOffset", "Windows.UI.Xaml.Controls.Maps.IMapControl5", 2).FindMapElementsAtOffset(param0, param1);
                 }());
             }
             catch (...)
@@ -2673,19 +2140,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"GetLocationFromOffset", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 winrt::Windows::Devices::Geolocation::Geopoint param1{nullptr};
 
@@ -2712,26 +2166,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"GetLocationFromOffset", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
                 winrt::Windows::Devices::Geolocation::Geopoint param2{nullptr};
 
                 {
                     auto _gil = release_gil();
-                    self->obj.GetLocationFromOffset(param0, param1, param2);
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "GetLocationFromOffset", "Windows.UI.Xaml.Controls.Maps.IMapControl5", 2).GetLocationFromOffset(param0, param1, param2);
                 }
 
                 py::pyobj_handle out2{ py::convert(param2) };
@@ -2805,19 +2246,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"GetOffsetFromLocation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 winrt::Windows::Foundation::Point param1{};
 
@@ -2855,25 +2283,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"GetVisibleRegion", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapVisibleRegionKind>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetVisibleRegion(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl4>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "GetVisibleRegion", "Windows.UI.Xaml.Controls.Maps.IMapControl4", 1).GetVisibleRegion(param0);
                 }());
             }
             catch (...)
@@ -2897,19 +2312,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"IsLocationInView", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 bool param1{};
 
@@ -3035,25 +2437,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"StartContinuousPan", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StartContinuousPan(param0, param1);
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "StartContinuousPan", "Windows.UI.Xaml.Controls.Maps.IMapControl5", 2).StartContinuousPan(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -3079,24 +2468,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"StartContinuousRotate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StartContinuousRotate(param0);
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "StartContinuousRotate", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 1).StartContinuousRotate(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3122,24 +2498,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"StartContinuousTilt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StartContinuousTilt(param0);
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "StartContinuousTilt", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 1).StartContinuousTilt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3165,24 +2528,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"StartContinuousZoom", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StartContinuousZoom(param0);
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "StartContinuousZoom", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 1).StartContinuousZoom(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3208,22 +2558,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"StopContinuousPan", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.StopContinuousPan();
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "StopContinuousPan", "Windows.UI.Xaml.Controls.Maps.IMapControl5", 0).StopContinuousPan();
                 }
 
                 Py_RETURN_NONE;
@@ -3249,22 +2586,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"StopContinuousRotate", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.StopContinuousRotate();
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "StopContinuousRotate", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 0).StopContinuousRotate();
                 }
 
                 Py_RETURN_NONE;
@@ -3290,22 +2614,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"StopContinuousTilt", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.StopContinuousTilt();
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "StopContinuousTilt", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 0).StopContinuousTilt();
                 }
 
                 Py_RETURN_NONE;
@@ -3331,22 +2642,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"StopContinuousZoom", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.StopContinuousZoom();
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "StopContinuousZoom", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 0).StopContinuousZoom();
                 }
 
                 Py_RETURN_NONE;
@@ -3372,26 +2670,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryGetLocationFromOffset", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 winrt::Windows::Devices::Geolocation::Geopoint param1{nullptr};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetLocationFromOffset(param0, param1);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl6>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryGetLocationFromOffset", "Windows.UI.Xaml.Controls.Maps.IMapControl6", 1).TryGetLocationFromOffset(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -3417,19 +2702,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryGetLocationFromOffset", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
                 winrt::Windows::Devices::Geolocation::Geopoint param2{nullptr};
@@ -3437,7 +2709,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetLocationFromOffset(param0, param1, param2);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl6>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryGetLocationFromOffset", "Windows.UI.Xaml.Controls.Maps.IMapControl6", 2).TryGetLocationFromOffset(param0, param1, param2);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -3474,26 +2746,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryPanAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryPanAsync(param0, param1);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryPanAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl5", 2).TryPanAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -3517,25 +2776,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryPanToAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryPanToAsync(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryPanToAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl5", 1).TryPanToAsync(param0);
                 }());
             }
             catch (...)
@@ -3559,25 +2805,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryRotateAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryRotateAsync(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryRotateAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 1).TryRotateAsync(param0);
                 }());
             }
             catch (...)
@@ -3601,25 +2834,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryRotateToAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryRotateToAsync(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryRotateToAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 1).TryRotateToAsync(param0);
                 }());
             }
             catch (...)
@@ -3643,25 +2863,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetSceneAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TrySetSceneAsync(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TrySetSceneAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 1).TrySetSceneAsync(param0);
                 }());
             }
             catch (...)
@@ -3674,26 +2881,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetSceneAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapAnimationKind>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TrySetSceneAsync(param0, param1);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TrySetSceneAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 2).TrySetSceneAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -3717,19 +2911,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
 
                 return py::convert([&]()
@@ -3748,19 +2929,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 1);
 
@@ -3780,19 +2948,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 2);
@@ -3814,19 +2969,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 2);
@@ -3860,19 +3002,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewBoundsAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::GeoboundingBox>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Xaml::Thickness>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapAnimationKind>(args, 2);
@@ -3904,25 +3033,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryTiltAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryTiltAsync(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryTiltAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 1).TryTiltAsync(param0);
                 }());
             }
             catch (...)
@@ -3946,25 +3062,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryTiltToAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryTiltToAsync(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryTiltToAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 1).TryTiltToAsync(param0);
                 }());
             }
             catch (...)
@@ -3988,23 +3091,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryZoomInAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryZoomInAsync();
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryZoomInAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 0).TryZoomInAsync();
                 }());
             }
             catch (...)
@@ -4028,23 +3118,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryZoomOutAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryZoomOutAsync();
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryZoomOutAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 0).TryZoomOutAsync();
                 }());
             }
             catch (...)
@@ -4068,25 +3145,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TryZoomToAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryZoomToAsync(param0);
+                    return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapControl", "TryZoomToAsync", "Windows.UI.Xaml.Controls.Maps.IMapControl2", 1).TryZoomToAsync(param0);
                 }());
             }
             catch (...)
@@ -4106,19 +3170,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ZoomLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4142,19 +3193,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ZoomLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -4175,19 +3213,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"WatermarkMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4211,19 +3236,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"WatermarkMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapWatermarkMode>(arg);
 
             {
@@ -4244,19 +3256,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TransformOrigin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4280,19 +3279,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TransformOrigin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -4313,19 +3299,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrafficFlowVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4349,19 +3322,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrafficFlowVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4382,19 +3342,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Style");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4418,19 +3365,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Style");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapStyle>(arg);
 
             {
@@ -4451,19 +3385,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"PedestrianFeaturesVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4487,19 +3408,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"PedestrianFeaturesVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4520,19 +3428,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapServiceToken");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4556,19 +3451,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapServiceToken");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4589,19 +3471,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Center");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4625,19 +3494,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Center");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(arg);
 
             {
@@ -4658,19 +3514,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Heading");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4694,19 +3537,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Heading");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -4727,19 +3557,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"DesiredPitch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4763,19 +3580,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"DesiredPitch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -4796,19 +3600,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ColorScheme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4832,19 +3623,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ColorScheme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapColorScheme>(arg);
 
             {
@@ -4865,19 +3643,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"LandmarksVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4901,19 +3666,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"LandmarksVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4934,19 +3686,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Children");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4964,19 +3703,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"LoadingStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4994,19 +3720,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapElements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5024,19 +3737,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MaxZoomLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5054,19 +3754,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MinZoomLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5084,19 +3771,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Pitch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5114,19 +3788,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Routes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5144,19 +3805,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TileSources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5174,23 +3822,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"RotateInteractionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RotateInteractionMode();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "RotateInteractionMode", "Windows.UI.Xaml.Controls.Maps.IMapControl2").RotateInteractionMode();
             }());
         }
         catch (...)
@@ -5210,24 +3845,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"RotateInteractionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapInteractionMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RotateInteractionMode(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "RotateInteractionMode", "Windows.UI.Xaml.Controls.Maps.IMapControl2").RotateInteractionMode(param0);
             }
 
             return 0;
@@ -5243,23 +3865,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ZoomInteractionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ZoomInteractionMode();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "ZoomInteractionMode", "Windows.UI.Xaml.Controls.Maps.IMapControl2").ZoomInteractionMode();
             }());
         }
         catch (...)
@@ -5279,24 +3888,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ZoomInteractionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapInteractionMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ZoomInteractionMode(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "ZoomInteractionMode", "Windows.UI.Xaml.Controls.Maps.IMapControl2").ZoomInteractionMode(param0);
             }
 
             return 0;
@@ -5312,23 +3908,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TransitFeaturesVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TransitFeaturesVisible();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "TransitFeaturesVisible", "Windows.UI.Xaml.Controls.Maps.IMapControl2").TransitFeaturesVisible();
             }());
         }
         catch (...)
@@ -5348,24 +3931,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TransitFeaturesVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TransitFeaturesVisible(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "TransitFeaturesVisible", "Windows.UI.Xaml.Controls.Maps.IMapControl2").TransitFeaturesVisible(param0);
             }
 
             return 0;
@@ -5381,23 +3951,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TiltInteractionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TiltInteractionMode();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "TiltInteractionMode", "Windows.UI.Xaml.Controls.Maps.IMapControl2").TiltInteractionMode();
             }());
         }
         catch (...)
@@ -5417,24 +3974,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TiltInteractionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapInteractionMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TiltInteractionMode(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "TiltInteractionMode", "Windows.UI.Xaml.Controls.Maps.IMapControl2").TiltInteractionMode(param0);
             }
 
             return 0;
@@ -5450,23 +3994,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Scene");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Scene();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "Scene", "Windows.UI.Xaml.Controls.Maps.IMapControl2").Scene();
             }());
         }
         catch (...)
@@ -5486,24 +4017,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Scene");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Scene(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "Scene", "Windows.UI.Xaml.Controls.Maps.IMapControl2").Scene(param0);
             }
 
             return 0;
@@ -5519,23 +4037,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"BusinessLandmarksVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BusinessLandmarksVisible();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "BusinessLandmarksVisible", "Windows.UI.Xaml.Controls.Maps.IMapControl2").BusinessLandmarksVisible();
             }());
         }
         catch (...)
@@ -5555,24 +4060,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"BusinessLandmarksVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BusinessLandmarksVisible(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "BusinessLandmarksVisible", "Windows.UI.Xaml.Controls.Maps.IMapControl2").BusinessLandmarksVisible(param0);
             }
 
             return 0;
@@ -5588,23 +4080,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"PanInteractionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PanInteractionMode();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "PanInteractionMode", "Windows.UI.Xaml.Controls.Maps.IMapControl2").PanInteractionMode();
             }());
         }
         catch (...)
@@ -5624,24 +4103,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"PanInteractionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapPanInteractionMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PanInteractionMode(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "PanInteractionMode", "Windows.UI.Xaml.Controls.Maps.IMapControl2").PanInteractionMode(param0);
             }
 
             return 0;
@@ -5657,23 +4123,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"CustomExperience");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CustomExperience();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "CustomExperience", "Windows.UI.Xaml.Controls.Maps.IMapControl2").CustomExperience();
             }());
         }
         catch (...)
@@ -5693,24 +4146,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"CustomExperience");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CustomExperience(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "CustomExperience", "Windows.UI.Xaml.Controls.Maps.IMapControl2").CustomExperience(param0);
             }
 
             return 0;
@@ -5726,23 +4166,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ActualCamera");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActualCamera();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "ActualCamera", "Windows.UI.Xaml.Controls.Maps.IMapControl2").ActualCamera();
             }());
         }
         catch (...)
@@ -5756,23 +4183,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Is3DSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Is3DSupported();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "Is3DSupported", "Windows.UI.Xaml.Controls.Maps.IMapControl2").Is3DSupported();
             }());
         }
         catch (...)
@@ -5786,23 +4200,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"IsStreetsideSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsStreetsideSupported();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "IsStreetsideSupported", "Windows.UI.Xaml.Controls.Maps.IMapControl2").IsStreetsideSupported();
             }());
         }
         catch (...)
@@ -5816,23 +4217,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TargetCamera");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TargetCamera();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "TargetCamera", "Windows.UI.Xaml.Controls.Maps.IMapControl2").TargetCamera();
             }());
         }
         catch (...)
@@ -5846,23 +4234,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TransitFeaturesEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TransitFeaturesEnabled();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl4>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "TransitFeaturesEnabled", "Windows.UI.Xaml.Controls.Maps.IMapControl4").TransitFeaturesEnabled();
             }());
         }
         catch (...)
@@ -5882,24 +4257,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TransitFeaturesEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TransitFeaturesEnabled(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl4>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "TransitFeaturesEnabled", "Windows.UI.Xaml.Controls.Maps.IMapControl4").TransitFeaturesEnabled(param0);
             }
 
             return 0;
@@ -5915,23 +4277,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"BusinessLandmarksEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BusinessLandmarksEnabled();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl4>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "BusinessLandmarksEnabled", "Windows.UI.Xaml.Controls.Maps.IMapControl4").BusinessLandmarksEnabled();
             }());
         }
         catch (...)
@@ -5951,24 +4300,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"BusinessLandmarksEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BusinessLandmarksEnabled(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl4>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "BusinessLandmarksEnabled", "Windows.UI.Xaml.Controls.Maps.IMapControl4").BusinessLandmarksEnabled(param0);
             }
 
             return 0;
@@ -5984,23 +4320,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ViewPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ViewPadding();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "ViewPadding", "Windows.UI.Xaml.Controls.Maps.IMapControl5").ViewPadding();
             }());
         }
         catch (...)
@@ -6020,24 +4343,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ViewPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ViewPadding(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "ViewPadding", "Windows.UI.Xaml.Controls.Maps.IMapControl5").ViewPadding(param0);
             }
 
             return 0;
@@ -6053,23 +4363,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"StyleSheet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StyleSheet();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "StyleSheet", "Windows.UI.Xaml.Controls.Maps.IMapControl5").StyleSheet();
             }());
         }
         catch (...)
@@ -6089,24 +4386,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"StyleSheet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StyleSheet(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "StyleSheet", "Windows.UI.Xaml.Controls.Maps.IMapControl5").StyleSheet(param0);
             }
 
             return 0;
@@ -6122,23 +4406,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapProjection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MapProjection();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapProjection", "Windows.UI.Xaml.Controls.Maps.IMapControl5").MapProjection();
             }());
         }
         catch (...)
@@ -6158,24 +4429,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapProjection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapProjection>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MapProjection(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapProjection", "Windows.UI.Xaml.Controls.Maps.IMapControl5").MapProjection(param0);
             }
 
             return 0;
@@ -6191,23 +4449,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Layers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Layers();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl6>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "Layers", "Windows.UI.Xaml.Controls.Maps.IMapControl6").Layers();
             }());
         }
         catch (...)
@@ -6227,24 +4472,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Layers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Layers(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl6>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "Layers", "Windows.UI.Xaml.Controls.Maps.IMapControl6").Layers(param0);
             }
 
             return 0;
@@ -6260,23 +4492,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Region");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Region();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl7>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "Region", "Windows.UI.Xaml.Controls.Maps.IMapControl7").Region();
             }());
         }
         catch (...)
@@ -6296,24 +4515,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"Region");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Region(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl7>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "Region", "Windows.UI.Xaml.Controls.Maps.IMapControl7").Region(param0);
             }
 
             return 0;
@@ -6329,23 +4535,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"CanTiltDown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanTiltDown();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl8>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "CanTiltDown", "Windows.UI.Xaml.Controls.Maps.IMapControl8").CanTiltDown();
             }());
         }
         catch (...)
@@ -6359,23 +4552,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"CanTiltUp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanTiltUp();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl8>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "CanTiltUp", "Windows.UI.Xaml.Controls.Maps.IMapControl8").CanTiltUp();
             }());
         }
         catch (...)
@@ -6389,23 +4569,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"CanZoomIn");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanZoomIn();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl8>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "CanZoomIn", "Windows.UI.Xaml.Controls.Maps.IMapControl8").CanZoomIn();
             }());
         }
         catch (...)
@@ -6419,23 +4586,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"CanZoomOut");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanZoomOut();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl8>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapControl", "CanZoomOut", "Windows.UI.Xaml.Controls.Maps.IMapControl8").CanZoomOut();
             }());
         }
         catch (...)
@@ -7649,19 +5803,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"CenterChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -7681,19 +5822,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"CenterChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7714,19 +5842,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"HeadingChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -7746,19 +5861,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"HeadingChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7779,19 +5881,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"LoadingStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -7811,19 +5900,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"LoadingStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7844,19 +5920,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapDoubleTapped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs>>(arg);
 
             return py::convert([&]()
@@ -7876,19 +5939,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapDoubleTapped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7909,19 +5959,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapHolding");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs>>(arg);
 
             return py::convert([&]()
@@ -7941,19 +5978,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapHolding");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7974,19 +5998,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapTapped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8006,19 +6017,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapTapped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8039,19 +6037,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"PitchChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -8071,19 +6056,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"PitchChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8104,19 +6076,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TransformOriginChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -8136,19 +6095,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TransformOriginChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8169,19 +6115,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ZoomLevelChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -8201,19 +6134,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ZoomLevelChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8234,25 +6154,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ActualCameraChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActualCameraChanged(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "ActualCameraChanged", "Windows.UI.Xaml.Controls.Maps.IMapControl2").ActualCameraChanged(param0);
             }());
         }
         catch (...)
@@ -8266,24 +6173,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ActualCameraChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ActualCameraChanged(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "ActualCameraChanged", "Windows.UI.Xaml.Controls.Maps.IMapControl2").ActualCameraChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -8299,25 +6193,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ActualCameraChanging");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActualCameraChanging(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "ActualCameraChanging", "Windows.UI.Xaml.Controls.Maps.IMapControl2").ActualCameraChanging(param0);
             }());
         }
         catch (...)
@@ -8331,24 +6212,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"ActualCameraChanging");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ActualCameraChanging(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "ActualCameraChanging", "Windows.UI.Xaml.Controls.Maps.IMapControl2").ActualCameraChanging(param0);
             }
 
             Py_RETURN_NONE;
@@ -8364,25 +6232,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"CustomExperienceChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CustomExperienceChanged(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "CustomExperienceChanged", "Windows.UI.Xaml.Controls.Maps.IMapControl2").CustomExperienceChanged(param0);
             }());
         }
         catch (...)
@@ -8396,24 +6251,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"CustomExperienceChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CustomExperienceChanged(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "CustomExperienceChanged", "Windows.UI.Xaml.Controls.Maps.IMapControl2").CustomExperienceChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -8429,25 +6271,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapElementClick");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MapElementClick(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapElementClick", "Windows.UI.Xaml.Controls.Maps.IMapControl2").MapElementClick(param0);
             }());
         }
         catch (...)
@@ -8461,24 +6290,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapElementClick");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MapElementClick(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapElementClick", "Windows.UI.Xaml.Controls.Maps.IMapControl2").MapElementClick(param0);
             }
 
             Py_RETURN_NONE;
@@ -8494,25 +6310,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapElementPointerEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MapElementPointerEntered(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapElementPointerEntered", "Windows.UI.Xaml.Controls.Maps.IMapControl2").MapElementPointerEntered(param0);
             }());
         }
         catch (...)
@@ -8526,24 +6329,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapElementPointerEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MapElementPointerEntered(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapElementPointerEntered", "Windows.UI.Xaml.Controls.Maps.IMapControl2").MapElementPointerEntered(param0);
             }
 
             Py_RETURN_NONE;
@@ -8559,25 +6349,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapElementPointerExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MapElementPointerExited(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapElementPointerExited", "Windows.UI.Xaml.Controls.Maps.IMapControl2").MapElementPointerExited(param0);
             }());
         }
         catch (...)
@@ -8591,24 +6368,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapElementPointerExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MapElementPointerExited(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapElementPointerExited", "Windows.UI.Xaml.Controls.Maps.IMapControl2").MapElementPointerExited(param0);
             }
 
             Py_RETURN_NONE;
@@ -8624,25 +6388,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TargetCameraChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TargetCameraChanged(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "TargetCameraChanged", "Windows.UI.Xaml.Controls.Maps.IMapControl2").TargetCameraChanged(param0);
             }());
         }
         catch (...)
@@ -8656,24 +6407,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TargetCameraChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TargetCameraChanged(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "TargetCameraChanged", "Windows.UI.Xaml.Controls.Maps.IMapControl2").TargetCameraChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -8689,25 +6427,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapRightTapped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MapRightTapped(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl3>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapRightTapped", "Windows.UI.Xaml.Controls.Maps.IMapControl3").MapRightTapped(param0);
             }());
         }
         catch (...)
@@ -8721,24 +6446,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapRightTapped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MapRightTapped(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl3>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapRightTapped", "Windows.UI.Xaml.Controls.Maps.IMapControl3").MapRightTapped(param0);
             }
 
             Py_RETURN_NONE;
@@ -8754,25 +6466,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapContextRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MapContextRequested(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapContextRequested", "Windows.UI.Xaml.Controls.Maps.IMapControl5").MapContextRequested(param0);
             }());
         }
         catch (...)
@@ -8786,24 +6485,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"MapContextRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MapContextRequested(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl5>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControl", "MapContextRequested", "Windows.UI.Xaml.Controls.Maps.IMapControl5").MapContextRequested(param0);
             }
 
             Py_RETURN_NONE;
@@ -9074,19 +6760,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs", L"LocalLocations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9190,19 +6863,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs", L"LocalLocations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9306,19 +6966,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs", L"LocalLocations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9422,19 +7069,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs", L"LocalLocations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9582,19 +7216,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"BusinessLandmarkClick");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs>>(arg);
 
             return py::convert([&]()
@@ -9614,19 +7235,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"BusinessLandmarkClick");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9647,19 +7255,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"BusinessLandmarkRightTapped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -9679,19 +7274,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"BusinessLandmarkRightTapped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9712,19 +7294,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"TransitFeatureClick");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs>>(arg);
 
             return py::convert([&]()
@@ -9744,19 +7313,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"TransitFeatureClick");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9777,19 +7333,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"TransitFeatureRightTapped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -9809,19 +7352,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"TransitFeatureRightTapped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9842,25 +7372,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"BusinessLandmarkPointerEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BusinessLandmarkPointerEntered(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", "BusinessLandmarkPointerEntered", "Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2").BusinessLandmarkPointerEntered(param0);
             }());
         }
         catch (...)
@@ -9874,24 +7391,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"BusinessLandmarkPointerEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BusinessLandmarkPointerEntered(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", "BusinessLandmarkPointerEntered", "Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2").BusinessLandmarkPointerEntered(param0);
             }
 
             Py_RETURN_NONE;
@@ -9907,25 +7411,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"BusinessLandmarkPointerExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BusinessLandmarkPointerExited(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", "BusinessLandmarkPointerExited", "Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2").BusinessLandmarkPointerExited(param0);
             }());
         }
         catch (...)
@@ -9939,24 +7430,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"BusinessLandmarkPointerExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BusinessLandmarkPointerExited(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", "BusinessLandmarkPointerExited", "Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2").BusinessLandmarkPointerExited(param0);
             }
 
             Py_RETURN_NONE;
@@ -9972,25 +7450,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"TransitFeaturePointerEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TransitFeaturePointerEntered(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", "TransitFeaturePointerEntered", "Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2").TransitFeaturePointerEntered(param0);
             }());
         }
         catch (...)
@@ -10004,24 +7469,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"TransitFeaturePointerEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TransitFeaturePointerEntered(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", "TransitFeaturePointerEntered", "Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2").TransitFeaturePointerEntered(param0);
             }
 
             Py_RETURN_NONE;
@@ -10037,25 +7489,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"TransitFeaturePointerExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapControl, winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TransitFeaturePointerExited(param0);
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", "TransitFeaturePointerExited", "Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2").TransitFeaturePointerExited(param0);
             }());
         }
         catch (...)
@@ -10069,24 +7508,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", L"TransitFeaturePointerExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TransitFeaturePointerExited(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper2>(self->obj, py::member_kind::event, "Windows.UI.Xaml.Controls.Maps.MapControlDataHelper", "TransitFeaturePointerExited", "Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2").TransitFeaturePointerExited(param0);
             }
 
             Py_RETURN_NONE;
@@ -10225,19 +7651,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10255,19 +7668,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10285,19 +7685,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs", L"TransitProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10403,19 +7790,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10433,19 +7807,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10463,19 +7824,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs", L"TransitProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10581,19 +7929,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10611,19 +7946,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10641,19 +7963,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs", L"TransitProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10759,19 +8068,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10789,19 +8085,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10819,19 +8102,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs", L"TransitProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11258,23 +8528,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().ZIndex();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "ZIndex", "Windows.UI.Xaml.Controls.Maps.IMapElement").ZIndex();
             }());
         }
         catch (...)
@@ -11294,24 +8551,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().ZIndex(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "ZIndex", "Windows.UI.Xaml.Controls.Maps.IMapElement").ZIndex(param0);
             }
 
             return 0;
@@ -11327,23 +8571,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().Visible();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "Visible", "Windows.UI.Xaml.Controls.Maps.IMapElement").Visible();
             }());
         }
         catch (...)
@@ -11363,24 +8594,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().Visible(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "Visible", "Windows.UI.Xaml.Controls.Maps.IMapElement").Visible(param0);
             }
 
             return 0;
@@ -11396,23 +8614,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapTabIndex();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "MapTabIndex", "Windows.UI.Xaml.Controls.Maps.IMapElement2").MapTabIndex();
             }());
         }
         catch (...)
@@ -11432,24 +8637,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapTabIndex(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "MapTabIndex", "Windows.UI.Xaml.Controls.Maps.IMapElement2").MapTabIndex(param0);
             }
 
             return 0;
@@ -11465,23 +8657,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().Tag();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement3>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "Tag", "Windows.UI.Xaml.Controls.Maps.IMapElement3").Tag();
             }());
         }
         catch (...)
@@ -11501,24 +8680,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().Tag(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement3>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "Tag", "Windows.UI.Xaml.Controls.Maps.IMapElement3").Tag(param0);
             }
 
             return 0;
@@ -11534,23 +8700,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapStyleSheetEntryState();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement3>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "MapStyleSheetEntryState", "Windows.UI.Xaml.Controls.Maps.IMapElement3").MapStyleSheetEntryState();
             }());
         }
         catch (...)
@@ -11570,24 +8723,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapStyleSheetEntryState(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement3>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "MapStyleSheetEntryState", "Windows.UI.Xaml.Controls.Maps.IMapElement3").MapStyleSheetEntryState(param0);
             }
 
             return 0;
@@ -11603,23 +8743,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapStyleSheetEntry();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement3>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "MapStyleSheetEntry", "Windows.UI.Xaml.Controls.Maps.IMapElement3").MapStyleSheetEntry();
             }());
         }
         catch (...)
@@ -11639,24 +8766,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapStyleSheetEntry(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement3>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "MapStyleSheetEntry", "Windows.UI.Xaml.Controls.Maps.IMapElement3").MapStyleSheetEntry(param0);
             }
 
             return 0;
@@ -11672,23 +8786,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().IsEnabled();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement4>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "IsEnabled", "Windows.UI.Xaml.Controls.Maps.IMapElement4").IsEnabled();
             }());
         }
         catch (...)
@@ -11708,24 +8809,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().IsEnabled(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapElement4>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapElement", "IsEnabled", "Windows.UI.Xaml.Controls.Maps.IMapElement4").IsEnabled(param0);
             }
 
             return 0;
@@ -12071,19 +9159,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Scale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12107,19 +9182,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Scale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             {
@@ -12140,19 +9202,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Roll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12176,19 +9225,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Roll");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -12209,19 +9245,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Pitch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12245,19 +9268,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Pitch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -12278,19 +9288,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Model");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12314,19 +9311,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Model");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D>(arg);
 
             {
@@ -12347,19 +9331,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12383,19 +9354,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(arg);
 
             {
@@ -12416,19 +9374,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Heading");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12452,19 +9397,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement3D", L"Heading");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -12752,19 +9684,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12782,19 +9701,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs", L"MapElements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12812,19 +9718,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12930,19 +9823,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12960,19 +9840,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs", L"MapElement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12990,19 +9857,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13108,19 +9962,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13138,19 +9979,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs", L"MapElement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13168,19 +9996,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13286,19 +10101,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayer", L"MapElements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13322,19 +10124,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayer", L"MapElements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>>(arg);
 
             {
@@ -13385,19 +10174,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayer", L"MapContextRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer, winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -13417,19 +10193,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayer", L"MapContextRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13450,19 +10213,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayer", L"MapElementClick");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer, winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs>>(arg);
 
             return py::convert([&]()
@@ -13482,19 +10232,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayer", L"MapElementClick");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13515,19 +10252,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayer", L"MapElementPointerEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer, winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs>>(arg);
 
             return py::convert([&]()
@@ -13547,19 +10271,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayer", L"MapElementPointerEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13580,19 +10291,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayer", L"MapElementPointerExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer, winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -13612,19 +10310,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayer", L"MapElementPointerExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13761,19 +10446,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13791,19 +10463,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs", L"MapElements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13821,19 +10480,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13939,19 +10585,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13969,19 +10602,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs", L"MapElements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13999,19 +10619,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14117,19 +10724,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14147,19 +10741,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs", L"MapElement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14177,19 +10758,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14295,19 +10863,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14325,19 +10880,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs", L"MapElement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14355,19 +10897,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14473,19 +11002,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapIcon", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14509,19 +11025,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapIcon", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -14542,19 +11045,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapIcon", L"NormalizedAnchorPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14578,19 +11068,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapIcon", L"NormalizedAnchorPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -14611,19 +11088,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapIcon", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14647,19 +11111,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapIcon", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(arg);
 
             {
@@ -14680,19 +11131,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapIcon", L"Image");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14716,19 +11154,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapIcon", L"Image");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
@@ -14749,23 +11174,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapIcon", L"CollisionBehaviorDesired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CollisionBehaviorDesired();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapIcon2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapIcon", "CollisionBehaviorDesired", "Windows.UI.Xaml.Controls.Maps.IMapIcon2").CollisionBehaviorDesired();
             }());
         }
         catch (...)
@@ -14785,24 +11197,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapIcon", L"CollisionBehaviorDesired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapElementCollisionBehavior>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CollisionBehaviorDesired(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapIcon2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapIcon", "CollisionBehaviorDesired", "Windows.UI.Xaml.Controls.Maps.IMapIcon2").CollisionBehaviorDesired(param0);
             }
 
             return 0;
@@ -15053,19 +11452,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapInputEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15083,19 +11469,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapInputEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15200,19 +11573,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapItemsControl", L"ItemsSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15236,19 +11596,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapItemsControl", L"ItemsSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
@@ -15269,19 +11616,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapItemsControl", L"ItemTemplate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15305,19 +11639,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapItemsControl", L"ItemTemplate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DataTemplate>(arg);
 
             {
@@ -15338,19 +11659,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapItemsControl", L"Items");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15635,23 +11943,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"ZIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().ZIndex();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapLayer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapLayer", "ZIndex", "Windows.UI.Xaml.Controls.Maps.IMapLayer").ZIndex();
             }());
         }
         catch (...)
@@ -15671,24 +11966,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"ZIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().ZIndex(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapLayer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapLayer", "ZIndex", "Windows.UI.Xaml.Controls.Maps.IMapLayer").ZIndex(param0);
             }
 
             return 0;
@@ -15704,23 +11986,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"Visible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().Visible();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapLayer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapLayer", "Visible", "Windows.UI.Xaml.Controls.Maps.IMapLayer").Visible();
             }());
         }
         catch (...)
@@ -15740,24 +12009,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"Visible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().Visible(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapLayer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapLayer", "Visible", "Windows.UI.Xaml.Controls.Maps.IMapLayer").Visible(param0);
             }
 
             return 0;
@@ -15773,23 +12029,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"MapTabIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().MapTabIndex();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapLayer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapLayer", "MapTabIndex", "Windows.UI.Xaml.Controls.Maps.IMapLayer").MapTabIndex();
             }());
         }
         catch (...)
@@ -15809,24 +12052,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"MapTabIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().MapTabIndex(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapLayer>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapLayer", "MapTabIndex", "Windows.UI.Xaml.Controls.Maps.IMapLayer").MapTabIndex(param0);
             }
 
             return 0;
@@ -16290,19 +12520,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"StrokeThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16326,19 +12543,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"StrokeThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -16359,19 +12563,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"StrokeDashed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16395,19 +12586,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"StrokeDashed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -16428,19 +12606,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"StrokeColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16464,19 +12629,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"StrokeColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -16497,19 +12649,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16533,19 +12672,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopath>(arg);
 
             {
@@ -16566,19 +12692,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"FillColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16602,19 +12715,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"FillColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -16635,23 +12735,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolygon", L"Paths");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Paths();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapPolygon2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapPolygon", "Paths", "Windows.UI.Xaml.Controls.Maps.IMapPolygon2").Paths();
             }());
         }
         catch (...)
@@ -16870,19 +12957,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolyline", L"StrokeThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16906,19 +12980,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolyline", L"StrokeThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -16939,19 +13000,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolyline", L"StrokeDashed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16975,19 +13023,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolyline", L"StrokeDashed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -17008,19 +13043,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolyline", L"StrokeColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17044,19 +13066,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolyline", L"StrokeColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -17077,19 +13086,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolyline", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17113,19 +13109,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapPolyline", L"Path");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopath>(arg);
 
             {
@@ -17318,19 +13301,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17348,19 +13318,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17532,23 +13489,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapRouteView", L"RouteColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>().RouteColor();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapRouteView>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapRouteView", "RouteColor", "Windows.UI.Xaml.Controls.Maps.IMapRouteView").RouteColor();
             }());
         }
         catch (...)
@@ -17568,24 +13512,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapRouteView", L"RouteColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>().RouteColor(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapRouteView>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapRouteView", "RouteColor", "Windows.UI.Xaml.Controls.Maps.IMapRouteView").RouteColor(param0);
             }
 
             return 0;
@@ -17601,23 +13532,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapRouteView", L"OutlineColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>().OutlineColor();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapRouteView>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapRouteView", "OutlineColor", "Windows.UI.Xaml.Controls.Maps.IMapRouteView").OutlineColor();
             }());
         }
         catch (...)
@@ -17637,24 +13555,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapRouteView", L"OutlineColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>().OutlineColor(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapRouteView>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapRouteView", "OutlineColor", "Windows.UI.Xaml.Controls.Maps.IMapRouteView").OutlineColor(param0);
             }
 
             return 0;
@@ -17670,23 +13575,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapRouteView", L"Route");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>().Route();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapRouteView>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapRouteView", "Route", "Windows.UI.Xaml.Controls.Maps.IMapRouteView").Route();
             }());
         }
         catch (...)
@@ -18131,19 +14023,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapScene", L"TargetCamera");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18161,19 +14040,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapScene", L"TargetCameraChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::MapScene, winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -18193,19 +14059,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Maps.MapScene", L"TargetCameraChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -20988,19 +16841,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs", L"Camera");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21018,23 +16858,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs", L"ChangeReason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChangeReason();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTargetCameraChangedEventArgs2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs", "ChangeReason", "Windows.UI.Xaml.Controls.Maps.IMapTargetCameraChangedEventArgs2").ChangeReason();
             }());
         }
         catch (...)
@@ -21139,19 +16966,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -21175,19 +16989,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest", L"PixelData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21211,19 +17012,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest", L"PixelData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
@@ -21335,19 +17123,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -21458,19 +17233,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs", L"Request");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21488,19 +17250,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs", L"X");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21518,19 +17267,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs", L"Y");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21548,19 +17284,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs", L"ZoomLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21578,23 +17301,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs", L"FrameIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FrameIndex();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileBitmapRequestedEventArgs2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs", "FrameIndex", "Windows.UI.Xaml.Controls.Maps.IMapTileBitmapRequestedEventArgs2").FrameIndex();
             }());
         }
         catch (...)
@@ -22100,22 +17810,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"Pause", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Pause();
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "Pause", "Windows.UI.Xaml.Controls.Maps.IMapTileSource2", 0).Pause();
                 }
 
                 Py_RETURN_NONE;
@@ -22141,22 +17838,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"Play", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Play();
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "Play", "Windows.UI.Xaml.Controls.Maps.IMapTileSource2", 0).Play();
                 }
 
                 Py_RETURN_NONE;
@@ -22182,22 +17866,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Stop();
+                    py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource2>(self->obj, py::member_kind::method, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "Stop", "Windows.UI.Xaml.Controls.Maps.IMapTileSource2", 0).Stop();
                 }
 
                 Py_RETURN_NONE;
@@ -22219,23 +17890,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"ZoomLevelRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().ZoomLevelRange();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "ZoomLevelRange", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").ZoomLevelRange();
             }());
         }
         catch (...)
@@ -22255,24 +17913,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"ZoomLevelRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().ZoomLevelRange(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "ZoomLevelRange", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").ZoomLevelRange(param0);
             }
 
             return 0;
@@ -22288,23 +17933,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"ZIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().ZIndex();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "ZIndex", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").ZIndex();
             }());
         }
         catch (...)
@@ -22324,24 +17956,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"ZIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().ZIndex(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "ZIndex", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").ZIndex(param0);
             }
 
             return 0;
@@ -22357,23 +17976,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"Visible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Visible();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "Visible", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").Visible();
             }());
         }
         catch (...)
@@ -22393,24 +17999,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"Visible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Visible(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "Visible", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").Visible(param0);
             }
 
             return 0;
@@ -22426,23 +18019,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"TilePixelSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().TilePixelSize();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "TilePixelSize", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").TilePixelSize();
             }());
         }
         catch (...)
@@ -22462,24 +18042,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"TilePixelSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().TilePixelSize(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "TilePixelSize", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").TilePixelSize(param0);
             }
 
             return 0;
@@ -22495,23 +18062,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"Layer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Layer();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "Layer", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").Layer();
             }());
         }
         catch (...)
@@ -22531,24 +18085,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"Layer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapTileLayer>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Layer(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "Layer", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").Layer(param0);
             }
 
             return 0;
@@ -22564,23 +18105,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"IsTransparencyEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsTransparencyEnabled();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "IsTransparencyEnabled", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").IsTransparencyEnabled();
             }());
         }
         catch (...)
@@ -22600,24 +18128,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"IsTransparencyEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsTransparencyEnabled(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "IsTransparencyEnabled", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").IsTransparencyEnabled(param0);
             }
 
             return 0;
@@ -22633,23 +18148,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"IsRetryEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsRetryEnabled();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "IsRetryEnabled", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").IsRetryEnabled();
             }());
         }
         catch (...)
@@ -22669,24 +18171,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"IsRetryEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsRetryEnabled(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "IsRetryEnabled", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").IsRetryEnabled(param0);
             }
 
             return 0;
@@ -22702,23 +18191,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"IsFadingEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsFadingEnabled();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "IsFadingEnabled", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").IsFadingEnabled();
             }());
         }
         catch (...)
@@ -22738,24 +18214,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"IsFadingEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsFadingEnabled(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "IsFadingEnabled", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").IsFadingEnabled(param0);
             }
 
             return 0;
@@ -22771,23 +18234,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"DataSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().DataSource();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "DataSource", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").DataSource();
             }());
         }
         catch (...)
@@ -22807,24 +18257,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"DataSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().DataSource(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "DataSource", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").DataSource(param0);
             }
 
             return 0;
@@ -22840,23 +18277,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"Bounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Bounds();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "Bounds", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").Bounds();
             }());
         }
         catch (...)
@@ -22876,24 +18300,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"Bounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::GeoboundingBox>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Bounds(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "Bounds", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").Bounds(param0);
             }
 
             return 0;
@@ -22909,23 +18320,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"AllowOverstretch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().AllowOverstretch();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "AllowOverstretch", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").AllowOverstretch();
             }());
         }
         catch (...)
@@ -22945,24 +18343,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"AllowOverstretch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().AllowOverstretch(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "AllowOverstretch", "Windows.UI.Xaml.Controls.Maps.IMapTileSource").AllowOverstretch(param0);
             }
 
             return 0;
@@ -22978,23 +18363,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"FrameDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().FrameDuration();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "FrameDuration", "Windows.UI.Xaml.Controls.Maps.IMapTileSource2").FrameDuration();
             }());
         }
         catch (...)
@@ -23014,24 +18386,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"FrameDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().FrameDuration(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "FrameDuration", "Windows.UI.Xaml.Controls.Maps.IMapTileSource2").FrameDuration(param0);
             }
 
             return 0;
@@ -23047,23 +18406,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"FrameCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().FrameCount();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "FrameCount", "Windows.UI.Xaml.Controls.Maps.IMapTileSource2").FrameCount();
             }());
         }
         catch (...)
@@ -23083,24 +18429,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"FrameCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().FrameCount(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "FrameCount", "Windows.UI.Xaml.Controls.Maps.IMapTileSource2").FrameCount(param0);
             }
 
             return 0;
@@ -23116,23 +18449,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"AutoPlay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().AutoPlay();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "AutoPlay", "Windows.UI.Xaml.Controls.Maps.IMapTileSource2").AutoPlay();
             }());
         }
         catch (...)
@@ -23152,24 +18472,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"AutoPlay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().AutoPlay(param0);
+                py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "AutoPlay", "Windows.UI.Xaml.Controls.Maps.IMapTileSource2").AutoPlay(param0);
             }
 
             return 0;
@@ -23185,23 +18492,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileSource", L"AnimationState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().AnimationState();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileSource2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileSource", "AnimationState", "Windows.UI.Xaml.Controls.Maps.IMapTileSource2").AnimationState();
             }());
         }
         catch (...)
@@ -23808,19 +19102,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileUriRequest", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -23844,19 +19125,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileUriRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23880,19 +19148,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileUriRequest", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -24004,19 +19259,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileUriRequestDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -24127,19 +19369,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs", L"Request");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24157,19 +19386,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs", L"X");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24187,19 +19403,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs", L"Y");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24217,19 +19420,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs", L"ZoomLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24247,23 +19437,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs", L"FrameIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FrameIndex();
+                return py::require<winrt::Windows::UI::Xaml::Controls::Maps::IMapTileUriRequestedEventArgs2>(self->obj, py::member_kind::property, "Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs", "FrameIndex", "Windows.UI.Xaml.Controls.Maps.IMapTileUriRequestedEventArgs2").FrameIndex();
             }());
         }
         catch (...)
@@ -24387,19 +19564,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"ZoomButtonsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24423,19 +19587,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"ZoomButtonsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -24456,19 +19607,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"StreetLabelsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24492,19 +19630,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"StreetLabelsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -24525,19 +19650,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"OverviewMapVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24561,19 +19673,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"OverviewMapVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -24594,19 +19693,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"ExitButtonVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24630,19 +19716,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"ExitButtonVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -24663,19 +19736,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"CursorVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24699,19 +19759,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"CursorVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -24732,19 +19779,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"AddressTextVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24768,19 +19802,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsideExperience", L"AddressTextVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -24944,19 +19965,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsidePanorama", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

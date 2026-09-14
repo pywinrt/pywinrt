@@ -47,19 +47,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -83,19 +70,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -116,19 +90,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"AllDay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -152,19 +113,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"AllDay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -185,19 +133,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Organizer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -221,19 +156,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Organizer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentOrganizer>(arg);
 
             {
@@ -254,19 +176,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -290,19 +199,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -323,19 +219,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Details");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -359,19 +242,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Details");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -392,19 +262,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"BusyStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -428,19 +285,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"BusyStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentBusyStatus>(arg);
 
             {
@@ -461,19 +305,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Recurrence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -497,19 +328,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Recurrence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrence>(arg);
 
             {
@@ -530,19 +348,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -566,19 +371,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Subject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -599,19 +391,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -635,19 +414,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -668,19 +434,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -704,19 +457,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
@@ -737,19 +477,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Sensitivity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -773,19 +500,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Sensitivity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentSensitivity>(arg);
 
             {
@@ -806,19 +520,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Reminder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -842,19 +543,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Reminder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -875,19 +563,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"Invitees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -905,23 +580,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"AllowNewTimeProposal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AllowNewTimeProposal();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "AllowNewTimeProposal", "Windows.ApplicationModel.Appointments.IAppointment2").AllowNewTimeProposal();
             }());
         }
         catch (...)
@@ -941,24 +603,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"AllowNewTimeProposal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AllowNewTimeProposal(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "AllowNewTimeProposal", "Windows.ApplicationModel.Appointments.IAppointment2").AllowNewTimeProposal(param0);
             }
 
             return 0;
@@ -974,23 +623,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"UserResponse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserResponse();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "UserResponse", "Windows.ApplicationModel.Appointments.IAppointment2").UserResponse();
             }());
         }
         catch (...)
@@ -1010,24 +646,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"UserResponse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentParticipantResponse>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UserResponse(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "UserResponse", "Windows.ApplicationModel.Appointments.IAppointment2").UserResponse(param0);
             }
 
             return 0;
@@ -1043,23 +666,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"RoamingId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RoamingId();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "RoamingId", "Windows.ApplicationModel.Appointments.IAppointment2").RoamingId();
             }());
         }
         catch (...)
@@ -1079,24 +689,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"RoamingId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RoamingId(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "RoamingId", "Windows.ApplicationModel.Appointments.IAppointment2").RoamingId(param0);
             }
 
             return 0;
@@ -1112,23 +709,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"ReplyTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ReplyTime();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "ReplyTime", "Windows.ApplicationModel.Appointments.IAppointment2").ReplyTime();
             }());
         }
         catch (...)
@@ -1148,24 +732,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"ReplyTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ReplyTime(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "ReplyTime", "Windows.ApplicationModel.Appointments.IAppointment2").ReplyTime(param0);
             }
 
             return 0;
@@ -1181,23 +752,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"IsResponseRequested");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsResponseRequested();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "IsResponseRequested", "Windows.ApplicationModel.Appointments.IAppointment2").IsResponseRequested();
             }());
         }
         catch (...)
@@ -1217,24 +775,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"IsResponseRequested");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsResponseRequested(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "IsResponseRequested", "Windows.ApplicationModel.Appointments.IAppointment2").IsResponseRequested(param0);
             }
 
             return 0;
@@ -1250,23 +795,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"IsOrganizedByUser");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsOrganizedByUser();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "IsOrganizedByUser", "Windows.ApplicationModel.Appointments.IAppointment2").IsOrganizedByUser();
             }());
         }
         catch (...)
@@ -1286,24 +818,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"IsOrganizedByUser");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsOrganizedByUser(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "IsOrganizedByUser", "Windows.ApplicationModel.Appointments.IAppointment2").IsOrganizedByUser(param0);
             }
 
             return 0;
@@ -1319,23 +838,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"IsCanceledMeeting");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCanceledMeeting();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "IsCanceledMeeting", "Windows.ApplicationModel.Appointments.IAppointment2").IsCanceledMeeting();
             }());
         }
         catch (...)
@@ -1355,24 +861,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"IsCanceledMeeting");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsCanceledMeeting(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "IsCanceledMeeting", "Windows.ApplicationModel.Appointments.IAppointment2").IsCanceledMeeting(param0);
             }
 
             return 0;
@@ -1388,23 +881,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"OnlineMeetingLink");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OnlineMeetingLink();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "OnlineMeetingLink", "Windows.ApplicationModel.Appointments.IAppointment2").OnlineMeetingLink();
             }());
         }
         catch (...)
@@ -1424,24 +904,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"OnlineMeetingLink");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OnlineMeetingLink(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "OnlineMeetingLink", "Windows.ApplicationModel.Appointments.IAppointment2").OnlineMeetingLink(param0);
             }
 
             return 0;
@@ -1457,23 +924,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"HasInvitees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HasInvitees();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "HasInvitees", "Windows.ApplicationModel.Appointments.IAppointment2").HasInvitees();
             }());
         }
         catch (...)
@@ -1487,23 +941,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"CalendarId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CalendarId();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "CalendarId", "Windows.ApplicationModel.Appointments.IAppointment2").CalendarId();
             }());
         }
         catch (...)
@@ -1517,23 +958,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"LocalId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LocalId();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "LocalId", "Windows.ApplicationModel.Appointments.IAppointment2").LocalId();
             }());
         }
         catch (...)
@@ -1547,23 +975,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"OriginalStartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OriginalStartTime();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "OriginalStartTime", "Windows.ApplicationModel.Appointments.IAppointment2").OriginalStartTime();
             }());
         }
         catch (...)
@@ -1577,23 +992,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"RemoteChangeNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RemoteChangeNumber();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "RemoteChangeNumber", "Windows.ApplicationModel.Appointments.IAppointment3").RemoteChangeNumber();
             }());
         }
         catch (...)
@@ -1613,24 +1015,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"RemoteChangeNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint64_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RemoteChangeNumber(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "RemoteChangeNumber", "Windows.ApplicationModel.Appointments.IAppointment3").RemoteChangeNumber(param0);
             }
 
             return 0;
@@ -1646,23 +1035,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"DetailsKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DetailsKind();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "DetailsKind", "Windows.ApplicationModel.Appointments.IAppointment3").DetailsKind();
             }());
         }
         catch (...)
@@ -1682,24 +1058,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"DetailsKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentDetailsKind>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DetailsKind(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "DetailsKind", "Windows.ApplicationModel.Appointments.IAppointment3").DetailsKind(param0);
             }
 
             return 0;
@@ -1715,23 +1078,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.Appointment", L"ChangeNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChangeNumber();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointment3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.Appointment", "ChangeNumber", "Windows.ApplicationModel.Appointments.IAppointment3").ChangeNumber();
             }());
         }
         catch (...)
@@ -1840,19 +1190,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"DeleteAppointmentAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1882,19 +1219,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"DeleteAppointmentInstanceAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -1925,19 +1249,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1965,19 +1276,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"FindAllInstancesAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
@@ -1998,19 +1296,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"FindAllInstancesAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
@@ -2043,19 +1328,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"FindAppointmentsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -2075,19 +1347,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"FindAppointmentsAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions>(args, 2);
@@ -2119,19 +1378,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"FindExceptionsFromMasterAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2161,19 +1407,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"FindUnexpandedAppointmentsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2190,19 +1423,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"FindUnexpandedAppointmentsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions>(args, 0);
 
                 return py::convert([&]()
@@ -2232,19 +1452,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"GetAppointmentAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2274,19 +1481,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"GetAppointmentInstanceAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -2317,23 +1511,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"RegisterSyncManagerAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RegisterSyncManagerAsync();
+                    return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "RegisterSyncManagerAsync", "Windows.ApplicationModel.Appointments.IAppointmentCalendar3", 0).RegisterSyncManagerAsync();
                 }());
             }
             catch (...)
@@ -2357,19 +1538,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"SaveAppointmentAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
 
                 return py::convert([&]()
@@ -2399,19 +1567,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"SaveAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2439,19 +1594,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"TryCancelMeetingAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -2460,7 +1602,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryCancelMeetingAsync(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "TryCancelMeetingAsync", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2", 4).TryCancelMeetingAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -2484,26 +1626,13 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"TryCreateOrUpdateAppointmentAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryCreateOrUpdateAppointmentAsync(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "TryCreateOrUpdateAppointmentAsync", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2", 2).TryCreateOrUpdateAppointmentAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -2527,19 +1656,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"TryForwardMeetingAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Appointments::AppointmentInvitee>>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -2549,7 +1665,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryForwardMeetingAsync(param0, param1, param2, param3, param4);
+                    return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "TryForwardMeetingAsync", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2", 5).TryForwardMeetingAsync(param0, param1, param2, param3, param4);
                 }());
             }
             catch (...)
@@ -2573,19 +1689,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"TryProposeNewTimeForMeetingAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
@@ -2595,7 +1698,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryProposeNewTimeForMeetingAsync(param0, param1, param2, param3, param4);
+                    return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "TryProposeNewTimeForMeetingAsync", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2", 5).TryProposeNewTimeForMeetingAsync(param0, param1, param2, param3, param4);
                 }());
             }
             catch (...)
@@ -2619,19 +1722,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"TryUpdateMeetingResponseAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentParticipantResponse>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -2641,7 +1731,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryUpdateMeetingResponseAsync(param0, param1, param2, param3, param4);
+                    return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "TryUpdateMeetingResponseAsync", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2", 5).TryUpdateMeetingResponseAsync(param0, param1, param2, param3, param4);
                 }());
             }
             catch (...)
@@ -2661,19 +1751,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"SummaryCardView");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2697,19 +1774,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"SummaryCardView");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentSummaryCardView>(arg);
 
             {
@@ -2730,19 +1794,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"OtherAppWriteAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2766,19 +1817,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"OtherAppWriteAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarOtherAppWriteAccess>(arg);
 
             {
@@ -2799,19 +1837,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"DisplayColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2835,24 +1860,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"DisplayColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DisplayColor(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "DisplayColor", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").DisplayColor(param0);
             }
 
             return 0;
@@ -2868,19 +1880,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"IsHidden");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2904,24 +1903,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"IsHidden");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsHidden(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "IsHidden", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").IsHidden(param0);
             }
 
             return 0;
@@ -2937,19 +1923,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2973,19 +1946,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3006,19 +1966,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"OtherAppReadAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3042,19 +1989,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"OtherAppReadAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarOtherAppReadAccess>(arg);
 
             {
@@ -3075,19 +2009,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"LocalId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3105,19 +2026,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"SourceDisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3135,23 +2043,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanCancelMeetings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanCancelMeetings();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanCancelMeetings", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanCancelMeetings();
             }());
         }
         catch (...)
@@ -3171,24 +2066,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanCancelMeetings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanCancelMeetings(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanCancelMeetings", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanCancelMeetings(param0);
             }
 
             return 0;
@@ -3204,23 +2086,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanNotifyInvitees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanNotifyInvitees();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanNotifyInvitees", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanNotifyInvitees();
             }());
         }
         catch (...)
@@ -3240,24 +2109,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanNotifyInvitees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanNotifyInvitees(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanNotifyInvitees", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanNotifyInvitees(param0);
             }
 
             return 0;
@@ -3273,23 +2129,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RemoteId();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "RemoteId", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").RemoteId();
             }());
         }
         catch (...)
@@ -3309,24 +2152,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RemoteId(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "RemoteId", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").RemoteId(param0);
             }
 
             return 0;
@@ -3342,23 +2172,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"MustNofityInvitees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MustNofityInvitees();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "MustNofityInvitees", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").MustNofityInvitees();
             }());
         }
         catch (...)
@@ -3378,24 +2195,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"MustNofityInvitees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MustNofityInvitees(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "MustNofityInvitees", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").MustNofityInvitees(param0);
             }
 
             return 0;
@@ -3411,23 +2215,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanUpdateMeetingResponses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanUpdateMeetingResponses();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanUpdateMeetingResponses", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanUpdateMeetingResponses();
             }());
         }
         catch (...)
@@ -3447,24 +2238,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanUpdateMeetingResponses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanUpdateMeetingResponses(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanUpdateMeetingResponses", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanUpdateMeetingResponses(param0);
             }
 
             return 0;
@@ -3480,23 +2258,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanProposeNewTimeForMeetings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanProposeNewTimeForMeetings();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanProposeNewTimeForMeetings", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanProposeNewTimeForMeetings();
             }());
         }
         catch (...)
@@ -3516,24 +2281,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanProposeNewTimeForMeetings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanProposeNewTimeForMeetings(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanProposeNewTimeForMeetings", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanProposeNewTimeForMeetings(param0);
             }
 
             return 0;
@@ -3549,23 +2301,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanCreateOrUpdateAppointments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanCreateOrUpdateAppointments();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanCreateOrUpdateAppointments", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanCreateOrUpdateAppointments();
             }());
         }
         catch (...)
@@ -3585,24 +2324,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanCreateOrUpdateAppointments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanCreateOrUpdateAppointments(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanCreateOrUpdateAppointments", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanCreateOrUpdateAppointments(param0);
             }
 
             return 0;
@@ -3618,23 +2344,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanForwardMeetings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanForwardMeetings();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanForwardMeetings", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanForwardMeetings();
             }());
         }
         catch (...)
@@ -3654,24 +2367,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"CanForwardMeetings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanForwardMeetings(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "CanForwardMeetings", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").CanForwardMeetings(param0);
             }
 
             return 0;
@@ -3687,23 +2387,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"SyncManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SyncManager();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "SyncManager", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").SyncManager();
             }());
         }
         catch (...)
@@ -3717,23 +2404,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendar", L"UserDataAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserDataAccountId();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendar", "UserDataAccountId", "Windows.ApplicationModel.Appointments.IAppointmentCalendar2").UserDataAccountId();
             }());
         }
         catch (...)
@@ -3849,19 +2523,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", L"SyncAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3885,19 +2546,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3921,24 +2569,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncStatus>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Status(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", "Status", "Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2").Status(param0);
             }
 
             return 0;
@@ -3954,19 +2589,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", L"LastSuccessfulSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3990,24 +2612,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", L"LastSuccessfulSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LastSuccessfulSyncTime(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", "LastSuccessfulSyncTime", "Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2").LastSuccessfulSyncTime(param0);
             }
 
             return 0;
@@ -4023,19 +2632,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", L"LastAttemptedSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4059,24 +2655,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", L"LastAttemptedSyncTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LastAttemptedSyncTime(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", "LastAttemptedSyncTime", "Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2").LastAttemptedSyncTime(param0);
             }
 
             return 0;
@@ -4092,19 +2675,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", L"SyncStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -4124,19 +2694,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager", L"SyncStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4226,19 +2783,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentConflictResult", L"Date");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4256,19 +2800,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentConflictResult", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4351,19 +2882,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentException", L"Appointment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4381,19 +2899,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentException", L"ExceptionProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4411,19 +2916,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentException", L"IsDeleted");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4529,19 +3021,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentInvitee", L"Role");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4565,19 +3044,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentInvitee", L"Role");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentParticipantRole>(arg);
 
             {
@@ -4598,19 +3064,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentInvitee", L"Response");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4634,19 +3087,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentInvitee", L"Response");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentParticipantResponse>(arg);
 
             {
@@ -4667,23 +3107,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentInvitee", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentInvitee", "DisplayName", "Windows.ApplicationModel.Appointments.IAppointmentParticipant").DisplayName();
             }());
         }
         catch (...)
@@ -4703,24 +3130,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentInvitee", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DisplayName(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentInvitee", "DisplayName", "Windows.ApplicationModel.Appointments.IAppointmentParticipant").DisplayName(param0);
             }
 
             return 0;
@@ -4736,23 +3150,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentInvitee", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Address();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentInvitee", "Address", "Windows.ApplicationModel.Appointments.IAppointmentParticipant").Address();
             }());
         }
         catch (...)
@@ -4772,24 +3173,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentInvitee", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Address(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentInvitee", "Address", "Windows.ApplicationModel.Appointments.IAppointmentParticipant").Address(param0);
             }
 
             return 0;
@@ -5475,19 +3863,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"RequestStoreAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreAccessType>(args, 0);
 
                 return py::convert([&]()
@@ -5517,19 +3892,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowAddAppointmentAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
@@ -5549,19 +3911,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowAddAppointmentAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
@@ -5593,19 +3942,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowAppointmentDetailsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -5624,19 +3960,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowAppointmentDetailsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -5667,19 +3990,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowEditNewAppointmentAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
 
                 return py::convert([&]()
@@ -5709,19 +4019,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowRemoveAppointmentAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
@@ -5741,19 +4038,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowRemoveAppointmentAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
@@ -5774,19 +4058,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowRemoveAppointmentAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
@@ -5819,19 +4090,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowReplaceAppointmentAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
@@ -5852,19 +4110,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowReplaceAppointmentAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
@@ -5886,19 +4131,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowReplaceAppointmentAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
@@ -5932,19 +4164,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowTimeFrameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -5971,19 +4190,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6094,19 +4300,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentOrganizer", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6130,19 +4323,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentOrganizer", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6163,19 +4343,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentOrganizer", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6199,19 +4366,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentOrganizer", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7174,19 +5328,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Unit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7210,19 +5351,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Unit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrenceUnit>(arg);
 
             {
@@ -7243,19 +5371,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Occurrences");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7279,19 +5394,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Occurrences");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             {
@@ -7312,19 +5414,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Month");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7348,19 +5437,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Month");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -7381,19 +5457,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Interval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7417,19 +5480,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Interval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -7450,19 +5500,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"DaysOfWeek");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7486,19 +5523,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"DaysOfWeek");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentDaysOfWeek>(arg);
 
             {
@@ -7519,19 +5543,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Day");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7555,19 +5566,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Day");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -7588,19 +5586,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"WeekOfMonth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7624,19 +5609,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"WeekOfMonth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentWeekOfMonth>(arg);
 
             {
@@ -7657,19 +5629,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Until");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7693,19 +5652,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"Until");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -7726,23 +5672,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"TimeZone");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TimeZone();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentRecurrence2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentRecurrence", "TimeZone", "Windows.ApplicationModel.Appointments.IAppointmentRecurrence2").TimeZone();
             }());
         }
         catch (...)
@@ -7762,24 +5695,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"TimeZone");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TimeZone(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentRecurrence2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentRecurrence", "TimeZone", "Windows.ApplicationModel.Appointments.IAppointmentRecurrence2").TimeZone(param0);
             }
 
             return 0;
@@ -7795,23 +5715,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"RecurrenceType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RecurrenceType();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentRecurrence2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentRecurrence", "RecurrenceType", "Windows.ApplicationModel.Appointments.IAppointmentRecurrence2").RecurrenceType();
             }());
         }
         catch (...)
@@ -7825,23 +5732,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentRecurrence", L"CalendarIdentifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CalendarIdentifier();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentRecurrence3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentRecurrence", "CalendarIdentifier", "Windows.ApplicationModel.Appointments.IAppointmentRecurrence3").CalendarIdentifier();
             }());
         }
         catch (...)
@@ -7933,19 +5827,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"CreateAppointmentCalendarAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7964,26 +5845,13 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"CreateAppointmentCalendarAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateAppointmentCalendarAsync(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentStore2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Appointments.AppointmentStore", "CreateAppointmentCalendarAsync", "Windows.ApplicationModel.Appointments.IAppointmentStore2", 2).CreateAppointmentCalendarAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -8007,19 +5875,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"FindAppointmentCalendarsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8036,19 +5891,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"FindAppointmentCalendarsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::FindAppointmentCalendarsOptions>(args, 0);
 
                 return py::convert([&]()
@@ -8078,19 +5920,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"FindAppointmentsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -8110,19 +5939,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"FindAppointmentsAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions>(args, 2);
@@ -8154,19 +5970,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"FindConflictAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
 
                 return py::convert([&]()
@@ -8185,19 +5988,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"FindConflictAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -8228,19 +6018,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"FindLocalIdsFromRoamingIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -8270,19 +6047,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"GetAppointmentAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -8312,19 +6076,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"GetAppointmentCalendarAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -8354,19 +6105,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"GetAppointmentInstanceAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -8397,25 +6135,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"GetChangeTracker", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetChangeTracker(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentStore3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Appointments.AppointmentStore", "GetChangeTracker", "Windows.ApplicationModel.Appointments.IAppointmentStore3", 1).GetChangeTracker(param0);
                 }());
             }
             catch (...)
@@ -8439,19 +6164,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"MoveAppointmentAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>(args, 1);
 
@@ -8482,19 +6194,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"ShowAddAppointmentAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
@@ -8525,19 +6224,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"ShowAppointmentDetailsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -8556,19 +6242,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"ShowAppointmentDetailsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -8599,19 +6272,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"ShowEditNewAppointmentAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
 
                 return py::convert([&]()
@@ -8641,19 +6301,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"ShowRemoveAppointmentAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
@@ -8673,19 +6320,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"ShowRemoveAppointmentAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
@@ -8718,19 +6352,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"ShowReplaceAppointmentAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
@@ -8751,19 +6372,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"ShowReplaceAppointmentAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
@@ -8793,19 +6401,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"ChangeTracker");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8823,25 +6418,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"StoreChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Appointments::AppointmentStore, winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StoreChanged(param0);
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentStore2>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Appointments.AppointmentStore", "StoreChanged", "Windows.ApplicationModel.Appointments.IAppointmentStore2").StoreChanged(param0);
             }());
         }
         catch (...)
@@ -8855,24 +6437,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Appointments.AppointmentStore", L"StoreChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StoreChanged(param0);
+                py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentStore2>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Appointments.AppointmentStore", "StoreChanged", "Windows.ApplicationModel.Appointments.IAppointmentStore2").StoreChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -8969,19 +6538,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChange", L"Appointment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8999,19 +6555,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChange", L"ChangeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9029,23 +6572,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChange", L"AppointmentCalendar");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AppointmentCalendar();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChange2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentStoreChange", "AppointmentCalendar", "Windows.ApplicationModel.Appointments.IAppointmentStoreChange2").AppointmentCalendar();
             }());
         }
         catch (...)
@@ -9129,19 +6659,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader", L"AcceptChanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.AcceptChanges();
@@ -9170,19 +6687,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader", L"AcceptChangesThrough", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChange>(args, 0);
 
                 {
@@ -9213,19 +6717,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader", L"ReadBatchAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9319,19 +6810,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker", L"Enable", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Enable();
@@ -9360,19 +6838,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker", L"GetChangeReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9400,19 +6865,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Reset();
@@ -9437,23 +6889,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker", L"IsTracking");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsTracking();
+                return py::require<winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChangeTracker2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker", "IsTracking", "Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker2").IsTracking();
             }());
         }
         catch (...)
@@ -9538,19 +6977,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -9643,19 +7069,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9828,19 +7241,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.FindAppointmentsOptions", L"MaxCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9864,19 +7264,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.FindAppointmentsOptions", L"MaxCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -9897,19 +7284,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.FindAppointmentsOptions", L"IncludeHidden");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9933,19 +7307,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.FindAppointmentsOptions", L"IncludeHidden");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -9966,19 +7327,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.FindAppointmentsOptions", L"CalendarIds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9996,19 +7344,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.FindAppointmentsOptions", L"FetchProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10095,19 +7430,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.IAppointmentParticipant", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10131,19 +7453,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.IAppointmentParticipant", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -10164,19 +7473,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.IAppointmentParticipant", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10200,19 +7496,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Appointments.IAppointmentParticipant", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {

@@ -779,7 +779,10 @@ static class WriterExtensions
             () =>
                 w.WriteTryCatch(() =>
                 {
-                    if (!componentDlls)
+                    // An instance member is guarded by the query for the
+                    // interface that declares it. A static member has no object
+                    // to query, so it keeps the metadata probe.
+                    if (!componentDlls && method.IsStatic)
                     {
                         w.WriteLine("static std::optional<bool> is_event_present{};");
                         w.WriteBlankLine();
@@ -831,7 +834,7 @@ static class WriterExtensions
             () =>
                 w.WriteTryCatch(() =>
                 {
-                    if (!componentDlls)
+                    if (!componentDlls && prop.IsStatic)
                     {
                         w.WriteLine("static std::optional<bool> is_property_present{};");
                         w.WriteBlankLine();
@@ -897,7 +900,7 @@ static class WriterExtensions
             w.WriteTryCatch(
                 () =>
                 {
-                    if (!componentDlls)
+                    if (!componentDlls && prop.IsStatic)
                     {
                         w.WriteLine("static std::optional<bool> is_property_present{};");
                         w.WriteBlankLine();
@@ -1014,7 +1017,7 @@ static class WriterExtensions
             {
                 w.WriteTryCatch(() =>
                 {
-                    if (!componentDlls)
+                    if (!componentDlls && method.IsStatic)
                     {
                         w.WriteLine("static std::optional<bool> is_overload_present{};");
                         w.WriteBlankLine();

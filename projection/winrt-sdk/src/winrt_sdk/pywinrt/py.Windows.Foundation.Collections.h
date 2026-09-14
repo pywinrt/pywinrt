@@ -120,19 +120,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
@@ -183,19 +170,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterator`1", L"GetMany", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<py::pybuf_view<T, true>>(args, 0);
 
                     return py::convert([&]()
@@ -224,19 +198,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterator`1", L"MoveNext", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
@@ -408,23 +369,10 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.First();
+                        return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K, V>>", 0).First();
                     }());
                 }
                 catch (...)
@@ -447,19 +395,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"HasKey", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert([&]()
@@ -488,19 +423,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"Lookup", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert([&]()
@@ -529,19 +451,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"Split", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     winrt::Windows::Foundation::Collections::IMapView<K, V> param0{nullptr};
                     winrt::Windows::Foundation::Collections::IMapView<K, V> param1{nullptr};
 
@@ -598,7 +507,7 @@ namespace py::impl::Windows::Foundation::Collections
                 py::pyobj_handle iter{py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K, V>>", 0).First();
                 }())};
 
                 if (!iter)
@@ -698,19 +607,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     {
                         auto _gil = release_gil();
                         _obj.Clear();
@@ -738,23 +634,10 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.First();
+                        return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K, V>>", 0).First();
                     }());
                 }
                 catch (...)
@@ -777,19 +660,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
@@ -816,19 +686,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert([&]()
@@ -857,19 +714,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(2);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<K>(args, 0);
                     auto param1 = py::convert_to<V>(args, 1);
 
@@ -899,19 +743,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert([&]()
@@ -940,19 +771,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<K>(args, 0);
 
                     {
@@ -997,7 +815,7 @@ namespace py::impl::Windows::Foundation::Collections
                 py::pyobj_handle iter{py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K, V>>", 0).First();
                 }())};
 
                 if (!iter)
@@ -1133,22 +951,9 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     {
                         auto _gil = release_gil();
-                        _obj.Clear();
+                        py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "Clear", "Windows.Foundation.Collections.IMap<K, V>", 0).Clear();
                     }
 
                     Py_RETURN_NONE;
@@ -1173,23 +978,10 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.First();
+                        return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K, V>>", 0).First();
                     }());
                 }
                 catch (...)
@@ -1212,23 +1004,10 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.GetView();
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "GetView", "Windows.Foundation.Collections.IMap<K, V>", 0).GetView();
                     }());
                 }
                 catch (...)
@@ -1251,25 +1030,12 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.HasKey(param0);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "HasKey", "Windows.Foundation.Collections.IMap<K, V>", 1).HasKey(param0);
                     }());
                 }
                 catch (...)
@@ -1292,26 +1058,13 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(2);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<K>(args, 0);
                     auto param1 = py::convert_to<V>(args, 1);
 
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.Insert(param0, param1);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "Insert", "Windows.Foundation.Collections.IMap<K, V>", 2).Insert(param0, param1);
                     }());
                 }
                 catch (...)
@@ -1334,25 +1087,12 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<K>(args, 0);
 
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.Lookup(param0);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "Lookup", "Windows.Foundation.Collections.IMap<K, V>", 1).Lookup(param0);
                     }());
                 }
                 catch (...)
@@ -1375,24 +1115,11 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<K>(args, 0);
 
                     {
                         auto _gil = release_gil();
-                        _obj.Remove(param0);
+                        py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "Remove", "Windows.Foundation.Collections.IMap<K, V>", 1).Remove(param0);
                     }
 
                     Py_RETURN_NONE;
@@ -1416,7 +1143,7 @@ namespace py::impl::Windows::Foundation::Collections
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return _obj.Size();
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::property, nullptr, "Size", "Windows.Foundation.Collections.IMap<K, V>").Size();
                 }());
             }
             catch (...)
@@ -1469,7 +1196,7 @@ namespace py::impl::Windows::Foundation::Collections
                 py::pyobj_handle iter{py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K, V>>", 0).First();
                 }())};
 
                 if (!iter)
@@ -1492,7 +1219,7 @@ namespace py::impl::Windows::Foundation::Collections
                 auto _key = py::convert_to<K>(key);
                 {
                     auto _gil = py::release_gil();
-                    return static_cast<int>(_obj.HasKey(_key));
+                    return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "HasKey", "Windows.Foundation.Collections.IMap<K, V>", 1).HasKey(_key));
                 }
             }
             catch (...)
@@ -1506,7 +1233,7 @@ namespace py::impl::Windows::Foundation::Collections
             try
             {
                 auto _gil = py::release_gil();
-                return static_cast<Py_ssize_t>(_obj.Size());
+                return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::property, nullptr, "Size", "Windows.Foundation.Collections.IMap<K, V>").Size());
             }
             catch (...)
             {
@@ -1522,7 +1249,7 @@ namespace py::impl::Windows::Foundation::Collections
                 auto value = [&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.TryLookup(_key);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "Lookup", "Windows.Foundation.Collections.IMap<K, V>", 1).TryLookup(_key);
                 }();
 
                 if (!value)
@@ -1532,7 +1259,7 @@ namespace py::impl::Windows::Foundation::Collections
                         auto has_key = [&]()
                         {
                             auto _gil = py::release_gil();
-                            return _obj.HasKey(_key);
+                            return py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "Lookup", "Windows.Foundation.Collections.IMap<K, V>", 1).HasKey(_key);
                         }();
 
                         if (has_key)
@@ -1564,7 +1291,7 @@ namespace py::impl::Windows::Foundation::Collections
                     bool did_remove;
                     {
                         auto _gil = py::release_gil();
-                        did_remove = _obj.TryRemove(_key);
+                        did_remove = py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "Lookup", "Windows.Foundation.Collections.IMap<K, V>", 1).TryRemove(_key);
                     }
                     if (!did_remove)
                     {
@@ -1578,7 +1305,7 @@ namespace py::impl::Windows::Foundation::Collections
                 auto _value = py::convert_to<V>(value);
                 {
                     auto _gil = py::release_gil();
-                    _obj.Insert(_key, _value);
+                    py::require<winrt::Windows::Foundation::Collections::IMap<K, V>>(_obj, py::member_kind::method, nullptr, "Lookup", "Windows.Foundation.Collections.IMap<K, V>", 1).Insert(_key, _value);
                 }
 
                 return 0;
@@ -1605,24 +1332,11 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<T>(args, 0);
 
                     {
                         auto _gil = release_gil();
-                        _obj.Append(param0);
+                        py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "Append", "Windows.Foundation.Collections.IVector<T>", 1).Append(param0);
                     }
 
                     Py_RETURN_NONE;
@@ -1647,22 +1361,9 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     {
                         auto _gil = release_gil();
-                        _obj.Clear();
+                        py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "Clear", "Windows.Foundation.Collections.IVector<T>", 0).Clear();
                     }
 
                     Py_RETURN_NONE;
@@ -1687,23 +1388,10 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.First();
+                        return py::require<winrt::Windows::Foundation::Collections::IIterable<T>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<T>", 0).First();
                     }());
                 }
                 catch (...)
@@ -1726,25 +1414,12 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
 
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.GetAt(param0);
+                        return py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "GetAt", "Windows.Foundation.Collections.IVector<T>", 1).GetAt(param0);
                     }());
                 }
                 catch (...)
@@ -1767,26 +1442,13 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<py::pybuf_view<T, true>>(args, 1);
 
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.GetMany(param0, param1);
+                        return py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "GetMany", "Windows.Foundation.Collections.IVector<T>", 1).GetMany(param0, param1);
                     }());
                 }
                 catch (...)
@@ -1809,23 +1471,10 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.GetView();
+                        return py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "GetView", "Windows.Foundation.Collections.IVector<T>", 0).GetView();
                     }());
                 }
                 catch (...)
@@ -1848,26 +1497,13 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<T>(args, 0);
                     uint32_t param1{};
 
                     auto return_value = [&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.IndexOf(param0, param1);
+                        return py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "IndexOf", "Windows.Foundation.Collections.IVector<T>", 1).IndexOf(param0, param1);
                     }();
 
                     py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -1903,25 +1539,12 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(2);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<T>(args, 1);
 
                     {
                         auto _gil = release_gil();
-                        _obj.InsertAt(param0, param1);
+                        py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "InsertAt", "Windows.Foundation.Collections.IVector<T>", 2).InsertAt(param0, param1);
                     }
 
                     Py_RETURN_NONE;
@@ -1946,24 +1569,11 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
 
                     {
                         auto _gil = release_gil();
-                        _obj.RemoveAt(param0);
+                        py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "RemoveAt", "Windows.Foundation.Collections.IVector<T>", 1).RemoveAt(param0);
                     }
 
                     Py_RETURN_NONE;
@@ -1988,22 +1598,9 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     {
                         auto _gil = release_gil();
-                        _obj.RemoveAtEnd();
+                        py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "RemoveAtEnd", "Windows.Foundation.Collections.IVector<T>", 0).RemoveAtEnd();
                     }
 
                     Py_RETURN_NONE;
@@ -2028,24 +1625,11 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<py::pybuf_view<T, false>>(args, 0);
 
                     {
                         auto _gil = release_gil();
-                        _obj.ReplaceAll(param0);
+                        py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "ReplaceAll", "Windows.Foundation.Collections.IVector<T>", 1).ReplaceAll(param0);
                     }
 
                     Py_RETURN_NONE;
@@ -2070,25 +1654,12 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(2);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<T>(args, 1);
 
                     {
                         auto _gil = release_gil();
-                        _obj.SetAt(param0, param1);
+                        py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "SetAt", "Windows.Foundation.Collections.IVector<T>", 2).SetAt(param0, param1);
                     }
 
                     Py_RETURN_NONE;
@@ -2112,7 +1683,7 @@ namespace py::impl::Windows::Foundation::Collections
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return _obj.Size();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::property, nullptr, "Size", "Windows.Foundation.Collections.IVector<T>").Size();
                 }());
             }
             catch (...)
@@ -2165,7 +1736,7 @@ namespace py::impl::Windows::Foundation::Collections
                 return py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<T>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<T>", 0).First();
                 }());
             }
             catch (...)
@@ -2179,7 +1750,7 @@ namespace py::impl::Windows::Foundation::Collections
             try
             {
                 auto _gil = py::release_gil();
-                return static_cast<Py_ssize_t>(_obj.Size());
+                return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::property, nullptr, "Size", "Windows.Foundation.Collections.IVector<T>").Size());
             }
             catch (...)
             {
@@ -2194,7 +1765,7 @@ namespace py::impl::Windows::Foundation::Collections
                 return py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.GetAt(static_cast<uint32_t>(i));
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "GetAt", "Windows.Foundation.Collections.IVector<T>", 1).GetAt(static_cast<uint32_t>(i));
                 }());
             }
             catch (...)
@@ -2236,7 +1807,7 @@ namespace py::impl::Windows::Foundation::Collections
                 auto size = [&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.Size();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "GetAt", "Windows.Foundation.Collections.IVector<T>", 1).Size();
                 }();
                 if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
                 {
@@ -2254,7 +1825,7 @@ namespace py::impl::Windows::Foundation::Collections
                 auto count = [&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.GetMany(static_cast<uint32_t>(start), items);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "GetAt", "Windows.Foundation.Collections.IVector<T>", 1).GetMany(static_cast<uint32_t>(start), items);
                 }();
 
                 if (count != static_cast<uint32_t>(length))
@@ -2278,14 +1849,14 @@ namespace py::impl::Windows::Foundation::Collections
                 if (!value)
                 {
                     auto _gil = py::release_gil();
-                    _obj.RemoveAt(static_cast<uint32_t>(i));
+                    py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "SetAt", "Windows.Foundation.Collections.IVector<T>", 2).RemoveAt(static_cast<uint32_t>(i));
                 }
                 else
                 {
                     auto _value = py::convert_to<T>(value);
                     {
                         auto _gil = py::release_gil();
-                        _obj.SetAt(static_cast<uint32_t>(i), _value);
+                        py::require<winrt::Windows::Foundation::Collections::IVector<T>>(_obj, py::member_kind::method, nullptr, "SetAt", "Windows.Foundation.Collections.IVector<T>", 2).SetAt(static_cast<uint32_t>(i), _value);
                     }
                 }
 
@@ -2313,23 +1884,10 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.First();
+                        return py::require<winrt::Windows::Foundation::Collections::IIterable<T>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<T>", 0).First();
                     }());
                 }
                 catch (...)
@@ -2352,19 +1910,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"GetAt", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
 
                     return py::convert([&]()
@@ -2393,19 +1938,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"GetMany", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<py::pybuf_view<T, true>>(args, 1);
 
@@ -2435,19 +1967,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"IndexOf", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<T>(args, 0);
                     uint32_t param1{};
 
@@ -2505,7 +2024,7 @@ namespace py::impl::Windows::Foundation::Collections
                 return py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<T>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<T>", 0).First();
                 }());
             }
             catch (...)
@@ -2627,19 +2146,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<T>(args, 0);
 
                     {
@@ -2669,19 +2175,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     {
                         auto _gil = release_gil();
                         _obj.Clear();
@@ -2709,23 +2202,10 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
-                        return _obj.First();
+                        return py::require<winrt::Windows::Foundation::Collections::IIterable<T>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<T>", 0).First();
                     }());
                 }
                 catch (...)
@@ -2748,19 +2228,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
 
                     return py::convert([&]()
@@ -2789,19 +2256,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<py::pybuf_view<T, true>>(args, 1);
 
@@ -2831,19 +2285,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     return py::convert([&]()
                     {
                         auto _gil = release_gil();
@@ -2870,19 +2311,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<T>(args, 0);
                     uint32_t param1{};
 
@@ -2925,19 +2353,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(2);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<T>(args, 1);
 
@@ -2968,19 +2383,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
 
                     {
@@ -3010,19 +2412,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(0);
-                        return nullptr;
-                    }
-
                     {
                         auto _gil = release_gil();
                         _obj.RemoveAtEnd();
@@ -3050,19 +2439,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(1);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<py::pybuf_view<T, false>>(args, 0);
 
                     {
@@ -3092,19 +2468,6 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    static std::optional<bool> is_overload_present{};
-
-                    if (!is_overload_present.has_value())
-                    {
-                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2);
-                    }
-
-                    if (!is_overload_present.value())
-                    {
-                        py::set_arg_count_version_error(2);
-                        return nullptr;
-                    }
-
                     auto param0 = py::convert_to<uint32_t>(args, 0);
                     auto param1 = py::convert_to<T>(args, 1);
 
@@ -3150,7 +2513,7 @@ namespace py::impl::Windows::Foundation::Collections
                 return py::convert([&]()
                 {
                     auto _gil = py::release_gil();
-                    return _obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<T>>(_obj, py::member_kind::method, nullptr, "First", "Windows.Foundation.Collections.IIterable<T>", 0).First();
                 }());
             }
             catch (...)

@@ -25,23 +25,10 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.ModelContextProtocol.ModelContextProtocolClientContext", L"OwnerWindowId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::AI::ModelContextProtocol::ModelContextProtocolClientContext>().OwnerWindowId();
+                return py::require<winrt::Windows::AI::ModelContextProtocol::IModelContextProtocolClientContext>(self->obj, py::member_kind::property, "Windows.AI.ModelContextProtocol.ModelContextProtocolClientContext", "OwnerWindowId", "Windows.AI.ModelContextProtocol.IModelContextProtocolClientContext").OwnerWindowId();
             }());
         }
         catch (...)
@@ -61,24 +48,11 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.ModelContextProtocol.ModelContextProtocolClientContext", L"OwnerWindowId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::WindowId>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Windows::AI::ModelContextProtocol::ModelContextProtocolClientContext>().OwnerWindowId(param0);
+                py::require<winrt::Windows::AI::ModelContextProtocol::IModelContextProtocolClientContext>(self->obj, py::member_kind::property, "Windows.AI.ModelContextProtocol.ModelContextProtocolClientContext", "OwnerWindowId", "Windows.AI.ModelContextProtocol.IModelContextProtocolClientContext").OwnerWindowId(param0);
             }
 
             return 0;
@@ -183,26 +157,13 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.ModelContextProtocol.ModelContextProtocolServerCatalog", L"ActivateServer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::ModelContextProtocol::ModelContextProtocolClientContext>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::AI::ModelContextProtocol::ModelContextProtocolServerCatalog>().ActivateServer(param0, param1);
+                    return py::require<winrt::Windows::AI::ModelContextProtocol::IModelContextProtocolServerCatalog>(self->obj, py::member_kind::method, "Windows.AI.ModelContextProtocol.ModelContextProtocolServerCatalog", "ActivateServer", "Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalog", 2).ActivateServer(param0, param1);
                 }());
             }
             catch (...)
@@ -226,23 +187,10 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.ModelContextProtocol.ModelContextProtocolServerCatalog", L"CreateClientContext", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::AI::ModelContextProtocol::ModelContextProtocolServerCatalog>().CreateClientContext();
+                    return py::require<winrt::Windows::AI::ModelContextProtocol::IModelContextProtocolServerCatalog>(self->obj, py::member_kind::method, "Windows.AI.ModelContextProtocol.ModelContextProtocolServerCatalog", "CreateClientContext", "Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalog", 0).CreateClientContext();
                 }());
             }
             catch (...)
@@ -266,23 +214,10 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.ModelContextProtocol.ModelContextProtocolServerCatalog", L"GetServerInfos", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::AI::ModelContextProtocol::ModelContextProtocolServerCatalog>().GetServerInfos();
+                    return py::require<winrt::Windows::AI::ModelContextProtocol::IModelContextProtocolServerCatalog>(self->obj, py::member_kind::method, "Windows.AI.ModelContextProtocol.ModelContextProtocolServerCatalog", "GetServerInfos", "Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalog", 0).GetServerInfos();
                 }());
             }
             catch (...)
@@ -393,23 +328,10 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo", L"GetPackage", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::AI::ModelContextProtocol::ModelContextProtocolServerInfo>().GetPackage();
+                    return py::require<winrt::Windows::AI::ModelContextProtocol::IModelContextProtocolServerInfo>(self->obj, py::member_kind::method, "Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo", "GetPackage", "Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo", 0).GetPackage();
                 }());
             }
             catch (...)
@@ -429,23 +351,10 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::AI::ModelContextProtocol::ModelContextProtocolServerInfo>().Description();
+                return py::require<winrt::Windows::AI::ModelContextProtocol::IModelContextProtocolServerInfo>(self->obj, py::member_kind::property, "Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo", "Description", "Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo").Description();
             }());
         }
         catch (...)
@@ -459,23 +368,10 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::AI::ModelContextProtocol::ModelContextProtocolServerInfo>().Id();
+                return py::require<winrt::Windows::AI::ModelContextProtocol::IModelContextProtocolServerInfo>(self->obj, py::member_kind::property, "Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo", "Id", "Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo").Id();
             }());
         }
         catch (...)
@@ -489,23 +385,10 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Windows::AI::ModelContextProtocol::ModelContextProtocolServerInfo>().Name();
+                return py::require<winrt::Windows::AI::ModelContextProtocol::IModelContextProtocolServerInfo>(self->obj, py::member_kind::property, "Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo", "Name", "Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo").Name();
             }());
         }
         catch (...)
@@ -613,22 +496,9 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -654,19 +524,6 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.ModelContextProtocol.IModelContextProtocolServer", L"GetCommandArguments", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -690,19 +547,6 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.ModelContextProtocol.IModelContextProtocolServer", L"Command");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -720,19 +564,6 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.ModelContextProtocol.IModelContextProtocolServer", L"Info");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -757,7 +588,7 @@ namespace py::cpp::Windows::AI::ModelContextProtocol
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;

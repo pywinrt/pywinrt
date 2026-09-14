@@ -292,19 +292,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.ResourceLoader", L"GetString", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -376,25 +363,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.ResourceLoader", L"GetStringForUri", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetStringForUri(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Resources::IResourceLoader2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.ResourceLoader", "GetStringForUri", "Windows.ApplicationModel.Resources.IResourceLoader2", 1).GetStringForUri(param0);
                 }());
             }
             catch (...)

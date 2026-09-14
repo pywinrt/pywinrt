@@ -47,19 +47,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ContentFilterOptions", L"ResponseMaxAllowedSeverityLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -83,19 +70,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ContentFilterOptions", L"ResponseMaxAllowedSeverityLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::TextContentFilterSeverity>(arg);
 
             {
@@ -116,19 +90,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ContentFilterOptions", L"PromptMaxAllowedSeverityLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -152,19 +113,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ContentFilterOptions", L"PromptMaxAllowedSeverityLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::TextContentFilterSeverity>(arg);
 
             {
@@ -185,19 +133,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ContentFilterOptions", L"ImageMaxAllowedSeverityLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -221,19 +156,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ContentFilterOptions", L"ImageMaxAllowedSeverityLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::ImageContentFilterSeverity>(arg);
 
             {
@@ -357,19 +279,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity", L"ViolentContentLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -393,19 +302,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity", L"ViolentContentLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::SeverityLevel>(arg);
 
             {
@@ -426,19 +322,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity", L"RacyContentLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -462,19 +345,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity", L"RacyContentLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::SeverityLevel>(arg);
 
             {
@@ -495,19 +365,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity", L"GoryContentLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -531,19 +388,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity", L"GoryContentLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::SeverityLevel>(arg);
 
             {
@@ -564,19 +408,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity", L"AdultContentLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -600,19 +431,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity", L"AdultContentLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::SeverityLevel>(arg);
 
             {
@@ -737,19 +555,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity", L"Violent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -773,19 +578,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity", L"Violent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::SeverityLevel>(arg);
 
             {
@@ -806,19 +598,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity", L"Sexual");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -842,19 +621,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity", L"Sexual");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::SeverityLevel>(arg);
 
             {
@@ -875,19 +641,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity", L"SelfHarm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -911,19 +664,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity", L"SelfHarm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::SeverityLevel>(arg);
 
             {
@@ -944,19 +684,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity", L"Hate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -980,19 +707,6 @@ namespace py::cpp::Microsoft::Windows::AI::ContentSafety
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity", L"Hate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::SeverityLevel>(arg);
 
             {

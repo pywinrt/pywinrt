@@ -69,23 +69,10 @@ namespace py::cpp::Windows::System::Inventory
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.System.Inventory.InstalledDesktopApp", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -105,19 +92,6 @@ namespace py::cpp::Windows::System::Inventory
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -135,19 +109,6 @@ namespace py::cpp::Windows::System::Inventory
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"DisplayVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -165,19 +126,6 @@ namespace py::cpp::Windows::System::Inventory
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -195,19 +143,6 @@ namespace py::cpp::Windows::System::Inventory
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Inventory.InstalledDesktopApp", L"Publisher");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -252,7 +187,7 @@ namespace py::cpp::Windows::System::Inventory
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.System.Inventory.InstalledDesktopApp", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)

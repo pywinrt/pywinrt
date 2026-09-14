@@ -29,19 +29,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo", L"TryComputeLatestMeshAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert([&]()
@@ -60,19 +47,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo", L"TryComputeLatestMeshAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions>(args, 1);
 
@@ -103,19 +77,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo", L"TryGetBounds", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert([&]()
@@ -141,19 +102,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -171,19 +119,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo", L"UpdateTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -268,19 +203,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh", L"CoordinateSystem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -298,19 +220,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh", L"SurfaceInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -328,19 +237,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh", L"TriangleIndices");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -358,19 +254,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh", L"VertexNormals");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -388,19 +271,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh", L"VertexPositionScale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -418,19 +288,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh", L"VertexPositions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -517,19 +374,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -547,19 +391,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer", L"ElementCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -577,19 +408,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer", L"Format");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -607,19 +425,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer", L"Stride");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -726,19 +531,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"VertexPositionFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -762,19 +554,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"VertexPositionFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
 
             {
@@ -795,19 +574,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"VertexNormalFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -831,19 +597,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"VertexNormalFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
 
             {
@@ -864,19 +617,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"TriangleIndexFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -900,19 +640,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"TriangleIndexFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
 
             {
@@ -933,19 +660,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"IncludeVertexNormals");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -969,19 +683,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"IncludeVertexNormals");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1209,19 +910,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver", L"GetObservedSurfaces", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1329,19 +1017,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver", L"SetBoundingVolume", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>(args, 0);
 
                 {
@@ -1372,19 +1047,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver", L"SetBoundingVolumes", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>>(args, 0);
 
                 {
@@ -1411,19 +1073,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver", L"ObservedSurfacesChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -1443,19 +1092,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver", L"ObservedSurfacesChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {

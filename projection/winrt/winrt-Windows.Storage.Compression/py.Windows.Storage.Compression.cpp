@@ -70,22 +70,9 @@ namespace py::cpp::Windows::Storage::Compression
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Compression.Compressor", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.Compression.Compressor", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -111,19 +98,6 @@ namespace py::cpp::Windows::Storage::Compression
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Compression.Compressor", L"DetachStream", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -151,19 +125,6 @@ namespace py::cpp::Windows::Storage::Compression
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Compression.Compressor", L"FinishAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -191,23 +152,10 @@ namespace py::cpp::Windows::Storage::Compression
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Compression.Compressor", L"FlushAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FlushAsync();
+                    return py::require<winrt::Windows::Storage::Streams::IOutputStream>(self->obj, py::member_kind::method, "Windows.Storage.Compression.Compressor", "FlushAsync", "Windows.Storage.Streams.IOutputStream", 0).FlushAsync();
                 }());
             }
             catch (...)
@@ -231,25 +179,12 @@ namespace py::cpp::Windows::Storage::Compression
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Compression.Compressor", L"WriteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.WriteAsync(param0);
+                    return py::require<winrt::Windows::Storage::Streams::IOutputStream>(self->obj, py::member_kind::method, "Windows.Storage.Compression.Compressor", "WriteAsync", "Windows.Storage.Streams.IOutputStream", 1).WriteAsync(param0);
                 }());
             }
             catch (...)
@@ -300,7 +235,7 @@ namespace py::cpp::Windows::Storage::Compression
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.Compression.Compressor", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -390,22 +325,9 @@ namespace py::cpp::Windows::Storage::Compression
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Compression.Decompressor", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.Compression.Decompressor", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -431,19 +353,6 @@ namespace py::cpp::Windows::Storage::Compression
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Compression.Decompressor", L"DetachStream", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -471,19 +380,6 @@ namespace py::cpp::Windows::Storage::Compression
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Compression.Decompressor", L"ReadAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::InputStreamOptions>(args, 2);
@@ -491,7 +387,7 @@ namespace py::cpp::Windows::Storage::Compression
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ReadAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::Streams::IInputStream>(self->obj, py::member_kind::method, "Windows.Storage.Compression.Decompressor", "ReadAsync", "Windows.Storage.Streams.IInputStream", 3).ReadAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -542,7 +438,7 @@ namespace py::cpp::Windows::Storage::Compression
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Storage.Compression.Decompressor", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;

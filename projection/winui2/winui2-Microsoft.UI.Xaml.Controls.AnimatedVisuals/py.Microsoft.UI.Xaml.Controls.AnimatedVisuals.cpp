@@ -51,25 +51,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedAcceptVisualSource", L"SetColorProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetColorProperty(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedAcceptVisualSource", "SetColorProperty", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2", 2).SetColorProperty(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -95,19 +82,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedAcceptVisualSource", L"TryCreateAnimatedVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
@@ -147,23 +121,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedAcceptVisualSource", L"Markers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Markers();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedAcceptVisualSource", "Markers", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2").Markers();
             }());
         }
         catch (...)
@@ -269,25 +230,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedBackVisualSource", L"SetColorProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetColorProperty(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedBackVisualSource", "SetColorProperty", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2", 2).SetColorProperty(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -313,19 +261,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedBackVisualSource", L"TryCreateAnimatedVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
@@ -365,23 +300,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedBackVisualSource", L"Markers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Markers();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedBackVisualSource", "Markers", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2").Markers();
             }());
         }
         catch (...)
@@ -487,25 +409,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronDownSmallVisualSource", L"SetColorProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetColorProperty(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronDownSmallVisualSource", "SetColorProperty", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2", 2).SetColorProperty(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -531,19 +440,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronDownSmallVisualSource", L"TryCreateAnimatedVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
@@ -583,23 +479,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronDownSmallVisualSource", L"Markers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Markers();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronDownSmallVisualSource", "Markers", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2").Markers();
             }());
         }
         catch (...)
@@ -705,25 +588,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronRightDownSmallVisualSource", L"SetColorProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetColorProperty(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronRightDownSmallVisualSource", "SetColorProperty", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2", 2).SetColorProperty(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -749,19 +619,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronRightDownSmallVisualSource", L"TryCreateAnimatedVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
@@ -801,23 +658,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronRightDownSmallVisualSource", L"Markers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Markers();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronRightDownSmallVisualSource", "Markers", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2").Markers();
             }());
         }
         catch (...)
@@ -923,25 +767,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronUpDownSmallVisualSource", L"SetColorProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetColorProperty(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronUpDownSmallVisualSource", "SetColorProperty", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2", 2).SetColorProperty(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -967,19 +798,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronUpDownSmallVisualSource", L"TryCreateAnimatedVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
@@ -1019,23 +837,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronUpDownSmallVisualSource", L"Markers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Markers();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronUpDownSmallVisualSource", "Markers", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2").Markers();
             }());
         }
         catch (...)
@@ -1141,25 +946,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedFindVisualSource", L"SetColorProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetColorProperty(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedFindVisualSource", "SetColorProperty", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2", 2).SetColorProperty(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1185,19 +977,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedFindVisualSource", L"TryCreateAnimatedVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
@@ -1237,23 +1016,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedFindVisualSource", L"Markers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Markers();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedFindVisualSource", "Markers", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2").Markers();
             }());
         }
         catch (...)
@@ -1359,25 +1125,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedGlobalNavigationButtonVisualSource", L"SetColorProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetColorProperty(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedGlobalNavigationButtonVisualSource", "SetColorProperty", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2", 2).SetColorProperty(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1403,19 +1156,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedGlobalNavigationButtonVisualSource", L"TryCreateAnimatedVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
@@ -1455,23 +1195,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedGlobalNavigationButtonVisualSource", L"Markers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Markers();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedGlobalNavigationButtonVisualSource", "Markers", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2").Markers();
             }());
         }
         catch (...)
@@ -1577,25 +1304,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource", L"SetColorProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetColorProperty(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource", "SetColorProperty", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2", 2).SetColorProperty(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1621,19 +1335,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource", L"TryCreateAnimatedVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 winrt::Windows::Foundation::IInspectable param1{};
 
@@ -1673,23 +1374,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource", L"Markers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Markers();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource", "Markers", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2").Markers();
             }());
         }
         catch (...)

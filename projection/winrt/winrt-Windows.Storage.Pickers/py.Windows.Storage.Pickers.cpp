@@ -29,19 +29,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -72,19 +59,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -113,23 +87,10 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FileExtensionVector", "First", "Windows.Foundation.Collections.IIterable<String>", 0).First();
                 }());
             }
             catch (...)
@@ -153,19 +114,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -195,19 +143,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, true>>(args, 1);
 
@@ -238,19 +173,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -278,19 +200,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 uint32_t param1{};
 
@@ -334,19 +243,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -378,19 +274,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -421,19 +304,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAtEnd();
@@ -462,19 +332,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 0);
 
                 {
@@ -505,19 +362,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -545,19 +389,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileExtensionVector", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -602,7 +433,7 @@ namespace py::cpp::Windows::Storage::Pickers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FileExtensionVector", "First", "Windows.Foundation.Collections.IIterable<String>", 0).First();
             }());
         }
         catch (...)
@@ -868,22 +699,9 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"PickMultipleFilesAndContinue", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.PickMultipleFilesAndContinue();
+                    py::require<winrt::Windows::Storage::Pickers::IFileOpenPicker2>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FileOpenPicker", "PickMultipleFilesAndContinue", "Windows.Storage.Pickers.IFileOpenPicker2", 0).PickMultipleFilesAndContinue();
                 }
 
                 Py_RETURN_NONE;
@@ -909,19 +727,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"PickMultipleFilesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -949,22 +754,9 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"PickSingleFileAndContinue", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.PickSingleFileAndContinue();
+                    py::require<winrt::Windows::Storage::Pickers::IFileOpenPicker2>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FileOpenPicker", "PickSingleFileAndContinue", "Windows.Storage.Pickers.IFileOpenPicker2", 0).PickSingleFileAndContinue();
                 }
 
                 Py_RETURN_NONE;
@@ -990,19 +782,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"PickSingleFileAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1019,25 +798,12 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"PickSingleFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.PickSingleFileAsync(param0);
+                    return py::require<winrt::Windows::Storage::Pickers::IFileOpenPickerWithOperationId>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FileOpenPicker", "PickSingleFileAsync", "Windows.Storage.Pickers.IFileOpenPickerWithOperationId", 1).PickSingleFileAsync(param0);
                 }());
             }
             catch (...)
@@ -1097,19 +863,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"ViewMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1133,19 +886,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"ViewMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Pickers::PickerViewMode>(arg);
 
             {
@@ -1166,19 +906,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"SuggestedStartLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1202,19 +929,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"SuggestedStartLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Pickers::PickerLocationId>(arg);
 
             {
@@ -1235,19 +949,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"SettingsIdentifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1271,19 +972,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"SettingsIdentifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1304,19 +992,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"CommitButtonText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1340,19 +1015,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"CommitButtonText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1373,19 +1035,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"FileTypeFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1403,23 +1052,10 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"ContinuationData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContinuationData();
+                return py::require<winrt::Windows::Storage::Pickers::IFileOpenPicker2>(self->obj, py::member_kind::property, "Windows.Storage.Pickers.FileOpenPicker", "ContinuationData", "Windows.Storage.Pickers.IFileOpenPicker2").ContinuationData();
             }());
         }
         catch (...)
@@ -1433,23 +1069,10 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileOpenPicker", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::Storage::Pickers::IFileOpenPicker3>(self->obj, py::member_kind::property, "Windows.Storage.Pickers.FileOpenPicker", "User", "Windows.Storage.Pickers.IFileOpenPicker3").User();
             }());
         }
         catch (...)
@@ -1564,19 +1187,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerFileTypesOrderedMap", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -1605,23 +1215,10 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerFileTypesOrderedMap", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>>>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FilePickerFileTypesOrderedMap", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Windows.Foundation.Collections.IVector<String>>>", 0).First();
                 }());
             }
             catch (...)
@@ -1645,19 +1242,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerFileTypesOrderedMap", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1685,19 +1269,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerFileTypesOrderedMap", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1727,19 +1298,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerFileTypesOrderedMap", L"Insert", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(args, 1);
 
@@ -1770,19 +1328,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerFileTypesOrderedMap", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1812,19 +1357,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerFileTypesOrderedMap", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1851,19 +1383,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FilePickerFileTypesOrderedMap", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1908,7 +1427,7 @@ namespace py::cpp::Windows::Storage::Pickers
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>>>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FilePickerFileTypesOrderedMap", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Windows.Foundation.Collections.IVector<String>>>", 0).First();
             }())};
 
             if (!iter)
@@ -2093,23 +1612,10 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerSelectedFilesArray", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::StorageFile>>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FilePickerSelectedFilesArray", "First", "Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile>", 0).First();
                 }());
             }
             catch (...)
@@ -2133,19 +1639,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerSelectedFilesArray", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -2175,19 +1668,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerSelectedFilesArray", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Storage::StorageFile, true>>(args, 1);
 
@@ -2218,19 +1698,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FilePickerSelectedFilesArray", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
                 uint32_t param1{};
 
@@ -2270,19 +1737,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FilePickerSelectedFilesArray", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2327,7 +1781,7 @@ namespace py::cpp::Windows::Storage::Pickers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::StorageFile>>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FilePickerSelectedFilesArray", "First", "Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile>", 0).First();
             }());
         }
         catch (...)
@@ -2557,22 +2011,9 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileSavePicker", L"PickSaveFileAndContinue", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.PickSaveFileAndContinue();
+                    py::require<winrt::Windows::Storage::Pickers::IFileSavePicker2>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FileSavePicker", "PickSaveFileAndContinue", "Windows.Storage.Pickers.IFileSavePicker2", 0).PickSaveFileAndContinue();
                 }
 
                 Py_RETURN_NONE;
@@ -2598,19 +2039,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FileSavePicker", L"PickSaveFileAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2634,19 +2062,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"SuggestedStartLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2670,19 +2085,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"SuggestedStartLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Pickers::PickerLocationId>(arg);
 
             {
@@ -2703,19 +2105,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"SuggestedSaveFile");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2739,19 +2128,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"SuggestedSaveFile");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(arg);
 
             {
@@ -2772,19 +2148,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"SuggestedFileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2808,19 +2171,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"SuggestedFileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2841,19 +2191,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"SettingsIdentifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2877,19 +2214,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"SettingsIdentifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2910,19 +2234,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"DefaultFileExtension");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2946,19 +2257,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"DefaultFileExtension");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2979,19 +2277,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"CommitButtonText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3015,19 +2300,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"CommitButtonText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3048,19 +2320,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"FileTypeChoices");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3078,23 +2337,10 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"ContinuationData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContinuationData();
+                return py::require<winrt::Windows::Storage::Pickers::IFileSavePicker2>(self->obj, py::member_kind::property, "Windows.Storage.Pickers.FileSavePicker", "ContinuationData", "Windows.Storage.Pickers.IFileSavePicker2").ContinuationData();
             }());
         }
         catch (...)
@@ -3108,23 +2354,10 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"EnterpriseId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EnterpriseId();
+                return py::require<winrt::Windows::Storage::Pickers::IFileSavePicker3>(self->obj, py::member_kind::property, "Windows.Storage.Pickers.FileSavePicker", "EnterpriseId", "Windows.Storage.Pickers.IFileSavePicker3").EnterpriseId();
             }());
         }
         catch (...)
@@ -3144,24 +2377,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"EnterpriseId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.EnterpriseId(param0);
+                py::require<winrt::Windows::Storage::Pickers::IFileSavePicker3>(self->obj, py::member_kind::property, "Windows.Storage.Pickers.FileSavePicker", "EnterpriseId", "Windows.Storage.Pickers.IFileSavePicker3").EnterpriseId(param0);
             }
 
             return 0;
@@ -3177,23 +2397,10 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FileSavePicker", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::Storage::Pickers::IFileSavePicker4>(self->obj, py::member_kind::property, "Windows.Storage.Pickers.FileSavePicker", "User", "Windows.Storage.Pickers.IFileSavePicker4").User();
             }());
         }
         catch (...)
@@ -3372,22 +2579,9 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FolderPicker", L"PickFolderAndContinue", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.PickFolderAndContinue();
+                    py::require<winrt::Windows::Storage::Pickers::IFolderPicker2>(self->obj, py::member_kind::method, "Windows.Storage.Pickers.FolderPicker", "PickFolderAndContinue", "Windows.Storage.Pickers.IFolderPicker2", 0).PickFolderAndContinue();
                 }
 
                 Py_RETURN_NONE;
@@ -3413,19 +2607,6 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Pickers.FolderPicker", L"PickSingleFolderAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3449,19 +2630,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"ViewMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3485,19 +2653,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"ViewMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Pickers::PickerViewMode>(arg);
 
             {
@@ -3518,19 +2673,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"SuggestedStartLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3554,19 +2696,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"SuggestedStartLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Pickers::PickerLocationId>(arg);
 
             {
@@ -3587,19 +2716,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"SettingsIdentifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3623,19 +2739,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"SettingsIdentifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3656,19 +2759,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"CommitButtonText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3692,19 +2782,6 @@ namespace py::cpp::Windows::Storage::Pickers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"CommitButtonText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3725,19 +2802,6 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"FileTypeFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3755,23 +2819,10 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"ContinuationData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContinuationData();
+                return py::require<winrt::Windows::Storage::Pickers::IFolderPicker2>(self->obj, py::member_kind::property, "Windows.Storage.Pickers.FolderPicker", "ContinuationData", "Windows.Storage.Pickers.IFolderPicker2").ContinuationData();
             }());
         }
         catch (...)
@@ -3785,23 +2836,10 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Pickers.FolderPicker", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::Storage::Pickers::IFolderPicker3>(self->obj, py::member_kind::property, "Windows.Storage.Pickers.FolderPicker", "User", "Windows.Storage.Pickers.IFolderPicker3").User();
             }());
         }
         catch (...)

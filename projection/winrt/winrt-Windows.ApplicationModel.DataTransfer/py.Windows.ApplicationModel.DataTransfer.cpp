@@ -827,19 +827,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardContentOptions", L"IsRoamable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -863,19 +850,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardContentOptions", L"IsRoamable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -896,19 +870,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardContentOptions", L"IsAllowedInHistory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -932,19 +893,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardContentOptions", L"IsAllowedInHistory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -965,19 +913,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardContentOptions", L"HistoryFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -995,19 +930,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardContentOptions", L"RoamingFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1155,19 +1077,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1185,19 +1094,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1215,19 +1111,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem", L"Timestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1311,19 +1194,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult", L"Items");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1341,19 +1211,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1462,19 +1319,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1502,24 +1346,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetApplicationLink", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetApplicationLink(param0);
+                    py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackage2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackage", "SetApplicationLink", "Windows.ApplicationModel.DataTransfer.IDataPackage2", 1).SetApplicationLink(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1545,19 +1376,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetBitmap", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::RandomAccessStreamReference>(args, 0);
 
                 {
@@ -1588,19 +1406,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetData", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -1632,19 +1437,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetDataProvider", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataProviderHandler>(args, 1);
 
@@ -1676,19 +1468,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetHtmlFormat", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1719,19 +1498,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetRtf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1762,19 +1528,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetStorageItems", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageItem>>(args, 0);
 
                 {
@@ -1794,19 +1547,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetStorageItems", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageItem>>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -1838,19 +1578,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetText", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1881,19 +1608,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetUri", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 {
@@ -1924,24 +1638,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetWebLink", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetWebLink(param0);
+                    py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackage2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackage", "SetWebLink", "Windows.ApplicationModel.DataTransfer.IDataPackage2", 1).SetWebLink(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1963,19 +1664,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"RequestedOperation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1999,19 +1687,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"RequestedOperation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>(arg);
 
             {
@@ -2032,19 +1707,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2062,19 +1724,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"ResourceMap");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2092,19 +1741,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"Destroyed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataPackage, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -2124,19 +1760,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"Destroyed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -2157,19 +1780,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"OperationCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataPackage, winrt::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -2189,19 +1799,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"OperationCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -2222,25 +1819,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"ShareCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataPackage, winrt::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ShareCompleted(param0);
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackage3>(self->obj, py::member_kind::event, "Windows.ApplicationModel.DataTransfer.DataPackage", "ShareCompleted", "Windows.ApplicationModel.DataTransfer.IDataPackage3").ShareCompleted(param0);
             }());
         }
         catch (...)
@@ -2254,24 +1838,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"ShareCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ShareCompleted(param0);
+                py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackage3>(self->obj, py::member_kind::event, "Windows.ApplicationModel.DataTransfer.DataPackage", "ShareCompleted", "Windows.ApplicationModel.DataTransfer.IDataPackage3").ShareCompleted(param0);
             }
 
             Py_RETURN_NONE;
@@ -2287,25 +1858,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"ShareCanceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataPackage, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ShareCanceled(param0);
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackage4>(self->obj, py::member_kind::event, "Windows.ApplicationModel.DataTransfer.DataPackage", "ShareCanceled", "Windows.ApplicationModel.DataTransfer.IDataPackage4").ShareCanceled(param0);
             }());
         }
         catch (...)
@@ -2319,24 +1877,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"ShareCanceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ShareCanceled(param0);
+                py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackage4>(self->obj, py::member_kind::event, "Windows.ApplicationModel.DataTransfer.DataPackage", "ShareCanceled", "Windows.ApplicationModel.DataTransfer.IDataPackage4").ShareCanceled(param0);
             }
 
             Py_RETURN_NONE;
@@ -2441,22 +1986,9 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Clear", "Windows.Foundation.Collections.IMap<String, Object>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -2482,23 +2014,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
                 }());
             }
             catch (...)
@@ -2522,23 +2041,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "GetView", "Windows.Foundation.Collections.IMap<String, Object>", 0).GetView();
                 }());
             }
             catch (...)
@@ -2562,25 +2068,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "HasKey", "Windows.Foundation.Collections.IMap<String, Object>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -2604,26 +2097,13 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Insert", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Insert(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Insert", "Windows.Foundation.Collections.IMap<String, Object>", 2).Insert(param0, param1);
                 }());
             }
             catch (...)
@@ -2647,25 +2127,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -2689,24 +2156,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Remove(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Remove", "Windows.Foundation.Collections.IMap<String, Object>", 1).Remove(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2728,19 +2182,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2764,19 +2205,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2797,19 +2225,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2833,19 +2248,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
@@ -2866,19 +2268,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2902,19 +2291,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2935,19 +2311,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"ApplicationName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2971,19 +2334,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"ApplicationName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3004,19 +2354,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"ApplicationListingUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3040,19 +2377,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"ApplicationListingUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -3073,19 +2397,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"FileTypes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3103,23 +2414,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Square30x30Logo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Square30x30Logo();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Square30x30Logo", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2").Square30x30Logo();
             }());
         }
         catch (...)
@@ -3139,24 +2437,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Square30x30Logo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Square30x30Logo(param0);
+                py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Square30x30Logo", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2").Square30x30Logo(param0);
             }
 
             return 0;
@@ -3172,23 +2457,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"PackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PackageFamilyName();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "PackageFamilyName", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2").PackageFamilyName();
             }());
         }
         catch (...)
@@ -3208,24 +2480,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"PackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PackageFamilyName(param0);
+                py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "PackageFamilyName", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2").PackageFamilyName(param0);
             }
 
             return 0;
@@ -3241,23 +2500,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"LogoBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LogoBackgroundColor();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "LogoBackgroundColor", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2").LogoBackgroundColor();
             }());
         }
         catch (...)
@@ -3277,24 +2523,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"LogoBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LogoBackgroundColor(param0);
+                py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "LogoBackgroundColor", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2").LogoBackgroundColor(param0);
             }
 
             return 0;
@@ -3310,23 +2543,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"ContentSourceWebLink");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentSourceWebLink();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "ContentSourceWebLink", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2").ContentSourceWebLink();
             }());
         }
         catch (...)
@@ -3346,24 +2566,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"ContentSourceWebLink");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContentSourceWebLink(param0);
+                py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "ContentSourceWebLink", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2").ContentSourceWebLink(param0);
             }
 
             return 0;
@@ -3379,23 +2586,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"ContentSourceApplicationLink");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentSourceApplicationLink();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "ContentSourceApplicationLink", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2").ContentSourceApplicationLink();
             }());
         }
         catch (...)
@@ -3415,24 +2609,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"ContentSourceApplicationLink");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContentSourceApplicationLink(param0);
+                py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "ContentSourceApplicationLink", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2").ContentSourceApplicationLink(param0);
             }
 
             return 0;
@@ -3448,23 +2629,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"EnterpriseId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EnterpriseId();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "EnterpriseId", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet3").EnterpriseId();
             }());
         }
         catch (...)
@@ -3484,24 +2652,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"EnterpriseId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.EnterpriseId(param0);
+                py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "EnterpriseId", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet3").EnterpriseId(param0);
             }
 
             return 0;
@@ -3517,23 +2672,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"ContentSourceUserActivityJson");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentSourceUserActivityJson();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "ContentSourceUserActivityJson", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet4").ContentSourceUserActivityJson();
             }());
         }
         catch (...)
@@ -3553,24 +2695,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"ContentSourceUserActivityJson");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContentSourceUserActivityJson(param0);
+                py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "ContentSourceUserActivityJson", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet4").ContentSourceUserActivityJson(param0);
             }
 
             return 0;
@@ -3586,23 +2715,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Size", "Windows.Foundation.Collections.IMap<String, Object>").Size();
             }());
         }
         catch (...)
@@ -3643,7 +2759,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
             }())};
 
             if (!iter)
@@ -3667,7 +2783,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "HasKey", "Windows.Foundation.Collections.IMap<String, Object>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -3682,7 +2798,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Size", "Windows.Foundation.Collections.IMap<String, Object>").Size());
         }
         catch (...)
         {
@@ -3699,7 +2815,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -3709,7 +2825,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -3742,7 +2858,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
-                    did_remove = self->obj.TryRemove(_key);
+                    did_remove = py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).TryRemove(_key);
                 }
                 if (!did_remove)
                 {
@@ -3756,7 +2872,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             auto _value = py::convert_to<winrt::Windows::Foundation::IInspectable>(value);
             {
                 auto _gil = py::release_gil();
-                self->obj.Insert(_key, _value);
+                py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySet", "Lookup", "Windows.Foundation.Collections.IMap<String, Object>", 1).Insert(_key, _value);
             }
 
             return 0;
@@ -3841,23 +2957,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
                 }());
             }
             catch (...)
@@ -3881,25 +2984,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "HasKey", "Windows.Foundation.Collections.IMapView<String, Object>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -3923,25 +3013,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "Lookup", "Windows.Foundation.Collections.IMapView<String, Object>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -3965,25 +3042,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"Split", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1{nullptr};
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Split(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "Split", "Windows.Foundation.Collections.IMapView<String, Object>", 0).Split(param0, param1);
                 }
 
                 py::pyobj_handle out0{ py::convert(param0) };
@@ -4016,19 +3080,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"ApplicationListingUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4046,19 +3097,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"ApplicationName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4076,19 +3114,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4106,19 +3131,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"FileTypes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4136,19 +3148,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4166,19 +3165,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4196,23 +3182,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"ContentSourceApplicationLink");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentSourceApplicationLink();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "ContentSourceApplicationLink", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2").ContentSourceApplicationLink();
             }());
         }
         catch (...)
@@ -4226,23 +3199,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"ContentSourceWebLink");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentSourceWebLink();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "ContentSourceWebLink", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2").ContentSourceWebLink();
             }());
         }
         catch (...)
@@ -4256,23 +3216,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"LogoBackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LogoBackgroundColor();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "LogoBackgroundColor", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2").LogoBackgroundColor();
             }());
         }
         catch (...)
@@ -4286,23 +3233,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"PackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PackageFamilyName();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "PackageFamilyName", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2").PackageFamilyName();
             }());
         }
         catch (...)
@@ -4316,23 +3250,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"Square30x30Logo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Square30x30Logo();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "Square30x30Logo", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2").Square30x30Logo();
             }());
         }
         catch (...)
@@ -4346,23 +3267,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"EnterpriseId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EnterpriseId();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "EnterpriseId", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView3").EnterpriseId();
             }());
         }
         catch (...)
@@ -4376,23 +3284,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"ContentSourceUserActivityJson");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentSourceUserActivityJson();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "ContentSourceUserActivityJson", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView4").ContentSourceUserActivityJson();
             }());
         }
         catch (...)
@@ -4406,23 +3301,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"IsFromRoamingClipboard");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsFromRoamingClipboard();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySetView5>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "IsFromRoamingClipboard", "Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView5").IsFromRoamingClipboard();
             }());
         }
         catch (...)
@@ -4436,23 +3318,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "Size", "Windows.Foundation.Collections.IMapView<String, Object>").Size();
             }());
         }
         catch (...)
@@ -4493,7 +3362,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
             }())};
 
             if (!iter)
@@ -4517,7 +3386,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "HasKey", "Windows.Foundation.Collections.IMapView<String, Object>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -4532,7 +3401,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "Size", "Windows.Foundation.Collections.IMapView<String, Object>").Size());
         }
         catch (...)
         {
@@ -4549,7 +3418,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "Lookup", "Windows.Foundation.Collections.IMapView<String, Object>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -4559,7 +3428,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView", "Lookup", "Windows.Foundation.Collections.IMapView<String, Object>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -4651,19 +3520,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"Contains", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4693,23 +3549,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetApplicationLinkAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetApplicationLinkAsync();
+                    return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackageView2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackageView", "GetApplicationLinkAsync", "Windows.ApplicationModel.DataTransfer.IDataPackageView2", 0).GetApplicationLinkAsync();
                 }());
             }
             catch (...)
@@ -4733,19 +3576,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetBitmapAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4773,19 +3603,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetDataAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4815,19 +3632,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetHtmlFormatAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4855,19 +3659,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetResourceMapAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4895,19 +3686,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetRtfAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4935,19 +3713,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetStorageItemsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4975,19 +3740,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetTextAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5004,19 +3756,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetTextAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -5046,19 +3785,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetUriAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5086,23 +3812,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetWebLinkAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetWebLinkAsync();
+                    return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackageView2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackageView", "GetWebLinkAsync", "Windows.ApplicationModel.DataTransfer.IDataPackageView2", 0).GetWebLinkAsync();
                 }());
             }
             catch (...)
@@ -5126,19 +3839,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"ReportOperationCompleted", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>(args, 0);
 
                 {
@@ -5169,23 +3869,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"RequestAccessAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestAccessAsync();
+                    return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackageView3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackageView", "RequestAccessAsync", "Windows.ApplicationModel.DataTransfer.IDataPackageView3", 0).RequestAccessAsync();
                 }());
             }
             catch (...)
@@ -5198,25 +3885,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"RequestAccessAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestAccessAsync(param0);
+                    return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackageView3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackageView", "RequestAccessAsync", "Windows.ApplicationModel.DataTransfer.IDataPackageView3", 1).RequestAccessAsync(param0);
                 }());
             }
             catch (...)
@@ -5240,24 +3914,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"SetAcceptedFormatId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAcceptedFormatId(param0);
+                    py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackageView4>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackageView", "SetAcceptedFormatId", "Windows.ApplicationModel.DataTransfer.IDataPackageView4", 1).SetAcceptedFormatId(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -5283,23 +3944,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"UnlockAndAssumeEnterpriseIdentity", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.UnlockAndAssumeEnterpriseIdentity();
+                    return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataPackageView3>(self->obj, py::member_kind::method, "Windows.ApplicationModel.DataTransfer.DataPackageView", "UnlockAndAssumeEnterpriseIdentity", "Windows.ApplicationModel.DataTransfer.IDataPackageView3", 0).UnlockAndAssumeEnterpriseIdentity();
                 }());
             }
             catch (...)
@@ -5319,19 +3967,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"AvailableFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5349,19 +3984,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5379,19 +4001,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"RequestedOperation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5494,19 +4103,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataProviderDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -5599,19 +4195,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataProviderRequest", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5639,19 +4222,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataProviderRequest", L"SetData", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 {
@@ -5678,19 +4248,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataProviderRequest", L"Deadline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5708,19 +4265,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataProviderRequest", L"FormatId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5809,19 +4353,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataRequest", L"FailWithDisplayText", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -5852,19 +4383,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataRequest", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5888,19 +4406,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataRequest", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5924,19 +4429,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataRequest", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(arg);
 
             {
@@ -5957,19 +4449,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataRequest", L"Deadline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6058,19 +4537,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataRequestDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -6159,19 +4625,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs", L"Request");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6406,19 +4859,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataTransferManager", L"DataRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager, winrt::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6438,19 +4878,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataTransferManager", L"DataRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6471,19 +4898,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataTransferManager", L"TargetApplicationChosen");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager, winrt::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6503,19 +4917,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataTransferManager", L"TargetApplicationChosen");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6536,25 +4937,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataTransferManager", L"ShareProvidersRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager, winrt::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ShareProvidersRequested(param0);
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataTransferManager2>(self->obj, py::member_kind::event, "Windows.ApplicationModel.DataTransfer.DataTransferManager", "ShareProvidersRequested", "Windows.ApplicationModel.DataTransfer.IDataTransferManager2").ShareProvidersRequested(param0);
             }());
         }
         catch (...)
@@ -6568,24 +4956,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DataTransferManager", L"ShareProvidersRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ShareProvidersRequested(param0);
+                py::require<winrt::Windows::ApplicationModel::DataTransfer::IDataTransferManager2>(self->obj, py::member_kind::event, "Windows.ApplicationModel.DataTransfer.DataTransferManager", "ShareProvidersRequested", "Windows.ApplicationModel.DataTransfer.IDataTransferManager2").ShareProvidersRequested(param0);
             }
 
             Py_RETURN_NONE;
@@ -6829,19 +5204,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs", L"Operation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6859,23 +5221,10 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs", L"AcceptedFormatId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AcceptedFormatId();
+                return py::require<winrt::Windows::ApplicationModel::DataTransfer::IOperationCompletedEventArgs2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs", "AcceptedFormatId", "Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs2").AcceptedFormatId();
             }());
         }
         catch (...)
@@ -6954,19 +5303,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs", L"ShareTarget");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7075,19 +5411,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareProvider", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7111,19 +5434,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareProvider", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
@@ -7144,19 +5454,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareProvider", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7174,19 +5471,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareProvider", L"DisplayIcon");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7204,19 +5488,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareProvider", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7305,19 +5576,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareProviderOperation", L"ReportCompleted", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ReportCompleted();
@@ -7342,19 +5600,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareProviderOperation", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7372,19 +5617,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareProviderOperation", L"Provider");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7472,19 +5704,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7508,19 +5727,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7538,19 +5744,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs", L"Providers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7634,19 +5827,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTargetInfo", L"AppUserModelId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7664,19 +5844,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTargetInfo", L"ShareProvider");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7781,19 +5948,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareUIOptions", L"Theme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7817,19 +5971,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareUIOptions", L"Theme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::ShareUITheme>(arg);
 
             {
@@ -7850,19 +5991,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareUIOptions", L"SelectionRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7886,19 +6014,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareUIOptions", L"SelectionRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect>>(arg);
 
             {
@@ -8491,19 +6606,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs", L"ApplicationName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

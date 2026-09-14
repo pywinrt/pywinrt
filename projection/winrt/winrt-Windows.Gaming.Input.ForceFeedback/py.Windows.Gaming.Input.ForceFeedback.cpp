@@ -53,19 +53,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ConditionForceEffect", L"SetParameters", 7);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(7);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -76,7 +63,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetParameters(param0, param1, param2, param3, param4, param5, param6);
+                    py::require<winrt::Windows::Gaming::Input::ForceFeedback::IConditionForceEffect>(self->obj, py::member_kind::method, "Windows.Gaming.Input.ForceFeedback.ConditionForceEffect", "SetParameters", "Windows.Gaming.Input.ForceFeedback.IConditionForceEffect", 7).SetParameters(param0, param1, param2, param3, param4, param5, param6);
                 }
 
                 Py_RETURN_NONE;
@@ -102,19 +89,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ConditionForceEffect", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -143,19 +117,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ConditionForceEffect", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -180,23 +141,10 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ConditionForceEffect", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::Gaming::Input::ForceFeedback::IConditionForceEffect>(self->obj, py::member_kind::property, "Windows.Gaming.Input.ForceFeedback.ConditionForceEffect", "Kind", "Windows.Gaming.Input.ForceFeedback.IConditionForceEffect").Kind();
             }());
         }
         catch (...)
@@ -210,19 +158,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ConditionForceEffect", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -246,19 +181,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ConditionForceEffect", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -279,19 +201,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ConditionForceEffect", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -404,25 +313,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ConstantForceEffect", L"SetParameters", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetParameters(param0, param1);
+                    py::require<winrt::Windows::Gaming::Input::ForceFeedback::IConstantForceEffect>(self->obj, py::member_kind::method, "Windows.Gaming.Input.ForceFeedback.ConstantForceEffect", "SetParameters", "Windows.Gaming.Input.ForceFeedback.IConstantForceEffect", 2).SetParameters(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -448,19 +344,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ConstantForceEffect", L"SetParametersWithEnvelope", 9);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(9);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -473,7 +356,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+                    py::require<winrt::Windows::Gaming::Input::ForceFeedback::IConstantForceEffect>(self->obj, py::member_kind::method, "Windows.Gaming.Input.ForceFeedback.ConstantForceEffect", "SetParametersWithEnvelope", "Windows.Gaming.Input.ForceFeedback.IConstantForceEffect", 9).SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8);
                 }
 
                 Py_RETURN_NONE;
@@ -499,19 +382,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ConstantForceEffect", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -540,19 +410,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ConstantForceEffect", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -577,19 +434,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ConstantForceEffect", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -613,19 +457,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ConstantForceEffect", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -646,19 +477,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ConstantForceEffect", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -749,19 +567,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"LoadEffectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>(args, 0);
 
                 return py::convert([&]()
@@ -791,19 +596,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"PauseAllEffects", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.PauseAllEffects();
@@ -832,19 +624,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"ResumeAllEffects", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ResumeAllEffects();
@@ -873,19 +652,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"StopAllEffects", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.StopAllEffects();
@@ -914,19 +680,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"TryDisableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -954,19 +707,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"TryEnableAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -994,19 +734,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"TryResetAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1034,19 +761,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"TryUnloadEffectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>(args, 0);
 
                 return py::convert([&]()
@@ -1072,19 +786,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"MasterGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1108,19 +809,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"MasterGain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -1141,19 +829,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"AreEffectsPaused");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1171,19 +846,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1201,19 +863,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor", L"SupportedAxes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1334,19 +983,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", L"SetParameters", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -1355,7 +991,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetParameters(param0, param1, param2, param3, param4);
+                    py::require<winrt::Windows::Gaming::Input::ForceFeedback::IPeriodicForceEffect>(self->obj, py::member_kind::method, "Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", "SetParameters", "Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect", 5).SetParameters(param0, param1, param2, param3, param4);
                 }
 
                 Py_RETURN_NONE;
@@ -1381,19 +1017,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", L"SetParametersWithEnvelope", 12);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(12);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -1409,7 +1032,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11);
+                    py::require<winrt::Windows::Gaming::Input::ForceFeedback::IPeriodicForceEffect>(self->obj, py::member_kind::method, "Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", "SetParametersWithEnvelope", "Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect", 12).SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11);
                 }
 
                 Py_RETURN_NONE;
@@ -1435,19 +1058,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -1476,19 +1086,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -1513,19 +1110,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1549,19 +1133,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -1582,19 +1153,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1612,23 +1170,10 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::Gaming::Input::ForceFeedback::IPeriodicForceEffect>(self->obj, py::member_kind::property, "Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect", "Kind", "Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect").Kind();
             }());
         }
         catch (...)
@@ -1738,26 +1283,13 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.RampForceEffect", L"SetParameters", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetParameters(param0, param1, param2);
+                    py::require<winrt::Windows::Gaming::Input::ForceFeedback::IRampForceEffect>(self->obj, py::member_kind::method, "Windows.Gaming.Input.ForceFeedback.RampForceEffect", "SetParameters", "Windows.Gaming.Input.ForceFeedback.IRampForceEffect", 3).SetParameters(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -1783,19 +1315,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.RampForceEffect", L"SetParametersWithEnvelope", 10);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(10);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -1809,7 +1328,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
+                    py::require<winrt::Windows::Gaming::Input::ForceFeedback::IRampForceEffect>(self->obj, py::member_kind::method, "Windows.Gaming.Input.ForceFeedback.RampForceEffect", "SetParametersWithEnvelope", "Windows.Gaming.Input.ForceFeedback.IRampForceEffect", 10).SetParametersWithEnvelope(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
                 }
 
                 Py_RETURN_NONE;
@@ -1835,19 +1354,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.RampForceEffect", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -1876,19 +1382,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.RampForceEffect", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -1913,19 +1406,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.RampForceEffect", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1949,19 +1429,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.RampForceEffect", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -1982,19 +1449,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.RampForceEffect", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2087,19 +1541,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -2128,19 +1569,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -2165,19 +1593,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2201,19 +1616,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect", L"Gain");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -2234,19 +1636,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

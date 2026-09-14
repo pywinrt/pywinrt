@@ -29,19 +29,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AcousticEchoCancellationConfiguration", L"SetEchoCancellationRenderEndpoint", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -136,19 +123,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AudioCaptureEffectsManager", L"GetAudioCaptureEffects", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -172,19 +146,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Effects.AudioCaptureEffectsManager", L"AudioCaptureEffectsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Effects::AudioCaptureEffectsManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -204,19 +165,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Effects.AudioCaptureEffectsManager", L"AudioCaptureEffectsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -307,24 +255,11 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AudioEffect", L"SetState", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::AudioEffectState>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetState(param0);
+                    py::require<winrt::Windows::Media::Effects::IAudioEffect2>(self->obj, py::member_kind::method, "Windows.Media.Effects.AudioEffect", "SetState", "Windows.Media.Effects.IAudioEffect2", 1).SetState(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -346,19 +281,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioEffect", L"AudioEffectType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -376,23 +298,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioEffect", L"AcousticEchoCancellationConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AcousticEchoCancellationConfiguration();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffect2>(self->obj, py::member_kind::property, "Windows.Media.Effects.AudioEffect", "AcousticEchoCancellationConfiguration", "Windows.Media.Effects.IAudioEffect2").AcousticEchoCancellationConfiguration();
             }());
         }
         catch (...)
@@ -406,23 +315,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioEffect", L"CanSetState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanSetState();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffect2>(self->obj, py::member_kind::property, "Windows.Media.Effects.AudioEffect", "CanSetState", "Windows.Media.Effects.IAudioEffect2").CanSetState();
             }());
         }
         catch (...)
@@ -436,23 +332,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioEffect", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.State();
+                return py::require<winrt::Windows::Media::Effects::IAudioEffect2>(self->obj, py::member_kind::property, "Windows.Media.Effects.AudioEffect", "State", "Windows.Media.Effects.IAudioEffect2").State();
             }());
         }
         catch (...)
@@ -574,19 +457,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -604,19 +474,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -906,19 +763,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AudioRenderEffectsManager", L"GetAudioRenderEffects", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -946,22 +790,9 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AudioRenderEffectsManager", L"ShowSettingsUI", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.ShowSettingsUI();
+                    py::require<winrt::Windows::Media::Effects::IAudioRenderEffectsManager2>(self->obj, py::member_kind::method, "Windows.Media.Effects.AudioRenderEffectsManager", "ShowSettingsUI", "Windows.Media.Effects.IAudioRenderEffectsManager2", 0).ShowSettingsUI();
                 }
 
                 Py_RETURN_NONE;
@@ -983,23 +814,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioRenderEffectsManager", L"EffectsProviderSettingsLabel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectsProviderSettingsLabel();
+                return py::require<winrt::Windows::Media::Effects::IAudioRenderEffectsManager2>(self->obj, py::member_kind::property, "Windows.Media.Effects.AudioRenderEffectsManager", "EffectsProviderSettingsLabel", "Windows.Media.Effects.IAudioRenderEffectsManager2").EffectsProviderSettingsLabel();
             }());
         }
         catch (...)
@@ -1013,23 +831,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioRenderEffectsManager", L"EffectsProviderThumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EffectsProviderThumbnail();
+                return py::require<winrt::Windows::Media::Effects::IAudioRenderEffectsManager2>(self->obj, py::member_kind::property, "Windows.Media.Effects.AudioRenderEffectsManager", "EffectsProviderThumbnail", "Windows.Media.Effects.IAudioRenderEffectsManager2").EffectsProviderThumbnail();
             }());
         }
         catch (...)
@@ -1043,19 +848,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Effects.AudioRenderEffectsManager", L"AudioRenderEffectsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Effects::AudioRenderEffectsManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -1075,19 +867,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Effects.AudioRenderEffectsManager", L"AudioRenderEffectsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1181,19 +960,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.CompositeVideoFrameContext", L"GetOverlayForSurface", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
 
                 return py::convert([&]()
@@ -1219,19 +985,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.CompositeVideoFrameContext", L"BackgroundFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1249,19 +1002,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.CompositeVideoFrameContext", L"OutputFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1279,19 +1019,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.CompositeVideoFrameContext", L"SurfacesToOverlay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1376,19 +1103,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.ProcessAudioFrameContext", L"InputFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1406,19 +1120,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.ProcessAudioFrameContext", L"OutputFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1501,19 +1202,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.ProcessVideoFrameContext", L"InputFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1531,19 +1219,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.ProcessVideoFrameContext", L"OutputFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1666,19 +1341,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoCompositorDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1696,19 +1358,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoCompositorDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1831,19 +1480,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1861,19 +1497,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1978,19 +1601,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2008,19 +1618,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2038,23 +1635,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"Rotation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Rotation();
+                return py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "Rotation", "Windows.Media.Effects.IVideoTransformEffectDefinition").Rotation();
             }());
         }
         catch (...)
@@ -2074,24 +1658,11 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"Rotation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaRotation>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Rotation(param0);
+                py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "Rotation", "Windows.Media.Effects.IVideoTransformEffectDefinition").Rotation(param0);
             }
 
             return 0;
@@ -2107,23 +1678,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"ProcessingAlgorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProcessingAlgorithm();
+                return py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "ProcessingAlgorithm", "Windows.Media.Effects.IVideoTransformEffectDefinition").ProcessingAlgorithm();
             }());
         }
         catch (...)
@@ -2143,24 +1701,11 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"ProcessingAlgorithm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ProcessingAlgorithm(param0);
+                py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "ProcessingAlgorithm", "Windows.Media.Effects.IVideoTransformEffectDefinition").ProcessingAlgorithm(param0);
             }
 
             return 0;
@@ -2176,23 +1721,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"PaddingColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PaddingColor();
+                return py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "PaddingColor", "Windows.Media.Effects.IVideoTransformEffectDefinition").PaddingColor();
             }());
         }
         catch (...)
@@ -2212,24 +1744,11 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"PaddingColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PaddingColor(param0);
+                py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "PaddingColor", "Windows.Media.Effects.IVideoTransformEffectDefinition").PaddingColor(param0);
             }
 
             return 0;
@@ -2245,23 +1764,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"OutputSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutputSize();
+                return py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "OutputSize", "Windows.Media.Effects.IVideoTransformEffectDefinition").OutputSize();
             }());
         }
         catch (...)
@@ -2281,24 +1787,11 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"OutputSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutputSize(param0);
+                py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "OutputSize", "Windows.Media.Effects.IVideoTransformEffectDefinition").OutputSize(param0);
             }
 
             return 0;
@@ -2314,23 +1807,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"Mirror");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Mirror();
+                return py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "Mirror", "Windows.Media.Effects.IVideoTransformEffectDefinition").Mirror();
             }());
         }
         catch (...)
@@ -2350,24 +1830,11 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"Mirror");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaMirroringOptions>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Mirror(param0);
+                py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "Mirror", "Windows.Media.Effects.IVideoTransformEffectDefinition").Mirror(param0);
             }
 
             return 0;
@@ -2383,23 +1850,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"CropRectangle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CropRectangle();
+                return py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "CropRectangle", "Windows.Media.Effects.IVideoTransformEffectDefinition").CropRectangle();
             }());
         }
         catch (...)
@@ -2419,24 +1873,11 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"CropRectangle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CropRectangle(param0);
+                py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "CropRectangle", "Windows.Media.Effects.IVideoTransformEffectDefinition").CropRectangle(param0);
             }
 
             return 0;
@@ -2452,23 +1893,10 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformEffectDefinition", L"SphericalProjection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SphericalProjection();
+                return py::require<winrt::Windows::Media::Effects::IVideoTransformEffectDefinition2>(self->obj, py::member_kind::property, "Windows.Media.Effects.VideoTransformEffectDefinition", "SphericalProjection", "Windows.Media.Effects.IVideoTransformEffectDefinition2").SphericalProjection();
             }());
         }
         catch (...)
@@ -2554,19 +1982,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformSphericalProjection", L"ViewOrientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2590,19 +2005,6 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformSphericalProjection", L"ViewOrientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
             {
@@ -2623,19 +2025,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformSphericalProjection", L"ProjectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2659,19 +2048,6 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformSphericalProjection", L"ProjectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::SphericalVideoProjectionMode>(arg);
 
             {
@@ -2692,19 +2068,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformSphericalProjection", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2728,19 +2091,6 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformSphericalProjection", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2761,19 +2111,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformSphericalProjection", L"HorizontalFieldOfViewInDegrees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2797,19 +2134,6 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformSphericalProjection", L"HorizontalFieldOfViewInDegrees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -2830,19 +2154,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformSphericalProjection", L"FrameFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2866,19 +2177,6 @@ namespace py::cpp::Windows::Media::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.VideoTransformSphericalProjection", L"FrameFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::SphericalVideoFrameFormat>(arg);
 
             {
@@ -2969,19 +2267,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IAudioEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2999,19 +2284,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IAudioEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3210,19 +2482,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IBasicAudioEffect", L"Close", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::MediaEffectClosedReason>(args, 0);
 
                 {
@@ -3253,19 +2512,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IBasicAudioEffect", L"DiscardQueuedFrames", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.DiscardQueuedFrames();
@@ -3294,19 +2540,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IBasicAudioEffect", L"ProcessFrame", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::ProcessAudioFrameContext>(args, 0);
 
                 {
@@ -3337,19 +2570,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IBasicAudioEffect", L"SetEncodingProperties", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
                 {
@@ -3380,24 +2600,11 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.IMediaExtension", L"SetProperties", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetProperties(param0);
+                    py::require<winrt::Windows::Media::IMediaExtension>(self->obj, py::member_kind::method, "Windows.Media.IMediaExtension", "SetProperties", "Windows.Media.IMediaExtension", 1).SetProperties(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3419,19 +2626,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IBasicAudioEffect", L"SupportedEncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3449,19 +2643,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IBasicAudioEffect", L"UseInputFrameForOutput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3809,19 +2990,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IBasicVideoEffect", L"Close", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::MediaEffectClosedReason>(args, 0);
 
                 {
@@ -3852,19 +3020,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IBasicVideoEffect", L"DiscardQueuedFrames", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.DiscardQueuedFrames();
@@ -3893,19 +3048,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IBasicVideoEffect", L"ProcessFrame", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::ProcessVideoFrameContext>(args, 0);
 
                 {
@@ -3936,19 +3078,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IBasicVideoEffect", L"SetEncodingProperties", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 1);
 
@@ -3980,24 +3109,11 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.IMediaExtension", L"SetProperties", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetProperties(param0);
+                    py::require<winrt::Windows::Media::IMediaExtension>(self->obj, py::member_kind::method, "Windows.Media.IMediaExtension", "SetProperties", "Windows.Media.IMediaExtension", 1).SetProperties(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4019,19 +3135,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IBasicVideoEffect", L"IsReadOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4049,19 +3152,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IBasicVideoEffect", L"SupportedEncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4079,19 +3169,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IBasicVideoEffect", L"SupportedMemoryTypes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4109,19 +3186,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IBasicVideoEffect", L"TimeIndependent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4523,19 +3587,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IVideoCompositor", L"Close", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::MediaEffectClosedReason>(args, 0);
 
                 {
@@ -4566,19 +3617,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IVideoCompositor", L"CompositeFrame", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::CompositeVideoFrameContext>(args, 0);
 
                 {
@@ -4609,19 +3647,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IVideoCompositor", L"DiscardQueuedFrames", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.DiscardQueuedFrames();
@@ -4650,19 +3675,6 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.IVideoCompositor", L"SetEncodingProperties", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 1);
 
@@ -4694,24 +3706,11 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.IMediaExtension", L"SetProperties", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetProperties(param0);
+                    py::require<winrt::Windows::Media::IMediaExtension>(self->obj, py::member_kind::method, "Windows.Media.IMediaExtension", "SetProperties", "Windows.Media.IMediaExtension", 1).SetProperties(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4733,19 +3732,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IVideoCompositor", L"TimeIndependent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5080,19 +4066,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IVideoCompositorDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5110,19 +4083,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IVideoCompositorDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5317,19 +4277,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IVideoEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5347,19 +4294,6 @@ namespace py::cpp::Windows::Media::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.IVideoEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

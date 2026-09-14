@@ -400,6 +400,7 @@ namespace py::cpp::_winrt
         .array_assign = &py::cpp::_winrt::Array_Assign,
         .await_async = py::await_async,
         .convert_to_ibuffer = py::convert_to_ibuffer,
+        .set_member_not_available_error = py::set_member_not_available_error,
     };
 
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept

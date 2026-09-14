@@ -591,6 +591,35 @@ namespace py
 
     using pytype_handle = winrt::handle_type<pytype_ptr_traits>;
 
+    /**
+     * The kind of member a Python attribute is projected from.
+     */
+    enum class member_kind
+    {
+        method,
+        property,
+        event,
+    };
+
+    /**
+     * Thrown when an object does not implement the interface that declares the
+     * member that is being called.
+     *
+     * The names point at string literals in the generated code, so they outlive
+     * the exception without having to be copied.
+     */
+    struct member_not_available
+    {
+        member_kind kind;
+        uint32_t arg_count;
+        /// Metadata name of the type that declares the member or @c nullptr for
+        /// a parameterized interface, which has no name in the metadata.
+        const char* type_name;
+        const char* member_name;
+        /// Metadata name of the interface that was queried for.
+        const char* interface_name;
+    };
+
     // Runtime API shared with other modules
 
     /** Unique identifier for validating runtime API struct pointer. */
@@ -610,7 +639,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that adds new
      * APIs but otherwise doesn't break binary compatibility.
      */
-    const uint16_t runtime_abi_version_minor = 2;
+    const uint16_t runtime_abi_version_minor = 3;
 
     PyTypeObject* register_python_type(
         PyObject* module,
@@ -630,6 +659,7 @@ namespace py
     PyTypeObject* get_object_type() noexcept;
     PyObject* await_async(PyObject*) noexcept;
     winrt::Windows::Storage::Streams::IBuffer convert_to_ibuffer(PyObject* obj);
+    void set_member_not_available_error(member_not_available const& info) noexcept;
 
     struct runtime_api
     {
@@ -651,6 +681,7 @@ namespace py
         decltype(cpp::_winrt::Array_Assign)* array_assign;
         decltype(await_async)* await_async;
         decltype(convert_to_ibuffer)* convert_to_ibuffer;
+        decltype(set_member_not_available_error)* set_member_not_available_error;
     };
 
 #ifndef PYWINRT_RUNTIME_MODULE
@@ -738,6 +769,13 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->wrap_mapping_iter);
         return (*PyWinRT_API->wrap_mapping_iter)(iter);
+    }
+
+    inline void set_member_not_available_error(
+        member_not_available const& info) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->set_member_not_available_error);
+        (*PyWinRT_API->set_member_not_available_error)(info);
     }
 
     inline bool is_buffer_compatible(
@@ -852,6 +890,48 @@ namespace py
         PyErr_SetString(PyExc_TypeError, "keyword arguments not supported");
     }
 
+    [[noreturn]] inline __declspec(noinline) void throw_member_not_available(
+        member_kind kind,
+        const char* type_name,
+        const char* member_name,
+        const char* interface_name,
+        uint32_t arg_count)
+    {
+        throw member_not_available{
+            kind, arg_count, type_name, member_name, interface_name};
+    }
+
+    /**
+     * Queries @p obj for the interface @p I that declares a member.
+     *
+     * C++/WinRT reaches a member of a non-default interface through an implicit
+     * conversion that is @c noexcept and yields a *null* interface when the
+     * object does not implement it, which the call then dereferences. Asking for
+     * the interface here costs the same query and turns that crash into a Python
+     * exception.
+     *
+     * @throws member_not_available if @p obj does not implement @p I.
+     */
+    template<typename I, typename T>
+    [[nodiscard]] I require(
+        T const& obj,
+        member_kind kind,
+        const char* type_name,
+        const char* member_name,
+        const char* interface_name,
+        uint32_t arg_count = 0)
+    {
+        auto iface = obj.template try_as<I>();
+
+        if (!iface)
+        {
+            throw_member_not_available(
+                kind, type_name, member_name, interface_name, arg_count);
+        }
+
+        return iface;
+    }
+
     inline __declspec(noinline) void to_PyErr() noexcept
     {
         if (PyErr_Occurred())
@@ -864,6 +944,10 @@ namespace py
         try
         {
             throw;
+        }
+        catch (member_not_available const& e)
+        {
+            set_member_not_available_error(e);
         }
         catch (winrt::hresult_error const& e)
         {

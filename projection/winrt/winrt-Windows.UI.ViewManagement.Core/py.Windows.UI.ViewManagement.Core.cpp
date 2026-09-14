@@ -107,19 +107,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreFrameworkInputView", L"OcclusionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView, winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -139,19 +126,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreFrameworkInputView", L"OcclusionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -172,19 +146,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreFrameworkInputView", L"PrimaryViewAnimationStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView, winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -204,19 +165,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreFrameworkInputView", L"PrimaryViewAnimationStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -327,19 +275,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreFrameworkInputViewAnimationStartingEventArgs", L"AnimationDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -357,19 +292,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreFrameworkInputViewAnimationStartingEventArgs", L"FrameworkAnimationRecommended");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -387,19 +309,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreFrameworkInputViewAnimationStartingEventArgs", L"Occlusions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -483,19 +392,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreFrameworkInputViewOcclusionsChangedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -513,19 +409,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreFrameworkInputViewOcclusionsChangedEventArgs", L"Occlusions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -612,19 +495,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"GetCoreInputViewOcclusions", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -734,25 +604,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"IsKindSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsKindSupported(param0);
+                    return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView5>(self->obj, py::member_kind::method, "Windows.UI.ViewManagement.Core.CoreInputView", "IsKindSupported", "Windows.UI.ViewManagement.Core.ICoreInputView5", 1).IsKindSupported(param0);
                 }());
             }
             catch (...)
@@ -776,23 +633,10 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"TryHide", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryHide();
+                    return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView3>(self->obj, py::member_kind::method, "Windows.UI.ViewManagement.Core.CoreInputView", "TryHide", "Windows.UI.ViewManagement.Core.ICoreInputView3", 0).TryHide();
                 }());
             }
             catch (...)
@@ -816,19 +660,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"TryHidePrimaryView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -856,23 +687,10 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"TryShow", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryShow();
+                    return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView3>(self->obj, py::member_kind::method, "Windows.UI.ViewManagement.Core.CoreInputView", "TryShow", "Windows.UI.ViewManagement.Core.ICoreInputView3", 0).TryShow();
                 }());
             }
             catch (...)
@@ -885,25 +703,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"TryShow", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryShow(param0);
+                    return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView3>(self->obj, py::member_kind::method, "Windows.UI.ViewManagement.Core.CoreInputView", "TryShow", "Windows.UI.ViewManagement.Core.ICoreInputView3", 1).TryShow(param0);
                 }());
             }
             catch (...)
@@ -927,19 +732,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"TryShowPrimaryView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -967,26 +759,13 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"TryTransferXYFocusToPrimaryView", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryTransferXYFocusToPrimaryView(param0, param1);
+                    return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView2>(self->obj, py::member_kind::method, "Windows.UI.ViewManagement.Core.CoreInputView", "TryTransferXYFocusToPrimaryView", "Windows.UI.ViewManagement.Core.ICoreInputView2", 2).TryTransferXYFocusToPrimaryView(param0, param1);
                 }());
             }
             catch (...)
@@ -1006,19 +785,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"OcclusionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreInputView, winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1038,19 +804,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"OcclusionsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1071,25 +824,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"XYFocusTransferredToPrimaryView");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreInputView, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.XYFocusTransferredToPrimaryView(param0);
+                return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView2>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "XYFocusTransferredToPrimaryView", "Windows.UI.ViewManagement.Core.ICoreInputView2").XYFocusTransferredToPrimaryView(param0);
             }());
         }
         catch (...)
@@ -1103,24 +843,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"XYFocusTransferredToPrimaryView");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.XYFocusTransferredToPrimaryView(param0);
+                py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView2>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "XYFocusTransferredToPrimaryView", "Windows.UI.ViewManagement.Core.ICoreInputView2").XYFocusTransferredToPrimaryView(param0);
             }
 
             Py_RETURN_NONE;
@@ -1136,25 +863,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"XYFocusTransferringFromPrimaryView");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreInputView, winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.XYFocusTransferringFromPrimaryView(param0);
+                return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView2>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "XYFocusTransferringFromPrimaryView", "Windows.UI.ViewManagement.Core.ICoreInputView2").XYFocusTransferringFromPrimaryView(param0);
             }());
         }
         catch (...)
@@ -1168,24 +882,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"XYFocusTransferringFromPrimaryView");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.XYFocusTransferringFromPrimaryView(param0);
+                py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView2>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "XYFocusTransferringFromPrimaryView", "Windows.UI.ViewManagement.Core.ICoreInputView2").XYFocusTransferringFromPrimaryView(param0);
             }
 
             Py_RETURN_NONE;
@@ -1201,25 +902,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"PrimaryViewHiding");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreInputView, winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PrimaryViewHiding(param0);
+                return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView4>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "PrimaryViewHiding", "Windows.UI.ViewManagement.Core.ICoreInputView4").PrimaryViewHiding(param0);
             }());
         }
         catch (...)
@@ -1233,24 +921,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"PrimaryViewHiding");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PrimaryViewHiding(param0);
+                py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView4>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "PrimaryViewHiding", "Windows.UI.ViewManagement.Core.ICoreInputView4").PrimaryViewHiding(param0);
             }
 
             Py_RETURN_NONE;
@@ -1266,25 +941,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"PrimaryViewShowing");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreInputView, winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PrimaryViewShowing(param0);
+                return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView4>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "PrimaryViewShowing", "Windows.UI.ViewManagement.Core.ICoreInputView4").PrimaryViewShowing(param0);
             }());
         }
         catch (...)
@@ -1298,24 +960,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"PrimaryViewShowing");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PrimaryViewShowing(param0);
+                py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView4>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "PrimaryViewShowing", "Windows.UI.ViewManagement.Core.ICoreInputView4").PrimaryViewShowing(param0);
             }
 
             Py_RETURN_NONE;
@@ -1331,25 +980,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"PrimaryViewAnimationStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreInputView, winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PrimaryViewAnimationStarting(param0);
+                return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView5>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "PrimaryViewAnimationStarting", "Windows.UI.ViewManagement.Core.ICoreInputView5").PrimaryViewAnimationStarting(param0);
             }());
         }
         catch (...)
@@ -1363,24 +999,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"PrimaryViewAnimationStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PrimaryViewAnimationStarting(param0);
+                py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView5>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "PrimaryViewAnimationStarting", "Windows.UI.ViewManagement.Core.ICoreInputView5").PrimaryViewAnimationStarting(param0);
             }
 
             Py_RETURN_NONE;
@@ -1396,25 +1019,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"SupportedKindsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreInputView, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedKindsChanged(param0);
+                return py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView5>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "SupportedKindsChanged", "Windows.UI.ViewManagement.Core.ICoreInputView5").SupportedKindsChanged(param0);
             }());
         }
         catch (...)
@@ -1428,24 +1038,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"SupportedKindsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SupportedKindsChanged(param0);
+                py::require<winrt::Windows::UI::ViewManagement::Core::ICoreInputView5>(self->obj, py::member_kind::event, "Windows.UI.ViewManagement.Core.CoreInputView", "SupportedKindsChanged", "Windows.UI.ViewManagement.Core.ICoreInputView5").SupportedKindsChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -1568,19 +1165,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1604,19 +1188,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1637,19 +1208,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs", L"AnimationDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1667,19 +1225,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs", L"Occlusions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1767,19 +1312,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewHidingEventArgs", L"TryCancel", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1867,19 +1399,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewOcclusion", L"OccludingRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1897,19 +1416,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewOcclusion", L"OcclusionKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1992,19 +1498,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2028,19 +1521,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2061,19 +1541,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs", L"Occlusions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2160,19 +1627,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewShowingEventArgs", L"TryCancel", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2260,19 +1714,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs", L"TransferHandled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2296,19 +1737,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs", L"TransferHandled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2329,19 +1757,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs", L"KeepPrimaryViewVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2365,19 +1780,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs", L"KeepPrimaryViewVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2398,19 +1800,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs", L"Direction");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2428,19 +1817,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs", L"Origin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2569,19 +1945,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.UISettingsController", L"SetAdvancedEffectsEnabled", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -2612,19 +1975,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.UISettingsController", L"SetAnimationsEnabled", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -2655,19 +2005,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.UISettingsController", L"SetAutoHideScrollBars", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -2698,19 +2035,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.UISettingsController", L"SetMessageDuration", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -2741,19 +2065,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.UISettingsController", L"SetTextScaleFactor", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {

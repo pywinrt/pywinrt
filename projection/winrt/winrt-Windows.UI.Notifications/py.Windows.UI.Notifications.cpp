@@ -47,23 +47,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.AdaptiveNotificationText", L"Hints");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Hints();
+                return py::require<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>(self->obj, py::member_kind::property, "Windows.UI.Notifications.AdaptiveNotificationText", "Hints", "Windows.UI.Notifications.IAdaptiveNotificationContent").Hints();
             }());
         }
         catch (...)
@@ -77,23 +64,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.AdaptiveNotificationText", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>(self->obj, py::member_kind::property, "Windows.UI.Notifications.AdaptiveNotificationText", "Kind", "Windows.UI.Notifications.IAdaptiveNotificationContent").Kind();
             }());
         }
         catch (...)
@@ -107,19 +81,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.AdaptiveNotificationText", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -143,19 +104,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.AdaptiveNotificationText", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -176,19 +124,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.AdaptiveNotificationText", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -212,19 +147,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.AdaptiveNotificationText", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -336,19 +258,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.BadgeNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -372,19 +281,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.BadgeNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -405,19 +301,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.BadgeNotification", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -754,19 +637,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.BadgeUpdateManagerForUser", L"CreateBadgeUpdaterForApplication", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -783,19 +653,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.BadgeUpdateManagerForUser", L"CreateBadgeUpdaterForApplication", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -825,19 +682,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.BadgeUpdateManagerForUser", L"CreateBadgeUpdaterForSecondaryTile", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -863,19 +707,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.BadgeUpdateManagerForUser", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -963,19 +794,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.BadgeUpdater", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -1004,19 +822,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.BadgeUpdater", L"StartPeriodicUpdate", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence>(args, 1);
 
@@ -1037,19 +842,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.BadgeUpdater", L"StartPeriodicUpdate", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence>(args, 2);
@@ -1082,19 +874,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.BadgeUpdater", L"StopPeriodicUpdate", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.StopPeriodicUpdate();
@@ -1123,19 +902,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.BadgeUpdater", L"Update", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::BadgeNotification>(args, 0);
 
                 {
@@ -2204,19 +1970,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.Notification", L"Visual");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2240,19 +1993,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.Notification", L"Visual");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::NotificationVisual>(arg);
 
             {
@@ -2273,19 +2013,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.Notification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2309,19 +2036,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.Notification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -2411,19 +2125,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.NotificationBinding", L"GetTextElements", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2447,19 +2148,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationBinding", L"Template");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2483,19 +2171,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationBinding", L"Template");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2516,19 +2191,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationBinding", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2552,19 +2214,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationBinding", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2585,19 +2234,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationBinding", L"Hints");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2735,19 +2371,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationData", L"SequenceNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2771,19 +2394,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationData", L"SequenceNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -2804,19 +2414,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationData", L"Values");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2903,19 +2500,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.NotificationVisual", L"GetBinding", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2941,19 +2525,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationVisual", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2977,19 +2548,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationVisual", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3010,19 +2568,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.NotificationVisual", L"Bindings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3131,19 +2676,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledTileNotification", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3167,19 +2699,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledTileNotification", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3200,19 +2719,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledTileNotification", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3236,19 +2742,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledTileNotification", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3269,19 +2762,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledTileNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3305,19 +2785,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledTileNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -3338,19 +2805,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledTileNotification", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3368,19 +2822,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledTileNotification", L"DeliveryTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3509,19 +2950,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3545,19 +2973,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3578,19 +2993,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3608,19 +3010,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"DeliveryTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3638,19 +3027,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"MaximumSnoozeCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3668,19 +3044,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"SnoozeInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3698,23 +3061,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Tag();
+                return py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "Tag", "Windows.UI.Notifications.IScheduledToastNotification2").Tag();
             }());
         }
         catch (...)
@@ -3734,24 +3084,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Tag(param0);
+                py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "Tag", "Windows.UI.Notifications.IScheduledToastNotification2").Tag(param0);
             }
 
             return 0;
@@ -3767,23 +3104,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"SuppressPopup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SuppressPopup();
+                return py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "SuppressPopup", "Windows.UI.Notifications.IScheduledToastNotification2").SuppressPopup();
             }());
         }
         catch (...)
@@ -3803,24 +3127,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"SuppressPopup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SuppressPopup(param0);
+                py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "SuppressPopup", "Windows.UI.Notifications.IScheduledToastNotification2").SuppressPopup(param0);
             }
 
             return 0;
@@ -3836,23 +3147,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"Group");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Group();
+                return py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "Group", "Windows.UI.Notifications.IScheduledToastNotification2").Group();
             }());
         }
         catch (...)
@@ -3872,24 +3170,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"Group");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Group(param0);
+                py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "Group", "Windows.UI.Notifications.IScheduledToastNotification2").Group(param0);
             }
 
             return 0;
@@ -3905,23 +3190,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RemoteId();
+                return py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification3>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "RemoteId", "Windows.UI.Notifications.IScheduledToastNotification3").RemoteId();
             }());
         }
         catch (...)
@@ -3941,24 +3213,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RemoteId(param0);
+                py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification3>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "RemoteId", "Windows.UI.Notifications.IScheduledToastNotification3").RemoteId(param0);
             }
 
             return 0;
@@ -3974,23 +3233,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"NotificationMirroring");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NotificationMirroring();
+                return py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification3>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "NotificationMirroring", "Windows.UI.Notifications.IScheduledToastNotification3").NotificationMirroring();
             }());
         }
         catch (...)
@@ -4010,24 +3256,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"NotificationMirroring");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::NotificationMirroring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NotificationMirroring(param0);
+                py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification3>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "NotificationMirroring", "Windows.UI.Notifications.IScheduledToastNotification3").NotificationMirroring(param0);
             }
 
             return 0;
@@ -4043,23 +3276,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExpirationTime();
+                return py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification4>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "ExpirationTime", "Windows.UI.Notifications.IScheduledToastNotification4").ExpirationTime();
             }());
         }
         catch (...)
@@ -4079,24 +3299,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ExpirationTime(param0);
+                py::require<winrt::Windows::UI::Notifications::IScheduledToastNotification4>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ScheduledToastNotification", "ExpirationTime", "Windows.UI.Notifications.IScheduledToastNotification4").ExpirationTime(param0);
             }
 
             return 0;
@@ -4190,19 +3397,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4226,19 +3420,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4262,19 +3443,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4295,19 +3463,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs", L"ScheduledToastNotification");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4391,19 +3546,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ShownTileNotification", L"Arguments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4509,19 +3651,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileFlyoutNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4545,19 +3674,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileFlyoutNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -4578,19 +3694,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileFlyoutNotification", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4884,19 +3987,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileFlyoutUpdater", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -4925,19 +4015,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileFlyoutUpdater", L"StartPeriodicUpdate", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence>(args, 1);
 
@@ -4958,19 +4035,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileFlyoutUpdater", L"StartPeriodicUpdate", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence>(args, 2);
@@ -5003,19 +4067,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileFlyoutUpdater", L"StopPeriodicUpdate", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.StopPeriodicUpdate();
@@ -5044,19 +4095,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileFlyoutUpdater", L"Update", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::TileFlyoutNotification>(args, 0);
 
                 {
@@ -5083,19 +4121,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileFlyoutUpdater", L"Setting");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5205,19 +4230,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileNotification", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5241,19 +4253,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileNotification", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5274,19 +4273,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5310,19 +4296,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -5343,19 +4316,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileNotification", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5693,19 +4653,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdateManagerForUser", L"CreateTileUpdaterForApplication", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -5735,19 +4682,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdateManagerForUser", L"CreateTileUpdaterForApplicationForUser", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5775,19 +4709,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdateManagerForUser", L"CreateTileUpdaterForSecondaryTile", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -5813,19 +4734,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileUpdateManagerForUser", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5914,19 +4822,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"AddToSchedule", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ScheduledTileNotification>(args, 0);
 
                 {
@@ -5957,19 +4852,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -5998,19 +4880,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"EnableNotificationQueue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -6041,24 +4910,11 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"EnableNotificationQueueForSquare150x150", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableNotificationQueueForSquare150x150(param0);
+                    py::require<winrt::Windows::UI::Notifications::ITileUpdater2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.TileUpdater", "EnableNotificationQueueForSquare150x150", "Windows.UI.Notifications.ITileUpdater2", 1).EnableNotificationQueueForSquare150x150(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6084,24 +4940,11 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"EnableNotificationQueueForSquare310x310", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableNotificationQueueForSquare310x310(param0);
+                    py::require<winrt::Windows::UI::Notifications::ITileUpdater2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.TileUpdater", "EnableNotificationQueueForSquare310x310", "Windows.UI.Notifications.ITileUpdater2", 1).EnableNotificationQueueForSquare310x310(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6127,24 +4970,11 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"EnableNotificationQueueForWide310x150", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableNotificationQueueForWide310x150(param0);
+                    py::require<winrt::Windows::UI::Notifications::ITileUpdater2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.TileUpdater", "EnableNotificationQueueForWide310x150", "Windows.UI.Notifications.ITileUpdater2", 1).EnableNotificationQueueForWide310x150(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6170,19 +5000,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"GetScheduledTileNotifications", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6210,19 +5027,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"RemoveFromSchedule", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ScheduledTileNotification>(args, 0);
 
                 {
@@ -6253,19 +5057,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"StartPeriodicUpdate", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence>(args, 1);
 
@@ -6286,19 +5077,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"StartPeriodicUpdate", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence>(args, 2);
@@ -6331,19 +5109,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"StartPeriodicUpdateBatch", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence>(args, 1);
 
@@ -6364,19 +5129,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"StartPeriodicUpdateBatch", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence>(args, 2);
@@ -6409,19 +5161,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"StopPeriodicUpdate", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.StopPeriodicUpdate();
@@ -6450,19 +5189,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdater", L"Update", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::TileNotification>(args, 0);
 
                 {
@@ -6489,19 +5215,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.TileUpdater", L"Setting");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6595,19 +5308,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastActivatedEventArgs", L"Arguments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6625,23 +5325,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastActivatedEventArgs", L"UserInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserInput();
+                return py::require<winrt::Windows::UI::Notifications::IToastActivatedEventArgs2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastActivatedEventArgs", "UserInput", "Windows.UI.Notifications.IToastActivatedEventArgs2").UserInput();
             }());
         }
         catch (...)
@@ -6747,19 +5434,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastCollection", L"LaunchArgs");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6783,19 +5457,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastCollection", L"LaunchArgs");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6816,19 +5477,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastCollection", L"Icon");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6852,19 +5500,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastCollection", L"Icon");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -6885,19 +5520,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastCollection", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6921,19 +5543,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastCollection", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6954,19 +5563,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastCollection", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7055,19 +5651,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastCollectionManager", L"FindAllToastCollectionsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7095,19 +5678,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastCollectionManager", L"GetToastCollectionAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7137,19 +5707,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastCollectionManager", L"RemoveAllToastCollectionsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7177,19 +5734,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastCollectionManager", L"RemoveToastCollectionAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7219,19 +5763,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastCollectionManager", L"SaveToastCollectionAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastCollection>(args, 0);
 
                 return py::convert([&]()
@@ -7257,19 +5788,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastCollectionManager", L"AppId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7287,19 +5805,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastCollectionManager", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7387,19 +5892,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastDismissedEventArgs", L"Reason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7481,19 +5973,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastFailedEventArgs", L"ErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7599,19 +6078,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7635,19 +6101,6 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -7668,19 +6121,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7698,23 +6138,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Tag();
+                return py::require<winrt::Windows::UI::Notifications::IToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "Tag", "Windows.UI.Notifications.IToastNotification2").Tag();
             }());
         }
         catch (...)
@@ -7734,24 +6161,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Tag(param0);
+                py::require<winrt::Windows::UI::Notifications::IToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "Tag", "Windows.UI.Notifications.IToastNotification2").Tag(param0);
             }
 
             return 0;
@@ -7767,23 +6181,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"SuppressPopup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SuppressPopup();
+                return py::require<winrt::Windows::UI::Notifications::IToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "SuppressPopup", "Windows.UI.Notifications.IToastNotification2").SuppressPopup();
             }());
         }
         catch (...)
@@ -7803,24 +6204,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"SuppressPopup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SuppressPopup(param0);
+                py::require<winrt::Windows::UI::Notifications::IToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "SuppressPopup", "Windows.UI.Notifications.IToastNotification2").SuppressPopup(param0);
             }
 
             return 0;
@@ -7836,23 +6224,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"Group");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Group();
+                return py::require<winrt::Windows::UI::Notifications::IToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "Group", "Windows.UI.Notifications.IToastNotification2").Group();
             }());
         }
         catch (...)
@@ -7872,24 +6247,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"Group");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Group(param0);
+                py::require<winrt::Windows::UI::Notifications::IToastNotification2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "Group", "Windows.UI.Notifications.IToastNotification2").Group(param0);
             }
 
             return 0;
@@ -7905,23 +6267,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RemoteId();
+                return py::require<winrt::Windows::UI::Notifications::IToastNotification3>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "RemoteId", "Windows.UI.Notifications.IToastNotification3").RemoteId();
             }());
         }
         catch (...)
@@ -7941,24 +6290,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"RemoteId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RemoteId(param0);
+                py::require<winrt::Windows::UI::Notifications::IToastNotification3>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "RemoteId", "Windows.UI.Notifications.IToastNotification3").RemoteId(param0);
             }
 
             return 0;
@@ -7974,23 +6310,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"NotificationMirroring");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NotificationMirroring();
+                return py::require<winrt::Windows::UI::Notifications::IToastNotification3>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "NotificationMirroring", "Windows.UI.Notifications.IToastNotification3").NotificationMirroring();
             }());
         }
         catch (...)
@@ -8010,24 +6333,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"NotificationMirroring");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::NotificationMirroring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NotificationMirroring(param0);
+                py::require<winrt::Windows::UI::Notifications::IToastNotification3>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "NotificationMirroring", "Windows.UI.Notifications.IToastNotification3").NotificationMirroring(param0);
             }
 
             return 0;
@@ -8043,23 +6353,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"Priority");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Priority();
+                return py::require<winrt::Windows::UI::Notifications::IToastNotification4>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "Priority", "Windows.UI.Notifications.IToastNotification4").Priority();
             }());
         }
         catch (...)
@@ -8079,24 +6376,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"Priority");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotificationPriority>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Priority(param0);
+                py::require<winrt::Windows::UI::Notifications::IToastNotification4>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "Priority", "Windows.UI.Notifications.IToastNotification4").Priority(param0);
             }
 
             return 0;
@@ -8112,23 +6396,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Data();
+                return py::require<winrt::Windows::UI::Notifications::IToastNotification4>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "Data", "Windows.UI.Notifications.IToastNotification4").Data();
             }());
         }
         catch (...)
@@ -8148,24 +6419,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::NotificationData>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Data(param0);
+                py::require<winrt::Windows::UI::Notifications::IToastNotification4>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "Data", "Windows.UI.Notifications.IToastNotification4").Data(param0);
             }
 
             return 0;
@@ -8181,23 +6439,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"ExpiresOnReboot");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExpiresOnReboot();
+                return py::require<winrt::Windows::UI::Notifications::IToastNotification6>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "ExpiresOnReboot", "Windows.UI.Notifications.IToastNotification6").ExpiresOnReboot();
             }());
         }
         catch (...)
@@ -8217,24 +6462,11 @@ namespace py::cpp::Windows::UI::Notifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotification", L"ExpiresOnReboot");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ExpiresOnReboot(param0);
+                py::require<winrt::Windows::UI::Notifications::IToastNotification6>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotification", "ExpiresOnReboot", "Windows.UI.Notifications.IToastNotification6").ExpiresOnReboot(param0);
             }
 
             return 0;
@@ -8250,19 +6482,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.ToastNotification", L"Activated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -8282,19 +6501,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.ToastNotification", L"Activated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8315,19 +6521,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.ToastNotification", L"Dismissed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::UI::Notifications::ToastDismissedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8347,19 +6540,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.ToastNotification", L"Dismissed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8380,19 +6560,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.ToastNotification", L"Failed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::UI::Notifications::ToastFailedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8412,19 +6579,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.ToastNotification", L"Failed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8524,19 +6678,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotificationActionTriggerDetail", L"Argument");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8554,19 +6695,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotificationActionTriggerDetail", L"UserInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8653,19 +6781,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -8683,19 +6798,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"Clear", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -8726,23 +6828,10 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"GetHistory", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetHistory();
+                    return py::require<winrt::Windows::UI::Notifications::IToastNotificationHistory2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.ToastNotificationHistory", "GetHistory", "Windows.UI.Notifications.IToastNotificationHistory2", 0).GetHistory();
                 }());
             }
             catch (...)
@@ -8755,25 +6844,12 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"GetHistory", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetHistory(param0);
+                    return py::require<winrt::Windows::UI::Notifications::IToastNotificationHistory2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.ToastNotificationHistory", "GetHistory", "Windows.UI.Notifications.IToastNotificationHistory2", 1).GetHistory(param0);
                 }());
             }
             catch (...)
@@ -8797,19 +6873,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -8829,19 +6892,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"Remove", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -8862,19 +6912,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"Remove", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -8907,19 +6944,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"RemoveGroup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -8939,19 +6963,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"RemoveGroup", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -9046,19 +7057,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail", L"ChangeType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9076,23 +7074,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail", L"CollectionId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CollectionId();
+                return py::require<winrt::Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail2>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail", "CollectionId", "Windows.UI.Notifications.IToastNotificationHistoryChangedTriggerDetail2").CollectionId();
             }());
         }
         catch (...)
@@ -9498,19 +7483,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"CreateToastNotifier", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9527,19 +7499,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"CreateToastNotifier", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -9569,25 +7528,12 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"GetHistoryForToastCollectionIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetHistoryForToastCollectionIdAsync(param0);
+                    return py::require<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.ToastNotificationManagerForUser", "GetHistoryForToastCollectionIdAsync", "Windows.UI.Notifications.IToastNotificationManagerForUser2", 1).GetHistoryForToastCollectionIdAsync(param0);
                 }());
             }
             catch (...)
@@ -9611,23 +7557,10 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"GetToastCollectionManager", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetToastCollectionManager();
+                    return py::require<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.ToastNotificationManagerForUser", "GetToastCollectionManager", "Windows.UI.Notifications.IToastNotificationManagerForUser2", 0).GetToastCollectionManager();
                 }());
             }
             catch (...)
@@ -9640,25 +7573,12 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"GetToastCollectionManager", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetToastCollectionManager(param0);
+                    return py::require<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.ToastNotificationManagerForUser", "GetToastCollectionManager", "Windows.UI.Notifications.IToastNotificationManagerForUser2", 1).GetToastCollectionManager(param0);
                 }());
             }
             catch (...)
@@ -9682,25 +7602,12 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"GetToastNotifierForToastCollectionIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetToastNotifierForToastCollectionIdAsync(param0);
+                    return py::require<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.ToastNotificationManagerForUser", "GetToastNotifierForToastCollectionIdAsync", "Windows.UI.Notifications.IToastNotificationManagerForUser2", 1).GetToastNotifierForToastCollectionIdAsync(param0);
                 }());
             }
             catch (...)
@@ -9720,19 +7627,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"History");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9750,19 +7644,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9780,23 +7661,10 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"NotificationMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NotificationMode();
+                return py::require<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3>(self->obj, py::member_kind::property, "Windows.UI.Notifications.ToastNotificationManagerForUser", "NotificationMode", "Windows.UI.Notifications.IToastNotificationManagerForUser3").NotificationMode();
             }());
         }
         catch (...)
@@ -9810,25 +7678,12 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"NotificationModeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NotificationModeChanged(param0);
+                return py::require<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3>(self->obj, py::member_kind::event, "Windows.UI.Notifications.ToastNotificationManagerForUser", "NotificationModeChanged", "Windows.UI.Notifications.IToastNotificationManagerForUser3").NotificationModeChanged(param0);
             }());
         }
         catch (...)
@@ -9842,24 +7697,11 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.ToastNotificationManagerForUser", L"NotificationModeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NotificationModeChanged(param0);
+                py::require<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3>(self->obj, py::member_kind::event, "Windows.UI.Notifications.ToastNotificationManagerForUser", "NotificationModeChanged", "Windows.UI.Notifications.IToastNotificationManagerForUser3").NotificationModeChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -9951,19 +7793,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotifier", L"AddToSchedule", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ScheduledToastNotification>(args, 0);
 
                 {
@@ -9994,19 +7823,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotifier", L"GetScheduledToastNotifications", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10034,19 +7850,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotifier", L"Hide", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotification>(args, 0);
 
                 {
@@ -10077,19 +7880,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotifier", L"RemoveFromSchedule", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ScheduledToastNotification>(args, 0);
 
                 {
@@ -10120,19 +7910,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotifier", L"Show", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotification>(args, 0);
 
                 {
@@ -10163,26 +7940,13 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotifier", L"Update", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::NotificationData>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Update(param0, param1);
+                    return py::require<winrt::Windows::UI::Notifications::IToastNotifier2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.ToastNotifier", "Update", "Windows.UI.Notifications.IToastNotifier2", 2).Update(param0, param1);
                 }());
             }
             catch (...)
@@ -10195,19 +7959,6 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotifier", L"Update", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::NotificationData>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -10215,7 +7966,7 @@ namespace py::cpp::Windows::UI::Notifications
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Update(param0, param1, param2);
+                    return py::require<winrt::Windows::UI::Notifications::IToastNotifier2>(self->obj, py::member_kind::method, "Windows.UI.Notifications.ToastNotifier", "Update", "Windows.UI.Notifications.IToastNotifier2", 3).Update(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -10235,19 +7986,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.ToastNotifier", L"Setting");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10265,25 +8003,12 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.ToastNotifier", L"ScheduledToastNotificationShowing");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotifier, winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ScheduledToastNotificationShowing(param0);
+                return py::require<winrt::Windows::UI::Notifications::IToastNotifier3>(self->obj, py::member_kind::event, "Windows.UI.Notifications.ToastNotifier", "ScheduledToastNotificationShowing", "Windows.UI.Notifications.IToastNotifier3").ScheduledToastNotificationShowing(param0);
             }());
         }
         catch (...)
@@ -10297,24 +8022,11 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Notifications.ToastNotifier", L"ScheduledToastNotificationShowing");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ScheduledToastNotificationShowing(param0);
+                py::require<winrt::Windows::UI::Notifications::IToastNotifier3>(self->obj, py::member_kind::event, "Windows.UI.Notifications.ToastNotifier", "ScheduledToastNotificationShowing", "Windows.UI.Notifications.IToastNotifier3").ScheduledToastNotificationShowing(param0);
             }
 
             Py_RETURN_NONE;
@@ -10402,19 +8114,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.UserNotification", L"AppInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10432,19 +8131,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.UserNotification", L"CreationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10462,19 +8148,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.UserNotification", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10492,19 +8165,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.UserNotification", L"Notification");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10589,19 +8249,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.UserNotificationChangedEventArgs", L"ChangeKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10619,19 +8266,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.UserNotificationChangedEventArgs", L"UserNotificationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10716,19 +8350,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.IAdaptiveNotificationContent", L"Hints");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10746,19 +8367,6 @@ namespace py::cpp::Windows::UI::Notifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Notifications.IAdaptiveNotificationContent", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

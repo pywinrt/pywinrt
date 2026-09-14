@@ -290,6 +290,23 @@ static class TypeExtensions
 
     public static string ToParamName(this ParameterDefinition param) => $"param{param.Index}";
 
+    /// <summary>
+    /// Formats <paramref name="type"/> the way WinRT metadata names it, for use
+    /// in error messages.
+    /// </summary>
+    public static string ToWinRtName(this TypeReference type) =>
+        type switch
+        {
+            GenericParameter param => param.Name,
+            GenericInstanceType generic
+                => $"{generic.Namespace}.{generic.Name.ToNonGeneric()}"
+                    + $"<{string.Join(", ", generic.GenericArguments.Select(ToWinRtName))}>",
+            { FullName: "System.String" } => "String",
+            { FullName: "System.Object" } => "Object",
+            { FullName: "System.Guid" } => "Guid",
+            _ => type.FullName
+        };
+
     public static string ToCppTypeName(
         this TypeReference type,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default

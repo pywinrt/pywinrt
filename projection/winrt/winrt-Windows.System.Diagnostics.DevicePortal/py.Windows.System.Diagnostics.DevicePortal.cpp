@@ -71,25 +71,12 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", L"GetServerMessageWebSocketForRequest", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetServerMessageWebSocketForRequest(param0);
+                    return py::require<winrt::Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnection>(self->obj, py::member_kind::method, "Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", "GetServerMessageWebSocketForRequest", "Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection", 1).GetServerMessageWebSocketForRequest(param0);
                 }());
             }
             catch (...)
@@ -102,19 +89,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", L"GetServerMessageWebSocketForRequest", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketMessageType>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -122,7 +96,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetServerMessageWebSocketForRequest(param0, param1, param2);
+                    return py::require<winrt::Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnection>(self->obj, py::member_kind::method, "Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", "GetServerMessageWebSocketForRequest", "Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection", 3).GetServerMessageWebSocketForRequest(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -135,19 +109,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", L"GetServerMessageWebSocketForRequest", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketMessageType>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -158,7 +119,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetServerMessageWebSocketForRequest(param0, param1, param2, param3, param4, param5);
+                    return py::require<winrt::Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnection>(self->obj, py::member_kind::method, "Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", "GetServerMessageWebSocketForRequest", "Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection", 6).GetServerMessageWebSocketForRequest(param0, param1, param2, param3, param4, param5);
                 }());
             }
             catch (...)
@@ -182,25 +143,12 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", L"GetServerStreamWebSocketForRequest", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetServerStreamWebSocketForRequest(param0);
+                    return py::require<winrt::Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnection>(self->obj, py::member_kind::method, "Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", "GetServerStreamWebSocketForRequest", "Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection", 1).GetServerStreamWebSocketForRequest(param0);
                 }());
             }
             catch (...)
@@ -213,19 +161,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", L"GetServerStreamWebSocketForRequest", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -234,7 +169,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetServerStreamWebSocketForRequest(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnection>(self->obj, py::member_kind::method, "Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", "GetServerStreamWebSocketForRequest", "Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection", 4).GetServerStreamWebSocketForRequest(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -254,19 +189,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection, winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -286,19 +208,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -319,19 +228,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", L"RequestReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection, winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -351,19 +247,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnection", L"RequestReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -475,19 +358,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs", L"Reason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -573,23 +443,10 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetDeferral();
+                    return py::require<winrt::Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnectionRequestReceivedEventArgs>(self->obj, py::member_kind::method, "Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs", "GetDeferral", "Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs", 0).GetDeferral();
                 }());
             }
             catch (...)
@@ -609,19 +466,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs", L"RequestMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -639,19 +483,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs", L"ResponseMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -669,23 +500,10 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs", L"IsWebSocketUpgradeRequest");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsWebSocketUpgradeRequest();
+                return py::require<winrt::Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnectionRequestReceivedEventArgs>(self->obj, py::member_kind::property, "Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs", "IsWebSocketUpgradeRequest", "Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs").IsWebSocketUpgradeRequest();
             }());
         }
         catch (...)
@@ -699,23 +517,10 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs", L"WebSocketProtocolsRequested");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.WebSocketProtocolsRequested();
+                return py::require<winrt::Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnectionRequestReceivedEventArgs>(self->obj, py::member_kind::property, "Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs", "WebSocketProtocolsRequested", "Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs").WebSocketProtocolsRequested();
             }());
         }
         catch (...)

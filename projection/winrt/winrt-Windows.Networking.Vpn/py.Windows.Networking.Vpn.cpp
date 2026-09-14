@@ -50,19 +50,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -86,19 +73,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -119,19 +93,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -155,19 +116,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAppIdType>(arg);
 
             {
@@ -257,26 +205,13 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivateForeground", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ActivateForeground(param0, param1);
+                    return py::require<winrt::Windows::Networking::Vpn::IVpnChannel6>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "ActivateForeground", "Windows.Networking.Vpn.IVpnChannel6", 2).ActivateForeground(param0, param1);
                 }());
             }
             catch (...)
@@ -300,25 +235,12 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AddAndAssociateTransport", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddAndAssociateTransport(param0, param1);
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel4>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "AddAndAssociateTransport", "Windows.Networking.Vpn.IVpnChannel4", 2).AddAndAssociateTransport(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -344,24 +266,11 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AppendVpnReceivePacketBuffer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AppendVpnReceivePacketBuffer(param0);
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel5>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "AppendVpnReceivePacketBuffer", "Windows.Networking.Vpn.IVpnChannel5", 1).AppendVpnReceivePacketBuffer(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -387,24 +296,11 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AppendVpnSendPacketBuffer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AppendVpnSendPacketBuffer(param0);
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel5>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "AppendVpnSendPacketBuffer", "Windows.Networking.Vpn.IVpnChannel5", 1).AppendVpnSendPacketBuffer(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -430,19 +326,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AssociateTransport", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -474,22 +357,9 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"FlushVpnReceivePacketBuffers", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.FlushVpnReceivePacketBuffers();
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel5>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "FlushVpnReceivePacketBuffers", "Windows.Networking.Vpn.IVpnChannel5", 0).FlushVpnReceivePacketBuffers();
                 }
 
                 Py_RETURN_NONE;
@@ -515,22 +385,9 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"FlushVpnSendPacketBuffers", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.FlushVpnSendPacketBuffers();
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel5>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "FlushVpnSendPacketBuffers", "Windows.Networking.Vpn.IVpnChannel5", 0).FlushVpnSendPacketBuffers();
                 }
 
                 Py_RETURN_NONE;
@@ -556,25 +413,12 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"GetSlotTypeForTransportContext", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetSlotTypeForTransportContext(param0);
+                    return py::require<winrt::Windows::Networking::Vpn::IVpnChannel4>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "GetSlotTypeForTransportContext", "Windows.Networking.Vpn.IVpnChannel4", 1).GetSlotTypeForTransportContext(param0);
                 }());
             }
             catch (...)
@@ -598,23 +442,10 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"GetVpnReceivePacketBuffer", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetVpnReceivePacketBuffer();
+                    return py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "GetVpnReceivePacketBuffer", "Windows.Networking.Vpn.IVpnChannel2", 0).GetVpnReceivePacketBuffer();
                 }());
             }
             catch (...)
@@ -638,23 +469,10 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"GetVpnSendPacketBuffer", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetVpnSendPacketBuffer();
+                    return py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "GetVpnSendPacketBuffer", "Windows.Networking.Vpn.IVpnChannel2", 0).GetVpnSendPacketBuffer();
                 }());
             }
             catch (...)
@@ -678,19 +496,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"LogDiagnosticMessage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -765,25 +570,12 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"ReplaceAndAssociateTransport", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAndAssociateTransport(param0, param1);
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel4>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "ReplaceAndAssociateTransport", "Windows.Networking.Vpn.IVpnChannel4", 2).ReplaceAndAssociateTransport(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -809,19 +601,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentials", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -854,25 +633,12 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestCredentialsAsync(param0);
+                    return py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "RequestCredentialsAsync", "Windows.Networking.Vpn.IVpnChannel2", 1).RequestCredentialsAsync(param0);
                 }());
             }
             catch (...)
@@ -885,26 +651,13 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestCredentialsAsync(param0, param1);
+                    return py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "RequestCredentialsAsync", "Windows.Networking.Vpn.IVpnChannel2", 2).RequestCredentialsAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -917,19 +670,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 2);
@@ -937,7 +677,7 @@ namespace py::cpp::Windows::Networking::Vpn
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestCredentialsAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "RequestCredentialsAsync", "Windows.Networking.Vpn.IVpnChannel2", 3).RequestCredentialsAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -961,19 +701,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCustomPrompt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>>(args, 0);
 
                 {
@@ -1004,25 +731,12 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCustomPromptAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestCustomPromptAsync(param0);
+                    return py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "RequestCustomPromptAsync", "Windows.Networking.Vpn.IVpnChannel2", 1).RequestCustomPromptAsync(param0);
                 }());
             }
             catch (...)
@@ -1046,19 +760,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestVpnPacketBuffer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnDataPathType>(args, 0);
                 winrt::Windows::Networking::Vpn::VpnPacketBuffer param1{nullptr};
 
@@ -1096,19 +797,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"SetAllowedSslTlsVersions", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -1140,19 +828,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"SetErrorMessage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1183,19 +858,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"Start", 10);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(10);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(args, 2);
@@ -1235,19 +897,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartExistingTransports", 8);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(8);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(args, 2);
@@ -1259,7 +908,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StartExistingTransports(param0, param1, param2, param3, param4, param5, param6, param7);
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "StartExistingTransports", "Windows.Networking.Vpn.IVpnChannel2", 8).StartExistingTransports(param0, param1, param2, param3, param4, param5, param6, param7);
                 }
 
                 Py_RETURN_NONE;
@@ -1285,25 +934,12 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartReconnectingTransport", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StartReconnectingTransport(param0, param1);
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel4>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "StartReconnectingTransport", "Windows.Networking.Vpn.IVpnChannel4", 2).StartReconnectingTransport(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1329,19 +965,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartWithMainTransport", 9);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(9);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(args, 2);
@@ -1354,7 +977,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StartWithMainTransport(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "StartWithMainTransport", "Windows.Networking.Vpn.IVpnChannel2", 9).StartWithMainTransport(param0, param1, param2, param3, param4, param5, param6, param7, param8);
                 }
 
                 Py_RETURN_NONE;
@@ -1380,19 +1003,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartWithTrafficFilter", 10);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(10);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(args, 2);
@@ -1406,7 +1016,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StartWithTrafficFilter(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel4>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "StartWithTrafficFilter", "Windows.Networking.Vpn.IVpnChannel4", 10).StartWithTrafficFilter(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
                 }
 
                 Py_RETURN_NONE;
@@ -1421,19 +1031,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartWithTrafficFilter", 11);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(11);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(args, 2);
@@ -1448,7 +1045,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StartWithTrafficFilter(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10);
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "StartWithTrafficFilter", "Windows.Networking.Vpn.IVpnChannel2", 11).StartWithTrafficFilter(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10);
                 }
 
                 Py_RETURN_NONE;
@@ -1474,19 +1071,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -1515,24 +1099,11 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"TerminateConnection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.TerminateConnection(param0);
+                    py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnChannel", "TerminateConnection", "Windows.Networking.Vpn.IVpnChannel2", 1).TerminateConnection(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1554,19 +1125,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"PlugInContext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1590,19 +1148,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"PlugInContext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
@@ -1623,19 +1168,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"Configuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1653,19 +1185,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1683,19 +1202,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"SystemHealth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1713,23 +1219,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"CurrentRequestTransportContext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CurrentRequestTransportContext();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnChannel4>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnChannel", "CurrentRequestTransportContext", "Windows.Networking.Vpn.IVpnChannel4").CurrentRequestTransportContext();
             }());
         }
         catch (...)
@@ -1743,19 +1236,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityChange");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Vpn::VpnChannel, winrt::Windows::Networking::Vpn::VpnChannelActivityEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1775,19 +1255,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityChange");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1808,25 +1275,12 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityStateChange");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Vpn::VpnChannel, winrt::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActivityStateChange(param0);
+                return py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::event, "Windows.Networking.Vpn.VpnChannel", "ActivityStateChange", "Windows.Networking.Vpn.IVpnChannel2").ActivityStateChange(param0);
             }());
         }
         catch (...)
@@ -1840,24 +1294,11 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityStateChange");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ActivityStateChange(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnChannel2>(self->obj, py::member_kind::event, "Windows.Networking.Vpn.VpnChannel", "ActivityStateChange", "Windows.Networking.Vpn.IVpnChannel2").ActivityStateChange(param0);
             }
 
             Py_RETURN_NONE;
@@ -1993,19 +1434,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelActivityEventArgs", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2087,19 +1515,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs", L"ActivityState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2181,19 +1596,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"CustomField");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2211,19 +1613,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"ServerHostNameList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2241,19 +1630,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"ServerServiceName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2271,23 +1647,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"ServerUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerUris();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnChannelConfiguration2>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnChannelConfiguration", "ServerUris", "Windows.Networking.Vpn.IVpnChannelConfiguration2").ServerUris();
             }());
         }
         catch (...)
@@ -2368,19 +1731,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"AdditionalPin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2398,19 +1748,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"CertificateCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2428,19 +1765,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"OldPasswordCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2458,19 +1782,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"PasskeyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2577,19 +1888,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"InitialCheckState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2613,19 +1911,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"InitialCheckState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2646,19 +1931,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Checked");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2676,23 +1948,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Label();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomCheckBox", "Label", "Windows.Networking.Vpn.IVpnCustomPrompt").Label();
             }());
         }
         catch (...)
@@ -2712,24 +1971,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Label(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomCheckBox", "Label", "Windows.Networking.Vpn.IVpnCustomPrompt").Label(param0);
             }
 
             return 0;
@@ -2745,23 +1991,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Compulsory();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomCheckBox", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPrompt").Compulsory();
             }());
         }
         catch (...)
@@ -2781,24 +2014,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Compulsory(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomCheckBox", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPrompt").Compulsory(param0);
             }
 
             return 0;
@@ -2814,23 +2034,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Bordered();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomCheckBox", "Bordered", "Windows.Networking.Vpn.IVpnCustomPrompt").Bordered();
             }());
         }
         catch (...)
@@ -2850,24 +2057,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Bordered(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomCheckBox", "Bordered", "Windows.Networking.Vpn.IVpnCustomPrompt").Bordered(param0);
             }
 
             return 0;
@@ -2973,19 +2167,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"OptionsText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3009,19 +2190,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"OptionsText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(arg);
 
             {
@@ -3042,19 +2210,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Selected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3072,23 +2227,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Label();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomComboBox", "Label", "Windows.Networking.Vpn.IVpnCustomPrompt").Label();
             }());
         }
         catch (...)
@@ -3108,24 +2250,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Label(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomComboBox", "Label", "Windows.Networking.Vpn.IVpnCustomPrompt").Label(param0);
             }
 
             return 0;
@@ -3141,23 +2270,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Compulsory();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomComboBox", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPrompt").Compulsory();
             }());
         }
         catch (...)
@@ -3177,24 +2293,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Compulsory(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomComboBox", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPrompt").Compulsory(param0);
             }
 
             return 0;
@@ -3210,23 +2313,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Bordered();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomComboBox", "Bordered", "Windows.Networking.Vpn.IVpnCustomPrompt").Bordered();
             }());
         }
         catch (...)
@@ -3246,24 +2336,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Bordered(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomComboBox", "Bordered", "Windows.Networking.Vpn.IVpnCustomPrompt").Bordered(param0);
             }
 
             return 0;
@@ -3369,19 +2446,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"NoEcho");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3405,19 +2469,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"NoEcho");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -3438,19 +2489,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"DefaultText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3474,19 +2512,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"DefaultText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3507,19 +2532,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3537,23 +2549,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Label();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomEditBox", "Label", "Windows.Networking.Vpn.IVpnCustomPrompt").Label();
             }());
         }
         catch (...)
@@ -3573,24 +2572,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Label(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomEditBox", "Label", "Windows.Networking.Vpn.IVpnCustomPrompt").Label(param0);
             }
 
             return 0;
@@ -3606,23 +2592,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Compulsory();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomEditBox", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPrompt").Compulsory();
             }());
         }
         catch (...)
@@ -3642,24 +2615,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Compulsory(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomEditBox", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPrompt").Compulsory(param0);
             }
 
             return 0;
@@ -3675,23 +2635,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Bordered();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomEditBox", "Bordered", "Windows.Networking.Vpn.IVpnCustomPrompt").Bordered();
             }());
         }
         catch (...)
@@ -3711,24 +2658,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Bordered(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomEditBox", "Bordered", "Windows.Networking.Vpn.IVpnCustomPrompt").Bordered(param0);
             }
 
             return 0;
@@ -3835,23 +2769,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Label();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomErrorBox", "Label", "Windows.Networking.Vpn.IVpnCustomPrompt").Label();
             }());
         }
         catch (...)
@@ -3871,24 +2792,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Label(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomErrorBox", "Label", "Windows.Networking.Vpn.IVpnCustomPrompt").Label(param0);
             }
 
             return 0;
@@ -3904,23 +2812,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Compulsory();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomErrorBox", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPrompt").Compulsory();
             }());
         }
         catch (...)
@@ -3940,24 +2835,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Compulsory(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomErrorBox", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPrompt").Compulsory(param0);
             }
 
             return 0;
@@ -3973,23 +2855,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Bordered();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomErrorBox", "Bordered", "Windows.Networking.Vpn.IVpnCustomPrompt").Bordered();
             }());
         }
         catch (...)
@@ -4009,24 +2878,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Bordered(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomErrorBox", "Bordered", "Windows.Networking.Vpn.IVpnCustomPrompt").Bordered(param0);
             }
 
             return 0;
@@ -4130,19 +2986,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"InitialValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4166,19 +3009,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"InitialValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4199,19 +3029,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4229,23 +3046,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Emphasized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emphasized();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptBooleanInput", "Emphasized", "Windows.Networking.Vpn.IVpnCustomPromptElement").Emphasized();
             }());
         }
         catch (...)
@@ -4265,24 +3069,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Emphasized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Emphasized(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptBooleanInput", "Emphasized", "Windows.Networking.Vpn.IVpnCustomPromptElement").Emphasized(param0);
             }
 
             return 0;
@@ -4298,23 +3089,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptBooleanInput", "DisplayName", "Windows.Networking.Vpn.IVpnCustomPromptElement").DisplayName();
             }());
         }
         catch (...)
@@ -4334,24 +3112,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DisplayName(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptBooleanInput", "DisplayName", "Windows.Networking.Vpn.IVpnCustomPromptElement").DisplayName(param0);
             }
 
             return 0;
@@ -4367,23 +3132,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Compulsory();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptBooleanInput", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPromptElement").Compulsory();
             }());
         }
         catch (...)
@@ -4403,24 +3155,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Compulsory(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptBooleanInput", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPromptElement").Compulsory(param0);
             }
 
             return 0;
@@ -4526,23 +3265,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Emphasized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emphasized();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptOptionSelector", "Emphasized", "Windows.Networking.Vpn.IVpnCustomPromptElement").Emphasized();
             }());
         }
         catch (...)
@@ -4562,24 +3288,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Emphasized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Emphasized(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptOptionSelector", "Emphasized", "Windows.Networking.Vpn.IVpnCustomPromptElement").Emphasized(param0);
             }
 
             return 0;
@@ -4595,23 +3308,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptOptionSelector", "DisplayName", "Windows.Networking.Vpn.IVpnCustomPromptElement").DisplayName();
             }());
         }
         catch (...)
@@ -4631,24 +3331,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DisplayName(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptOptionSelector", "DisplayName", "Windows.Networking.Vpn.IVpnCustomPromptElement").DisplayName(param0);
             }
 
             return 0;
@@ -4664,23 +3351,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Compulsory();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptOptionSelector", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPromptElement").Compulsory();
             }());
         }
         catch (...)
@@ -4700,24 +3374,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Compulsory(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptOptionSelector", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPromptElement").Compulsory(param0);
             }
 
             return 0;
@@ -4733,19 +3394,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Options");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4763,19 +3411,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4883,23 +3518,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Emphasized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emphasized();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptText", "Emphasized", "Windows.Networking.Vpn.IVpnCustomPromptElement").Emphasized();
             }());
         }
         catch (...)
@@ -4919,24 +3541,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Emphasized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Emphasized(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptText", "Emphasized", "Windows.Networking.Vpn.IVpnCustomPromptElement").Emphasized(param0);
             }
 
             return 0;
@@ -4952,23 +3561,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptText", "DisplayName", "Windows.Networking.Vpn.IVpnCustomPromptElement").DisplayName();
             }());
         }
         catch (...)
@@ -4988,24 +3584,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DisplayName(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptText", "DisplayName", "Windows.Networking.Vpn.IVpnCustomPromptElement").DisplayName(param0);
             }
 
             return 0;
@@ -5021,23 +3604,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Compulsory();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptText", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPromptElement").Compulsory();
             }());
         }
         catch (...)
@@ -5057,24 +3627,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Compulsory(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptText", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPromptElement").Compulsory(param0);
             }
 
             return 0;
@@ -5090,19 +3647,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5126,19 +3670,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5248,23 +3779,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Emphasized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Emphasized();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptTextInput", "Emphasized", "Windows.Networking.Vpn.IVpnCustomPromptElement").Emphasized();
             }());
         }
         catch (...)
@@ -5284,24 +3802,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Emphasized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Emphasized(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptTextInput", "Emphasized", "Windows.Networking.Vpn.IVpnCustomPromptElement").Emphasized(param0);
             }
 
             return 0;
@@ -5317,23 +3822,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplayName();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptTextInput", "DisplayName", "Windows.Networking.Vpn.IVpnCustomPromptElement").DisplayName();
             }());
         }
         catch (...)
@@ -5353,24 +3845,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DisplayName(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptTextInput", "DisplayName", "Windows.Networking.Vpn.IVpnCustomPromptElement").DisplayName(param0);
             }
 
             return 0;
@@ -5386,23 +3865,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Compulsory();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptTextInput", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPromptElement").Compulsory();
             }());
         }
         catch (...)
@@ -5422,24 +3888,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Compulsory(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomPromptTextInput", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPromptElement").Compulsory(param0);
             }
 
             return 0;
@@ -5455,19 +3908,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"PlaceholderText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5491,19 +3931,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"PlaceholderText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5524,19 +3951,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"IsTextHidden");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5560,19 +3974,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"IsTextHidden");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5593,19 +3994,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5714,23 +4102,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Label();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomTextBox", "Label", "Windows.Networking.Vpn.IVpnCustomPrompt").Label();
             }());
         }
         catch (...)
@@ -5750,24 +4125,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Label(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomTextBox", "Label", "Windows.Networking.Vpn.IVpnCustomPrompt").Label(param0);
             }
 
             return 0;
@@ -5783,23 +4145,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Compulsory();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomTextBox", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPrompt").Compulsory();
             }());
         }
         catch (...)
@@ -5819,24 +4168,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Compulsory(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomTextBox", "Compulsory", "Windows.Networking.Vpn.IVpnCustomPrompt").Compulsory(param0);
             }
 
             return 0;
@@ -5852,23 +4188,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Bordered();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomTextBox", "Bordered", "Windows.Networking.Vpn.IVpnCustomPrompt").Bordered();
             }());
         }
         catch (...)
@@ -5888,24 +4211,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Bordered(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnCustomTextBox", "Bordered", "Windows.Networking.Vpn.IVpnCustomPrompt").Bordered(param0);
             }
 
             return 0;
@@ -5921,19 +4231,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"DisplayText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5957,19 +4254,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"DisplayText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6079,19 +4363,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameAssignment", L"ProxyAutoConfigurationUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6115,19 +4386,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameAssignment", L"ProxyAutoConfigurationUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -6148,19 +4406,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameAssignment", L"DomainNameList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6270,19 +4515,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainNameType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6306,19 +4538,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainNameType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnDomainNameType>(arg);
 
             {
@@ -6339,19 +4558,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6375,19 +4581,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
             {
@@ -6408,19 +4601,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DnsServers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6438,19 +4618,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"WebProxyServers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6468,23 +4635,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"WebProxyUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.WebProxyUris();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnDomainNameInfo2>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnDomainNameInfo", "WebProxyUris", "Windows.Networking.Vpn.IVpnDomainNameInfo2").WebProxyUris();
             }());
         }
         catch (...)
@@ -6566,23 +4720,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", "Kind", "Windows.ApplicationModel.Activation.IActivatedEventArgs").Kind();
             }());
         }
         catch (...)
@@ -6596,23 +4737,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"PreviousExecutionState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PreviousExecutionState();
+                return py::require<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", "PreviousExecutionState", "Windows.ApplicationModel.Activation.IActivatedEventArgs").PreviousExecutionState();
             }());
         }
         catch (...)
@@ -6626,23 +4754,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"SplashScreen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SplashScreen();
+                return py::require<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", "SplashScreen", "Windows.ApplicationModel.Activation.IActivatedEventArgs").SplashScreen();
             }());
         }
         catch (...)
@@ -6656,23 +4771,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", "User", "Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser").User();
             }());
         }
         catch (...)
@@ -6686,19 +4788,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"ActivationOperation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6716,19 +4805,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"ProfileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6746,19 +4822,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"SharedContext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6850,19 +4913,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnForegroundActivationOperation", L"Complete", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
                 {
@@ -6981,19 +5031,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnInterfaceId", L"GetAddressInfo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::com_array<uint8_t> param0{};
 
                 {
@@ -7116,19 +5153,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"AddProfileFromObjectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
                 return py::convert([&]()
@@ -7158,19 +5182,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"AddProfileFromXmlAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7200,19 +5211,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"ConnectProfileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
                 return py::convert([&]()
@@ -7242,19 +5240,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"ConnectProfileWithPasswordCredentialAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 1);
 
@@ -7285,19 +5270,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"DeleteProfileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
                 return py::convert([&]()
@@ -7327,19 +5299,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"DisconnectProfileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
                 return py::convert([&]()
@@ -7369,19 +5328,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"GetProfilesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7409,19 +5355,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"UpdateProfileFromObjectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
                 return py::convert([&]()
@@ -7451,19 +5384,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"UpdateProfileFromXmlAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7583,19 +5503,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"ProxyAutoConfigUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7619,19 +5526,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"ProxyAutoConfigUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -7652,19 +5546,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"NamespaceList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7688,19 +5569,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"NamespaceList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnNamespaceInfo>>(arg);
 
             {
@@ -7812,19 +5680,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"WebProxyServers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7848,19 +5703,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"WebProxyServers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(arg);
 
             {
@@ -7881,19 +5723,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"Namespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7917,19 +5746,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"Namespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7950,19 +5766,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"DnsServers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7986,19 +5789,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"DnsServers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(arg);
 
             {
@@ -8107,19 +5897,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"UserAuthenticationMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8143,19 +5920,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"UserAuthenticationMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAuthenticationMethod>(arg);
 
             {
@@ -8176,19 +5940,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"TunnelAuthenticationMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8212,19 +5963,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"TunnelAuthenticationMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAuthenticationMethod>(arg);
 
             {
@@ -8245,19 +5983,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RoutingPolicyType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8281,19 +6006,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RoutingPolicyType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnRoutingPolicyType>(arg);
 
             {
@@ -8314,19 +6026,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"EapConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8350,19 +6049,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"EapConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8383,19 +6069,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"NativeProtocolType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8419,19 +6092,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"NativeProtocolType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnNativeProtocolType>(arg);
 
             {
@@ -8452,19 +6112,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"Servers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8482,23 +6129,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RequireVpnClientAppUI");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RequireVpnClientAppUI();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnNativeProfile2>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "RequireVpnClientAppUI", "Windows.Networking.Vpn.IVpnNativeProfile2").RequireVpnClientAppUI();
             }());
         }
         catch (...)
@@ -8518,24 +6152,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RequireVpnClientAppUI");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RequireVpnClientAppUI(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnNativeProfile2>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "RequireVpnClientAppUI", "Windows.Networking.Vpn.IVpnNativeProfile2").RequireVpnClientAppUI(param0);
             }
 
             return 0;
@@ -8551,23 +6172,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"ConnectionStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConnectionStatus();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnNativeProfile2>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "ConnectionStatus", "Windows.Networking.Vpn.IVpnNativeProfile2").ConnectionStatus();
             }());
         }
         catch (...)
@@ -8581,23 +6189,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"ProfileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProfileName();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "ProfileName", "Windows.Networking.Vpn.IVpnProfile").ProfileName();
             }());
         }
         catch (...)
@@ -8617,24 +6212,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"ProfileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ProfileName(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "ProfileName", "Windows.Networking.Vpn.IVpnProfile").ProfileName(param0);
             }
 
             return 0;
@@ -8650,23 +6232,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RememberCredentials");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RememberCredentials();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "RememberCredentials", "Windows.Networking.Vpn.IVpnProfile").RememberCredentials();
             }());
         }
         catch (...)
@@ -8686,24 +6255,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RememberCredentials");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RememberCredentials(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "RememberCredentials", "Windows.Networking.Vpn.IVpnProfile").RememberCredentials(param0);
             }
 
             return 0;
@@ -8719,23 +6275,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"AlwaysOn");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AlwaysOn();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "AlwaysOn", "Windows.Networking.Vpn.IVpnProfile").AlwaysOn();
             }());
         }
         catch (...)
@@ -8755,24 +6298,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"AlwaysOn");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AlwaysOn(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "AlwaysOn", "Windows.Networking.Vpn.IVpnProfile").AlwaysOn(param0);
             }
 
             return 0;
@@ -8788,23 +6318,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"Routes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Routes();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "Routes", "Windows.Networking.Vpn.IVpnProfile").Routes();
             }());
         }
         catch (...)
@@ -8818,23 +6335,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"AppTriggers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AppTriggers();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "AppTriggers", "Windows.Networking.Vpn.IVpnProfile").AppTriggers();
             }());
         }
         catch (...)
@@ -8848,23 +6352,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"TrafficFilters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TrafficFilters();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "TrafficFilters", "Windows.Networking.Vpn.IVpnProfile").TrafficFilters();
             }());
         }
         catch (...)
@@ -8878,23 +6369,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"DomainNameInfoList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DomainNameInfoList();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnNativeProfile", "DomainNameInfoList", "Windows.Networking.Vpn.IVpnProfile").DomainNameInfoList();
             }());
         }
         catch (...)
@@ -9012,19 +6490,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportAffinity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9048,19 +6513,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportAffinity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -9081,19 +6533,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9117,19 +6556,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferStatus>(arg);
 
             {
@@ -9150,19 +6576,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"Buffer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9180,23 +6593,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"AppId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AppId();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnPacketBuffer2>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPacketBuffer", "AppId", "Windows.Networking.Vpn.IVpnPacketBuffer2").AppId();
             }());
         }
         catch (...)
@@ -9210,23 +6610,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportContext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TransportContext();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnPacketBuffer3>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPacketBuffer", "TransportContext", "Windows.Networking.Vpn.IVpnPacketBuffer3").TransportContext();
             }());
         }
         catch (...)
@@ -9246,24 +6633,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportContext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TransportContext(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnPacketBuffer3>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPacketBuffer", "TransportContext", "Windows.Networking.Vpn.IVpnPacketBuffer3").TransportContext(param0);
             }
 
             return 0;
@@ -9351,19 +6725,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"AddAtBegin", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
                 {
@@ -9394,19 +6755,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
                 {
@@ -9437,19 +6785,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -9478,23 +6813,10 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::Vpn::VpnPacketBuffer>>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnPacketBufferList", "First", "Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer>", 0).First();
                 }());
             }
             catch (...)
@@ -9518,19 +6840,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"RemoveAtBegin", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9558,19 +6867,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9594,19 +6890,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9630,19 +6913,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferStatus>(arg);
 
             {
@@ -9663,19 +6933,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9720,7 +6977,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::Vpn::VpnPacketBuffer>>(self->obj, py::member_kind::method, "Windows.Networking.Vpn.VpnPacketBufferList", "First", "Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer>", 0).First();
             }());
         }
         catch (...)
@@ -9782,19 +7039,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPickedCredential", L"AdditionalPin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9812,19 +7056,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPickedCredential", L"OldPasswordCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9842,19 +7073,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPickedCredential", L"PasskeyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9960,19 +7178,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"VpnPluginPackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9996,19 +7201,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"VpnPluginPackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -10029,19 +7221,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"CustomConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10065,19 +7244,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"CustomConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -10098,19 +7264,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ServerUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10128,23 +7281,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RequireVpnClientAppUI");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RequireVpnClientAppUI();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnPlugInProfile2>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "RequireVpnClientAppUI", "Windows.Networking.Vpn.IVpnPlugInProfile2").RequireVpnClientAppUI();
             }());
         }
         catch (...)
@@ -10164,24 +7304,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RequireVpnClientAppUI");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RequireVpnClientAppUI(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnPlugInProfile2>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "RequireVpnClientAppUI", "Windows.Networking.Vpn.IVpnPlugInProfile2").RequireVpnClientAppUI(param0);
             }
 
             return 0;
@@ -10197,23 +7324,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ConnectionStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ConnectionStatus();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnPlugInProfile2>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "ConnectionStatus", "Windows.Networking.Vpn.IVpnPlugInProfile2").ConnectionStatus();
             }());
         }
         catch (...)
@@ -10227,23 +7341,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ProfileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProfileName();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "ProfileName", "Windows.Networking.Vpn.IVpnProfile").ProfileName();
             }());
         }
         catch (...)
@@ -10263,24 +7364,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ProfileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ProfileName(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "ProfileName", "Windows.Networking.Vpn.IVpnProfile").ProfileName(param0);
             }
 
             return 0;
@@ -10296,23 +7384,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RememberCredentials");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RememberCredentials();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "RememberCredentials", "Windows.Networking.Vpn.IVpnProfile").RememberCredentials();
             }());
         }
         catch (...)
@@ -10332,24 +7407,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RememberCredentials");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RememberCredentials(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "RememberCredentials", "Windows.Networking.Vpn.IVpnProfile").RememberCredentials(param0);
             }
 
             return 0;
@@ -10365,23 +7427,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"AlwaysOn");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AlwaysOn();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "AlwaysOn", "Windows.Networking.Vpn.IVpnProfile").AlwaysOn();
             }());
         }
         catch (...)
@@ -10401,24 +7450,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"AlwaysOn");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AlwaysOn(param0);
+                py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "AlwaysOn", "Windows.Networking.Vpn.IVpnProfile").AlwaysOn(param0);
             }
 
             return 0;
@@ -10434,23 +7470,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"AppTriggers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AppTriggers();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "AppTriggers", "Windows.Networking.Vpn.IVpnProfile").AppTriggers();
             }());
         }
         catch (...)
@@ -10464,23 +7487,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"DomainNameInfoList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DomainNameInfoList();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "DomainNameInfoList", "Windows.Networking.Vpn.IVpnProfile").DomainNameInfoList();
             }());
         }
         catch (...)
@@ -10494,23 +7504,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"Routes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Routes();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "Routes", "Windows.Networking.Vpn.IVpnProfile").Routes();
             }());
         }
         catch (...)
@@ -10524,23 +7521,10 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"TrafficFilters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TrafficFilters();
+                return py::require<winrt::Windows::Networking::Vpn::IVpnProfile>(self->obj, py::member_kind::property, "Windows.Networking.Vpn.VpnPlugInProfile", "TrafficFilters", "Windows.Networking.Vpn.IVpnProfile").TrafficFilters();
             }());
         }
         catch (...)
@@ -10654,19 +7638,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"PrefixSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10690,19 +7661,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"PrefixSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -10723,19 +7681,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10759,19 +7704,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"Address");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
             {
@@ -10879,19 +7811,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6InclusionRoutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10915,19 +7834,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6InclusionRoutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
             {
@@ -10948,19 +7854,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6ExclusionRoutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10984,19 +7877,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6ExclusionRoutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
             {
@@ -11017,19 +7897,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4InclusionRoutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11053,19 +7920,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4InclusionRoutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
             {
@@ -11086,19 +7940,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4ExclusionRoutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11122,19 +7963,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4ExclusionRoutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
             {
@@ -11155,19 +7983,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"ExcludeLocalSubnets");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11191,19 +8006,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"ExcludeLocalSubnets");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -11292,19 +8094,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnSystemHealth", L"StatementOfHealth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11410,19 +8199,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RoutingPolicyType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11446,19 +8222,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RoutingPolicyType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnRoutingPolicyType>(arg);
 
             {
@@ -11479,19 +8242,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"Protocol");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11515,19 +8265,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"Protocol");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnIPProtocol>(arg);
 
             {
@@ -11548,19 +8285,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"AppId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11584,19 +8308,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"AppId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAppId>(arg);
 
             {
@@ -11617,19 +8328,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"AppClaims");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11647,19 +8345,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"LocalAddressRanges");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11677,19 +8362,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"LocalPortRanges");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11707,19 +8379,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RemoteAddressRanges");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11737,19 +8396,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RemotePortRanges");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11860,19 +8506,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowOutbound");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11896,19 +8529,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowOutbound");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -11929,19 +8549,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowInbound");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11965,19 +8572,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowInbound");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -11998,19 +8592,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"TrafficFilterList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12100,19 +8681,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnChannelStatics", L"ProcessEventAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -12318,19 +8886,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"AdditionalPin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12348,19 +8903,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"CertificateCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12378,19 +8920,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"OldPasswordCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12408,19 +8937,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"PasskeyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12657,19 +9173,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12693,19 +9196,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Bordered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -12726,19 +9216,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12762,19 +9239,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -12795,19 +9259,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12831,19 +9282,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -13131,19 +9569,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13167,19 +9592,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Compulsory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -13200,19 +9612,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13236,19 +9635,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -13269,19 +9655,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Emphasized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13305,19 +9678,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Emphasized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -13609,19 +9969,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnDomainNameInfoFactory", L"CreateVpnDomainNameInfo", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Vpn::VpnDomainNameType>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName>>(args, 2);
@@ -13846,19 +10193,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnInterfaceIdFactory", L"CreateVpnInterfaceId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert([&]()
@@ -14056,19 +10390,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnNamespaceInfoFactory", L"CreateVpnNamespaceInfo", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(args, 2);
@@ -14286,19 +10607,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPacketBufferFactory", L"CreateVpnPacketBuffer", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -14516,19 +10824,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Connect", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
 
                 {
@@ -14559,19 +10854,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Decapsulate", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferList>(args, 2);
@@ -14605,19 +10887,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Disconnect", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
 
                 {
@@ -14648,19 +10917,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Encapsulate", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferList>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferList>(args, 2);
@@ -14693,19 +10949,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"GetKeepAlivePayload", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
                 winrt::Windows::Networking::Vpn::VpnPacketBuffer param1{nullptr};
 
@@ -15077,19 +11320,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugInReconnectTransport", L"ReconnectTransport", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -15295,19 +11525,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"AlwaysOn");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15331,19 +11548,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"AlwaysOn");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -15364,19 +11568,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"AppTriggers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15394,19 +11585,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"DomainNameInfoList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15424,19 +11602,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"ProfileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15460,19 +11625,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"ProfileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -15493,19 +11645,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"RememberCredentials");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15529,19 +11668,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"RememberCredentials");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -15562,19 +11688,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"Routes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15592,19 +11705,6 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"TrafficFilters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15977,19 +12077,6 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnRouteFactory", L"CreateVpnRoute", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
 

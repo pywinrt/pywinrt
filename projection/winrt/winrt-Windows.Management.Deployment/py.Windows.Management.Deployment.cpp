@@ -47,19 +47,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"TargetVolume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -83,19 +70,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"TargetVolume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(arg);
 
             {
@@ -116,19 +90,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"StubPackageOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -152,19 +113,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"StubPackageOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Management::Deployment::StubPackageOption>(arg);
 
             {
@@ -185,19 +133,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"StageInPlace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -221,19 +156,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"StageInPlace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -254,19 +176,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"RetainFilesOnFailure");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -290,19 +199,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"RetainFilesOnFailure");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -323,19 +219,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"RequiredContentGroupOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -359,19 +242,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"RequiredContentGroupOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -392,19 +262,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"InstallAllResources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -428,19 +285,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"InstallAllResources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -461,19 +305,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"ForceUpdateFromAnyVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -497,19 +328,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"ForceUpdateFromAnyVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -530,19 +348,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"ForceTargetAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -566,19 +371,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"ForceTargetAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -599,19 +391,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"ForceAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -635,19 +414,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"ForceAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -668,19 +434,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"ExternalLocationUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -704,19 +457,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"ExternalLocationUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -737,19 +477,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"DeveloperMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -773,19 +500,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"DeveloperMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -806,19 +520,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"DeferRegistrationWhenPackagesAreInUse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -842,19 +543,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"DeferRegistrationWhenPackagesAreInUse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -875,19 +563,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"AllowUnsigned");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -911,19 +586,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"AllowUnsigned");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -944,19 +606,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"DependencyPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -974,19 +623,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"OptionalPackageFamilyNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1004,19 +640,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"OptionalPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1034,19 +657,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"RelatedPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1064,23 +674,10 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"LimitToExistingPackages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LimitToExistingPackages();
+                return py::require<winrt::Windows::Management::Deployment::IAddPackageOptions2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.AddPackageOptions", "LimitToExistingPackages", "Windows.Management.Deployment.IAddPackageOptions2").LimitToExistingPackages();
             }());
         }
         catch (...)
@@ -1100,24 +697,11 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"LimitToExistingPackages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LimitToExistingPackages(param0);
+                py::require<winrt::Windows::Management::Deployment::IAddPackageOptions2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.AddPackageOptions", "LimitToExistingPackages", "Windows.Management.Deployment.IAddPackageOptions2").LimitToExistingPackages(param0);
             }
 
             return 0;
@@ -1133,23 +717,10 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AddPackageOptions", L"ExpectedDigests");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExpectedDigests();
+                return py::require<winrt::Windows::Management::Deployment::IAddPackageOptions2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.AddPackageOptions", "ExpectedDigests", "Windows.Management.Deployment.IAddPackageOptions2").ExpectedDigests();
             }());
         }
         catch (...)
@@ -1249,19 +820,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.AppInstallerManager", L"ClearAutoUpdateSettings", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1372,19 +930,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.AppInstallerManager", L"PauseAutoUpdatesUntil", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -1416,19 +961,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.AppInstallerManager", L"SetAutoUpdateSettings", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions>(args, 1);
 
@@ -1609,19 +1141,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"Version");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1645,19 +1164,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"Version");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::PackageVersion>(arg);
 
             {
@@ -1678,19 +1184,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"UpdateBlocksActivation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1714,19 +1207,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"UpdateBlocksActivation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1747,19 +1227,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"ShowPrompt");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1783,19 +1250,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"ShowPrompt");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1816,19 +1270,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"OnLaunch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1852,19 +1293,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"OnLaunch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1885,19 +1313,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"IsAutoRepairEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1921,19 +1336,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"IsAutoRepairEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1954,19 +1356,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"HoursBetweenUpdateChecks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1990,19 +1379,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"HoursBetweenUpdateChecks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -2023,19 +1399,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"ForceUpdateFromAnyVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2059,19 +1422,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"ForceUpdateFromAnyVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2092,19 +1442,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"AutomaticBackgroundTask");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2128,19 +1465,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"AutomaticBackgroundTask");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2161,19 +1485,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"AppInstallerUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2197,19 +1508,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"AppInstallerUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -2230,19 +1528,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"DependencyPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2260,19 +1545,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"OptionalPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2290,19 +1562,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"RepairUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2320,19 +1579,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.AutoUpdateSettingsOptions", L"UpdateUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2470,19 +1716,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.CreateSharedPackageContainerOptions", L"ForceAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2506,19 +1739,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.CreateSharedPackageContainerOptions", L"ForceAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2539,19 +1759,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.CreateSharedPackageContainerOptions", L"CreateCollisionOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2575,19 +1782,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.CreateSharedPackageContainerOptions", L"CreateCollisionOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Management::Deployment::SharedPackageContainerCreationCollisionOptions>(arg);
 
             {
@@ -2608,19 +1802,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.CreateSharedPackageContainerOptions", L"Members");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2704,19 +1885,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.CreateSharedPackageContainerResult", L"Container");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2734,19 +1902,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.CreateSharedPackageContainerResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2764,19 +1919,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.CreateSharedPackageContainerResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2882,19 +2024,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.DeleteSharedPackageContainerOptions", L"ForceAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2918,19 +2047,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.DeleteSharedPackageContainerOptions", L"ForceAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2951,19 +2067,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.DeleteSharedPackageContainerOptions", L"AllUsers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2987,19 +2090,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.DeleteSharedPackageContainerOptions", L"AllUsers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -3085,19 +2175,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.DeleteSharedPackageContainerResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3115,19 +2192,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.DeleteSharedPackageContainerResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3210,19 +2274,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.DeploymentResult", L"ActivityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3240,19 +2291,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.DeploymentResult", L"ErrorText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3270,19 +2308,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.DeploymentResult", L"ExtendedErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3300,23 +2325,10 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.DeploymentResult", L"IsRegistered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsRegistered();
+                return py::require<winrt::Windows::Management::Deployment::IDeploymentResult2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.DeploymentResult", "IsRegistered", "Windows.Management.Deployment.IDeploymentResult2").IsRegistered();
             }());
         }
         catch (...)
@@ -3419,19 +2431,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.FindSharedPackageContainerOptions", L"PackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3455,19 +2454,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.FindSharedPackageContainerOptions", L"PackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3488,19 +2474,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.FindSharedPackageContainerOptions", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3524,19 +2497,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.FindSharedPackageContainerOptions", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3644,19 +2604,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageAllUserProvisioningOptions", L"OptionalPackageFamilyNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3674,19 +2621,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageAllUserProvisioningOptions", L"ProjectionOrderPackageFamilyNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3704,23 +2638,10 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageAllUserProvisioningOptions", L"DeferAutomaticRegistration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DeferAutomaticRegistration();
+                return py::require<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.PackageAllUserProvisioningOptions", "DeferAutomaticRegistration", "Windows.Management.Deployment.IPackageAllUserProvisioningOptions2").DeferAutomaticRegistration();
             }());
         }
         catch (...)
@@ -3740,24 +2661,11 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageAllUserProvisioningOptions", L"DeferAutomaticRegistration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DeferAutomaticRegistration(param0);
+                py::require<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.PackageAllUserProvisioningOptions", "DeferAutomaticRegistration", "Windows.Management.Deployment.IPackageAllUserProvisioningOptions2").DeferAutomaticRegistration(param0);
             }
 
             return 0;
@@ -3865,19 +2773,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -3898,19 +2793,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -3919,7 +2801,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AddPackageAsync(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "AddPackageAsync", "Windows.Management.Deployment.IPackageManager3", 4).AddPackageAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -3932,19 +2814,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -3955,7 +2824,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AddPackageAsync(param0, param1, param2, param3, param4, param5);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager5>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "AddPackageAsync", "Windows.Management.Deployment.IPackageManager5", 6).AddPackageAsync(param0, param1, param2, param3, param4, param5);
                 }());
             }
             catch (...)
@@ -3968,19 +2837,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageAsync", 7);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(7);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -3992,7 +2848,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AddPackageAsync(param0, param1, param2, param3, param4, param5, param6);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager6>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "AddPackageAsync", "Windows.Management.Deployment.IPackageManager6", 7).AddPackageAsync(param0, param1, param2, param3, param4, param5, param6);
                 }());
             }
             catch (...)
@@ -4016,19 +2872,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageByAppInstallerFileAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::AddPackageByAppInstallerOptions>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 2);
@@ -4036,7 +2879,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AddPackageByAppInstallerFileAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager6>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "AddPackageByAppInstallerFileAsync", "Windows.Management.Deployment.IPackageManager6", 3).AddPackageByAppInstallerFileAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -4060,26 +2903,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageByUriAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::AddPackageOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AddPackageByUriAsync(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager9>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "AddPackageByUriAsync", "Windows.Management.Deployment.IPackageManager9", 2).AddPackageByUriAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -4103,25 +2933,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageVolumeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AddPackageVolumeAsync(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "AddPackageVolumeAsync", "Windows.Management.Deployment.IPackageManager3", 1).AddPackageVolumeAsync(param0);
                 }());
             }
             catch (...)
@@ -4145,19 +2962,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"CleanupPackageForUserAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -4188,25 +2992,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"ClearPackageStatus", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageStatus>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ClearPackageStatus(param0, param1);
+                    py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "ClearPackageStatus", "Windows.Management.Deployment.IPackageManager3", 2).ClearPackageStatus(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -4232,25 +3023,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"DeprovisionPackageForAllUsersAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeprovisionPackageForAllUsersAsync(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager8>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "DeprovisionPackageForAllUsersAsync", "Windows.Management.Deployment.IPackageManager8", 1).DeprovisionPackageForAllUsersAsync(param0);
                 }());
             }
             catch (...)
@@ -4274,19 +3052,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4316,19 +3081,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackageForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -4359,25 +3111,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackageVolume", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackageVolume(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "FindPackageVolume", "Windows.Management.Deployment.IPackageManager3", 1).FindPackageVolume(param0);
                 }());
             }
             catch (...)
@@ -4401,23 +3140,10 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackageVolumes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackageVolumes();
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "FindPackageVolumes", "Windows.Management.Deployment.IPackageManager3", 0).FindPackageVolumes();
                 }());
             }
             catch (...)
@@ -4441,19 +3167,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackages", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4470,19 +3183,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackages", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4501,19 +3201,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackages", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -4544,19 +3231,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUser", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4575,19 +3249,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -4607,19 +3268,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUser", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -4651,26 +3299,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUserWithPackageTypes", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "FindPackagesForUserWithPackageTypes", "Windows.Management.Deployment.IPackageManager2", 2).FindPackagesForUserWithPackageTypes(param0, param1);
                 }());
             }
             catch (...)
@@ -4683,19 +3318,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUserWithPackageTypes", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 2);
@@ -4703,7 +3325,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1, param2);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "FindPackagesForUserWithPackageTypes", "Windows.Management.Deployment.IPackageManager2", 3).FindPackagesForUserWithPackageTypes(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -4716,19 +3338,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUserWithPackageTypes", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -4737,7 +3346,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "FindPackagesForUserWithPackageTypes", "Windows.Management.Deployment.IPackageManager2", 4).FindPackagesForUserWithPackageTypes(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -4761,25 +3370,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesWithPackageTypes", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackagesWithPackageTypes(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "FindPackagesWithPackageTypes", "Windows.Management.Deployment.IPackageManager2", 1).FindPackagesWithPackageTypes(param0);
                 }());
             }
             catch (...)
@@ -4792,26 +3388,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesWithPackageTypes", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackagesWithPackageTypes(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "FindPackagesWithPackageTypes", "Windows.Management.Deployment.IPackageManager2", 2).FindPackagesWithPackageTypes(param0, param1);
                 }());
             }
             catch (...)
@@ -4824,19 +3407,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesWithPackageTypes", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 2);
@@ -4844,7 +3414,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackagesWithPackageTypes(param0, param1, param2);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "FindPackagesWithPackageTypes", "Windows.Management.Deployment.IPackageManager2", 3).FindPackagesWithPackageTypes(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -4868,23 +3438,10 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindProvisionedPackages", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindProvisionedPackages();
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager9>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "FindProvisionedPackages", "Windows.Management.Deployment.IPackageManager9", 0).FindProvisionedPackages();
                 }());
             }
             catch (...)
@@ -4908,19 +3465,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindUsers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4950,23 +3494,10 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"GetDefaultPackageVolume", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetDefaultPackageVolume();
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "GetDefaultPackageVolume", "Windows.Management.Deployment.IPackageManager3", 0).GetDefaultPackageVolume();
                 }());
             }
             catch (...)
@@ -4990,25 +3521,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"GetPackageStubPreference", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetPackageStubPreference(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager9>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "GetPackageStubPreference", "Windows.Management.Deployment.IPackageManager9", 1).GetPackageStubPreference(param0);
                 }());
             }
             catch (...)
@@ -5032,23 +3550,10 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"GetPackageVolumesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetPackageVolumesAsync();
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager4>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "GetPackageVolumesAsync", "Windows.Management.Deployment.IPackageManager4", 0).GetPackageVolumesAsync();
                 }());
             }
             catch (...)
@@ -5072,25 +3577,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"IsPackageRemovalPending", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsPackageRemovalPending(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager12>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "IsPackageRemovalPending", "Windows.Management.Deployment.IPackageManager12", 1).IsPackageRemovalPending(param0);
                 }());
             }
             catch (...)
@@ -5114,25 +3606,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"IsPackageRemovalPendingByUri", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsPackageRemovalPendingByUri(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager12>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "IsPackageRemovalPendingByUri", "Windows.Management.Deployment.IPackageManager12", 1).IsPackageRemovalPendingByUri(param0);
                 }());
             }
             catch (...)
@@ -5156,26 +3635,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"IsPackageRemovalPendingByUriForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsPackageRemovalPendingByUriForUser(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager12>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "IsPackageRemovalPendingByUriForUser", "Windows.Management.Deployment.IPackageManager12", 2).IsPackageRemovalPendingByUriForUser(param0, param1);
                 }());
             }
             catch (...)
@@ -5199,26 +3665,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"IsPackageRemovalPendingForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsPackageRemovalPendingForUser(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager12>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "IsPackageRemovalPendingForUser", "Windows.Management.Deployment.IPackageManager12", 2).IsPackageRemovalPendingForUser(param0, param1);
                 }());
             }
             catch (...)
@@ -5242,19 +3695,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"MovePackageToVolumeAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 2);
@@ -5262,7 +3702,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MovePackageToVolumeAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "MovePackageToVolumeAsync", "Windows.Management.Deployment.IPackageManager3", 3).MovePackageToVolumeAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -5286,25 +3726,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"ProvisionPackageForAllUsersAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProvisionPackageForAllUsersAsync(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager6>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "ProvisionPackageForAllUsersAsync", "Windows.Management.Deployment.IPackageManager6", 1).ProvisionPackageForAllUsersAsync(param0);
                 }());
             }
             catch (...)
@@ -5317,26 +3744,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"ProvisionPackageForAllUsersAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ProvisionPackageForAllUsersAsync(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager10>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "ProvisionPackageForAllUsersAsync", "Windows.Management.Deployment.IPackageManager10", 2).ProvisionPackageForAllUsersAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5360,19 +3774,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RegisterPackageAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -5393,19 +3794,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RegisterPackageAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -5414,7 +3802,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RegisterPackageAsync(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RegisterPackageAsync", "Windows.Management.Deployment.IPackageManager3", 4).RegisterPackageAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -5438,19 +3826,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RegisterPackageByFamilyNameAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -5460,7 +3835,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RegisterPackageByFamilyNameAsync(param0, param1, param2, param3, param4);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager5>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RegisterPackageByFamilyNameAsync", "Windows.Management.Deployment.IPackageManager5", 5).RegisterPackageByFamilyNameAsync(param0, param1, param2, param3, param4);
                 }());
             }
             catch (...)
@@ -5484,19 +3859,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RegisterPackageByFullNameAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -5504,7 +3866,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RegisterPackageByFullNameAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RegisterPackageByFullNameAsync", "Windows.Management.Deployment.IPackageManager2", 3).RegisterPackageByFullNameAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -5528,26 +3890,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RegisterPackageByUriAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::RegisterPackageOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RegisterPackageByUriAsync(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager9>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RegisterPackageByUriAsync", "Windows.Management.Deployment.IPackageManager9", 2).RegisterPackageByUriAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5571,26 +3920,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RegisterPackagesByFullNameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::RegisterPackageOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RegisterPackagesByFullNameAsync(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager9>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RegisterPackagesByFullNameAsync", "Windows.Management.Deployment.IPackageManager9", 2).RegisterPackagesByFullNameAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5614,19 +3950,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RemovePackageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -5645,26 +3968,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RemovePackageAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::RemovalOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RemovePackageAsync(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RemovePackageAsync", "Windows.Management.Deployment.IPackageManager2", 2).RemovePackageAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5688,26 +3998,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RemovePackageByUriAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RemovePackageByUriAsync(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager11>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RemovePackageByUriAsync", "Windows.Management.Deployment.IPackageManager11", 2).RemovePackageByUriAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5731,25 +4028,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RemovePackageVolumeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RemovePackageVolumeAsync(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RemovePackageVolumeAsync", "Windows.Management.Deployment.IPackageManager3", 1).RemovePackageVolumeAsync(param0);
                 }());
             }
             catch (...)
@@ -5773,19 +4057,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RequestAddPackageAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -5796,7 +4067,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestAddPackageAsync(param0, param1, param2, param3, param4, param5);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager6>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RequestAddPackageAsync", "Windows.Management.Deployment.IPackageManager6", 6).RequestAddPackageAsync(param0, param1, param2, param3, param4, param5);
                 }());
             }
             catch (...)
@@ -5809,19 +4080,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RequestAddPackageAsync", 7);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(7);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -5833,7 +4091,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestAddPackageAsync(param0, param1, param2, param3, param4, param5, param6);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager7>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RequestAddPackageAsync", "Windows.Management.Deployment.IPackageManager7", 7).RequestAddPackageAsync(param0, param1, param2, param3, param4, param5, param6);
                 }());
             }
             catch (...)
@@ -5857,19 +4115,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RequestAddPackageByAppInstallerFileAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::AddPackageByAppInstallerOptions>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 2);
@@ -5877,7 +4122,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestAddPackageByAppInstallerFileAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager6>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "RequestAddPackageByAppInstallerFileAsync", "Windows.Management.Deployment.IPackageManager6", 3).RequestAddPackageByAppInstallerFileAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -5901,24 +4146,11 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"SetDefaultPackageVolume", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetDefaultPackageVolume(param0);
+                    py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "SetDefaultPackageVolume", "Windows.Management.Deployment.IPackageManager3", 1).SetDefaultPackageVolume(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -5944,19 +4176,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"SetPackageState", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageState>(args, 1);
 
@@ -5988,25 +4207,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"SetPackageStatus", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageStatus>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetPackageStatus(param0, param1);
+                    py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "SetPackageStatus", "Windows.Management.Deployment.IPackageManager3", 2).SetPackageStatus(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -6032,25 +4238,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"SetPackageStubPreference", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageStubPreference>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetPackageStubPreference(param0, param1);
+                    py::require<winrt::Windows::Management::Deployment::IPackageManager9>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "SetPackageStubPreference", "Windows.Management.Deployment.IPackageManager9", 2).SetPackageStubPreference(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -6076,25 +4269,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"SetPackageVolumeOfflineAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetPackageVolumeOfflineAsync(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "SetPackageVolumeOfflineAsync", "Windows.Management.Deployment.IPackageManager3", 1).SetPackageVolumeOfflineAsync(param0);
                 }());
             }
             catch (...)
@@ -6118,25 +4298,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"SetPackageVolumeOnlineAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SetPackageVolumeOnlineAsync(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "SetPackageVolumeOnlineAsync", "Windows.Management.Deployment.IPackageManager3", 1).SetPackageVolumeOnlineAsync(param0);
                 }());
             }
             catch (...)
@@ -6160,19 +4327,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
 
@@ -6192,19 +4346,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -6212,7 +4353,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StagePackageAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "StagePackageAsync", "Windows.Management.Deployment.IPackageManager2", 3).StagePackageAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -6225,19 +4366,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -6246,7 +4374,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StagePackageAsync(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "StagePackageAsync", "Windows.Management.Deployment.IPackageManager3", 4).StagePackageAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -6259,19 +4387,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -6282,7 +4397,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StagePackageAsync(param0, param1, param2, param3, param4, param5);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager5>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "StagePackageAsync", "Windows.Management.Deployment.IPackageManager5", 6).StagePackageAsync(param0, param1, param2, param3, param4, param5);
                 }());
             }
             catch (...)
@@ -6295,19 +4410,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 7);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(7);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -6319,7 +4421,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StagePackageAsync(param0, param1, param2, param3, param4, param5, param6);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager6>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "StagePackageAsync", "Windows.Management.Deployment.IPackageManager6", 7).StagePackageAsync(param0, param1, param2, param3, param4, param5, param6);
                 }());
             }
             catch (...)
@@ -6343,26 +4445,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageByUriAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::StagePackageOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StagePackageByUriAsync(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager9>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "StagePackageByUriAsync", "Windows.Management.Deployment.IPackageManager9", 2).StagePackageByUriAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -6386,25 +4475,12 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StageUserDataAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StageUserDataAsync(param0);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "StageUserDataAsync", "Windows.Management.Deployment.IPackageManager2", 1).StageUserDataAsync(param0);
                 }());
             }
             catch (...)
@@ -6417,26 +4493,13 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StageUserDataAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StageUserDataAsync(param0, param1);
+                    return py::require<winrt::Windows::Management::Deployment::IPackageManager3>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageManager", "StageUserDataAsync", "Windows.Management.Deployment.IPackageManager3", 2).StageUserDataAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -6460,19 +4523,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"UpdatePackageAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
@@ -6500,23 +4550,10 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageManager", L"DebugSettings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DebugSettings();
+                return py::require<winrt::Windows::Management::Deployment::IPackageManager5>(self->obj, py::member_kind::property, "Windows.Management.Deployment.PackageManager", "DebugSettings", "Windows.Management.Deployment.IPackageManager5").DebugSettings();
             }());
         }
         catch (...)
@@ -6644,19 +4681,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManagerDebugSettings", L"SetContentGroupStateAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Package>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::PackageContentGroupState>(args, 2);
@@ -6677,19 +4701,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManagerDebugSettings", L"SetContentGroupStateAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Package>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::PackageContentGroupState>(args, 2);
@@ -6782,19 +4793,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageUserInformation", L"InstallState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6812,19 +4810,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageUserInformation", L"UserSecurityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6911,19 +4896,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -6953,19 +4925,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackageForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -6996,19 +4955,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackages", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7025,19 +4971,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackages", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7056,19 +4989,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackages", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -7099,19 +5019,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUser", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -7130,19 +5037,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -7162,19 +5056,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUser", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -7206,19 +5087,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUserWithPackageTypes", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
 
@@ -7238,19 +5106,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUserWithPackageTypes", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -7271,19 +5126,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUserWithPackageTypes", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -7316,19 +5158,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesWithPackageTypes", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 0);
 
                 return py::convert([&]()
@@ -7347,19 +5176,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesWithPackageTypes", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -7379,19 +5195,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesWithPackageTypes", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -7423,23 +5226,10 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"GetAvailableSpaceAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAvailableSpaceAsync();
+                    return py::require<winrt::Windows::Management::Deployment::IPackageVolume2>(self->obj, py::member_kind::method, "Windows.Management.Deployment.PackageVolume", "GetAvailableSpaceAsync", "Windows.Management.Deployment.IPackageVolume2", 0).GetAvailableSpaceAsync();
                 }());
             }
             catch (...)
@@ -7459,19 +5249,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageVolume", L"IsOffline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7489,19 +5266,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageVolume", L"IsSystemVolume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7519,19 +5283,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageVolume", L"MountPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7549,19 +5300,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageVolume", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7579,19 +5317,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageVolume", L"PackageStorePath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7609,19 +5334,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageVolume", L"SupportsHardLinks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7639,23 +5351,10 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageVolume", L"IsAppxInstallSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsAppxInstallSupported();
+                return py::require<winrt::Windows::Management::Deployment::IPackageVolume2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.PackageVolume", "IsAppxInstallSupported", "Windows.Management.Deployment.IPackageVolume2").IsAppxInstallSupported();
             }());
         }
         catch (...)
@@ -7669,23 +5368,10 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageVolume", L"IsFullTrustPackageSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsFullTrustPackageSupported();
+                return py::require<winrt::Windows::Management::Deployment::IPackageVolume2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.PackageVolume", "IsFullTrustPackageSupported", "Windows.Management.Deployment.IPackageVolume2").IsFullTrustPackageSupported();
             }());
         }
         catch (...)
@@ -7799,19 +5485,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"StageInPlace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7835,19 +5508,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"StageInPlace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -7868,19 +5528,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"InstallAllResources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7904,19 +5551,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"InstallAllResources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -7937,19 +5571,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"ForceUpdateFromAnyVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7973,19 +5594,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"ForceUpdateFromAnyVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -8006,19 +5614,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"ForceTargetAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8042,19 +5637,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"ForceTargetAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -8075,19 +5657,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"ForceAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8111,19 +5680,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"ForceAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -8144,19 +5700,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"ExternalLocationUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8180,19 +5723,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"ExternalLocationUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -8213,19 +5743,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"DeveloperMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8249,19 +5766,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"DeveloperMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -8282,19 +5786,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"DeferRegistrationWhenPackagesAreInUse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8318,19 +5809,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"DeferRegistrationWhenPackagesAreInUse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -8351,19 +5829,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"AppDataVolume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8387,19 +5852,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"AppDataVolume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(arg);
 
             {
@@ -8420,19 +5872,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"AllowUnsigned");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8456,19 +5895,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"AllowUnsigned");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -8489,19 +5915,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"DependencyPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8519,19 +5932,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"OptionalPackageFamilyNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8549,23 +5949,10 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RegisterPackageOptions", L"ExpectedDigests");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExpectedDigests();
+                return py::require<winrt::Windows::Management::Deployment::IRegisterPackageOptions2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.RegisterPackageOptions", "ExpectedDigests", "Windows.Management.Deployment.IRegisterPackageOptions2").ExpectedDigests();
             }());
         }
         catch (...)
@@ -8677,19 +6064,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"RemoveForAllUsers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8713,19 +6087,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"RemoveForAllUsers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -8746,19 +6107,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"PreserveRoamableApplicationData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8782,19 +6130,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"PreserveRoamableApplicationData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -8815,19 +6150,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"PreserveApplicationData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8851,19 +6173,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"PreserveApplicationData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -8884,23 +6193,10 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"DeferRemovalWhenPackagesAreInUse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DeferRemovalWhenPackagesAreInUse();
+                return py::require<winrt::Windows::Management::Deployment::IRemovePackageOptions2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.RemovePackageOptions", "DeferRemovalWhenPackagesAreInUse", "Windows.Management.Deployment.IRemovePackageOptions2").DeferRemovalWhenPackagesAreInUse();
             }());
         }
         catch (...)
@@ -8920,24 +6216,11 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"DeferRemovalWhenPackagesAreInUse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DeferRemovalWhenPackagesAreInUse(param0);
+                py::require<winrt::Windows::Management::Deployment::IRemovePackageOptions2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.RemovePackageOptions", "DeferRemovalWhenPackagesAreInUse", "Windows.Management.Deployment.IRemovePackageOptions2").DeferRemovalWhenPackagesAreInUse(param0);
             }
 
             return 0;
@@ -9024,19 +6307,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.SharedPackageContainer", L"GetMembers", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9064,19 +6334,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.SharedPackageContainer", L"RemovePackageFamily", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions>(args, 1);
 
@@ -9107,19 +6364,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.SharedPackageContainer", L"ResetData", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9143,19 +6387,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.SharedPackageContainer", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9173,19 +6404,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.SharedPackageContainer", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9275,19 +6493,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.SharedPackageContainerManager", L"CreateContainer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions>(args, 1);
 
@@ -9318,19 +6523,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.SharedPackageContainerManager", L"DeleteContainer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions>(args, 1);
 
@@ -9361,19 +6553,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.SharedPackageContainerManager", L"FindContainers", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9390,19 +6569,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.SharedPackageContainerManager", L"FindContainers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions>(args, 0);
 
                 return py::convert([&]()
@@ -9432,19 +6598,6 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.SharedPackageContainerManager", L"GetContainer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -9707,19 +6860,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.SharedPackageContainerMember", L"PackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9823,19 +6963,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"TargetVolume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9859,19 +6986,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"TargetVolume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(arg);
 
             {
@@ -9892,19 +7006,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"StubPackageOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9928,19 +7029,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"StubPackageOption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Management::Deployment::StubPackageOption>(arg);
 
             {
@@ -9961,19 +7049,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"StageInPlace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9997,19 +7072,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"StageInPlace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10030,19 +7092,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"RequiredContentGroupOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10066,19 +7115,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"RequiredContentGroupOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10099,19 +7135,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"InstallAllResources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10135,19 +7158,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"InstallAllResources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10168,19 +7178,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"ForceUpdateFromAnyVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10204,19 +7201,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"ForceUpdateFromAnyVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10237,19 +7221,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"ExternalLocationUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10273,19 +7244,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"ExternalLocationUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -10306,19 +7264,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"DeveloperMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10342,19 +7287,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"DeveloperMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10375,19 +7307,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"AllowUnsigned");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10411,19 +7330,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"AllowUnsigned");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10444,19 +7350,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"DependencyPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10474,19 +7367,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"OptionalPackageFamilyNames");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10504,19 +7384,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"OptionalPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10534,19 +7401,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"RelatedPackageUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10564,23 +7418,10 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.StagePackageOptions", L"ExpectedDigests");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExpectedDigests();
+                return py::require<winrt::Windows::Management::Deployment::IStagePackageOptions2>(self->obj, py::member_kind::property, "Windows.Management.Deployment.StagePackageOptions", "ExpectedDigests", "Windows.Management.Deployment.IStagePackageOptions2").ExpectedDigests();
             }());
         }
         catch (...)
@@ -10693,19 +7534,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.UpdateSharedPackageContainerOptions", L"RequirePackagesPresent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10729,19 +7557,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.UpdateSharedPackageContainerOptions", L"RequirePackagesPresent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10762,19 +7577,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.UpdateSharedPackageContainerOptions", L"ForceAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10798,19 +7600,6 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.UpdateSharedPackageContainerOptions", L"ForceAppShutdown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10896,19 +7685,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.UpdateSharedPackageContainerResult", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10926,19 +7702,6 @@ namespace py::cpp::Windows::Management::Deployment
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.UpdateSharedPackageContainerResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

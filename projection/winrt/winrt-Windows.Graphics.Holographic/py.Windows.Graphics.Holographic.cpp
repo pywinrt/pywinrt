@@ -29,19 +29,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"SetFarPlaneDistance", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
@@ -72,19 +59,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"SetNearPlaneDistance", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
@@ -111,19 +85,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"ViewportScaleFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -147,19 +108,6 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"ViewportScaleFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -180,19 +128,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -210,19 +145,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"IsStereo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -240,19 +162,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"RenderTargetSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -270,23 +179,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"Display");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Display();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera2>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "Display", "Windows.Graphics.Holographic.IHolographicCamera2").Display();
             }());
         }
         catch (...)
@@ -300,23 +196,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"LeftViewportParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LeftViewportParameters();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera2>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "LeftViewportParameters", "Windows.Graphics.Holographic.IHolographicCamera2").LeftViewportParameters();
             }());
         }
         catch (...)
@@ -330,23 +213,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"RightViewportParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RightViewportParameters();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera2>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "RightViewportParameters", "Windows.Graphics.Holographic.IHolographicCamera2").RightViewportParameters();
             }());
         }
         catch (...)
@@ -360,23 +230,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"IsPrimaryLayerEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPrimaryLayerEnabled();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera3>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "IsPrimaryLayerEnabled", "Windows.Graphics.Holographic.IHolographicCamera3").IsPrimaryLayerEnabled();
             }());
         }
         catch (...)
@@ -396,24 +253,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"IsPrimaryLayerEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsPrimaryLayerEnabled(param0);
+                py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera3>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "IsPrimaryLayerEnabled", "Windows.Graphics.Holographic.IHolographicCamera3").IsPrimaryLayerEnabled(param0);
             }
 
             return 0;
@@ -429,23 +273,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"MaxQuadLayerCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxQuadLayerCount();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera3>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "MaxQuadLayerCount", "Windows.Graphics.Holographic.IHolographicCamera3").MaxQuadLayerCount();
             }());
         }
         catch (...)
@@ -459,23 +290,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"QuadLayers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.QuadLayers();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera3>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "QuadLayers", "Windows.Graphics.Holographic.IHolographicCamera3").QuadLayers();
             }());
         }
         catch (...)
@@ -489,23 +307,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"CanOverrideViewport");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanOverrideViewport();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera4>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "CanOverrideViewport", "Windows.Graphics.Holographic.IHolographicCamera4").CanOverrideViewport();
             }());
         }
         catch (...)
@@ -519,23 +324,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"IsHardwareContentProtectionEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsHardwareContentProtectionEnabled();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera5>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "IsHardwareContentProtectionEnabled", "Windows.Graphics.Holographic.IHolographicCamera5").IsHardwareContentProtectionEnabled();
             }());
         }
         catch (...)
@@ -555,24 +347,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"IsHardwareContentProtectionEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsHardwareContentProtectionEnabled(param0);
+                py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera5>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "IsHardwareContentProtectionEnabled", "Windows.Graphics.Holographic.IHolographicCamera5").IsHardwareContentProtectionEnabled(param0);
             }
 
             return 0;
@@ -588,23 +367,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"IsHardwareContentProtectionSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsHardwareContentProtectionSupported();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera5>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "IsHardwareContentProtectionSupported", "Windows.Graphics.Holographic.IHolographicCamera5").IsHardwareContentProtectionSupported();
             }());
         }
         catch (...)
@@ -618,23 +384,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"ViewConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ViewConfiguration();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCamera6>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCamera", "ViewConfiguration", "Windows.Graphics.Holographic.IHolographicCamera6").ViewConfiguration();
             }());
         }
         catch (...)
@@ -731,24 +484,11 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"OverrideProjectionTransform", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.OverrideProjectionTransform(param0);
+                    py::require<winrt::Windows::Graphics::Holographic::IHolographicCameraPose2>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicCameraPose", "OverrideProjectionTransform", "Windows.Graphics.Holographic.IHolographicCameraPose2", 1).OverrideProjectionTransform(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -774,25 +514,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"OverrideViewTransform", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.OverrideViewTransform(param0, param1);
+                    py::require<winrt::Windows::Graphics::Holographic::IHolographicCameraPose2>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicCameraPose", "OverrideViewTransform", "Windows.Graphics.Holographic.IHolographicCameraPose2", 2).OverrideViewTransform(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -818,25 +545,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"OverrideViewport", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.OverrideViewport(param0, param1);
+                    py::require<winrt::Windows::Graphics::Holographic::IHolographicCameraPose2>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicCameraPose", "OverrideViewport", "Windows.Graphics.Holographic.IHolographicCameraPose2", 2).OverrideViewport(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -862,19 +576,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"TryGetCullingFrustum", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert([&]()
@@ -904,19 +605,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"TryGetViewTransform", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert([&]()
@@ -946,19 +634,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"TryGetVisibleFrustum", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
                 return py::convert([&]()
@@ -984,19 +659,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"FarPlaneDistance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1014,19 +676,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"HolographicCamera");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1044,19 +693,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"NearPlaneDistance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1074,19 +710,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"ProjectionTransform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1104,19 +727,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraPose", L"Viewport");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1212,24 +822,11 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"CommitDirect3D11DepthBuffer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.CommitDirect3D11DepthBuffer(param0);
+                    py::require<winrt::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters2>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicCameraRenderingParameters", "CommitDirect3D11DepthBuffer", "Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2", 1).CommitDirect3D11DepthBuffer(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1255,19 +852,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"SetFocusPoint", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
@@ -1288,19 +872,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"SetFocusPoint", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
@@ -1322,19 +893,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"SetFocusPoint", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
@@ -1364,19 +922,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"Direct3D11BackBuffer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1394,19 +939,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"Direct3D11Device");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1424,23 +956,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"ReprojectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ReprojectionMode();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters2>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCameraRenderingParameters", "ReprojectionMode", "Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2").ReprojectionMode();
             }());
         }
         catch (...)
@@ -1460,24 +979,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"ReprojectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicReprojectionMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ReprojectionMode(param0);
+                py::require<winrt::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters2>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCameraRenderingParameters", "ReprojectionMode", "Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2").ReprojectionMode(param0);
             }
 
             return 0;
@@ -1493,23 +999,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"IsContentProtectionEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsContentProtectionEnabled();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters3>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCameraRenderingParameters", "IsContentProtectionEnabled", "Windows.Graphics.Holographic.IHolographicCameraRenderingParameters3").IsContentProtectionEnabled();
             }());
         }
         catch (...)
@@ -1529,24 +1022,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"IsContentProtectionEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsContentProtectionEnabled(param0);
+                py::require<winrt::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters3>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCameraRenderingParameters", "IsContentProtectionEnabled", "Windows.Graphics.Holographic.IHolographicCameraRenderingParameters3").IsContentProtectionEnabled(param0);
             }
 
             return 0;
@@ -1562,23 +1042,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"DepthReprojectionMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DepthReprojectionMethod();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters4>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCameraRenderingParameters", "DepthReprojectionMethod", "Windows.Graphics.Holographic.IHolographicCameraRenderingParameters4").DepthReprojectionMethod();
             }());
         }
         catch (...)
@@ -1598,24 +1065,11 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"DepthReprojectionMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicDepthReprojectionMethod>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DepthReprojectionMethod(param0);
+                py::require<winrt::Windows::Graphics::Holographic::IHolographicCameraRenderingParameters4>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicCameraRenderingParameters", "DepthReprojectionMethod", "Windows.Graphics.Holographic.IHolographicCameraRenderingParameters4").DepthReprojectionMethod(param0);
             }
 
             return 0;
@@ -1701,19 +1155,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraViewportParameters", L"HiddenAreaMesh");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1731,19 +1172,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCameraViewportParameters", L"VisibleAreaMesh");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1870,25 +1298,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicDisplay", L"TryGetViewConfiguration", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicViewConfigurationKind>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.TryGetViewConfiguration(param0);
+                    return py::require<winrt::Windows::Graphics::Holographic::IHolographicDisplay3>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicDisplay", "TryGetViewConfiguration", "Windows.Graphics.Holographic.IHolographicDisplay3", 1).TryGetViewConfiguration(param0);
                 }());
             }
             catch (...)
@@ -1908,19 +1323,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicDisplay", L"AdapterId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1938,19 +1340,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicDisplay", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1968,19 +1357,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicDisplay", L"IsOpaque");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1998,19 +1374,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicDisplay", L"IsStereo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2028,19 +1391,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicDisplay", L"MaxViewportSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2058,19 +1408,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicDisplay", L"SpatialLocator");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2088,23 +1425,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicDisplay", L"RefreshRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RefreshRate();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicDisplay2>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicDisplay", "RefreshRate", "Windows.Graphics.Holographic.IHolographicDisplay2").RefreshRate();
             }());
         }
         catch (...)
@@ -2215,25 +1539,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"GetQuadLayerUpdateParameters", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicQuadLayer>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetQuadLayerUpdateParameters(param0);
+                    return py::require<winrt::Windows::Graphics::Holographic::IHolographicFrame2>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicFrame", "GetQuadLayerUpdateParameters", "Windows.Graphics.Holographic.IHolographicFrame2", 1).GetQuadLayerUpdateParameters(param0);
                 }());
             }
             catch (...)
@@ -2257,19 +1568,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"GetRenderingParameters", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicCameraPose>(args, 0);
 
                 return py::convert([&]()
@@ -2299,19 +1597,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"PresentUsingCurrentPrediction", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2328,19 +1613,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"PresentUsingCurrentPrediction", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Holographic::HolographicFramePresentWaitBehavior>(args, 0);
 
                 return py::convert([&]()
@@ -2370,19 +1642,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"UpdateCurrentPrediction", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.UpdateCurrentPrediction();
@@ -2411,19 +1670,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"WaitForFrameToFinish", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.WaitForFrameToFinish();
@@ -2448,19 +1694,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"AddedCameras");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2478,19 +1711,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"CurrentPrediction");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2508,19 +1728,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2538,19 +1745,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"RemovedCameras");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2568,23 +1762,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrame", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicFrame3>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicFrame", "Id", "Windows.Graphics.Holographic.IHolographicFrame3").Id();
             }());
         }
         catch (...)
@@ -2671,19 +1852,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFramePrediction", L"CameraPoses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2701,19 +1869,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFramePrediction", L"Timestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2800,22 +1955,9 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicFramePresentationMonitor", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicFramePresentationMonitor", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -2841,19 +1983,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicFramePresentationMonitor", L"ReadReports", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2908,7 +2037,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicFramePresentationMonitor", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -2967,19 +2096,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFramePresentationReport", L"AppGpuDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2997,19 +2113,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFramePresentationReport", L"AppGpuOverrun");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3027,19 +2130,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFramePresentationReport", L"CompositorGpuDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3057,19 +2147,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFramePresentationReport", L"MissedPresentationOpportunityCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3087,19 +2164,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFramePresentationReport", L"PresentationCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3185,19 +2249,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrameRenderingReport", L"FrameId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3215,19 +2266,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrameRenderingReport", L"MissedLatchCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3245,19 +2283,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrameRenderingReport", L"SystemRelativeActualGpuFinishTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3275,19 +2300,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrameRenderingReport", L"SystemRelativeFrameReadyTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3305,19 +2317,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrameRenderingReport", L"SystemRelativeTargetLatchTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3407,22 +2406,9 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicFrameScanoutMonitor", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicFrameScanoutMonitor", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -3448,19 +2434,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicFrameScanoutMonitor", L"ReadReports", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3515,7 +2488,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicFrameScanoutMonitor", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -3574,19 +2547,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrameScanoutReport", L"MissedScanoutCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3604,19 +2564,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrameScanoutReport", L"RenderingReport");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3634,19 +2581,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrameScanoutReport", L"SystemRelativeLatchTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3664,19 +2598,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrameScanoutReport", L"SystemRelativePhotonTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3694,19 +2615,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicFrameScanoutReport", L"SystemRelativeScanoutStartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3836,22 +2744,9 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicQuadLayer", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicQuadLayer", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -3873,19 +2768,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicQuadLayer", L"PixelFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3903,19 +2785,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicQuadLayer", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3964,7 +2833,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicQuadLayer", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -4028,19 +2897,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters", L"AcquireBufferToUpdateContent", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4068,23 +2924,10 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters", L"AcquireBufferToUpdateContentWithHardwareProtection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.AcquireBufferToUpdateContentWithHardwareProtection();
+                    return py::require<winrt::Windows::Graphics::Holographic::IHolographicQuadLayerUpdateParameters2>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters", "AcquireBufferToUpdateContentWithHardwareProtection", "Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters2", 0).AcquireBufferToUpdateContentWithHardwareProtection();
                 }());
             }
             catch (...)
@@ -4108,19 +2951,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters", L"UpdateContentProtectionEnabled", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -4151,19 +2981,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters", L"UpdateExtents", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
 
                 {
@@ -4194,19 +3011,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters", L"UpdateLocationWithDisplayRelativeMode", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
 
@@ -4238,19 +3042,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters", L"UpdateLocationWithStationaryMode", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 2);
@@ -4283,19 +3074,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters", L"UpdateViewport", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 {
@@ -4322,23 +3100,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters", L"CanAcquireWithHardwareProtection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanAcquireWithHardwareProtection();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicQuadLayerUpdateParameters2>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters", "CanAcquireWithHardwareProtection", "Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters2").CanAcquireWithHardwareProtection();
             }());
         }
         catch (...)
@@ -4469,25 +3234,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"CreateFramePresentationMonitor", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFramePresentationMonitor(param0);
+                    return py::require<winrt::Windows::Graphics::Holographic::IHolographicSpace2>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicSpace", "CreateFramePresentationMonitor", "Windows.Graphics.Holographic.IHolographicSpace2", 1).CreateFramePresentationMonitor(param0);
                 }());
             }
             catch (...)
@@ -4511,25 +3263,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"CreateFrameScanoutMonitor", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateFrameScanoutMonitor(param0);
+                    return py::require<winrt::Windows::Graphics::Holographic::IHolographicSpace3>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicSpace", "CreateFrameScanoutMonitor", "Windows.Graphics.Holographic.IHolographicSpace3", 1).CreateFrameScanoutMonitor(param0);
                 }());
             }
             catch (...)
@@ -4553,19 +3292,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"CreateNextFrame", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4593,19 +3319,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"SetDirect3D11Device", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 0);
 
                 {
@@ -4636,22 +3349,9 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"WaitForNextFrameReady", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.WaitForNextFrameReady();
+                    py::require<winrt::Windows::Graphics::Holographic::IHolographicSpace2>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicSpace", "WaitForNextFrameReady", "Windows.Graphics.Holographic.IHolographicSpace2", 0).WaitForNextFrameReady();
                 }
 
                 Py_RETURN_NONE;
@@ -4677,24 +3377,11 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"WaitForNextFrameReadyWithHeadStart", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.WaitForNextFrameReadyWithHeadStart(param0);
+                    py::require<winrt::Windows::Graphics::Holographic::IHolographicSpace2>(self->obj, py::member_kind::method, "Windows.Graphics.Holographic.HolographicSpace", "WaitForNextFrameReadyWithHeadStart", "Windows.Graphics.Holographic.IHolographicSpace2", 1).WaitForNextFrameReadyWithHeadStart(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4716,19 +3403,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"PrimaryAdapterId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4746,23 +3420,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"UserPresence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserPresence();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicSpace2>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicSpace", "UserPresence", "Windows.Graphics.Holographic.IHolographicSpace2").UserPresence();
             }());
         }
         catch (...)
@@ -4866,19 +3527,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"CameraAdded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Holographic::HolographicSpace, winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4898,19 +3546,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"CameraAdded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4931,19 +3566,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"CameraRemoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Holographic::HolographicSpace, winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4963,19 +3585,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"CameraRemoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4996,25 +3605,12 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"UserPresenceChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Holographic::HolographicSpace, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UserPresenceChanged(param0);
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicSpace2>(self->obj, py::member_kind::event, "Windows.Graphics.Holographic.HolographicSpace", "UserPresenceChanged", "Windows.Graphics.Holographic.IHolographicSpace2").UserPresenceChanged(param0);
             }());
         }
         catch (...)
@@ -5028,24 +3624,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Holographic.HolographicSpace", L"UserPresenceChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UserPresenceChanged(param0);
+                py::require<winrt::Windows::Graphics::Holographic::IHolographicSpace2>(self->obj, py::member_kind::event, "Windows.Graphics.Holographic.HolographicSpace", "UserPresenceChanged", "Windows.Graphics.Holographic.IHolographicSpace2").UserPresenceChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -5234,19 +3817,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5270,19 +3840,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs", L"Camera");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5365,19 +3922,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs", L"Camera");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5463,19 +4007,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"RequestRenderTargetSize", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
                 return py::convert([&]()
@@ -5501,19 +4032,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"PixelFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5537,19 +4055,6 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"PixelFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
 
             {
@@ -5570,19 +4075,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5606,19 +4098,6 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5639,19 +4118,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"Display");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5669,19 +4135,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"IsStereo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5699,19 +4152,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5729,19 +4169,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"NativeRenderTargetSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5759,19 +4186,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"RefreshRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5789,19 +4203,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"RenderTargetSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5819,19 +4220,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"SupportedPixelFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5849,23 +4237,10 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicViewConfiguration", L"SupportedDepthReprojectionMethods");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedDepthReprojectionMethods();
+                return py::require<winrt::Windows::Graphics::Holographic::IHolographicViewConfiguration2>(self->obj, py::member_kind::property, "Windows.Graphics.Holographic.HolographicViewConfiguration", "SupportedDepthReprojectionMethods", "Windows.Graphics.Holographic.IHolographicViewConfiguration2").SupportedDepthReprojectionMethods();
             }());
         }
         catch (...)

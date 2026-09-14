@@ -148,19 +148,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AdvertisingManagerForUser", L"AdvertisingId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -178,19 +165,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AdvertisingManagerForUser", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -355,19 +329,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -385,19 +346,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"IsSingleAppKioskMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -415,19 +363,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.AssignedAccessSettings", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -616,19 +551,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.DiagnosticsSettings", L"CanUseDiagnosticsToTailorExperiences");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -646,19 +568,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.DiagnosticsSettings", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -768,23 +677,10 @@ namespace py::cpp::Windows::System::UserProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.System.UserProfile.FirstSignInSettings", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
                 }());
             }
             catch (...)
@@ -848,25 +744,12 @@ namespace py::cpp::Windows::System::UserProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.System.UserProfile.FirstSignInSettings", "HasKey", "Windows.Foundation.Collections.IMapView<String, Object>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -890,25 +773,12 @@ namespace py::cpp::Windows::System::UserProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.System.UserProfile.FirstSignInSettings", "Lookup", "Windows.Foundation.Collections.IMapView<String, Object>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -932,25 +802,12 @@ namespace py::cpp::Windows::System::UserProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"Split", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1{nullptr};
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Split(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.System.UserProfile.FirstSignInSettings", "Split", "Windows.Foundation.Collections.IMapView<String, Object>", 0).Split(param0, param1);
                 }
 
                 py::pyobj_handle out0{ py::convert(param0) };
@@ -983,23 +840,10 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.FirstSignInSettings", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.System.UserProfile.FirstSignInSettings", "Size", "Windows.Foundation.Collections.IMapView<String, Object>").Size();
             }());
         }
         catch (...)
@@ -1040,7 +884,7 @@ namespace py::cpp::Windows::System::UserProfile
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.System.UserProfile.FirstSignInSettings", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Object>>", 0).First();
             }())};
 
             if (!iter)
@@ -1064,7 +908,7 @@ namespace py::cpp::Windows::System::UserProfile
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.System.UserProfile.FirstSignInSettings", "HasKey", "Windows.Foundation.Collections.IMapView<String, Object>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -1079,7 +923,7 @@ namespace py::cpp::Windows::System::UserProfile
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::property, "Windows.System.UserProfile.FirstSignInSettings", "Size", "Windows.Foundation.Collections.IMapView<String, Object>").Size());
         }
         catch (...)
         {
@@ -1096,7 +940,7 @@ namespace py::cpp::Windows::System::UserProfile
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.System.UserProfile.FirstSignInSettings", "Lookup", "Windows.Foundation.Collections.IMapView<String, Object>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -1106,7 +950,7 @@ namespace py::cpp::Windows::System::UserProfile
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(self->obj, py::member_kind::method, "Windows.System.UserProfile.FirstSignInSettings", "Lookup", "Windows.Foundation.Collections.IMapView<String, Object>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -1566,19 +1410,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Calendars");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1596,19 +1427,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Clocks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1626,19 +1444,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Currencies");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1656,19 +1461,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"HomeGeographicRegion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1686,19 +1478,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"Languages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1716,19 +1495,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1746,19 +1512,6 @@ namespace py::cpp::Windows::System::UserProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.UserProfile.GlobalizationPreferencesForUser", L"WeekStartsOn");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2824,19 +2577,6 @@ namespace py::cpp::Windows::System::UserProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserProfilePersonalizationSettings", L"TrySetLockScreenImageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
                 return py::convert([&]()
@@ -2866,19 +2606,6 @@ namespace py::cpp::Windows::System::UserProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.UserProfile.UserProfilePersonalizationSettings", L"TrySetWallpaperImageAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
                 return py::convert([&]()

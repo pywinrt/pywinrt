@@ -71,23 +71,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"GetAllDescriptors", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAllDescriptors();
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic2>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", "GetAllDescriptors", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic2", 0).GetAllDescriptors();
                 }());
             }
             catch (...)
@@ -111,19 +98,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"GetDescriptors", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert([&]()
@@ -153,23 +127,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"GetDescriptorsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetDescriptorsAsync();
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", "GetDescriptorsAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic3", 0).GetDescriptorsAsync();
                 }());
             }
             catch (...)
@@ -182,25 +143,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"GetDescriptorsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetDescriptorsAsync(param0);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", "GetDescriptorsAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic3", 1).GetDescriptorsAsync(param0);
                 }());
             }
             catch (...)
@@ -224,25 +172,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"GetDescriptorsForUuidAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetDescriptorsForUuidAsync(param0);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", "GetDescriptorsForUuidAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic3", 1).GetDescriptorsForUuidAsync(param0);
                 }());
             }
             catch (...)
@@ -255,26 +190,13 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"GetDescriptorsForUuidAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetDescriptorsForUuidAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", "GetDescriptorsForUuidAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic3", 2).GetDescriptorsForUuidAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -298,19 +220,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"ReadClientCharacteristicConfigurationDescriptorAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -338,19 +247,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"ReadValueAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -367,19 +263,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"ReadValueAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
                 return py::convert([&]()
@@ -409,19 +292,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"WriteClientCharacteristicConfigurationDescriptorAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue>(args, 0);
 
                 return py::convert([&]()
@@ -451,25 +321,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"WriteClientCharacteristicConfigurationDescriptorWithResultAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.WriteClientCharacteristicConfigurationDescriptorWithResultAsync(param0);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", "WriteClientCharacteristicConfigurationDescriptorWithResultAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic3", 1).WriteClientCharacteristicConfigurationDescriptorWithResultAsync(param0);
                 }());
             }
             catch (...)
@@ -493,19 +350,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"WriteValueAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -524,19 +368,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"WriteValueAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption>(args, 1);
 
@@ -567,25 +398,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"WriteValueWithResultAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.WriteValueWithResultAsync(param0);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", "WriteValueWithResultAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic3", 1).WriteValueWithResultAsync(param0);
                 }());
             }
             catch (...)
@@ -598,26 +416,13 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"WriteValueWithResultAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.WriteValueWithResultAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", "WriteValueWithResultAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic3", 2).WriteValueWithResultAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -637,19 +442,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"ProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -673,19 +465,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"ProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
             {
@@ -706,19 +485,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"AttributeHandle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -736,19 +502,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"CharacteristicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -766,19 +519,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"PresentationFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -796,19 +536,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"UserDescription");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -826,19 +553,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"Uuid");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -856,23 +570,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"Service");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Service();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", "Service", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic2").Service();
             }());
         }
         catch (...)
@@ -886,19 +587,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"ValueChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -918,19 +606,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"ValueChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3615,19 +3290,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult", L"Characteristics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3645,19 +3307,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult", L"ProtocolError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3675,19 +3324,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3771,19 +3407,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult", L"ProtocolError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3801,19 +3424,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3831,19 +3441,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult", L"SubscribedClient");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3861,23 +3458,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult", L"BytesSent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BytesSent();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult", "BytesSent", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattClientNotificationResult2").BytesSent();
             }());
         }
         catch (...)
@@ -4004,19 +3588,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor", L"ReadValueAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4033,19 +3604,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor", L"ReadValueAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
                 return py::convert([&]()
@@ -4075,19 +3633,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor", L"WriteValueAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -4117,25 +3662,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor", L"WriteValueWithResultAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.WriteValueWithResultAsync(param0);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor2>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor", "WriteValueWithResultAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDescriptor2", 1).WriteValueWithResultAsync(param0);
                 }());
             }
             catch (...)
@@ -4155,19 +3687,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor", L"ProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4191,19 +3710,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor", L"ProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
             {
@@ -4224,19 +3730,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor", L"AttributeHandle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4254,19 +3747,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor", L"Uuid");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4610,19 +4090,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult", L"Descriptors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4640,19 +4107,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult", L"ProtocolError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4670,19 +4124,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4770,22 +4211,9 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -4927,23 +4355,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetAllCharacteristics", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAllCharacteristics();
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "GetAllCharacteristics", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService2", 0).GetAllCharacteristics();
                 }());
             }
             catch (...)
@@ -4967,23 +4382,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetAllIncludedServices", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAllIncludedServices();
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "GetAllIncludedServices", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService2", 0).GetAllIncludedServices();
                 }());
             }
             catch (...)
@@ -5007,19 +4409,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetCharacteristics", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert([&]()
@@ -5049,23 +4438,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetCharacteristicsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetCharacteristicsAsync();
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "GetCharacteristicsAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3", 0).GetCharacteristicsAsync();
                 }());
             }
             catch (...)
@@ -5078,25 +4454,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetCharacteristicsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetCharacteristicsAsync(param0);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "GetCharacteristicsAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3", 1).GetCharacteristicsAsync(param0);
                 }());
             }
             catch (...)
@@ -5120,25 +4483,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetCharacteristicsForUuidAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetCharacteristicsForUuidAsync(param0);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "GetCharacteristicsForUuidAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3", 1).GetCharacteristicsForUuidAsync(param0);
                 }());
             }
             catch (...)
@@ -5151,26 +4501,13 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetCharacteristicsForUuidAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetCharacteristicsForUuidAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "GetCharacteristicsForUuidAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3", 2).GetCharacteristicsForUuidAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5428,19 +4765,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetIncludedServices", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert([&]()
@@ -5470,23 +4794,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetIncludedServicesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetIncludedServicesAsync();
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "GetIncludedServicesAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3", 0).GetIncludedServicesAsync();
                 }());
             }
             catch (...)
@@ -5499,25 +4810,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetIncludedServicesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetIncludedServicesAsync(param0);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "GetIncludedServicesAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3", 1).GetIncludedServicesAsync(param0);
                 }());
             }
             catch (...)
@@ -5541,25 +4839,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetIncludedServicesForUuidAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetIncludedServicesForUuidAsync(param0);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "GetIncludedServicesForUuidAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3", 1).GetIncludedServicesForUuidAsync(param0);
                 }());
             }
             catch (...)
@@ -5572,26 +4857,13 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetIncludedServicesForUuidAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetIncludedServicesForUuidAsync(param0, param1);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "GetIncludedServicesForUuidAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3", 2).GetIncludedServicesForUuidAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5615,25 +4887,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"OpenAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenAsync(param0);
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "OpenAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3", 1).OpenAsync(param0);
                 }());
             }
             catch (...)
@@ -5657,23 +4916,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"RequestAccessAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RequestAccessAsync();
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "RequestAccessAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3", 0).RequestAccessAsync();
                 }());
             }
             catch (...)
@@ -5693,19 +4939,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"AttributeHandle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5723,19 +4956,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5753,19 +4973,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"Uuid");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5783,23 +4990,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"Device");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Device();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "Device", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService2").Device();
             }());
         }
         catch (...)
@@ -5813,23 +5007,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"ParentServices");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ParentServices();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "ParentServices", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService2").ParentServices();
             }());
         }
         catch (...)
@@ -5843,23 +5024,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"DeviceAccessInformation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DeviceAccessInformation();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "DeviceAccessInformation", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3").DeviceAccessInformation();
             }());
         }
         catch (...)
@@ -5873,23 +5041,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"Session");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Session();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "Session", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3").Session();
             }());
         }
         catch (...)
@@ -5903,23 +5058,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"SharingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SharingMode();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "SharingMode", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3").SharingMode();
             }());
         }
         catch (...)
@@ -5964,7 +5106,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -6067,19 +5209,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult", L"ProtocolError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6097,19 +5226,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult", L"Services");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6127,19 +5243,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6227,19 +5330,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"CreateDescriptorAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters>(args, 1);
 
@@ -6270,19 +5360,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"NotifyValueAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -6301,19 +5378,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"NotifyValueAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient>(args, 1);
 
@@ -6340,19 +5404,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"CharacteristicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6370,19 +5421,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"Descriptors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6400,19 +5438,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"PresentationFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6430,19 +5455,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"ReadProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6460,19 +5472,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"StaticValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6490,19 +5489,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"SubscribedClients");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6520,19 +5506,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"UserDescription");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6550,19 +5523,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"Uuid");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6580,19 +5540,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"WriteProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6610,19 +5557,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"ReadRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6642,19 +5576,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"ReadRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6675,19 +5596,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"SubscribedClientsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -6707,19 +5615,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"SubscribedClientsChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6740,19 +5635,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"WriteRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6772,19 +5654,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic", L"WriteRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6907,19 +5776,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"WriteProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6943,19 +5799,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"WriteProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
             {
@@ -6976,19 +5819,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"UserDescription");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7012,19 +5842,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"UserDescription");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -7045,19 +5862,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"StaticValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7081,19 +5885,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"StaticValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -7114,19 +5905,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"ReadProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7150,19 +5928,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"ReadProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
             {
@@ -7183,19 +5948,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"CharacteristicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7219,19 +5971,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"CharacteristicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties>(arg);
 
             {
@@ -7252,19 +5991,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters", L"PresentationFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7351,19 +6077,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult", L"Characteristic");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7381,19 +6094,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7476,19 +6176,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor", L"ReadProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7506,19 +6193,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor", L"StaticValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7536,19 +6210,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor", L"Uuid");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7566,19 +6227,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor", L"WriteProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7596,19 +6244,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor", L"ReadRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -7628,19 +6263,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor", L"ReadRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7661,19 +6283,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor", L"WriteRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -7693,19 +6302,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor", L"WriteRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7819,19 +6415,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorParameters", L"WriteProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7855,19 +6438,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorParameters", L"WriteProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
             {
@@ -7888,19 +6458,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorParameters", L"StaticValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7924,19 +6481,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorParameters", L"StaticValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -7957,19 +6501,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorParameters", L"ReadProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7993,19 +6524,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorParameters", L"ReadProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
             {
@@ -8092,19 +6610,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult", L"Descriptor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8122,19 +6627,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8221,19 +6713,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalService", L"CreateCharacteristicAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters>(args, 1);
 
@@ -8260,19 +6739,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalService", L"Characteristics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8290,19 +6756,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalService", L"Uuid");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8432,19 +6885,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8462,19 +6902,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat", L"Exponent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8492,19 +6919,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat", L"FormatType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8522,19 +6936,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat", L"Namespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8552,19 +6953,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat", L"Unit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10165,19 +8553,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult", L"ClientCharacteristicConfigurationDescriptor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10195,19 +8570,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10225,23 +8587,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult", L"ProtocolError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtocolError();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult", "ProtocolError", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattReadClientCharacteristicConfigurationDescriptorResult2").ProtocolError();
             }());
         }
         catch (...)
@@ -10325,19 +8674,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest", L"RespondWithProtocolError", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint8_t>(args, 0);
 
                 {
@@ -10368,19 +8704,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest", L"RespondWithValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 {
@@ -10407,19 +8730,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10437,19 +8747,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest", L"Offset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10467,19 +8764,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10497,19 +8781,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -10529,19 +8800,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -10636,19 +8894,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10676,19 +8921,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs", L"GetRequestAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10712,19 +8944,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs", L"Session");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10808,19 +9027,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10838,19 +9044,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10868,23 +9061,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult", L"ProtocolError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtocolError();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult", "ProtocolError", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattReadResult2").ProtocolError();
             }());
         }
         catch (...)
@@ -10990,19 +9170,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReliableWriteTransaction", L"CommitAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11030,23 +9197,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReliableWriteTransaction", L"CommitWithResultAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CommitWithResultAsync();
+                    return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction2>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattReliableWriteTransaction", "CommitWithResultAsync", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattReliableWriteTransaction2", 0).CommitWithResultAsync();
                 }());
             }
             catch (...)
@@ -11070,19 +9224,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattReliableWriteTransaction", L"WriteValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -11176,19 +9317,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11206,19 +9334,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11347,19 +9462,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider", L"StartAdvertising", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.StartAdvertising();
@@ -11377,19 +9479,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider", L"StartAdvertising", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>(args, 0);
 
                 {
@@ -11420,19 +9509,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider", L"StopAdvertising", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.StopAdvertising();
@@ -11461,24 +9537,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider", L"UpdateAdvertisingParameters", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.UpdateAdvertisingParameters(param0);
+                    py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider2>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider", "UpdateAdvertisingParameters", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProvider2", 1).UpdateAdvertisingParameters(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -11500,19 +9563,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider", L"AdvertisementStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11530,19 +9580,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider", L"Service");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11560,19 +9597,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider", L"AdvertisementStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -11592,19 +9616,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider", L"AdvertisementStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -11717,19 +9728,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisementStatusChangedEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11747,19 +9745,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisementStatusChangedEventArgs", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11864,19 +9849,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"IsDiscoverable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11900,19 +9872,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"IsDiscoverable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -11933,19 +9892,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"IsConnectable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11969,19 +9915,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"IsConnectable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -12002,23 +9935,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"ServiceData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServiceData();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", "ServiceData", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters2").ServiceData();
             }());
         }
         catch (...)
@@ -12038,24 +9958,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"ServiceData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ServiceData(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", "ServiceData", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters2").ServiceData(param0);
             }
 
             return 0;
@@ -12071,23 +9978,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"UseLowEnergyUncoded2MPhyAsSecondaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseLowEnergyUncoded2MPhyAsSecondaryPhy();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", "UseLowEnergyUncoded2MPhyAsSecondaryPhy", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters3").UseLowEnergyUncoded2MPhyAsSecondaryPhy();
             }());
         }
         catch (...)
@@ -12107,24 +10001,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"UseLowEnergyUncoded2MPhyAsSecondaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseLowEnergyUncoded2MPhyAsSecondaryPhy(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", "UseLowEnergyUncoded2MPhyAsSecondaryPhy", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters3").UseLowEnergyUncoded2MPhyAsSecondaryPhy(param0);
             }
 
             return 0;
@@ -12140,23 +10021,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"UseLowEnergyUncoded1MPhyAsSecondaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseLowEnergyUncoded1MPhyAsSecondaryPhy();
+                return py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", "UseLowEnergyUncoded1MPhyAsSecondaryPhy", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters3").UseLowEnergyUncoded1MPhyAsSecondaryPhy();
             }());
         }
         catch (...)
@@ -12176,24 +10044,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"UseLowEnergyUncoded1MPhyAsSecondaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseLowEnergyUncoded1MPhyAsSecondaryPhy(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", "UseLowEnergyUncoded1MPhyAsSecondaryPhy", "Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters3").UseLowEnergyUncoded1MPhyAsSecondaryPhy(param0);
             }
 
             return 0;
@@ -12277,19 +10132,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12307,19 +10149,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult", L"ServiceProvider");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13137,22 +10966,9 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -13216,19 +11032,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"MaintainConnection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13252,19 +11055,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"MaintainConnection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -13285,19 +11075,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"CanMaintainConnection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13315,19 +11092,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13345,19 +11109,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"MaxPduSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13375,19 +11126,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"SessionStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13405,19 +11143,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"MaxPduSizeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -13437,19 +11162,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"MaxPduSizeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13470,19 +11182,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"SessionStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -13502,19 +11201,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", L"SessionStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13566,7 +11252,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -13655,19 +11341,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSessionStatusChangedEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13685,19 +11358,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSessionStatusChangedEventArgs", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13780,19 +11440,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient", L"MaxNotificationSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13810,19 +11457,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient", L"Session");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13840,19 +11474,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient", L"MaxNotificationSizeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -13872,19 +11493,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient", L"MaxNotificationSizeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13972,19 +11580,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs", L"CharacteristicValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14002,19 +11597,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs", L"Timestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14101,19 +11683,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest", L"Respond", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Respond();
@@ -14142,19 +11711,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest", L"RespondWithProtocolError", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint8_t>(args, 0);
 
                 {
@@ -14181,19 +11737,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest", L"Offset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14211,19 +11754,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest", L"Option");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14241,19 +11771,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14271,19 +11788,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14301,19 +11805,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -14333,19 +11824,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14441,19 +11919,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -14481,19 +11946,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs", L"GetRequestAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -14517,19 +11969,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs", L"Session");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14613,19 +12052,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult", L"ProtocolError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14643,19 +12069,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

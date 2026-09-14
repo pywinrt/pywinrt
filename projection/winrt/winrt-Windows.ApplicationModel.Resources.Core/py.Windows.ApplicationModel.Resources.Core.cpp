@@ -29,19 +29,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.NamedResource", L"Resolve", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -58,19 +45,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.NamedResource", L"Resolve", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>(args, 0);
 
                 return py::convert([&]()
@@ -100,19 +74,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.NamedResource", L"ResolveAll", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -129,19 +90,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.NamedResource", L"ResolveAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>(args, 0);
 
                 return py::convert([&]()
@@ -167,19 +115,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.NamedResource", L"Candidates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -197,19 +132,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.NamedResource", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -298,19 +220,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidate", L"GetQualifierValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -340,19 +249,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidate", L"GetValueAsFileAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -380,23 +276,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidate", L"GetValueAsStreamAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetValueAsStreamAsync();
+                    return py::require<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceCandidate", "GetValueAsStreamAsync", "Windows.ApplicationModel.Resources.Core.IResourceCandidate2", 0).GetValueAsStreamAsync();
                 }());
             }
             catch (...)
@@ -416,19 +299,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidate", L"IsDefault");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -446,19 +316,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidate", L"IsMatch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -476,19 +333,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidate", L"IsMatchAsDefault");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -506,19 +350,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidate", L"Qualifiers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -536,19 +367,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidate", L"ValueAsString");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -566,23 +384,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidate", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Resources.Core.ResourceCandidate", "Kind", "Windows.ApplicationModel.Resources.Core.IResourceCandidate3").Kind();
             }());
         }
         catch (...)
@@ -672,23 +477,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView", "First", "Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Resources.Core.ResourceCandidate>", 0).First();
                 }());
             }
             catch (...)
@@ -712,19 +504,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -754,19 +533,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate, true>>(args, 1);
 
@@ -797,19 +563,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>(args, 0);
                 uint32_t param1{};
 
@@ -849,19 +602,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -906,7 +646,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView", "First", "Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Resources.Core.ResourceCandidate>", 0).First();
             }());
         }
         catch (...)
@@ -1094,19 +834,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContext", L"Clone", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1298,19 +1025,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContext", L"OverrideToMatch", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>>(args, 0);
 
                 {
@@ -1341,19 +1055,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContext", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Reset();
@@ -1371,19 +1072,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContext", L"Reset", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 {
@@ -1561,19 +1249,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContext", L"Languages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1597,19 +1272,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContext", L"Languages");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(arg);
 
             {
@@ -1630,19 +1292,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContext", L"QualifierValues");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1759,23 +1408,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView", "First", "Windows.Foundation.Collections.IIterable<String>", 0).First();
                 }());
             }
             catch (...)
@@ -1799,19 +1435,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -1841,19 +1464,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, true>>(args, 1);
 
@@ -1884,19 +1494,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 uint32_t param1{};
 
@@ -1936,19 +1533,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1993,7 +1577,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView", "First", "Windows.Foundation.Collections.IIterable<String>", 0).First();
             }());
         }
         catch (...)
@@ -2159,26 +1743,13 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceManager", L"GetAllNamedResourcesForPackage", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAllNamedResourcesForPackage(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceManager", "GetAllNamedResourcesForPackage", "Windows.ApplicationModel.Resources.Core.IResourceManager2", 2).GetAllNamedResourcesForPackage(param0, param1);
                 }());
             }
             catch (...)
@@ -2202,26 +1773,13 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceManager", L"GetAllSubtreesForPackage", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAllSubtreesForPackage(param0, param1);
+                    return py::require<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager2>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceManager", "GetAllSubtreesForPackage", "Windows.ApplicationModel.Resources.Core.IResourceManager2", 2).GetAllSubtreesForPackage(param0, param1);
                 }());
             }
             catch (...)
@@ -2287,19 +1845,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceManager", L"LoadPriFiles", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageFile>>(args, 0);
 
                 {
@@ -2330,19 +1875,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceManager", L"UnloadPriFiles", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageFile>>(args, 0);
 
                 {
@@ -2369,19 +1901,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceManager", L"AllResourceMaps");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2399,19 +1918,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceManager", L"DefaultContext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2429,19 +1935,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceManager", L"MainResourceMap");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2586,23 +2079,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMap", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceMap", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Windows.ApplicationModel.Resources.Core.NamedResource>>", 0).First();
                 }());
             }
             catch (...)
@@ -2626,19 +2106,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMap", L"GetSubtree", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2668,19 +2135,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMap", L"GetValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2699,19 +2153,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMap", L"GetValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>(args, 1);
 
@@ -2742,25 +2183,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMap", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceMap", "HasKey", "Windows.Foundation.Collections.IMapView<String, Windows.ApplicationModel.Resources.Core.NamedResource>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -2784,25 +2212,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMap", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceMap", "Lookup", "Windows.Foundation.Collections.IMapView<String, Windows.ApplicationModel.Resources.Core.NamedResource>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -2826,25 +2241,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMap", L"Split", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource> param1{nullptr};
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Split(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceMap", "Split", "Windows.Foundation.Collections.IMapView<String, Windows.ApplicationModel.Resources.Core.NamedResource>", 0).Split(param0, param1);
                 }
 
                 py::pyobj_handle out0{ py::convert(param0) };
@@ -2877,19 +2279,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMap", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2907,23 +2296,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMap", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Resources.Core.ResourceMap", "Size", "Windows.Foundation.Collections.IMapView<String, Windows.ApplicationModel.Resources.Core.NamedResource>").Size();
             }());
         }
         catch (...)
@@ -2964,7 +2340,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceMap", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Windows.ApplicationModel.Resources.Core.NamedResource>>", 0).First();
             }())};
 
             if (!iter)
@@ -2988,7 +2364,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceMap", "HasKey", "Windows.Foundation.Collections.IMapView<String, Windows.ApplicationModel.Resources.Core.NamedResource>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -3003,7 +2379,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Resources.Core.ResourceMap", "Size", "Windows.Foundation.Collections.IMapView<String, Windows.ApplicationModel.Resources.Core.NamedResource>").Size());
         }
         catch (...)
         {
@@ -3020,7 +2396,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceMap", "Lookup", "Windows.Foundation.Collections.IMapView<String, Windows.ApplicationModel.Resources.Core.NamedResource>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -3030,7 +2406,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceMap", "Lookup", "Windows.Foundation.Collections.IMapView<String, Windows.ApplicationModel.Resources.Core.NamedResource>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -3111,19 +2487,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapIterator", L"GetMany", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource>, true>>(args, 0);
 
                 return py::convert([&]()
@@ -3153,19 +2516,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapIterator", L"MoveNext", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3189,19 +2539,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapIterator", L"Current");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3219,19 +2556,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapIterator", L"HasCurrent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3353,23 +2677,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapMapView", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceMapMapView", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Windows.ApplicationModel.Resources.Core.ResourceMap>>", 0).First();
                 }());
             }
             catch (...)
@@ -3393,19 +2704,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapMapView", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3435,19 +2733,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapMapView", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3477,19 +2762,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapMapView", L"Split", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> param1{nullptr};
 
@@ -3528,19 +2800,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapMapView", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3585,7 +2844,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceMapMapView", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, Windows.ApplicationModel.Resources.Core.ResourceMap>>", 0).First();
             }())};
 
             if (!iter)
@@ -3729,19 +2988,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator", L"GetMany", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>, true>>(args, 0);
 
                 return py::convert([&]()
@@ -3771,19 +3017,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator", L"MoveNext", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3807,19 +3040,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator", L"Current");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3837,19 +3057,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator", L"HasCurrent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3967,19 +3174,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifier", L"IsDefault");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3997,19 +3191,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifier", L"IsMatch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4027,19 +3208,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifier", L"QualifierName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4057,19 +3225,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifier", L"QualifierValue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4087,19 +3242,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifier", L"Score");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4189,23 +3331,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, String>>", 0).First();
                 }());
             }
             catch (...)
@@ -4229,19 +3358,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4271,19 +3387,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4313,19 +3416,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView", L"Split", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param1{nullptr};
 
@@ -4364,19 +3454,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4421,7 +3498,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, String>>", 0).First();
             }())};
 
             if (!iter)
@@ -4565,22 +3642,9 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "Clear", "Windows.Foundation.Collections.IMap<String, String>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -4606,23 +3670,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, String>>", 0).First();
                 }());
             }
             catch (...)
@@ -4646,23 +3697,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "GetView", "Windows.Foundation.Collections.IMap<String, String>", 0).GetView();
                 }());
             }
             catch (...)
@@ -4686,25 +3724,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "HasKey", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -4728,26 +3753,13 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", L"Insert", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Insert(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "Insert", "Windows.Foundation.Collections.IMap<String, String>", 2).Insert(param0, param1);
                 }());
             }
             catch (...)
@@ -4771,25 +3783,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -4813,24 +3812,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Remove(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "Remove", "Windows.Foundation.Collections.IMap<String, String>", 1).Remove(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4852,23 +3838,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "Size", "Windows.Foundation.Collections.IMap<String, String>").Size();
             }());
         }
         catch (...)
@@ -4882,19 +3855,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", L"MapChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::hstring>>(arg);
 
             return py::convert([&]()
@@ -4914,19 +3874,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", L"MapChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4974,7 +3921,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, String>>", 0).First();
             }())};
 
             if (!iter)
@@ -4998,7 +3945,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "HasKey", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -5013,7 +3960,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "Size", "Windows.Foundation.Collections.IMap<String, String>").Size());
         }
         catch (...)
         {
@@ -5030,7 +3977,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -5040,7 +3987,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -5073,7 +4020,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
-                    did_remove = self->obj.TryRemove(_key);
+                    did_remove = py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).TryRemove(_key);
                 }
                 if (!did_remove)
                 {
@@ -5087,7 +4034,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             auto _value = py::convert_to<winrt::hstring>(value);
             {
                 auto _gil = py::release_gil();
-                self->obj.Insert(_key, _value);
+                py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).Insert(_key, _value);
             }
 
             return 0;
@@ -5161,23 +4108,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView", "First", "Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Resources.Core.ResourceQualifier>", 0).First();
                 }());
             }
             catch (...)
@@ -5201,19 +4135,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -5243,19 +4164,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier, true>>(args, 1);
 
@@ -5286,19 +4194,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>(args, 0);
                 uint32_t param1{};
 
@@ -5338,19 +4233,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5395,7 +4277,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView", "First", "Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Resources.Core.ResourceQualifier>", 0).First();
             }());
         }
         catch (...)

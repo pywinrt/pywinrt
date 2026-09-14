@@ -53,23 +53,10 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"Copy", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Copy();
+                    return py::require<winrt::Windows::Media::Core::IAudioStreamDescriptor3>(self->obj, py::member_kind::method, "Windows.Media.Core.AudioStreamDescriptor", "Copy", "Windows.Media.Core.IAudioStreamDescriptor3", 0).Copy();
                 }());
             }
             catch (...)
@@ -89,19 +76,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -119,23 +93,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"TrailingEncoderPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TrailingEncoderPadding();
+                return py::require<winrt::Windows::Media::Core::IAudioStreamDescriptor2>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "TrailingEncoderPadding", "Windows.Media.Core.IAudioStreamDescriptor2").TrailingEncoderPadding();
             }());
         }
         catch (...)
@@ -155,24 +116,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"TrailingEncoderPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TrailingEncoderPadding(param0);
+                py::require<winrt::Windows::Media::Core::IAudioStreamDescriptor2>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "TrailingEncoderPadding", "Windows.Media.Core.IAudioStreamDescriptor2").TrailingEncoderPadding(param0);
             }
 
             return 0;
@@ -188,23 +136,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"LeadingEncoderPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LeadingEncoderPadding();
+                return py::require<winrt::Windows::Media::Core::IAudioStreamDescriptor2>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "LeadingEncoderPadding", "Windows.Media.Core.IAudioStreamDescriptor2").LeadingEncoderPadding();
             }());
         }
         catch (...)
@@ -224,24 +159,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"LeadingEncoderPadding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LeadingEncoderPadding(param0);
+                py::require<winrt::Windows::Media::Core::IAudioStreamDescriptor2>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "LeadingEncoderPadding", "Windows.Media.Core.IAudioStreamDescriptor2").LeadingEncoderPadding(param0);
             }
 
             return 0;
@@ -257,23 +179,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "Name", "Windows.Media.Core.IMediaStreamDescriptor").Name();
             }());
         }
         catch (...)
@@ -293,24 +202,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Name(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "Name", "Windows.Media.Core.IMediaStreamDescriptor").Name(param0);
             }
 
             return 0;
@@ -326,23 +222,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "Language", "Windows.Media.Core.IMediaStreamDescriptor").Language();
             }());
         }
         catch (...)
@@ -362,24 +245,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "Language", "Windows.Media.Core.IMediaStreamDescriptor").Language(param0);
             }
 
             return 0;
@@ -395,23 +265,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSelected();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "IsSelected", "Windows.Media.Core.IMediaStreamDescriptor").IsSelected();
             }());
         }
         catch (...)
@@ -425,23 +282,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Label();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor2>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "Label", "Windows.Media.Core.IMediaStreamDescriptor2").Label();
             }());
         }
         catch (...)
@@ -461,24 +305,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioStreamDescriptor", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Label(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor2>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioStreamDescriptor", "Label", "Windows.Media.Core.IMediaStreamDescriptor2").Label(param0);
             }
 
             return 0;
@@ -569,23 +400,10 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.AudioTrack", L"GetEncodingProperties", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetEncodingProperties();
+                    return py::require<winrt::Windows::Media::Core::IAudioTrack>(self->obj, py::member_kind::method, "Windows.Media.Core.AudioTrack", "GetEncodingProperties", "Windows.Media.Core.IAudioTrack", 0).GetEncodingProperties();
                 }());
             }
             catch (...)
@@ -605,23 +423,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrack", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Media::Core::IAudioTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioTrack", "Name", "Windows.Media.Core.IAudioTrack").Name();
             }());
         }
         catch (...)
@@ -635,23 +440,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrack", L"PlaybackItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PlaybackItem();
+                return py::require<winrt::Windows::Media::Core::IAudioTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioTrack", "PlaybackItem", "Windows.Media.Core.IAudioTrack").PlaybackItem();
             }());
         }
         catch (...)
@@ -665,23 +457,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrack", L"SupportInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportInfo();
+                return py::require<winrt::Windows::Media::Core::IAudioTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.AudioTrack", "SupportInfo", "Windows.Media.Core.IAudioTrack").SupportInfo();
             }());
         }
         catch (...)
@@ -695,19 +474,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrack", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -731,19 +497,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrack", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -764,19 +517,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrack", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -794,19 +534,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrack", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -824,19 +551,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrack", L"TrackKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -854,25 +568,12 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.AudioTrack", L"OpenFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::AudioTrack, winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OpenFailed(param0);
+                return py::require<winrt::Windows::Media::Core::IAudioTrack>(self->obj, py::member_kind::event, "Windows.Media.Core.AudioTrack", "OpenFailed", "Windows.Media.Core.IAudioTrack").OpenFailed(param0);
             }());
         }
         catch (...)
@@ -886,24 +587,11 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.AudioTrack", L"OpenFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OpenFailed(param0);
+                py::require<winrt::Windows::Media::Core::IAudioTrack>(self->obj, py::member_kind::event, "Windows.Media.Core.AudioTrack", "OpenFailed", "Windows.Media.Core.IAudioTrack").OpenFailed(param0);
             }
 
             Py_RETURN_NONE;
@@ -992,19 +680,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrackOpenFailedEventArgs", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1086,19 +761,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrackSupportInfo", L"DecoderStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1116,19 +778,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrackSupportInfo", L"Degradation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1146,19 +795,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrackSupportInfo", L"DegradationReason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1176,19 +812,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.AudioTrackSupportInfo", L"MediaSourceStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1295,19 +918,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ChapterCue", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1331,19 +941,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ChapterCue", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1364,23 +961,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ChapterCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StartTime();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ChapterCue", "StartTime", "Windows.Media.Core.IMediaCue").StartTime();
             }());
         }
         catch (...)
@@ -1400,24 +984,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ChapterCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StartTime(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ChapterCue", "StartTime", "Windows.Media.Core.IMediaCue").StartTime(param0);
             }
 
             return 0;
@@ -1433,23 +1004,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ChapterCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ChapterCue", "Id", "Windows.Media.Core.IMediaCue").Id();
             }());
         }
         catch (...)
@@ -1469,24 +1027,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ChapterCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Id(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ChapterCue", "Id", "Windows.Media.Core.IMediaCue").Id(param0);
             }
 
             return 0;
@@ -1502,23 +1047,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ChapterCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Duration();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ChapterCue", "Duration", "Windows.Media.Core.IMediaCue").Duration();
             }());
         }
         catch (...)
@@ -1538,24 +1070,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ChapterCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Duration(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ChapterCue", "Duration", "Windows.Media.Core.IMediaCue").Duration(param0);
             }
 
             return 0;
@@ -1638,19 +1157,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.CodecInfo", L"Category");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1668,19 +1174,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.CodecInfo", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1698,19 +1191,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.CodecInfo", L"IsTrusted");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1728,19 +1208,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.CodecInfo", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1758,19 +1225,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.CodecInfo", L"Subtypes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1882,19 +1336,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.CodecQuery", L"FindAllAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::CodecKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Core::CodecCategory>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -3638,19 +3079,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.DataCue", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3674,19 +3102,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.DataCue", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -3707,23 +3122,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.DataCue", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Properties();
+                return py::require<winrt::Windows::Media::Core::IDataCue2>(self->obj, py::member_kind::property, "Windows.Media.Core.DataCue", "Properties", "Windows.Media.Core.IDataCue2").Properties();
             }());
         }
         catch (...)
@@ -3737,23 +3139,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.DataCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StartTime();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.DataCue", "StartTime", "Windows.Media.Core.IMediaCue").StartTime();
             }());
         }
         catch (...)
@@ -3773,24 +3162,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.DataCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StartTime(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.DataCue", "StartTime", "Windows.Media.Core.IMediaCue").StartTime(param0);
             }
 
             return 0;
@@ -3806,23 +3182,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.DataCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.DataCue", "Id", "Windows.Media.Core.IMediaCue").Id();
             }());
         }
         catch (...)
@@ -3842,24 +3205,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.DataCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Id(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.DataCue", "Id", "Windows.Media.Core.IMediaCue").Id(param0);
             }
 
             return 0;
@@ -3875,23 +3225,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.DataCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Duration();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.DataCue", "Duration", "Windows.Media.Core.IMediaCue").Duration();
             }());
         }
         catch (...)
@@ -3911,24 +3248,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.DataCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Duration(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.DataCue", "Duration", "Windows.Media.Core.IMediaCue").Duration(param0);
             }
 
             return 0;
@@ -4012,19 +3336,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectedEventArgs", L"ResultFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4110,24 +3421,11 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.FaceDetectionEffect", L"SetProperties", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetProperties(param0);
+                    py::require<winrt::Windows::Media::IMediaExtension>(self->obj, py::member_kind::method, "Windows.Media.Core.FaceDetectionEffect", "SetProperties", "Windows.Media.IMediaExtension", 1).SetProperties(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4149,19 +3447,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffect", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4185,19 +3470,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffect", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4218,19 +3490,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffect", L"DesiredDetectionInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4254,19 +3513,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffect", L"DesiredDetectionInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -4287,19 +3533,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.FaceDetectionEffect", L"FaceDetected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::FaceDetectionEffect, winrt::Windows::Media::Core::FaceDetectedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4319,19 +3552,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.FaceDetectionEffect", L"FaceDetected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4442,23 +3662,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectDefinition", L"SynchronousDetectionEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SynchronousDetectionEnabled();
+                return py::require<winrt::Windows::Media::Core::IFaceDetectionEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectDefinition", "SynchronousDetectionEnabled", "Windows.Media.Core.IFaceDetectionEffectDefinition").SynchronousDetectionEnabled();
             }());
         }
         catch (...)
@@ -4478,24 +3685,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectDefinition", L"SynchronousDetectionEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SynchronousDetectionEnabled(param0);
+                py::require<winrt::Windows::Media::Core::IFaceDetectionEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectDefinition", "SynchronousDetectionEnabled", "Windows.Media.Core.IFaceDetectionEffectDefinition").SynchronousDetectionEnabled(param0);
             }
 
             return 0;
@@ -4511,23 +3705,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectDefinition", L"DetectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DetectionMode();
+                return py::require<winrt::Windows::Media::Core::IFaceDetectionEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectDefinition", "DetectionMode", "Windows.Media.Core.IFaceDetectionEffectDefinition").DetectionMode();
             }());
         }
         catch (...)
@@ -4547,24 +3728,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectDefinition", L"DetectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::FaceDetectionMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DetectionMode(param0);
+                py::require<winrt::Windows::Media::Core::IFaceDetectionEffectDefinition>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectDefinition", "DetectionMode", "Windows.Media.Core.IFaceDetectionEffectDefinition").DetectionMode(param0);
             }
 
             return 0;
@@ -4580,19 +3748,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4610,19 +3765,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4711,22 +3853,9 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Core.FaceDetectionEffectFrame", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -4748,19 +3877,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"DetectedFaces");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4778,23 +3894,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"SystemRelativeTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SystemRelativeTime();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "SystemRelativeTime", "Windows.Media.IMediaFrame").SystemRelativeTime();
             }());
         }
         catch (...)
@@ -4814,24 +3917,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"SystemRelativeTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SystemRelativeTime(param0);
+                py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "SystemRelativeTime", "Windows.Media.IMediaFrame").SystemRelativeTime(param0);
             }
 
             return 0;
@@ -4847,23 +3937,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"RelativeTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RelativeTime();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "RelativeTime", "Windows.Media.IMediaFrame").RelativeTime();
             }());
         }
         catch (...)
@@ -4883,24 +3960,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"RelativeTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RelativeTime(param0);
+                py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "RelativeTime", "Windows.Media.IMediaFrame").RelativeTime(param0);
             }
 
             return 0;
@@ -4916,23 +3980,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"IsDiscontinuous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDiscontinuous();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "IsDiscontinuous", "Windows.Media.IMediaFrame").IsDiscontinuous();
             }());
         }
         catch (...)
@@ -4952,24 +4003,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"IsDiscontinuous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsDiscontinuous(param0);
+                py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "IsDiscontinuous", "Windows.Media.IMediaFrame").IsDiscontinuous(param0);
             }
 
             return 0;
@@ -4985,23 +4023,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Duration();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "Duration", "Windows.Media.IMediaFrame").Duration();
             }());
         }
         catch (...)
@@ -5021,24 +4046,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Duration(param0);
+                py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "Duration", "Windows.Media.IMediaFrame").Duration(param0);
             }
 
             return 0;
@@ -5054,23 +4066,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"ExtendedProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExtendedProperties();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "ExtendedProperties", "Windows.Media.IMediaFrame").ExtendedProperties();
             }());
         }
         catch (...)
@@ -5084,23 +4083,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"IsReadOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReadOnly();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "IsReadOnly", "Windows.Media.IMediaFrame").IsReadOnly();
             }());
         }
         catch (...)
@@ -5114,23 +4100,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.FaceDetectionEffectFrame", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.FaceDetectionEffectFrame", "Type", "Windows.Media.IMediaFrame").Type();
             }());
         }
         catch (...)
@@ -5175,7 +4148,7 @@ namespace py::cpp::Windows::Media::Core
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Core.FaceDetectionEffectFrame", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -5241,19 +4214,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.HighDynamicRangeControl", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5277,19 +4237,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.HighDynamicRangeControl", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5374,19 +4321,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.HighDynamicRangeOutput", L"Certainty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5404,19 +4338,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.HighDynamicRangeOutput", L"FrameControllers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5521,19 +4442,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"SoftwareBitmap");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5557,19 +4465,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"SoftwareBitmap");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(arg);
 
             {
@@ -5590,19 +4485,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5626,19 +4508,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextPoint>(arg);
 
             {
@@ -5659,19 +4528,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"Extent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5695,19 +4551,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"Extent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextSize>(arg);
 
             {
@@ -5728,23 +4571,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StartTime();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ImageCue", "StartTime", "Windows.Media.Core.IMediaCue").StartTime();
             }());
         }
         catch (...)
@@ -5764,24 +4594,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StartTime(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ImageCue", "StartTime", "Windows.Media.Core.IMediaCue").StartTime(param0);
             }
 
             return 0;
@@ -5797,23 +4614,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ImageCue", "Id", "Windows.Media.Core.IMediaCue").Id();
             }());
         }
         catch (...)
@@ -5833,24 +4637,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Id(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ImageCue", "Id", "Windows.Media.Core.IMediaCue").Id(param0);
             }
 
             return 0;
@@ -5866,23 +4657,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Duration();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ImageCue", "Duration", "Windows.Media.Core.IMediaCue").Duration();
             }());
         }
         catch (...)
@@ -5902,24 +4680,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ImageCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Duration(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.ImageCue", "Duration", "Windows.Media.Core.IMediaCue").Duration(param0);
             }
 
             return 0;
@@ -6008,19 +4773,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6044,19 +4796,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs", L"RandomAccessStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6074,19 +4813,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6328,22 +5054,9 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.LowLightFusionResult", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Core.LowLightFusionResult", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -6365,19 +5078,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.LowLightFusionResult", L"Frame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6426,7 +5126,7 @@ namespace py::cpp::Windows::Media::Core
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Core.LowLightFusionResult", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -6507,19 +5207,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaBinder", L"Token");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6543,19 +5230,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaBinder", L"Token");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6576,19 +5250,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaBinder", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6606,19 +5267,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaBinder", L"Binding");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaBinder, winrt::Windows::Media::Core::MediaBindingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6638,19 +5286,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaBinder", L"Binding");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -6742,19 +5377,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaBindingEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6782,24 +5404,11 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaBindingEventArgs", L"SetAdaptiveMediaSource", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAdaptiveMediaSource(param0);
+                    py::require<winrt::Windows::Media::Core::IMediaBindingEventArgs2>(self->obj, py::member_kind::method, "Windows.Media.Core.MediaBindingEventArgs", "SetAdaptiveMediaSource", "Windows.Media.Core.IMediaBindingEventArgs2", 1).SetAdaptiveMediaSource(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6825,24 +5434,11 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaBindingEventArgs", L"SetDownloadOperation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetDownloadOperation(param0);
+                    py::require<winrt::Windows::Media::Core::IMediaBindingEventArgs3>(self->obj, py::member_kind::method, "Windows.Media.Core.MediaBindingEventArgs", "SetDownloadOperation", "Windows.Media.Core.IMediaBindingEventArgs3", 1).SetDownloadOperation(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6868,24 +5464,11 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaBindingEventArgs", L"SetStorageFile", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetStorageFile(param0);
+                    py::require<winrt::Windows::Media::Core::IMediaBindingEventArgs2>(self->obj, py::member_kind::method, "Windows.Media.Core.MediaBindingEventArgs", "SetStorageFile", "Windows.Media.Core.IMediaBindingEventArgs2", 1).SetStorageFile(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6911,19 +5494,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaBindingEventArgs", L"SetStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -6955,19 +5525,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaBindingEventArgs", L"SetStreamReference", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -6999,19 +5556,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaBindingEventArgs", L"SetUri", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 {
@@ -7038,19 +5582,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaBindingEventArgs", L"MediaBinder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7068,19 +5599,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaBindingEventArgs", L"Canceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaBindingEventArgs, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -7100,19 +5618,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaBindingEventArgs", L"Canceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7206,19 +5711,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaCueEventArgs", L"Cue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7304,22 +5796,9 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaSource", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Core.MediaSource", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -7809,23 +6288,10 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaSource", L"OpenAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.OpenAsync();
+                    return py::require<winrt::Windows::Media::Core::IMediaSource4>(self->obj, py::member_kind::method, "Windows.Media.Core.MediaSource", "OpenAsync", "Windows.Media.Core.IMediaSource4", 0).OpenAsync();
                 }());
             }
             catch (...)
@@ -7849,22 +6315,9 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaSource", L"Reset", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Reset();
+                    py::require<winrt::Windows::Media::Core::IMediaSource3>(self->obj, py::member_kind::method, "Windows.Media.Core.MediaSource", "Reset", "Windows.Media.Core.IMediaSource3", 0).Reset();
                 }
 
                 Py_RETURN_NONE;
@@ -7886,19 +6339,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"CustomProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7916,19 +6356,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7946,19 +6373,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"ExternalTimedMetadataTracks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7976,19 +6390,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"ExternalTimedTextSources");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8006,19 +6407,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"IsOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8036,23 +6424,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.State();
+                return py::require<winrt::Windows::Media::Core::IMediaSource3>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaSource", "State", "Windows.Media.Core.IMediaSource3").State();
             }());
         }
         catch (...)
@@ -8066,23 +6441,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"AdaptiveMediaSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AdaptiveMediaSource();
+                return py::require<winrt::Windows::Media::Core::IMediaSource4>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaSource", "AdaptiveMediaSource", "Windows.Media.Core.IMediaSource4").AdaptiveMediaSource();
             }());
         }
         catch (...)
@@ -8096,23 +6458,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"MediaStreamSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MediaStreamSource();
+                return py::require<winrt::Windows::Media::Core::IMediaSource4>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaSource", "MediaStreamSource", "Windows.Media.Core.IMediaSource4").MediaStreamSource();
             }());
         }
         catch (...)
@@ -8126,23 +6475,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"MseStreamSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MseStreamSource();
+                return py::require<winrt::Windows::Media::Core::IMediaSource4>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaSource", "MseStreamSource", "Windows.Media.Core.IMediaSource4").MseStreamSource();
             }());
         }
         catch (...)
@@ -8156,23 +6492,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Uri();
+                return py::require<winrt::Windows::Media::Core::IMediaSource4>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaSource", "Uri", "Windows.Media.Core.IMediaSource4").Uri();
             }());
         }
         catch (...)
@@ -8186,23 +6509,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSource", L"DownloadOperation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DownloadOperation();
+                return py::require<winrt::Windows::Media::Core::IMediaSource5>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaSource", "DownloadOperation", "Windows.Media.Core.IMediaSource5").DownloadOperation();
             }());
         }
         catch (...)
@@ -8216,19 +6526,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaSource", L"OpenOperationCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSource, winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8248,19 +6545,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaSource", L"OpenOperationCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8281,25 +6565,12 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaSource", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSource, winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StateChanged(param0);
+                return py::require<winrt::Windows::Media::Core::IMediaSource3>(self->obj, py::member_kind::event, "Windows.Media.Core.MediaSource", "StateChanged", "Windows.Media.Core.IMediaSource3").StateChanged(param0);
             }());
         }
         catch (...)
@@ -8313,24 +6584,11 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaSource", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StateChanged(param0);
+                py::require<winrt::Windows::Media::Core::IMediaSource3>(self->obj, py::member_kind::event, "Windows.Media.Core.MediaSource", "StateChanged", "Windows.Media.Core.IMediaSource3").StateChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -8377,7 +6635,7 @@ namespace py::cpp::Windows::Media::Core
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Core.MediaSource", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -8512,19 +6770,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaSourceAppServiceConnection", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -8549,19 +6794,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaSourceAppServiceConnection", L"InitializeMediaStreamSourceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSourceAppServiceConnection, winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8581,19 +6813,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaSourceAppServiceConnection", L"InitializeMediaStreamSourceRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8680,19 +6899,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSourceError", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8774,19 +6980,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8868,19 +7061,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSourceStateChangedEventArgs", L"NewState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8898,19 +7078,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaSourceStateChangedEventArgs", L"OldState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9123,19 +7290,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"KeyFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9159,19 +7313,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"KeyFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -9192,19 +7333,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9228,19 +7356,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -9261,19 +7376,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"Discontinuous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9297,19 +7399,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"Discontinuous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -9330,19 +7419,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"DecodeTimestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9366,19 +7442,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"DecodeTimestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -9399,19 +7462,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"Buffer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9429,19 +7479,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"ExtendedProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9459,19 +7496,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"Protection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9489,19 +7513,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"Timestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9519,23 +7530,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSample", L"Direct3D11Surface");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Direct3D11Surface();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamSample2>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaStreamSample", "Direct3D11Surface", "Windows.Media.Core.IMediaStreamSample2").Direct3D11Surface();
             }());
         }
         catch (...)
@@ -9549,19 +7547,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSample", L"Processed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSample, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9581,19 +7566,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSample", L"Processed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9716,19 +7688,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSamplePropertySet", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -9757,23 +7716,10 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSamplePropertySet", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::guid, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.Media.Core.MediaStreamSamplePropertySet", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Guid, Object>>", 0).First();
                 }());
             }
             catch (...)
@@ -9797,19 +7743,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSamplePropertySet", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9837,19 +7770,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSamplePropertySet", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert([&]()
@@ -9879,19 +7799,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSamplePropertySet", L"Insert", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -9922,19 +7829,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSamplePropertySet", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert([&]()
@@ -9964,19 +7858,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSamplePropertySet", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 {
@@ -10003,19 +7884,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSamplePropertySet", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10060,7 +7928,7 @@ namespace py::cpp::Windows::Media::Core
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::guid, winrt::Windows::Foundation::IInspectable>>>(self->obj, py::member_kind::method, "Windows.Media.Core.MediaStreamSamplePropertySet", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Guid, Object>>", 0).First();
             }())};
 
             if (!iter)
@@ -10245,19 +8113,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSampleProtectionProperties", L"GetInitializationVector", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::com_array<uint8_t> param0{};
 
                 {
@@ -10294,19 +8149,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSampleProtectionProperties", L"GetKeyIdentifier", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::com_array<uint8_t> param0{};
 
                 {
@@ -10343,19 +8185,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSampleProtectionProperties", L"GetSubSampleMapping", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::com_array<uint8_t> param0{};
 
                 {
@@ -10392,19 +8221,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSampleProtectionProperties", L"SetInitializationVector", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 {
@@ -10435,19 +8251,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSampleProtectionProperties", L"SetKeyIdentifier", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 {
@@ -10478,19 +8281,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSampleProtectionProperties", L"SetSubSampleMapping", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 {
@@ -10630,19 +8420,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSource", L"AddProtectionKey", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaStreamDescriptor>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
@@ -10675,19 +8452,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSource", L"AddStreamDescriptor", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaStreamDescriptor>(args, 0);
 
                 {
@@ -10718,19 +8482,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSource", L"NotifyError", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::MediaStreamSourceErrorStatus>(args, 0);
 
                 {
@@ -10761,19 +8512,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSource", L"SetBufferedRange", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -10801,19 +8539,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10837,19 +8562,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             {
@@ -10870,19 +8582,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"MediaProtectionManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10906,19 +8605,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"MediaProtectionManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::MediaProtectionManager>(arg);
 
             {
@@ -10939,19 +8625,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10975,19 +8648,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -11008,19 +8668,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"CanSeek");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11044,19 +8691,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"CanSeek");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -11077,19 +8711,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"BufferTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11113,19 +8734,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"BufferTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -11146,19 +8754,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"MusicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11176,19 +8771,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"VideoProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11206,23 +8788,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"MaxSupportedPlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxSupportedPlaybackRate();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamSource3>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaStreamSource", "MaxSupportedPlaybackRate", "Windows.Media.Core.IMediaStreamSource3").MaxSupportedPlaybackRate();
             }());
         }
         catch (...)
@@ -11242,24 +8811,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"MaxSupportedPlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MaxSupportedPlaybackRate(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamSource3>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaStreamSource", "MaxSupportedPlaybackRate", "Windows.Media.Core.IMediaStreamSource3").MaxSupportedPlaybackRate(param0);
             }
 
             return 0;
@@ -11275,23 +8831,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"IsLive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsLive();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamSource4>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaStreamSource", "IsLive", "Windows.Media.Core.IMediaStreamSource4").IsLive();
             }());
         }
         catch (...)
@@ -11311,24 +8854,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSource", L"IsLive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsLive(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamSource4>(self->obj, py::member_kind::property, "Windows.Media.Core.MediaStreamSource", "IsLive", "Windows.Media.Core.IMediaStreamSource4").IsLive(param0);
             }
 
             return 0;
@@ -11344,19 +8874,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -11376,19 +8893,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -11409,19 +8913,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"Paused");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -11441,19 +8932,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"Paused");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -11474,19 +8952,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"SampleRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -11506,19 +8971,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"SampleRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -11539,19 +8991,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"Starting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -11571,19 +9010,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"Starting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -11604,19 +9030,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"SwitchStreamsRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -11636,19 +9049,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"SwitchStreamsRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -11669,25 +9069,12 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"SampleRendered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SampleRendered(param0);
+                return py::require<winrt::Windows::Media::Core::IMediaStreamSource2>(self->obj, py::member_kind::event, "Windows.Media.Core.MediaStreamSource", "SampleRendered", "Windows.Media.Core.IMediaStreamSource2").SampleRendered(param0);
             }());
         }
         catch (...)
@@ -11701,24 +9088,11 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MediaStreamSource", L"SampleRendered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SampleRendered(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamSource2>(self->obj, py::member_kind::event, "Windows.Media.Core.MediaStreamSource", "SampleRendered", "Windows.Media.Core.IMediaStreamSource2").SampleRendered(param0);
             }
 
             Py_RETURN_NONE;
@@ -11822,19 +9196,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceClosedEventArgs", L"Request");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11916,19 +9277,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceClosedRequest", L"Reason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12010,19 +9358,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs", L"SampleLag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12108,19 +9443,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSourceSampleRequest", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -12148,19 +9470,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSourceSampleRequest", L"ReportSampleProgress", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -12187,19 +9496,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceSampleRequest", L"Sample");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12223,19 +9519,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceSampleRequest", L"Sample");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::MediaStreamSample>(arg);
 
             {
@@ -12256,19 +9539,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceSampleRequest", L"StreamDescriptor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12357,19 +9627,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSourceSampleRequestDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -12458,19 +9715,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceSampleRequestedEventArgs", L"Request");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12552,19 +9796,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceStartingEventArgs", L"Request");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12650,19 +9881,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSourceStartingRequest", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -12690,19 +9908,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSourceStartingRequest", L"SetActualStartPosition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 {
@@ -12729,19 +9934,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceStartingRequest", L"StartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12829,19 +10021,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSourceStartingRequestDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -12934,19 +10113,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -12970,19 +10136,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest", L"NewStreamDescriptor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13000,19 +10153,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest", L"OldStreamDescriptor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13100,19 +10240,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -13201,19 +10328,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs", L"Request");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13299,19 +10413,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MseSourceBuffer", L"Abort", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Abort();
@@ -13340,19 +10441,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MseSourceBuffer", L"AppendBuffer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 {
@@ -13383,19 +10471,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MseSourceBuffer", L"AppendStream", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 {
@@ -13415,19 +10490,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MseSourceBuffer", L"AppendStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<uint64_t>(args, 1);
 
@@ -13459,19 +10521,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MseSourceBuffer", L"Remove", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(args, 1);
 
@@ -13499,19 +10548,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBuffer", L"TimestampOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13535,19 +10571,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBuffer", L"TimestampOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -13568,19 +10591,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBuffer", L"Mode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13604,19 +10614,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBuffer", L"Mode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::MseAppendMode>(arg);
 
             {
@@ -13637,19 +10634,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBuffer", L"AppendWindowStart");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13673,19 +10657,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBuffer", L"AppendWindowStart");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -13706,19 +10677,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBuffer", L"AppendWindowEnd");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13742,19 +10700,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBuffer", L"AppendWindowEnd");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -13775,19 +10720,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBuffer", L"Buffered");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13805,19 +10737,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBuffer", L"IsUpdating");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13835,19 +10754,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBuffer", L"Aborted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -13867,19 +10773,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBuffer", L"Aborted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13900,19 +10793,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBuffer", L"ErrorOccurred");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -13932,19 +10812,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBuffer", L"ErrorOccurred");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13965,19 +10832,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBuffer", L"UpdateEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -13997,19 +10851,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBuffer", L"UpdateEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14030,19 +10871,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBuffer", L"UpdateStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14062,19 +10890,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBuffer", L"UpdateStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14095,19 +10910,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBuffer", L"Updated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14127,19 +10929,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBuffer", L"Updated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14243,19 +11032,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseSourceBufferList", L"Buffers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14273,19 +11049,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBufferList", L"SourceBufferAdded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBufferList, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14305,19 +11068,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBufferList", L"SourceBufferAdded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14338,19 +11088,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBufferList", L"SourceBufferRemoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBufferList, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14370,19 +11107,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseSourceBufferList", L"SourceBufferRemoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14497,19 +11221,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MseStreamSource", L"AddSourceBuffer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -14539,19 +11250,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MseStreamSource", L"EndOfStream", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::MseEndOfStreamStatus>(args, 0);
 
                 {
@@ -14624,19 +11322,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.MseStreamSource", L"RemoveSourceBuffer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::MseSourceBuffer>(args, 0);
 
                 {
@@ -14663,19 +11348,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseStreamSource", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14699,19 +11371,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseStreamSource", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -14732,19 +11391,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseStreamSource", L"ActiveSourceBuffers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14762,19 +11408,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseStreamSource", L"ReadyState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14792,19 +11425,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseStreamSource", L"SourceBuffers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14822,23 +11442,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseStreamSource", L"LiveSeekableRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LiveSeekableRange();
+                return py::require<winrt::Windows::Media::Core::IMseStreamSource2>(self->obj, py::member_kind::property, "Windows.Media.Core.MseStreamSource", "LiveSeekableRange", "Windows.Media.Core.IMseStreamSource2").LiveSeekableRange();
             }());
         }
         catch (...)
@@ -14858,24 +11465,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.MseStreamSource", L"LiveSeekableRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Media::Core::MseTimeRange>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.LiveSeekableRange(param0);
+                py::require<winrt::Windows::Media::Core::IMseStreamSource2>(self->obj, py::member_kind::property, "Windows.Media.Core.MseStreamSource", "LiveSeekableRange", "Windows.Media.Core.IMseStreamSource2").LiveSeekableRange(param0);
             }
 
             return 0;
@@ -14891,19 +11485,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseStreamSource", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14923,19 +11504,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseStreamSource", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14956,19 +11524,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseStreamSource", L"Ended");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14988,19 +11543,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseStreamSource", L"Ended");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -15021,19 +11563,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseStreamSource", L"Opened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -15053,19 +11582,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.MseStreamSource", L"Opened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -15189,24 +11705,11 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.SceneAnalysisEffect", L"SetProperties", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetProperties(param0);
+                    py::require<winrt::Windows::Media::IMediaExtension>(self->obj, py::member_kind::method, "Windows.Media.Core.SceneAnalysisEffect", "SetProperties", "Windows.Media.IMediaExtension", 1).SetProperties(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -15228,19 +11731,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffect", L"DesiredAnalysisInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15264,19 +11754,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffect", L"DesiredAnalysisInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -15297,19 +11774,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffect", L"HighDynamicRangeAnalyzer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15327,19 +11791,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.SceneAnalysisEffect", L"SceneAnalyzed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::SceneAnalysisEffect, winrt::Windows::Media::Core::SceneAnalyzedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -15359,19 +11810,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.SceneAnalysisEffect", L"SceneAnalyzed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -15482,19 +11920,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15512,19 +11937,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15611,22 +12023,9 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Core.SceneAnalysisEffectFrame", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -15648,19 +12047,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"FrameControlValues");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15678,19 +12064,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"HighDynamicRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15708,23 +12081,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"AnalysisRecommendation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AnalysisRecommendation();
+                return py::require<winrt::Windows::Media::Core::ISceneAnalysisEffectFrame2>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "AnalysisRecommendation", "Windows.Media.Core.ISceneAnalysisEffectFrame2").AnalysisRecommendation();
             }());
         }
         catch (...)
@@ -15738,23 +12098,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"SystemRelativeTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SystemRelativeTime();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "SystemRelativeTime", "Windows.Media.IMediaFrame").SystemRelativeTime();
             }());
         }
         catch (...)
@@ -15774,24 +12121,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"SystemRelativeTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SystemRelativeTime(param0);
+                py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "SystemRelativeTime", "Windows.Media.IMediaFrame").SystemRelativeTime(param0);
             }
 
             return 0;
@@ -15807,23 +12141,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"RelativeTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RelativeTime();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "RelativeTime", "Windows.Media.IMediaFrame").RelativeTime();
             }());
         }
         catch (...)
@@ -15843,24 +12164,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"RelativeTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RelativeTime(param0);
+                py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "RelativeTime", "Windows.Media.IMediaFrame").RelativeTime(param0);
             }
 
             return 0;
@@ -15876,23 +12184,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"IsDiscontinuous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDiscontinuous();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "IsDiscontinuous", "Windows.Media.IMediaFrame").IsDiscontinuous();
             }());
         }
         catch (...)
@@ -15912,24 +12207,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"IsDiscontinuous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsDiscontinuous(param0);
+                py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "IsDiscontinuous", "Windows.Media.IMediaFrame").IsDiscontinuous(param0);
             }
 
             return 0;
@@ -15945,23 +12227,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Duration();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "Duration", "Windows.Media.IMediaFrame").Duration();
             }());
         }
         catch (...)
@@ -15981,24 +12250,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Duration(param0);
+                py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "Duration", "Windows.Media.IMediaFrame").Duration(param0);
             }
 
             return 0;
@@ -16014,23 +12270,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"ExtendedProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ExtendedProperties();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "ExtendedProperties", "Windows.Media.IMediaFrame").ExtendedProperties();
             }());
         }
         catch (...)
@@ -16044,23 +12287,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"IsReadOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsReadOnly();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "IsReadOnly", "Windows.Media.IMediaFrame").IsReadOnly();
             }());
         }
         catch (...)
@@ -16074,23 +12304,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalysisEffectFrame", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::IMediaFrame>(self->obj, py::member_kind::property, "Windows.Media.Core.SceneAnalysisEffectFrame", "Type", "Windows.Media.IMediaFrame").Type();
             }());
         }
         catch (...)
@@ -16135,7 +12352,7 @@ namespace py::cpp::Windows::Media::Core
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Core.SceneAnalysisEffectFrame", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -16203,19 +12420,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SceneAnalyzedEventArgs", L"ResultFrame");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16319,23 +12523,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StartTime();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.SpeechCue", "StartTime", "Windows.Media.Core.IMediaCue").StartTime();
             }());
         }
         catch (...)
@@ -16355,24 +12546,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StartTime(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.SpeechCue", "StartTime", "Windows.Media.Core.IMediaCue").StartTime(param0);
             }
 
             return 0;
@@ -16388,23 +12566,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.SpeechCue", "Id", "Windows.Media.Core.IMediaCue").Id();
             }());
         }
         catch (...)
@@ -16424,24 +12589,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Id(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.SpeechCue", "Id", "Windows.Media.Core.IMediaCue").Id(param0);
             }
 
             return 0;
@@ -16457,23 +12609,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Duration();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.SpeechCue", "Duration", "Windows.Media.Core.IMediaCue").Duration();
             }());
         }
         catch (...)
@@ -16493,24 +12632,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Duration(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.SpeechCue", "Duration", "Windows.Media.Core.IMediaCue").Duration(param0);
             }
 
             return 0;
@@ -16526,19 +12652,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16562,19 +12675,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -16595,19 +12695,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"StartPositionInInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16631,19 +12718,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"StartPositionInInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -16664,19 +12738,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"EndPositionInInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16700,19 +12761,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.SpeechCue", L"EndPositionInInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             {
@@ -16830,23 +12878,10 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.TimedMetadataStreamDescriptor", L"Copy", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Copy();
+                    return py::require<winrt::Windows::Media::Core::ITimedMetadataStreamDescriptor>(self->obj, py::member_kind::method, "Windows.Media.Core.TimedMetadataStreamDescriptor", "Copy", "Windows.Media.Core.ITimedMetadataStreamDescriptor", 0).Copy();
                 }());
             }
             catch (...)
@@ -16866,19 +12901,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataStreamDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16902,19 +12924,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataStreamDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -16935,19 +12944,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataStreamDescriptor", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16971,19 +12967,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataStreamDescriptor", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -17004,19 +12987,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataStreamDescriptor", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17034,23 +13004,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataStreamDescriptor", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Label();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedMetadataStreamDescriptor", "Label", "Windows.Media.Core.IMediaStreamDescriptor2").Label();
             }());
         }
         catch (...)
@@ -17070,24 +13027,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataStreamDescriptor", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Label(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedMetadataStreamDescriptor", "Label", "Windows.Media.Core.IMediaStreamDescriptor2").Label(param0);
             }
 
             return 0;
@@ -17103,23 +13047,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataStreamDescriptor", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EncodingProperties();
+                return py::require<winrt::Windows::Media::Core::ITimedMetadataStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedMetadataStreamDescriptor", "EncodingProperties", "Windows.Media.Core.ITimedMetadataStreamDescriptor").EncodingProperties();
             }());
         }
         catch (...)
@@ -17232,19 +13163,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.TimedMetadataTrack", L"AddCue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaCue>(args, 0);
 
                 {
@@ -17275,19 +13193,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.TimedMetadataTrack", L"RemoveCue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaCue>(args, 0);
 
                 {
@@ -17314,23 +13219,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Label();
+                return py::require<winrt::Windows::Media::Core::IMediaTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedMetadataTrack", "Label", "Windows.Media.Core.IMediaTrack").Label();
             }());
         }
         catch (...)
@@ -17350,24 +13242,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Label(param0);
+                py::require<winrt::Windows::Media::Core::IMediaTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedMetadataTrack", "Label", "Windows.Media.Core.IMediaTrack").Label(param0);
             }
 
             return 0;
@@ -17383,23 +13262,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::Media::Core::IMediaTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedMetadataTrack", "Id", "Windows.Media.Core.IMediaTrack").Id();
             }());
         }
         catch (...)
@@ -17413,23 +13279,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Media::Core::IMediaTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedMetadataTrack", "Language", "Windows.Media.Core.IMediaTrack").Language();
             }());
         }
         catch (...)
@@ -17443,23 +13296,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"TrackKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TrackKind();
+                return py::require<winrt::Windows::Media::Core::IMediaTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedMetadataTrack", "TrackKind", "Windows.Media.Core.IMediaTrack").TrackKind();
             }());
         }
         catch (...)
@@ -17473,19 +13313,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"ActiveCues");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17503,19 +13330,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"Cues");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17533,19 +13347,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"DispatchType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17563,19 +13364,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"TimedMetadataKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17593,23 +13381,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Media::Core::ITimedMetadataTrack2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedMetadataTrack", "Name", "Windows.Media.Core.ITimedMetadataTrack2").Name();
             }());
         }
         catch (...)
@@ -17623,23 +13398,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrack", L"PlaybackItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PlaybackItem();
+                return py::require<winrt::Windows::Media::Core::ITimedMetadataTrack2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedMetadataTrack", "PlaybackItem", "Windows.Media.Core.ITimedMetadataTrack2").PlaybackItem();
             }());
         }
         catch (...)
@@ -17653,19 +13415,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.TimedMetadataTrack", L"CueEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::MediaCueEventArgs>>(arg);
 
             return py::convert([&]()
@@ -17685,19 +13434,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.TimedMetadataTrack", L"CueEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -17718,19 +13454,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.TimedMetadataTrack", L"CueExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::MediaCueEventArgs>>(arg);
 
             return py::convert([&]()
@@ -17750,19 +13473,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.TimedMetadataTrack", L"CueExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -17783,19 +13493,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.TimedMetadataTrack", L"TrackFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -17815,19 +13512,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.TimedMetadataTrack", L"TrackFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -17929,19 +13613,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrackError", L"ErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17959,19 +13630,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrackError", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18054,19 +13712,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedMetadataTrackFailedEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18148,19 +13793,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextBouten", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18184,19 +13816,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextBouten", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextBoutenType>(arg);
 
             {
@@ -18217,19 +13836,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextBouten", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18253,19 +13859,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextBouten", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextBoutenPosition>(arg);
 
             {
@@ -18286,19 +13879,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextBouten", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18322,19 +13902,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextBouten", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -18443,23 +14010,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StartTime();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextCue", "StartTime", "Windows.Media.Core.IMediaCue").StartTime();
             }());
         }
         catch (...)
@@ -18479,24 +14033,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StartTime(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextCue", "StartTime", "Windows.Media.Core.IMediaCue").StartTime(param0);
             }
 
             return 0;
@@ -18512,23 +14053,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextCue", "Id", "Windows.Media.Core.IMediaCue").Id();
             }());
         }
         catch (...)
@@ -18548,24 +14076,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Id(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextCue", "Id", "Windows.Media.Core.IMediaCue").Id(param0);
             }
 
             return 0;
@@ -18581,23 +14096,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Duration();
+                return py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextCue", "Duration", "Windows.Media.Core.IMediaCue").Duration();
             }());
         }
         catch (...)
@@ -18617,24 +14119,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Duration(param0);
+                py::require<winrt::Windows::Media::Core::IMediaCue>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextCue", "Duration", "Windows.Media.Core.IMediaCue").Duration(param0);
             }
 
             return 0;
@@ -18650,19 +14139,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"CueStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18686,19 +14162,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"CueStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextStyle>(arg);
 
             {
@@ -18719,19 +14182,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"CueRegion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18755,19 +14205,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"CueRegion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextRegion>(arg);
 
             {
@@ -18788,19 +14225,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextCue", L"Lines");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18909,19 +14333,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextLine", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18945,19 +14356,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextLine", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -18978,19 +14376,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextLine", L"Subformats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19095,19 +14480,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19131,19 +14503,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -19164,19 +14523,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"LineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19200,19 +14546,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"LineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextDouble>(arg);
 
             {
@@ -19233,19 +14566,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"IsOverflowClipped");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19269,19 +14589,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"IsOverflowClipped");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -19302,19 +14609,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"Extent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19338,19 +14632,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"Extent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextSize>(arg);
 
             {
@@ -19371,19 +14652,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"DisplayAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19407,19 +14675,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"DisplayAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextDisplayAlignment>(arg);
 
             {
@@ -19440,19 +14695,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"Padding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19476,19 +14718,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"Padding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextPadding>(arg);
 
             {
@@ -19509,19 +14738,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"Background");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19545,19 +14761,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"Background");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -19578,19 +14781,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"ZIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19614,19 +14804,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"ZIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -19647,19 +14824,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"WritingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19683,19 +14847,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"WritingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextWritingMode>(arg);
 
             {
@@ -19716,19 +14867,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"TextWrapping");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19752,19 +14890,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"TextWrapping");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextWrapping>(arg);
 
             {
@@ -19785,19 +14910,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"ScrollMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19821,19 +14933,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"ScrollMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextScrollMode>(arg);
 
             {
@@ -19854,19 +14953,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19890,19 +14976,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRegion", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextPoint>(arg);
 
             {
@@ -19998,19 +15071,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRuby", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20034,19 +15094,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRuby", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -20067,19 +15114,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRuby", L"Reserve");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20103,19 +15137,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRuby", L"Reserve");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextRubyReserve>(arg);
 
             {
@@ -20136,19 +15157,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRuby", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20172,19 +15180,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRuby", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextRubyPosition>(arg);
 
             {
@@ -20205,19 +15200,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRuby", L"Align");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20241,19 +15223,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextRuby", L"Align");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextRubyAlign>(arg);
 
             {
@@ -20641,19 +15610,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.TimedTextSource", L"Resolved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedTextSource, winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs>>(arg);
 
             return py::convert([&]()
@@ -20673,19 +15629,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.TimedTextSource", L"Resolved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -20796,19 +15739,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextSourceResolveResultEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20826,19 +15756,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextSourceResolveResultEventArgs", L"Tracks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20943,19 +15860,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"LineAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20979,19 +15883,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"LineAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextLineAlignment>(arg);
 
             {
@@ -21012,19 +15903,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"IsBackgroundAlwaysShown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21048,19 +15926,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"IsBackgroundAlwaysShown");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -21081,19 +15946,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"OutlineColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21117,19 +15969,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"OutlineColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -21150,19 +15989,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"Foreground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21186,19 +16012,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"Foreground");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -21219,19 +16032,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FontWeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21255,19 +16055,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FontWeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextWeight>(arg);
 
             {
@@ -21288,19 +16075,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"Background");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21324,19 +16098,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"Background");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -21357,19 +16118,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FontSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21393,19 +16141,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FontSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextDouble>(arg);
 
             {
@@ -21426,19 +16161,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FontFamily");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21462,19 +16184,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FontFamily");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -21495,19 +16204,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FlowDirection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21531,19 +16227,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FlowDirection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextFlowDirection>(arg);
 
             {
@@ -21564,19 +16247,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"OutlineThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21600,19 +16270,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"OutlineThickness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextDouble>(arg);
 
             {
@@ -21633,19 +16290,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"OutlineRadius");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21669,19 +16313,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"OutlineRadius");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextDouble>(arg);
 
             {
@@ -21702,19 +16333,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21738,19 +16356,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -21771,23 +16376,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"IsUnderlineEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsUnderlineEnabled();
+                return py::require<winrt::Windows::Media::Core::ITimedTextStyle2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "IsUnderlineEnabled", "Windows.Media.Core.ITimedTextStyle2").IsUnderlineEnabled();
             }());
         }
         catch (...)
@@ -21807,24 +16399,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"IsUnderlineEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsUnderlineEnabled(param0);
+                py::require<winrt::Windows::Media::Core::ITimedTextStyle2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "IsUnderlineEnabled", "Windows.Media.Core.ITimedTextStyle2").IsUnderlineEnabled(param0);
             }
 
             return 0;
@@ -21840,23 +16419,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"IsOverlineEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsOverlineEnabled();
+                return py::require<winrt::Windows::Media::Core::ITimedTextStyle2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "IsOverlineEnabled", "Windows.Media.Core.ITimedTextStyle2").IsOverlineEnabled();
             }());
         }
         catch (...)
@@ -21876,24 +16442,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"IsOverlineEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsOverlineEnabled(param0);
+                py::require<winrt::Windows::Media::Core::ITimedTextStyle2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "IsOverlineEnabled", "Windows.Media.Core.ITimedTextStyle2").IsOverlineEnabled(param0);
             }
 
             return 0;
@@ -21909,23 +16462,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"IsLineThroughEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsLineThroughEnabled();
+                return py::require<winrt::Windows::Media::Core::ITimedTextStyle2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "IsLineThroughEnabled", "Windows.Media.Core.ITimedTextStyle2").IsLineThroughEnabled();
             }());
         }
         catch (...)
@@ -21945,24 +16485,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"IsLineThroughEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsLineThroughEnabled(param0);
+                py::require<winrt::Windows::Media::Core::ITimedTextStyle2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "IsLineThroughEnabled", "Windows.Media.Core.ITimedTextStyle2").IsLineThroughEnabled(param0);
             }
 
             return 0;
@@ -21978,23 +16505,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FontStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FontStyle();
+                return py::require<winrt::Windows::Media::Core::ITimedTextStyle2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "FontStyle", "Windows.Media.Core.ITimedTextStyle2").FontStyle();
             }());
         }
         catch (...)
@@ -22014,24 +16528,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FontStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextFontStyle>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.FontStyle(param0);
+                py::require<winrt::Windows::Media::Core::ITimedTextStyle2>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "FontStyle", "Windows.Media.Core.ITimedTextStyle2").FontStyle(param0);
             }
 
             return 0;
@@ -22047,23 +16548,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"IsTextCombined");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsTextCombined();
+                return py::require<winrt::Windows::Media::Core::ITimedTextStyle3>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "IsTextCombined", "Windows.Media.Core.ITimedTextStyle3").IsTextCombined();
             }());
         }
         catch (...)
@@ -22083,24 +16571,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"IsTextCombined");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsTextCombined(param0);
+                py::require<winrt::Windows::Media::Core::ITimedTextStyle3>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "IsTextCombined", "Windows.Media.Core.ITimedTextStyle3").IsTextCombined(param0);
             }
 
             return 0;
@@ -22116,23 +16591,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FontAngleInDegrees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FontAngleInDegrees();
+                return py::require<winrt::Windows::Media::Core::ITimedTextStyle3>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "FontAngleInDegrees", "Windows.Media.Core.ITimedTextStyle3").FontAngleInDegrees();
             }());
         }
         catch (...)
@@ -22152,24 +16614,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"FontAngleInDegrees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.FontAngleInDegrees(param0);
+                py::require<winrt::Windows::Media::Core::ITimedTextStyle3>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "FontAngleInDegrees", "Windows.Media.Core.ITimedTextStyle3").FontAngleInDegrees(param0);
             }
 
             return 0;
@@ -22185,23 +16634,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"Bouten");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Bouten();
+                return py::require<winrt::Windows::Media::Core::ITimedTextStyle3>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "Bouten", "Windows.Media.Core.ITimedTextStyle3").Bouten();
             }());
         }
         catch (...)
@@ -22215,23 +16651,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextStyle", L"Ruby");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Ruby();
+                return py::require<winrt::Windows::Media::Core::ITimedTextStyle3>(self->obj, py::member_kind::property, "Windows.Media.Core.TimedTextStyle", "Ruby", "Windows.Media.Core.ITimedTextStyle3").Ruby();
             }());
         }
         catch (...)
@@ -22350,19 +16773,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextSubformat", L"SubformatStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22386,19 +16796,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextSubformat", L"SubformatStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedTextStyle>(arg);
 
             {
@@ -22419,19 +16816,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextSubformat", L"StartIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22455,19 +16839,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextSubformat", L"StartIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -22488,19 +16859,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextSubformat", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22524,19 +16882,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.TimedTextSubformat", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -22627,19 +16972,6 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.VideoStabilizationEffect", L"GetRecommendedStreamConfiguration", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::VideoDeviceController>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>(args, 1);
 
@@ -22670,24 +17002,11 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.VideoStabilizationEffect", L"SetProperties", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetProperties(param0);
+                    py::require<winrt::Windows::Media::IMediaExtension>(self->obj, py::member_kind::method, "Windows.Media.Core.VideoStabilizationEffect", "SetProperties", "Windows.Media.IMediaExtension", 1).SetProperties(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -22709,19 +17028,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStabilizationEffect", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22745,19 +17051,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStabilizationEffect", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -22778,19 +17071,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.VideoStabilizationEffect", L"EnabledChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::VideoStabilizationEffect, winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -22810,19 +17090,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.VideoStabilizationEffect", L"EnabledChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -22933,19 +17200,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStabilizationEffectDefinition", L"ActivatableClassId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -22963,19 +17217,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStabilizationEffectDefinition", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23058,19 +17299,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStabilizationEffectEnabledChangedEventArgs", L"Reason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23180,23 +17408,10 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.VideoStreamDescriptor", L"Copy", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Copy();
+                    return py::require<winrt::Windows::Media::Core::IVideoStreamDescriptor2>(self->obj, py::member_kind::method, "Windows.Media.Core.VideoStreamDescriptor", "Copy", "Windows.Media.Core.IVideoStreamDescriptor2", 0).Copy();
                 }());
             }
             catch (...)
@@ -23216,23 +17431,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStreamDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.VideoStreamDescriptor", "Name", "Windows.Media.Core.IMediaStreamDescriptor").Name();
             }());
         }
         catch (...)
@@ -23252,24 +17454,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStreamDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Name(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.VideoStreamDescriptor", "Name", "Windows.Media.Core.IMediaStreamDescriptor").Name(param0);
             }
 
             return 0;
@@ -23285,23 +17474,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStreamDescriptor", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.VideoStreamDescriptor", "Language", "Windows.Media.Core.IMediaStreamDescriptor").Language();
             }());
         }
         catch (...)
@@ -23321,24 +17497,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStreamDescriptor", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.VideoStreamDescriptor", "Language", "Windows.Media.Core.IMediaStreamDescriptor").Language(param0);
             }
 
             return 0;
@@ -23354,23 +17517,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStreamDescriptor", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSelected();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.VideoStreamDescriptor", "IsSelected", "Windows.Media.Core.IMediaStreamDescriptor").IsSelected();
             }());
         }
         catch (...)
@@ -23384,23 +17534,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStreamDescriptor", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Label();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor2>(self->obj, py::member_kind::property, "Windows.Media.Core.VideoStreamDescriptor", "Label", "Windows.Media.Core.IMediaStreamDescriptor2").Label();
             }());
         }
         catch (...)
@@ -23420,24 +17557,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStreamDescriptor", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Label(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor2>(self->obj, py::member_kind::property, "Windows.Media.Core.VideoStreamDescriptor", "Label", "Windows.Media.Core.IMediaStreamDescriptor2").Label(param0);
             }
 
             return 0;
@@ -23453,19 +17577,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoStreamDescriptor", L"EncodingProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23556,23 +17667,10 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.VideoTrack", L"GetEncodingProperties", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetEncodingProperties();
+                    return py::require<winrt::Windows::Media::Core::IVideoTrack>(self->obj, py::member_kind::method, "Windows.Media.Core.VideoTrack", "GetEncodingProperties", "Windows.Media.Core.IVideoTrack", 0).GetEncodingProperties();
                 }());
             }
             catch (...)
@@ -23592,19 +17690,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrack", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23628,19 +17713,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrack", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -23661,19 +17733,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrack", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23691,19 +17750,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrack", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23721,19 +17767,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrack", L"TrackKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23751,23 +17784,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrack", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Media::Core::IVideoTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.VideoTrack", "Name", "Windows.Media.Core.IVideoTrack").Name();
             }());
         }
         catch (...)
@@ -23781,23 +17801,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrack", L"PlaybackItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PlaybackItem();
+                return py::require<winrt::Windows::Media::Core::IVideoTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.VideoTrack", "PlaybackItem", "Windows.Media.Core.IVideoTrack").PlaybackItem();
             }());
         }
         catch (...)
@@ -23811,23 +17818,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrack", L"SupportInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportInfo();
+                return py::require<winrt::Windows::Media::Core::IVideoTrack>(self->obj, py::member_kind::property, "Windows.Media.Core.VideoTrack", "SupportInfo", "Windows.Media.Core.IVideoTrack").SupportInfo();
             }());
         }
         catch (...)
@@ -23841,25 +17835,12 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.VideoTrack", L"OpenFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::VideoTrack, winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OpenFailed(param0);
+                return py::require<winrt::Windows::Media::Core::IVideoTrack>(self->obj, py::member_kind::event, "Windows.Media.Core.VideoTrack", "OpenFailed", "Windows.Media.Core.IVideoTrack").OpenFailed(param0);
             }());
         }
         catch (...)
@@ -23873,24 +17854,11 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.VideoTrack", L"OpenFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OpenFailed(param0);
+                py::require<winrt::Windows::Media::Core::IVideoTrack>(self->obj, py::member_kind::event, "Windows.Media.Core.VideoTrack", "OpenFailed", "Windows.Media.Core.IVideoTrack").OpenFailed(param0);
             }
 
             Py_RETURN_NONE;
@@ -23979,19 +17947,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrackOpenFailedEventArgs", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24073,19 +18028,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrackSupportInfo", L"DecoderStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24103,19 +18045,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.VideoTrackSupportInfo", L"MediaSourceStatus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24200,19 +18129,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24236,19 +18152,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaCue", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -24269,19 +18172,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24305,19 +18195,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaCue", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -24338,19 +18215,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24374,19 +18238,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaCue", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -24809,19 +18660,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24839,19 +18677,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24875,19 +18700,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -24908,19 +18720,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -24944,19 +18743,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -25221,19 +19007,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor2", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25257,19 +19030,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor2", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -25290,23 +19050,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsSelected();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.IMediaStreamDescriptor", "IsSelected", "Windows.Media.Core.IMediaStreamDescriptor").IsSelected();
             }());
         }
         catch (...)
@@ -25320,23 +19067,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Language();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.IMediaStreamDescriptor", "Language", "Windows.Media.Core.IMediaStreamDescriptor").Language();
             }());
         }
         catch (...)
@@ -25356,24 +19090,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Language(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.IMediaStreamDescriptor", "Language", "Windows.Media.Core.IMediaStreamDescriptor").Language(param0);
             }
 
             return 0;
@@ -25389,23 +19110,10 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.IMediaStreamDescriptor", "Name", "Windows.Media.Core.IMediaStreamDescriptor").Name();
             }());
         }
         catch (...)
@@ -25425,24 +19133,11 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaStreamDescriptor", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Name(param0);
+                py::require<winrt::Windows::Media::Core::IMediaStreamDescriptor>(self->obj, py::member_kind::property, "Windows.Media.Core.IMediaStreamDescriptor", "Name", "Windows.Media.Core.IMediaStreamDescriptor").Name(param0);
             }
 
             return 0;
@@ -25746,19 +19441,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaTrack", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25776,19 +19458,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaTrack", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25812,19 +19481,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaTrack", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -25845,19 +19501,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaTrack", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -25875,19 +19518,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.IMediaTrack", L"TrackKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26147,19 +19777,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ISingleSelectMediaTrackList", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -26183,19 +19800,6 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ISingleSelectMediaTrackList", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -26216,19 +19820,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.ISingleSelectMediaTrackList", L"SelectedIndexChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::ISingleSelectMediaTrackList, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -26248,19 +19839,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Core.ISingleSelectMediaTrackList", L"SelectedIndexChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -26524,19 +20102,6 @@ namespace py::cpp::Windows::Media::Core
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Core.ITimedMetadataTrackProvider", L"TimedMetadataTracks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

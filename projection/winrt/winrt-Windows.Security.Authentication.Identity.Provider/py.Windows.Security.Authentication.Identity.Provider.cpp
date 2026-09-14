@@ -29,19 +29,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"AbortAuthenticationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -71,19 +58,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"FinishAuthenticationAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -236,19 +210,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"DeviceConfigurationData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -266,19 +227,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"DeviceNonce");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -296,19 +244,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"ServiceAuthenticationHmac");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -326,19 +261,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"SessionNonce");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -516,19 +438,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult", L"Authentication");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -546,19 +455,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -641,19 +537,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs", L"StageInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -735,19 +618,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -765,19 +635,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo", L"Scenario");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -795,19 +652,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo", L"Stage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -895,25 +739,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo", L"UpdateDevicePresenceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresence>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.UpdateDevicePresenceAsync(param0);
+                    return py::require<winrt::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorInfo2>(self->obj, py::member_kind::method, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo", "UpdateDevicePresenceAsync", "Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorInfo2", 1).UpdateDevicePresenceAsync(param0);
                 }());
             }
             catch (...)
@@ -933,19 +764,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo", L"DeviceConfigurationData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -963,19 +781,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo", L"DeviceFriendlyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -993,19 +798,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1023,19 +815,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo", L"DeviceModelNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1053,23 +832,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo", L"IsAuthenticationSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsAuthenticationSupported();
+                return py::require<winrt::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorInfo2>(self->obj, py::member_kind::property, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo", "IsAuthenticationSupported", "Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorInfo2").IsAuthenticationSupported();
             }());
         }
         catch (...)
@@ -1083,23 +849,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo", L"PresenceMonitoringMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PresenceMonitoringMode();
+                return py::require<winrt::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorInfo2>(self->obj, py::member_kind::property, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo", "PresenceMonitoringMode", "Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorInfo2").PresenceMonitoringMode();
             }());
         }
         catch (...)
@@ -1187,19 +940,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", L"AbortRegisteringDeviceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1271,19 +1011,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", L"FinishRegisteringDeviceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -1696,19 +1423,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult", L"Registration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1726,19 +1440,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

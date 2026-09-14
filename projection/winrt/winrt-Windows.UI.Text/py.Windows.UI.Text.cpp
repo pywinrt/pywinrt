@@ -47,19 +47,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ContentLinkInfo", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -83,19 +70,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ContentLinkInfo", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -116,19 +90,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ContentLinkInfo", L"SecondaryText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -152,19 +113,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ContentLinkInfo", L"SecondaryText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -185,19 +133,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ContentLinkInfo", L"LinkContentKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -221,19 +156,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ContentLinkInfo", L"LinkContentKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -254,19 +176,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ContentLinkInfo", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -290,19 +199,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ContentLinkInfo", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -323,19 +219,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ContentLinkInfo", L"DisplayText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -359,19 +242,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ContentLinkInfo", L"DisplayText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -889,19 +759,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"ApplyDisplayUpdates", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -929,19 +786,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"BatchDisplayUpdates", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -969,19 +813,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"BeginUndoGroup", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.BeginUndoGroup();
@@ -1010,19 +841,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"CanCopy", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1050,19 +868,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"CanPaste", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1090,19 +895,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"CanRedo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1130,19 +922,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"CanUndo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1170,22 +949,9 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"ClearUndoRedoHistory", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.ClearUndoRedoHistory();
+                    py::require<winrt::Windows::UI::Text::ITextDocument3>(self->obj, py::member_kind::method, "Windows.UI.Text.RichEditTextDocument", "ClearUndoRedoHistory", "Windows.UI.Text.ITextDocument3", 0).ClearUndoRedoHistory();
                 }
 
                 Py_RETURN_NONE;
@@ -1211,19 +977,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"EndUndoGroup", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.EndUndoGroup();
@@ -1252,19 +1005,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"GetDefaultCharacterFormat", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1292,19 +1032,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"GetDefaultParagraphFormat", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1332,24 +1059,11 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"GetMath", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::hstring param0{};
 
                 {
                     auto _gil = release_gil();
-                    self->obj.GetMath(param0);
+                    py::require<winrt::Windows::UI::Text::ITextDocument4>(self->obj, py::member_kind::method, "Windows.UI.Text.RichEditTextDocument", "GetMath", "Windows.UI.Text.ITextDocument4", 0).GetMath(param0);
                 }
 
                 py::pyobj_handle out0{ py::convert(param0) };
@@ -1381,19 +1095,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"GetRange", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -1424,19 +1125,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"GetRangeFromPoint", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 1);
 
@@ -1467,19 +1155,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"GetText", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
                 winrt::hstring param1{};
 
@@ -1517,19 +1192,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"LoadFromStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -1561,19 +1223,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"Redo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Redo();
@@ -1602,19 +1251,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"SaveToStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -1646,19 +1282,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"SetDefaultCharacterFormat", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextCharacterFormat>(args, 0);
 
                 {
@@ -1689,19 +1312,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"SetDefaultParagraphFormat", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextParagraphFormat>(args, 0);
 
                 {
@@ -1732,24 +1342,11 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"SetMath", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetMath(param0);
+                    py::require<winrt::Windows::UI::Text::ITextDocument4>(self->obj, py::member_kind::method, "Windows.UI.Text.RichEditTextDocument", "SetMath", "Windows.UI.Text.ITextDocument4", 1).SetMath(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1775,24 +1372,11 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"SetMathMode", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::RichEditMathMode>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetMathMode(param0);
+                    py::require<winrt::Windows::UI::Text::ITextDocument4>(self->obj, py::member_kind::method, "Windows.UI.Text.RichEditTextDocument", "SetMathMode", "Windows.UI.Text.ITextDocument4", 1).SetMathMode(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1818,19 +1402,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"SetText", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1862,19 +1433,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextDocument", L"Undo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Undo();
@@ -1899,19 +1457,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"UndoLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1935,19 +1480,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"UndoLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -1968,19 +1500,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"DefaultTabStop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2004,19 +1523,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"DefaultTabStop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -2037,19 +1543,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"CaretType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2073,19 +1566,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"CaretType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::CaretType>(arg);
 
             {
@@ -2106,19 +1586,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"Selection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2136,23 +1603,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"IgnoreTrailingCharacterSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IgnoreTrailingCharacterSpacing();
+                return py::require<winrt::Windows::UI::Text::ITextDocument2>(self->obj, py::member_kind::property, "Windows.UI.Text.RichEditTextDocument", "IgnoreTrailingCharacterSpacing", "Windows.UI.Text.ITextDocument2").IgnoreTrailingCharacterSpacing();
             }());
         }
         catch (...)
@@ -2172,24 +1626,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"IgnoreTrailingCharacterSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IgnoreTrailingCharacterSpacing(param0);
+                py::require<winrt::Windows::UI::Text::ITextDocument2>(self->obj, py::member_kind::property, "Windows.UI.Text.RichEditTextDocument", "IgnoreTrailingCharacterSpacing", "Windows.UI.Text.ITextDocument2").IgnoreTrailingCharacterSpacing(param0);
             }
 
             return 0;
@@ -2205,23 +1646,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"AlignmentIncludesTrailingWhitespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AlignmentIncludesTrailingWhitespace();
+                return py::require<winrt::Windows::UI::Text::ITextDocument2>(self->obj, py::member_kind::property, "Windows.UI.Text.RichEditTextDocument", "AlignmentIncludesTrailingWhitespace", "Windows.UI.Text.ITextDocument2").AlignmentIncludesTrailingWhitespace();
             }());
         }
         catch (...)
@@ -2241,24 +1669,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextDocument", L"AlignmentIncludesTrailingWhitespace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AlignmentIncludesTrailingWhitespace(param0);
+                py::require<winrt::Windows::UI::Text::ITextDocument2>(self->obj, py::member_kind::property, "Windows.UI.Text.RichEditTextDocument", "AlignmentIncludesTrailingWhitespace", "Windows.UI.Text.ITextDocument2").AlignmentIncludesTrailingWhitespace(param0);
             }
 
             return 0;
@@ -2371,19 +1786,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"CanPaste", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -2413,19 +1815,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"ChangeCase", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::LetterCase>(args, 0);
 
                 {
@@ -2456,19 +1845,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"Collapse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -2499,19 +1875,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"Copy", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Copy();
@@ -2540,19 +1903,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"Cut", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Cut();
@@ -2581,19 +1931,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"Delete", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -2624,19 +1961,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"EndOf", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -2667,19 +1991,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"Expand", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
 
                 return py::convert([&]()
@@ -2709,19 +2020,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"FindText", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::FindOptions>(args, 2);
@@ -2753,19 +2051,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"GetCharacterUtf32", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 uint32_t param0{};
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -2803,19 +2088,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"GetClone", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2843,19 +2115,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"GetIndex", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
 
                 return py::convert([&]()
@@ -2885,19 +2144,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"GetPoint", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::HorizontalCharacterAlignment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::VerticalCharacterAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 2);
@@ -2937,19 +2183,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"GetRect", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 0);
                 winrt::Windows::Foundation::Rect param1{};
                 int32_t param2{};
@@ -2993,19 +2226,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"GetText", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
                 winrt::hstring param1{};
 
@@ -3043,19 +2263,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"GetTextViaStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -3087,19 +2294,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"InRange", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(args, 0);
 
                 return py::convert([&]()
@@ -3129,19 +2323,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"InStory", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(args, 0);
 
                 return py::convert([&]()
@@ -3171,19 +2352,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"InsertImage", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -3219,19 +2387,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"IsEqual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(args, 0);
 
                 return py::convert([&]()
@@ -3261,19 +2416,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"MatchSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.MatchSelection();
@@ -3302,19 +2444,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"Move", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -3345,19 +2474,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"MoveEnd", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -3388,19 +2504,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"MoveStart", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -3431,19 +2534,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"Paste", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
@@ -3474,19 +2564,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"ScrollIntoView", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 0);
 
                 {
@@ -3517,19 +2594,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"SetIndex", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -3562,19 +2626,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"SetPoint", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -3607,19 +2658,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"SetRange", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -3651,19 +2689,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"SetText", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -3695,19 +2720,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"SetTextViaStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -3739,19 +2751,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.RichEditTextRange", L"StartOf", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -3778,23 +2777,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"ContentLinkInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentLinkInfo();
+                return py::require<winrt::Windows::UI::Text::IRichEditTextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.RichEditTextRange", "ContentLinkInfo", "Windows.UI.Text.IRichEditTextRange").ContentLinkInfo();
             }());
         }
         catch (...)
@@ -3814,24 +2800,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"ContentLinkInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ContentLinkInfo>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ContentLinkInfo(param0);
+                py::require<winrt::Windows::UI::Text::IRichEditTextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.RichEditTextRange", "ContentLinkInfo", "Windows.UI.Text.IRichEditTextRange").ContentLinkInfo(param0);
             }
 
             return 0;
@@ -3847,19 +2820,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3883,19 +2843,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3916,19 +2863,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"StartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3952,19 +2886,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"StartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -3985,19 +2906,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"ParagraphFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4021,19 +2929,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"ParagraphFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextParagraphFormat>(arg);
 
             {
@@ -4054,19 +2949,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"Link");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4090,19 +2972,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"Link");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4123,19 +2992,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"Gravity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4159,19 +3015,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"Gravity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::RangeGravity>(arg);
 
             {
@@ -4192,19 +3035,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"FormattedText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4228,19 +3058,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"FormattedText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(arg);
 
             {
@@ -4261,19 +3078,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"EndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4297,19 +3101,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"EndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -4330,19 +3121,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"CharacterFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4366,19 +3144,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"CharacterFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextCharacterFormat>(arg);
 
             {
@@ -4399,19 +3164,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"Character");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4435,19 +3187,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"Character");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<char16_t>(arg);
 
             {
@@ -4468,19 +3207,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4498,19 +3224,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.RichEditTextRange", L"StoryLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4938,19 +3651,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextCharacterFormat", L"GetClone", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4978,19 +3678,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextCharacterFormat", L"IsEqual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextCharacterFormat>(args, 0);
 
                 return py::convert([&]()
@@ -5020,19 +3707,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextCharacterFormat", L"SetClone", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextCharacterFormat>(args, 0);
 
                 {
@@ -5059,19 +3733,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"AllCaps");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5095,19 +3756,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"AllCaps");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -5128,19 +3776,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5164,19 +3799,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -5197,19 +3819,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Bold");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5233,19 +3842,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Bold");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -5266,19 +3862,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"FontStretch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5302,19 +3885,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"FontStretch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FontStretch>(arg);
 
             {
@@ -5335,19 +3905,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"FontStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5371,19 +3928,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"FontStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FontStyle>(arg);
 
             {
@@ -5404,19 +3948,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"ForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5440,19 +3971,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"ForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -5473,19 +3991,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Hidden");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5509,19 +4014,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Hidden");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -5542,19 +4034,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Italic");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5578,19 +4057,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Italic");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -5611,19 +4077,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Kerning");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5647,19 +4100,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Kerning");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -5680,19 +4120,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"LanguageTag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5716,19 +4143,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"LanguageTag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5749,19 +4163,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"LinkType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5779,19 +4180,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5815,19 +4203,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -5848,19 +4223,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Outline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5884,19 +4246,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Outline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -5917,19 +4266,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5953,19 +4289,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -5986,19 +4309,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"ProtectedText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6022,19 +4332,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"ProtectedText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -6055,19 +4352,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6091,19 +4375,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -6124,19 +4395,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"SmallCaps");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6160,19 +4418,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"SmallCaps");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -6193,19 +4438,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Spacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6229,19 +4461,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Spacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -6262,19 +4481,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Strikethrough");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6298,19 +4504,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Strikethrough");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -6331,19 +4524,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Subscript");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6367,19 +4547,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Subscript");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -6400,19 +4567,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Superscript");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6436,19 +4590,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Superscript");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -6469,19 +4610,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"TextScript");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6505,19 +4633,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"TextScript");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::TextScript>(arg);
 
             {
@@ -6538,19 +4653,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Underline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6574,19 +4676,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Underline");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::UnderlineType>(arg);
 
             {
@@ -6607,19 +4696,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Weight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6643,19 +4719,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextCharacterFormat", L"Weight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -7939,19 +6002,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"ApplyDisplayUpdates", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7979,19 +6029,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"BatchDisplayUpdates", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8019,19 +6056,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"BeginUndoGroup", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.BeginUndoGroup();
@@ -8060,19 +6084,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"CanCopy", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8100,19 +6111,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"CanPaste", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8140,19 +6138,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"CanRedo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8180,19 +6165,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"CanUndo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8220,19 +6192,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"EndUndoGroup", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.EndUndoGroup();
@@ -8261,19 +6220,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"GetDefaultCharacterFormat", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8301,19 +6247,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"GetDefaultParagraphFormat", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8341,19 +6274,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"GetRange", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -8384,19 +6304,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"GetRangeFromPoint", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 1);
 
@@ -8427,19 +6334,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"GetText", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
                 winrt::hstring param1{};
 
@@ -8477,19 +6371,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"LoadFromStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -8521,19 +6402,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"Redo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Redo();
@@ -8562,19 +6430,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"SaveToStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -8606,19 +6461,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"SetDefaultCharacterFormat", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextCharacterFormat>(args, 0);
 
                 {
@@ -8649,19 +6491,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"SetDefaultParagraphFormat", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextParagraphFormat>(args, 0);
 
                 {
@@ -8692,19 +6521,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"SetText", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -8736,19 +6552,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextDocument", L"Undo", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Undo();
@@ -8773,19 +6576,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextDocument", L"CaretType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8809,19 +6599,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextDocument", L"CaretType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::CaretType>(arg);
 
             {
@@ -8842,19 +6619,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextDocument", L"DefaultTabStop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8878,19 +6642,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextDocument", L"DefaultTabStop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -8911,19 +6662,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextDocument", L"Selection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8941,19 +6679,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextDocument", L"UndoLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8977,19 +6702,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextDocument", L"UndoLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -9932,19 +7644,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextParagraphFormat", L"AddTab", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::TabAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::TabLeader>(args, 2);
@@ -9977,19 +7676,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ClearAllTabs", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ClearAllTabs();
@@ -10018,19 +7704,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextParagraphFormat", L"DeleteTab", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
 
                 {
@@ -10061,19 +7734,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextParagraphFormat", L"GetClone", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10101,19 +7761,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextParagraphFormat", L"GetTab", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 float param1{};
                 winrt::Windows::UI::Text::TabAlignment param2{};
@@ -10163,19 +7810,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextParagraphFormat", L"IsEqual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextParagraphFormat>(args, 0);
 
                 return py::convert([&]()
@@ -10205,19 +7839,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextParagraphFormat", L"SetClone", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextParagraphFormat>(args, 0);
 
                 {
@@ -10248,19 +7869,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextParagraphFormat", L"SetIndents", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -10293,19 +7901,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextParagraphFormat", L"SetLineSpacing", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::LineSpacingRule>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -10333,19 +7928,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"Alignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10369,19 +7951,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"Alignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ParagraphAlignment>(arg);
 
             {
@@ -10402,19 +7971,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"FirstLineIndent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10432,19 +7988,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"KeepTogether");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10468,19 +8011,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"KeepTogether");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -10501,19 +8031,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"KeepWithNext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10537,19 +8054,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"KeepWithNext");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -10570,19 +8074,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"LeftIndent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10600,19 +8091,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"LineSpacing");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10630,19 +8108,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"LineSpacingRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10660,19 +8125,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10696,19 +8148,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListAlignment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::MarkerAlignment>(arg);
 
             {
@@ -10729,19 +8168,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListLevelIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10765,19 +8191,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListLevelIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -10798,19 +8211,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListStart");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10834,19 +8234,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListStart");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -10867,19 +8254,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10903,19 +8277,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::MarkerStyle>(arg);
 
             {
@@ -10936,19 +8297,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListTab");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10972,19 +8320,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListTab");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -11005,19 +8340,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11041,19 +8363,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"ListType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::MarkerType>(arg);
 
             {
@@ -11074,19 +8383,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"NoLineNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11110,19 +8406,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"NoLineNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -11143,19 +8426,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"PageBreakBefore");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11179,19 +8449,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"PageBreakBefore");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -11212,19 +8469,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"RightIndent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11248,19 +8492,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"RightIndent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -11281,19 +8512,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"RightToLeft");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11317,19 +8535,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"RightToLeft");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -11350,19 +8555,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"SpaceAfter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11386,19 +8578,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"SpaceAfter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -11419,19 +8598,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"SpaceBefore");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11455,19 +8621,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"SpaceBefore");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -11488,19 +8641,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"Style");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11524,19 +8664,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"Style");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ParagraphStyle>(arg);
 
             {
@@ -11557,19 +8684,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"TabCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11587,19 +8701,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"WidowControl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11623,19 +8724,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextParagraphFormat", L"WidowControl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FormatEffect>(arg);
 
             {
@@ -12973,19 +10061,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"CanPaste", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -13015,19 +10090,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"ChangeCase", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::LetterCase>(args, 0);
 
                 {
@@ -13058,19 +10120,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Collapse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -13101,19 +10150,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Copy", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Copy();
@@ -13142,19 +10178,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Cut", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Cut();
@@ -13183,19 +10206,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Delete", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -13226,19 +10236,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"EndOf", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -13269,19 +10266,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Expand", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
 
                 return py::convert([&]()
@@ -13311,19 +10295,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"FindText", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::FindOptions>(args, 2);
@@ -13355,19 +10326,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetCharacterUtf32", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 uint32_t param0{};
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -13405,19 +10363,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetClone", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -13445,19 +10390,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetIndex", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
 
                 return py::convert([&]()
@@ -13487,19 +10419,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetPoint", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::HorizontalCharacterAlignment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::VerticalCharacterAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 2);
@@ -13539,19 +10458,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetRect", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 0);
                 winrt::Windows::Foundation::Rect param1{};
                 int32_t param2{};
@@ -13595,19 +10501,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetText", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
                 winrt::hstring param1{};
 
@@ -13645,19 +10538,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetTextViaStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -13689,19 +10569,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"InRange", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(args, 0);
 
                 return py::convert([&]()
@@ -13731,19 +10598,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"InStory", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(args, 0);
 
                 return py::convert([&]()
@@ -13773,19 +10627,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"InsertImage", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -13821,19 +10662,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"IsEqual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(args, 0);
 
                 return py::convert([&]()
@@ -13863,19 +10691,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"MatchSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.MatchSelection();
@@ -13904,19 +10719,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Move", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -13947,19 +10749,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"MoveEnd", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -13990,19 +10779,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"MoveStart", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -14033,19 +10809,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Paste", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
@@ -14076,19 +10839,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"ScrollIntoView", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 0);
 
                 {
@@ -14119,19 +10869,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"SetIndex", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -14164,19 +10901,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"SetPoint", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -14209,19 +10933,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"SetRange", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -14253,19 +10964,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"SetText", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -14297,19 +10995,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"SetTextViaStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -14341,19 +11026,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"StartOf", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -14380,19 +11052,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Character");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14416,19 +11075,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Character");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<char16_t>(arg);
 
             {
@@ -14449,19 +11095,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"CharacterFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14485,19 +11118,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"CharacterFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextCharacterFormat>(arg);
 
             {
@@ -14518,19 +11138,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"EndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14554,19 +11161,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"EndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -14587,19 +11181,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"FormattedText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14623,19 +11204,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"FormattedText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(arg);
 
             {
@@ -14656,19 +11224,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Gravity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14692,19 +11247,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Gravity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::RangeGravity>(arg);
 
             {
@@ -14725,19 +11267,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14755,19 +11284,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Link");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14791,19 +11307,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Link");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -14824,19 +11327,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"ParagraphFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14860,19 +11350,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"ParagraphFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextParagraphFormat>(arg);
 
             {
@@ -14893,19 +11370,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"StartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14929,19 +11393,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"StartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -14962,19 +11413,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"StoryLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14992,19 +11430,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15028,19 +11453,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -16872,25 +13284,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"CanPaste", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CanPaste(param0);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "CanPaste", "Windows.UI.Text.ITextRange", 1).CanPaste(param0);
                 }());
             }
             catch (...)
@@ -16914,24 +13313,11 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"ChangeCase", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::LetterCase>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ChangeCase(param0);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "ChangeCase", "Windows.UI.Text.ITextRange", 1).ChangeCase(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -16957,24 +13343,11 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Collapse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Collapse(param0);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "Collapse", "Windows.UI.Text.ITextRange", 1).Collapse(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -17000,22 +13373,9 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Copy", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Copy();
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "Copy", "Windows.UI.Text.ITextRange", 0).Copy();
                 }
 
                 Py_RETURN_NONE;
@@ -17041,22 +13401,9 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Cut", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Cut();
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "Cut", "Windows.UI.Text.ITextRange", 0).Cut();
                 }
 
                 Py_RETURN_NONE;
@@ -17082,26 +13429,13 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Delete", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Delete(param0, param1);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "Delete", "Windows.UI.Text.ITextRange", 2).Delete(param0, param1);
                 }());
             }
             catch (...)
@@ -17125,19 +13459,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextSelection", L"EndKey", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -17168,26 +13489,13 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"EndOf", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.EndOf(param0, param1);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "EndOf", "Windows.UI.Text.ITextRange", 2).EndOf(param0, param1);
                 }());
             }
             catch (...)
@@ -17211,25 +13519,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Expand", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Expand(param0);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "Expand", "Windows.UI.Text.ITextRange", 1).Expand(param0);
                 }());
             }
             catch (...)
@@ -17253,19 +13548,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"FindText", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::FindOptions>(args, 2);
@@ -17273,7 +13555,7 @@ namespace py::cpp::Windows::UI::Text
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindText(param0, param1, param2);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "FindText", "Windows.UI.Text.ITextRange", 3).FindText(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -17297,25 +13579,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetCharacterUtf32", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 uint32_t param0{};
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.GetCharacterUtf32(param0, param1);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "GetCharacterUtf32", "Windows.UI.Text.ITextRange", 1).GetCharacterUtf32(param0, param1);
                 }
 
                 py::pyobj_handle out0{ py::convert(param0) };
@@ -17347,23 +13616,10 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetClone", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetClone();
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "GetClone", "Windows.UI.Text.ITextRange", 0).GetClone();
                 }());
             }
             catch (...)
@@ -17387,25 +13643,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetIndex", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetIndex(param0);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "GetIndex", "Windows.UI.Text.ITextRange", 1).GetIndex(param0);
                 }());
             }
             catch (...)
@@ -17429,19 +13672,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetPoint", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::HorizontalCharacterAlignment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::VerticalCharacterAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 2);
@@ -17449,7 +13679,7 @@ namespace py::cpp::Windows::UI::Text
 
                 {
                     auto _gil = release_gil();
-                    self->obj.GetPoint(param0, param1, param2, param3);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "GetPoint", "Windows.UI.Text.ITextRange", 3).GetPoint(param0, param1, param2, param3);
                 }
 
                 py::pyobj_handle out3{ py::convert(param3) };
@@ -17481,26 +13711,13 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetRect", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 0);
                 winrt::Windows::Foundation::Rect param1{};
                 int32_t param2{};
 
                 {
                     auto _gil = release_gil();
-                    self->obj.GetRect(param0, param1, param2);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "GetRect", "Windows.UI.Text.ITextRange", 1).GetRect(param0, param1, param2);
                 }
 
                 py::pyobj_handle out1{ py::convert(param1) };
@@ -17537,25 +13754,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetText", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
                 winrt::hstring param1{};
 
                 {
                     auto _gil = release_gil();
-                    self->obj.GetText(param0, param1);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "GetText", "Windows.UI.Text.ITextRange", 1).GetText(param0, param1);
                 }
 
                 py::pyobj_handle out1{ py::convert(param1) };
@@ -17587,25 +13791,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"GetTextViaStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.GetTextViaStream(param0, param1);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "GetTextViaStream", "Windows.UI.Text.ITextRange", 2).GetTextViaStream(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -17631,19 +13822,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextSelection", L"HomeKey", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -17674,25 +13852,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"InRange", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.InRange(param0);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "InRange", "Windows.UI.Text.ITextRange", 1).InRange(param0);
                 }());
             }
             catch (...)
@@ -17716,25 +13881,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"InStory", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.InStory(param0);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "InStory", "Windows.UI.Text.ITextRange", 1).InStory(param0);
                 }());
             }
             catch (...)
@@ -17758,19 +13910,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"InsertImage", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -17780,7 +13919,7 @@ namespace py::cpp::Windows::UI::Text
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertImage(param0, param1, param2, param3, param4, param5);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "InsertImage", "Windows.UI.Text.ITextRange", 6).InsertImage(param0, param1, param2, param3, param4, param5);
                 }
 
                 Py_RETURN_NONE;
@@ -17806,25 +13945,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"IsEqual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEqual(param0);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "IsEqual", "Windows.UI.Text.ITextRange", 1).IsEqual(param0);
                 }());
             }
             catch (...)
@@ -17848,22 +13974,9 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"MatchSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.MatchSelection();
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "MatchSelection", "Windows.UI.Text.ITextRange", 0).MatchSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -17889,26 +14002,13 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Move", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Move(param0, param1);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "Move", "Windows.UI.Text.ITextRange", 2).Move(param0, param1);
                 }());
             }
             catch (...)
@@ -17932,19 +14032,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextSelection", L"MoveDown", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -17976,26 +14063,13 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"MoveEnd", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MoveEnd(param0, param1);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "MoveEnd", "Windows.UI.Text.ITextRange", 2).MoveEnd(param0, param1);
                 }());
             }
             catch (...)
@@ -18019,19 +14093,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextSelection", L"MoveLeft", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -18063,19 +14124,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextSelection", L"MoveRight", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -18107,26 +14155,13 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"MoveStart", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MoveStart(param0, param1);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "MoveStart", "Windows.UI.Text.ITextRange", 2).MoveStart(param0, param1);
                 }());
             }
             catch (...)
@@ -18150,19 +14185,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextSelection", L"MoveUp", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -18194,24 +14216,11 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"Paste", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Paste(param0);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "Paste", "Windows.UI.Text.ITextRange", 1).Paste(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -18237,24 +14246,11 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"ScrollIntoView", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ScrollIntoView(param0);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "ScrollIntoView", "Windows.UI.Text.ITextRange", 1).ScrollIntoView(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -18280,26 +14276,13 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"SetIndex", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetIndex(param0, param1, param2);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "SetIndex", "Windows.UI.Text.ITextRange", 3).SetIndex(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -18325,26 +14308,13 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"SetPoint", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetPoint(param0, param1, param2);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "SetPoint", "Windows.UI.Text.ITextRange", 3).SetPoint(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -18370,25 +14340,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"SetRange", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetRange(param0, param1);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "SetRange", "Windows.UI.Text.ITextRange", 2).SetRange(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -18414,25 +14371,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"SetText", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetText(param0, param1);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "SetText", "Windows.UI.Text.ITextRange", 2).SetText(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -18458,25 +14402,12 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"SetTextViaStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextSetOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetTextViaStream(param0, param1);
+                    py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "SetTextViaStream", "Windows.UI.Text.ITextRange", 2).SetTextViaStream(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -18502,26 +14433,13 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextRange", L"StartOf", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextRangeUnit>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StartOf(param0, param1);
+                    return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::method, "Windows.UI.Text.ITextRange", "StartOf", "Windows.UI.Text.ITextRange", 2).StartOf(param0, param1);
                 }());
             }
             catch (...)
@@ -18545,19 +14463,6 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Text.ITextSelection", L"TypeText", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -18584,19 +14489,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextSelection", L"Options");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18620,19 +14512,6 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextSelection", L"Options");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::SelectionOptions>(arg);
 
             {
@@ -18653,19 +14532,6 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextSelection", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18683,23 +14549,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Character");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Character();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "Character", "Windows.UI.Text.ITextRange").Character();
             }());
         }
         catch (...)
@@ -18719,24 +14572,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Character");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<char16_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Character(param0);
+                py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "Character", "Windows.UI.Text.ITextRange").Character(param0);
             }
 
             return 0;
@@ -18752,23 +14592,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"CharacterFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CharacterFormat();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "CharacterFormat", "Windows.UI.Text.ITextRange").CharacterFormat();
             }());
         }
         catch (...)
@@ -18788,24 +14615,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"CharacterFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextCharacterFormat>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CharacterFormat(param0);
+                py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "CharacterFormat", "Windows.UI.Text.ITextRange").CharacterFormat(param0);
             }
 
             return 0;
@@ -18821,23 +14635,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"EndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EndPosition();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "EndPosition", "Windows.UI.Text.ITextRange").EndPosition();
             }());
         }
         catch (...)
@@ -18857,24 +14658,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"EndPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.EndPosition(param0);
+                py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "EndPosition", "Windows.UI.Text.ITextRange").EndPosition(param0);
             }
 
             return 0;
@@ -18890,23 +14678,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"FormattedText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FormattedText();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "FormattedText", "Windows.UI.Text.ITextRange").FormattedText();
             }());
         }
         catch (...)
@@ -18926,24 +14701,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"FormattedText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextRange>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.FormattedText(param0);
+                py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "FormattedText", "Windows.UI.Text.ITextRange").FormattedText(param0);
             }
 
             return 0;
@@ -18959,23 +14721,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Gravity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Gravity();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "Gravity", "Windows.UI.Text.ITextRange").Gravity();
             }());
         }
         catch (...)
@@ -18995,24 +14744,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Gravity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::RangeGravity>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Gravity(param0);
+                py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "Gravity", "Windows.UI.Text.ITextRange").Gravity(param0);
             }
 
             return 0;
@@ -19028,23 +14764,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Length();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "Length", "Windows.UI.Text.ITextRange").Length();
             }());
         }
         catch (...)
@@ -19058,23 +14781,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Link");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Link();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "Link", "Windows.UI.Text.ITextRange").Link();
             }());
         }
         catch (...)
@@ -19094,24 +14804,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Link");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Link(param0);
+                py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "Link", "Windows.UI.Text.ITextRange").Link(param0);
             }
 
             return 0;
@@ -19127,23 +14824,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"ParagraphFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ParagraphFormat();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "ParagraphFormat", "Windows.UI.Text.ITextRange").ParagraphFormat();
             }());
         }
         catch (...)
@@ -19163,24 +14847,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"ParagraphFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Text::ITextParagraphFormat>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ParagraphFormat(param0);
+                py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "ParagraphFormat", "Windows.UI.Text.ITextRange").ParagraphFormat(param0);
             }
 
             return 0;
@@ -19196,23 +14867,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"StartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StartPosition();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "StartPosition", "Windows.UI.Text.ITextRange").StartPosition();
             }());
         }
         catch (...)
@@ -19232,24 +14890,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"StartPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StartPosition(param0);
+                py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "StartPosition", "Windows.UI.Text.ITextRange").StartPosition(param0);
             }
 
             return 0;
@@ -19265,23 +14910,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"StoryLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StoryLength();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "StoryLength", "Windows.UI.Text.ITextRange").StoryLength();
             }());
         }
         catch (...)
@@ -19295,23 +14927,10 @@ namespace py::cpp::Windows::UI::Text
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Text();
+                return py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "Text", "Windows.UI.Text.ITextRange").Text();
             }());
         }
         catch (...)
@@ -19331,24 +14950,11 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Text.ITextRange", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Text(param0);
+                py::require<winrt::Windows::UI::Text::ITextRange>(self->obj, py::member_kind::property, "Windows.UI.Text.ITextRange", "Text", "Windows.UI.Text.ITextRange").Text(param0);
             }
 
             return 0;

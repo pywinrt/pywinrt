@@ -51,22 +51,9 @@ namespace py::cpp::Windows::Web::Http::Filters
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"ClearAuthenticationCache", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.ClearAuthenticationCache();
+                    py::require<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter4>(self->obj, py::member_kind::method, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "ClearAuthenticationCache", "Windows.Web.Http.Filters.IHttpBaseProtocolFilter4", 0).ClearAuthenticationCache();
                 }
 
                 Py_RETURN_NONE;
@@ -92,22 +79,9 @@ namespace py::cpp::Windows::Web::Http::Filters
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -175,25 +149,12 @@ namespace py::cpp::Windows::Web::Http::Filters
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"SendRequestAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SendRequestAsync(param0);
+                    return py::require<winrt::Windows::Web::Http::Filters::IHttpFilter>(self->obj, py::member_kind::method, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "SendRequestAsync", "Windows.Web.Http.Filters.IHttpFilter", 1).SendRequestAsync(param0);
                 }());
             }
             catch (...)
@@ -213,19 +174,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"UseProxy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -249,19 +197,6 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"UseProxy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -282,19 +217,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -318,19 +240,6 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
@@ -351,19 +260,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -387,19 +283,6 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
@@ -420,19 +303,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"MaxConnectionsPerServer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -456,19 +326,6 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"MaxConnectionsPerServer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -489,19 +346,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"ClientCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -525,19 +369,6 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"ClientCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             {
@@ -558,19 +389,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"AutomaticDecompression");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -594,19 +412,6 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"AutomaticDecompression");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -627,19 +432,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"AllowUI");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -663,19 +455,6 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"AllowUI");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -696,19 +475,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"AllowAutoRedirect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -732,19 +498,6 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"AllowAutoRedirect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -765,19 +518,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"CacheControl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -795,19 +535,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"CookieManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -825,19 +552,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"IgnorableServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -855,23 +569,10 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"MaxVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxVersion();
+                return py::require<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter2>(self->obj, py::member_kind::property, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "MaxVersion", "Windows.Web.Http.Filters.IHttpBaseProtocolFilter2").MaxVersion();
             }());
         }
         catch (...)
@@ -891,24 +592,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"MaxVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpVersion>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MaxVersion(param0);
+                py::require<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter2>(self->obj, py::member_kind::property, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "MaxVersion", "Windows.Web.Http.Filters.IHttpBaseProtocolFilter2").MaxVersion(param0);
             }
 
             return 0;
@@ -924,23 +612,10 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"CookieUsageBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CookieUsageBehavior();
+                return py::require<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter3>(self->obj, py::member_kind::property, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "CookieUsageBehavior", "Windows.Web.Http.Filters.IHttpBaseProtocolFilter3").CookieUsageBehavior();
             }());
         }
         catch (...)
@@ -960,24 +635,11 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"CookieUsageBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Filters::HttpCookieUsageBehavior>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CookieUsageBehavior(param0);
+                py::require<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter3>(self->obj, py::member_kind::property, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "CookieUsageBehavior", "Windows.Web.Http.Filters.IHttpBaseProtocolFilter3").CookieUsageBehavior(param0);
             }
 
             return 0;
@@ -993,23 +655,10 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.User();
+                return py::require<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter5>(self->obj, py::member_kind::property, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "User", "Windows.Web.Http.Filters.IHttpBaseProtocolFilter5").User();
             }());
         }
         catch (...)
@@ -1023,25 +672,12 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"ServerCustomValidationRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter, winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCustomValidationRequested(param0);
+                return py::require<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter4>(self->obj, py::member_kind::event, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "ServerCustomValidationRequested", "Windows.Web.Http.Filters.IHttpBaseProtocolFilter4").ServerCustomValidationRequested(param0);
             }());
         }
         catch (...)
@@ -1055,24 +691,11 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Filters.HttpBaseProtocolFilter", L"ServerCustomValidationRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ServerCustomValidationRequested(param0);
+                py::require<winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilter4>(self->obj, py::member_kind::event, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "ServerCustomValidationRequested", "Windows.Web.Http.Filters.IHttpBaseProtocolFilter4").ServerCustomValidationRequested(param0);
             }
 
             Py_RETURN_NONE;
@@ -1119,7 +742,7 @@ namespace py::cpp::Windows::Web::Http::Filters
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Web.Http.Filters.HttpBaseProtocolFilter", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1217,19 +840,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpCacheControl", L"WriteBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1253,19 +863,6 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpCacheControl", L"WriteBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Filters::HttpCacheWriteBehavior>(arg);
 
             {
@@ -1286,19 +883,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpCacheControl", L"ReadBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1322,19 +906,6 @@ namespace py::cpp::Windows::Web::Http::Filters
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpCacheControl", L"ReadBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Filters::HttpCacheReadBehavior>(arg);
 
             {
@@ -1424,19 +995,6 @@ namespace py::cpp::Windows::Web::Http::Filters
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1464,19 +1022,6 @@ namespace py::cpp::Windows::Web::Http::Filters
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs", L"Reject", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Reject();
@@ -1501,19 +1046,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs", L"RequestMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1531,19 +1063,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs", L"ServerCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1561,19 +1080,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs", L"ServerCertificateErrorSeverity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1591,19 +1097,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs", L"ServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1621,19 +1114,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs", L"ServerIntermediateCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1727,22 +1207,9 @@ namespace py::cpp::Windows::Web::Http::Filters
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -1768,19 +1235,6 @@ namespace py::cpp::Windows::Web::Http::Filters
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Filters.IHttpFilter", L"SendRequestAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
                 return py::convert([&]()
@@ -1813,7 +1267,7 @@ namespace py::cpp::Windows::Web::Http::Filters
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;

@@ -54,7 +54,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.One();
+                    return py::require<winrt::TestComponent::IRequiredOne>(self->obj, py::member_kind::method, "TestComponent.Class", "One", "TestComponent.IRequiredOne", 0).One();
                 }());
             }
             catch (...)
@@ -416,7 +416,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::TestComponent::Composable>().Four();
+                    return py::require<winrt::TestComponent::IRequiredFour>(self->obj, py::member_kind::method, "TestComponent.Composable", "Four", "TestComponent.IRequiredFour", 0).Four();
                 }());
             }
             catch (...)
@@ -443,7 +443,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::TestComponent::Composable>().One();
+                    return py::require<winrt::TestComponent::IRequiredOne>(self->obj, py::member_kind::method, "TestComponent.Composable", "One", "TestComponent.IRequiredOne", 0).One();
                 }());
             }
             catch (...)
@@ -470,7 +470,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::TestComponent::Composable>().Three();
+                    return py::require<winrt::TestComponent::IRequiredThree>(self->obj, py::member_kind::method, "TestComponent.Composable", "Three", "TestComponent.IRequiredThree", 0).Three();
                 }());
             }
             catch (...)
@@ -497,7 +497,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::TestComponent::Composable>().Two();
+                    return py::require<winrt::TestComponent::IRequiredTwo>(self->obj, py::member_kind::method, "TestComponent.Composable", "Two", "TestComponent.IRequiredTwo", 0).Two();
                 }());
             }
             catch (...)
@@ -520,7 +520,7 @@ namespace py::cpp::TestComponent
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::TestComponent::Composable>().Value();
+                return py::require<winrt::TestComponent::IComposable>(self->obj, py::member_kind::property, "TestComponent.Composable", "Value", "TestComponent.IComposable").Value();
             }());
         }
         catch (...)
@@ -544,7 +544,7 @@ namespace py::cpp::TestComponent
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::TestComponent::Composable>().Value(param0);
+                py::require<winrt::TestComponent::IComposable>(self->obj, py::member_kind::property, "TestComponent.Composable", "Value", "TestComponent.IComposable").Value(param0);
             }
 
             return 0;
@@ -998,7 +998,7 @@ namespace py::cpp::TestComponent
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::TestComponent::IOverloadClassProtected>().Overload(param0, param1, param2);
+                    py::require<winrt::TestComponent::IOverloadClassProtected>(self->obj, py::member_kind::method, "TestComponent.OverloadClass", "Overload", "TestComponent.IOverloadClassProtected", 3).Overload(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -1026,7 +1026,7 @@ namespace py::cpp::TestComponent
             {
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::TestComponent::OverloadClass>().Overload();
+                    py::require<winrt::TestComponent::IOverloadClass>(self->obj, py::member_kind::method, "TestComponent.OverloadClass", "Overload", "TestComponent.IOverloadClass", 0).Overload();
                 }
 
                 Py_RETURN_NONE;
@@ -1056,7 +1056,7 @@ namespace py::cpp::TestComponent
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverloadClassOverrides>().Overload(param0);
+                    py::require<winrt::TestComponent::IOverloadClassOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "TestComponent.OverloadClass", "Overload", "TestComponent.IOverloadClassOverrides", 1).Overload(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1087,7 +1087,7 @@ namespace py::cpp::TestComponent
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverloadClassOverrides2>().Overload(param0, param1);
+                    py::require<winrt::TestComponent::IOverloadClassOverrides2>(py::get_inner_or_self(self->obj), py::member_kind::method, "TestComponent.OverloadClass", "Overload", "TestComponent.IOverloadClassOverrides2", 2).Overload(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1316,7 +1316,7 @@ namespace py::cpp::TestComponent
             {
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::TestComponent::Override>().CallOverridable();
+                    py::require<winrt::TestComponent::IOverride>(self->obj, py::member_kind::method, "TestComponent.Override", "CallOverridable", "TestComponent.IOverride", 0).CallOverridable();
                 }
 
                 Py_RETURN_NONE;
@@ -1344,7 +1344,7 @@ namespace py::cpp::TestComponent
             {
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::TestComponent::Override>().CallProtected();
+                    py::require<winrt::TestComponent::IOverride>(self->obj, py::member_kind::method, "TestComponent.Override", "CallProtected", "TestComponent.IOverride", 0).CallProtected();
                 }
 
                 Py_RETURN_NONE;
@@ -1372,7 +1372,7 @@ namespace py::cpp::TestComponent
             {
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverrideOverrides>().OnOverridable();
+                    py::require<winrt::TestComponent::IOverrideOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "TestComponent.Override", "OnOverridable", "TestComponent.IOverrideOverrides", 0).OnOverridable();
                 }
 
                 Py_RETURN_NONE;
@@ -1400,7 +1400,7 @@ namespace py::cpp::TestComponent
             {
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::TestComponent::IOverrideProtected>().OnProtected();
+                    py::require<winrt::TestComponent::IOverrideProtected>(self->obj, py::member_kind::method, "TestComponent.Override", "OnProtected", "TestComponent.IOverrideProtected", 0).OnProtected();
                 }
 
                 Py_RETURN_NONE;
@@ -1427,7 +1427,7 @@ namespace py::cpp::TestComponent
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::TestComponent::Override>().OverridableCalled(param0);
+                return py::require<winrt::TestComponent::IOverride>(self->obj, py::member_kind::event, "TestComponent.Override", "OverridableCalled", "TestComponent.IOverride").OverridableCalled(param0);
             }());
         }
         catch (...)
@@ -1445,7 +1445,7 @@ namespace py::cpp::TestComponent
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::TestComponent::Override>().OverridableCalled(param0);
+                py::require<winrt::TestComponent::IOverride>(self->obj, py::member_kind::event, "TestComponent.Override", "OverridableCalled", "TestComponent.IOverride").OverridableCalled(param0);
             }
 
             Py_RETURN_NONE;
@@ -1466,7 +1466,7 @@ namespace py::cpp::TestComponent
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::TestComponent::Override>().ProtectedCalled(param0);
+                return py::require<winrt::TestComponent::IOverride>(self->obj, py::member_kind::event, "TestComponent.Override", "ProtectedCalled", "TestComponent.IOverride").ProtectedCalled(param0);
             }());
         }
         catch (...)
@@ -1484,7 +1484,7 @@ namespace py::cpp::TestComponent
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::TestComponent::Override>().ProtectedCalled(param0);
+                py::require<winrt::TestComponent::IOverride>(self->obj, py::member_kind::event, "TestComponent.Override", "ProtectedCalled", "TestComponent.IOverride").ProtectedCalled(param0);
             }
 
             Py_RETURN_NONE;
@@ -2191,7 +2191,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.One();
+                    return py::require<winrt::TestComponent::IRequiredOne>(self->obj, py::member_kind::method, "TestComponent.IRequiredOne", "One", "TestComponent.IRequiredOne", 0).One();
                 }());
             }
             catch (...)
@@ -2218,7 +2218,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Three();
+                    return py::require<winrt::TestComponent::IRequiredThree>(self->obj, py::member_kind::method, "TestComponent.IRequiredThree", "Three", "TestComponent.IRequiredThree", 0).Three();
                 }());
             }
             catch (...)
@@ -2245,7 +2245,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Two();
+                    return py::require<winrt::TestComponent::IRequiredTwo>(self->obj, py::member_kind::method, "TestComponent.IRequiredTwo", "Two", "TestComponent.IRequiredTwo", 0).Two();
                 }());
             }
             catch (...)
@@ -2704,7 +2704,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.One();
+                    return py::require<winrt::TestComponent::IRequiredOne>(self->obj, py::member_kind::method, "TestComponent.IRequiredOne", "One", "TestComponent.IRequiredOne", 0).One();
                 }());
             }
             catch (...)
@@ -2758,7 +2758,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Two();
+                    return py::require<winrt::TestComponent::IRequiredTwo>(self->obj, py::member_kind::method, "TestComponent.IRequiredTwo", "Two", "TestComponent.IRequiredTwo", 0).Two();
                 }());
             }
             catch (...)
@@ -3001,7 +3001,7 @@ namespace py::cpp::TestComponent
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.One();
+                    return py::require<winrt::TestComponent::IRequiredOne>(self->obj, py::member_kind::method, "TestComponent.IRequiredOne", "One", "TestComponent.IRequiredOne", 0).One();
                 }());
             }
             catch (...)

@@ -25,19 +25,6 @@ namespace py::cpp::Windows::Globalization::Collation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Collation.CharacterGrouping", L"First");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -55,19 +42,6 @@ namespace py::cpp::Windows::Globalization::Collation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Collation.CharacterGrouping", L"Label");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -191,23 +165,10 @@ namespace py::cpp::Windows::Globalization::Collation
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Collation.CharacterGroupings", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Globalization::Collation::CharacterGrouping>>(self->obj, py::member_kind::method, "Windows.Globalization.Collation.CharacterGroupings", "First", "Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping>", 0).First();
                 }());
             }
             catch (...)
@@ -231,25 +192,12 @@ namespace py::cpp::Windows::Globalization::Collation
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Collation.CharacterGroupings", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::Collation::CharacterGrouping>>(self->obj, py::member_kind::method, "Windows.Globalization.Collation.CharacterGroupings", "GetAt", "Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -273,26 +221,13 @@ namespace py::cpp::Windows::Globalization::Collation
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Collation.CharacterGroupings", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Globalization::Collation::CharacterGrouping, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::Collation::CharacterGrouping>>(self->obj, py::member_kind::method, "Windows.Globalization.Collation.CharacterGroupings", "GetMany", "Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -316,26 +251,13 @@ namespace py::cpp::Windows::Globalization::Collation
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Collation.CharacterGroupings", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Collation::CharacterGrouping>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::Collation::CharacterGrouping>>(self->obj, py::member_kind::method, "Windows.Globalization.Collation.CharacterGroupings", "IndexOf", "Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -372,19 +294,6 @@ namespace py::cpp::Windows::Globalization::Collation
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Collation.CharacterGroupings", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -410,23 +319,10 @@ namespace py::cpp::Windows::Globalization::Collation
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Collation.CharacterGroupings", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::Collation::CharacterGrouping>>(self->obj, py::member_kind::property, "Windows.Globalization.Collation.CharacterGroupings", "Size", "Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping>").Size();
             }());
         }
         catch (...)
@@ -467,7 +363,7 @@ namespace py::cpp::Windows::Globalization::Collation
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Globalization::Collation::CharacterGrouping>>(self->obj, py::member_kind::method, "Windows.Globalization.Collation.CharacterGroupings", "First", "Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping>", 0).First();
             }());
         }
         catch (...)
@@ -482,7 +378,7 @@ namespace py::cpp::Windows::Globalization::Collation
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::Collation::CharacterGrouping>>(self->obj, py::member_kind::property, "Windows.Globalization.Collation.CharacterGroupings", "Size", "Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping>").Size());
         }
         catch (...)
         {
@@ -498,7 +394,7 @@ namespace py::cpp::Windows::Globalization::Collation
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::Collation::CharacterGrouping>>(self->obj, py::member_kind::method, "Windows.Globalization.Collation.CharacterGroupings", "GetAt", "Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -541,7 +437,7 @@ namespace py::cpp::Windows::Globalization::Collation
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::Collation::CharacterGrouping>>(self->obj, py::member_kind::method, "Windows.Globalization.Collation.CharacterGroupings", "GetAt", "Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -559,7 +455,7 @@ namespace py::cpp::Windows::Globalization::Collation
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::Collation::CharacterGrouping>>(self->obj, py::member_kind::method, "Windows.Globalization.Collation.CharacterGroupings", "GetAt", "Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))

@@ -49,19 +49,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.ActivitySensorTrigger", L"MinimumReportInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -79,19 +66,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.ActivitySensorTrigger", L"ReportInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -109,19 +83,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.ActivitySensorTrigger", L"SubscribedActivities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -139,19 +100,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.ActivitySensorTrigger", L"SupportedActivities");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -391,19 +339,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTrigger", L"ProviderInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -427,19 +362,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTrigger", L"ProviderInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo>(arg);
 
             {
@@ -524,19 +446,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"VideoKeyFrameInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -560,19 +469,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"VideoKeyFrameInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -593,19 +489,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"MaxVideoWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -629,19 +512,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"MaxVideoWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -662,19 +532,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"MaxVideoHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -698,19 +555,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"MaxVideoHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -731,19 +575,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"MaxVideoBitrate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -767,19 +598,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"MaxVideoBitrate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -800,19 +618,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"LogoResource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -836,19 +641,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"LogoResource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -869,19 +661,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"DisplayNameResource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -905,19 +684,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo", L"DisplayNameResource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -1033,19 +799,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.ApplicationTrigger", L"RequestAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1062,19 +815,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.ApplicationTrigger", L"RequestAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
                 return py::convert([&]()
@@ -1164,19 +904,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.ApplicationTriggerDetails", L"Arguments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1796,19 +1523,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"AddCondition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>(args, 0);
 
                 {
@@ -1839,19 +1553,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Register", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1868,25 +1569,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Register", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Register(param0);
+                    return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder6>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "Register", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder6", 1).Register(param0);
                 }());
             }
             catch (...)
@@ -1910,24 +1598,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"SetTaskEntryPointClsid", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetTaskEntryPointClsid(param0);
+                    py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder5>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "SetTaskEntryPointClsid", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder5", 1).SetTaskEntryPointClsid(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1953,19 +1628,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"SetTrigger", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>(args, 0);
 
                 {
@@ -1996,23 +1658,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Validate", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Validate();
+                    return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder6>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "Validate", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder6", 0).Validate();
                 }());
             }
             catch (...)
@@ -2032,19 +1681,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"TaskEntryPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2068,19 +1704,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"TaskEntryPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2101,19 +1724,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2137,19 +1747,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2170,23 +1767,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"CancelOnConditionLoss");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CancelOnConditionLoss();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "CancelOnConditionLoss", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder2").CancelOnConditionLoss();
             }());
         }
         catch (...)
@@ -2206,24 +1790,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"CancelOnConditionLoss");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CancelOnConditionLoss(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "CancelOnConditionLoss", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder2").CancelOnConditionLoss(param0);
             }
 
             return 0;
@@ -2239,23 +1810,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"IsNetworkRequested");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsNetworkRequested();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "IsNetworkRequested", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder3").IsNetworkRequested();
             }());
         }
         catch (...)
@@ -2275,24 +1833,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"IsNetworkRequested");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsNetworkRequested(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "IsNetworkRequested", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder3").IsNetworkRequested(param0);
             }
 
             return 0;
@@ -2308,23 +1853,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"TaskGroup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TaskGroup();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "TaskGroup", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder4").TaskGroup();
             }());
         }
         catch (...)
@@ -2344,24 +1876,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"TaskGroup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TaskGroup(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "TaskGroup", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder4").TaskGroup(param0);
             }
 
             return 0;
@@ -2377,23 +1896,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"AllowRunningTaskInStandby");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AllowRunningTaskInStandby();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder6>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "AllowRunningTaskInStandby", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder6").AllowRunningTaskInStandby();
             }());
         }
         catch (...)
@@ -2413,24 +1919,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"AllowRunningTaskInStandby");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AllowRunningTaskInStandby(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder6>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskBuilder", "AllowRunningTaskInStandby", "Windows.ApplicationModel.Background.IBackgroundTaskBuilder6").AllowRunningTaskInStandby(param0);
             }
 
             return 0;
@@ -2576,19 +2069,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs", L"CheckResult", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.CheckResult();
@@ -2613,19 +2093,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs", L"InstanceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2712,19 +2179,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -2813,19 +2267,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs", L"InstanceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2843,19 +2284,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2984,19 +2412,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"Unregister", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -3023,19 +2438,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3053,19 +2455,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"TaskId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3083,23 +2472,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"Trigger");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Trigger();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskRegistration", "Trigger", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration2").Trigger();
             }());
         }
         catch (...)
@@ -3113,23 +2489,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"TaskGroup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TaskGroup();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskRegistration", "TaskGroup", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration3").TaskGroup();
             }());
         }
         catch (...)
@@ -3143,23 +2506,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"AppEnergyUsePredictionContribution");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AppEnergyUsePredictionContribution();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskRegistration", "AppEnergyUsePredictionContribution", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration4").AppEnergyUsePredictionContribution();
             }());
         }
         catch (...)
@@ -3173,23 +2523,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"TaskLastThrottledInStandbyTimestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TaskLastThrottledInStandbyTimestamp();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration4>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BackgroundTaskRegistration", "TaskLastThrottledInStandbyTimestamp", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration4").TaskLastThrottledInStandbyTimestamp();
             }());
         }
         catch (...)
@@ -3263,19 +2600,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"Completed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler>(arg);
 
             return py::convert([&]()
@@ -3295,19 +2619,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"Completed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3328,19 +2639,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"Progress");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler>(arg);
 
             return py::convert([&]()
@@ -3360,19 +2658,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"Progress");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3531,19 +2816,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup", L"AllTasks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3561,19 +2833,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3591,19 +2850,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3621,19 +2867,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup", L"BackgroundActivated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup, winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3653,19 +2886,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup", L"BackgroundActivated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3949,19 +3169,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"Advertisement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3979,23 +3186,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"UseExtendedFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseExtendedFormat();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "UseExtendedFormat", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2").UseExtendedFormat();
             }());
         }
         catch (...)
@@ -4015,24 +3209,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"UseExtendedFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseExtendedFormat(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "UseExtendedFormat", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2").UseExtendedFormat(param0);
             }
 
             return 0;
@@ -4048,23 +3229,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"PreferredTransmitPowerLevelInDBm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PreferredTransmitPowerLevelInDBm();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "PreferredTransmitPowerLevelInDBm", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2").PreferredTransmitPowerLevelInDBm();
             }());
         }
         catch (...)
@@ -4084,24 +3252,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"PreferredTransmitPowerLevelInDBm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int16_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PreferredTransmitPowerLevelInDBm(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "PreferredTransmitPowerLevelInDBm", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2").PreferredTransmitPowerLevelInDBm(param0);
             }
 
             return 0;
@@ -4117,23 +3272,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"IsAnonymous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsAnonymous();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "IsAnonymous", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2").IsAnonymous();
             }());
         }
         catch (...)
@@ -4153,24 +3295,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"IsAnonymous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsAnonymous(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "IsAnonymous", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2").IsAnonymous(param0);
             }
 
             return 0;
@@ -4186,23 +3315,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"IncludeTransmitPowerLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IncludeTransmitPowerLevel();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "IncludeTransmitPowerLevel", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2").IncludeTransmitPowerLevel();
             }());
         }
         catch (...)
@@ -4222,24 +3338,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"IncludeTransmitPowerLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IncludeTransmitPowerLevel(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "IncludeTransmitPowerLevel", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2").IncludeTransmitPowerLevel(param0);
             }
 
             return 0;
@@ -4255,23 +3358,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"SecondaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SecondaryPhy();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "SecondaryPhy", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3").SecondaryPhy();
             }());
         }
         catch (...)
@@ -4291,24 +3381,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"SecondaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPhyType>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SecondaryPhy(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "SecondaryPhy", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3").SecondaryPhy(param0);
             }
 
             return 0;
@@ -4324,23 +3401,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"PrimaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PrimaryPhy();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "PrimaryPhy", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3").PrimaryPhy();
             }());
         }
         catch (...)
@@ -4360,24 +3424,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", L"PrimaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPhyType>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PrimaryPhy(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger", "PrimaryPhy", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3").PrimaryPhy(param0);
             }
 
             return 0;
@@ -4485,19 +3536,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"SignalStrengthFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4521,19 +3559,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"SignalStrengthFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter>(arg);
 
             {
@@ -4554,19 +3579,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"AdvertisementFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4590,19 +3602,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"AdvertisementFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter>(arg);
 
             {
@@ -4623,19 +3622,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"MaxOutOfRangeTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4653,19 +3639,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"MaxSamplingInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4683,19 +3656,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"MinOutOfRangeTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4713,19 +3673,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"MinSamplingInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4743,23 +3690,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"AllowExtendedAdvertisements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AllowExtendedAdvertisements();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", "AllowExtendedAdvertisements", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2").AllowExtendedAdvertisements();
             }());
         }
         catch (...)
@@ -4779,24 +3713,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"AllowExtendedAdvertisements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AllowExtendedAdvertisements(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", "AllowExtendedAdvertisements", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2").AllowExtendedAdvertisements(param0);
             }
 
             return 0;
@@ -4812,23 +3733,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"UseUncoded1MPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseUncoded1MPhy();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", "UseUncoded1MPhy", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3").UseUncoded1MPhy();
             }());
         }
         catch (...)
@@ -4848,24 +3756,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"UseUncoded1MPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseUncoded1MPhy(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", "UseUncoded1MPhy", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3").UseUncoded1MPhy(param0);
             }
 
             return 0;
@@ -4881,23 +3776,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"UseCodedPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseCodedPhy();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", "UseCodedPhy", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3").UseCodedPhy();
             }());
         }
         catch (...)
@@ -4917,24 +3799,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"UseCodedPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseCodedPhy(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", "UseCodedPhy", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3").UseCodedPhy(param0);
             }
 
             return 0;
@@ -4950,23 +3819,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"ScanParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ScanParameters();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", "ScanParameters", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3").ScanParameters();
             }());
         }
         catch (...)
@@ -4986,24 +3842,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", L"ScanParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementScanParameters>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ScanParameters(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger3>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger", "ScanParameters", "Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3").ScanParameters(param0);
             }
 
             return 0;
@@ -5177,19 +4020,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails", L"CanRequestUserInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5207,19 +4037,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails", L"UpdateRequest");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5237,19 +4054,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails", L"UpdateTarget");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5710,19 +4514,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.ContentPrefetchTrigger", L"WaitInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5914,19 +4705,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.CustomSystemEventTrigger", L"Recurrence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5944,19 +4722,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.CustomSystemEventTrigger", L"TriggerId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6081,19 +4846,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger", L"MaintainConnection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6117,19 +4869,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger", L"MaintainConnection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -6150,19 +4889,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger", L"CanMaintainConnection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6180,19 +4906,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger", L"DeviceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6323,19 +5036,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger", L"OneShot");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6353,19 +5053,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger", L"TriggerQualifier");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6474,19 +5161,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.DeviceServicingTrigger", L"RequestAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -6506,19 +5180,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.DeviceServicingTrigger", L"RequestAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -6636,19 +5297,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.DeviceUseTrigger", L"RequestAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -6667,19 +5315,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.DeviceUseTrigger", L"RequestAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -6958,19 +5593,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger", L"Characteristic");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6988,23 +5610,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger", L"EventTriggeringMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.EventTriggeringMode();
+                return py::require<winrt::Windows::ApplicationModel::Background::IGattCharacteristicNotificationTrigger2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger", "EventTriggeringMode", "Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger2").EventTriggeringMode();
             }());
         }
         catch (...)
@@ -7126,19 +5735,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.GattServiceProviderTrigger", L"AdvertisingParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7162,19 +5758,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.GattServiceProviderTrigger", L"AdvertisingParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>(arg);
 
             {
@@ -7195,19 +5778,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.GattServiceProviderTrigger", L"Service");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7225,19 +5795,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.GattServiceProviderTrigger", L"TriggerId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7343,19 +5900,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.GattServiceProviderTriggerResult", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7373,19 +5917,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.GattServiceProviderTriggerResult", L"Trigger");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7490,19 +6021,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.GeovisitTrigger", L"MonitoringScope");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7526,19 +6044,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.GeovisitTrigger", L"MonitoringScope");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::VisitMonitoringScope>(arg);
 
             {
@@ -7647,19 +6152,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.LocationTrigger", L"TriggerType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7766,19 +6258,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.MaintenanceTrigger", L"FreshnessTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7796,19 +6275,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.MaintenanceTrigger", L"OneShot");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7917,19 +6383,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.MediaProcessingTrigger", L"RequestAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7946,19 +6399,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.MediaProcessingTrigger", L"RequestAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
                 return py::convert([&]()
@@ -8667,19 +7107,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.NetworkOperatorNotificationTrigger", L"NetworkAccountId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8871,19 +7298,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.PhoneTrigger", L"OneShot");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8901,19 +7315,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.PhoneTrigger", L"TriggerType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9203,19 +7604,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.RfcommConnectionTrigger", L"RemoteHostName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9239,19 +7627,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.RfcommConnectionTrigger", L"RemoteHostName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
             {
@@ -9272,19 +7647,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.RfcommConnectionTrigger", L"ProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9308,19 +7670,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.RfcommConnectionTrigger", L"ProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(arg);
 
             {
@@ -9341,19 +7690,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.RfcommConnectionTrigger", L"AllowMultipleConnections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9377,19 +7713,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.RfcommConnectionTrigger", L"AllowMultipleConnections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -9410,19 +7733,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.RfcommConnectionTrigger", L"InboundConnection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9440,19 +7750,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.RfcommConnectionTrigger", L"OutboundConnection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9734,19 +8031,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.SmartCardTrigger", L"TriggerType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9937,23 +8221,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.SocketActivityTrigger", L"IsWakeFromLowPowerSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsWakeFromLowPowerSupported();
+                return py::require<winrt::Windows::ApplicationModel::Background::ISocketActivityTrigger>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.SocketActivityTrigger", "IsWakeFromLowPowerSupported", "Windows.ApplicationModel.Background.ISocketActivityTrigger").IsWakeFromLowPowerSupported();
             }());
         }
         catch (...)
@@ -10312,19 +8583,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.SystemCondition", L"ConditionType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10431,19 +8689,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.SystemTrigger", L"OneShot");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10461,19 +8706,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.SystemTrigger", L"TriggerType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10666,19 +8898,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.TimeTrigger", L"FreshnessTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10696,19 +8915,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.TimeTrigger", L"OneShot");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11389,19 +9595,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.IBackgroundTask", L"Run", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(args, 0);
 
                 {
@@ -11598,19 +9791,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11634,19 +9814,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"InstanceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11664,19 +9831,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11700,19 +9854,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -11733,19 +9874,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"SuspendedCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11763,19 +9891,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Task");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11793,19 +9908,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"TriggerDetails");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11823,19 +9925,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Canceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>(arg);
 
             return py::convert([&]()
@@ -11855,19 +9944,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Canceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -12246,23 +10322,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetDeferral();
+                    return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "GetDeferral", "Windows.ApplicationModel.Background.IBackgroundTaskInstance", 0).GetDeferral();
                 }());
             }
             catch (...)
@@ -12286,19 +10349,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance2", L"GetThrottleCount", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskThrottleCounter>(args, 0);
 
                 return py::convert([&]()
@@ -12324,23 +10374,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"InstanceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.InstanceId();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "InstanceId", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").InstanceId();
             }());
         }
         catch (...)
@@ -12354,23 +10391,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Progress();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "Progress", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").Progress();
             }());
         }
         catch (...)
@@ -12390,24 +10414,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Progress(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "Progress", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").Progress(param0);
             }
 
             return 0;
@@ -12423,23 +10434,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"SuspendedCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SuspendedCount();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "SuspendedCount", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").SuspendedCount();
             }());
         }
         catch (...)
@@ -12453,23 +10451,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Task");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Task();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "Task", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").Task();
             }());
         }
         catch (...)
@@ -12483,23 +10468,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"TriggerDetails");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TriggerDetails();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "TriggerDetails", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").TriggerDetails();
             }());
         }
         catch (...)
@@ -12513,25 +10485,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Canceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Canceled(param0);
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "Canceled", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").Canceled(param0);
             }());
         }
         catch (...)
@@ -12545,24 +10504,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Canceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Canceled(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "Canceled", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").Canceled(param0);
             }
 
             Py_RETURN_NONE;
@@ -12969,23 +10915,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetDeferral();
+                    return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "GetDeferral", "Windows.ApplicationModel.Background.IBackgroundTaskInstance", 0).GetDeferral();
                 }());
             }
             catch (...)
@@ -13005,19 +10938,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance4", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13035,23 +10955,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"InstanceId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.InstanceId();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "InstanceId", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").InstanceId();
             }());
         }
         catch (...)
@@ -13065,23 +10972,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Progress();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "Progress", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").Progress();
             }());
         }
         catch (...)
@@ -13101,24 +10995,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Progress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Progress(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "Progress", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").Progress(param0);
             }
 
             return 0;
@@ -13134,23 +11015,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"SuspendedCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SuspendedCount();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "SuspendedCount", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").SuspendedCount();
             }());
         }
         catch (...)
@@ -13164,23 +11032,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Task");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Task();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "Task", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").Task();
             }());
         }
         catch (...)
@@ -13194,23 +11049,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"TriggerDetails");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TriggerDetails();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "TriggerDetails", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").TriggerDetails();
             }());
         }
         catch (...)
@@ -13224,25 +11066,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Canceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Canceled(param0);
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "Canceled", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").Canceled(param0);
             }());
         }
         catch (...)
@@ -13256,24 +11085,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskInstance", L"Canceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Canceled(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskInstance", "Canceled", "Windows.ApplicationModel.Background.IBackgroundTaskInstance").Canceled(param0);
             }
 
             Py_RETURN_NONE;
@@ -13668,19 +11484,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Unregister", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -13707,19 +11510,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13737,19 +11527,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"TaskId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13767,19 +11544,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Completed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler>(arg);
 
             return py::convert([&]()
@@ -13799,19 +11563,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Completed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -13832,19 +11583,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Progress");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler>(arg);
 
             return py::convert([&]()
@@ -13864,19 +11602,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Progress");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14237,24 +11962,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Unregister", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Unregister(param0);
+                    py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Unregister", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", 1).Unregister(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -14276,19 +11988,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration2", L"Trigger");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14306,23 +12005,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Name", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").Name();
             }());
         }
         catch (...)
@@ -14336,23 +12022,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"TaskId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TaskId();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "TaskId", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").TaskId();
             }());
         }
         catch (...)
@@ -14366,25 +12039,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Completed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Completed(param0);
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Completed", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").Completed(param0);
             }());
         }
         catch (...)
@@ -14398,24 +12058,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Completed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Completed(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Completed", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").Completed(param0);
             }
 
             Py_RETURN_NONE;
@@ -14431,25 +12078,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Progress");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Progress(param0);
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Progress", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").Progress(param0);
             }());
         }
         catch (...)
@@ -14463,24 +12097,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Progress");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Progress(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Progress", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").Progress(param0);
             }
 
             Py_RETURN_NONE;
@@ -14857,24 +12478,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Unregister", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Unregister(param0);
+                    py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::method, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Unregister", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", 1).Unregister(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -14896,19 +12504,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration3", L"TaskGroup");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14926,23 +12521,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Name", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").Name();
             }());
         }
         catch (...)
@@ -14956,23 +12538,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"TaskId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TaskId();
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "TaskId", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").TaskId();
             }());
         }
         catch (...)
@@ -14986,25 +12555,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Completed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Completed(param0);
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Completed", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").Completed(param0);
             }());
         }
         catch (...)
@@ -15018,24 +12574,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Completed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Completed(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Completed", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").Completed(param0);
             }
 
             Py_RETURN_NONE;
@@ -15051,25 +12594,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Progress");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Progress(param0);
+                return py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Progress", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").Progress(param0);
             }());
         }
         catch (...)
@@ -15083,24 +12613,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Background.IBackgroundTaskRegistration", L"Progress");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Progress(param0);
+                py::require<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>(self->obj, py::member_kind::event, "Windows.ApplicationModel.Background.IBackgroundTaskRegistration", "Progress", "Windows.ApplicationModel.Background.IBackgroundTaskRegistration").Progress(param0);
             }
 
             Py_RETURN_NONE;

@@ -29,22 +29,9 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionCatalog", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionCatalog", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -70,25 +57,12 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionCatalog", L"GetActionsForInputs", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::AI::Actions::ActionEntity, false>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetActionsForInputs(param0);
+                    return py::require<winrt::Windows::AI::Actions::Hosting::IActionCatalog2>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionCatalog", "GetActionsForInputs", "Windows.AI.Actions.Hosting.IActionCatalog2", 1).GetActionsForInputs(param0);
                 }());
             }
             catch (...)
@@ -101,26 +75,13 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionCatalog", L"GetActionsForInputs", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::AI::Actions::ActionEntity, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::WindowId>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetActionsForInputs(param0, param1);
+                    return py::require<winrt::Windows::AI::Actions::Hosting::IActionCatalog2>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionCatalog", "GetActionsForInputs", "Windows.AI.Actions.Hosting.IActionCatalog2", 2).GetActionsForInputs(param0, param1);
                 }());
             }
             catch (...)
@@ -144,19 +105,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionCatalog", L"GetAllActions", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -180,19 +128,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.AI.Actions.Hosting.ActionCatalog", L"Changed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::AI::Actions::Hosting::ActionCatalog, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -212,19 +147,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.AI.Actions.Hosting.ActionCatalog", L"Changed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -276,7 +198,7 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionCatalog", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -342,22 +264,9 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionDefinition", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -383,19 +292,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"GetInputs", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -423,19 +319,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"GetOutputs", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -463,19 +346,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"GetOverloads", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -499,19 +369,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -529,19 +386,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"IconFullPath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -559,19 +403,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -589,19 +420,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"PackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -619,23 +437,10 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"DisplaysUI");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DisplaysUI();
+                return py::require<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>(self->obj, py::member_kind::property, "Windows.AI.Actions.Hosting.ActionDefinition", "DisplaysUI", "Windows.AI.Actions.Hosting.IActionDefinition2").DisplaysUI();
             }());
         }
         catch (...)
@@ -649,23 +454,10 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"SchemaVersion");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SchemaVersion();
+                return py::require<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>(self->obj, py::member_kind::property, "Windows.AI.Actions.Hosting.ActionDefinition", "SchemaVersion", "Windows.AI.Actions.Hosting.IActionDefinition2").SchemaVersion();
             }());
         }
         catch (...)
@@ -679,23 +471,10 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"UsesGenerativeAI");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UsesGenerativeAI();
+                return py::require<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>(self->obj, py::member_kind::property, "Windows.AI.Actions.Hosting.ActionDefinition", "UsesGenerativeAI", "Windows.AI.Actions.Hosting.IActionDefinition2").UsesGenerativeAI();
             }());
         }
         catch (...)
@@ -709,23 +488,10 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"PackageRelativeApplicationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PackageRelativeApplicationId();
+                return py::require<winrt::Windows::AI::Actions::Hosting::IActionDefinition3>(self->obj, py::member_kind::property, "Windows.AI.Actions.Hosting.ActionDefinition", "PackageRelativeApplicationId", "Windows.AI.Actions.Hosting.IActionDefinition3").PackageRelativeApplicationId();
             }());
         }
         catch (...)
@@ -770,7 +536,7 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionDefinition", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -843,22 +609,9 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -880,19 +633,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -916,19 +656,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -949,19 +676,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -985,19 +699,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::AI::Actions::ActionEntityKind>(arg);
 
             {
@@ -1049,7 +750,7 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1113,19 +814,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionInstance", L"InvokeAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1149,19 +837,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionInstance", L"Context");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1179,19 +854,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionInstance", L"Definition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1209,19 +871,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionInstance", L"DisplayInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1306,19 +955,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1404,22 +1040,9 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionOverload", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionOverload", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -1445,19 +1068,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionOverload", L"GetInputs", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1485,23 +1095,10 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionOverload", L"GetSupportsFeedback", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetSupportsFeedback();
+                    return py::require<winrt::Windows::AI::Actions::Hosting::IActionOverload2>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionOverload", "GetSupportsFeedback", "Windows.AI.Actions.Hosting.IActionOverload2", 0).GetSupportsFeedback();
                 }());
             }
             catch (...)
@@ -1525,19 +1122,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionOverload", L"InvokeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::AI::Actions::ActionInvocationContext>(args, 0);
 
                 return py::convert([&]()
@@ -1567,26 +1151,13 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionOverload", L"InvokeFeedbackAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::AI::Actions::ActionInvocationContext>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::Actions::ActionFeedback>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.InvokeFeedbackAsync(param0, param1);
+                    return py::require<winrt::Windows::AI::Actions::Hosting::IActionOverload2>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionOverload", "InvokeFeedbackAsync", "Windows.AI.Actions.Hosting.IActionOverload2", 2).InvokeFeedbackAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -1606,19 +1177,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionOverload", L"DescriptionTemplate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1667,7 +1225,7 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.AI.Actions.Hosting.ActionOverload", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;

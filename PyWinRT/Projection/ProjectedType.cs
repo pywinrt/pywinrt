@@ -331,29 +331,9 @@ class ProjectedType
 
     public string GetMethodInvokeContext(ProjectedMethod method)
     {
-        if (IsGeneric)
-        {
-            return "_obj.";
-        }
-
         if (method.IsStatic || method.IsConstructor)
         {
-            return $"{CppWinrtType}::";
-        }
-
-        if (method.IsOverridable)
-        {
-            return $"py::get_inner_or_self(self->obj).try_as<{method.Method.Overrides[0].DeclaringType.ToCppTypeName()}>().";
-        }
-
-        if (method.IsProtected)
-        {
-            return $"self->obj.try_as<{method.Method.Overrides[0].DeclaringType.ToCppTypeName()}>().";
-        }
-
-        if (IsComposable)
-        {
-            return $"self->obj.try_as<{CppWinrtType}>().";
+            return IsGeneric ? "_obj." : $"{CppWinrtType}::";
         }
 
         // HACK: work around https://github.com/microsoft/cppwinrt/issues/1287
@@ -380,7 +360,161 @@ class ProjectedType
             return "static_cast<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>(self->obj).";
         }
 
-        return "self->obj.";
+        var obj = IsGeneric ? "_obj" : "self->obj";
+
+        if (method.IsOverridable)
+        {
+            obj = $"py::get_inner_or_self({obj})";
+        }
+
+        var required = GetRequiredInterface(method);
+
+        if (required is null)
+        {
+            return $"{obj}.";
+        }
+
+        var declaringType = method.Method.DeclaringType;
+
+        // A parameterized interface is not named in the metadata, so there is
+        // nothing for the error path to ask ApiInformation about. Every other
+        // type is worth asking about, including one from a framework package,
+        // whose metadata is resolved through the package graph.
+        var typeName = declaringType.Name.Contains('`')
+            ? "nullptr"
+            : $"\"{declaringType.FullName}\"";
+
+        // the number of arguments only distinguishes overloads of a method
+        var argCount =
+            method.MemberKind == "method"
+                ? $", {method.Method.Parameters.Count(p => p.IsInParam())}"
+                : "";
+
+        return $"py::require<{required.ToCppTypeName()}>({obj}, "
+            + $"py::member_kind::{method.MemberKind}, {typeName}, "
+            + $"\"{method.CppName}\", \"{required.ToWinRtName()}\"{argCount}).";
+    }
+
+    /// <summary>
+    /// Gets the interface that has to be queried from an instance of this type
+    /// to call <paramref name="method"/>, or <c>null</c> if the member can be
+    /// called on the object as the Python wrapper holds it.
+    /// </summary>
+    /// <remarks>
+    /// C++/WinRT gives a runtime class a base class of its default interface and
+    /// reaches every other interface with an implicit conversion that is
+    /// <c>noexcept</c> and yields null when the object does not implement it,
+    /// which the call then dereferences. Querying in the generated code costs
+    /// the same call and turns that crash into a Python exception. It also
+    /// answers the question the call actually depends on, where the
+    /// ApiInformation probe it replaces only asked whether this version of
+    /// Windows has the member.
+    /// </remarks>
+    private TypeReference? GetRequiredInterface(ProjectedMethod method)
+    {
+        if (method.IsStatic || method.IsConstructor)
+        {
+            // there is no object to query - a member that this version of
+            // Windows does not have goes through the activation factory, which
+            // throws instead of returning null
+            return null;
+        }
+
+        var declaring = method.Method.HasOverrides
+            // a runtime class redeclares the members of its interfaces, so the
+            // interface that declares one is the interface that it overrides
+            ? method.Method.Overrides[0].DeclaringType
+            : ResolveDeclaringInterface(method.Inheritance);
+
+        if (IsComposable)
+        {
+            // the Python wrapper of a composable class holds an IInspectable,
+            // so even the default interface has to be queried
+            return declaring ?? Type;
+        }
+
+        if (declaring is null || method.IsOverridable || method.IsProtected)
+        {
+            return declaring;
+        }
+
+        // the wrapper of an interface holds that interface and a runtime class
+        // derives from its default interface, so those members are reached
+        // without a query
+        var self = Category == Category.Interface ? Type.FullName : DefaultInterface?.FullName;
+
+        return declaring.FullName == self ? null : declaring;
+    }
+
+    /// <summary>
+    /// Gets the default interface of the type or <c>null</c> if it does not have
+    /// one.
+    /// </summary>
+    public TypeReference? DefaultInterface =>
+        defaultInterface ??= Type
+            .Interfaces.FirstOrDefault(i =>
+                i.CustomAttributes.Any(a =>
+                    a.AttributeType.FullName == "Windows.Foundation.Metadata.DefaultAttribute"
+                )
+            )
+            ?.InterfaceType;
+
+    private TypeReference? defaultInterface;
+
+    /// <summary>
+    /// Resolves the interface at the end of <paramref name="inheritance"/> to a
+    /// type that can be named in C++, or <c>null</c> if the chain does not leave
+    /// the type being projected.
+    /// </summary>
+    /// <remarks>
+    /// Each step of the chain states its type arguments in terms of the generic
+    /// parameters of the step before it, e.g. <c>IMap&lt;K, V&gt;</c> requires
+    /// <c>IIterable&lt;IKeyValuePair&lt;K, V&gt;&gt;</c>, so the arguments have
+    /// to be substituted one step at a time to arrive at a complete type.
+    /// </remarks>
+    private static TypeReference? ResolveDeclaringInterface(
+        IReadOnlyList<TypeReference> inheritance
+    )
+    {
+        var map = new Dictionary<GenericParameter, TypeReference>();
+        var resolved = default(TypeReference);
+
+        foreach (var type in inheritance.Skip(1))
+        {
+            resolved = SubstituteGenericArgs(type, map);
+
+            map = resolved is GenericInstanceType generic
+                ? generic
+                    .ElementType.Resolve()
+                    .GenericParameters.Zip(generic.GenericArguments)
+                    .ToDictionary()
+                : [];
+        }
+
+        return resolved;
+    }
+
+    private static TypeReference SubstituteGenericArgs(
+        TypeReference type,
+        IReadOnlyDictionary<GenericParameter, TypeReference> map
+    )
+    {
+        switch (type)
+        {
+            case GenericParameter param:
+                return map.TryGetValue(param, out var arg) ? arg : param;
+            case GenericInstanceType generic:
+                var substituted = new GenericInstanceType(generic.ElementType);
+
+                foreach (var argument in generic.GenericArguments)
+                {
+                    substituted.GenericArguments.Add(SubstituteGenericArgs(argument, map));
+                }
+
+                return substituted;
+            default:
+                return type;
+        }
     }
 
     /// <summary>

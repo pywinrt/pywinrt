@@ -87,19 +87,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -123,19 +110,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             {
@@ -156,19 +130,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTip");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -192,19 +153,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTip");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::PenTipShape>(arg);
 
             {
@@ -225,19 +173,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnorePressure");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -261,19 +196,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnorePressure");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -294,19 +216,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"FitToCurve");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -330,19 +239,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"FitToCurve");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -363,19 +259,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -399,19 +282,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -432,23 +302,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTipTransform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PenTipTransform();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkDrawingAttributes2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkDrawingAttributes", "PenTipTransform", "Windows.UI.Input.Inking.IInkDrawingAttributes2").PenTipTransform();
             }());
         }
         catch (...)
@@ -468,24 +325,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTipTransform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PenTipTransform(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkDrawingAttributes2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkDrawingAttributes", "PenTipTransform", "Windows.UI.Input.Inking.IInkDrawingAttributes2").PenTipTransform(param0);
             }
 
             return 0;
@@ -501,23 +345,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"DrawAsHighlighter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DrawAsHighlighter();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkDrawingAttributes2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkDrawingAttributes", "DrawAsHighlighter", "Windows.UI.Input.Inking.IInkDrawingAttributes2").DrawAsHighlighter();
             }());
         }
         catch (...)
@@ -537,24 +368,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"DrawAsHighlighter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DrawAsHighlighter(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkDrawingAttributes2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkDrawingAttributes", "DrawAsHighlighter", "Windows.UI.Input.Inking.IInkDrawingAttributes2").DrawAsHighlighter(param0);
             }
 
             return 0;
@@ -570,23 +388,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkDrawingAttributes3>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkDrawingAttributes", "Kind", "Windows.UI.Input.Inking.IInkDrawingAttributes3").Kind();
             }());
         }
         catch (...)
@@ -600,23 +405,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PencilProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PencilProperties();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkDrawingAttributes3>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkDrawingAttributes", "PencilProperties", "Windows.UI.Input.Inking.IInkDrawingAttributes3").PencilProperties();
             }());
         }
         catch (...)
@@ -630,23 +422,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnoreTilt");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IgnoreTilt();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkDrawingAttributes4>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkDrawingAttributes", "IgnoreTilt", "Windows.UI.Input.Inking.IInkDrawingAttributes4").IgnoreTilt();
             }());
         }
         catch (...)
@@ -666,24 +445,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnoreTilt");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IgnoreTilt(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkDrawingAttributes4>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkDrawingAttributes", "IgnoreTilt", "Windows.UI.Input.Inking.IInkDrawingAttributes4").IgnoreTilt(param0);
             }
 
             return 0;
@@ -699,23 +465,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"ModelerAttributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ModelerAttributes();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkDrawingAttributes5>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkDrawingAttributes", "ModelerAttributes", "Windows.UI.Input.Inking.IInkDrawingAttributes5").ModelerAttributes();
             }());
         }
         catch (...)
@@ -825,19 +578,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties", L"Opacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -861,19 +601,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties", L"Opacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -958,19 +685,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPrimaryBarrelButtonInputEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -994,19 +708,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPrimaryBarrelButtonInputEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1027,19 +728,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsEraserInputEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1063,19 +751,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsEraserInputEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1096,23 +771,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPenHapticFeedbackEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsPenHapticFeedbackEnabled();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkInputConfiguration2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkInputConfiguration", "IsPenHapticFeedbackEnabled", "Windows.UI.Input.Inking.IInkInputConfiguration2").IsPenHapticFeedbackEnabled();
             }());
         }
         catch (...)
@@ -1132,24 +794,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPenHapticFeedbackEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsPenHapticFeedbackEnabled(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkInputConfiguration2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkInputConfiguration", "IsPenHapticFeedbackEnabled", "Windows.UI.Input.Inking.IInkInputConfiguration2").IsPenHapticFeedbackEnabled(param0);
             }
 
             return 0;
@@ -1231,19 +880,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"RightDragAction");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1267,19 +903,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"RightDragAction");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkInputRightDragAction>(arg);
 
             {
@@ -1300,19 +923,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"Mode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1336,19 +946,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"Mode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkInputProcessingMode>(arg);
 
             {
@@ -1460,24 +1057,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"AddStroke", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStroke>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddStroke(param0);
+                    py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "AddStroke", "Windows.UI.Input.Inking.IInkStrokeContainer", 1).AddStroke(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1503,23 +1087,10 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"CanPasteFromClipboard", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CanPasteFromClipboard();
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "CanPasteFromClipboard", "Windows.UI.Input.Inking.IInkStrokeContainer", 0).CanPasteFromClipboard();
                 }());
             }
             catch (...)
@@ -1543,22 +1114,9 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"CopySelectedToClipboard", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.CopySelectedToClipboard();
+                    py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "CopySelectedToClipboard", "Windows.UI.Input.Inking.IInkStrokeContainer", 0).CopySelectedToClipboard();
                 }
 
                 Py_RETURN_NONE;
@@ -1584,23 +1142,10 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"DeleteSelected", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.DeleteSelected();
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "DeleteSelected", "Windows.UI.Input.Inking.IInkStrokeContainer", 0).DeleteSelected();
                 }());
             }
             catch (...)
@@ -1624,23 +1169,10 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"GetRecognitionResults", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetRecognitionResults();
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "GetRecognitionResults", "Windows.UI.Input.Inking.IInkStrokeContainer", 0).GetRecognitionResults();
                 }());
             }
             catch (...)
@@ -1664,23 +1196,10 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"GetRecognizers", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetRecognizers();
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "GetRecognizers", "Windows.UI.Input.Inking.IInkRecognizerContainer", 0).GetRecognizers();
                 }());
             }
             catch (...)
@@ -1704,23 +1223,10 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"GetStrokes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetStrokes();
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "GetStrokes", "Windows.UI.Input.Inking.IInkStrokeContainer", 0).GetStrokes();
                 }());
             }
             catch (...)
@@ -1744,25 +1250,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"LoadAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.LoadAsync(param0);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "LoadAsync", "Windows.UI.Input.Inking.IInkStrokeContainer", 1).LoadAsync(param0);
                 }());
             }
             catch (...)
@@ -1786,25 +1279,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"MoveSelected", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MoveSelected(param0);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "MoveSelected", "Windows.UI.Input.Inking.IInkStrokeContainer", 1).MoveSelected(param0);
                 }());
             }
             catch (...)
@@ -1828,25 +1308,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"PasteFromClipboard", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.PasteFromClipboard(param0);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "PasteFromClipboard", "Windows.UI.Input.Inking.IInkStrokeContainer", 1).PasteFromClipboard(param0);
                 }());
             }
             catch (...)
@@ -1870,19 +1337,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"ProcessPointerDown", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 {
@@ -1913,19 +1367,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"ProcessPointerUp", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert([&]()
@@ -1955,19 +1396,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"ProcessPointerUpdate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert([&]()
@@ -1997,19 +1425,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"RecognizeAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognitionTarget>(args, 0);
 
                 return py::convert([&]()
@@ -2028,26 +1443,13 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"RecognizeAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStrokeContainer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognitionTarget>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RecognizeAsync(param0, param1);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "RecognizeAsync", "Windows.UI.Input.Inking.IInkRecognizerContainer", 2).RecognizeAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -2071,25 +1473,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SaveAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SaveAsync(param0);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "SaveAsync", "Windows.UI.Input.Inking.IInkStrokeContainer", 1).SaveAsync(param0);
                 }());
             }
             catch (...)
@@ -2113,26 +1502,13 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SelectWithLine", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SelectWithLine(param0, param1);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "SelectWithLine", "Windows.UI.Input.Inking.IInkStrokeContainer", 2).SelectWithLine(param0, param1);
                 }());
             }
             catch (...)
@@ -2156,25 +1532,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SelectWithPolyLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SelectWithPolyLine(param0);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "SelectWithPolyLine", "Windows.UI.Input.Inking.IInkStrokeContainer", 1).SelectWithPolyLine(param0);
                 }());
             }
             catch (...)
@@ -2198,19 +1561,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SetDefaultDrawingAttributes", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>(args, 0);
 
                 {
@@ -2241,24 +1591,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SetDefaultRecognizer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognizer>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetDefaultRecognizer(param0);
+                    py::require<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "SetDefaultRecognizer", "Windows.UI.Input.Inking.IInkRecognizerContainer", 1).SetDefaultRecognizer(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2284,24 +1621,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"UpdateRecognitionResults", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Input::Inking::InkRecognitionResult>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.UpdateRecognitionResults(param0);
+                    py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkManager", "UpdateRecognitionResults", "Windows.UI.Input.Inking.IInkStrokeContainer", 1).UpdateRecognitionResults(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2323,19 +1647,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkManager", L"Mode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2359,19 +1670,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkManager", L"Mode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkManipulationMode>(arg);
 
             {
@@ -2392,23 +1690,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkManager", L"BoundingRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BoundingRect();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkManager", "BoundingRect", "Windows.UI.Input.Inking.IInkStrokeContainer").BoundingRect();
             }());
         }
         catch (...)
@@ -2507,19 +1792,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"ScalingFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2543,19 +1815,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"ScalingFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -2576,19 +1835,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"PredictionTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2612,19 +1858,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"PredictionTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -2645,23 +1878,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"UseVelocityBasedPressure");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseVelocityBasedPressure();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkModelerAttributes2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkModelerAttributes", "UseVelocityBasedPressure", "Windows.UI.Input.Inking.IInkModelerAttributes2").UseVelocityBasedPressure();
             }());
         }
         catch (...)
@@ -2681,24 +1901,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"UseVelocityBasedPressure");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseVelocityBasedPressure(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkModelerAttributes2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkModelerAttributes", "UseVelocityBasedPressure", "Windows.UI.Input.Inking.IInkModelerAttributes2").UseVelocityBasedPressure(param0);
             }
 
             return 0;
@@ -2824,19 +2031,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2854,19 +2048,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"Pressure");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2884,23 +2065,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"TiltX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TiltX();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPoint2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPoint", "TiltX", "Windows.UI.Input.Inking.IInkPoint2").TiltX();
             }());
         }
         catch (...)
@@ -2914,23 +2082,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"TiltY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TiltY();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPoint2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPoint", "TiltY", "Windows.UI.Input.Inking.IInkPoint2").TiltY();
             }());
         }
         catch (...)
@@ -2944,23 +2099,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"Timestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Timestamp();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPoint2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPoint", "Timestamp", "Windows.UI.Input.Inking.IInkPoint2").Timestamp();
             }());
         }
         catch (...)
@@ -3046,19 +2188,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"ActivateCustomDrying", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3086,19 +2215,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"CopyDefaultDrawingAttributes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3126,19 +2242,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"SetPredefinedConfiguration", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkPresenterPredefinedConfiguration>(args, 0);
 
                 {
@@ -3169,19 +2272,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"UpdateDefaultDrawingAttributes", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>(args, 0);
 
                 {
@@ -3208,19 +2298,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokeContainer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3244,19 +2321,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokeContainer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStrokeContainer>(arg);
 
             {
@@ -3277,19 +2341,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"IsInputEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3313,19 +2364,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"IsInputEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -3346,19 +2384,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputDeviceTypes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3382,19 +2407,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputDeviceTypes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreInputDeviceTypes>(arg);
 
             {
@@ -3415,19 +2427,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputProcessingConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3445,19 +2444,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokeInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3475,19 +2461,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"UnprocessedInput");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3505,23 +2478,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"HighContrastAdjustment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HighContrastAdjustment();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenter2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenter", "HighContrastAdjustment", "Windows.UI.Input.Inking.IInkPresenter2").HighContrastAdjustment();
             }());
         }
         catch (...)
@@ -3541,24 +2501,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"HighContrastAdjustment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkHighContrastAdjustment>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HighContrastAdjustment(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenter2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenter", "HighContrastAdjustment", "Windows.UI.Input.Inking.IInkPresenter2").HighContrastAdjustment(param0);
             }
 
             return 0;
@@ -3574,23 +2521,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputConfiguration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.InputConfiguration();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenter3>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenter", "InputConfiguration", "Windows.UI.Input.Inking.IInkPresenter3").InputConfiguration();
             }());
         }
         catch (...)
@@ -3604,19 +2538,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesCollected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkPresenter, winrt::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3636,19 +2557,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesCollected");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3669,19 +2577,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesErased");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkPresenter, winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3701,19 +2596,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesErased");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3837,19 +2719,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Radius");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3873,19 +2742,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Radius");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -3906,19 +2762,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsResizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3942,19 +2785,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsResizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -3975,19 +2805,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsCenterMarkerVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4011,19 +2828,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsCenterMarkerVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4044,19 +2848,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsAngleReadoutVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4080,19 +2871,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsAngleReadoutVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4113,19 +2891,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreTickMarksVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4149,19 +2914,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreTickMarksVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4182,19 +2934,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreRaysVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4218,19 +2957,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreRaysVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4251,19 +2977,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AccentColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4287,19 +3000,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AccentColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -4320,23 +3020,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Transform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Transform();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterProtractor", "Transform", "Windows.UI.Input.Inking.IInkPresenterStencil").Transform();
             }());
         }
         catch (...)
@@ -4356,24 +3043,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Transform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Transform(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterProtractor", "Transform", "Windows.UI.Input.Inking.IInkPresenterStencil").Transform(param0);
             }
 
             return 0;
@@ -4389,23 +3063,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsVisible();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterProtractor", "IsVisible", "Windows.UI.Input.Inking.IInkPresenterStencil").IsVisible();
             }());
         }
         catch (...)
@@ -4425,24 +3086,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsVisible(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterProtractor", "IsVisible", "Windows.UI.Input.Inking.IInkPresenterStencil").IsVisible(param0);
             }
 
             return 0;
@@ -4458,23 +3106,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"ForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ForegroundColor();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterProtractor", "ForegroundColor", "Windows.UI.Input.Inking.IInkPresenterStencil").ForegroundColor();
             }());
         }
         catch (...)
@@ -4494,24 +3129,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"ForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ForegroundColor(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterProtractor", "ForegroundColor", "Windows.UI.Input.Inking.IInkPresenterStencil").ForegroundColor(param0);
             }
 
             return 0;
@@ -4527,23 +3149,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BackgroundColor();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterProtractor", "BackgroundColor", "Windows.UI.Input.Inking.IInkPresenterStencil").BackgroundColor();
             }());
         }
         catch (...)
@@ -4563,24 +3172,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BackgroundColor(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterProtractor", "BackgroundColor", "Windows.UI.Input.Inking.IInkPresenterStencil").BackgroundColor(param0);
             }
 
             return 0;
@@ -4596,23 +3192,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterProtractor", "Kind", "Windows.UI.Input.Inking.IInkPresenterStencil").Kind();
             }());
         }
         catch (...)
@@ -4725,19 +3308,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Width");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4761,19 +3331,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Width");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -4794,19 +3351,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4830,19 +3374,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -4863,23 +3394,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsCompassVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsCompassVisible();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterRuler2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "IsCompassVisible", "Windows.UI.Input.Inking.IInkPresenterRuler2").IsCompassVisible();
             }());
         }
         catch (...)
@@ -4899,24 +3417,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsCompassVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsCompassVisible(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenterRuler2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "IsCompassVisible", "Windows.UI.Input.Inking.IInkPresenterRuler2").IsCompassVisible(param0);
             }
 
             return 0;
@@ -4932,23 +3437,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"AreTickMarksVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AreTickMarksVisible();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterRuler2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "AreTickMarksVisible", "Windows.UI.Input.Inking.IInkPresenterRuler2").AreTickMarksVisible();
             }());
         }
         catch (...)
@@ -4968,24 +3460,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"AreTickMarksVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AreTickMarksVisible(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenterRuler2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "AreTickMarksVisible", "Windows.UI.Input.Inking.IInkPresenterRuler2").AreTickMarksVisible(param0);
             }
 
             return 0;
@@ -5001,23 +3480,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Transform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Transform();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "Transform", "Windows.UI.Input.Inking.IInkPresenterStencil").Transform();
             }());
         }
         catch (...)
@@ -5037,24 +3503,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Transform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Transform(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "Transform", "Windows.UI.Input.Inking.IInkPresenterStencil").Transform(param0);
             }
 
             return 0;
@@ -5070,23 +3523,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsVisible();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "IsVisible", "Windows.UI.Input.Inking.IInkPresenterStencil").IsVisible();
             }());
         }
         catch (...)
@@ -5106,24 +3546,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsVisible(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "IsVisible", "Windows.UI.Input.Inking.IInkPresenterStencil").IsVisible(param0);
             }
 
             return 0;
@@ -5139,23 +3566,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"ForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ForegroundColor();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "ForegroundColor", "Windows.UI.Input.Inking.IInkPresenterStencil").ForegroundColor();
             }());
         }
         catch (...)
@@ -5175,24 +3589,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"ForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ForegroundColor(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "ForegroundColor", "Windows.UI.Input.Inking.IInkPresenterStencil").ForegroundColor(param0);
             }
 
             return 0;
@@ -5208,23 +3609,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BackgroundColor();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "BackgroundColor", "Windows.UI.Input.Inking.IInkPresenterStencil").BackgroundColor();
             }());
         }
         catch (...)
@@ -5244,24 +3632,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BackgroundColor(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "BackgroundColor", "Windows.UI.Input.Inking.IInkPresenterStencil").BackgroundColor(param0);
             }
 
             return 0;
@@ -5277,23 +3652,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Kind();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkPresenterRuler", "Kind", "Windows.UI.Input.Inking.IInkPresenterStencil").Kind();
             }());
         }
         catch (...)
@@ -5383,19 +3745,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognitionResult", L"GetStrokes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5423,19 +3772,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognitionResult", L"GetTextCandidates", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5459,19 +3795,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkRecognitionResult", L"BoundingRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5555,19 +3878,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkRecognizer", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5675,19 +3985,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognizerContainer", L"GetRecognizers", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5715,19 +4012,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognizerContainer", L"RecognizeAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStrokeContainer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognitionTarget>(args, 1);
 
@@ -5758,19 +4042,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognizerContainer", L"SetDefaultRecognizer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognizer>(args, 0);
 
                 {
@@ -5867,19 +4138,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStroke", L"Clone", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5907,23 +4165,10 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStroke", L"GetInkPoints", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetInkPoints();
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStroke2>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkStroke", "GetInkPoints", "Windows.UI.Input.Inking.IInkStroke2", 0).GetInkPoints();
                 }());
             }
             catch (...)
@@ -5947,19 +4192,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStroke", L"GetRenderingSegments", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5983,19 +4215,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Selected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6019,19 +4238,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Selected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -6052,19 +4258,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"DrawingAttributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6088,19 +4281,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"DrawingAttributes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>(arg);
 
             {
@@ -6121,19 +4301,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"BoundingRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6151,19 +4318,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Recognized");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6181,23 +4335,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"PointTransform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PointTransform();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkStroke2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkStroke", "PointTransform", "Windows.UI.Input.Inking.IInkStroke2").PointTransform();
             }());
         }
         catch (...)
@@ -6217,24 +4358,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"PointTransform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PointTransform(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkStroke2>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkStroke", "PointTransform", "Windows.UI.Input.Inking.IInkStroke2").PointTransform(param0);
             }
 
             return 0;
@@ -6250,23 +4378,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeStartedTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StrokeStartedTime();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkStroke3>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkStroke", "StrokeStartedTime", "Windows.UI.Input.Inking.IInkStroke3").StrokeStartedTime();
             }());
         }
         catch (...)
@@ -6286,24 +4401,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeStartedTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StrokeStartedTime(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkStroke3>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkStroke", "StrokeStartedTime", "Windows.UI.Input.Inking.IInkStroke3").StrokeStartedTime(param0);
             }
 
             return 0;
@@ -6319,23 +4421,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StrokeDuration();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkStroke3>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkStroke", "StrokeDuration", "Windows.UI.Input.Inking.IInkStroke3").StrokeDuration();
             }());
         }
         catch (...)
@@ -6355,24 +4444,11 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StrokeDuration(param0);
+                py::require<winrt::Windows::UI::Input::Inking::IInkStroke3>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkStroke", "StrokeDuration", "Windows.UI.Input.Inking.IInkStroke3").StrokeDuration(param0);
             }
 
             return 0;
@@ -6388,23 +4464,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkStroke3>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkStroke", "Id", "Windows.UI.Input.Inking.IInkStroke3").Id();
             }());
         }
         catch (...)
@@ -6418,23 +4481,10 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"PointerId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PointerId();
+                return py::require<winrt::Windows::UI::Input::Inking::IInkStroke4>(self->obj, py::member_kind::property, "Windows.UI.Input.Inking.InkStroke", "PointerId", "Windows.UI.Input.Inking.IInkStroke4").PointerId();
             }());
         }
         catch (...)
@@ -6549,19 +4599,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"AppendToStroke", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert([&]()
@@ -6591,19 +4628,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"BeginStroke", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 {
@@ -6634,19 +4658,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"CreateStroke", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>(args, 0);
 
                 return py::convert([&]()
@@ -6676,26 +4687,13 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"CreateStrokeFromInkPoints", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Inking::InkPoint>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateStrokeFromInkPoints(param0, param1);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeBuilder2>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkStrokeBuilder", "CreateStrokeFromInkPoints", "Windows.UI.Input.Inking.IInkStrokeBuilder2", 2).CreateStrokeFromInkPoints(param0, param1);
                 }());
             }
             catch (...)
@@ -6708,19 +4706,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"CreateStrokeFromInkPoints", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Inking::InkPoint>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(args, 2);
@@ -6729,7 +4714,7 @@ namespace py::cpp::Windows::UI::Input::Inking
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateStrokeFromInkPoints(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeBuilder3>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkStrokeBuilder", "CreateStrokeFromInkPoints", "Windows.UI.Input.Inking.IInkStrokeBuilder3", 4).CreateStrokeFromInkPoints(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -6753,19 +4738,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"EndStroke", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert([&]()
@@ -6795,19 +4767,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"SetDefaultDrawingAttributes", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>(args, 0);
 
                 {
@@ -6929,19 +4888,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"AddStroke", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStroke>(args, 0);
 
                 {
@@ -6972,24 +4918,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"AddStrokes", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Inking::InkStroke>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddStrokes(param0);
+                    py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer2>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkStrokeContainer", "AddStrokes", "Windows.UI.Input.Inking.IInkStrokeContainer2", 1).AddStrokes(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -7015,19 +4948,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"CanPasteFromClipboard", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7055,22 +4975,9 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer2>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkStrokeContainer", "Clear", "Windows.UI.Input.Inking.IInkStrokeContainer2", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -7096,19 +5003,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"CopySelectedToClipboard", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.CopySelectedToClipboard();
@@ -7137,19 +5031,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"DeleteSelected", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7177,19 +5058,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"GetRecognitionResults", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7217,25 +5085,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"GetStrokeById", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetStrokeById(param0);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer3>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkStrokeContainer", "GetStrokeById", "Windows.UI.Input.Inking.IInkStrokeContainer3", 1).GetStrokeById(param0);
                 }());
             }
             catch (...)
@@ -7259,19 +5114,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"GetStrokes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7299,19 +5141,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"LoadAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert([&]()
@@ -7341,19 +5170,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"MoveSelected", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
@@ -7383,19 +5199,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"PasteFromClipboard", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
@@ -7425,19 +5228,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SaveAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 0);
 
                 return py::convert([&]()
@@ -7456,26 +5246,13 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SaveAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::InkPersistenceFormat>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SaveAsync(param0, param1);
+                    return py::require<winrt::Windows::UI::Input::Inking::IInkStrokeContainer3>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.InkStrokeContainer", "SaveAsync", "Windows.UI.Input.Inking.IInkStrokeContainer3", 2).SaveAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -7499,19 +5276,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SelectWithLine", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -7542,19 +5306,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SelectWithPolyLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>(args, 0);
 
                 return py::convert([&]()
@@ -7584,19 +5335,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"UpdateRecognitionResults", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Input::Inking::InkRecognitionResult>>(args, 0);
 
                 {
@@ -7623,19 +5361,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"BoundingRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7733,19 +5458,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"InkPresenter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7763,19 +5475,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeCanceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -7795,19 +5494,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeCanceled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7828,19 +5514,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeContinued");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -7860,19 +5533,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeContinued");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7893,19 +5553,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -7925,19 +5572,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7958,19 +5592,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -7990,19 +5611,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8095,19 +5703,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"BezierControlPoint1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8125,19 +5720,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"BezierControlPoint2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8155,19 +5737,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8185,19 +5754,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"Pressure");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8215,19 +5771,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"TiltX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8245,19 +5788,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"TiltY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8275,19 +5805,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"Twist");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8375,19 +5892,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokesCollectedEventArgs", L"Strokes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8469,19 +5973,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokesErasedEventArgs", L"Strokes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8567,19 +6058,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkSynchronizer", L"BeginDry", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8607,19 +6085,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkSynchronizer", L"EndDry", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.EndDry();
@@ -8709,19 +6174,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"InkPresenter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8739,19 +6191,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8771,19 +6210,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerEntered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8804,19 +6230,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8836,19 +6249,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerExited");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8869,19 +6269,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerHovered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8901,19 +6288,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerHovered");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8934,19 +6308,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerLost");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8966,19 +6327,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerLost");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8999,19 +6347,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerMoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -9031,19 +6366,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerMoved");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9064,19 +6386,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerPressed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -9096,19 +6405,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerPressed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9129,19 +6425,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerReleased");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert([&]()
@@ -9161,19 +6444,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerReleased");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9316,24 +6586,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"SetPenHandedness", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::PenHandedness>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetPenHandedness(param0);
+                    py::require<winrt::Windows::UI::Input::Inking::IPenAndInkSettings2>(self->obj, py::member_kind::method, "Windows.UI.Input.Inking.PenAndInkSettings", "SetPenHandedness", "Windows.UI.Input.Inking.IPenAndInkSettings2", 1).SetPenHandedness(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -9355,19 +6612,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"FontFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9385,19 +6629,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"HandwritingLineHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9415,19 +6646,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"IsHandwritingDirectlyIntoTextFieldEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9445,19 +6663,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"IsTouchHandwritingEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9475,19 +6680,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"PenHandedness");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9505,19 +6697,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"UserConsentsToHandwritingTelemetryCollection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9633,19 +6812,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkPointFactory", L"CreateInkPoint", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -9856,19 +7022,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkPresenterRulerFactory", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkPresenter>(args, 0);
 
                 return py::convert([&]()
@@ -10062,19 +7215,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10098,19 +7238,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"BackgroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -10131,19 +7258,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"ForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10167,19 +7281,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"ForegroundColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -10200,19 +7301,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"IsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10236,19 +7324,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"IsVisible");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10269,19 +7344,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10299,19 +7361,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"Transform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10335,19 +7384,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"Transform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             {
@@ -10704,19 +7740,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkRecognizerContainer", L"GetRecognizers", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10744,19 +7767,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkRecognizerContainer", L"RecognizeAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStrokeContainer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognitionTarget>(args, 1);
 
@@ -10787,19 +7797,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkRecognizerContainer", L"SetDefaultRecognizer", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognizer>(args, 0);
 
                 {
@@ -11068,19 +8065,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"AddStroke", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStroke>(args, 0);
 
                 {
@@ -11111,19 +8095,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"CanPasteFromClipboard", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11151,19 +8122,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"CopySelectedToClipboard", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.CopySelectedToClipboard();
@@ -11192,19 +8150,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"DeleteSelected", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11232,19 +8177,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"GetRecognitionResults", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11272,19 +8204,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"GetStrokes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11312,19 +8231,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"LoadAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert([&]()
@@ -11354,19 +8260,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"MoveSelected", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
@@ -11396,19 +8289,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"PasteFromClipboard", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
@@ -11438,19 +8318,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"SaveAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 0);
 
                 return py::convert([&]()
@@ -11480,19 +8347,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"SelectWithLine", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -11523,19 +8377,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"SelectWithPolyLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>(args, 0);
 
                 return py::convert([&]()
@@ -11565,19 +8406,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"UpdateRecognitionResults", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Input::Inking::InkRecognitionResult>>(args, 0);
 
                 {
@@ -11604,19 +8432,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"BoundingRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

@@ -29,19 +29,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.PushNotifications.PushNotificationChannel", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Close();
@@ -66,19 +53,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.PushNotificationChannel", L"ExpirationTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -96,19 +70,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.PushNotificationChannel", L"Uri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -126,19 +87,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.PushNotifications.PushNotificationChannel", L"PushNotificationReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::PushNotifications::PushNotificationChannel, winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -158,19 +106,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.PushNotifications.PushNotificationChannel", L"PushNotificationReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -578,19 +513,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser", L"CreatePushNotificationChannelForApplicationAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -607,19 +529,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser", L"CreatePushNotificationChannelForApplicationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -649,19 +558,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser", L"CreatePushNotificationChannelForSecondaryTileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -691,26 +587,13 @@ namespace py::cpp::Windows::Networking::PushNotifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser", L"CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(param0, param1);
+                    return py::require<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser2>(self->obj, py::member_kind::method, "Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser", "CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync", "Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2", 2).CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -723,19 +606,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser", L"CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -743,7 +613,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser2>(self->obj, py::member_kind::method, "Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser", "CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync", "Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2", 3).CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -763,19 +633,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser", L"User");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -923,19 +780,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -959,19 +803,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs", L"Cancel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -992,19 +823,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs", L"BadgeNotification");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1022,19 +840,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs", L"NotificationType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1052,19 +857,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs", L"RawNotification");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1082,19 +874,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs", L"TileNotification");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1112,19 +891,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs", L"ToastNotification");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1211,19 +977,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.RawNotification", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1241,23 +994,10 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.RawNotification", L"ChannelId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ChannelId();
+                return py::require<winrt::Windows::Networking::PushNotifications::IRawNotification2>(self->obj, py::member_kind::property, "Windows.Networking.PushNotifications.RawNotification", "ChannelId", "Windows.Networking.PushNotifications.IRawNotification2").ChannelId();
             }());
         }
         catch (...)
@@ -1271,23 +1011,10 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.RawNotification", L"Headers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Headers();
+                return py::require<winrt::Windows::Networking::PushNotifications::IRawNotification2>(self->obj, py::member_kind::property, "Windows.Networking.PushNotifications.RawNotification", "Headers", "Windows.Networking.PushNotifications.IRawNotification2").Headers();
             }());
         }
         catch (...)
@@ -1301,23 +1028,10 @@ namespace py::cpp::Windows::Networking::PushNotifications
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.PushNotifications.RawNotification", L"ContentBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentBytes();
+                return py::require<winrt::Windows::Networking::PushNotifications::IRawNotification3>(self->obj, py::member_kind::property, "Windows.Networking.PushNotifications.RawNotification", "ContentBytes", "Windows.Networking.PushNotifications.IRawNotification3").ContentBytes();
             }());
         }
         catch (...)

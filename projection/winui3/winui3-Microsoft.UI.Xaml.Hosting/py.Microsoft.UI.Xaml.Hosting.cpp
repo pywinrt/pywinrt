@@ -116,22 +116,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -157,24 +144,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"Initialize", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().Initialize(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "Initialize", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource", 1).Initialize(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -200,25 +174,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"NavigateFocus", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().NavigateFocus(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "NavigateFocus", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource", 1).NavigateFocus(param0);
                 }());
             }
             catch (...)
@@ -238,23 +199,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"SystemBackdrop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().SystemBackdrop();
+                return py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "SystemBackdrop", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource").SystemBackdrop();
             }());
         }
         catch (...)
@@ -274,24 +222,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"SystemBackdrop");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().SystemBackdrop(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "SystemBackdrop", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource").SystemBackdrop(param0);
             }
 
             return 0;
@@ -307,23 +242,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().Content();
+                return py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "Content", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource").Content();
             }());
         }
         catch (...)
@@ -343,24 +265,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"Content");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().Content(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "Content", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource").Content(param0);
             }
 
             return 0;
@@ -376,23 +285,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"HasFocus");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().HasFocus();
+                return py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "HasFocus", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource").HasFocus();
             }());
         }
         catch (...)
@@ -406,23 +302,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"SiteBridge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().SiteBridge();
+                return py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "SiteBridge", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource").SiteBridge();
             }());
         }
         catch (...)
@@ -436,23 +319,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"ShouldConstrainPopupsToWorkArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().ShouldConstrainPopupsToWorkArea();
+                return py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "ShouldConstrainPopupsToWorkArea", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource2").ShouldConstrainPopupsToWorkArea();
             }());
         }
         catch (...)
@@ -472,24 +342,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"ShouldConstrainPopupsToWorkArea");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().ShouldConstrainPopupsToWorkArea(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "ShouldConstrainPopupsToWorkArea", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource2").ShouldConstrainPopupsToWorkArea(param0);
             }
 
             return 0;
@@ -505,25 +362,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"GotFocus");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().GotFocus(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "GotFocus", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource").GotFocus(param0);
             }());
         }
         catch (...)
@@ -537,24 +381,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"GotFocus");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().GotFocus(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "GotFocus", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource").GotFocus(param0);
             }
 
             Py_RETURN_NONE;
@@ -570,25 +401,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"TakeFocusRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().TakeFocusRequested(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "TakeFocusRequested", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource").TakeFocusRequested(param0);
             }());
         }
         catch (...)
@@ -602,24 +420,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"TakeFocusRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().TakeFocusRequested(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "TakeFocusRequested", "Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource").TakeFocusRequested(param0);
             }
 
             Py_RETURN_NONE;
@@ -666,7 +471,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -756,19 +561,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs", L"Request");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -850,19 +642,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs", L"Request");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1384,22 +1163,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Hosting.WindowsXamlManager", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Hosting.WindowsXamlManager", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -1501,25 +1267,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Hosting.WindowsXamlManager", L"XamlShutdownCompletedOnThread");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager, winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.XamlShutdownCompletedOnThread(param0);
+                return py::require<winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager2>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Hosting.WindowsXamlManager", "XamlShutdownCompletedOnThread", "Microsoft.UI.Xaml.Hosting.IWindowsXamlManager2").XamlShutdownCompletedOnThread(param0);
             }());
         }
         catch (...)
@@ -1533,24 +1286,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Hosting.WindowsXamlManager", L"XamlShutdownCompletedOnThread");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.XamlShutdownCompletedOnThread(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager2>(self->obj, py::member_kind::event, "Microsoft.UI.Xaml.Hosting.WindowsXamlManager", "XamlShutdownCompletedOnThread", "Microsoft.UI.Xaml.Hosting.IWindowsXamlManager2").XamlShutdownCompletedOnThread(param0);
             }
 
             Py_RETURN_NONE;
@@ -1597,7 +1337,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Hosting.WindowsXamlManager", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1684,19 +1424,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Hosting.XamlShutdownCompletedOnThreadEventArgs", L"GetDispatcherQueueDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1841,19 +1568,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest", L"CorrelationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1871,19 +1585,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest", L"HintRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1901,19 +1602,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest", L"Reason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2021,19 +1709,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationResult", L"WasFocusMoved");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

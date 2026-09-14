@@ -174,19 +174,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader", L"GetResource", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -195,7 +182,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Resources::ICustomXamlResourceLoaderOverrides>().GetResource(param0, param1, param2, param3);
+                    return py::require<winrt::Microsoft::UI::Xaml::Resources::ICustomXamlResourceLoaderOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader", "GetResource", "Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderOverrides", 4).GetResource(param0, param1, param2, param3);
                 }());
             }
             catch (...)

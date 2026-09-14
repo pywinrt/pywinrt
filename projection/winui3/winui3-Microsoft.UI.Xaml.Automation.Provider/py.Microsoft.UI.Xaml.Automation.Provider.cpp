@@ -90,19 +90,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider", L"AnnotationTypeId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -120,19 +107,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider", L"AnnotationTypeName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -150,19 +124,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider", L"Author");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -180,19 +141,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider", L"DateTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -210,19 +158,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider", L"Target");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -484,19 +419,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ICustomNavigationProvider", L"NavigateCustom", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNavigationDirection>(args, 0);
 
                 return py::convert([&]()
@@ -694,19 +616,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IDockProvider", L"SetDockPosition", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::DockPosition>(args, 0);
 
                 {
@@ -733,19 +642,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IDockProvider", L"DockPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -954,19 +850,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IDragProvider", L"GetGrabbedItems", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -990,19 +873,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IDragProvider", L"DropEffect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1020,19 +890,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IDragProvider", L"DropEffects");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1050,19 +907,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IDragProvider", L"IsGrabbed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1307,19 +1151,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IDropTargetProvider", L"DropEffect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1337,19 +1168,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IDropTargetProvider", L"DropEffects");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1549,19 +1367,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider", L"Collapse", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Collapse();
@@ -1590,19 +1395,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider", L"Expand", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Expand();
@@ -1627,19 +1419,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider", L"ExpandCollapseState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1863,19 +1642,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider", L"Column");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1893,19 +1659,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider", L"ColumnSpan");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1923,19 +1676,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider", L"ContainingGrid");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1953,19 +1693,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider", L"Row");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1983,19 +1710,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider", L"RowSpan");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2257,19 +1971,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IGridProvider", L"GetItem", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -2296,19 +1997,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IGridProvider", L"ColumnCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2326,19 +2014,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IGridProvider", L"RowCount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2582,19 +2257,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IInvokeProvider", L"Invoke", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Invoke();
@@ -2783,19 +2445,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IItemContainerProvider", L"FindItemByProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::IRawElementProviderSimple>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::AutomationProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -3013,19 +2662,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider", L"GetSupportedViews", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3053,19 +2689,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider", L"GetViewName", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -3095,19 +2718,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider", L"SetCurrentView", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 {
@@ -3134,19 +2744,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider", L"CurrentView");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3416,19 +3013,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IObjectModelProvider", L"GetUnderlyingObjectModel", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3618,19 +3202,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider", L"SetValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
@@ -3657,19 +3228,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider", L"IsReadOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3687,19 +3245,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider", L"LargeChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3717,19 +3262,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider", L"Maximum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3747,19 +3279,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider", L"Minimum");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3777,19 +3296,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider", L"SmallChange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3807,19 +3313,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4133,19 +3626,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IScrollItemProvider", L"ScrollIntoView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ScrollIntoView();
@@ -4334,19 +3814,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IScrollProvider", L"Scroll", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::ScrollAmount>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::ScrollAmount>(args, 1);
 
@@ -4378,19 +3845,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IScrollProvider", L"SetScrollPercent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -4418,19 +3872,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IScrollProvider", L"HorizontalScrollPercent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4448,19 +3889,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IScrollProvider", L"HorizontalViewSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4478,19 +3906,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IScrollProvider", L"HorizontallyScrollable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4508,19 +3923,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IScrollProvider", L"VerticalScrollPercent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4538,19 +3940,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IScrollProvider", L"VerticalViewSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4568,19 +3957,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IScrollProvider", L"VerticallyScrollable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4949,19 +4325,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider", L"AddToSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.AddToSelection();
@@ -4990,19 +4353,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider", L"RemoveFromSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveFromSelection();
@@ -5031,19 +4381,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider", L"Select", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Select();
@@ -5068,19 +4405,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider", L"IsSelected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5098,19 +4422,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider", L"SelectionContainer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5384,19 +4695,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider", L"GetSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5420,19 +4718,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider", L"CanSelectMultiple");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5450,19 +4735,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider", L"IsSelectionRequired");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5689,19 +4961,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider", L"GetAnnotationObjects", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5729,19 +4988,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider", L"GetAnnotationTypes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5765,19 +5011,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider", L"Formula");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6011,19 +5244,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetProvider", L"GetItemByName", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -6217,19 +5437,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IStylesProvider", L"ExtendedProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6247,19 +5454,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IStylesProvider", L"FillColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6277,19 +5471,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IStylesProvider", L"FillPatternColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6307,19 +5488,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IStylesProvider", L"FillPatternStyle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6337,19 +5505,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IStylesProvider", L"Shape");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6367,19 +5522,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IStylesProvider", L"StyleId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6397,19 +5539,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IStylesProvider", L"StyleName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6713,19 +5842,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISynchronizedInputProvider", L"Cancel", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Cancel();
@@ -6754,19 +5870,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ISynchronizedInputProvider", L"StartListening", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::SynchronizedInputType>(args, 0);
 
                 {
@@ -6988,19 +6091,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITableItemProvider", L"GetColumnHeaderItems", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7028,19 +6118,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITableItemProvider", L"GetRowHeaderItems", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7259,19 +6336,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITableProvider", L"GetColumnHeaders", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7299,19 +6363,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITableProvider", L"GetRowHeaders", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7335,19 +6386,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITableProvider", L"RowOrColumnMajor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7577,19 +6615,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextChildProvider", L"TextContainer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7607,19 +6632,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextChildProvider", L"TextRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7818,19 +6830,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextEditProvider", L"GetActiveComposition", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7858,19 +6857,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextEditProvider", L"GetConversionTarget", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7898,23 +6884,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"GetSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetSelection();
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "GetSelection", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", 0).GetSelection();
                 }());
             }
             catch (...)
@@ -7938,23 +6911,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"GetVisibleRanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetVisibleRanges();
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "GetVisibleRanges", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", 0).GetVisibleRanges();
                 }());
             }
             catch (...)
@@ -7978,25 +6938,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"RangeFromChild", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::IRawElementProviderSimple>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RangeFromChild(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "RangeFromChild", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", 1).RangeFromChild(param0);
                 }());
             }
             catch (...)
@@ -8020,25 +6967,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"RangeFromPoint", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RangeFromPoint(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "RangeFromPoint", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", 1).RangeFromPoint(param0);
                 }());
             }
             catch (...)
@@ -8058,23 +6992,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"DocumentRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DocumentRange();
+                return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "DocumentRange", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider").DocumentRange();
             }());
         }
         catch (...)
@@ -8088,23 +7009,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"SupportedTextSelection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedTextSelection();
+                return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "SupportedTextSelection", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider").SupportedTextSelection();
             }());
         }
         catch (...)
@@ -8475,19 +7383,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"GetSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8515,19 +7410,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"GetVisibleRanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8555,19 +7437,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"RangeFromChild", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::IRawElementProviderSimple>(args, 0);
 
                 return py::convert([&]()
@@ -8597,19 +7466,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"RangeFromPoint", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
@@ -8635,19 +7491,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"DocumentRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8665,19 +7508,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"SupportedTextSelection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8998,19 +7828,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider2", L"GetCaretRange", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 bool param0{};
 
                 auto return_value = [&]()
@@ -9053,23 +7870,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"GetSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetSelection();
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "GetSelection", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", 0).GetSelection();
                 }());
             }
             catch (...)
@@ -9093,23 +7897,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"GetVisibleRanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetVisibleRanges();
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "GetVisibleRanges", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", 0).GetVisibleRanges();
                 }());
             }
             catch (...)
@@ -9133,19 +7924,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider2", L"RangeFromAnnotation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::IRawElementProviderSimple>(args, 0);
 
                 return py::convert([&]()
@@ -9175,25 +7953,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"RangeFromChild", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::IRawElementProviderSimple>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RangeFromChild(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "RangeFromChild", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", 1).RangeFromChild(param0);
                 }());
             }
             catch (...)
@@ -9217,25 +7982,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"RangeFromPoint", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RangeFromPoint(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "RangeFromPoint", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", 1).RangeFromPoint(param0);
                 }());
             }
             catch (...)
@@ -9255,23 +8007,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"DocumentRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DocumentRange();
+                return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "DocumentRange", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider").DocumentRange();
             }());
         }
         catch (...)
@@ -9285,23 +8024,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextProvider", L"SupportedTextSelection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedTextSelection();
+                return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextProvider>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Automation.Provider.ITextProvider", "SupportedTextSelection", "Microsoft.UI.Xaml.Automation.Provider.ITextProvider").SupportedTextSelection();
             }());
         }
         catch (...)
@@ -9680,19 +8406,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"AddToSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.AddToSelection();
@@ -9721,19 +8434,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"Clone", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9761,19 +8461,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"Compare", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(args, 0);
 
                 return py::convert([&]()
@@ -9803,19 +8490,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"CompareEndpoints", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>(args, 2);
@@ -9847,19 +8521,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"ExpandToEnclosingUnit", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextUnit>(args, 0);
 
                 {
@@ -9890,19 +8551,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"FindAttribute", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -9934,19 +8582,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"FindText", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -9978,19 +8613,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"GetAttributeValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -10020,19 +8642,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"GetBoundingRectangles", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::com_array<double> param0{};
 
                 {
@@ -10069,19 +8678,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"GetChildren", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10109,19 +8705,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"GetEnclosingElement", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -10149,19 +8732,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"GetText", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -10191,19 +8761,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"Move", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -10234,19 +8791,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"MoveEndpointByRange", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>(args, 2);
@@ -10279,19 +8823,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"MoveEndpointByUnit", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextUnit>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -10323,19 +8854,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"RemoveFromSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveFromSelection();
@@ -10364,19 +8882,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"ScrollIntoView", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
@@ -10407,19 +8912,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"Select", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Select();
@@ -11227,22 +9719,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"AddToSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.AddToSelection();
+                    py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "AddToSelection", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 0).AddToSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -11268,23 +9747,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"Clone", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Clone();
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "Clone", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 0).Clone();
                 }());
             }
             catch (...)
@@ -11308,25 +9774,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"Compare", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Compare(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "Compare", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 1).Compare(param0);
                 }());
             }
             catch (...)
@@ -11350,19 +9803,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"CompareEndpoints", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>(args, 2);
@@ -11370,7 +9810,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CompareEndpoints(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "CompareEndpoints", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 3).CompareEndpoints(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -11394,24 +9834,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"ExpandToEnclosingUnit", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextUnit>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ExpandToEnclosingUnit(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "ExpandToEnclosingUnit", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 1).ExpandToEnclosingUnit(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -11437,19 +9864,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"FindAttribute", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -11457,7 +9871,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindAttribute(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "FindAttribute", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 3).FindAttribute(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -11481,19 +9895,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"FindText", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -11501,7 +9902,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindText(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "FindText", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 3).FindText(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -11525,25 +9926,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"GetAttributeValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAttributeValue(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "GetAttributeValue", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 1).GetAttributeValue(param0);
                 }());
             }
             catch (...)
@@ -11567,24 +9955,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"GetBoundingRectangles", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::com_array<double> param0{};
 
                 {
                     auto _gil = release_gil();
-                    self->obj.GetBoundingRectangles(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "GetBoundingRectangles", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 0).GetBoundingRectangles(param0);
                 }
 
                 py::pyobj_handle out0{ py::convert(param0) };
@@ -11616,23 +9991,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"GetChildren", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetChildren();
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "GetChildren", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 0).GetChildren();
                 }());
             }
             catch (...)
@@ -11656,23 +10018,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"GetEnclosingElement", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetEnclosingElement();
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "GetEnclosingElement", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 0).GetEnclosingElement();
                 }());
             }
             catch (...)
@@ -11696,25 +10045,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"GetText", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetText(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "GetText", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 1).GetText(param0);
                 }());
             }
             catch (...)
@@ -11738,26 +10074,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"Move", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextUnit>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Move(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "Move", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 2).Move(param0, param1);
                 }());
             }
             catch (...)
@@ -11781,26 +10104,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"MoveEndpointByRange", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.MoveEndpointByRange(param0, param1, param2);
+                    py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "MoveEndpointByRange", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 3).MoveEndpointByRange(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -11826,19 +10136,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"MoveEndpointByUnit", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Text::TextUnit>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -11846,7 +10143,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.MoveEndpointByUnit(param0, param1, param2);
+                    return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "MoveEndpointByUnit", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 3).MoveEndpointByUnit(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -11870,22 +10167,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"RemoveFromSelection", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveFromSelection();
+                    py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "RemoveFromSelection", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 0).RemoveFromSelection();
                 }
 
                 Py_RETURN_NONE;
@@ -11911,24 +10195,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"ScrollIntoView", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ScrollIntoView(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "ScrollIntoView", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 1).ScrollIntoView(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -11954,22 +10225,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", L"Select", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Select();
+                    py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", "Select", "Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider", 0).Select();
                 }
 
                 Py_RETURN_NONE;
@@ -11995,19 +10253,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider2", L"ShowContextMenu", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ShowContextMenu();
@@ -12840,19 +11085,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IToggleProvider", L"Toggle", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Toggle();
@@ -12877,19 +11109,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IToggleProvider", L"ToggleState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13092,19 +11311,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"Move", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -13136,19 +11342,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"Resize", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -13180,19 +11373,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"Rotate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
@@ -13219,19 +11399,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"CanMove");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13249,19 +11416,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"CanResize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13279,19 +11433,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"CanRotate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13628,25 +11769,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"Move", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Move(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", "Move", "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", 2).Move(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -13672,25 +11800,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"Resize", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Resize(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", "Resize", "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", 2).Resize(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -13716,24 +11831,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"Rotate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Rotate(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", "Rotate", "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", 1).Rotate(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -13759,19 +11861,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2", L"Zoom", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
@@ -13802,19 +11891,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2", L"ZoomByUnit", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::ZoomUnit>(args, 0);
 
                 {
@@ -13841,19 +11917,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2", L"CanZoom");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13871,19 +11934,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2", L"MaxZoom");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13901,19 +11951,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2", L"MinZoom");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13931,19 +11968,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2", L"ZoomLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13961,23 +11985,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"CanMove");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanMove();
+                return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", "CanMove", "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider").CanMove();
             }());
         }
         catch (...)
@@ -13991,23 +12002,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"CanResize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanResize();
+                return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", "CanResize", "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider").CanResize();
             }());
         }
         catch (...)
@@ -14021,23 +12019,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", L"CanRotate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanRotate();
+                return py::require<winrt::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider", "CanRotate", "Microsoft.UI.Xaml.Automation.Provider.ITransformProvider").CanRotate();
             }());
         }
         catch (...)
@@ -14516,19 +12501,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IValueProvider", L"SetValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -14555,19 +12527,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IValueProvider", L"IsReadOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14585,19 +12544,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IValueProvider", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14827,19 +12773,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IVirtualizedItemProvider", L"Realize", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Realize();
@@ -15028,19 +12961,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IWindowProvider", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Close();
@@ -15069,19 +12989,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IWindowProvider", L"SetVisualState", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::WindowVisualState>(args, 0);
 
                 {
@@ -15112,19 +13019,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Automation.Provider.IWindowProvider", L"WaitForInputIdle", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -15150,19 +13044,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IWindowProvider", L"InteractionState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15180,19 +13061,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IWindowProvider", L"IsModal");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15210,19 +13078,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IWindowProvider", L"IsTopmost");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15240,19 +13095,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IWindowProvider", L"Maximizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15270,19 +13112,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IWindowProvider", L"Minimizable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15300,19 +13129,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Automation.Provider.IWindowProvider", L"VisualState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

@@ -66,19 +66,6 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.DataProtection.DataProtectionProvider", L"ProtectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -108,19 +95,6 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.DataProtection.DataProtectionProvider", L"ProtectStreamAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 1);
 
@@ -151,19 +125,6 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.DataProtection.DataProtectionProvider", L"UnprotectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
@@ -193,19 +154,6 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.DataProtection.DataProtectionProvider", L"UnprotectStreamAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 1);
 

@@ -71,22 +71,9 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Input.RemoteTextConnection", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.System.RemoteDesktop.Input.RemoteTextConnection", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -112,19 +99,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Input.RemoteTextConnection", L"RegisterThread", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -155,19 +129,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Input.RemoteTextConnection", L"ReportDataReceived", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 {
@@ -198,25 +159,12 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Input.RemoteTextConnection", L"ReportPredictedKeyEvent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReportPredictedKeyEvent(param0, param1);
+                    py::require<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection2>(self->obj, py::member_kind::method, "Windows.System.RemoteDesktop.Input.RemoteTextConnection", "ReportPredictedKeyEvent", "Windows.System.RemoteDesktop.Input.IRemoteTextConnection2", 2).ReportPredictedKeyEvent(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -242,19 +190,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Input.RemoteTextConnection", L"UnregisterThread", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -281,19 +216,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteDesktop.Input.RemoteTextConnection", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -317,19 +239,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.RemoteDesktop.Input.RemoteTextConnection", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -381,7 +290,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.System.RemoteDesktop.Input.RemoteTextConnection", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;

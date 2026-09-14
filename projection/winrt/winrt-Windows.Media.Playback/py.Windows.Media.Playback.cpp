@@ -410,19 +410,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs", L"NewItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -440,19 +427,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs", L"OldItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -470,23 +444,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs", L"Reason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Reason();
+                return py::require<winrt::Windows::Media::Playback::ICurrentMediaPlaybackItemChangedEventArgs2>(self->obj, py::member_kind::property, "Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs", "Reason", "Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs2").Reason();
             }());
         }
         catch (...)
@@ -606,19 +567,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreak", L"CanStart");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -642,19 +590,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreak", L"CanStart");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -675,19 +610,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreak", L"CustomProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -705,19 +627,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreak", L"InsertionMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -735,19 +644,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreak", L"PlaybackList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -765,19 +661,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreak", L"PresentationPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -863,19 +746,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakEndedEventArgs", L"MediaBreak");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -961,19 +831,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaBreakManager", L"PlayBreak", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Playback::MediaBreak>(args, 0);
 
                 {
@@ -1004,19 +861,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaBreakManager", L"SkipCurrentBreak", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.SkipCurrentBreak();
@@ -1041,19 +885,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakManager", L"CurrentBreak");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1071,19 +902,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakManager", L"PlaybackSession");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1101,19 +919,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaBreakManager", L"BreakEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaBreakManager, winrt::Windows::Media::Playback::MediaBreakEndedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1133,19 +938,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaBreakManager", L"BreakEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1166,19 +958,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaBreakManager", L"BreakSkipped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaBreakManager, winrt::Windows::Media::Playback::MediaBreakSkippedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1198,19 +977,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaBreakManager", L"BreakSkipped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1231,19 +997,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaBreakManager", L"BreakStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaBreakManager, winrt::Windows::Media::Playback::MediaBreakStartedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1263,19 +1016,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaBreakManager", L"BreakStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1296,19 +1036,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaBreakManager", L"BreaksSeekedOver");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaBreakManager, winrt::Windows::Media::Playback::MediaBreakSeekedOverEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1328,19 +1055,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaBreakManager", L"BreaksSeekedOver");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1440,19 +1154,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaBreakSchedule", L"InsertMidrollBreak", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Playback::MediaBreak>(args, 0);
 
                 {
@@ -1483,19 +1184,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaBreakSchedule", L"RemoveMidrollBreak", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Playback::MediaBreak>(args, 0);
 
                 {
@@ -1522,19 +1210,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakSchedule", L"PrerollBreak");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1558,19 +1233,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakSchedule", L"PrerollBreak");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::MediaBreak>(arg);
 
             {
@@ -1591,19 +1253,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakSchedule", L"PostrollBreak");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1627,19 +1276,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakSchedule", L"PostrollBreak");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::MediaBreak>(arg);
 
             {
@@ -1660,19 +1296,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakSchedule", L"MidrollBreaks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1690,19 +1313,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakSchedule", L"PlaybackItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1720,19 +1330,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaBreakSchedule", L"ScheduleChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaBreakSchedule, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -1752,19 +1349,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaBreakSchedule", L"ScheduleChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1856,19 +1440,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakSeekedOverEventArgs", L"NewPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1886,19 +1457,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakSeekedOverEventArgs", L"OldPosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1916,19 +1474,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakSeekedOverEventArgs", L"SeekedOverBreaks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2012,19 +1557,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakSkippedEventArgs", L"MediaBreak");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2106,19 +1638,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaBreakStartedEventArgs", L"MediaBreak");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2204,19 +1723,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaItemDisplayProperties", L"ClearAll", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.ClearAll();
@@ -2241,19 +1747,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaItemDisplayProperties", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2277,19 +1770,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaItemDisplayProperties", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::MediaPlaybackType>(arg);
 
             {
@@ -2310,19 +1790,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaItemDisplayProperties", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2346,19 +1813,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaItemDisplayProperties", L"Thumbnail");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::RandomAccessStreamReference>(arg);
 
             {
@@ -2379,19 +1833,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaItemDisplayProperties", L"MusicProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2409,19 +1850,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaItemDisplayProperties", L"VideoProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2511,23 +1939,10 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackAudioTrackList", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::AudioTrack>>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackAudioTrackList", "First", "Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack>", 0).First();
                 }());
             }
             catch (...)
@@ -2551,19 +1966,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackAudioTrackList", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -2593,19 +1995,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackAudioTrackList", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Media::Core::AudioTrack, true>>(args, 1);
 
@@ -2636,19 +2025,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackAudioTrackList", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::AudioTrack>(args, 0);
                 uint32_t param1{};
 
@@ -2688,19 +2064,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackAudioTrackList", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2718,23 +2081,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackAudioTrackList", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SelectedIndex();
+                return py::require<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackAudioTrackList", "SelectedIndex", "Windows.Media.Core.ISingleSelectMediaTrackList").SelectedIndex();
             }());
         }
         catch (...)
@@ -2754,24 +2104,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackAudioTrackList", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SelectedIndex(param0);
+                py::require<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackAudioTrackList", "SelectedIndex", "Windows.Media.Core.ISingleSelectMediaTrackList").SelectedIndex(param0);
             }
 
             return 0;
@@ -2787,25 +2124,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackAudioTrackList", L"SelectedIndexChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::ISingleSelectMediaTrackList, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SelectedIndexChanged(param0);
+                return py::require<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackAudioTrackList", "SelectedIndexChanged", "Windows.Media.Core.ISingleSelectMediaTrackList").SelectedIndexChanged(param0);
             }());
         }
         catch (...)
@@ -2819,24 +2143,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackAudioTrackList", L"SelectedIndexChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SelectedIndexChanged(param0);
+                py::require<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackAudioTrackList", "SelectedIndexChanged", "Windows.Media.Core.ISingleSelectMediaTrackList").SelectedIndexChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -2879,7 +2190,7 @@ namespace py::cpp::Windows::Media::Playback
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::AudioTrack>>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackAudioTrackList", "First", "Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack>", 0).First();
             }());
         }
         catch (...)
@@ -3044,19 +2355,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3080,19 +2378,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -3113,19 +2398,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"AutoRepeatModeBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3143,19 +2415,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"FastForwardBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3173,19 +2432,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"MediaPlayer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3203,19 +2449,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"NextBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3233,19 +2466,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PauseBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3263,19 +2483,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PlayBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3293,19 +2500,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PositionBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3323,19 +2517,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PreviousBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3353,19 +2534,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"RateBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3383,19 +2551,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"RewindBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3413,19 +2568,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"ShuffleBehavior");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3443,19 +2585,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"AutoRepeatModeReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3475,19 +2604,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"AutoRepeatModeReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3508,19 +2624,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"FastForwardReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3540,19 +2643,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"FastForwardReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3573,19 +2663,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"NextReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3605,19 +2682,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"NextReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3638,19 +2702,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PauseReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3670,19 +2721,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PauseReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3703,19 +2741,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PlayReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3735,19 +2760,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PlayReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3768,19 +2780,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PositionReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3800,19 +2799,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PositionReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3833,19 +2819,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PreviousReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3865,19 +2838,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"PreviousReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3898,19 +2858,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"RateReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3930,19 +2877,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"RateReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3963,19 +2897,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"RewindReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3995,19 +2916,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"RewindReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4028,19 +2936,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"ShuffleReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4060,19 +2955,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManager", L"ShuffleReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4192,19 +3074,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4228,19 +3097,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4264,19 +3120,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4297,19 +3140,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs", L"AutoRepeatMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4393,19 +3223,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior", L"EnablingRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4429,19 +3246,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior", L"EnablingRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::MediaCommandEnablingRule>(arg);
 
             {
@@ -4462,19 +3266,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior", L"CommandManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4492,19 +3283,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4522,19 +3300,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior", L"IsEnabledChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -4554,19 +3319,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior", L"IsEnabledChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4659,19 +3411,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4695,19 +3434,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4731,19 +3457,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4833,19 +3546,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4869,19 +3569,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4905,19 +3592,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5007,19 +3681,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5043,19 +3704,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5079,19 +3727,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5181,19 +3816,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5217,19 +3839,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5253,19 +3862,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5355,19 +3951,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5391,19 +3974,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5427,19 +3997,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5460,19 +4017,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5560,19 +4104,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5596,19 +4127,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5632,19 +4150,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5734,19 +4239,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5770,19 +4262,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5806,19 +4285,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -5839,19 +4305,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs", L"PlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5939,19 +4392,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5975,19 +4415,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6011,19 +4438,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -6113,19 +4527,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6149,19 +4550,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6185,19 +4573,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs", L"Handled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -6218,19 +4593,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs", L"IsShuffleRequested");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6375,24 +4737,11 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"ApplyDisplayProperties", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Playback::MediaItemDisplayProperties>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ApplyDisplayProperties(param0);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem2>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackItem", "ApplyDisplayProperties", "Windows.Media.Playback.IMediaPlaybackItem2", 1).ApplyDisplayProperties(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6460,23 +4809,10 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"GetDisplayProperties", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetDisplayProperties();
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem2>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackItem", "GetDisplayProperties", "Windows.Media.Playback.IMediaPlaybackItem2", 0).GetDisplayProperties();
                 }());
             }
             catch (...)
@@ -6496,19 +4832,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"AudioTracks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6526,19 +4849,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6556,19 +4866,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"TimedMetadataTracks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6586,19 +4883,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"VideoTracks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6616,23 +4900,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"CanSkip");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanSkip();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackItem", "CanSkip", "Windows.Media.Playback.IMediaPlaybackItem2").CanSkip();
             }());
         }
         catch (...)
@@ -6652,24 +4923,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"CanSkip");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.CanSkip(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackItem", "CanSkip", "Windows.Media.Playback.IMediaPlaybackItem2").CanSkip(param0);
             }
 
             return 0;
@@ -6685,23 +4943,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"BreakSchedule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BreakSchedule();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackItem", "BreakSchedule", "Windows.Media.Playback.IMediaPlaybackItem2").BreakSchedule();
             }());
         }
         catch (...)
@@ -6715,23 +4960,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"DurationLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DurationLimit();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackItem", "DurationLimit", "Windows.Media.Playback.IMediaPlaybackItem2").DurationLimit();
             }());
         }
         catch (...)
@@ -6745,23 +4977,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"StartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StartTime();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackItem", "StartTime", "Windows.Media.Playback.IMediaPlaybackItem2").StartTime();
             }());
         }
         catch (...)
@@ -6775,23 +4994,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"IsDisabledInPlaybackList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDisabledInPlaybackList();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackItem", "IsDisabledInPlaybackList", "Windows.Media.Playback.IMediaPlaybackItem3").IsDisabledInPlaybackList();
             }());
         }
         catch (...)
@@ -6811,24 +5017,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"IsDisabledInPlaybackList");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsDisabledInPlaybackList(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackItem", "IsDisabledInPlaybackList", "Windows.Media.Playback.IMediaPlaybackItem3").IsDisabledInPlaybackList(param0);
             }
 
             return 0;
@@ -6844,23 +5037,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"AutoLoadedDisplayProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AutoLoadedDisplayProperties();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackItem", "AutoLoadedDisplayProperties", "Windows.Media.Playback.IMediaPlaybackItem3").AutoLoadedDisplayProperties();
             }());
         }
         catch (...)
@@ -6880,24 +5060,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"AutoLoadedDisplayProperties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::AutoLoadedDisplayPropertyKind>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AutoLoadedDisplayProperties(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackItem", "AutoLoadedDisplayProperties", "Windows.Media.Playback.IMediaPlaybackItem3").AutoLoadedDisplayProperties(param0);
             }
 
             return 0;
@@ -6913,23 +5080,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"TotalDownloadProgress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TotalDownloadProgress();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackItem3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackItem", "TotalDownloadProgress", "Windows.Media.Playback.IMediaPlaybackItem3").TotalDownloadProgress();
             }());
         }
         catch (...)
@@ -6943,19 +5097,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"AudioTracksChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackItem, winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -6975,19 +5116,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"AudioTracksChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7008,19 +5136,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"TimedMetadataTracksChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackItem, winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -7040,19 +5155,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"TimedMetadataTracksChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7073,19 +5175,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"VideoTracksChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackItem, winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -7105,19 +5194,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackItem", L"VideoTracksChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -7242,19 +5318,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItemError", L"ErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7272,19 +5335,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItemError", L"ExtendedError");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7367,19 +5417,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItemFailedEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7397,19 +5434,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItemFailedEventArgs", L"Item");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7492,19 +5516,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs", L"Item");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7612,19 +5623,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackList", L"MoveNext", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7652,19 +5650,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackList", L"MovePrevious", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7692,19 +5677,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackList", L"MoveTo", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -7734,24 +5706,11 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackList", L"SetShuffledItems", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Playback::MediaPlaybackItem>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetShuffledItems(param0);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlaybackList2>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackList", "SetShuffledItems", "Windows.Media.Playback.IMediaPlaybackList2", 1).SetShuffledItems(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -7773,19 +5732,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"ShuffleEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7809,19 +5755,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"ShuffleEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -7842,19 +5775,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"AutoRepeatEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7878,19 +5798,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"AutoRepeatEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -7911,19 +5818,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"CurrentItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7941,19 +5835,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"CurrentItemIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7971,19 +5852,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"Items");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8001,23 +5869,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"StartingItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StartingItem();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackList2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackList", "StartingItem", "Windows.Media.Playback.IMediaPlaybackList2").StartingItem();
             }());
         }
         catch (...)
@@ -8037,24 +5892,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"StartingItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::MediaPlaybackItem>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StartingItem(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackList2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackList", "StartingItem", "Windows.Media.Playback.IMediaPlaybackList2").StartingItem(param0);
             }
 
             return 0;
@@ -8070,23 +5912,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"MaxPrefetchTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxPrefetchTime();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackList2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackList", "MaxPrefetchTime", "Windows.Media.Playback.IMediaPlaybackList2").MaxPrefetchTime();
             }());
         }
         catch (...)
@@ -8106,24 +5935,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"MaxPrefetchTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MaxPrefetchTime(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackList2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackList", "MaxPrefetchTime", "Windows.Media.Playback.IMediaPlaybackList2").MaxPrefetchTime(param0);
             }
 
             return 0;
@@ -8139,23 +5955,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"ShuffledItems");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ShuffledItems();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackList2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackList", "ShuffledItems", "Windows.Media.Playback.IMediaPlaybackList2").ShuffledItems();
             }());
         }
         catch (...)
@@ -8169,23 +5972,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"MaxPlayedItemsToKeepOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MaxPlayedItemsToKeepOpen();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackList3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackList", "MaxPlayedItemsToKeepOpen", "Windows.Media.Playback.IMediaPlaybackList3").MaxPlayedItemsToKeepOpen();
             }());
         }
         catch (...)
@@ -8205,24 +5995,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackList", L"MaxPlayedItemsToKeepOpen");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MaxPlayedItemsToKeepOpen(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackList3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackList", "MaxPlayedItemsToKeepOpen", "Windows.Media.Playback.IMediaPlaybackList3").MaxPlayedItemsToKeepOpen(param0);
             }
 
             return 0;
@@ -8238,19 +6015,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackList", L"CurrentItemChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackList, winrt::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8270,19 +6034,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackList", L"CurrentItemChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8303,19 +6054,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackList", L"ItemFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackList, winrt::Windows::Media::Playback::MediaPlaybackItemFailedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8335,19 +6073,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackList", L"ItemFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8368,19 +6093,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackList", L"ItemOpened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackList, winrt::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8400,19 +6112,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackList", L"ItemOpened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8519,23 +6218,10 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"GetBufferedRanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetBufferedRanges();
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackSession", "GetBufferedRanges", "Windows.Media.Playback.IMediaPlaybackSession2", 0).GetBufferedRanges();
                 }());
             }
             catch (...)
@@ -8559,23 +6245,10 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"GetOutputDegradationPolicyState", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetOutputDegradationPolicyState();
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession3>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackSession", "GetOutputDegradationPolicyState", "Windows.Media.Playback.IMediaPlaybackSession3", 0).GetOutputDegradationPolicyState();
                 }());
             }
             catch (...)
@@ -8599,23 +6272,10 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"GetPlayedRanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetPlayedRanges();
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackSession", "GetPlayedRanges", "Windows.Media.Playback.IMediaPlaybackSession2", 0).GetPlayedRanges();
                 }());
             }
             catch (...)
@@ -8639,23 +6299,10 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"GetSeekableRanges", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetSeekableRanges();
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackSession", "GetSeekableRanges", "Windows.Media.Playback.IMediaPlaybackSession2", 0).GetSeekableRanges();
                 }());
             }
             catch (...)
@@ -8679,26 +6326,13 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"IsSupportedPlaybackRateRange", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsSupportedPlaybackRateRange(param0, param1);
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackSession", "IsSupportedPlaybackRateRange", "Windows.Media.Playback.IMediaPlaybackSession2", 2).IsSupportedPlaybackRateRange(param0, param1);
                 }());
             }
             catch (...)
@@ -8718,19 +6352,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"StereoscopicVideoPackingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8754,19 +6375,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"StereoscopicVideoPackingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::StereoscopicVideoPackingMode>(arg);
 
             {
@@ -8787,19 +6395,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8823,19 +6418,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -8856,19 +6438,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8892,19 +6461,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -8925,19 +6481,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"NormalizedSourceRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8961,19 +6504,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"NormalizedSourceRect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             {
@@ -8994,19 +6524,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"BufferingProgress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9024,19 +6541,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"CanPause");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9054,19 +6558,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"CanSeek");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9084,19 +6575,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"DownloadProgress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9114,19 +6592,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"IsProtected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9144,19 +6609,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"MediaPlayer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9174,19 +6626,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"NaturalDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9204,19 +6643,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"NaturalVideoHeight");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9234,19 +6660,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"NaturalVideoWidth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9264,19 +6677,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlaybackState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9294,23 +6694,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"IsMirroring");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsMirroring();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackSession", "IsMirroring", "Windows.Media.Playback.IMediaPlaybackSession2").IsMirroring();
             }());
         }
         catch (...)
@@ -9330,24 +6717,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"IsMirroring");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsMirroring(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackSession", "IsMirroring", "Windows.Media.Playback.IMediaPlaybackSession2").IsMirroring(param0);
             }
 
             return 0;
@@ -9363,23 +6737,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"SphericalVideoProjection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SphericalVideoProjection();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackSession", "SphericalVideoProjection", "Windows.Media.Playback.IMediaPlaybackSession2").SphericalVideoProjection();
             }());
         }
         catch (...)
@@ -9393,23 +6754,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlaybackRotation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PlaybackRotation();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackSession", "PlaybackRotation", "Windows.Media.Playback.IMediaPlaybackSession3").PlaybackRotation();
             }());
         }
         catch (...)
@@ -9429,24 +6777,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlaybackRotation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaRotation>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PlaybackRotation(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackSession", "PlaybackRotation", "Windows.Media.Playback.IMediaPlaybackSession3").PlaybackRotation(param0);
             }
 
             return 0;
@@ -9462,19 +6797,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"BufferingEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9494,19 +6816,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"BufferingEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9527,19 +6836,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"BufferingProgressChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9559,19 +6855,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"BufferingProgressChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9592,19 +6875,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"BufferingStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9624,19 +6894,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"BufferingStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9657,19 +6914,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"DownloadProgressChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9689,19 +6933,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"DownloadProgressChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9722,19 +6953,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"NaturalDurationChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9754,19 +6972,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"NaturalDurationChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9787,19 +6992,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"NaturalVideoSizeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9819,19 +7011,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"NaturalVideoSizeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9852,19 +7031,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlaybackRateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9884,19 +7050,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlaybackRateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9917,19 +7070,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlaybackStateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9949,19 +7089,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlaybackStateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9982,19 +7109,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PositionChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -10014,19 +7128,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PositionChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -10047,19 +7148,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"SeekCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -10079,19 +7167,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"SeekCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -10112,25 +7187,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"BufferedRangesChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BufferedRangesChanged(param0);
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackSession", "BufferedRangesChanged", "Windows.Media.Playback.IMediaPlaybackSession2").BufferedRangesChanged(param0);
             }());
         }
         catch (...)
@@ -10144,24 +7206,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"BufferedRangesChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.BufferedRangesChanged(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackSession", "BufferedRangesChanged", "Windows.Media.Playback.IMediaPlaybackSession2").BufferedRangesChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -10177,25 +7226,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlayedRangesChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PlayedRangesChanged(param0);
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackSession", "PlayedRangesChanged", "Windows.Media.Playback.IMediaPlaybackSession2").PlayedRangesChanged(param0);
             }());
         }
         catch (...)
@@ -10209,24 +7245,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"PlayedRangesChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PlayedRangesChanged(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackSession", "PlayedRangesChanged", "Windows.Media.Playback.IMediaPlaybackSession2").PlayedRangesChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -10242,25 +7265,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"SeekableRangesChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SeekableRangesChanged(param0);
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackSession", "SeekableRangesChanged", "Windows.Media.Playback.IMediaPlaybackSession2").SeekableRangesChanged(param0);
             }());
         }
         catch (...)
@@ -10274,24 +7284,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"SeekableRangesChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SeekableRangesChanged(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackSession", "SeekableRangesChanged", "Windows.Media.Playback.IMediaPlaybackSession2").SeekableRangesChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -10307,25 +7304,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"SupportedPlaybackRatesChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedPlaybackRatesChanged(param0);
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackSession", "SupportedPlaybackRatesChanged", "Windows.Media.Playback.IMediaPlaybackSession2").SupportedPlaybackRatesChanged(param0);
             }());
         }
         catch (...)
@@ -10339,24 +7323,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackSession", L"SupportedPlaybackRatesChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SupportedPlaybackRatesChanged(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackSession2>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackSession", "SupportedPlaybackRatesChanged", "Windows.Media.Playback.IMediaPlaybackSession2").SupportedPlaybackRatesChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -10485,19 +7456,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSessionBufferingStartedEventArgs", L"IsPlaybackInterruption");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10579,19 +7537,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSessionOutputDegradationPolicyState", L"VideoConstrictionReason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10673,19 +7618,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSphericalVideoProjection", L"ViewOrientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10709,19 +7641,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSphericalVideoProjection", L"ViewOrientation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
             {
@@ -10742,19 +7661,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSphericalVideoProjection", L"ProjectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10778,19 +7684,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSphericalVideoProjection", L"ProjectionMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::SphericalVideoProjectionMode>(arg);
 
             {
@@ -10811,19 +7704,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSphericalVideoProjection", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10847,19 +7727,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSphericalVideoProjection", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -10880,19 +7747,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSphericalVideoProjection", L"HorizontalFieldOfViewInDegrees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10916,19 +7770,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSphericalVideoProjection", L"HorizontalFieldOfViewInDegrees");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -10949,19 +7790,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSphericalVideoProjection", L"FrameFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10985,19 +7813,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackSphericalVideoProjection", L"FrameFormat");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::SphericalVideoFrameFormat>(arg);
 
             {
@@ -11090,23 +7905,10 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::TimedMetadataTrack>>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", "First", "Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack>", 0).First();
                 }());
             }
             catch (...)
@@ -11130,19 +7932,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -11172,19 +7961,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Media::Core::TimedMetadataTrack, true>>(args, 1);
 
@@ -11215,25 +7991,12 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", L"GetPresentationMode", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetPresentationMode(param0);
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlaybackTimedMetadataTrackList>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", "GetPresentationMode", "Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList", 1).GetPresentationMode(param0);
                 }());
             }
             catch (...)
@@ -11257,19 +8020,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::TimedMetadataTrack>(args, 0);
                 uint32_t param1{};
 
@@ -11313,25 +8063,12 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", L"SetPresentationMode", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Playback::TimedMetadataTrackPresentationMode>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetPresentationMode(param0, param1);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlaybackTimedMetadataTrackList>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", "SetPresentationMode", "Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList", 2).SetPresentationMode(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -11353,19 +8090,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11383,25 +8107,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", L"PresentationModeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList, winrt::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PresentationModeChanged(param0);
+                return py::require<winrt::Windows::Media::Playback::IMediaPlaybackTimedMetadataTrackList>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", "PresentationModeChanged", "Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList").PresentationModeChanged(param0);
             }());
         }
         catch (...)
@@ -11415,24 +8126,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", L"PresentationModeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PresentationModeChanged(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlaybackTimedMetadataTrackList>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", "PresentationModeChanged", "Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList").PresentationModeChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -11475,7 +8173,7 @@ namespace py::cpp::Windows::Media::Playback
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::TimedMetadataTrack>>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList", "First", "Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack>", 0).First();
             }());
         }
         catch (...)
@@ -11645,23 +8343,10 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackVideoTrackList", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::VideoTrack>>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackVideoTrackList", "First", "Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack>", 0).First();
                 }());
             }
             catch (...)
@@ -11685,19 +8370,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackVideoTrackList", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -11727,19 +8399,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackVideoTrackList", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Media::Core::VideoTrack, true>>(args, 1);
 
@@ -11770,19 +8429,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlaybackVideoTrackList", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::VideoTrack>(args, 0);
                 uint32_t param1{};
 
@@ -11822,19 +8468,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackVideoTrackList", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11852,23 +8485,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackVideoTrackList", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SelectedIndex();
+                return py::require<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackVideoTrackList", "SelectedIndex", "Windows.Media.Core.ISingleSelectMediaTrackList").SelectedIndex();
             }());
         }
         catch (...)
@@ -11888,24 +8508,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlaybackVideoTrackList", L"SelectedIndex");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SelectedIndex(param0);
+                py::require<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlaybackVideoTrackList", "SelectedIndex", "Windows.Media.Core.ISingleSelectMediaTrackList").SelectedIndex(param0);
             }
 
             return 0;
@@ -11921,25 +8528,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackVideoTrackList", L"SelectedIndexChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::ISingleSelectMediaTrackList, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SelectedIndexChanged(param0);
+                return py::require<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackVideoTrackList", "SelectedIndexChanged", "Windows.Media.Core.ISingleSelectMediaTrackList").SelectedIndexChanged(param0);
             }());
         }
         catch (...)
@@ -11953,24 +8547,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlaybackVideoTrackList", L"SelectedIndexChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SelectedIndexChanged(param0);
+                py::require<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlaybackVideoTrackList", "SelectedIndexChanged", "Windows.Media.Core.ISingleSelectMediaTrackList").SelectedIndexChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -12013,7 +8594,7 @@ namespace py::cpp::Windows::Media::Playback
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::VideoTrack>>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlaybackVideoTrackList", "First", "Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack>", 0).First();
             }());
         }
         catch (...)
@@ -12204,26 +8785,13 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"AddAudioEffect", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddAudioEffect(param0, param1, param2);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayerEffects>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "AddAudioEffect", "Windows.Media.Playback.IMediaPlayerEffects", 3).AddAudioEffect(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -12249,26 +8817,13 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"AddVideoEffect", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.AddVideoEffect(param0, param1, param2);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayerEffects2>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "AddVideoEffect", "Windows.Media.Playback.IMediaPlayerEffects2", 3).AddVideoEffect(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -12294,22 +8849,9 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -12335,25 +8877,12 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"CopyFrameToStereoscopicVideoSurfaces", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.CopyFrameToStereoscopicVideoSurfaces(param0, param1);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayer5>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "CopyFrameToStereoscopicVideoSurfaces", "Windows.Media.Playback.IMediaPlayer5", 2).CopyFrameToStereoscopicVideoSurfaces(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -12379,24 +8908,11 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"CopyFrameToVideoSurface", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.CopyFrameToVideoSurface(param0);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayer5>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "CopyFrameToVideoSurface", "Windows.Media.Playback.IMediaPlayer5", 1).CopyFrameToVideoSurface(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -12411,25 +8927,12 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"CopyFrameToVideoSurface", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.CopyFrameToVideoSurface(param0, param1);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayer5>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "CopyFrameToVideoSurface", "Windows.Media.Playback.IMediaPlayer5", 2).CopyFrameToVideoSurface(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -12455,23 +8958,10 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"GetAsCastingSource", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAsCastingSource();
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "GetAsCastingSource", "Windows.Media.Playback.IMediaPlayer3", 0).GetAsCastingSource();
                 }());
             }
             catch (...)
@@ -12495,25 +8985,12 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"GetSurface", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetSurface(param0);
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlayer4>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "GetSurface", "Windows.Media.Playback.IMediaPlayer4", 1).GetSurface(param0);
                 }());
             }
             catch (...)
@@ -12537,19 +9014,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"Pause", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Pause();
@@ -12578,19 +9042,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"Play", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Play();
@@ -12619,22 +9070,9 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"RemoveAllEffects", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAllEffects();
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayerEffects>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "RemoveAllEffects", "Windows.Media.Playback.IMediaPlayerEffects", 0).RemoveAllEffects();
                 }
 
                 Py_RETURN_NONE;
@@ -12660,25 +9098,12 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"RenderSubtitlesToSurface", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenderSubtitlesToSurface(param0);
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlayer6>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "RenderSubtitlesToSurface", "Windows.Media.Playback.IMediaPlayer6", 1).RenderSubtitlesToSurface(param0);
                 }());
             }
             catch (...)
@@ -12691,26 +9116,13 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"RenderSubtitlesToSurface", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.RenderSubtitlesToSurface(param0, param1);
+                    return py::require<winrt::Windows::Media::Playback::IMediaPlayer6>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "RenderSubtitlesToSurface", "Windows.Media.Playback.IMediaPlayer6", 2).RenderSubtitlesToSurface(param0, param1);
                 }());
             }
             catch (...)
@@ -12734,24 +9146,11 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"SetFileSource", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetFileSource(param0);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayerSource>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "SetFileSource", "Windows.Media.Playback.IMediaPlayerSource", 1).SetFileSource(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -12777,24 +9176,11 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"SetMediaSource", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaSource>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetMediaSource(param0);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayerSource>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "SetMediaSource", "Windows.Media.Playback.IMediaPlayerSource", 1).SetMediaSource(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -12820,24 +9206,11 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"SetStreamSource", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetStreamSource(param0);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayerSource>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "SetStreamSource", "Windows.Media.Playback.IMediaPlayerSource", 1).SetStreamSource(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -12863,24 +9236,11 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"SetSurfaceSize", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetSurfaceSize(param0);
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayer4>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "SetSurfaceSize", "Windows.Media.Playback.IMediaPlayer4", 1).SetSurfaceSize(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -12906,19 +9266,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"SetUriSource", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 {
@@ -12949,22 +9296,9 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"StepBackwardOneFrame", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.StepBackwardOneFrame();
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "StepBackwardOneFrame", "Windows.Media.Playback.IMediaPlayer3", 0).StepBackwardOneFrame();
                 }
 
                 Py_RETURN_NONE;
@@ -12990,22 +9324,9 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayer", L"StepForwardOneFrame", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.StepForwardOneFrame();
+                    py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "StepForwardOneFrame", "Windows.Media.Playback.IMediaPlayer3", 0).StepForwardOneFrame();
                 }
 
                 Py_RETURN_NONE;
@@ -13027,19 +9348,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"Volume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13063,19 +9371,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"Volume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -13096,19 +9391,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13132,19 +9414,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -13165,19 +9434,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"PlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13201,19 +9457,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"PlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -13234,19 +9477,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"IsLoopingEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13270,19 +9500,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"IsLoopingEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -13303,19 +9520,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"IsMuted");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13339,19 +9543,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"IsMuted");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -13372,19 +9563,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AutoPlay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13408,19 +9586,6 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AutoPlay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -13441,19 +9606,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"CurrentState");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13471,19 +9623,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"NaturalDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13501,19 +9640,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"PlaybackMediaMarkers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13531,19 +9657,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"IsProtected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13561,19 +9674,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"BufferingProgress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13591,19 +9691,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"CanPause");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13621,19 +9708,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"CanSeek");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13651,23 +9725,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AudioDeviceType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AudioDeviceType();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "AudioDeviceType", "Windows.Media.Playback.IMediaPlayer2").AudioDeviceType();
             }());
         }
         catch (...)
@@ -13687,24 +9748,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AudioDeviceType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::MediaPlayerAudioDeviceType>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AudioDeviceType(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "AudioDeviceType", "Windows.Media.Playback.IMediaPlayer2").AudioDeviceType(param0);
             }
 
             return 0;
@@ -13720,23 +9768,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AudioCategory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AudioCategory();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "AudioCategory", "Windows.Media.Playback.IMediaPlayer2").AudioCategory();
             }());
         }
         catch (...)
@@ -13756,24 +9791,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AudioCategory");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::MediaPlayerAudioCategory>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AudioCategory(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "AudioCategory", "Windows.Media.Playback.IMediaPlayer2").AudioCategory(param0);
             }
 
             return 0;
@@ -13789,23 +9811,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"SystemMediaTransportControls");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SystemMediaTransportControls();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "SystemMediaTransportControls", "Windows.Media.Playback.IMediaPlayer2").SystemMediaTransportControls();
             }());
         }
         catch (...)
@@ -13819,23 +9828,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"TimelineControllerPositionOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TimelineControllerPositionOffset();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "TimelineControllerPositionOffset", "Windows.Media.Playback.IMediaPlayer3").TimelineControllerPositionOffset();
             }());
         }
         catch (...)
@@ -13855,24 +9851,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"TimelineControllerPositionOffset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TimelineControllerPositionOffset(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "TimelineControllerPositionOffset", "Windows.Media.Playback.IMediaPlayer3").TimelineControllerPositionOffset(param0);
             }
 
             return 0;
@@ -13888,23 +9871,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"TimelineController");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TimelineController();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "TimelineController", "Windows.Media.Playback.IMediaPlayer3").TimelineController();
             }());
         }
         catch (...)
@@ -13924,24 +9894,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"TimelineController");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::MediaTimelineController>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.TimelineController(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "TimelineController", "Windows.Media.Playback.IMediaPlayer3").TimelineController(param0);
             }
 
             return 0;
@@ -13957,23 +9914,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"StereoscopicVideoRenderMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.StereoscopicVideoRenderMode();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "StereoscopicVideoRenderMode", "Windows.Media.Playback.IMediaPlayer3").StereoscopicVideoRenderMode();
             }());
         }
         catch (...)
@@ -13993,24 +9937,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"StereoscopicVideoRenderMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::StereoscopicVideoRenderMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.StereoscopicVideoRenderMode(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "StereoscopicVideoRenderMode", "Windows.Media.Playback.IMediaPlayer3").StereoscopicVideoRenderMode(param0);
             }
 
             return 0;
@@ -14026,23 +9957,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"RealTimePlayback");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.RealTimePlayback();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "RealTimePlayback", "Windows.Media.Playback.IMediaPlayer3").RealTimePlayback();
             }());
         }
         catch (...)
@@ -14062,24 +9980,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"RealTimePlayback");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.RealTimePlayback(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "RealTimePlayback", "Windows.Media.Playback.IMediaPlayer3").RealTimePlayback(param0);
             }
 
             return 0;
@@ -14095,23 +10000,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AudioDevice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AudioDevice();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "AudioDevice", "Windows.Media.Playback.IMediaPlayer3").AudioDevice();
             }());
         }
         catch (...)
@@ -14131,24 +10023,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AudioDevice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AudioDevice(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "AudioDevice", "Windows.Media.Playback.IMediaPlayer3").AudioDevice(param0);
             }
 
             return 0;
@@ -14164,23 +10043,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AudioBalance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AudioBalance();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "AudioBalance", "Windows.Media.Playback.IMediaPlayer3").AudioBalance();
             }());
         }
         catch (...)
@@ -14200,24 +10066,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AudioBalance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AudioBalance(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "AudioBalance", "Windows.Media.Playback.IMediaPlayer3").AudioBalance(param0);
             }
 
             return 0;
@@ -14233,23 +10086,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"CommandManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CommandManager();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "CommandManager", "Windows.Media.Playback.IMediaPlayer3").CommandManager();
             }());
         }
         catch (...)
@@ -14263,23 +10103,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"BreakManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BreakManager();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "BreakManager", "Windows.Media.Playback.IMediaPlayer3").BreakManager();
             }());
         }
         catch (...)
@@ -14293,23 +10120,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"PlaybackSession");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PlaybackSession();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "PlaybackSession", "Windows.Media.Playback.IMediaPlayer3").PlaybackSession();
             }());
         }
         catch (...)
@@ -14323,23 +10137,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"IsVideoFrameServerEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsVideoFrameServerEnabled();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer5>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "IsVideoFrameServerEnabled", "Windows.Media.Playback.IMediaPlayer5").IsVideoFrameServerEnabled();
             }());
         }
         catch (...)
@@ -14359,24 +10160,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"IsVideoFrameServerEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsVideoFrameServerEnabled(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer5>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "IsVideoFrameServerEnabled", "Windows.Media.Playback.IMediaPlayer5").IsVideoFrameServerEnabled(param0);
             }
 
             return 0;
@@ -14392,23 +10180,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"AudioStateMonitor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AudioStateMonitor();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer7>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "AudioStateMonitor", "Windows.Media.Playback.IMediaPlayer7").AudioStateMonitor();
             }());
         }
         catch (...)
@@ -14422,23 +10197,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"ProtectionManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProtectionManager();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayerSource>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "ProtectionManager", "Windows.Media.Playback.IMediaPlayerSource").ProtectionManager();
             }());
         }
         catch (...)
@@ -14458,24 +10220,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"ProtectionManager");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::MediaProtectionManager>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ProtectionManager(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayerSource>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "ProtectionManager", "Windows.Media.Playback.IMediaPlayerSource").ProtectionManager(param0);
             }
 
             return 0;
@@ -14491,23 +10240,10 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Source();
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayerSource2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "Source", "Windows.Media.Playback.IMediaPlayerSource2").Source();
             }());
         }
         catch (...)
@@ -14527,24 +10263,11 @@ namespace py::cpp::Windows::Media::Playback
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayer", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::IMediaPlaybackSource>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Source(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayerSource2>(self->obj, py::member_kind::property, "Windows.Media.Playback.MediaPlayer", "Source", "Windows.Media.Playback.IMediaPlayerSource2").Source(param0);
             }
 
             return 0;
@@ -14560,19 +10283,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"BufferingEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14592,19 +10302,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"BufferingEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14625,19 +10322,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"BufferingStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14657,19 +10341,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"BufferingStarted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14690,19 +10361,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"CurrentStateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14722,19 +10380,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"CurrentStateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14755,19 +10400,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"MediaEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14787,19 +10419,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"MediaEnded");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14820,19 +10439,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"MediaFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Media::Playback::MediaPlayerFailedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -14852,19 +10458,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"MediaFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14885,19 +10478,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"MediaOpened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -14917,19 +10497,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"MediaOpened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -14950,19 +10517,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"MediaPlayerRateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Media::Playback::MediaPlayerRateChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -14982,19 +10536,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"MediaPlayerRateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -15015,19 +10556,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"PlaybackMediaMarkerReached");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -15047,19 +10575,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"PlaybackMediaMarkerReached");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -15080,19 +10595,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"SeekCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -15112,19 +10614,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"SeekCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -15145,19 +10634,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"VolumeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -15177,19 +10653,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"VolumeChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -15210,25 +10673,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"IsMutedChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsMutedChanged(param0);
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlayer", "IsMutedChanged", "Windows.Media.Playback.IMediaPlayer3").IsMutedChanged(param0);
             }());
         }
         catch (...)
@@ -15242,24 +10692,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"IsMutedChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsMutedChanged(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlayer", "IsMutedChanged", "Windows.Media.Playback.IMediaPlayer3").IsMutedChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -15275,25 +10712,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"SourceChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SourceChanged(param0);
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlayer", "SourceChanged", "Windows.Media.Playback.IMediaPlayer3").SourceChanged(param0);
             }());
         }
         catch (...)
@@ -15307,24 +10731,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"SourceChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SourceChanged(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer3>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlayer", "SourceChanged", "Windows.Media.Playback.IMediaPlayer3").SourceChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -15340,25 +10751,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"VideoFrameAvailable");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.VideoFrameAvailable(param0);
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer5>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlayer", "VideoFrameAvailable", "Windows.Media.Playback.IMediaPlayer5").VideoFrameAvailable(param0);
             }());
         }
         catch (...)
@@ -15372,24 +10770,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"VideoFrameAvailable");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.VideoFrameAvailable(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer5>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlayer", "VideoFrameAvailable", "Windows.Media.Playback.IMediaPlayer5").VideoFrameAvailable(param0);
             }
 
             Py_RETURN_NONE;
@@ -15405,25 +10790,12 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"SubtitleFrameChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SubtitleFrameChanged(param0);
+                return py::require<winrt::Windows::Media::Playback::IMediaPlayer6>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlayer", "SubtitleFrameChanged", "Windows.Media.Playback.IMediaPlayer6").SubtitleFrameChanged(param0);
             }());
         }
         catch (...)
@@ -15437,24 +10809,11 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Playback.MediaPlayer", L"SubtitleFrameChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SubtitleFrameChanged(param0);
+                py::require<winrt::Windows::Media::Playback::IMediaPlayer6>(self->obj, py::member_kind::event, "Windows.Media.Playback.MediaPlayer", "SubtitleFrameChanged", "Windows.Media.Playback.IMediaPlayer6").SubtitleFrameChanged(param0);
             }
 
             Py_RETURN_NONE;
@@ -15501,7 +10860,7 @@ namespace py::cpp::Windows::Media::Playback
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayer", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -15633,19 +10992,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayerDataReceivedEventArgs", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15727,19 +11073,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayerFailedEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15757,19 +11090,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayerFailedEventArgs", L"ErrorMessage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15787,19 +11107,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayerFailedEventArgs", L"ExtendedErrorCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15883,19 +11190,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayerRateChangedEventArgs", L"NewRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15981,22 +11275,9 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.MediaPlayerSurface", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayerSurface", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -16018,19 +11299,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayerSurface", L"CompositionSurface");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16048,19 +11316,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayerSurface", L"Compositor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16078,19 +11333,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.MediaPlayerSurface", L"MediaPlayer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16139,7 +11381,7 @@ namespace py::cpp::Windows::Media::Playback
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.Playback.MediaPlayerSurface", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -16241,19 +11483,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.PlaybackMediaMarker", L"MediaMarkerType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16271,19 +11500,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.PlaybackMediaMarker", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16301,19 +11517,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.PlaybackMediaMarker", L"Time");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16397,19 +11600,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs", L"PlaybackMediaMarker");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16495,19 +11685,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.PlaybackMediaMarkerSequence", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -16536,23 +11713,10 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.PlaybackMediaMarkerSequence", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Playback::PlaybackMediaMarker>>(self->obj, py::member_kind::method, "Windows.Media.Playback.PlaybackMediaMarkerSequence", "First", "Windows.Foundation.Collections.IIterable<Windows.Media.Playback.PlaybackMediaMarker>", 0).First();
                 }());
             }
             catch (...)
@@ -16576,19 +11740,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.PlaybackMediaMarkerSequence", L"Insert", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Playback::PlaybackMediaMarker>(args, 0);
 
                 {
@@ -16615,19 +11766,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.PlaybackMediaMarkerSequence", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16672,7 +11810,7 @@ namespace py::cpp::Windows::Media::Playback
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Playback::PlaybackMediaMarker>>(self->obj, py::member_kind::method, "Windows.Media.Playback.PlaybackMediaMarkerSequence", "First", "Windows.Foundation.Collections.IIterable<Windows.Media.Playback.PlaybackMediaMarker>", 0).First();
             }());
         }
         catch (...)
@@ -16730,19 +11868,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs", L"NewPresentationMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16760,19 +11885,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs", L"OldPresentationMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16790,19 +11902,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs", L"Track");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16892,19 +11991,6 @@ namespace py::cpp::Windows::Media::Playback
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Playback.IMediaEnginePlaybackSource", L"SetPlaybackSource", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::Playback::IMediaPlaybackSource>(args, 0);
 
                 {
@@ -16931,19 +12017,6 @@ namespace py::cpp::Windows::Media::Playback
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Playback.IMediaEnginePlaybackSource", L"CurrentItem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

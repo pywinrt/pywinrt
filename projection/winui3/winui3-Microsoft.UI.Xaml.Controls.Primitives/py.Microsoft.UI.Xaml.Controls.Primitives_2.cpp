@@ -112,23 +112,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorPickerSlider", L"ColorChannel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider>().ColorChannel();
+                return py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorPickerSlider>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorPickerSlider", "ColorChannel", "Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSlider").ColorChannel();
             }());
         }
         catch (...)
@@ -148,24 +135,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ColorPickerSlider", L"ColorChannel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ColorPickerHsvChannel>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider>().ColorChannel(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Controls::Primitives::IColorPickerSlider>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Controls.Primitives.ColorPickerSlider", "ColorChannel", "Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSlider").ColorChannel(param0);
             }
 
             return 0;

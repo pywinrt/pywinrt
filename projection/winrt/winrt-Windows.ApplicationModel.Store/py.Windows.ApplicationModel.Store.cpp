@@ -1460,19 +1460,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseInformation", L"ExpirationDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1490,19 +1477,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseInformation", L"IsActive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1520,19 +1494,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseInformation", L"IsTrial");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1550,19 +1511,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseInformation", L"ProductLicenses");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1580,19 +1528,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.LicenseInformation", L"LicenseChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::LicenseChangedEventHandler>(arg);
 
             return py::convert([&]()
@@ -1612,19 +1547,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Store.LicenseInformation", L"LicenseChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1714,19 +1636,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ListingInformation", L"AgeRating");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1744,19 +1653,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ListingInformation", L"CurrentMarket");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1774,19 +1670,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ListingInformation", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1804,19 +1687,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ListingInformation", L"FormattedPrice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1834,19 +1704,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ListingInformation", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1864,19 +1721,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ListingInformation", L"ProductListings");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1894,23 +1738,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ListingInformation", L"CurrencyCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CurrencyCode();
+                return py::require<winrt::Windows::ApplicationModel::Store::IListingInformation2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ListingInformation", "CurrencyCode", "Windows.ApplicationModel.Store.IListingInformation2").CurrencyCode();
             }());
         }
         catch (...)
@@ -1924,23 +1755,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ListingInformation", L"FormattedBasePrice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FormattedBasePrice();
+                return py::require<winrt::Windows::ApplicationModel::Store::IListingInformation2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ListingInformation", "FormattedBasePrice", "Windows.ApplicationModel.Store.IListingInformation2").FormattedBasePrice();
             }());
         }
         catch (...)
@@ -1954,23 +1772,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ListingInformation", L"IsOnSale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsOnSale();
+                return py::require<winrt::Windows::ApplicationModel::Store::IListingInformation2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ListingInformation", "IsOnSale", "Windows.ApplicationModel.Store.IListingInformation2").IsOnSale();
             }());
         }
         catch (...)
@@ -1984,23 +1789,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ListingInformation", L"SaleEndDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SaleEndDate();
+                return py::require<winrt::Windows::ApplicationModel::Store::IListingInformation2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ListingInformation", "SaleEndDate", "Windows.ApplicationModel.Store.IListingInformation2").SaleEndDate();
             }());
         }
         catch (...)
@@ -2087,19 +1879,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductLicense", L"ExpirationDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2117,19 +1896,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductLicense", L"IsActive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2147,19 +1913,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductLicense", L"ProductId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2177,23 +1930,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductLicense", L"IsConsumable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsConsumable();
+                return py::require<winrt::Windows::ApplicationModel::Store::IProductLicenseWithFulfillment>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ProductLicense", "IsConsumable", "Windows.ApplicationModel.Store.IProductLicenseWithFulfillment").IsConsumable();
             }());
         }
         catch (...)
@@ -2274,19 +2014,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"FormattedPrice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2304,19 +2031,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2334,19 +2048,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"ProductId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2364,23 +2065,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"FormattedBasePrice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FormattedBasePrice();
+                return py::require<winrt::Windows::ApplicationModel::Store::IProductListing2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ProductListing", "FormattedBasePrice", "Windows.ApplicationModel.Store.IProductListing2").FormattedBasePrice();
             }());
         }
         catch (...)
@@ -2394,23 +2082,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"IsOnSale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsOnSale();
+                return py::require<winrt::Windows::ApplicationModel::Store::IProductListing2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ProductListing", "IsOnSale", "Windows.ApplicationModel.Store.IProductListing2").IsOnSale();
             }());
         }
         catch (...)
@@ -2424,23 +2099,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"SaleEndDate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SaleEndDate();
+                return py::require<winrt::Windows::ApplicationModel::Store::IProductListing2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ProductListing", "SaleEndDate", "Windows.ApplicationModel.Store.IProductListing2").SaleEndDate();
             }());
         }
         catch (...)
@@ -2454,23 +2116,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"CurrencyCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CurrencyCode();
+                return py::require<winrt::Windows::ApplicationModel::Store::IProductListing2>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ProductListing", "CurrencyCode", "Windows.ApplicationModel.Store.IProductListing2").CurrencyCode();
             }());
         }
         catch (...)
@@ -2484,23 +2133,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Description();
+                return py::require<winrt::Windows::ApplicationModel::Store::IProductListingWithMetadata>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ProductListing", "Description", "Windows.ApplicationModel.Store.IProductListingWithMetadata").Description();
             }());
         }
         catch (...)
@@ -2514,23 +2150,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"ImageUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ImageUri();
+                return py::require<winrt::Windows::ApplicationModel::Store::IProductListingWithMetadata>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ProductListing", "ImageUri", "Windows.ApplicationModel.Store.IProductListingWithMetadata").ImageUri();
             }());
         }
         catch (...)
@@ -2544,23 +2167,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"Keywords");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Keywords();
+                return py::require<winrt::Windows::ApplicationModel::Store::IProductListingWithMetadata>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ProductListing", "Keywords", "Windows.ApplicationModel.Store.IProductListingWithMetadata").Keywords();
             }());
         }
         catch (...)
@@ -2574,23 +2184,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Tag();
+                return py::require<winrt::Windows::ApplicationModel::Store::IProductListingWithMetadata>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ProductListing", "Tag", "Windows.ApplicationModel.Store.IProductListingWithMetadata").Tag();
             }());
         }
         catch (...)
@@ -2604,23 +2201,10 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductListing", L"ProductType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProductType();
+                return py::require<winrt::Windows::ApplicationModel::Store::IProductListingWithMetadata>(self->obj, py::member_kind::property, "Windows.ApplicationModel.Store.ProductListing", "ProductType", "Windows.ApplicationModel.Store.IProductListingWithMetadata").ProductType();
             }());
         }
         catch (...)
@@ -2746,19 +2330,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2782,19 +2353,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -2815,19 +2373,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties", L"Image");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2851,19 +2396,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties", L"Image");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -2884,19 +2416,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2920,19 +2439,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -3019,19 +2525,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.PurchaseResults", L"OfferId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3049,19 +2542,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.PurchaseResults", L"ReceiptXml");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3079,19 +2559,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.PurchaseResults", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3109,19 +2576,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.PurchaseResults", L"TransactionId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3206,19 +2660,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.UnfulfilledConsumable", L"OfferId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3236,19 +2677,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.UnfulfilledConsumable", L"ProductId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3266,19 +2694,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.UnfulfilledConsumable", L"TransactionId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

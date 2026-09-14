@@ -29,24 +29,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -72,22 +59,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -113,23 +87,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -153,25 +114,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -195,26 +143,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -238,23 +173,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -278,26 +200,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -334,25 +243,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -378,19 +274,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -421,24 +304,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -464,22 +334,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -505,24 +362,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -548,25 +392,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -592,23 +423,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -632,19 +450,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -670,23 +475,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -700,19 +492,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"SharedMaxAge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -736,19 +515,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"SharedMaxAge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -769,19 +535,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MinFresh");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -805,19 +558,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MinFresh");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -838,19 +578,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxStale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -874,19 +601,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxStale");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -907,19 +621,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxAge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -943,19 +644,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", L"MaxAge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -1003,7 +691,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -1020,7 +708,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -1035,7 +723,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>").Size());
         }
         catch (...)
         {
@@ -1051,7 +739,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -1094,7 +782,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -1112,7 +800,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -1137,14 +825,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -1312,23 +1000,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -1404,19 +1079,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Parameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1434,19 +1096,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Scheme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1464,19 +1113,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValue", L"Token");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1521,7 +1157,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -1606,24 +1242,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1649,22 +1272,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -1690,23 +1300,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -1730,25 +1327,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -1772,26 +1356,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -1815,23 +1386,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -1855,26 +1413,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -1911,25 +1456,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1955,19 +1487,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1998,24 +1517,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2041,22 +1547,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -2082,24 +1575,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2125,25 +1605,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -2169,23 +1636,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -2209,19 +1663,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -2247,23 +1688,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -2304,7 +1732,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -2321,7 +1749,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -2336,7 +1764,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>").Size());
         }
         catch (...)
         {
@@ -2352,7 +1780,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -2395,7 +1823,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -2413,7 +1841,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -2438,14 +1866,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -2593,23 +2021,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -2685,19 +2100,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", L"Token");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2742,7 +2144,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -2825,24 +2227,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2868,22 +2257,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -2909,23 +2285,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -2949,25 +2312,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -2991,26 +2341,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -3034,23 +2371,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -3074,26 +2398,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -3130,25 +2441,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -3174,19 +2472,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -3217,24 +2502,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3260,22 +2532,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -3301,24 +2560,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3344,25 +2590,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -3388,23 +2621,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -3428,19 +2648,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3466,23 +2673,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -3523,7 +2717,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -3540,7 +2734,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -3555,7 +2749,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>").Size());
         }
         catch (...)
         {
@@ -3571,7 +2765,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -3614,7 +2808,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -3632,7 +2826,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -3657,14 +2851,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -3812,23 +3006,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -3904,19 +3085,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValue", L"ContentCoding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3961,7 +3129,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -4044,24 +3212,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4087,22 +3242,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -4128,23 +3270,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -4168,25 +3297,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -4210,26 +3326,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -4253,23 +3356,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -4293,26 +3383,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -4349,25 +3426,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -4393,19 +3457,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -4436,24 +3487,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4479,22 +3517,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -4520,24 +3545,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -4563,25 +3575,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -4607,23 +3606,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -4647,19 +3633,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -4685,23 +3658,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -4742,7 +3702,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -4759,7 +3719,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -4774,7 +3734,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>").Size());
         }
         catch (...)
         {
@@ -4790,7 +3750,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -4833,7 +3793,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -4851,7 +3811,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -4876,14 +3836,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -5047,23 +4007,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -5139,19 +4086,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"ContentCoding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5169,19 +4103,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", L"Quality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5226,7 +4147,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -5310,24 +4231,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -5353,22 +4261,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -5394,23 +4289,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -5434,25 +4316,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -5476,26 +4345,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -5519,23 +4375,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -5559,26 +4402,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -5615,25 +4445,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -5659,19 +4476,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -5702,24 +4506,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -5745,22 +4536,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -5786,24 +4564,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -5829,25 +4594,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -5873,23 +4625,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -5913,19 +4652,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -5951,23 +4677,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -6008,7 +4721,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -6025,7 +4738,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -6040,7 +4753,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>").Size());
         }
         catch (...)
         {
@@ -6056,7 +4769,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -6099,7 +4812,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -6117,7 +4830,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -6142,14 +4855,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -6297,23 +5010,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -6389,19 +5089,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6425,19 +5112,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
 
             {
@@ -6458,19 +5132,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6494,19 +5155,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6527,19 +5175,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileNameStar");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6563,19 +5198,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileNameStar");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6596,19 +5218,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6632,19 +5241,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"FileName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6665,19 +5261,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"DispositionType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6701,19 +5284,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"DispositionType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -6734,19 +5304,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", L"Parameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6791,7 +5348,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentDispositionHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -6901,19 +5458,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Append", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -6945,22 +5489,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "Clear", "Windows.Foundation.Collections.IMap<String, String>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -6986,23 +5517,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, String>>", 0).First();
                 }());
             }
             catch (...)
@@ -7026,23 +5544,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "GetView", "Windows.Foundation.Collections.IMap<String, String>", 0).GetView();
                 }());
             }
             catch (...)
@@ -7066,25 +5571,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "HasKey", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -7108,26 +5600,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Insert", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Insert(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "Insert", "Windows.Foundation.Collections.IMap<String, String>", 2).Insert(param0, param1);
                 }());
             }
             catch (...)
@@ -7151,25 +5630,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -7193,24 +5659,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Remove(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "Remove", "Windows.Foundation.Collections.IMap<String, String>", 1).Remove(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -7236,23 +5689,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -7276,19 +5716,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"TryAppendWithoutValidation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -7315,23 +5742,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "Size", "Windows.Foundation.Collections.IMap<String, String>").Size();
             }());
         }
         catch (...)
@@ -7345,19 +5759,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"LastModified");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7381,19 +5782,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"LastModified");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -7414,19 +5802,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Expires");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7450,19 +5825,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"Expires");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -7483,19 +5845,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7519,19 +5868,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>(arg);
 
             {
@@ -7552,19 +5888,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7588,19 +5911,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(arg);
 
             {
@@ -7621,19 +5931,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentMD5");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7657,19 +5954,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentMD5");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -7690,19 +5974,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7726,19 +5997,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLocation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -7759,19 +6017,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7795,19 +6040,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLength");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
 
             {
@@ -7828,19 +6060,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentDisposition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7864,19 +6083,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentDisposition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>(arg);
 
             {
@@ -7897,19 +6103,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentEncoding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7927,19 +6120,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentHeaderCollection", L"ContentLanguage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7984,7 +6164,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -8001,7 +6181,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, String>>", 0).First();
             }())};
 
             if (!iter)
@@ -8025,7 +6205,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "HasKey", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -8040,7 +6220,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "Size", "Windows.Foundation.Collections.IMap<String, String>").Size());
         }
         catch (...)
         {
@@ -8057,7 +6237,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -8067,7 +6247,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -8100,7 +6280,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
-                    did_remove = self->obj.TryRemove(_key);
+                    did_remove = py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).TryRemove(_key);
                 }
                 if (!did_remove)
                 {
@@ -8114,7 +6294,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto _value = py::convert_to<winrt::hstring>(value);
             {
                 auto _gil = py::release_gil();
-                self->obj.Insert(_key, _value);
+                py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).Insert(_key, _value);
             }
 
             return 0;
@@ -8299,23 +6479,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentRangeHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -8391,19 +6558,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Unit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8427,19 +6581,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Unit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8460,19 +6601,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"FirstBytePosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8490,19 +6618,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"LastBytePosition");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8520,19 +6635,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpContentRangeHeaderValue", L"Length");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8577,7 +6679,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpContentRangeHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -8745,23 +6847,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -8837,19 +6926,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8873,19 +6949,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -8906,19 +6969,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValue", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8963,7 +7013,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -9047,24 +7097,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -9090,22 +7127,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -9131,23 +7155,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -9171,25 +7182,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -9213,26 +7211,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -9256,23 +7241,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -9296,26 +7268,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -9352,25 +7311,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -9396,19 +7342,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -9439,24 +7372,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -9482,22 +7402,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -9523,24 +7430,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -9566,25 +7460,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -9610,23 +7491,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -9650,19 +7518,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -9688,23 +7543,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -9745,7 +7587,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -9762,7 +7604,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -9777,7 +7619,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>").Size());
         }
         catch (...)
         {
@@ -9793,7 +7635,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -9836,7 +7678,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -9854,7 +7696,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -9879,14 +7721,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -10050,23 +7892,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCredentialsHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -10142,19 +7971,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Parameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10172,19 +7988,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Scheme");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10202,19 +8005,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpCredentialsHeaderValue", L"Token");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10259,7 +8049,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpCredentialsHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -10386,23 +8176,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -10478,19 +8255,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"Date");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10508,19 +8272,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", L"Delta");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10565,7 +8316,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -10731,23 +8482,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -10823,19 +8561,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10859,19 +8584,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -10892,19 +8604,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10922,19 +8621,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValue", L"Parameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10979,7 +8665,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -11064,24 +8750,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -11107,22 +8780,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -11148,23 +8808,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -11188,25 +8835,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -11230,26 +8864,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -11273,23 +8894,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -11313,26 +8921,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -11369,25 +8964,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -11413,19 +8995,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -11456,24 +9025,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -11499,22 +9055,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -11540,24 +9083,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -11583,25 +9113,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -11627,23 +9144,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -11667,19 +9171,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -11705,23 +9196,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -11762,7 +9240,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -11779,7 +9257,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -11794,7 +9272,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>").Size());
         }
         catch (...)
         {
@@ -11810,7 +9288,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -11853,7 +9331,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -11871,7 +9349,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -11896,14 +9374,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -11985,24 +9463,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -12028,22 +9493,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -12069,23 +9521,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Globalization.Language>", 0).First();
                 }());
             }
             catch (...)
@@ -12109,25 +9548,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -12151,26 +9577,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Globalization::Language, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -12194,23 +9607,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 0).GetView();
                 }());
             }
             catch (...)
@@ -12234,26 +9634,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -12290,25 +9677,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Globalization::Language>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -12334,19 +9708,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -12377,24 +9738,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -12420,22 +9768,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -12461,24 +9796,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Globalization::Language, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -12504,25 +9826,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Globalization::Language>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -12548,23 +9857,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -12588,19 +9884,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -12626,23 +9909,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>").Size();
             }());
         }
         catch (...)
@@ -12683,7 +9953,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -12700,7 +9970,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Globalization.Language>", 0).First();
             }());
         }
         catch (...)
@@ -12715,7 +9985,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>").Size());
         }
         catch (...)
         {
@@ -12731,7 +10001,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -12774,7 +10044,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -12792,7 +10062,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -12817,14 +10087,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Globalization::Language>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Globalization::Language>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Globalization.Language>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -12988,23 +10258,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -13080,19 +10337,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"LanguageRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13110,19 +10354,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", L"Quality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13167,7 +10398,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -13251,24 +10482,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -13294,22 +10512,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -13335,23 +10540,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -13375,25 +10567,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -13417,26 +10596,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -13460,23 +10626,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -13500,26 +10653,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -13556,25 +10696,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -13600,19 +10727,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -13643,24 +10757,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -13686,22 +10787,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -13727,24 +10815,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -13770,25 +10845,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -13814,23 +10876,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -13854,19 +10903,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -13892,23 +10928,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -13949,7 +10972,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -13966,7 +10989,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -13981,7 +11004,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>").Size());
         }
         catch (...)
         {
@@ -13997,7 +11020,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -14040,7 +11063,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -14058,7 +11081,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -14083,14 +11106,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -14238,23 +11261,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -14330,19 +11340,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"MediaType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14366,19 +11363,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"MediaType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -14399,19 +11383,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"CharSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14435,19 +11406,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"CharSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -14468,19 +11426,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", L"Parameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14525,7 +11470,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -14692,23 +11637,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -14784,19 +11716,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Quality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14820,19 +11739,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Quality");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             {
@@ -14853,19 +11759,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"MediaType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14889,19 +11782,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"MediaType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -14922,19 +11802,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"CharSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14958,19 +11825,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"CharSet");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -14991,19 +11845,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", L"Parameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15048,7 +11889,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -15134,24 +11975,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -15177,22 +12005,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -15218,23 +12033,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -15258,25 +12060,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -15300,26 +12089,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -15343,23 +12119,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -15383,26 +12146,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -15439,25 +12189,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -15483,19 +12220,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -15526,24 +12250,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -15569,22 +12280,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -15610,24 +12308,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -15653,25 +12338,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -15697,23 +12369,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -15737,19 +12396,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -15775,23 +12421,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -15832,7 +12465,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -15849,7 +12482,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -15864,7 +12497,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>").Size());
         }
         catch (...)
         {
@@ -15880,7 +12513,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -15923,7 +12556,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -15941,7 +12574,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -15966,14 +12599,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -16055,24 +12688,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -16098,22 +12718,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -16139,23 +12746,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpMethod>", 0).First();
                 }());
             }
             catch (...)
@@ -16179,25 +12773,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -16221,26 +12802,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::HttpMethod, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -16264,23 +12832,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 0).GetView();
                 }());
             }
             catch (...)
@@ -16304,26 +12859,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -16360,25 +12902,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -16404,19 +12933,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -16447,24 +12963,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -16490,22 +12993,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -16531,24 +13021,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::HttpMethod, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -16574,25 +13051,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -16618,23 +13082,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -16658,19 +13109,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -16696,23 +13134,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>").Size();
             }());
         }
         catch (...)
@@ -16753,7 +13178,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -16770,7 +13195,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpMethod>", 0).First();
             }());
         }
         catch (...)
@@ -16785,7 +13210,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>").Size());
         }
         catch (...)
         {
@@ -16801,7 +13226,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -16844,7 +13269,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -16862,7 +13287,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -16887,14 +13312,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::HttpMethod>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpMethodHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -17058,23 +13483,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpNameValueHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -17150,19 +13562,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17186,19 +13585,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -17219,19 +13605,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpNameValueHeaderValue", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17276,7 +13649,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpNameValueHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -17442,23 +13815,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -17534,19 +13894,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17564,19 +13911,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductHeaderValue", L"Version");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17621,7 +13955,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -17787,23 +14121,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -17879,19 +14200,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"Comment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17909,19 +14217,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValue", L"Product");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17966,7 +14261,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -18050,24 +14345,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -18093,22 +14375,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -18134,23 +14403,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -18174,25 +14430,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -18216,26 +14459,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -18259,23 +14489,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -18299,26 +14516,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -18355,25 +14559,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -18399,19 +14590,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -18442,24 +14620,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -18485,22 +14650,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -18526,24 +14678,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -18569,25 +14708,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -18613,23 +14739,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -18653,19 +14766,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -18691,23 +14791,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -18748,7 +14835,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -18765,7 +14852,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -18780,7 +14867,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>").Size());
         }
         catch (...)
         {
@@ -18796,7 +14883,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -18839,7 +14926,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -18857,7 +14944,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -18882,14 +14969,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 
@@ -18971,19 +15058,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Append", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -19015,22 +15089,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "Clear", "Windows.Foundation.Collections.IMap<String, String>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -19056,23 +15117,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, String>>", 0).First();
                 }());
             }
             catch (...)
@@ -19096,23 +15144,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "GetView", "Windows.Foundation.Collections.IMap<String, String>", 0).GetView();
                 }());
             }
             catch (...)
@@ -19136,25 +15171,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "HasKey", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -19178,26 +15200,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Insert", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Insert(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "Insert", "Windows.Foundation.Collections.IMap<String, String>", 2).Insert(param0, param1);
                 }());
             }
             catch (...)
@@ -19221,25 +15230,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -19263,24 +15259,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Remove(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "Remove", "Windows.Foundation.Collections.IMap<String, String>", 1).Remove(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -19306,23 +15289,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -19346,19 +15316,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"TryAppendWithoutValidation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -19385,23 +15342,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "Size", "Windows.Foundation.Collections.IMap<String, String>").Size();
             }());
         }
         catch (...)
@@ -19415,19 +15359,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Referer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19451,19 +15382,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Referer");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -19484,19 +15402,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"ProxyAuthorization");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19520,19 +15425,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"ProxyAuthorization");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(arg);
 
             {
@@ -19553,19 +15445,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"MaxForwards");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19589,19 +15468,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"MaxForwards");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             {
@@ -19622,19 +15488,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfUnmodifiedSince");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19658,19 +15511,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfUnmodifiedSince");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -19691,19 +15531,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfModifiedSince");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19727,19 +15554,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"IfModifiedSince");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -19760,19 +15574,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Host");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19796,19 +15597,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Host");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
             {
@@ -19829,19 +15617,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"From");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19865,19 +15640,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"From");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -19898,19 +15660,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Date");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19934,19 +15683,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Date");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -19967,19 +15703,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Authorization");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20003,19 +15726,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Authorization");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(arg);
 
             {
@@ -20036,19 +15746,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Accept");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20066,19 +15763,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"AcceptEncoding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20096,19 +15780,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"AcceptLanguage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20126,19 +15797,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"CacheControl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20156,19 +15814,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Connection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20186,19 +15831,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Cookie");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20216,19 +15848,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"Expect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20246,19 +15865,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"TransferEncoding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20276,19 +15882,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpRequestHeaderCollection", L"UserAgent");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20333,7 +15926,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -20350,7 +15943,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, String>>", 0).First();
             }())};
 
             if (!iter)
@@ -20374,7 +15967,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "HasKey", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -20389,7 +15982,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "Size", "Windows.Foundation.Collections.IMap<String, String>").Size());
         }
         catch (...)
         {
@@ -20406,7 +15999,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -20416,7 +16009,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -20449,7 +16042,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
-                    did_remove = self->obj.TryRemove(_key);
+                    did_remove = py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).TryRemove(_key);
                 }
                 if (!did_remove)
                 {
@@ -20463,7 +16056,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto _value = py::convert_to<winrt::hstring>(value);
             {
                 auto _gil = py::release_gil();
-                self->obj.Insert(_key, _value);
+                py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpRequestHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).Insert(_key, _value);
             }
 
             return 0;
@@ -20557,19 +16150,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Append", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -20601,22 +16181,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "Clear", "Windows.Foundation.Collections.IMap<String, String>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -20642,23 +16209,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, String>>", 0).First();
                 }());
             }
             catch (...)
@@ -20682,23 +16236,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "GetView", "Windows.Foundation.Collections.IMap<String, String>", 0).GetView();
                 }());
             }
             catch (...)
@@ -20722,25 +16263,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"HasKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.HasKey(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "HasKey", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(param0);
                 }());
             }
             catch (...)
@@ -20764,26 +16292,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Insert", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Insert(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "Insert", "Windows.Foundation.Collections.IMap<String, String>", 2).Insert(param0, param1);
                 }());
             }
             catch (...)
@@ -20807,25 +16322,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Lookup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Lookup(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).Lookup(param0);
                 }());
             }
             catch (...)
@@ -20849,24 +16351,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Remove", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Remove(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "Remove", "Windows.Foundation.Collections.IMap<String, String>", 1).Remove(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -20892,23 +16381,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -20932,19 +16408,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"TryAppendWithoutValidation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -20971,23 +16434,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "Size", "Windows.Foundation.Collections.IMap<String, String>").Size();
             }());
         }
         catch (...)
@@ -21001,19 +16451,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"RetryAfter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21037,19 +16474,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"RetryAfter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>(arg);
 
             {
@@ -21070,19 +16494,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21106,19 +16517,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Location");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -21139,19 +16537,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Date");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21175,19 +16560,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Date");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             {
@@ -21208,19 +16580,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Age");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21244,19 +16603,6 @@ namespace py::cpp::Windows::Web::Http::Headers
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Age");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             {
@@ -21277,19 +16623,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Allow");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21307,19 +16640,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"CacheControl");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21337,19 +16657,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"Connection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21367,19 +16674,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"ProxyAuthenticate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21397,19 +16691,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"TransferEncoding");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21427,19 +16708,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpResponseHeaderCollection", L"WwwAuthenticate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21484,7 +16752,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -21501,7 +16769,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             py::pyobj_handle iter{py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<String, String>>", 0).First();
             }())};
 
             if (!iter)
@@ -21525,7 +16793,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto _key = py::convert_to<winrt::hstring>(key);
             {
                 auto _gil = py::release_gil();
-                return static_cast<int>(self->obj.HasKey(_key));
+                return static_cast<int>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "HasKey", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(_key));
             }
         }
         catch (...)
@@ -21540,7 +16808,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "Size", "Windows.Foundation.Collections.IMap<String, String>").Size());
         }
         catch (...)
         {
@@ -21557,7 +16825,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto value = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.TryLookup(_key);
+                return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).TryLookup(_key);
             }();
 
             if (!value)
@@ -21567,7 +16835,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                     auto has_key = [&]()
                     {
                         auto _gil = py::release_gil();
-                        return self->obj.HasKey(_key);
+                        return py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).HasKey(_key);
                     }();
 
                     if (has_key)
@@ -21600,7 +16868,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
-                    did_remove = self->obj.TryRemove(_key);
+                    did_remove = py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).TryRemove(_key);
                 }
                 if (!did_remove)
                 {
@@ -21614,7 +16882,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto _value = py::convert_to<winrt::hstring>(value);
             {
                 auto _gil = py::release_gil();
-                self->obj.Insert(_key, _value);
+                py::require<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpResponseHeaderCollection", "Lookup", "Windows.Foundation.Collections.IMap<String, String>", 1).Insert(_key, _value);
             }
 
             return 0;
@@ -21766,23 +17034,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -21858,19 +17113,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"Parameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21888,19 +17130,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21945,7 +17174,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValue", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -22029,24 +17258,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Append(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "Append", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 1).Append(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -22072,22 +17288,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Clear();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "Clear", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 0).Clear();
                 }
 
                 Py_RETURN_NONE;
@@ -22113,23 +17316,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 0).First();
                 }());
             }
             catch (...)
@@ -22153,25 +17343,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetAt(param0);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 1).GetAt(param0);
                 }());
             }
             catch (...)
@@ -22195,26 +17372,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue, true>>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetMany(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "GetMany", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 1).GetMany(param0, param1);
                 }());
             }
             catch (...)
@@ -22238,23 +17402,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetView();
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "GetView", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 0).GetView();
                 }());
             }
             catch (...)
@@ -22278,26 +17429,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 0);
                 uint32_t param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IndexOf(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "IndexOf", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 1).IndexOf(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -22334,25 +17472,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.InsertAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "InsertAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 2).InsertAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -22378,19 +17503,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"ParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -22421,24 +17533,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAt(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "RemoveAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 1).RemoveAt(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -22464,22 +17563,9 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RemoveAtEnd();
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "RemoveAtEnd", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 0).RemoveAtEnd();
                 }
 
                 Py_RETURN_NONE;
@@ -22505,24 +17591,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue, false>>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.ReplaceAll(param0);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "ReplaceAll", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 1).ReplaceAll(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -22548,25 +17621,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetAt(param0, param1);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 2).SetAt(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -22592,23 +17652,10 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -22632,19 +17679,6 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"TryParseAdd", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -22670,23 +17704,10 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>").Size();
             }());
         }
         catch (...)
@@ -22727,7 +17748,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)
@@ -22744,7 +17765,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 0).First();
             }());
         }
         catch (...)
@@ -22759,7 +17780,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _gil = py::release_gil();
-            return static_cast<Py_ssize_t>(self->obj.Size());
+            return static_cast<Py_ssize_t>(py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::property, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "Size", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>").Size());
         }
         catch (...)
         {
@@ -22775,7 +17796,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetAt(static_cast<uint32_t>(i));
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 1).GetAt(static_cast<uint32_t>(i));
             }());
         }
         catch (...)
@@ -22818,7 +17839,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto size = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 1).Size();
             }();
             if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
@@ -22836,7 +17857,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto count = [&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+                return py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "GetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 1).GetMany(static_cast<uint32_t>(start), items);
             }();
 
             if (count != static_cast<uint32_t>(length))
@@ -22861,14 +17882,14 @@ namespace py::cpp::Windows::Web::Http::Headers
             if (!value)
             {
                 auto _gil = py::release_gil();
-                self->obj.RemoveAt(static_cast<uint32_t>(i));
+                py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 2).RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
                 auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(value);
                 {
                     auto _gil = py::release_gil();
-                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                    py::require<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>>(self->obj, py::member_kind::method, "Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection", "SetAt", "Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>", 2).SetAt(static_cast<uint32_t>(i), _value);
                 }
             }
 

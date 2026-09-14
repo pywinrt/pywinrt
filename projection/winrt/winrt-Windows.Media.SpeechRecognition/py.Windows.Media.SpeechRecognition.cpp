@@ -25,19 +25,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -119,19 +106,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs", L"Result");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -217,19 +191,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"CancelAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -257,19 +218,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"PauseAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -297,19 +245,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"Resume", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Resume();
@@ -338,19 +273,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"StartAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -367,19 +289,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"StartAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionMode>(args, 0);
 
                 return py::convert([&]()
@@ -409,19 +318,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"StopAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -445,19 +341,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"AutoStopSilenceTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -481,19 +364,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"AutoStopSilenceTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -514,19 +384,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"Completed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession, winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -546,19 +403,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"Completed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -579,19 +423,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"ResultGenerated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession, winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -611,19 +442,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession", L"ResultGenerated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -717,19 +535,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -851,23 +656,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Tag();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", "Tag", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Tag();
             }());
         }
         catch (...)
@@ -887,24 +679,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Tag(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", "Tag", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Tag(param0);
             }
 
             return 0;
@@ -920,23 +699,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", L"Probability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Probability();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", "Probability", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Probability();
             }());
         }
         catch (...)
@@ -956,24 +722,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", L"Probability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Probability(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", "Probability", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Probability(param0);
             }
 
             return 0;
@@ -989,23 +742,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsEnabled();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", "IsEnabled", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").IsEnabled();
             }());
         }
         catch (...)
@@ -1025,24 +765,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsEnabled(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", "IsEnabled", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").IsEnabled(param0);
             }
 
             return 0;
@@ -1058,23 +785,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", "Type", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Type();
             }());
         }
         catch (...)
@@ -1088,19 +802,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint", L"GrammarFile");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1186,19 +887,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionHypothesis", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1280,19 +968,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs", L"Hypothesis");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1414,23 +1089,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Tag();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", "Tag", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Tag();
             }());
         }
         catch (...)
@@ -1450,24 +1112,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Tag(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", "Tag", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Tag(param0);
             }
 
             return 0;
@@ -1483,23 +1132,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", L"Probability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Probability();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", "Probability", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Probability();
             }());
         }
         catch (...)
@@ -1519,24 +1155,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", L"Probability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Probability(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", "Probability", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Probability(param0);
             }
 
             return 0;
@@ -1552,23 +1175,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsEnabled();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", "IsEnabled", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").IsEnabled();
             }());
         }
         catch (...)
@@ -1588,24 +1198,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsEnabled(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", "IsEnabled", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").IsEnabled(param0);
             }
 
             return 0;
@@ -1621,23 +1218,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", "Type", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Type();
             }());
         }
         catch (...)
@@ -1651,19 +1235,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint", L"Commands");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1749,19 +1320,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs", L"Problem");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1847,19 +1405,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionResult", L"GetAlternates", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -1885,19 +1430,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionResult", L"Confidence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1915,19 +1447,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionResult", L"Constraint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1945,19 +1464,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionResult", L"RawConfidence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1975,19 +1481,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionResult", L"RulePath");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2005,19 +1498,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionResult", L"SemanticInterpretation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2035,19 +1515,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionResult", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2065,19 +1532,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionResult", L"Text");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2095,23 +1549,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionResult", L"PhraseDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PhraseDuration();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionResult2>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionResult", "PhraseDuration", "Windows.Media.SpeechRecognition.ISpeechRecognitionResult2").PhraseDuration();
             }());
         }
         catch (...)
@@ -2125,23 +1566,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionResult", L"PhraseStartTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PhraseStartTime();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionResult2>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionResult", "PhraseStartTime", "Windows.Media.SpeechRecognition.ISpeechRecognitionResult2").PhraseStartTime();
             }());
         }
         catch (...)
@@ -2228,19 +1656,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionSemanticInterpretation", L"Properties");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2364,23 +1779,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Tag();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", "Tag", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Tag();
             }());
         }
         catch (...)
@@ -2400,24 +1802,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Tag(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", "Tag", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Tag(param0);
             }
 
             return 0;
@@ -2433,23 +1822,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", L"Probability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Probability();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", "Probability", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Probability();
             }());
         }
         catch (...)
@@ -2469,24 +1845,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", L"Probability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Probability(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", "Probability", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Probability(param0);
             }
 
             return 0;
@@ -2502,23 +1865,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsEnabled();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", "IsEnabled", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").IsEnabled();
             }());
         }
         catch (...)
@@ -2538,24 +1888,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsEnabled(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", "IsEnabled", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").IsEnabled(param0);
             }
 
             return 0;
@@ -2571,23 +1908,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", "Type", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Type();
             }());
         }
         catch (...)
@@ -2601,19 +1925,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", L"Scenario");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2631,19 +1942,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint", L"TopicHint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2730,23 +2028,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Tag();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", "Tag", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Tag();
             }());
         }
         catch (...)
@@ -2766,24 +2051,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Tag(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", "Tag", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Tag(param0);
             }
 
             return 0;
@@ -2799,23 +2071,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", L"Probability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Probability();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", "Probability", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Probability();
             }());
         }
         catch (...)
@@ -2835,24 +2094,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", L"Probability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Probability(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", "Probability", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Probability(param0);
             }
 
             return 0;
@@ -2868,23 +2114,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsEnabled();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", "IsEnabled", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").IsEnabled();
             }());
         }
         catch (...)
@@ -2904,24 +2137,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsEnabled(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", "IsEnabled", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").IsEnabled(param0);
             }
 
             return 0;
@@ -2937,23 +2157,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint", "Type", "Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint").Type();
             }());
         }
         catch (...)
@@ -3075,22 +2282,9 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.SpeechRecognition.SpeechRecognizer", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -3116,19 +2310,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"CompileConstraintsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3156,19 +2337,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"RecognizeAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3196,19 +2364,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"RecognizeWithUIAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3236,23 +2391,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"StopRecognitionAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StopRecognitionAsync();
+                    return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer2>(self->obj, py::member_kind::method, "Windows.Media.SpeechRecognition.SpeechRecognizer", "StopRecognitionAsync", "Windows.Media.SpeechRecognition.ISpeechRecognizer2", 0).StopRecognitionAsync();
                 }());
             }
             catch (...)
@@ -3314,19 +2456,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"Constraints");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3344,19 +2473,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"CurrentLanguage");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3374,19 +2490,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"Timeouts");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3404,19 +2507,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"UIOptions");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3434,23 +2524,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"ContinuousRecognitionSession");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContinuousRecognitionSession();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer2>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognizer", "ContinuousRecognitionSession", "Windows.Media.SpeechRecognition.ISpeechRecognizer2").ContinuousRecognitionSession();
             }());
         }
         catch (...)
@@ -3464,23 +2541,10 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.State();
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer2>(self->obj, py::member_kind::property, "Windows.Media.SpeechRecognition.SpeechRecognizer", "State", "Windows.Media.SpeechRecognition.ISpeechRecognizer2").State();
             }());
         }
         catch (...)
@@ -3584,19 +2648,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"RecognitionQualityDegrading");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer, winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3616,19 +2667,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"RecognitionQualityDegrading");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3649,19 +2687,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer, winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -3681,19 +2706,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3714,25 +2726,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"HypothesisGenerated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer, winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HypothesisGenerated(param0);
+                return py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer2>(self->obj, py::member_kind::event, "Windows.Media.SpeechRecognition.SpeechRecognizer", "HypothesisGenerated", "Windows.Media.SpeechRecognition.ISpeechRecognizer2").HypothesisGenerated(param0);
             }());
         }
         catch (...)
@@ -3746,24 +2745,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizer", L"HypothesisGenerated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.HypothesisGenerated(param0);
+                py::require<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer2>(self->obj, py::member_kind::event, "Windows.Media.SpeechRecognition.SpeechRecognizer", "HypothesisGenerated", "Windows.Media.SpeechRecognition.ISpeechRecognizer2").HypothesisGenerated(param0);
             }
 
             Py_RETURN_NONE;
@@ -3810,7 +2796,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.SpeechRecognition.SpeechRecognizer", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -3909,19 +2895,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs", L"State");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4003,19 +2976,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts", L"InitialSilenceTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4039,19 +2999,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts", L"InitialSilenceTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -4072,19 +3019,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts", L"EndSilenceTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4108,19 +3042,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts", L"EndSilenceTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -4141,19 +3062,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts", L"BabbleTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4177,19 +3085,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts", L"BabbleTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -4276,19 +3171,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions", L"ShowConfirmation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4312,19 +3194,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions", L"ShowConfirmation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4345,19 +3214,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions", L"IsReadBackEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4381,19 +3237,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions", L"IsReadBackEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4414,19 +3257,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions", L"ExampleText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4450,19 +3280,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions", L"ExampleText");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4483,19 +3300,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions", L"AudiblePrompt");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4519,19 +3323,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions", L"AudiblePrompt");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4621,19 +3412,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4657,19 +3435,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint", L"IsEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -4690,19 +3455,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint", L"Probability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4726,19 +3478,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint", L"Probability");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>(arg);
 
             {
@@ -4759,19 +3498,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4795,19 +3521,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint", L"Tag");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -4828,19 +3541,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

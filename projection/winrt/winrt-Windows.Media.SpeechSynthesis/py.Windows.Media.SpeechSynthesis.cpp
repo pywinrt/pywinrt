@@ -29,23 +29,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"CloneStream", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CloneStream();
+                    return py::require<winrt::Windows::Storage::Streams::IRandomAccessStream>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "CloneStream", "Windows.Storage.Streams.IRandomAccessStream", 0).CloneStream();
                 }());
             }
             catch (...)
@@ -69,22 +56,9 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -110,23 +84,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"FlushAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FlushAsync();
+                    return py::require<winrt::Windows::Storage::Streams::IOutputStream>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "FlushAsync", "Windows.Storage.Streams.IOutputStream", 0).FlushAsync();
                 }());
             }
             catch (...)
@@ -150,25 +111,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"GetInputStreamAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetInputStreamAt(param0);
+                    return py::require<winrt::Windows::Storage::Streams::IRandomAccessStream>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "GetInputStreamAt", "Windows.Storage.Streams.IRandomAccessStream", 1).GetInputStreamAt(param0);
                 }());
             }
             catch (...)
@@ -192,25 +140,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"GetOutputStreamAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.GetOutputStreamAt(param0);
+                    return py::require<winrt::Windows::Storage::Streams::IRandomAccessStream>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "GetOutputStreamAt", "Windows.Storage.Streams.IRandomAccessStream", 1).GetOutputStreamAt(param0);
                 }());
             }
             catch (...)
@@ -234,19 +169,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"ReadAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::InputStreamOptions>(args, 2);
@@ -254,7 +176,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ReadAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Storage::Streams::IInputStream>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "ReadAsync", "Windows.Storage.Streams.IInputStream", 3).ReadAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -278,24 +200,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Seek", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Seek(param0);
+                    py::require<winrt::Windows::Storage::Streams::IRandomAccessStream>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "Seek", "Windows.Storage.Streams.IRandomAccessStream", 1).Seek(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -321,25 +230,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"WriteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.WriteAsync(param0);
+                    return py::require<winrt::Windows::Storage::Streams::IOutputStream>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "WriteAsync", "Windows.Storage.Streams.IOutputStream", 1).WriteAsync(param0);
                 }());
             }
             catch (...)
@@ -359,23 +255,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"TimedMetadataTracks");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TimedMetadataTracks();
+                return py::require<winrt::Windows::Media::Core::ITimedMetadataTrackProvider>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "TimedMetadataTracks", "Windows.Media.Core.ITimedMetadataTrackProvider").TimedMetadataTracks();
             }());
         }
         catch (...)
@@ -389,19 +272,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Markers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -419,23 +289,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"ContentType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ContentType();
+                return py::require<winrt::Windows::Storage::Streams::IContentTypeProvider>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "ContentType", "Windows.Storage.Streams.IContentTypeProvider").ContentType();
             }());
         }
         catch (...)
@@ -449,23 +306,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Size();
+                return py::require<winrt::Windows::Storage::Streams::IRandomAccessStream>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "Size", "Windows.Storage.Streams.IRandomAccessStream").Size();
             }());
         }
         catch (...)
@@ -485,24 +329,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint64_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Size(param0);
+                py::require<winrt::Windows::Storage::Streams::IRandomAccessStream>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "Size", "Windows.Storage.Streams.IRandomAccessStream").Size(param0);
             }
 
             return 0;
@@ -518,23 +349,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"CanRead");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanRead();
+                return py::require<winrt::Windows::Storage::Streams::IRandomAccessStream>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "CanRead", "Windows.Storage.Streams.IRandomAccessStream").CanRead();
             }());
         }
         catch (...)
@@ -548,23 +366,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"CanWrite");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.CanWrite();
+                return py::require<winrt::Windows::Storage::Streams::IRandomAccessStream>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "CanWrite", "Windows.Storage.Streams.IRandomAccessStream").CanWrite();
             }());
         }
         catch (...)
@@ -578,23 +383,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Position");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Position();
+                return py::require<winrt::Windows::Storage::Streams::IRandomAccessStream>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "Position", "Windows.Storage.Streams.IRandomAccessStream").Position();
             }());
         }
         catch (...)
@@ -639,7 +431,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesisStream", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -737,22 +529,9 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesizer", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -778,19 +557,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"SynthesizeSsmlToStreamAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -820,19 +586,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"SynthesizeTextToStreamAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -900,19 +653,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Voice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -936,19 +676,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Voice");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>(arg);
 
             {
@@ -969,23 +696,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Options");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Options();
+                return py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizer2>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizer", "Options", "Windows.Media.SpeechSynthesis.ISpeechSynthesizer2").Options();
             }());
         }
         catch (...)
@@ -1090,7 +804,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Media.SpeechSynthesis.SpeechSynthesizer", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1176,19 +890,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeWordBoundaryMetadata");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1212,19 +913,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeWordBoundaryMetadata");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1245,19 +933,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeSentenceBoundaryMetadata");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1281,19 +956,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeSentenceBoundaryMetadata");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1314,23 +976,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"SpeakingRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SpeakingRate();
+                return py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions2>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", "SpeakingRate", "Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2").SpeakingRate();
             }());
         }
         catch (...)
@@ -1350,24 +999,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"SpeakingRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SpeakingRate(param0);
+                py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions2>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", "SpeakingRate", "Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2").SpeakingRate(param0);
             }
 
             return 0;
@@ -1383,23 +1019,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioVolume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AudioVolume();
+                return py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions2>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", "AudioVolume", "Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2").AudioVolume();
             }());
         }
         catch (...)
@@ -1419,24 +1042,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioVolume");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AudioVolume(param0);
+                py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions2>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", "AudioVolume", "Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2").AudioVolume(param0);
             }
 
             return 0;
@@ -1452,23 +1062,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioPitch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AudioPitch();
+                return py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions2>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", "AudioPitch", "Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2").AudioPitch();
             }());
         }
         catch (...)
@@ -1488,24 +1085,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioPitch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AudioPitch(param0);
+                py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions2>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", "AudioPitch", "Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2").AudioPitch(param0);
             }
 
             return 0;
@@ -1521,23 +1105,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"PunctuationSilence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PunctuationSilence();
+                return py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions3>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", "PunctuationSilence", "Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3").PunctuationSilence();
             }());
         }
         catch (...)
@@ -1557,24 +1128,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"PunctuationSilence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PunctuationSilence(param0);
+                py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions3>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", "PunctuationSilence", "Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3").PunctuationSilence(param0);
             }
 
             return 0;
@@ -1590,23 +1148,10 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AppendedSilence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AppendedSilence();
+                return py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions3>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", "AppendedSilence", "Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3").AppendedSilence();
             }());
         }
         catch (...)
@@ -1626,24 +1171,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AppendedSilence");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AppendedSilence(param0);
+                py::require<winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions3>(self->obj, py::member_kind::property, "Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", "AppendedSilence", "Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3").AppendedSilence(param0);
             }
 
             return 0;
@@ -1729,19 +1261,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1759,19 +1278,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"DisplayName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1789,19 +1295,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Gender");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1819,19 +1312,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1849,19 +1329,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Language");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

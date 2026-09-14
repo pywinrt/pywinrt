@@ -422,19 +422,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"Description");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -452,19 +439,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"HelpUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -482,19 +456,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"LongDescription");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -628,19 +589,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"AddLoggingChannel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 {
@@ -660,19 +608,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"AddLoggingChannel", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -704,22 +639,9 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.FileLoggingSession", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -745,19 +667,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"CloseAndSaveToFileAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -785,19 +694,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"RemoveLoggingChannel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 {
@@ -824,19 +720,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -854,19 +737,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"LogFileGenerated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession, winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -886,19 +756,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"LogFileGenerated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -950,7 +807,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.FileLoggingSession", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1014,19 +871,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs", L"File");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1154,22 +998,9 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -1195,23 +1026,10 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"IsEnabled", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEnabled();
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "IsEnabled", "Windows.Foundation.Diagnostics.ILoggingTarget", 0).IsEnabled();
                 }());
             }
             catch (...)
@@ -1224,25 +1042,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"IsEnabled", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEnabled(param0);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "IsEnabled", "Windows.Foundation.Diagnostics.ILoggingTarget", 1).IsEnabled(param0);
                 }());
             }
             catch (...)
@@ -1255,26 +1060,13 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"IsEnabled", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEnabled(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "IsEnabled", "Windows.Foundation.Diagnostics.ILoggingTarget", 2).IsEnabled(param0, param1);
                 }());
             }
             catch (...)
@@ -1298,24 +1090,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.LogEvent(param0);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "LogEvent", "Windows.Foundation.Diagnostics.ILoggingTarget", 1).LogEvent(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1330,25 +1109,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.LogEvent(param0, param1);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "LogEvent", "Windows.Foundation.Diagnostics.ILoggingTarget", 2).LogEvent(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1363,26 +1129,13 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.LogEvent(param0, param1, param2);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "LogEvent", "Windows.Foundation.Diagnostics.ILoggingTarget", 3).LogEvent(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -1397,19 +1150,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1417,7 +1157,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 {
                     auto _gil = release_gil();
-                    self->obj.LogEvent(param0, param1, param2, param3);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "LogEvent", "Windows.Foundation.Diagnostics.ILoggingTarget", 4).LogEvent(param0, param1, param2, param3);
                 }
 
                 Py_RETURN_NONE;
@@ -1443,25 +1183,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StartActivity(param0);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "StartActivity", "Windows.Foundation.Diagnostics.ILoggingTarget", 1).StartActivity(param0);
                 }());
             }
             catch (...)
@@ -1474,26 +1201,13 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StartActivity(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "StartActivity", "Windows.Foundation.Diagnostics.ILoggingTarget", 2).StartActivity(param0, param1);
                 }());
             }
             catch (...)
@@ -1506,19 +1220,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1526,7 +1227,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StartActivity(param0, param1, param2);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "StartActivity", "Windows.Foundation.Diagnostics.ILoggingTarget", 3).StartActivity(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -1539,19 +1240,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1560,7 +1248,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StartActivity(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "StartActivity", "Windows.Foundation.Diagnostics.ILoggingTarget", 4).StartActivity(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -1584,24 +1272,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StopActivity", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StopActivity(param0);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingActivity2>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "StopActivity", "Windows.Foundation.Diagnostics.ILoggingActivity2", 1).StopActivity(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1616,25 +1291,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StopActivity", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StopActivity(param0, param1);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingActivity2>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "StopActivity", "Windows.Foundation.Diagnostics.ILoggingActivity2", 2).StopActivity(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1649,26 +1311,13 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StopActivity", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOptions>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.StopActivity(param0, param1, param2);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingActivity2>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "StopActivity", "Windows.Foundation.Diagnostics.ILoggingActivity2", 3).StopActivity(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -1690,19 +1339,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1720,19 +1356,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1750,23 +1373,10 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Channel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Channel();
+                return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingActivity2>(self->obj, py::member_kind::property, "Windows.Foundation.Diagnostics.LoggingActivity", "Channel", "Windows.Foundation.Diagnostics.ILoggingActivity2").Channel();
             }());
         }
         catch (...)
@@ -1811,7 +1421,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingActivity", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1937,22 +1547,9 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -1978,23 +1575,10 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"IsEnabled", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEnabled();
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "IsEnabled", "Windows.Foundation.Diagnostics.ILoggingTarget", 0).IsEnabled();
                 }());
             }
             catch (...)
@@ -2007,25 +1591,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"IsEnabled", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEnabled(param0);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "IsEnabled", "Windows.Foundation.Diagnostics.ILoggingTarget", 1).IsEnabled(param0);
                 }());
             }
             catch (...)
@@ -2038,26 +1609,13 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"IsEnabled", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.IsEnabled(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "IsEnabled", "Windows.Foundation.Diagnostics.ILoggingTarget", 2).IsEnabled(param0, param1);
                 }());
             }
             catch (...)
@@ -2081,24 +1639,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.LogEvent(param0);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "LogEvent", "Windows.Foundation.Diagnostics.ILoggingTarget", 1).LogEvent(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -2113,25 +1658,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.LogEvent(param0, param1);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "LogEvent", "Windows.Foundation.Diagnostics.ILoggingTarget", 2).LogEvent(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -2146,26 +1678,13 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.LogEvent(param0, param1, param2);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "LogEvent", "Windows.Foundation.Diagnostics.ILoggingTarget", 3).LogEvent(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -2180,19 +1699,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -2200,7 +1706,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
                 {
                     auto _gil = release_gil();
-                    self->obj.LogEvent(param0, param1, param2, param3);
+                    py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "LogEvent", "Windows.Foundation.Diagnostics.ILoggingTarget", 4).LogEvent(param0, param1, param2, param3);
                 }
 
                 Py_RETURN_NONE;
@@ -2226,19 +1732,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogMessage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -2258,19 +1751,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogMessage", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -2302,19 +1782,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogValuePair", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -2335,19 +1802,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogValuePair", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -2380,25 +1834,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StartActivity(param0);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "StartActivity", "Windows.Foundation.Diagnostics.ILoggingTarget", 1).StartActivity(param0);
                 }());
             }
             catch (...)
@@ -2411,26 +1852,13 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StartActivity(param0, param1);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "StartActivity", "Windows.Foundation.Diagnostics.ILoggingTarget", 2).StartActivity(param0, param1);
                 }());
             }
             catch (...)
@@ -2443,19 +1871,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -2463,7 +1878,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StartActivity(param0, param1, param2);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "StartActivity", "Windows.Foundation.Diagnostics.ILoggingTarget", 3).StartActivity(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -2476,19 +1891,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -2497,7 +1899,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.StartActivity(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "StartActivity", "Windows.Foundation.Diagnostics.ILoggingTarget", 4).StartActivity(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -2517,19 +1919,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2547,19 +1936,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Level");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2577,19 +1953,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2607,23 +1970,10 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Id();
+                return py::require<winrt::Windows::Foundation::Diagnostics::ILoggingChannel2>(self->obj, py::member_kind::property, "Windows.Foundation.Diagnostics.LoggingChannel", "Id", "Windows.Foundation.Diagnostics.ILoggingChannel2").Id();
             }());
         }
         catch (...)
@@ -2637,19 +1987,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LoggingEnabled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::ILoggingChannel, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -2669,19 +2006,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LoggingEnabled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -2733,7 +2057,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingChannel", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -2839,19 +2163,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannelOptions", L"Group");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2875,19 +2186,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannelOptions", L"Group");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             {
@@ -2998,19 +2296,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -3031,19 +2316,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3065,19 +2337,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3111,19 +2370,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBooleanArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
 
@@ -3144,19 +2390,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBooleanArray", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3178,19 +2411,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBooleanArray", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3224,19 +2444,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<char16_t>(args, 1);
 
@@ -3257,19 +2464,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<char16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3291,19 +2485,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<char16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3337,19 +2518,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16Array", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, false>>(args, 1);
 
@@ -3370,19 +2538,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16Array", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3404,19 +2559,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16Array", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3450,19 +2592,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -3483,19 +2612,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3517,19 +2633,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3563,19 +2666,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTimeArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::DateTime, false>>(args, 1);
 
@@ -3596,19 +2686,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTimeArray", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::DateTime, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3630,19 +2707,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTimeArray", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::DateTime, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3676,19 +2740,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -3709,19 +2760,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3743,19 +2781,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3789,19 +2814,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDoubleArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
 
@@ -3822,19 +2834,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDoubleArray", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3856,19 +2855,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDoubleArray", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3902,19 +2888,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddEmpty", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -3934,19 +2907,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddEmpty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 1);
 
@@ -3967,19 +2927,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddEmpty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -4012,19 +2959,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
@@ -4045,19 +2979,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4079,19 +3000,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4125,19 +3033,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuidArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::guid, false>>(args, 1);
 
@@ -4158,19 +3053,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuidArray", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::guid, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4192,19 +3074,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuidArray", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::guid, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4238,19 +3107,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int16_t>(args, 1);
 
@@ -4271,19 +3127,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4305,19 +3148,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4351,19 +3181,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16Array", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
 
@@ -4384,19 +3201,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16Array", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4418,19 +3222,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16Array", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4464,19 +3255,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -4497,19 +3275,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4531,19 +3296,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4577,19 +3329,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32Array", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
@@ -4610,19 +3349,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32Array", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4644,19 +3370,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32Array", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4690,19 +3403,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
@@ -4723,19 +3423,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4757,19 +3444,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4803,19 +3477,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64Array", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
 
@@ -4836,19 +3497,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64Array", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4870,19 +3518,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64Array", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4916,19 +3551,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -4949,19 +3571,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4983,19 +3592,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5029,19 +3625,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPointArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 1);
 
@@ -5062,19 +3645,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPointArray", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5096,19 +3666,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPointArray", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5142,19 +3699,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
@@ -5175,19 +3719,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5209,19 +3740,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5255,19 +3773,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRectArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Rect, false>>(args, 1);
 
@@ -5288,19 +3793,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRectArray", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Rect, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5322,19 +3814,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRectArray", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Rect, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5368,19 +3847,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -5401,19 +3867,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5435,19 +3888,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5481,19 +3921,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingleArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
@@ -5514,19 +3941,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingleArray", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5548,19 +3962,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingleArray", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5594,19 +3995,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
@@ -5627,19 +4015,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5661,19 +4036,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5707,19 +4069,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSizeArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Size, false>>(args, 1);
 
@@ -5740,19 +4089,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSizeArray", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Size, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5774,19 +4110,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSizeArray", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Size, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5820,19 +4143,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5853,19 +4163,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5887,19 +4184,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5933,19 +4217,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddStringArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
 
@@ -5966,19 +4237,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddStringArray", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6000,19 +4258,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddStringArray", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6046,19 +4291,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -6079,19 +4311,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6113,19 +4332,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6159,19 +4365,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpanArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(args, 1);
 
@@ -6192,19 +4385,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpanArray", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6226,19 +4406,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpanArray", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6272,19 +4439,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -6305,19 +4459,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6339,19 +4480,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6385,19 +4513,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16Array", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
 
@@ -6418,19 +4533,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16Array", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6452,19 +4554,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16Array", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6498,19 +4587,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -6531,19 +4607,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6565,19 +4628,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6611,19 +4661,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32Array", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
 
@@ -6644,19 +4681,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32Array", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6678,19 +4702,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32Array", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6724,19 +4735,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint64_t>(args, 1);
 
@@ -6757,19 +4755,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint64_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6791,19 +4776,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint64_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6837,19 +4809,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64Array", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
 
@@ -6870,19 +4829,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64Array", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6904,19 +4850,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64Array", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -6950,19 +4883,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
 
@@ -6983,19 +4903,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -7017,19 +4924,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -7063,19 +4957,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8Array", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -7096,19 +4977,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8Array", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -7130,19 +4998,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8Array", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -7176,19 +5031,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"BeginStruct", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -7208,19 +5050,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"BeginStruct", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -7252,19 +5081,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -7293,19 +5109,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"EndStruct", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.EndStruct();
@@ -7470,19 +5273,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Task");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7506,19 +5296,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Task");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int16_t>(arg);
 
             {
@@ -7539,19 +5316,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Tags");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7575,19 +5339,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Tags");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int32_t>(arg);
 
             {
@@ -7608,19 +5359,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"RelatedActivityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7644,19 +5382,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"RelatedActivityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             {
@@ -7677,19 +5402,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Opcode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7713,19 +5425,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Opcode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOpcode>(arg);
 
             {
@@ -7746,19 +5445,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Keywords");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7782,19 +5468,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Keywords");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int64_t>(arg);
 
             {
@@ -7815,19 +5488,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"ActivityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7851,19 +5511,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"ActivityId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             {
@@ -7981,19 +5628,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"AddLoggingChannel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 {
@@ -8013,19 +5647,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"AddLoggingChannel", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -8057,22 +5678,9 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingSession", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -8098,19 +5706,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"RemoveLoggingChannel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 {
@@ -8141,19 +5736,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"SaveToFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -8180,19 +5762,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8241,7 +5810,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.Diagnostics.LoggingSession", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -8329,19 +5898,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings", L"GetErrorOptions", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8369,19 +5925,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings", L"SetErrorOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ErrorOptions>(args, 0);
 
                 {
@@ -8473,19 +6016,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8503,19 +6033,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs", L"TraceLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8604,19 +6121,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IErrorReportingSettings", L"GetErrorOptions", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8644,19 +6148,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IErrorReportingSettings", L"SetErrorOptions", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ErrorOptions>(args, 0);
 
                 {
@@ -8880,19 +6371,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"AddLoggingChannel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 {
@@ -8912,19 +6390,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"AddLoggingChannel", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -8956,22 +6421,9 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -8997,19 +6449,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"CloseAndSaveToFileAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9037,19 +6476,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"RemoveLoggingChannel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 {
@@ -9076,19 +6502,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9106,19 +6519,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"LogFileGenerated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession, winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -9138,19 +6538,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"LogFileGenerated");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9178,7 +6565,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -9586,22 +6973,9 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -9627,19 +7001,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogMessage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -9659,19 +7020,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogMessage", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -9703,19 +7051,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogValuePair", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -9736,19 +7071,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogValuePair", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -9777,19 +7099,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9807,19 +7116,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"Level");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9837,19 +7133,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9867,19 +7150,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LoggingEnabled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::ILoggingChannel, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -9899,19 +7169,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LoggingEnabled");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9939,7 +7196,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -10432,19 +7689,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"AddLoggingChannel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 {
@@ -10464,19 +7708,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"AddLoggingChannel", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -10508,22 +7739,9 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -10549,19 +7767,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"RemoveLoggingChannel", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 {
@@ -10592,19 +7797,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"SaveToFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -10631,19 +7823,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10668,7 +7847,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -11030,19 +8209,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"IsEnabled", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11059,19 +8225,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"IsEnabled", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
 
                 return py::convert([&]()
@@ -11090,19 +8243,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"IsEnabled", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
@@ -11133,19 +8273,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -11165,19 +8292,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
@@ -11198,19 +8312,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -11232,19 +8333,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -11278,19 +8366,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -11309,19 +8384,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
@@ -11341,19 +8403,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -11374,19 +8423,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);

@@ -51,19 +51,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherExitDeferral", L"Complete", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Complete();
@@ -156,19 +143,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"CreateTimer", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -196,22 +170,9 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"EnqueueEventLoopExit", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.EnqueueEventLoopExit();
+                    py::require<winrt::Microsoft::UI::Dispatching::IDispatcherQueue3>(self->obj, py::member_kind::method, "Microsoft.UI.Dispatching.DispatcherQueue", "EnqueueEventLoopExit", "Microsoft.UI.Dispatching.IDispatcherQueue3", 0).EnqueueEventLoopExit();
                 }
 
                 Py_RETURN_NONE;
@@ -237,22 +198,9 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"EnsureSystemDispatcherQueue", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.EnsureSystemDispatcherQueue();
+                    py::require<winrt::Microsoft::UI::Dispatching::IDispatcherQueue3>(self->obj, py::member_kind::method, "Microsoft.UI.Dispatching.DispatcherQueue", "EnsureSystemDispatcherQueue", "Microsoft.UI.Dispatching.IDispatcherQueue3", 0).EnsureSystemDispatcherQueue();
                 }
 
                 Py_RETURN_NONE;
@@ -318,22 +266,9 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"RunEventLoop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.RunEventLoop();
+                    py::require<winrt::Microsoft::UI::Dispatching::IDispatcherQueue3>(self->obj, py::member_kind::method, "Microsoft.UI.Dispatching.DispatcherQueue", "RunEventLoop", "Microsoft.UI.Dispatching.IDispatcherQueue3", 0).RunEventLoop();
                 }
 
                 Py_RETURN_NONE;
@@ -348,25 +283,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"RunEventLoop", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherRunOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherExitDeferral>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.RunEventLoop(param0, param1);
+                    py::require<winrt::Microsoft::UI::Dispatching::IDispatcherQueue3>(self->obj, py::member_kind::method, "Microsoft.UI.Dispatching.DispatcherQueue", "RunEventLoop", "Microsoft.UI.Dispatching.IDispatcherQueue3", 2).RunEventLoop(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -392,19 +314,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"TryEnqueue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueueHandler>(args, 0);
 
                 return py::convert([&]()
@@ -423,19 +332,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"TryEnqueue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueuePriority>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueueHandler>(args, 1);
 
@@ -462,23 +358,10 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"HasThreadAccess");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.HasThreadAccess();
+                return py::require<winrt::Microsoft::UI::Dispatching::IDispatcherQueue2>(self->obj, py::member_kind::property, "Microsoft.UI.Dispatching.DispatcherQueue", "HasThreadAccess", "Microsoft.UI.Dispatching.IDispatcherQueue2").HasThreadAccess();
             }());
         }
         catch (...)
@@ -492,19 +375,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -524,19 +394,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -557,19 +414,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs>>(arg);
 
             return py::convert([&]()
@@ -589,19 +433,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"ShutdownStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -622,25 +453,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FrameworkShutdownCompleted(param0);
+                return py::require<winrt::Microsoft::UI::Dispatching::IDispatcherQueue3>(self->obj, py::member_kind::event, "Microsoft.UI.Dispatching.DispatcherQueue", "FrameworkShutdownCompleted", "Microsoft.UI.Dispatching.IDispatcherQueue3").FrameworkShutdownCompleted(param0);
             }());
         }
         catch (...)
@@ -654,24 +472,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.FrameworkShutdownCompleted(param0);
+                py::require<winrt::Microsoft::UI::Dispatching::IDispatcherQueue3>(self->obj, py::member_kind::event, "Microsoft.UI.Dispatching.DispatcherQueue", "FrameworkShutdownCompleted", "Microsoft.UI.Dispatching.IDispatcherQueue3").FrameworkShutdownCompleted(param0);
             }
 
             Py_RETURN_NONE;
@@ -687,25 +492,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueue, winrt::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.FrameworkShutdownStarting(param0);
+                return py::require<winrt::Microsoft::UI::Dispatching::IDispatcherQueue3>(self->obj, py::member_kind::event, "Microsoft.UI.Dispatching.DispatcherQueue", "FrameworkShutdownStarting", "Microsoft.UI.Dispatching.IDispatcherQueue3").FrameworkShutdownStarting(param0);
             }());
         }
         catch (...)
@@ -719,24 +511,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueue", L"FrameworkShutdownStarting");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.FrameworkShutdownStarting(param0);
+                py::require<winrt::Microsoft::UI::Dispatching::IDispatcherQueue3>(self->obj, py::member_kind::event, "Microsoft.UI.Dispatching.DispatcherQueue", "FrameworkShutdownStarting", "Microsoft.UI.Dispatching.IDispatcherQueue3").FrameworkShutdownStarting(param0);
             }
 
             Py_RETURN_NONE;
@@ -935,22 +714,9 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"ShutdownQueue", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.ShutdownQueue();
+                    py::require<winrt::Microsoft::UI::Dispatching::IDispatcherQueueController2>(self->obj, py::member_kind::method, "Microsoft.UI.Dispatching.DispatcherQueueController", "ShutdownQueue", "Microsoft.UI.Dispatching.IDispatcherQueueController2", 0).ShutdownQueue();
                 }
 
                 Py_RETURN_NONE;
@@ -976,19 +742,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"ShutdownQueueAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1012,19 +765,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueController", L"DispatcherQueue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1135,19 +875,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1239,19 +966,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -1280,19 +994,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -1317,19 +1018,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"IsRepeating");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1353,19 +1041,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"IsRepeating");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1386,19 +1061,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Interval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1422,19 +1084,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Interval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
@@ -1455,19 +1104,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"IsRunning");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1485,19 +1121,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Tick");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Dispatching::DispatcherQueueTimer, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert([&]()
@@ -1517,19 +1140,6 @@ namespace py::cpp::Microsoft::UI::Dispatching
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Dispatching.DispatcherQueueTimer", L"Tick");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {

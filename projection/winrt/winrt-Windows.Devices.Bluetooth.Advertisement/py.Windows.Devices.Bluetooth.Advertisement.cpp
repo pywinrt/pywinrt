@@ -51,19 +51,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement", L"GetManufacturerDataByCompanyId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
                 return py::convert([&]()
@@ -93,19 +80,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement", L"GetSectionsByType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint8_t>(args, 0);
 
                 return py::convert([&]()
@@ -131,19 +105,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement", L"LocalName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -167,19 +128,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement", L"LocalName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
@@ -200,19 +148,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement", L"Flags");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -236,19 +171,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement", L"Flags");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags>>(arg);
 
             {
@@ -269,19 +191,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement", L"DataSections");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -299,19 +208,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement", L"ManufacturerData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -329,19 +225,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement", L"ServiceUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -468,19 +351,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern", L"Offset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -504,19 +374,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern", L"Offset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<int16_t>(arg);
 
             {
@@ -537,19 +394,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern", L"DataType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -573,19 +417,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern", L"DataType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -606,19 +437,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -642,19 +460,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -779,19 +584,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection", L"DataType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -815,19 +607,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection", L"DataType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -848,19 +627,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -884,19 +650,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -1735,19 +1488,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter", L"Advertisement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1771,19 +1511,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter", L"Advertisement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement>(arg);
 
             {
@@ -1804,19 +1531,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter", L"BytePatterns");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1940,19 +1654,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -1981,19 +1682,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -2018,19 +1706,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"Advertisement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2048,19 +1723,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2078,23 +1740,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"UseExtendedAdvertisement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseExtendedAdvertisement();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "UseExtendedAdvertisement", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2").UseExtendedAdvertisement();
             }());
         }
         catch (...)
@@ -2114,24 +1763,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"UseExtendedAdvertisement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseExtendedAdvertisement(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "UseExtendedAdvertisement", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2").UseExtendedAdvertisement(param0);
             }
 
             return 0;
@@ -2147,23 +1783,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"PreferredTransmitPowerLevelInDBm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PreferredTransmitPowerLevelInDBm();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "PreferredTransmitPowerLevelInDBm", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2").PreferredTransmitPowerLevelInDBm();
             }());
         }
         catch (...)
@@ -2183,24 +1806,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"PreferredTransmitPowerLevelInDBm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int16_t>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PreferredTransmitPowerLevelInDBm(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "PreferredTransmitPowerLevelInDBm", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2").PreferredTransmitPowerLevelInDBm(param0);
             }
 
             return 0;
@@ -2216,23 +1826,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"IsAnonymous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsAnonymous();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "IsAnonymous", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2").IsAnonymous();
             }());
         }
         catch (...)
@@ -2252,24 +1849,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"IsAnonymous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IsAnonymous(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "IsAnonymous", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2").IsAnonymous(param0);
             }
 
             return 0;
@@ -2285,23 +1869,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"IncludeTransmitPowerLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IncludeTransmitPowerLevel();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "IncludeTransmitPowerLevel", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2").IncludeTransmitPowerLevel();
             }());
         }
         catch (...)
@@ -2321,24 +1892,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"IncludeTransmitPowerLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.IncludeTransmitPowerLevel(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "IncludeTransmitPowerLevel", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2").IncludeTransmitPowerLevel(param0);
             }
 
             return 0;
@@ -2354,23 +1912,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"SecondaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SecondaryPhy();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "SecondaryPhy", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3").SecondaryPhy();
             }());
         }
         catch (...)
@@ -2390,24 +1935,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"SecondaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPhyType>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SecondaryPhy(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "SecondaryPhy", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3").SecondaryPhy(param0);
             }
 
             return 0;
@@ -2423,23 +1955,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"PrimaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PrimaryPhy();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "PrimaryPhy", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3").PrimaryPhy();
             }());
         }
         catch (...)
@@ -2459,24 +1978,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"PrimaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPhyType>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.PrimaryPhy(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", "PrimaryPhy", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3").PrimaryPhy(param0);
             }
 
             return 0;
@@ -2492,19 +1998,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"StatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher, winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -2524,19 +2017,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher", L"StatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -2632,19 +2112,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2662,19 +2129,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2692,23 +2146,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs", L"SelectedTransmitPowerLevelInDBm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SelectedTransmitPowerLevelInDBm();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisherStatusChangedEventArgs2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs", "SelectedTransmitPowerLevelInDBm", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs2").SelectedTransmitPowerLevelInDBm();
             }());
         }
         catch (...)
@@ -2788,19 +2229,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"Advertisement");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2818,19 +2246,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"AdvertisementType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2848,19 +2263,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"BluetoothAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2878,19 +2280,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"RawSignalStrengthInDBm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2908,19 +2297,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"Timestamp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2938,23 +2314,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"BluetoothAddressType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BluetoothAddressType();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", "BluetoothAddressType", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2").BluetoothAddressType();
             }());
         }
         catch (...)
@@ -2968,23 +2331,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"IsAnonymous");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsAnonymous();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", "IsAnonymous", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2").IsAnonymous();
             }());
         }
         catch (...)
@@ -2998,23 +2348,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"IsConnectable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsConnectable();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", "IsConnectable", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2").IsConnectable();
             }());
         }
         catch (...)
@@ -3028,23 +2365,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"IsDirected");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsDirected();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", "IsDirected", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2").IsDirected();
             }());
         }
         catch (...)
@@ -3058,23 +2382,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"IsScanResponse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsScanResponse();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", "IsScanResponse", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2").IsScanResponse();
             }());
         }
         catch (...)
@@ -3088,23 +2399,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"IsScannable");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsScannable();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", "IsScannable", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2").IsScannable();
             }());
         }
         catch (...)
@@ -3118,23 +2416,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"TransmitPowerLevelInDBm");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.TransmitPowerLevelInDBm();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", "TransmitPowerLevelInDBm", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2").TransmitPowerLevelInDBm();
             }());
         }
         catch (...)
@@ -3148,23 +2433,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"PrimaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.PrimaryPhy();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", "PrimaryPhy", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs3").PrimaryPhy();
             }());
         }
         catch (...)
@@ -3178,23 +2450,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", L"SecondaryPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SecondaryPhy();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementReceivedEventArgs3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs", "SecondaryPhy", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs3").SecondaryPhy();
             }());
         }
         catch (...)
@@ -3365,19 +2624,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters", L"ScanInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3395,19 +2641,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters", L"ScanWindow");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3554,19 +2787,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"Start", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Start();
@@ -3595,19 +2815,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"Stop", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Stop();
@@ -3632,19 +2839,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"SignalStrengthFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3668,19 +2862,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"SignalStrengthFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter>(arg);
 
             {
@@ -3701,19 +2882,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"ScanningMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3737,19 +2905,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"ScanningMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEScanningMode>(arg);
 
             {
@@ -3770,19 +2925,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"AdvertisementFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3806,19 +2948,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"AdvertisementFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter>(arg);
 
             {
@@ -3839,19 +2968,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"MaxOutOfRangeTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3869,19 +2985,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"MaxSamplingInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3899,19 +3002,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"MinOutOfRangeTimeout");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3929,19 +3019,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"MinSamplingInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3959,19 +3036,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3989,23 +3053,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"AllowExtendedAdvertisements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.AllowExtendedAdvertisements();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", "AllowExtendedAdvertisements", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher2").AllowExtendedAdvertisements();
             }());
         }
         catch (...)
@@ -4025,24 +3076,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"AllowExtendedAdvertisements");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.AllowExtendedAdvertisements(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher2>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", "AllowExtendedAdvertisements", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher2").AllowExtendedAdvertisements(param0);
             }
 
             return 0;
@@ -4058,23 +3096,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"UseUncoded1MPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseUncoded1MPhy();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", "UseUncoded1MPhy", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3").UseUncoded1MPhy();
             }());
         }
         catch (...)
@@ -4094,24 +3119,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"UseUncoded1MPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseUncoded1MPhy(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", "UseUncoded1MPhy", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3").UseUncoded1MPhy(param0);
             }
 
             return 0;
@@ -4127,23 +3139,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"UseHardwareFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseHardwareFilter();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", "UseHardwareFilter", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3").UseHardwareFilter();
             }());
         }
         catch (...)
@@ -4163,24 +3162,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"UseHardwareFilter");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseHardwareFilter(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", "UseHardwareFilter", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3").UseHardwareFilter(param0);
             }
 
             return 0;
@@ -4196,23 +3182,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"UseCodedPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.UseCodedPhy();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", "UseCodedPhy", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3").UseCodedPhy();
             }());
         }
         catch (...)
@@ -4232,24 +3205,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"UseCodedPhy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.UseCodedPhy(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", "UseCodedPhy", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3").UseCodedPhy(param0);
             }
 
             return 0;
@@ -4265,23 +3225,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"ScanParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ScanParameters();
+                return py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", "ScanParameters", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3").ScanParameters();
             }());
         }
         catch (...)
@@ -4301,24 +3248,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"ScanParameters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementScanParameters>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ScanParameters(param0);
+                py::require<winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher3>(self->obj, py::member_kind::property, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", "ScanParameters", "Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3").ScanParameters(param0);
             }
 
             return 0;
@@ -4334,19 +3268,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"Received");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher, winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4366,19 +3287,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"Received");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4399,19 +3307,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"Stopped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher, winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4431,19 +3326,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher", L"Stopped");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4546,19 +3428,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs", L"Error");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4678,19 +3547,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4714,19 +3570,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             {
@@ -4747,19 +3590,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData", L"CompanyId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4783,19 +3613,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData", L"CompanyId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint16_t>(arg);
 
             {

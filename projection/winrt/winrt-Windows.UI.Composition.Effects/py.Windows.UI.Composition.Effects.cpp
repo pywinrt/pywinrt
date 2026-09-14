@@ -47,23 +47,10 @@ namespace py::cpp::Windows::UI::Composition::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Name();
+                return py::require<winrt::Windows::Graphics::Effects::IGraphicsEffect>(self->obj, py::member_kind::property, "Windows.UI.Composition.Effects.SceneLightingEffect", "Name", "Windows.Graphics.Effects.IGraphicsEffect").Name();
             }());
         }
         catch (...)
@@ -83,24 +70,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"Name");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Name(param0);
+                py::require<winrt::Windows::Graphics::Effects::IGraphicsEffect>(self->obj, py::member_kind::property, "Windows.UI.Composition.Effects.SceneLightingEffect", "Name", "Windows.Graphics.Effects.IGraphicsEffect").Name(param0);
             }
 
             return 0;
@@ -116,19 +90,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularShine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -152,19 +113,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularShine");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -185,19 +133,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularAmount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -221,19 +156,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularAmount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -254,19 +176,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"NormalMapSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -290,19 +199,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"NormalMapSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>(arg);
 
             {
@@ -323,19 +219,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"DiffuseAmount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -359,19 +242,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"DiffuseAmount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -392,19 +262,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"AmbientAmount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -428,19 +285,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"AmbientAmount");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<float>(arg);
 
             {
@@ -461,23 +305,10 @@ namespace py::cpp::Windows::UI::Composition::Effects
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"ReflectanceModel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ReflectanceModel();
+                return py::require<winrt::Windows::UI::Composition::Effects::ISceneLightingEffect2>(self->obj, py::member_kind::property, "Windows.UI.Composition.Effects.SceneLightingEffect", "ReflectanceModel", "Windows.UI.Composition.Effects.ISceneLightingEffect2").ReflectanceModel();
             }());
         }
         catch (...)
@@ -497,24 +328,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"ReflectanceModel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ReflectanceModel(param0);
+                py::require<winrt::Windows::UI::Composition::Effects::ISceneLightingEffect2>(self->obj, py::member_kind::property, "Windows.UI.Composition.Effects.SceneLightingEffect", "ReflectanceModel", "Windows.UI.Composition.Effects.ISceneLightingEffect2").ReflectanceModel(param0);
             }
 
             return 0;

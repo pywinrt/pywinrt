@@ -51,19 +51,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"Format", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
 
                 return py::convert([&]()
@@ -82,19 +69,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"Format", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat>(args, 1);
 
@@ -125,19 +99,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"FormatPartialString", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -167,19 +128,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"FormatString", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -209,19 +157,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"FormatStringWithLeftToRightMarkers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -544,19 +479,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"CheckNumberMatch", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
 
                 return py::convert([&]()
@@ -586,19 +508,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetGeographicRegionCode", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -626,19 +535,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetLengthOfGeographicalAreaCode", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -666,19 +562,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetLengthOfNationalDestinationCode", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -706,19 +589,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetNationalSignificantNumber", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -746,19 +616,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"PredictNumberKind", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -786,23 +643,10 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"ToString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ToString();
+                    return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", "ToString", "Windows.Foundation.IStringable", 0).ToString();
                 }());
             }
             catch (...)
@@ -924,19 +768,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"CountryCode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -954,19 +785,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"PhoneNumber");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1011,7 +829,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.ToString();
+                return py::require<winrt::Windows::Foundation::IStringable>(self->obj, py::member_kind::method, "Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", "ToString", "Windows.Foundation.IStringable", 0).ToString();
             }());
         }
         catch (...)

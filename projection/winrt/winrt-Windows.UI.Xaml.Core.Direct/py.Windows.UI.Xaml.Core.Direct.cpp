@@ -29,19 +29,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"AddEventHandler", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -63,19 +50,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"AddEventHandler", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -109,19 +83,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"AddToCollection", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 1);
 
@@ -153,19 +114,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"ClearCollection", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
 
                 {
@@ -196,19 +144,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"ClearProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -240,19 +175,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"CreateInstance", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex>(args, 0);
 
                 return py::convert([&]()
@@ -282,19 +204,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetBooleanProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -325,19 +234,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetCollectionCount", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
 
                 return py::convert([&]()
@@ -367,19 +263,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetColorProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -410,19 +293,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetCornerRadiusProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -453,19 +323,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetDateTimeProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -536,19 +393,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetDoubleProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -579,19 +423,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetDurationProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -622,19 +453,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetEnumProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -665,19 +483,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetGridLengthProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -708,19 +513,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetInt32Property", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -751,19 +543,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetMatrix3DProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -794,19 +573,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetMatrixProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -837,19 +603,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetObject", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
 
                 return py::convert([&]()
@@ -879,19 +632,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetObjectProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -922,19 +662,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetPointProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -965,19 +692,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetRectProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -1008,19 +722,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetSizeProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -1051,19 +752,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetStringProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -1094,19 +782,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetThicknessProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -1137,19 +812,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetTimeSpanProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -1180,19 +842,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetXamlDirectObject", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert([&]()
@@ -1222,19 +871,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetXamlDirectObjectFromCollectionAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1265,19 +901,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"GetXamlDirectObjectProperty", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
 
@@ -1308,19 +931,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"InsertIntoCollectionAt", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 2);
@@ -1353,19 +963,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"RemoveEventHandler", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -1398,19 +995,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"RemoveFromCollection", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 1);
 
@@ -1441,19 +1025,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"RemoveFromCollectionAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1485,19 +1056,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetBooleanProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -1530,19 +1088,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetColorProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Color>(args, 2);
@@ -1575,19 +1120,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetCornerRadiusProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::CornerRadius>(args, 2);
@@ -1620,19 +1152,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetDateTimeProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 2);
@@ -1665,19 +1184,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetDoubleProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -1710,19 +1216,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetDurationProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Duration>(args, 2);
@@ -1755,19 +1248,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetEnumProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -1800,19 +1280,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetGridLengthProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::GridLength>(args, 2);
@@ -1845,19 +1312,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetInt32Property", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -1890,19 +1344,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetMatrix3DProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>(args, 2);
@@ -1935,19 +1376,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetMatrixProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Media::Matrix>(args, 2);
@@ -1980,19 +1408,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetObjectProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -2025,19 +1440,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetPointProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Point>(args, 2);
@@ -2070,19 +1472,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetRectProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
@@ -2115,19 +1504,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetSizeProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Size>(args, 2);
@@ -2160,19 +1536,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetStringProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -2205,19 +1568,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetThicknessProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(args, 2);
@@ -2250,19 +1600,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetTimeSpanProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
@@ -2295,19 +1632,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Core.Direct.XamlDirect", L"SetXamlDirectObjectProperty", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>(args, 2);

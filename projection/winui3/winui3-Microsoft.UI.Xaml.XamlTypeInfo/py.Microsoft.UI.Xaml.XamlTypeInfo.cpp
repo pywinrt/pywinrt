@@ -51,19 +51,6 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider", L"GetXamlType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 0);
 
                 return py::convert([&]()
@@ -93,19 +80,6 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider", L"GetXamlType", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -135,19 +109,6 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider", L"GetXmlnsDefinitions", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();

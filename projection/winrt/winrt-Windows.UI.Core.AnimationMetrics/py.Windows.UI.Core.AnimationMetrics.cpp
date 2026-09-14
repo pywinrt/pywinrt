@@ -50,19 +50,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"Animations");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -80,19 +67,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"DelayLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -110,19 +84,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"StaggerDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -140,19 +101,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"StaggerDelayFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -170,19 +118,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.AnimationDescription", L"ZOrder");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -268,19 +203,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"FinalOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -298,19 +220,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"InitialOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -328,23 +237,10 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Control1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Control1();
+                return py::require<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(self->obj, py::member_kind::property, "Windows.UI.Core.AnimationMetrics.OpacityAnimation", "Control1", "Windows.UI.Core.AnimationMetrics.IPropertyAnimation").Control1();
             }());
         }
         catch (...)
@@ -358,23 +254,10 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Control2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Control2();
+                return py::require<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(self->obj, py::member_kind::property, "Windows.UI.Core.AnimationMetrics.OpacityAnimation", "Control2", "Windows.UI.Core.AnimationMetrics.IPropertyAnimation").Control2();
             }());
         }
         catch (...)
@@ -388,23 +271,10 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Delay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Delay();
+                return py::require<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(self->obj, py::member_kind::property, "Windows.UI.Core.AnimationMetrics.OpacityAnimation", "Delay", "Windows.UI.Core.AnimationMetrics.IPropertyAnimation").Delay();
             }());
         }
         catch (...)
@@ -418,23 +288,10 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Duration();
+                return py::require<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(self->obj, py::member_kind::property, "Windows.UI.Core.AnimationMetrics.OpacityAnimation", "Duration", "Windows.UI.Core.AnimationMetrics.IPropertyAnimation").Duration();
             }());
         }
         catch (...)
@@ -448,23 +305,10 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.OpacityAnimation", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(self->obj, py::member_kind::property, "Windows.UI.Core.AnimationMetrics.OpacityAnimation", "Type", "Windows.UI.Core.AnimationMetrics.IPropertyAnimation").Type();
             }());
         }
         catch (...)
@@ -548,19 +392,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Control1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -578,19 +409,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Control2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -608,19 +426,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Delay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -638,19 +443,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -668,19 +460,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.PropertyAnimation", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -766,23 +545,10 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Control1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Control1();
+                return py::require<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(self->obj, py::member_kind::property, "Windows.UI.Core.AnimationMetrics.ScaleAnimation", "Control1", "Windows.UI.Core.AnimationMetrics.IPropertyAnimation").Control1();
             }());
         }
         catch (...)
@@ -796,23 +562,10 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Control2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Control2();
+                return py::require<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(self->obj, py::member_kind::property, "Windows.UI.Core.AnimationMetrics.ScaleAnimation", "Control2", "Windows.UI.Core.AnimationMetrics.IPropertyAnimation").Control2();
             }());
         }
         catch (...)
@@ -826,23 +579,10 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Delay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Delay();
+                return py::require<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(self->obj, py::member_kind::property, "Windows.UI.Core.AnimationMetrics.ScaleAnimation", "Delay", "Windows.UI.Core.AnimationMetrics.IPropertyAnimation").Delay();
             }());
         }
         catch (...)
@@ -856,23 +596,10 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Duration();
+                return py::require<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(self->obj, py::member_kind::property, "Windows.UI.Core.AnimationMetrics.ScaleAnimation", "Duration", "Windows.UI.Core.AnimationMetrics.IPropertyAnimation").Duration();
             }());
         }
         catch (...)
@@ -886,23 +613,10 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Type();
+                return py::require<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>(self->obj, py::member_kind::property, "Windows.UI.Core.AnimationMetrics.ScaleAnimation", "Type", "Windows.UI.Core.AnimationMetrics.IPropertyAnimation").Type();
             }());
         }
         catch (...)
@@ -916,19 +630,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"FinalScaleX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -946,19 +647,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"FinalScaleY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -976,19 +664,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"InitialScaleX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1006,19 +681,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"InitialScaleY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1036,19 +698,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.ScaleAnimation", L"NormalizedOrigin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1139,19 +788,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Control1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1169,19 +805,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Control2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1199,19 +822,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Delay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1229,19 +839,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1259,19 +856,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.TranslationAnimation", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1359,19 +943,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Control1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1389,19 +960,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Control2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1419,19 +977,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Delay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1449,19 +994,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Duration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1479,19 +1011,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation", L"Type");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();

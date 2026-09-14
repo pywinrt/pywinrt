@@ -112,23 +112,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintTransitionDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintTransitionDuration();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintTransitionDuration", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintTransitionDuration();
             }());
         }
         catch (...)
@@ -148,24 +135,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintTransitionDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintTransitionDuration(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintTransitionDuration", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintTransitionDuration(param0);
             }
 
             return 0;
@@ -181,23 +155,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintOpacity();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintOpacity", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintOpacity();
             }());
         }
         catch (...)
@@ -217,24 +178,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintOpacity(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintOpacity", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintOpacity(param0);
             }
 
             return 0;
@@ -250,23 +198,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintColor();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintColor", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintColor();
             }());
         }
         catch (...)
@@ -286,24 +221,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintColor(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintColor", "Microsoft.UI.Xaml.Media.IAcrylicBrush").TintColor(param0);
             }
 
             return 0;
@@ -319,23 +241,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"AlwaysUseFallback");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().AlwaysUseFallback();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "AlwaysUseFallback", "Microsoft.UI.Xaml.Media.IAcrylicBrush").AlwaysUseFallback();
             }());
         }
         catch (...)
@@ -355,24 +264,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"AlwaysUseFallback");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().AlwaysUseFallback(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "AlwaysUseFallback", "Microsoft.UI.Xaml.Media.IAcrylicBrush").AlwaysUseFallback(param0);
             }
 
             return 0;
@@ -388,23 +284,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintLuminosityOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintLuminosityOpacity();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintLuminosityOpacity", "Microsoft.UI.Xaml.Media.IAcrylicBrush2").TintLuminosityOpacity();
             }());
         }
         catch (...)
@@ -424,24 +307,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.AcrylicBrush", L"TintLuminosityOpacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintLuminosityOpacity(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IAcrylicBrush2>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.AcrylicBrush", "TintLuminosityOpacity", "Microsoft.UI.Xaml.Media.IAcrylicBrush2").TintLuminosityOpacity(param0);
             }
 
             return 0;
@@ -723,19 +593,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ArcSegment", L"SweepDirection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -759,19 +616,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ArcSegment", L"SweepDirection");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::SweepDirection>(arg);
 
             {
@@ -792,19 +636,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ArcSegment", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -828,19 +659,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ArcSegment", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             {
@@ -861,19 +679,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ArcSegment", L"RotationAngle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -897,19 +702,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ArcSegment", L"RotationAngle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -930,19 +722,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ArcSegment", L"Point");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -966,19 +745,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ArcSegment", L"Point");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -999,19 +765,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ArcSegment", L"IsLargeArc");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1035,19 +788,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ArcSegment", L"IsLargeArc");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -1334,19 +1074,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.BezierSegment", L"Point3");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1370,19 +1097,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.BezierSegment", L"Point3");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -1403,19 +1117,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.BezierSegment", L"Point2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1439,19 +1140,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.BezierSegment", L"Point2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -1472,19 +1160,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.BezierSegment", L"Point1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1508,19 +1183,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.BezierSegment", L"Point1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -1888,25 +1550,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Brush", L"PopulatePropertyInfo", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().PopulatePropertyInfo(param0, param1);
+                    py::require<winrt::Microsoft::UI::Composition::IAnimationObject>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.Brush", "PopulatePropertyInfo", "Microsoft.UI.Composition.IAnimationObject", 2).PopulatePropertyInfo(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1932,25 +1581,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.Brush", L"PopulatePropertyInfoOverride", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::IBrushOverrides>().PopulatePropertyInfoOverride(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Media::IBrushOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.Brush", "PopulatePropertyInfoOverride", "Microsoft.UI.Xaml.Media.IBrushOverrides", 2).PopulatePropertyInfoOverride(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1972,23 +1608,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().Transform();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.Brush", "Transform", "Microsoft.UI.Xaml.Media.IBrush").Transform();
             }());
         }
         catch (...)
@@ -2008,24 +1631,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().Transform(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.Brush", "Transform", "Microsoft.UI.Xaml.Media.IBrush").Transform(param0);
             }
 
             return 0;
@@ -2041,23 +1651,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().RelativeTransform();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.Brush", "RelativeTransform", "Microsoft.UI.Xaml.Media.IBrush").RelativeTransform();
             }());
         }
         catch (...)
@@ -2077,24 +1674,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().RelativeTransform(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.Brush", "RelativeTransform", "Microsoft.UI.Xaml.Media.IBrush").RelativeTransform(param0);
             }
 
             return 0;
@@ -2110,23 +1694,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().Opacity();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.Brush", "Opacity", "Microsoft.UI.Xaml.Media.IBrush").Opacity();
             }());
         }
         catch (...)
@@ -2146,24 +1717,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().Opacity(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.Brush", "Opacity", "Microsoft.UI.Xaml.Media.IBrush").Opacity(param0);
             }
 
             return 0;
@@ -2387,19 +1945,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(args, 0);
 
                 {
@@ -2430,19 +1975,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -2471,23 +2003,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::Brush>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.BrushCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Brush>", 0).First();
                 }());
             }
             catch (...)
@@ -2511,19 +2030,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -2553,19 +2059,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::Brush, true>>(args, 1);
 
@@ -2596,19 +2089,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2636,19 +2116,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(args, 0);
                 uint32_t param1{};
 
@@ -2692,19 +2159,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(args, 1);
 
@@ -2736,19 +2190,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -2779,19 +2220,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAtEnd();
@@ -2820,19 +2248,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::Brush, false>>(args, 0);
 
                 {
@@ -2863,19 +2278,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(args, 1);
 
@@ -2903,19 +2305,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.BrushCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2960,7 +2349,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::Brush>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.BrushCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Brush>", 0).First();
             }());
         }
         catch (...)
@@ -3298,19 +2687,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"TranslateY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3334,19 +2710,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"TranslateY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -3367,19 +2730,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"TranslateX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3403,19 +2753,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"TranslateX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -3436,19 +2773,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"SkewY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3472,19 +2796,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"SkewY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -3505,19 +2816,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"SkewX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3541,19 +2839,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"SkewX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -3574,19 +2859,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"ScaleY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3610,19 +2882,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"ScaleY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -3643,19 +2902,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"ScaleX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3679,19 +2925,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"ScaleX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -3712,19 +2945,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"Rotation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3748,19 +2968,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"Rotation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -3781,19 +2988,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"CenterY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3817,19 +3011,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"CenterY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -3850,19 +3031,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"CenterX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3886,19 +3054,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.CompositeTransform", L"CenterX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -4814,19 +3969,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
 
                 {
@@ -4857,19 +3999,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -4898,23 +4027,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<double>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.DoubleCollection", "First", "Windows.Foundation.Collections.IIterable<System.Double>", 0).First();
                 }());
             }
             catch (...)
@@ -4938,19 +4054,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -4980,19 +4083,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, true>>(args, 1);
 
@@ -5023,19 +4113,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5063,19 +4140,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 uint32_t param1{};
 
@@ -5119,19 +4183,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -5163,19 +4214,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -5206,19 +4244,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAtEnd();
@@ -5247,19 +4272,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<double, false>>(args, 0);
 
                 {
@@ -5290,19 +4302,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -5330,19 +4329,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.DoubleCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5387,7 +4373,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<double>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.DoubleCollection", "First", "Windows.Foundation.Collections.IIterable<System.Double>", 0).First();
             }());
         }
         catch (...)
@@ -5607,19 +4593,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.EllipseGeometry", L"RadiusY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5643,19 +4616,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.EllipseGeometry", L"RadiusY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -5676,19 +4636,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.EllipseGeometry", L"RadiusX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5712,19 +4659,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.EllipseGeometry", L"RadiusX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -5745,19 +4679,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.EllipseGeometry", L"Center");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5781,19 +4702,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.EllipseGeometry", L"Center");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -6083,23 +4991,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.FontFamily", L"Source");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::FontFamily>().Source();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IFontFamily>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.FontFamily", "Source", "Microsoft.UI.Xaml.Media.IFontFamily").Source();
             }());
         }
         catch (...)
@@ -6337,25 +5232,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"TransformBounds", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>().TransformBounds(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Media::IGeneralTransform>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.GeneralTransform", "TransformBounds", "Microsoft.UI.Xaml.Media.IGeneralTransform", 1).TransformBounds(param0);
                 }());
             }
             catch (...)
@@ -6379,25 +5261,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"TransformBoundsCore", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::IGeneralTransformOverrides>().TransformBoundsCore(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Media::IGeneralTransformOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.GeneralTransform", "TransformBoundsCore", "Microsoft.UI.Xaml.Media.IGeneralTransformOverrides", 1).TransformBoundsCore(param0);
                 }());
             }
             catch (...)
@@ -6421,25 +5290,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"TransformPoint", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>().TransformPoint(param0);
+                    return py::require<winrt::Microsoft::UI::Xaml::Media::IGeneralTransform>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.GeneralTransform", "TransformPoint", "Microsoft.UI.Xaml.Media.IGeneralTransform", 1).TransformPoint(param0);
                 }());
             }
             catch (...)
@@ -6463,26 +5319,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"TryTransform", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 winrt::Windows::Foundation::Point param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>().TryTransform(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Media::IGeneralTransform>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.GeneralTransform", "TryTransform", "Microsoft.UI.Xaml.Media.IGeneralTransform", 1).TryTransform(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -6519,26 +5362,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"TryTransformCore", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 winrt::Windows::Foundation::Point param1{};
 
                 auto return_value = [&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::IGeneralTransformOverrides>().TryTransformCore(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Media::IGeneralTransformOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.GeneralTransform", "TryTransformCore", "Microsoft.UI.Xaml.Media.IGeneralTransformOverrides", 1).TryTransformCore(param0, param1);
                 }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
@@ -6571,23 +5401,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"Inverse");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>().Inverse();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IGeneralTransform>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.GeneralTransform", "Inverse", "Microsoft.UI.Xaml.Media.IGeneralTransform").Inverse();
             }());
         }
         catch (...)
@@ -6691,23 +5508,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Geometry>().Transform();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IGeometry>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.Geometry", "Transform", "Microsoft.UI.Xaml.Media.IGeometry").Transform();
             }());
         }
         catch (...)
@@ -6727,24 +5531,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Geometry>().Transform(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IGeometry>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.Geometry", "Transform", "Microsoft.UI.Xaml.Media.IGeometry").Transform(param0);
             }
 
             return 0;
@@ -6760,23 +5551,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Bounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Geometry>().Bounds();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IGeometry>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.Geometry", "Bounds", "Microsoft.UI.Xaml.Media.IGeometry").Bounds();
             }());
         }
         catch (...)
@@ -6995,19 +5773,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Geometry>(args, 0);
 
                 {
@@ -7038,19 +5803,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -7079,23 +5831,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::Geometry>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.GeometryCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Geometry>", 0).First();
                 }());
             }
             catch (...)
@@ -7119,19 +5858,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -7161,19 +5887,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::Geometry, true>>(args, 1);
 
@@ -7204,19 +5917,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7244,19 +5944,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Geometry>(args, 0);
                 uint32_t param1{};
 
@@ -7300,19 +5987,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Geometry>(args, 1);
 
@@ -7344,19 +6018,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -7387,19 +6048,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAtEnd();
@@ -7428,19 +6076,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::Geometry, false>>(args, 0);
 
                 {
@@ -7471,19 +6106,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Geometry>(args, 1);
 
@@ -7511,19 +6133,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeometryCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7568,7 +6177,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::Geometry>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.GeometryCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Geometry>", 0).First();
             }());
         }
         catch (...)
@@ -7788,19 +6397,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeometryGroup", L"FillRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7824,19 +6420,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeometryGroup", L"FillRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::FillRule>(arg);
 
             {
@@ -7857,19 +6440,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeometryGroup", L"Children");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7893,19 +6463,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeometryGroup", L"Children");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GeometryCollection>(arg);
 
             {
@@ -8108,23 +6665,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"SpreadMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().SpreadMethod();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.GradientBrush", "SpreadMethod", "Microsoft.UI.Xaml.Media.IGradientBrush").SpreadMethod();
             }());
         }
         catch (...)
@@ -8144,24 +6688,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"SpreadMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientSpreadMethod>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().SpreadMethod(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.GradientBrush", "SpreadMethod", "Microsoft.UI.Xaml.Media.IGradientBrush").SpreadMethod(param0);
             }
 
             return 0;
@@ -8177,23 +6708,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"MappingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().MappingMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.GradientBrush", "MappingMode", "Microsoft.UI.Xaml.Media.IGradientBrush").MappingMode();
             }());
         }
         catch (...)
@@ -8213,24 +6731,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"MappingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::BrushMappingMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().MappingMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.GradientBrush", "MappingMode", "Microsoft.UI.Xaml.Media.IGradientBrush").MappingMode(param0);
             }
 
             return 0;
@@ -8246,23 +6751,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"GradientStops");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().GradientStops();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.GradientBrush", "GradientStops", "Microsoft.UI.Xaml.Media.IGradientBrush").GradientStops();
             }());
         }
         catch (...)
@@ -8282,24 +6774,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"GradientStops");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientStopCollection>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().GradientStops(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.GradientBrush", "GradientStops", "Microsoft.UI.Xaml.Media.IGradientBrush").GradientStops(param0);
             }
 
             return 0;
@@ -8315,23 +6794,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"ColorInterpolationMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().ColorInterpolationMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.GradientBrush", "ColorInterpolationMode", "Microsoft.UI.Xaml.Media.IGradientBrush").ColorInterpolationMode();
             }());
         }
         catch (...)
@@ -8351,24 +6817,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"ColorInterpolationMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::ColorInterpolationMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().ColorInterpolationMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.GradientBrush", "ColorInterpolationMode", "Microsoft.UI.Xaml.Media.IGradientBrush").ColorInterpolationMode(param0);
             }
 
             return 0;
@@ -8618,19 +7071,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientStop", L"Offset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8654,19 +7094,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientStop", L"Offset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -8687,19 +7114,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientStop", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8723,19 +7137,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientStop", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -8930,19 +7331,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientStop>(args, 0);
 
                 {
@@ -8973,19 +7361,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -9014,23 +7389,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::GradientStop>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.GradientStopCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.GradientStop>", 0).First();
                 }());
             }
             catch (...)
@@ -9054,19 +7416,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -9096,19 +7445,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::GradientStop, true>>(args, 1);
 
@@ -9139,19 +7475,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -9179,19 +7502,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientStop>(args, 0);
                 uint32_t param1{};
 
@@ -9235,19 +7545,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientStop>(args, 1);
 
@@ -9279,19 +7576,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -9322,19 +7606,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAtEnd();
@@ -9363,19 +7634,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::GradientStop, false>>(args, 0);
 
                 {
@@ -9406,19 +7664,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientStop>(args, 1);
 
@@ -9446,19 +7691,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientStopCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9503,7 +7735,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::GradientStop>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.GradientStopCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.GradientStop>", 0).First();
             }());
         }
         catch (...)
@@ -9723,19 +7955,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ImageBrush", L"ImageSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9759,19 +7978,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ImageBrush", L"ImageSource");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::ImageSource>(arg);
 
             {
@@ -9822,19 +8028,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.ImageBrush", L"ImageFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ExceptionRoutedEventHandler>(arg);
 
             return py::convert([&]()
@@ -9854,19 +8047,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.ImageBrush", L"ImageFailed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -9887,19 +8067,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.ImageBrush", L"ImageOpened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert([&]()
@@ -9919,19 +8086,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.ImageBrush", L"ImageOpened");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -10148,19 +8302,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LineGeometry", L"StartPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10184,19 +8325,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LineGeometry", L"StartPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -10217,19 +8345,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LineGeometry", L"EndPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10253,19 +8368,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LineGeometry", L"EndPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -10456,19 +8558,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LineSegment", L"Point");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10492,19 +8581,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LineSegment", L"Point");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -10679,19 +8755,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LinearGradientBrush", L"StartPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10715,19 +8778,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LinearGradientBrush", L"StartPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -10748,19 +8798,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LinearGradientBrush", L"EndPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10784,19 +8821,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LinearGradientBrush", L"EndPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -10965,19 +8989,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LoadedImageSourceLoadCompletedEventArgs", L"Status");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11063,22 +9074,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.LoadedImageSurface", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.LoadedImageSurface", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -11248,19 +9246,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LoadedImageSurface", L"DecodedPhysicalSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11278,19 +9263,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LoadedImageSurface", L"DecodedSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11308,19 +9280,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.LoadedImageSurface", L"NaturalSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11338,19 +9297,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.LoadedImageSurface", L"LoadCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Media::LoadedImageSurface, winrt::Microsoft::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -11370,19 +9316,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.LoadedImageSurface", L"LoadCompleted");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -11434,7 +9367,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.LoadedImageSurface", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -11542,19 +9475,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Matrix3DProjection", L"ProjectionMatrix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11578,19 +9498,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Matrix3DProjection", L"ProjectionMatrix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>(arg);
 
             {
@@ -11999,19 +9906,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.MatrixTransform", L"Matrix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12035,19 +9929,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.MatrixTransform", L"Matrix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Matrix>(arg);
 
             {
@@ -12188,19 +10069,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.MediaTransportControlsThumbnailRequestedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -12228,19 +10096,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.MediaTransportControlsThumbnailRequestedEventArgs", L"SetThumbnailImage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 {
@@ -12419,23 +10274,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.MicaBackdrop", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::MicaBackdrop>().Kind();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IMicaBackdrop>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.MicaBackdrop", "Kind", "Microsoft.UI.Xaml.Media.IMicaBackdrop").Kind();
             }());
         }
         catch (...)
@@ -12455,24 +10297,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.MicaBackdrop", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaKind>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::MicaBackdrop>().Kind(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IMicaBackdrop>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.MicaBackdrop", "Kind", "Microsoft.UI.Xaml.Media.IMicaBackdrop").Kind(param0);
             }
 
             return 0;
@@ -12626,19 +10455,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathFigure", L"StartPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12662,19 +10478,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathFigure", L"StartPoint");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -12695,19 +10498,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathFigure", L"Segments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12731,19 +10521,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathFigure", L"Segments");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathSegmentCollection>(arg);
 
             {
@@ -12764,19 +10541,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathFigure", L"IsFilled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12800,19 +10564,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathFigure", L"IsFilled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -12833,19 +10584,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathFigure", L"IsClosed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12869,19 +10607,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathFigure", L"IsClosed");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -13140,19 +10865,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathFigure>(args, 0);
 
                 {
@@ -13183,19 +10895,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -13224,23 +10923,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::PathFigure>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.PathFigureCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.PathFigure>", 0).First();
                 }());
             }
             catch (...)
@@ -13264,19 +10950,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -13306,19 +10979,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::PathFigure, true>>(args, 1);
 
@@ -13349,19 +11009,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -13389,19 +11036,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathFigure>(args, 0);
                 uint32_t param1{};
 
@@ -13445,19 +11079,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathFigure>(args, 1);
 
@@ -13489,19 +11110,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -13532,19 +11140,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAtEnd();
@@ -13573,19 +11168,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::PathFigure, false>>(args, 0);
 
                 {
@@ -13616,19 +11198,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathFigure>(args, 1);
 
@@ -13656,19 +11225,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathFigureCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13713,7 +11269,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::PathFigure>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.PathFigureCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.PathFigure>", 0).First();
             }());
         }
         catch (...)
@@ -13933,19 +11489,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathGeometry", L"FillRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13969,19 +11512,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathGeometry", L"FillRule");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::FillRule>(arg);
 
             {
@@ -14002,19 +11532,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathGeometry", L"Figures");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14038,19 +11555,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathGeometry", L"Figures");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathFigureCollection>(arg);
 
             {
@@ -14329,19 +11833,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathSegment>(args, 0);
 
                 {
@@ -14372,19 +11863,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -14413,23 +11891,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::PathSegment>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.PathSegmentCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.PathSegment>", 0).First();
                 }());
             }
             catch (...)
@@ -14453,19 +11918,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -14495,19 +11947,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::PathSegment, true>>(args, 1);
 
@@ -14538,19 +11977,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -14578,19 +12004,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathSegment>(args, 0);
                 uint32_t param1{};
 
@@ -14634,19 +12047,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathSegment>(args, 1);
 
@@ -14678,19 +12078,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -14721,19 +12108,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAtEnd();
@@ -14762,19 +12136,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::PathSegment, false>>(args, 0);
 
                 {
@@ -14805,19 +12166,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathSegment>(args, 1);
 
@@ -14845,19 +12193,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PathSegmentCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -14902,7 +12237,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::PathSegment>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.PathSegmentCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.PathSegment>", 0).First();
             }());
         }
         catch (...)
@@ -15122,19 +12457,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"RotationZ");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15158,19 +12480,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"RotationZ");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15191,19 +12500,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"RotationY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15227,19 +12523,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"RotationY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15260,19 +12543,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"RotationX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15296,19 +12566,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"RotationX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15329,19 +12586,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"LocalOffsetZ");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15365,19 +12609,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"LocalOffsetZ");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15398,19 +12629,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"LocalOffsetY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15434,19 +12652,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"LocalOffsetY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15467,19 +12672,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"LocalOffsetX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15503,19 +12695,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"LocalOffsetX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15536,19 +12715,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"GlobalOffsetZ");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15572,19 +12738,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"GlobalOffsetZ");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15605,19 +12758,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"GlobalOffsetY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15641,19 +12781,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"GlobalOffsetY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15674,19 +12801,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"GlobalOffsetX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15710,19 +12824,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"GlobalOffsetX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15743,19 +12844,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"CenterOfRotationZ");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15779,19 +12867,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"CenterOfRotationZ");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15812,19 +12887,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"CenterOfRotationY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15848,19 +12910,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"CenterOfRotationY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15881,19 +12930,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"CenterOfRotationX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -15917,19 +12953,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"CenterOfRotationX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -15950,19 +12973,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PlaneProjection", L"ProjectionMatrix");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -16506,19 +13516,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 {
@@ -16549,19 +13546,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -16590,23 +13574,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.PointCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Point>", 0).First();
                 }());
             }
             catch (...)
@@ -16630,19 +13601,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -16672,19 +13630,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, true>>(args, 1);
 
@@ -16715,19 +13660,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -16755,19 +13687,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 uint32_t param1{};
 
@@ -16811,19 +13730,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -16855,19 +13761,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -16898,19 +13791,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAtEnd();
@@ -16939,19 +13819,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 0);
 
                 {
@@ -16982,19 +13849,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -17022,19 +13876,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PointCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17079,7 +13920,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.PointCollection", "First", "Windows.Foundation.Collections.IIterable<Windows.Foundation.Point>", 0).First();
             }());
         }
         catch (...)
@@ -17299,19 +14140,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PolyBezierSegment", L"Points");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17335,19 +14163,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PolyBezierSegment", L"Points");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PointCollection>(arg);
 
             {
@@ -17506,19 +14321,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PolyLineSegment", L"Points");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17542,19 +14344,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PolyLineSegment", L"Points");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PointCollection>(arg);
 
             {
@@ -17713,19 +14502,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PolyQuadraticBezierSegment", L"Points");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17749,19 +14525,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.PolyQuadraticBezierSegment", L"Points");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PointCollection>(arg);
 
             {
@@ -18038,19 +14801,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.QuadraticBezierSegment", L"Point2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18074,19 +14824,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.QuadraticBezierSegment", L"Point2");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -18107,19 +14844,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.QuadraticBezierSegment", L"Point1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -18143,19 +14867,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.QuadraticBezierSegment", L"Point1");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
@@ -18411,23 +15122,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"SpreadMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().SpreadMethod();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "SpreadMethod", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").SpreadMethod();
             }());
         }
         catch (...)
@@ -18447,24 +15145,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"SpreadMethod");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientSpreadMethod>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().SpreadMethod(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "SpreadMethod", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").SpreadMethod(param0);
             }
 
             return 0;
@@ -18480,23 +15165,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"RadiusY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusY();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "RadiusY", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").RadiusY();
             }());
         }
         catch (...)
@@ -18516,24 +15188,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"RadiusY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusY(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "RadiusY", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").RadiusY(param0);
             }
 
             return 0;
@@ -18549,23 +15208,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"RadiusX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusX();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "RadiusX", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").RadiusX();
             }());
         }
         catch (...)
@@ -18585,24 +15231,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"RadiusX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusX(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "RadiusX", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").RadiusX(param0);
             }
 
             return 0;
@@ -18618,23 +15251,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"MappingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().MappingMode();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "MappingMode", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").MappingMode();
             }());
         }
         catch (...)
@@ -18654,24 +15274,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"MappingMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::BrushMappingMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().MappingMode(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "MappingMode", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").MappingMode(param0);
             }
 
             return 0;
@@ -18687,23 +15294,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"InterpolationSpace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().InterpolationSpace();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "InterpolationSpace", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").InterpolationSpace();
             }());
         }
         catch (...)
@@ -18723,24 +15317,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"InterpolationSpace");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionColorSpace>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().InterpolationSpace(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "InterpolationSpace", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").InterpolationSpace(param0);
             }
 
             return 0;
@@ -18756,23 +15337,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"GradientOrigin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().GradientOrigin();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "GradientOrigin", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").GradientOrigin();
             }());
         }
         catch (...)
@@ -18792,24 +15360,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"GradientOrigin");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().GradientOrigin(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "GradientOrigin", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").GradientOrigin(param0);
             }
 
             return 0;
@@ -18825,23 +15380,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"Center");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().Center();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "Center", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").Center();
             }());
         }
         catch (...)
@@ -18861,24 +15403,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"Center");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().Center(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "Center", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").Center(param0);
             }
 
             return 0;
@@ -18894,23 +15423,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RadialGradientBrush", L"GradientStops");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().GradientStops();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IRadialGradientBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.RadialGradientBrush", "GradientStops", "Microsoft.UI.Xaml.Media.IRadialGradientBrush").GradientStops();
             }());
         }
         catch (...)
@@ -19255,19 +15771,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RectangleGeometry", L"Rect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19291,19 +15794,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RectangleGeometry", L"Rect");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             {
@@ -19440,19 +15930,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RenderedEventArgs", L"FrameDuration");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19534,19 +16011,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RenderingEventArgs", L"RenderingTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19650,19 +16114,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RotateTransform", L"CenterY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19686,19 +16137,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RotateTransform", L"CenterY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -19719,19 +16157,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RotateTransform", L"CenterX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19755,19 +16180,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RotateTransform", L"CenterX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -19788,19 +16200,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RotateTransform", L"Angle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -19824,19 +16223,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RotateTransform", L"Angle");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -20059,19 +16445,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ScaleTransform", L"ScaleY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20095,19 +16468,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ScaleTransform", L"ScaleY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -20128,19 +16488,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ScaleTransform", L"ScaleX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20164,19 +16511,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ScaleTransform", L"ScaleX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -20197,19 +16531,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ScaleTransform", L"CenterY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20233,19 +16554,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ScaleTransform", L"CenterY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -20266,19 +16574,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ScaleTransform", L"CenterX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20302,19 +16597,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ScaleTransform", L"CenterX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -20653,19 +16935,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.SkewTransform", L"CenterY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20689,19 +16958,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.SkewTransform", L"CenterY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -20722,19 +16978,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.SkewTransform", L"CenterX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20758,19 +17001,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.SkewTransform", L"CenterX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -20791,19 +17021,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.SkewTransform", L"AngleY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20827,19 +17044,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.SkewTransform", L"AngleY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -20860,19 +17064,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.SkewTransform", L"AngleX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -20896,19 +17087,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.SkewTransform", L"AngleX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -21178,19 +17356,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.SolidColorBrush", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -21214,19 +17379,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.SolidColorBrush", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
@@ -21521,26 +17673,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.SystemBackdrop", L"GetDefaultSystemBackdropConfiguration", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::XamlRoot>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>().GetDefaultSystemBackdropConfiguration(param0, param1);
+                    return py::require<winrt::Microsoft::UI::Xaml::Media::ISystemBackdrop>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.SystemBackdrop", "GetDefaultSystemBackdropConfiguration", "Microsoft.UI.Xaml.Media.ISystemBackdrop", 2).GetDefaultSystemBackdropConfiguration(param0, param1);
                 }());
             }
             catch (...)
@@ -21564,25 +17703,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.SystemBackdrop", L"OnDefaultSystemBackdropConfigurationChanged", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::XamlRoot>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::ISystemBackdropOverrides>().OnDefaultSystemBackdropConfigurationChanged(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Media::ISystemBackdropOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.SystemBackdrop", "OnDefaultSystemBackdropConfigurationChanged", "Microsoft.UI.Xaml.Media.ISystemBackdropOverrides", 2).OnDefaultSystemBackdropConfigurationChanged(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -21608,25 +17734,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.SystemBackdrop", L"OnTargetConnected", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::XamlRoot>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::ISystemBackdropOverrides>().OnTargetConnected(param0, param1);
+                    py::require<winrt::Microsoft::UI::Xaml::Media::ISystemBackdropOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.SystemBackdrop", "OnTargetConnected", "Microsoft.UI.Xaml.Media.ISystemBackdropOverrides", 2).OnTargetConnected(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -21652,24 +17765,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.SystemBackdrop", L"OnTargetDisconnected", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::ISystemBackdropOverrides>().OnTargetDisconnected(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Media::ISystemBackdropOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.SystemBackdrop", "OnTargetDisconnected", "Microsoft.UI.Xaml.Media.ISystemBackdropOverrides", 1).OnTargetDisconnected(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -21866,23 +17966,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.ThemeShadow", L"Receivers");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::ThemeShadow>().Receivers();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IThemeShadow>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.ThemeShadow", "Receivers", "Microsoft.UI.Xaml.Media.IThemeShadow").Receivers();
             }());
         }
         catch (...)
@@ -22015,23 +18102,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"Stretch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().Stretch();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::ITileBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.TileBrush", "Stretch", "Microsoft.UI.Xaml.Media.ITileBrush").Stretch();
             }());
         }
         catch (...)
@@ -22051,24 +18125,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"Stretch");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Stretch>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().Stretch(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::ITileBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.TileBrush", "Stretch", "Microsoft.UI.Xaml.Media.ITileBrush").Stretch(param0);
             }
 
             return 0;
@@ -22084,23 +18145,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"AlignmentY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().AlignmentY();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::ITileBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.TileBrush", "AlignmentY", "Microsoft.UI.Xaml.Media.ITileBrush").AlignmentY();
             }());
         }
         catch (...)
@@ -22120,24 +18168,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"AlignmentY");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::AlignmentY>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().AlignmentY(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::ITileBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.TileBrush", "AlignmentY", "Microsoft.UI.Xaml.Media.ITileBrush").AlignmentY(param0);
             }
 
             return 0;
@@ -22153,23 +18188,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"AlignmentX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().AlignmentX();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::ITileBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.TileBrush", "AlignmentX", "Microsoft.UI.Xaml.Media.ITileBrush").AlignmentX();
             }());
         }
         catch (...)
@@ -22189,24 +18211,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"AlignmentX");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::AlignmentX>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().AlignmentX(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::ITileBrush>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.TileBrush", "AlignmentX", "Microsoft.UI.Xaml.Media.ITileBrush").AlignmentX(param0);
             }
 
             return 0;
@@ -22512,19 +18521,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"Append", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(args, 0);
 
                 {
@@ -22555,19 +18551,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"Clear", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Clear();
@@ -22596,23 +18579,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"First", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.First();
+                    return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::Transform>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.TransformCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Transform>", 0).First();
                 }());
             }
             catch (...)
@@ -22636,19 +18606,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"GetAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert([&]()
@@ -22678,19 +18635,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"GetMany", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::Transform, true>>(args, 1);
 
@@ -22721,19 +18665,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"GetView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -22761,19 +18692,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"IndexOf", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(args, 0);
                 uint32_t param1{};
 
@@ -22817,19 +18735,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"InsertAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(args, 1);
 
@@ -22861,19 +18766,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"RemoveAt", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 {
@@ -22904,19 +18796,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"RemoveAtEnd", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.RemoveAtEnd();
@@ -22945,19 +18824,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"ReplaceAll", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Xaml::Media::Transform, false>>(args, 0);
 
                 {
@@ -22988,19 +18854,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"SetAt", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(args, 1);
 
@@ -23028,19 +18881,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TransformCollection", L"Size");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23085,7 +18925,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return py::convert([&]()
             {
                 auto _gil = py::release_gil();
-                return self->obj.First();
+                return py::require<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Xaml::Media::Transform>>(self->obj, py::member_kind::method, "Microsoft.UI.Xaml.Media.TransformCollection", "First", "Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Transform>", 0).First();
             }());
         }
         catch (...)
@@ -23305,19 +19145,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TransformGroup", L"Children");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23341,19 +19168,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TransformGroup", L"Children");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::TransformCollection>(arg);
 
             {
@@ -23374,19 +19188,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TransformGroup", L"Value");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23543,19 +19344,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TranslateTransform", L"Y");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23579,19 +19367,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TranslateTransform", L"Y");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -23612,19 +19387,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TranslateTransform", L"X");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -23648,19 +19410,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TranslateTransform", L"X");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<double>(arg);
 
             {
@@ -24429,22 +20178,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", L"OnConnected", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>().OnConnected();
+                    py::require<winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", "OnConnected", "Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseOverrides", 0).OnConnected();
                 }
 
                 Py_RETURN_NONE;
@@ -24470,22 +20206,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", L"OnDisconnected", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>().OnDisconnected();
+                    py::require<winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", "OnDisconnected", "Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseOverrides", 0).OnDisconnected();
                 }
 
                 Py_RETURN_NONE;
@@ -24507,23 +20230,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", L"FallbackColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase>().FallbackColor();
+                return py::require<winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", "FallbackColor", "Microsoft.UI.Xaml.Media.IXamlCompositionBrushBase").FallbackColor();
             }());
         }
         catch (...)
@@ -24543,24 +20253,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", L"FallbackColor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase>().FallbackColor(param0);
+                py::require<winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBase>(self->obj, py::member_kind::property, "Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", "FallbackColor", "Microsoft.UI.Xaml.Media.IXamlCompositionBrushBase").FallbackColor(param0);
             }
 
             return 0;
@@ -24965,23 +20662,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.XamlLight", L"GetId", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::IXamlLightOverrides>().GetId();
+                    return py::require<winrt::Microsoft::UI::Xaml::Media::IXamlLightOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.XamlLight", "GetId", "Microsoft.UI.Xaml.Media.IXamlLightOverrides", 0).GetId();
                 }());
             }
             catch (...)
@@ -25005,24 +20689,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.XamlLight", L"OnConnected", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::IXamlLightOverrides>().OnConnected(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Media::IXamlLightOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.XamlLight", "OnConnected", "Microsoft.UI.Xaml.Media.IXamlLightOverrides", 1).OnConnected(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -25048,24 +20719,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.XamlLight", L"OnDisconnected", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::Microsoft::UI::Xaml::Media::IXamlLightOverrides>().OnDisconnected(param0);
+                    py::require<winrt::Microsoft::UI::Xaml::Media::IXamlLightOverrides>(py::get_inner_or_self(self->obj), py::member_kind::method, "Microsoft.UI.Xaml.Media.XamlLight", "OnDisconnected", "Microsoft.UI.Xaml.Media.IXamlLightOverrides", 1).OnDisconnected(param0);
                 }
 
                 Py_RETURN_NONE;

@@ -71,22 +71,9 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.ControlChannelTrigger", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -112,19 +99,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"DecreaseNetworkKeepAliveInterval", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.DecreaseNetworkKeepAliveInterval();
@@ -153,19 +127,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"FlushTransport", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.FlushTransport();
@@ -194,19 +155,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"UsingTransport", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 {
@@ -237,19 +185,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"WaitForPushEnabled", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -273,19 +208,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"ServerKeepAliveIntervalInMinutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -309,19 +231,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"ServerKeepAliveIntervalInMinutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -342,19 +251,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"ControlChannelTriggerId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -372,19 +268,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"CurrentKeepAliveIntervalInMinutes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -402,19 +285,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"KeepAliveTrigger");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -432,19 +302,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"PushNotificationTrigger");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -462,19 +319,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"TransportObject");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -492,23 +336,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ControlChannelTrigger", L"IsWakeFromLowPowerSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsWakeFromLowPowerSupported();
+                return py::require<winrt::Windows::Networking::Sockets::IControlChannelTrigger2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.ControlChannelTrigger", "IsWakeFromLowPowerSupported", "Windows.Networking.Sockets.IControlChannelTrigger2").IsWakeFromLowPowerSupported();
             }());
         }
         catch (...)
@@ -553,7 +384,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.ControlChannelTrigger", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -648,19 +479,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"BindEndpointAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -691,19 +509,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"BindServiceNameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -722,26 +527,13 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"BindServiceNameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BindServiceNameAsync(param0, param1);
+                    return py::require<winrt::Windows::Networking::Sockets::IDatagramSocket2>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.DatagramSocket", "BindServiceNameAsync", "Windows.Networking.Sockets.IDatagramSocket2", 2).BindServiceNameAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -765,23 +557,10 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"CancelIOAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CancelIOAsync();
+                    return py::require<winrt::Windows::Networking::Sockets::IDatagramSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.DatagramSocket", "CancelIOAsync", "Windows.Networking.Sockets.IDatagramSocket3", 0).CancelIOAsync();
                 }());
             }
             catch (...)
@@ -805,22 +584,9 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.DatagramSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -846,19 +612,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"ConnectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
 
                 return py::convert([&]()
@@ -877,19 +630,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"ConnectAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -920,24 +660,11 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"EnableTransferOwnership", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableTransferOwnership(param0);
+                    py::require<winrt::Windows::Networking::Sockets::IDatagramSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.DatagramSocket", "EnableTransferOwnership", "Windows.Networking.Sockets.IDatagramSocket3", 1).EnableTransferOwnership(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -952,25 +679,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"EnableTransferOwnership", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityConnectedStandbyAction>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableTransferOwnership(param0, param1);
+                    py::require<winrt::Windows::Networking::Sockets::IDatagramSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.DatagramSocket", "EnableTransferOwnership", "Windows.Networking.Sockets.IDatagramSocket3", 2).EnableTransferOwnership(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1072,19 +786,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"GetOutputStreamAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
 
                 return py::convert([&]()
@@ -1103,19 +804,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"GetOutputStreamAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1146,19 +834,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"JoinMulticastGroup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
 
                 {
@@ -1189,24 +864,11 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"TransferOwnership", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.TransferOwnership(param0);
+                    py::require<winrt::Windows::Networking::Sockets::IDatagramSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.DatagramSocket", "TransferOwnership", "Windows.Networking.Sockets.IDatagramSocket3", 1).TransferOwnership(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1221,25 +883,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"TransferOwnership", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityContext>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.TransferOwnership(param0, param1);
+                    py::require<winrt::Windows::Networking::Sockets::IDatagramSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.DatagramSocket", "TransferOwnership", "Windows.Networking.Sockets.IDatagramSocket3", 2).TransferOwnership(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -1254,26 +903,13 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"TransferOwnership", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityContext>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.TransferOwnership(param0, param1, param2);
+                    py::require<winrt::Windows::Networking::Sockets::IDatagramSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.DatagramSocket", "TransferOwnership", "Windows.Networking.Sockets.IDatagramSocket3", 3).TransferOwnership(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -1295,19 +931,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocket", L"Control");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1325,19 +948,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocket", L"Information");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1355,19 +965,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocket", L"OutputStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1385,19 +982,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.DatagramSocket", L"MessageReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::DatagramSocket, winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -1417,19 +1001,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.DatagramSocket", L"MessageReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -1481,7 +1052,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.DatagramSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -1574,19 +1145,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketControl", L"QualityOfService");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1610,19 +1168,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketControl", L"QualityOfService");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketQualityOfService>(arg);
 
             {
@@ -1643,19 +1188,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketControl", L"OutboundUnicastHopLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1679,19 +1211,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketControl", L"OutboundUnicastHopLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -1712,23 +1231,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketControl", L"InboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.InboundBufferSizeInBytes();
+                return py::require<winrt::Windows::Networking::Sockets::IDatagramSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.DatagramSocketControl", "InboundBufferSizeInBytes", "Windows.Networking.Sockets.IDatagramSocketControl2").InboundBufferSizeInBytes();
             }());
         }
         catch (...)
@@ -1748,24 +1254,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketControl", L"InboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.InboundBufferSizeInBytes(param0);
+                py::require<winrt::Windows::Networking::Sockets::IDatagramSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.DatagramSocketControl", "InboundBufferSizeInBytes", "Windows.Networking.Sockets.IDatagramSocketControl2").InboundBufferSizeInBytes(param0);
             }
 
             return 0;
@@ -1781,23 +1274,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketControl", L"DontFragment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DontFragment();
+                return py::require<winrt::Windows::Networking::Sockets::IDatagramSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.DatagramSocketControl", "DontFragment", "Windows.Networking.Sockets.IDatagramSocketControl2").DontFragment();
             }());
         }
         catch (...)
@@ -1817,24 +1297,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketControl", L"DontFragment");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DontFragment(param0);
+                py::require<winrt::Windows::Networking::Sockets::IDatagramSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.DatagramSocketControl", "DontFragment", "Windows.Networking.Sockets.IDatagramSocketControl2").DontFragment(param0);
             }
 
             return 0;
@@ -1850,23 +1317,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketControl", L"MulticastOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MulticastOnly();
+                return py::require<winrt::Windows::Networking::Sockets::IDatagramSocketControl3>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.DatagramSocketControl", "MulticastOnly", "Windows.Networking.Sockets.IDatagramSocketControl3").MulticastOnly();
             }());
         }
         catch (...)
@@ -1886,24 +1340,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketControl", L"MulticastOnly");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MulticastOnly(param0);
+                py::require<winrt::Windows::Networking::Sockets::IDatagramSocketControl3>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.DatagramSocketControl", "MulticastOnly", "Windows.Networking.Sockets.IDatagramSocketControl3").MulticastOnly(param0);
             }
 
             return 0;
@@ -1987,19 +1428,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketInformation", L"LocalAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2017,19 +1445,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketInformation", L"LocalPort");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2047,19 +1462,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketInformation", L"RemoteAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2077,19 +1479,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketInformation", L"RemotePort");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2178,19 +1567,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs", L"GetDataReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2218,19 +1594,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs", L"GetDataStream", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2254,19 +1617,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs", L"LocalAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2284,19 +1634,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs", L"RemoteAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2314,19 +1651,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs", L"RemotePort");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2438,22 +1762,9 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.MessageWebSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -2468,25 +1779,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"Close", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Close(param0, param1);
+                    py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.MessageWebSocket", "Close", "Windows.Networking.Sockets.IWebSocket", 2).Close(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -2512,25 +1810,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"ConnectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ConnectAsync(param0);
+                    return py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.MessageWebSocket", "ConnectAsync", "Windows.Networking.Sockets.IWebSocket", 1).ConnectAsync(param0);
                 }());
             }
             catch (...)
@@ -2554,25 +1839,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"SendFinalFrameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SendFinalFrameAsync(param0);
+                    return py::require<winrt::Windows::Networking::Sockets::IMessageWebSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.MessageWebSocket", "SendFinalFrameAsync", "Windows.Networking.Sockets.IMessageWebSocket3", 1).SendFinalFrameAsync(param0);
                 }());
             }
             catch (...)
@@ -2596,25 +1868,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"SendNonfinalFrameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.SendNonfinalFrameAsync(param0);
+                    return py::require<winrt::Windows::Networking::Sockets::IMessageWebSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.MessageWebSocket", "SendNonfinalFrameAsync", "Windows.Networking.Sockets.IMessageWebSocket3", 1).SendNonfinalFrameAsync(param0);
                 }());
             }
             catch (...)
@@ -2638,25 +1897,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"SetRequestHeader", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetRequestHeader(param0, param1);
+                    py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.MessageWebSocket", "SetRequestHeader", "Windows.Networking.Sockets.IWebSocket", 2).SetRequestHeader(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -2678,19 +1924,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"Control");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2708,19 +1941,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"Information");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2738,23 +1958,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"OutputStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutputStream();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocket", "OutputStream", "Windows.Networking.Sockets.IWebSocket").OutputStream();
             }());
         }
         catch (...)
@@ -2768,19 +1975,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"MessageReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::MessageWebSocket, winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -2800,19 +1994,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"MessageReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -2833,25 +2014,12 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::IWebSocket, winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Closed(param0);
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::event, "Windows.Networking.Sockets.MessageWebSocket", "Closed", "Windows.Networking.Sockets.IWebSocket").Closed(param0);
             }());
         }
         catch (...)
@@ -2865,24 +2033,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Closed(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::event, "Windows.Networking.Sockets.MessageWebSocket", "Closed", "Windows.Networking.Sockets.IWebSocket").Closed(param0);
             }
 
             Py_RETURN_NONE;
@@ -2898,25 +2053,12 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"ServerCustomValidationRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::MessageWebSocket, winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCustomValidationRequested(param0);
+                return py::require<winrt::Windows::Networking::Sockets::IMessageWebSocket2>(self->obj, py::member_kind::event, "Windows.Networking.Sockets.MessageWebSocket", "ServerCustomValidationRequested", "Windows.Networking.Sockets.IMessageWebSocket2").ServerCustomValidationRequested(param0);
             }());
         }
         catch (...)
@@ -2930,24 +2072,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.MessageWebSocket", L"ServerCustomValidationRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ServerCustomValidationRequested(param0);
+                py::require<winrt::Windows::Networking::Sockets::IMessageWebSocket2>(self->obj, py::member_kind::event, "Windows.Networking.Sockets.MessageWebSocket", "ServerCustomValidationRequested", "Windows.Networking.Sockets.IMessageWebSocket2").ServerCustomValidationRequested(param0);
             }
 
             Py_RETURN_NONE;
@@ -2994,7 +2123,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.MessageWebSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -3065,19 +2194,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"MessageType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3101,19 +2217,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"MessageType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketMessageType>(arg);
 
             {
@@ -3134,19 +2237,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"MaxMessageSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3170,19 +2260,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"MaxMessageSize");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -3203,23 +2280,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"ReceiveMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ReceiveMode();
+                return py::require<winrt::Windows::Networking::Sockets::IMessageWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "ReceiveMode", "Windows.Networking.Sockets.IMessageWebSocketControl2").ReceiveMode();
             }());
         }
         catch (...)
@@ -3239,24 +2303,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"ReceiveMode");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::MessageWebSocketReceiveMode>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ReceiveMode(param0);
+                py::require<winrt::Windows::Networking::Sockets::IMessageWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "ReceiveMode", "Windows.Networking.Sockets.IMessageWebSocketControl2").ReceiveMode(param0);
             }
 
             return 0;
@@ -3272,23 +2323,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"DesiredUnsolicitedPongInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DesiredUnsolicitedPongInterval();
+                return py::require<winrt::Windows::Networking::Sockets::IMessageWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "DesiredUnsolicitedPongInterval", "Windows.Networking.Sockets.IMessageWebSocketControl2").DesiredUnsolicitedPongInterval();
             }());
         }
         catch (...)
@@ -3308,24 +2346,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"DesiredUnsolicitedPongInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DesiredUnsolicitedPongInterval(param0);
+                py::require<winrt::Windows::Networking::Sockets::IMessageWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "DesiredUnsolicitedPongInterval", "Windows.Networking.Sockets.IMessageWebSocketControl2").DesiredUnsolicitedPongInterval(param0);
             }
 
             return 0;
@@ -3341,23 +2366,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"ClientCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ClientCertificate();
+                return py::require<winrt::Windows::Networking::Sockets::IMessageWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "ClientCertificate", "Windows.Networking.Sockets.IMessageWebSocketControl2").ClientCertificate();
             }());
         }
         catch (...)
@@ -3377,24 +2389,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"ClientCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ClientCertificate(param0);
+                py::require<winrt::Windows::Networking::Sockets::IMessageWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "ClientCertificate", "Windows.Networking.Sockets.IMessageWebSocketControl2").ClientCertificate(param0);
             }
 
             return 0;
@@ -3410,23 +2409,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"ActualUnsolicitedPongInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActualUnsolicitedPongInterval();
+                return py::require<winrt::Windows::Networking::Sockets::IMessageWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "ActualUnsolicitedPongInterval", "Windows.Networking.Sockets.IMessageWebSocketControl2").ActualUnsolicitedPongInterval();
             }());
         }
         catch (...)
@@ -3440,23 +2426,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCredential();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "ServerCredential", "Windows.Networking.Sockets.IWebSocketControl").ServerCredential();
             }());
         }
         catch (...)
@@ -3476,24 +2449,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ServerCredential(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "ServerCredential", "Windows.Networking.Sockets.IWebSocketControl").ServerCredential(param0);
             }
 
             return 0;
@@ -3509,23 +2469,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProxyCredential();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "ProxyCredential", "Windows.Networking.Sockets.IWebSocketControl").ProxyCredential();
             }());
         }
         catch (...)
@@ -3545,24 +2492,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ProxyCredential(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "ProxyCredential", "Windows.Networking.Sockets.IWebSocketControl").ProxyCredential(param0);
             }
 
             return 0;
@@ -3578,23 +2512,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutboundBufferSizeInBytes();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "OutboundBufferSizeInBytes", "Windows.Networking.Sockets.IWebSocketControl").OutboundBufferSizeInBytes();
             }());
         }
         catch (...)
@@ -3614,24 +2535,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutboundBufferSizeInBytes(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "OutboundBufferSizeInBytes", "Windows.Networking.Sockets.IWebSocketControl").OutboundBufferSizeInBytes(param0);
             }
 
             return 0;
@@ -3647,23 +2555,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"SupportedProtocols");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedProtocols();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "SupportedProtocols", "Windows.Networking.Sockets.IWebSocketControl").SupportedProtocols();
             }());
         }
         catch (...)
@@ -3677,23 +2572,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketControl", L"IgnorableServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IgnorableServerCertificateErrors();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketControl", "IgnorableServerCertificateErrors", "Windows.Networking.Sockets.IWebSocketControl2").IgnorableServerCertificateErrors();
             }());
         }
         catch (...)
@@ -3781,19 +2663,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketInformation", L"BandwidthStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3811,19 +2680,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketInformation", L"LocalAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3841,19 +2697,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketInformation", L"Protocol");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3871,23 +2714,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketInformation", L"ServerCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCertificate();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketInformation", "ServerCertificate", "Windows.Networking.Sockets.IWebSocketInformation2").ServerCertificate();
             }());
         }
         catch (...)
@@ -3901,23 +2731,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketInformation", L"ServerCertificateErrorSeverity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCertificateErrorSeverity();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketInformation", "ServerCertificateErrorSeverity", "Windows.Networking.Sockets.IWebSocketInformation2").ServerCertificateErrorSeverity();
             }());
         }
         catch (...)
@@ -3931,23 +2748,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketInformation", L"ServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCertificateErrors();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketInformation", "ServerCertificateErrors", "Windows.Networking.Sockets.IWebSocketInformation2").ServerCertificateErrors();
             }());
         }
         catch (...)
@@ -3961,23 +2765,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketInformation", L"ServerIntermediateCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerIntermediateCertificates();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketInformation", "ServerIntermediateCertificates", "Windows.Networking.Sockets.IWebSocketInformation2").ServerIntermediateCertificates();
             }());
         }
         catch (...)
@@ -4065,19 +2856,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs", L"GetDataReader", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4105,19 +2883,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs", L"GetDataStream", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4141,19 +2906,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs", L"MessageType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4171,23 +2923,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs", L"IsMessageComplete");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IsMessageComplete();
+                return py::require<winrt::Windows::Networking::Sockets::IMessageWebSocketMessageReceivedEventArgs2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs", "IsMessageComplete", "Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs2").IsMessageComplete();
             }());
         }
         catch (...)
@@ -4272,22 +3011,9 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.ServerMessageWebSocket", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.ServerMessageWebSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -4302,19 +3028,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.ServerMessageWebSocket", L"Close", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -4342,19 +3055,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerMessageWebSocket", L"Control");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4372,19 +3072,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerMessageWebSocket", L"Information");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4402,19 +3089,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerMessageWebSocket", L"OutputStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4432,19 +3106,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.ServerMessageWebSocket", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::ServerMessageWebSocket, winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4464,19 +3125,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.ServerMessageWebSocket", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4497,19 +3145,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.ServerMessageWebSocket", L"MessageReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::ServerMessageWebSocket, winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -4529,19 +3164,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.ServerMessageWebSocket", L"MessageReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -4593,7 +3215,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.ServerMessageWebSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -4658,19 +3280,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerMessageWebSocketControl", L"MessageType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4694,19 +3303,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerMessageWebSocketControl", L"MessageType");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketMessageType>(arg);
 
             {
@@ -4791,19 +3387,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerMessageWebSocketInformation", L"BandwidthStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4821,19 +3404,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerMessageWebSocketInformation", L"LocalAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4851,19 +3421,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerMessageWebSocketInformation", L"Protocol");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4951,22 +3508,9 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.ServerStreamWebSocket", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.ServerStreamWebSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -4981,19 +3525,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.ServerStreamWebSocket", L"Close", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5021,19 +3552,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerStreamWebSocket", L"Information");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5051,19 +3569,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerStreamWebSocket", L"InputStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5081,19 +3586,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerStreamWebSocket", L"OutputStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5111,19 +3603,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.ServerStreamWebSocket", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::ServerStreamWebSocket, winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -5143,19 +3622,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.ServerStreamWebSocket", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -5207,7 +3673,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.ServerStreamWebSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -5270,19 +3736,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerStreamWebSocketInformation", L"BandwidthStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5300,19 +3753,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerStreamWebSocketInformation", L"LocalAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5330,19 +3770,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.ServerStreamWebSocketInformation", L"Protocol");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5450,19 +3877,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.SocketActivityContext", L"Data");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5544,19 +3958,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.SocketActivityInformation", L"Context");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5574,19 +3975,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.SocketActivityInformation", L"DatagramSocket");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5604,19 +3992,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.SocketActivityInformation", L"Id");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5634,19 +4009,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.SocketActivityInformation", L"SocketKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5664,19 +4026,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.SocketActivityInformation", L"StreamSocket");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5694,19 +4043,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.SocketActivityInformation", L"StreamSocketListener");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5724,19 +4060,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.SocketActivityInformation", L"TaskId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5876,19 +4199,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.SocketActivityTriggerDetails", L"Reason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -5906,19 +4216,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.SocketActivityTriggerDetails", L"SocketInformation");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6119,23 +4416,10 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"CancelIOAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CancelIOAsync();
+                    return py::require<winrt::Windows::Networking::Sockets::IStreamSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocket", "CancelIOAsync", "Windows.Networking.Sockets.IStreamSocket3", 0).CancelIOAsync();
                 }());
             }
             catch (...)
@@ -6159,22 +4443,9 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -6200,19 +4471,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"ConnectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
 
                 return py::convert([&]()
@@ -6231,19 +4489,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"ConnectAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -6263,19 +4508,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"ConnectAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 2);
@@ -6296,19 +4528,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"ConnectAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 2);
@@ -6317,7 +4536,7 @@ namespace py::cpp::Windows::Networking::Sockets
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ConnectAsync(param0, param1, param2, param3);
+                    return py::require<winrt::Windows::Networking::Sockets::IStreamSocket2>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocket", "ConnectAsync", "Windows.Networking.Sockets.IStreamSocket2", 4).ConnectAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -6341,19 +4560,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"ConnectAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 1);
 
@@ -6384,24 +4590,11 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"EnableTransferOwnership", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableTransferOwnership(param0);
+                    py::require<winrt::Windows::Networking::Sockets::IStreamSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocket", "EnableTransferOwnership", "Windows.Networking.Sockets.IStreamSocket3", 1).EnableTransferOwnership(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6416,25 +4609,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"EnableTransferOwnership", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityConnectedStandbyAction>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableTransferOwnership(param0, param1);
+                    py::require<winrt::Windows::Networking::Sockets::IStreamSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocket", "EnableTransferOwnership", "Windows.Networking.Sockets.IStreamSocket3", 2).EnableTransferOwnership(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -6536,24 +4716,11 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"TransferOwnership", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.TransferOwnership(param0);
+                    py::require<winrt::Windows::Networking::Sockets::IStreamSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocket", "TransferOwnership", "Windows.Networking.Sockets.IStreamSocket3", 1).TransferOwnership(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -6568,25 +4735,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"TransferOwnership", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityContext>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.TransferOwnership(param0, param1);
+                    py::require<winrt::Windows::Networking::Sockets::IStreamSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocket", "TransferOwnership", "Windows.Networking.Sockets.IStreamSocket3", 2).TransferOwnership(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -6601,26 +4755,13 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"TransferOwnership", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityContext>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.TransferOwnership(param0, param1, param2);
+                    py::require<winrt::Windows::Networking::Sockets::IStreamSocket3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocket", "TransferOwnership", "Windows.Networking.Sockets.IStreamSocket3", 3).TransferOwnership(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -6646,19 +4787,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"UpgradeToSslAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::HostName>(args, 1);
 
@@ -6685,19 +4813,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocket", L"Control");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6715,19 +4830,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocket", L"Information");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6745,19 +4847,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocket", L"InputStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6775,19 +4864,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocket", L"OutputStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6836,7 +4912,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -6926,19 +5002,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"QualityOfService");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -6962,19 +5025,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"QualityOfService");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketQualityOfService>(arg);
 
             {
@@ -6995,19 +5045,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"OutboundUnicastHopLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7031,19 +5068,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"OutboundUnicastHopLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
@@ -7064,19 +5088,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7100,19 +5111,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -7133,19 +5131,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"NoDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7169,19 +5154,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"NoDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -7202,19 +5174,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"KeepAlive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7238,19 +5197,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"KeepAlive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -7271,23 +5217,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"IgnorableServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IgnorableServerCertificateErrors();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketControl", "IgnorableServerCertificateErrors", "Windows.Networking.Sockets.IStreamSocketControl2").IgnorableServerCertificateErrors();
             }());
         }
         catch (...)
@@ -7301,23 +5234,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"SerializeConnectionAttempts");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SerializeConnectionAttempts();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketControl3>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketControl", "SerializeConnectionAttempts", "Windows.Networking.Sockets.IStreamSocketControl3").SerializeConnectionAttempts();
             }());
         }
         catch (...)
@@ -7337,24 +5257,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"SerializeConnectionAttempts");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.SerializeConnectionAttempts(param0);
+                py::require<winrt::Windows::Networking::Sockets::IStreamSocketControl3>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketControl", "SerializeConnectionAttempts", "Windows.Networking.Sockets.IStreamSocketControl3").SerializeConnectionAttempts(param0);
             }
 
             return 0;
@@ -7370,23 +5277,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"ClientCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ClientCertificate();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketControl3>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketControl", "ClientCertificate", "Windows.Networking.Sockets.IStreamSocketControl3").ClientCertificate();
             }());
         }
         catch (...)
@@ -7406,24 +5300,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"ClientCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ClientCertificate(param0);
+                py::require<winrt::Windows::Networking::Sockets::IStreamSocketControl3>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketControl", "ClientCertificate", "Windows.Networking.Sockets.IStreamSocketControl3").ClientCertificate(param0);
             }
 
             return 0;
@@ -7439,23 +5320,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"MinProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.MinProtectionLevel();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketControl4>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketControl", "MinProtectionLevel", "Windows.Networking.Sockets.IStreamSocketControl4").MinProtectionLevel();
             }());
         }
         catch (...)
@@ -7475,24 +5343,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketControl", L"MinProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.MinProtectionLevel(param0);
+                py::require<winrt::Windows::Networking::Sockets::IStreamSocketControl4>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketControl", "MinProtectionLevel", "Windows.Networking.Sockets.IStreamSocketControl4").MinProtectionLevel(param0);
             }
 
             return 0;
@@ -7580,19 +5435,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"BandwidthStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7610,19 +5452,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"LocalAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7640,19 +5469,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"LocalPort");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7670,19 +5486,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"ProtectionLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7700,19 +5503,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"RemoteAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7730,19 +5520,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"RemoteHostName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7760,19 +5537,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"RemotePort");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7790,19 +5554,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"RemoteServiceName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7820,19 +5571,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"RoundTripTimeStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7850,19 +5588,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"SessionKey");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -7880,23 +5605,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"ServerCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCertificate();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketInformation", "ServerCertificate", "Windows.Networking.Sockets.IStreamSocketInformation2").ServerCertificate();
             }());
         }
         catch (...)
@@ -7910,23 +5622,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"ServerCertificateErrorSeverity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCertificateErrorSeverity();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketInformation", "ServerCertificateErrorSeverity", "Windows.Networking.Sockets.IStreamSocketInformation2").ServerCertificateErrorSeverity();
             }());
         }
         catch (...)
@@ -7940,23 +5639,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"ServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCertificateErrors();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketInformation", "ServerCertificateErrors", "Windows.Networking.Sockets.IStreamSocketInformation2").ServerCertificateErrors();
             }());
         }
         catch (...)
@@ -7970,23 +5656,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketInformation", L"ServerIntermediateCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerIntermediateCertificates();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketInformation", "ServerIntermediateCertificates", "Windows.Networking.Sockets.IStreamSocketInformation2").ServerIntermediateCertificates();
             }());
         }
         catch (...)
@@ -8103,19 +5776,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"BindEndpointAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -8146,19 +5806,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"BindServiceNameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -8177,26 +5824,13 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"BindServiceNameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BindServiceNameAsync(param0, param1);
+                    return py::require<winrt::Windows::Networking::Sockets::IStreamSocketListener2>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocketListener", "BindServiceNameAsync", "Windows.Networking.Sockets.IStreamSocketListener2", 2).BindServiceNameAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -8209,19 +5843,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"BindServiceNameAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 2);
@@ -8229,7 +5850,7 @@ namespace py::cpp::Windows::Networking::Sockets
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.BindServiceNameAsync(param0, param1, param2);
+                    return py::require<winrt::Windows::Networking::Sockets::IStreamSocketListener2>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocketListener", "BindServiceNameAsync", "Windows.Networking.Sockets.IStreamSocketListener2", 3).BindServiceNameAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -8253,23 +5874,10 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"CancelIOAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CancelIOAsync();
+                    return py::require<winrt::Windows::Networking::Sockets::IStreamSocketListener3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocketListener", "CancelIOAsync", "Windows.Networking.Sockets.IStreamSocketListener3", 0).CancelIOAsync();
                 }());
             }
             catch (...)
@@ -8293,22 +5901,9 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocketListener", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -8334,24 +5929,11 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"EnableTransferOwnership", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableTransferOwnership(param0);
+                    py::require<winrt::Windows::Networking::Sockets::IStreamSocketListener3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocketListener", "EnableTransferOwnership", "Windows.Networking.Sockets.IStreamSocketListener3", 1).EnableTransferOwnership(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -8366,25 +5948,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"EnableTransferOwnership", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityConnectedStandbyAction>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.EnableTransferOwnership(param0, param1);
+                    py::require<winrt::Windows::Networking::Sockets::IStreamSocketListener3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocketListener", "EnableTransferOwnership", "Windows.Networking.Sockets.IStreamSocketListener3", 2).EnableTransferOwnership(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -8410,24 +5979,11 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"TransferOwnership", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.TransferOwnership(param0);
+                    py::require<winrt::Windows::Networking::Sockets::IStreamSocketListener3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocketListener", "TransferOwnership", "Windows.Networking.Sockets.IStreamSocketListener3", 1).TransferOwnership(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -8442,25 +5998,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"TransferOwnership", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketActivityContext>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.TransferOwnership(param0, param1);
+                    py::require<winrt::Windows::Networking::Sockets::IStreamSocketListener3>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocketListener", "TransferOwnership", "Windows.Networking.Sockets.IStreamSocketListener3", 2).TransferOwnership(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -8482,19 +6025,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"Control");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8512,19 +6042,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"Information");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8542,19 +6059,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"ConnectionReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::StreamSocketListener, winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -8574,19 +6078,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"ConnectionReceived");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -8638,7 +6129,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamSocketListener", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -8705,19 +6196,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs", L"Socket");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8799,19 +6277,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerControl", L"QualityOfService");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -8835,19 +6300,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerControl", L"QualityOfService");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketQualityOfService>(arg);
 
             {
@@ -8868,23 +6320,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerControl", L"OutboundUnicastHopLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutboundUnicastHopLimit();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketListenerControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketListenerControl", "OutboundUnicastHopLimit", "Windows.Networking.Sockets.IStreamSocketListenerControl2").OutboundUnicastHopLimit();
             }());
         }
         catch (...)
@@ -8904,24 +6343,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerControl", L"OutboundUnicastHopLimit");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint8_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutboundUnicastHopLimit(param0);
+                py::require<winrt::Windows::Networking::Sockets::IStreamSocketListenerControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketListenerControl", "OutboundUnicastHopLimit", "Windows.Networking.Sockets.IStreamSocketListenerControl2").OutboundUnicastHopLimit(param0);
             }
 
             return 0;
@@ -8937,23 +6363,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutboundBufferSizeInBytes();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketListenerControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketListenerControl", "OutboundBufferSizeInBytes", "Windows.Networking.Sockets.IStreamSocketListenerControl2").OutboundBufferSizeInBytes();
             }());
         }
         catch (...)
@@ -8973,24 +6386,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutboundBufferSizeInBytes(param0);
+                py::require<winrt::Windows::Networking::Sockets::IStreamSocketListenerControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketListenerControl", "OutboundBufferSizeInBytes", "Windows.Networking.Sockets.IStreamSocketListenerControl2").OutboundBufferSizeInBytes(param0);
             }
 
             return 0;
@@ -9006,23 +6406,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerControl", L"NoDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.NoDelay();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketListenerControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketListenerControl", "NoDelay", "Windows.Networking.Sockets.IStreamSocketListenerControl2").NoDelay();
             }());
         }
         catch (...)
@@ -9042,24 +6429,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerControl", L"NoDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.NoDelay(param0);
+                py::require<winrt::Windows::Networking::Sockets::IStreamSocketListenerControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketListenerControl", "NoDelay", "Windows.Networking.Sockets.IStreamSocketListenerControl2").NoDelay(param0);
             }
 
             return 0;
@@ -9075,23 +6449,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerControl", L"KeepAlive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.KeepAlive();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamSocketListenerControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketListenerControl", "KeepAlive", "Windows.Networking.Sockets.IStreamSocketListenerControl2").KeepAlive();
             }());
         }
         catch (...)
@@ -9111,24 +6472,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerControl", L"KeepAlive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.KeepAlive(param0);
+                py::require<winrt::Windows::Networking::Sockets::IStreamSocketListenerControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamSocketListenerControl", "KeepAlive", "Windows.Networking.Sockets.IStreamSocketListenerControl2").KeepAlive(param0);
             }
 
             return 0;
@@ -9212,19 +6560,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamSocketListenerInformation", L"LocalPort");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9332,22 +6667,9 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamWebSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -9362,25 +6684,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"Close", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.Close(param0, param1);
+                    py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamWebSocket", "Close", "Windows.Networking.Sockets.IWebSocket", 2).Close(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -9406,25 +6715,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"ConnectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.ConnectAsync(param0);
+                    return py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamWebSocket", "ConnectAsync", "Windows.Networking.Sockets.IWebSocket", 1).ConnectAsync(param0);
                 }());
             }
             catch (...)
@@ -9448,25 +6744,12 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"SetRequestHeader", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 {
                     auto _gil = release_gil();
-                    self->obj.SetRequestHeader(param0, param1);
+                    py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamWebSocket", "SetRequestHeader", "Windows.Networking.Sockets.IWebSocket", 2).SetRequestHeader(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -9488,19 +6771,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"Control");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9518,19 +6788,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"Information");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9548,19 +6805,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"InputStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9578,23 +6822,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"OutputStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutputStream();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocket", "OutputStream", "Windows.Networking.Sockets.IWebSocket").OutputStream();
             }());
         }
         catch (...)
@@ -9608,25 +6839,12 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::IWebSocket, winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Closed(param0);
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::event, "Windows.Networking.Sockets.StreamWebSocket", "Closed", "Windows.Networking.Sockets.IWebSocket").Closed(param0);
             }());
         }
         catch (...)
@@ -9640,24 +6858,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.Closed(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocket>(self->obj, py::member_kind::event, "Windows.Networking.Sockets.StreamWebSocket", "Closed", "Windows.Networking.Sockets.IWebSocket").Closed(param0);
             }
 
             Py_RETURN_NONE;
@@ -9673,25 +6878,12 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"ServerCustomValidationRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::StreamWebSocket, winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>>(arg);
 
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCustomValidationRequested(param0);
+                return py::require<winrt::Windows::Networking::Sockets::IStreamWebSocket2>(self->obj, py::member_kind::event, "Windows.Networking.Sockets.StreamWebSocket", "ServerCustomValidationRequested", "Windows.Networking.Sockets.IStreamWebSocket2").ServerCustomValidationRequested(param0);
             }());
         }
         catch (...)
@@ -9705,24 +6897,11 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.StreamWebSocket", L"ServerCustomValidationRequested");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ServerCustomValidationRequested(param0);
+                py::require<winrt::Windows::Networking::Sockets::IStreamWebSocket2>(self->obj, py::member_kind::event, "Windows.Networking.Sockets.StreamWebSocket", "ServerCustomValidationRequested", "Windows.Networking.Sockets.IStreamWebSocket2").ServerCustomValidationRequested(param0);
             }
 
             Py_RETURN_NONE;
@@ -9769,7 +6948,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Networking.Sockets.StreamWebSocket", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -9837,19 +7016,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"NoDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9873,19 +7039,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"NoDelay");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -9906,23 +7059,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"DesiredUnsolicitedPongInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.DesiredUnsolicitedPongInterval();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "DesiredUnsolicitedPongInterval", "Windows.Networking.Sockets.IStreamWebSocketControl2").DesiredUnsolicitedPongInterval();
             }());
         }
         catch (...)
@@ -9942,24 +7082,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"DesiredUnsolicitedPongInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.DesiredUnsolicitedPongInterval(param0);
+                py::require<winrt::Windows::Networking::Sockets::IStreamWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "DesiredUnsolicitedPongInterval", "Windows.Networking.Sockets.IStreamWebSocketControl2").DesiredUnsolicitedPongInterval(param0);
             }
 
             return 0;
@@ -9975,23 +7102,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"ClientCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ClientCertificate();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "ClientCertificate", "Windows.Networking.Sockets.IStreamWebSocketControl2").ClientCertificate();
             }());
         }
         catch (...)
@@ -10011,24 +7125,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"ClientCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ClientCertificate(param0);
+                py::require<winrt::Windows::Networking::Sockets::IStreamWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "ClientCertificate", "Windows.Networking.Sockets.IStreamWebSocketControl2").ClientCertificate(param0);
             }
 
             return 0;
@@ -10044,23 +7145,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"ActualUnsolicitedPongInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ActualUnsolicitedPongInterval();
+                return py::require<winrt::Windows::Networking::Sockets::IStreamWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "ActualUnsolicitedPongInterval", "Windows.Networking.Sockets.IStreamWebSocketControl2").ActualUnsolicitedPongInterval();
             }());
         }
         catch (...)
@@ -10074,23 +7162,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCredential();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "ServerCredential", "Windows.Networking.Sockets.IWebSocketControl").ServerCredential();
             }());
         }
         catch (...)
@@ -10110,24 +7185,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ServerCredential(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "ServerCredential", "Windows.Networking.Sockets.IWebSocketControl").ServerCredential(param0);
             }
 
             return 0;
@@ -10143,23 +7205,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProxyCredential();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "ProxyCredential", "Windows.Networking.Sockets.IWebSocketControl").ProxyCredential();
             }());
         }
         catch (...)
@@ -10179,24 +7228,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ProxyCredential(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "ProxyCredential", "Windows.Networking.Sockets.IWebSocketControl").ProxyCredential(param0);
             }
 
             return 0;
@@ -10212,23 +7248,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutboundBufferSizeInBytes();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "OutboundBufferSizeInBytes", "Windows.Networking.Sockets.IWebSocketControl").OutboundBufferSizeInBytes();
             }());
         }
         catch (...)
@@ -10248,24 +7271,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutboundBufferSizeInBytes(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "OutboundBufferSizeInBytes", "Windows.Networking.Sockets.IWebSocketControl").OutboundBufferSizeInBytes(param0);
             }
 
             return 0;
@@ -10281,23 +7291,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"SupportedProtocols");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedProtocols();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "SupportedProtocols", "Windows.Networking.Sockets.IWebSocketControl").SupportedProtocols();
             }());
         }
         catch (...)
@@ -10311,23 +7308,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketControl", L"IgnorableServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.IgnorableServerCertificateErrors();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketControl", "IgnorableServerCertificateErrors", "Windows.Networking.Sockets.IWebSocketControl2").IgnorableServerCertificateErrors();
             }());
         }
         catch (...)
@@ -10413,19 +7397,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketInformation", L"BandwidthStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10443,19 +7414,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketInformation", L"LocalAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10473,19 +7431,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketInformation", L"Protocol");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10503,23 +7448,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketInformation", L"ServerCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCertificate();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketInformation", "ServerCertificate", "Windows.Networking.Sockets.IWebSocketInformation2").ServerCertificate();
             }());
         }
         catch (...)
@@ -10533,23 +7465,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketInformation", L"ServerCertificateErrorSeverity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCertificateErrorSeverity();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketInformation", "ServerCertificateErrorSeverity", "Windows.Networking.Sockets.IWebSocketInformation2").ServerCertificateErrorSeverity();
             }());
         }
         catch (...)
@@ -10563,23 +7482,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketInformation", L"ServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCertificateErrors();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketInformation", "ServerCertificateErrors", "Windows.Networking.Sockets.IWebSocketInformation2").ServerCertificateErrors();
             }());
         }
         catch (...)
@@ -10593,23 +7499,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.StreamWebSocketInformation", L"ServerIntermediateCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerIntermediateCertificates();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation2>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.StreamWebSocketInformation", "ServerIntermediateCertificates", "Windows.Networking.Sockets.IWebSocketInformation2").ServerIntermediateCertificates();
             }());
         }
         catch (...)
@@ -10693,19 +7586,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.WebSocketClosedEventArgs", L"Code");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10723,19 +7603,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.WebSocketClosedEventArgs", L"Reason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -10936,19 +7803,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.WebSocketKeepAlive", L"Run", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(args, 0);
 
                 {
@@ -11043,19 +7897,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs", L"GetDeferral", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -11083,19 +7924,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs", L"Reject", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     self->obj.Reject();
@@ -11120,19 +7948,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs", L"ServerCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11150,19 +7965,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs", L"ServerCertificateErrorSeverity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11180,19 +7982,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs", L"ServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11210,19 +7999,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs", L"ServerIntermediateCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11311,19 +8087,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IControlChannelTriggerEventDetails", L"ControlChannelTrigger");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11497,19 +8260,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails", L"HardwareSlotReset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11527,19 +8277,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails", L"ResetReason");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11557,19 +8294,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails", L"SoftwareSlotReset");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11789,22 +8513,9 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
-                    self->obj.Close();
+                    py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
                 }
 
                 Py_RETURN_NONE;
@@ -11819,19 +8530,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.IWebSocket", L"Close", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -11863,19 +8561,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.IWebSocket", L"ConnectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
@@ -11905,19 +8590,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.IWebSocket", L"SetRequestHeader", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -11945,19 +8617,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocket", L"OutputStream");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -11975,19 +8634,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.IWebSocket", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Sockets::IWebSocket, winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -12007,19 +8653,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Sockets.IWebSocket", L"Closed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -12047,7 +8680,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             {
                 auto _gil = py::release_gil();
-                self->obj.Close();
+                py::require<winrt::Windows::Foundation::IClosable>(self->obj, py::member_kind::method, "Windows.Foundation.IClosable", "Close", "Windows.Foundation.IClosable", 0).Close();
             }
 
             Py_RETURN_FALSE;
@@ -12438,19 +9071,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12474,19 +9094,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
@@ -12507,19 +9114,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12543,19 +9137,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
@@ -12576,19 +9157,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12612,19 +9180,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
@@ -12645,19 +9200,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"SupportedProtocols");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12963,19 +9505,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl2", L"IgnorableServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -12993,23 +9522,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.OutboundBufferSizeInBytes();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.IWebSocketControl", "OutboundBufferSizeInBytes", "Windows.Networking.Sockets.IWebSocketControl").OutboundBufferSizeInBytes();
             }());
         }
         catch (...)
@@ -13029,24 +9545,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"OutboundBufferSizeInBytes");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<uint32_t>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.OutboundBufferSizeInBytes(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.IWebSocketControl", "OutboundBufferSizeInBytes", "Windows.Networking.Sockets.IWebSocketControl").OutboundBufferSizeInBytes(param0);
             }
 
             return 0;
@@ -13062,23 +9565,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ProxyCredential();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.IWebSocketControl", "ProxyCredential", "Windows.Networking.Sockets.IWebSocketControl").ProxyCredential();
             }());
         }
         catch (...)
@@ -13098,24 +9588,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"ProxyCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ProxyCredential(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.IWebSocketControl", "ProxyCredential", "Windows.Networking.Sockets.IWebSocketControl").ProxyCredential(param0);
             }
 
             return 0;
@@ -13131,23 +9608,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.ServerCredential();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.IWebSocketControl", "ServerCredential", "Windows.Networking.Sockets.IWebSocketControl").ServerCredential();
             }());
         }
         catch (...)
@@ -13167,24 +9631,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"ServerCredential");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             {
                 auto _gil = release_gil();
-                self->obj.ServerCredential(param0);
+                py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.IWebSocketControl", "ServerCredential", "Windows.Networking.Sockets.IWebSocketControl").ServerCredential(param0);
             }
 
             return 0;
@@ -13200,23 +9651,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketControl", L"SupportedProtocols");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.SupportedProtocols();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketControl>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.IWebSocketControl", "SupportedProtocols", "Windows.Networking.Sockets.IWebSocketControl").SupportedProtocols();
             }());
         }
         catch (...)
@@ -13539,19 +9977,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketInformation", L"BandwidthStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13569,19 +9994,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketInformation", L"LocalAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13599,19 +10011,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketInformation", L"Protocol");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13827,19 +10226,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketInformation2", L"ServerCertificate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13857,19 +10243,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketInformation2", L"ServerCertificateErrorSeverity");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13887,19 +10260,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketInformation2", L"ServerCertificateErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13917,19 +10277,6 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketInformation2", L"ServerIntermediateCertificates");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -13947,23 +10294,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketInformation", L"BandwidthStatistics");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.BandwidthStatistics();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.IWebSocketInformation", "BandwidthStatistics", "Windows.Networking.Sockets.IWebSocketInformation").BandwidthStatistics();
             }());
         }
         catch (...)
@@ -13977,23 +10311,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketInformation", L"LocalAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.LocalAddress();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.IWebSocketInformation", "LocalAddress", "Windows.Networking.Sockets.IWebSocketInformation").LocalAddress();
             }());
         }
         catch (...)
@@ -14007,23 +10328,10 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Sockets.IWebSocketInformation", L"Protocol");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.Protocol();
+                return py::require<winrt::Windows::Networking::Sockets::IWebSocketInformation>(self->obj, py::member_kind::property, "Windows.Networking.Sockets.IWebSocketInformation", "Protocol", "Windows.Networking.Sockets.IWebSocketInformation").Protocol();
             }());
         }
         catch (...)
