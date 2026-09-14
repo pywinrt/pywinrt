@@ -5,150 +5,25 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Gaming.Input.h>
-#include <winrt/Windows.Gaming.Input.Custom.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.Gaming.Input.Preview.h>
+#include "py.Windows.Gaming.Input.Preview.types.h"
 
-namespace py::proj::Windows::Gaming::Input::Preview
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::Preview::DeviceCommand> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::Preview::GameControllerBatteryChargingState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::Preview::GameControllerBatteryKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::Preview::GameControllerBatteryLevel> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::Preview::GameControllerFirmwareCorruptReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::Preview::HeadsetLevel> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::Preview::HeadsetOperation> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::Preview::RemappingButtonCategory> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::Preview::HeadsetGeqGains> = "T{i:band1_gain:i:band2_gain:i:band3_gain:i:band4_gain:i:band5_gain:}";
-
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::DeviceCommand>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.DeviceCommand";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "DeviceCommand";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::GameControllerBatteryChargingState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.GameControllerBatteryChargingState";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "GameControllerBatteryChargingState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::GameControllerBatteryKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.GameControllerBatteryKind";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "GameControllerBatteryKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::GameControllerBatteryLevel>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.GameControllerBatteryLevel";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "GameControllerBatteryLevel";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::GameControllerFirmwareCorruptReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.GameControllerFirmwareCorruptReason";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "GameControllerFirmwareCorruptReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::HeadsetLevel>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.HeadsetLevel";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "HeadsetLevel";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::HeadsetOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.HeadsetOperation";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "HeadsetOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::RemappingButtonCategory>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.RemappingButtonCategory";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "RemappingButtonCategory";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.GameControllerProviderInfo";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "GameControllerProviderInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.LegacyGipGameControllerProvider";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "LegacyGipGameControllerProvider";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Preview::HeadsetGeqGains>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input_preview.HeadsetGeqGains_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.HeadsetGeqGains";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
-        static constexpr const char* type_name = "HeadsetGeqGains";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Gaming.Input.h")
-#include "py.Windows.Gaming.Input.h"
+#if __has_include("py.Windows.Gaming.Input.types.h")
+#include "py.Windows.Gaming.Input.types.h"
 #endif
 
-#if __has_include("py.Windows.Gaming.Input.Custom.h")
-#include "py.Windows.Gaming.Input.Custom.h"
+#if __has_include("py.Windows.Gaming.Input.Custom.types.h")
+#include "py.Windows.Gaming.Input.Custom.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Gaming::Input::Preview

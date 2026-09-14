@@ -4,90 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Geolocation.Geofencing.h>
-
-namespace py::proj::Windows::Devices::Geolocation::Geofencing
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceState> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates> = "I";
+#include "py.Windows.Devices.Geolocation.Geofencing.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.GeofenceMonitorStatus";
-        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
-        static constexpr const char* type_name = "GeofenceMonitorStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.GeofenceRemovalReason";
-        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
-        static constexpr const char* type_name = "GeofenceRemovalReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.GeofenceState";
-        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
-        static constexpr const char* type_name = "GeofenceState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.MonitoredGeofenceStates";
-        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
-        static constexpr const char* type_name = "MonitoredGeofenceStates";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::Geofence>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.Geofence";
-        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
-        static constexpr const char* type_name = "Geofence";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.GeofenceMonitor";
-        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
-        static constexpr const char* type_name = "GeofenceMonitor";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.GeofenceStateChangeReport";
-        static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
-        static constexpr const char* type_name = "GeofenceStateChangeReport";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
+#if __has_include("py.Windows.Devices.Geolocation.types.h")
+#include "py.Windows.Devices.Geolocation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

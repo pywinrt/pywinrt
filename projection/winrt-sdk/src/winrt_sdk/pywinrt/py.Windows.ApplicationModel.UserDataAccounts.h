@@ -4,112 +4,27 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.Appointments.h>
-#include <winrt/Windows.ApplicationModel.Contacts.h>
-#include <winrt/Windows.ApplicationModel.Email.h>
-#include <winrt/Windows.ApplicationModel.UserDataTasks.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.ApplicationModel.UserDataAccounts.h>
-
-namespace py::proj::Windows::ApplicationModel::UserDataAccounts
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType> = "i";
+#include "py.Windows.ApplicationModel.UserDataAccounts.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountContentKinds";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
-        static constexpr const char* type_name = "UserDataAccountContentKinds";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountOtherAppReadAccess";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
-        static constexpr const char* type_name = "UserDataAccountOtherAppReadAccess";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStoreAccessType";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
-        static constexpr const char* type_name = "UserDataAccountStoreAccessType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccount";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
-        static constexpr const char* type_name = "UserDataAccount";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
-        static constexpr const char* type_name = "UserDataAccountManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountManagerForUser";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
-        static constexpr const char* type_name = "UserDataAccountManagerForUser";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStore";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
-        static constexpr const char* type_name = "UserDataAccountStore";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStoreChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
-        static constexpr const char* type_name = "UserDataAccountStoreChangedEventArgs";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.Appointments.h")
-#include "py.Windows.ApplicationModel.Appointments.h"
+#if __has_include("py.Windows.ApplicationModel.Appointments.types.h")
+#include "py.Windows.ApplicationModel.Appointments.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Contacts.h")
-#include "py.Windows.ApplicationModel.Contacts.h"
+#if __has_include("py.Windows.ApplicationModel.Contacts.types.h")
+#include "py.Windows.ApplicationModel.Contacts.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Email.h")
-#include "py.Windows.ApplicationModel.Email.h"
+#if __has_include("py.Windows.ApplicationModel.Email.types.h")
+#include "py.Windows.ApplicationModel.Email.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.UserDataTasks.h")
-#include "py.Windows.ApplicationModel.UserDataTasks.h"
+#if __has_include("py.Windows.ApplicationModel.UserDataTasks.types.h")
+#include "py.Windows.ApplicationModel.UserDataTasks.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -120,12 +35,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::UserDataAccounts

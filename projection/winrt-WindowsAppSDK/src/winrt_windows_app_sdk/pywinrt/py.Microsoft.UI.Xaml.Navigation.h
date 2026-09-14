@@ -4,97 +4,25 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.UI.Xaml.Interop.h>
-#include <winrt/Microsoft.UI.Xaml.h>
-#include <winrt/Microsoft.UI.Xaml.Media.Animation.h>
 
 #include <winrt/Microsoft.UI.Xaml.Navigation.h>
-
-namespace py::proj::Microsoft::UI::Xaml::Navigation
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Navigation::NavigationCacheMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Navigation::NavigationMode> = "i";
+#include "py.Microsoft.UI.Xaml.Navigation.types.h"
 
 
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Navigation::NavigationCacheMode>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.navigation.NavigationCacheMode";
-        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.navigation";
-        static constexpr const char* type_name = "NavigationCacheMode";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Navigation::NavigationMode>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.navigation.NavigationMode";
-        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.navigation";
-        static constexpr const char* type_name = "NavigationMode";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.navigation.FrameNavigationOptions";
-        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.navigation";
-        static constexpr const char* type_name = "FrameNavigationOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Navigation::NavigatingCancelEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.navigation.NavigatingCancelEventArgs";
-        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.navigation";
-        static constexpr const char* type_name = "NavigatingCancelEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.navigation.NavigationEventArgs";
-        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.navigation";
-        static constexpr const char* type_name = "NavigationEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Navigation::NavigationFailedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.navigation.NavigationFailedEventArgs";
-        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.navigation";
-        static constexpr const char* type_name = "NavigationFailedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Navigation::PageStackEntry>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.navigation.PageStackEntry";
-        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.navigation";
-        static constexpr const char* type_name = "PageStackEntry";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.Interop.h")
-#include "py.Windows.UI.Xaml.Interop.h"
+#if __has_include("py.Windows.UI.Xaml.Interop.types.h")
+#include "py.Windows.UI.Xaml.Interop.types.h"
 #endif
 
-#if __has_include("py.Microsoft.UI.Xaml.h")
-#include "py.Microsoft.UI.Xaml.h"
+#if __has_include("py.Microsoft.UI.Xaml.types.h")
+#include "py.Microsoft.UI.Xaml.types.h"
 #endif
 
-#if __has_include("py.Microsoft.UI.Xaml.Media.Animation.h")
-#include "py.Microsoft.UI.Xaml.Media.Animation.h"
+#if __has_include("py.Microsoft.UI.Xaml.Media.Animation.types.h")
+#include "py.Microsoft.UI.Xaml.Media.Animation.types.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Xaml::Navigation

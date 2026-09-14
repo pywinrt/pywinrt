@@ -4,50 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Microsoft.Windows.AI.h>
-
-namespace py::proj::Microsoft::Windows::AI
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AI::AIFeatureReadyResultState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AI::AIFeatureReadyState> = "i";
+#include "py.Microsoft.Windows.AI.types.h"
 
 
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AI::AIFeatureReadyResultState>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.AIFeatureReadyResultState";
-        static constexpr const char* module_name = "winui3.microsoft.windows.ai";
-        static constexpr const char* type_name = "AIFeatureReadyResultState";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AI::AIFeatureReadyState>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.AIFeatureReadyState";
-        static constexpr const char* module_name = "winui3.microsoft.windows.ai";
-        static constexpr const char* type_name = "AIFeatureReadyState";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AI::AIFeatureReadyResult>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.AIFeatureReadyResult";
-        static constexpr const char* module_name = "winui3.microsoft.windows.ai";
-        static constexpr const char* type_name = "AIFeatureReadyResult";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 namespace py::impl::Microsoft::Windows::AI

@@ -8,75 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Graphics.Display.Core.h>
+#include "py.Windows.Graphics.Display.Core.types.h"
 
-namespace py::proj::Windows::Graphics::Display::Core
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::Core::HdmiDisplayColorSpace> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::Core::HdmiDisplayPixelEncoding> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata> = "T{H:red_primary_x:H:red_primary_y:H:green_primary_x:H:green_primary_y:H:blue_primary_x:H:blue_primary_y:H:white_point_x:H:white_point_y:H:max_mastering_luminance:H:min_mastering_luminance:H:max_content_light_level:H:max_frame_average_light_level:}";
-
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayColorSpace>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayColorSpace";
-        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
-        static constexpr const char* type_name = "HdmiDisplayColorSpace";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayHdrOption";
-        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
-        static constexpr const char* type_name = "HdmiDisplayHdrOption";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayPixelEncoding>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayPixelEncoding";
-        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
-        static constexpr const char* type_name = "HdmiDisplayPixelEncoding";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayInformation";
-        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
-        static constexpr const char* type_name = "HdmiDisplayInformation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayMode";
-        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
-        static constexpr const char* type_name = "HdmiDisplayMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_display_core.HdmiDisplayHdr2086Metadata_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayHdr2086Metadata";
-        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
-        static constexpr const char* type_name = "HdmiDisplayHdr2086Metadata";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

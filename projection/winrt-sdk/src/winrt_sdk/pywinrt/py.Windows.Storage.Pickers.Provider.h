@@ -6,122 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
 
 #include <winrt/Windows.Storage.Pickers.Provider.h>
+#include "py.Windows.Storage.Pickers.Provider.types.h"
 
-namespace py::proj::Windows::Storage::Pickers::Provider
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::Pickers::Provider::AddFileResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::Pickers::Provider::FileSelectionMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::Pickers::Provider::SetFileNameResult> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::AddFileResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.AddFileResult";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "AddFileResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::FileSelectionMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.FileSelectionMode";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "FileSelectionMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::SetFileNameResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.SetFileNameResult";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "SetFileNameResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.FileOpenPickerUI";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "FileOpenPickerUI";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.FileRemovedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "FileRemovedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.FileSavePickerUI";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "FileSavePickerUI";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.PickerClosingDeferral";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "PickerClosingDeferral";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.PickerClosingEventArgs";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "PickerClosingEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.PickerClosingOperation";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "PickerClosingOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.TargetFileRequest";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "TargetFileRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.TargetFileRequestDeferral";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "TargetFileRequestDeferral";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.TargetFileRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
-        static constexpr const char* type_name = "TargetFileRequestedEventArgs";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -131,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
 namespace py::impl::Windows::Storage::Pickers::Provider

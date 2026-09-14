@@ -6,25 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Microsoft.Windows.Workloads.h>
+#include "py.Microsoft.Windows.Workloads.types.h"
 
-namespace py::proj::Microsoft::Windows::Workloads
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Workloads::WorkloadPriority> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Workloads::WorkloadPriority>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.workloads.WorkloadPriority";
-        static constexpr const char* module_name = "winui3.microsoft.windows.workloads";
-        static constexpr const char* type_name = "WorkloadPriority";
-    };
-}
 
 namespace py::impl::Microsoft::Windows::Workloads
 {

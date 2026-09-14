@@ -7,30 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Pwm.Provider.h>
+#include "py.Windows.Devices.Pwm.Provider.types.h"
 
-namespace py::proj::Windows::Devices::Pwm::Provider
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pwm.provider._IPwmControllerProvider";
-        static constexpr const char* module_name = "winrt.windows.devices.pwm.provider";
-        static constexpr const char* type_name = "_IPwmControllerProvider";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pwm.provider._IPwmProvider";
-        static constexpr const char* module_name = "winrt.windows.devices.pwm.provider";
-        static constexpr const char* type_name = "_IPwmProvider";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"

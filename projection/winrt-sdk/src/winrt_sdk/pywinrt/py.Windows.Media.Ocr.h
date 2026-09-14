@@ -6,50 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Globalization.h>
-#include <winrt/Windows.Graphics.Imaging.h>
 
 #include <winrt/Windows.Media.Ocr.h>
+#include "py.Windows.Media.Ocr.types.h"
 
-namespace py::proj::Windows::Media::Ocr
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Media::Ocr::OcrEngine>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.ocr.OcrEngine";
-        static constexpr const char* module_name = "winrt.windows.media.ocr";
-        static constexpr const char* type_name = "OcrEngine";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Ocr::OcrLine>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.ocr.OcrLine";
-        static constexpr const char* module_name = "winrt.windows.media.ocr";
-        static constexpr const char* type_name = "OcrLine";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Ocr::OcrResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.ocr.OcrResult";
-        static constexpr const char* module_name = "winrt.windows.media.ocr";
-        static constexpr const char* type_name = "OcrResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Ocr::OcrWord>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.ocr.OcrWord";
-        static constexpr const char* module_name = "winrt.windows.media.ocr";
-        static constexpr const char* type_name = "OcrWord";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -59,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
+#if __has_include("py.Windows.Globalization.types.h")
+#include "py.Windows.Globalization.types.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Ocr

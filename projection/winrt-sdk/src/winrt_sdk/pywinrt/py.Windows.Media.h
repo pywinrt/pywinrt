@@ -4,346 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.AppService.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Graphics.DirectX.h>
-#include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
-#include <winrt/Windows.Graphics.Imaging.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Media.h>
-
-namespace py::proj::Windows::Media
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::AudioBufferAccessMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::AudioProcessing> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::MediaPlaybackAutoRepeatMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::MediaPlaybackStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::MediaPlaybackType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::MediaTimelineControllerState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::SoundLevel> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::SystemMediaTransportControlsButton> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::SystemMediaTransportControlsProperty> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::MediaTimeRange> = "T{T{q:duration:}:start:T{q:duration:}:end:}";
+#include "py.Windows.Media.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Media::AudioBufferAccessMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.AudioBufferAccessMode";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "AudioBufferAccessMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::AudioProcessing>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.AudioProcessing";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "AudioProcessing";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaPlaybackAutoRepeatMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaPlaybackAutoRepeatMode";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaPlaybackAutoRepeatMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaPlaybackStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaPlaybackStatus";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaPlaybackStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaPlaybackType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaPlaybackType";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaPlaybackType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaTimelineControllerState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaTimelineControllerState";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaTimelineControllerState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SoundLevel>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.SoundLevel";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "SoundLevel";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SystemMediaTransportControlsButton>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.SystemMediaTransportControlsButton";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "SystemMediaTransportControlsButton";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SystemMediaTransportControlsProperty>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.SystemMediaTransportControlsProperty";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "SystemMediaTransportControlsProperty";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::AudioBuffer>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.AudioBuffer";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "AudioBuffer";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::AudioFrame>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.AudioFrame";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "AudioFrame";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::AutoRepeatModeChangeRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.AutoRepeatModeChangeRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "AutoRepeatModeChangeRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ImageDisplayProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.ImageDisplayProperties";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "ImageDisplayProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaControl";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaExtensionManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaExtensionManager";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaExtensionManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaMarkerTypes>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaMarkerTypes";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaMarkerTypes";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaProcessingTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaProcessingTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaProcessingTriggerDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaTimelineController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaTimelineController";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaTimelineController";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaTimelineControllerFailedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaTimelineControllerFailedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaTimelineControllerFailedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MusicDisplayProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MusicDisplayProperties";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MusicDisplayProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::PlaybackPositionChangeRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.PlaybackPositionChangeRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "PlaybackPositionChangeRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::PlaybackRateChangeRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.PlaybackRateChangeRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "PlaybackRateChangeRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ShuffleEnabledChangeRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.ShuffleEnabledChangeRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "ShuffleEnabledChangeRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SystemMediaTransportControls>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.SystemMediaTransportControls";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "SystemMediaTransportControls";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SystemMediaTransportControlsButtonPressedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.SystemMediaTransportControlsButtonPressedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "SystemMediaTransportControlsButtonPressedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SystemMediaTransportControlsDisplayUpdater>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.SystemMediaTransportControlsDisplayUpdater";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "SystemMediaTransportControlsDisplayUpdater";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SystemMediaTransportControlsPropertyChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.SystemMediaTransportControlsPropertyChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "SystemMediaTransportControlsPropertyChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SystemMediaTransportControlsTimelineProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.SystemMediaTransportControlsTimelineProperties";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "SystemMediaTransportControlsTimelineProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::VideoDisplayProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.VideoDisplayProperties";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "VideoDisplayProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::VideoEffects>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.VideoEffects";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "VideoEffects";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::VideoFrame>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.VideoFrame";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "VideoFrame";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::IMediaExtension>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media._IMediaExtension";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "_IMediaExtension";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::IMediaFrame>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media._IMediaFrame";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "_IMediaFrame";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::IMediaMarker>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media._IMediaMarker";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "_IMediaMarker";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::IMediaMarkers>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media._IMediaMarkers";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "_IMediaMarkers";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::MediaTimeRange>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_media.MediaTimeRange_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.media.MediaTimeRange";
-        static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "MediaTimeRange";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.AppService.h")
-#include "py.Windows.ApplicationModel.AppService.h"
+#if __has_include("py.Windows.ApplicationModel.AppService.types.h")
+#include "py.Windows.ApplicationModel.AppService.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -354,24 +23,24 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.DirectX.h")
-#include "py.Windows.Graphics.DirectX.h"
+#if __has_include("py.Windows.Graphics.DirectX.types.h")
+#include "py.Windows.Graphics.DirectX.types.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.types.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.types.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Media

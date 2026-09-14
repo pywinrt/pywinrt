@@ -6,22 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.Graphics.Printing.ProtectedPrint.h>
+#include "py.Windows.Graphics.Printing.ProtectedPrint.types.h"
 
-namespace py::proj::Windows::Graphics::Printing::ProtectedPrint
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Printing::ProtectedPrint::WindowsProtectedPrintInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.protectedprint.WindowsProtectedPrintInfo";
-        static constexpr const char* module_name = "winrt.windows.graphics.printing.protectedprint";
-        static constexpr const char* type_name = "WindowsProtectedPrintInfo";
-    };
-}
 
 namespace py::impl::Windows::Graphics::Printing::ProtectedPrint
 {

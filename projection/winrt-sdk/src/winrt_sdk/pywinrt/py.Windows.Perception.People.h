@@ -5,130 +5,33 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Foundation.Numerics.h>
-#include <winrt/Windows.Perception.h>
-#include <winrt/Windows.Perception.Spatial.h>
-#include <winrt/Windows.UI.Input.h>
-#include <winrt/Windows.UI.Input.Spatial.h>
 
 #include <winrt/Windows.Perception.People.h>
+#include "py.Windows.Perception.People.types.h"
 
-namespace py::proj::Windows::Perception::People
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Perception::People::HandJointKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Perception::People::JointPoseAccuracy> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Perception::People::HandMeshVertex> = "T{T{f:x:f:y:f:z:}:position:T{f:x:f:y:f:z:}:normal:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Perception::People::JointPose> = "T{T{f:x:f:y:f:z:f:w:}:orientation:T{f:x:f:y:f:z:}:position:f:radius:i:accuracy:}";
-
-
-    template<>
-    struct py_type<winrt::Windows::Perception::People::HandJointKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.people.HandJointKind";
-        static constexpr const char* module_name = "winrt.windows.perception.people";
-        static constexpr const char* type_name = "HandJointKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::People::JointPoseAccuracy>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.people.JointPoseAccuracy";
-        static constexpr const char* module_name = "winrt.windows.perception.people";
-        static constexpr const char* type_name = "JointPoseAccuracy";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::People::EyesPose>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.people.EyesPose";
-        static constexpr const char* module_name = "winrt.windows.perception.people";
-        static constexpr const char* type_name = "EyesPose";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::People::HandMeshObserver>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.people.HandMeshObserver";
-        static constexpr const char* module_name = "winrt.windows.perception.people";
-        static constexpr const char* type_name = "HandMeshObserver";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::People::HandMeshVertexState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.people.HandMeshVertexState";
-        static constexpr const char* module_name = "winrt.windows.perception.people";
-        static constexpr const char* type_name = "HandMeshVertexState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::People::HandPose>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.people.HandPose";
-        static constexpr const char* module_name = "winrt.windows.perception.people";
-        static constexpr const char* type_name = "HandPose";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::People::HeadPose>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.people.HeadPose";
-        static constexpr const char* module_name = "winrt.windows.perception.people";
-        static constexpr const char* type_name = "HeadPose";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::People::HandMeshVertex>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_perception_people.HandMeshVertex_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.people.HandMeshVertex";
-        static constexpr const char* module_name = "winrt.windows.perception.people";
-        static constexpr const char* type_name = "HandMeshVertex";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::People::JointPose>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_perception_people.JointPose_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.people.JointPose";
-        static constexpr const char* module_name = "winrt.windows.perception.people";
-        static constexpr const char* type_name = "JointPose";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
 #endif
 
-#if __has_include("py.Windows.Perception.h")
-#include "py.Windows.Perception.h"
+#if __has_include("py.Windows.Perception.types.h")
+#include "py.Windows.Perception.types.h"
 #endif
 
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
+#if __has_include("py.Windows.Perception.Spatial.types.h")
+#include "py.Windows.Perception.Spatial.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Input.h")
-#include "py.Windows.UI.Input.h"
+#if __has_include("py.Windows.UI.Input.types.h")
+#include "py.Windows.UI.Input.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Input.Spatial.h")
-#include "py.Windows.UI.Input.Spatial.h"
+#if __has_include("py.Windows.UI.Input.Spatial.types.h")
+#include "py.Windows.UI.Input.Spatial.types.h"
 #endif
 
 namespace py::impl::Windows::Perception::People

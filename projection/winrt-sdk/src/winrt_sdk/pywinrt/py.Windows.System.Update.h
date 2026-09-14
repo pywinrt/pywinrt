@@ -8,82 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.System.Update.h>
+#include "py.Windows.System.Update.types.h"
 
-namespace py::proj::Windows::System::Update
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Update::SystemUpdateAttentionRequiredReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Update::SystemUpdateItemState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Update::SystemUpdateManagerState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Update::SystemUpdateStartInstallAction> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::System::Update::SystemUpdateAttentionRequiredReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateAttentionRequiredReason";
-        static constexpr const char* module_name = "winrt.windows.system.update";
-        static constexpr const char* type_name = "SystemUpdateAttentionRequiredReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Update::SystemUpdateItemState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateItemState";
-        static constexpr const char* module_name = "winrt.windows.system.update";
-        static constexpr const char* type_name = "SystemUpdateItemState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Update::SystemUpdateManagerState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateManagerState";
-        static constexpr const char* module_name = "winrt.windows.system.update";
-        static constexpr const char* type_name = "SystemUpdateManagerState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Update::SystemUpdateStartInstallAction>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateStartInstallAction";
-        static constexpr const char* module_name = "winrt.windows.system.update";
-        static constexpr const char* type_name = "SystemUpdateStartInstallAction";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Update::SystemUpdateItem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateItem";
-        static constexpr const char* module_name = "winrt.windows.system.update";
-        static constexpr const char* type_name = "SystemUpdateItem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Update::SystemUpdateLastErrorInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateLastErrorInfo";
-        static constexpr const char* module_name = "winrt.windows.system.update";
-        static constexpr const char* type_name = "SystemUpdateLastErrorInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Update::SystemUpdateManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateManager";
-        static constexpr const char* module_name = "winrt.windows.system.update";
-        static constexpr const char* type_name = "SystemUpdateManager";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

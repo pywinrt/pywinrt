@@ -4,49 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Adc.Provider.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Adc.h>
-
-namespace py::proj::Windows::Devices::Adc
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Adc::AdcChannelMode> = "i";
+#include "py.Windows.Devices.Adc.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::Adc::AdcChannelMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.AdcChannelMode";
-        static constexpr const char* module_name = "winrt.windows.devices.adc";
-        static constexpr const char* type_name = "AdcChannelMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Adc::AdcChannel>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.AdcChannel";
-        static constexpr const char* module_name = "winrt.windows.devices.adc";
-        static constexpr const char* type_name = "AdcChannel";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Adc::AdcController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.AdcController";
-        static constexpr const char* module_name = "winrt.windows.devices.adc";
-        static constexpr const char* type_name = "AdcController";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Adc.Provider.h")
-#include "py.Windows.Devices.Adc.Provider.h"
+#if __has_include("py.Windows.Devices.Adc.Provider.types.h")
+#include "py.Windows.Devices.Adc.Provider.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

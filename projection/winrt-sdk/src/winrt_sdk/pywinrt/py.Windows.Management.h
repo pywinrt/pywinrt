@@ -4,78 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Management.h>
-
-namespace py::proj::Windows::Management
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Management::MdmAlertDataType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Management::MdmAlertMark> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Management::MdmSessionState> = "i";
+#include "py.Windows.Management.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Management::MdmAlertDataType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmAlertDataType";
-        static constexpr const char* module_name = "winrt.windows.management";
-        static constexpr const char* type_name = "MdmAlertDataType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Management::MdmAlertMark>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmAlertMark";
-        static constexpr const char* module_name = "winrt.windows.management";
-        static constexpr const char* type_name = "MdmAlertMark";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Management::MdmSessionState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmSessionState";
-        static constexpr const char* module_name = "winrt.windows.management";
-        static constexpr const char* type_name = "MdmSessionState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Management::MdmAlert>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmAlert";
-        static constexpr const char* module_name = "winrt.windows.management";
-        static constexpr const char* type_name = "MdmAlert";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Management::MdmSession>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmSession";
-        static constexpr const char* module_name = "winrt.windows.management";
-        static constexpr const char* type_name = "MdmSession";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Management::MdmSessionManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmSessionManager";
-        static constexpr const char* module_name = "winrt.windows.management";
-        static constexpr const char* type_name = "MdmSessionManager";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.Collections.h")

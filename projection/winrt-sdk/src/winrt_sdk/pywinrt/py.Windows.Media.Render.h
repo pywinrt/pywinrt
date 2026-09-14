@@ -6,25 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.Media.Render.h>
+#include "py.Windows.Media.Render.types.h"
 
-namespace py::proj::Windows::Media::Render
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Render::AudioRenderCategory> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::Render::AudioRenderCategory>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.render.AudioRenderCategory";
-        static constexpr const char* module_name = "winrt.windows.media.render";
-        static constexpr const char* type_name = "AudioRenderCategory";
-    };
-}
 
 namespace py::impl::Windows::Media::Render
 {

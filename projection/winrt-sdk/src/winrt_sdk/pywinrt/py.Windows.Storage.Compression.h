@@ -8,41 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Storage.Compression.h>
+#include "py.Windows.Storage.Compression.types.h"
 
-namespace py::proj::Windows::Storage::Compression
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::Compression::CompressAlgorithm> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Compression::CompressAlgorithm>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.compression.CompressAlgorithm";
-        static constexpr const char* module_name = "winrt.windows.storage.compression";
-        static constexpr const char* type_name = "CompressAlgorithm";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Compression::Compressor>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.compression.Compressor";
-        static constexpr const char* module_name = "winrt.windows.storage.compression";
-        static constexpr const char* type_name = "Compressor";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Compression::Decompressor>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.compression.Decompressor";
-        static constexpr const char* module_name = "winrt.windows.storage.compression";
-        static constexpr const char* type_name = "Decompressor";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

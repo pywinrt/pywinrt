@@ -4,108 +4,18 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.h>
-#include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.h>
-
-namespace py::proj::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityChange> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion> = "T{I:major:I:minor:I:patch:}";
+#include "py.Microsoft.Windows.ApplicationModel.WindowsAppRuntime.types.h"
 
 
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.DeploymentStatus";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
-        static constexpr const char* type_name = "DeploymentStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityChange>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.RuntimeCompatibilityChange";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
-        static constexpr const char* type_name = "RuntimeCompatibilityChange";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.DeploymentInitializeOptions";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
-        static constexpr const char* type_name = "DeploymentInitializeOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.DeploymentManager";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
-        static constexpr const char* type_name = "DeploymentManager";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.DeploymentResult";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
-        static constexpr const char* type_name = "DeploymentResult";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.ReleaseInfo";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
-        static constexpr const char* type_name = "ReleaseInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.RuntimeCompatibilityOptions";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
-        static constexpr const char* type_name = "RuntimeCompatibilityOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeInfo>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.RuntimeInfo";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
-        static constexpr const char* type_name = "RuntimeInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>
-    {
-        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_windows_applicationmodel_windowsappruntime.WindowsAppRuntimeVersion_from_tuple";
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.WindowsAppRuntimeVersion";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
-        static constexpr const char* type_name = "WindowsAppRuntimeVersion";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
+#if __has_include("py.Windows.ApplicationModel.types.h")
+#include "py.Windows.ApplicationModel.types.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.Collections.h")

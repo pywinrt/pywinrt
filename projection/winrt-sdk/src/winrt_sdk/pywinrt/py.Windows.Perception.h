@@ -4,36 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Perception.h>
+#include "py.Windows.Perception.types.h"
 
-namespace py::proj::Windows::Perception
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Perception::PerceptionTimestamp>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.PerceptionTimestamp";
-        static constexpr const char* module_name = "winrt.windows.perception";
-        static constexpr const char* type_name = "PerceptionTimestamp";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::PerceptionTimestampHelper>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.PerceptionTimestampHelper";
-        static constexpr const char* module_name = "winrt.windows.perception";
-        static constexpr const char* type_name = "PerceptionTimestampHelper";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 namespace py::impl::Windows::Perception

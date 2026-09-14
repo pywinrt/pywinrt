@@ -6,79 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Gaming.UI.h>
+#include "py.Windows.Gaming.UI.types.h"
 
-namespace py::proj::Windows::Gaming::UI
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::UI::GameChatMessageOrigin> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::UI::GameChatOverlayPosition> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::UI::GameChatMessageOrigin>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameChatMessageOrigin";
-        static constexpr const char* module_name = "winrt.windows.gaming.ui";
-        static constexpr const char* type_name = "GameChatMessageOrigin";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::UI::GameChatOverlayPosition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameChatOverlayPosition";
-        static constexpr const char* module_name = "winrt.windows.gaming.ui";
-        static constexpr const char* type_name = "GameChatOverlayPosition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::UI::GameBar>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameBar";
-        static constexpr const char* module_name = "winrt.windows.gaming.ui";
-        static constexpr const char* type_name = "GameBar";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameChatMessageReceivedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.gaming.ui";
-        static constexpr const char* type_name = "GameChatMessageReceivedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::UI::GameChatOverlay>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameChatOverlay";
-        static constexpr const char* module_name = "winrt.windows.gaming.ui";
-        static constexpr const char* type_name = "GameChatOverlay";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameChatOverlayMessageSource";
-        static constexpr const char* module_name = "winrt.windows.gaming.ui";
-        static constexpr const char* type_name = "GameChatOverlayMessageSource";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::UI::GameUIProviderActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameUIProviderActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.gaming.ui";
-        static constexpr const char* type_name = "GameUIProviderActivatedEventArgs";
-    };
-}
 
 #if __has_include("py.Windows.ApplicationModel.Activation.h")
 #include "py.Windows.ApplicationModel.Activation.h"
@@ -88,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
 #endif
 
 namespace py::impl::Windows::Gaming::UI

@@ -6,197 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Data.Xml.Dom.h>
+#include "py.Windows.Data.Xml.Dom.types.h"
 
-namespace py::proj::Windows::Data::Xml::Dom
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Data::Xml::Dom::NodeType> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::NodeType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.NodeType";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "NodeType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::DtdEntity>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.DtdEntity";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "DtdEntity";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::DtdNotation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.DtdNotation";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "DtdNotation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlAttribute>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlAttribute";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlAttribute";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlCDataSection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlCDataSection";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlCDataSection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlComment>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlComment";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlComment";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlDocument>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlDocument";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlDocument";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlDocumentFragment";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlDocumentFragment";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlDocumentType";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlDocumentType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlDomImplementation";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlDomImplementation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlElement>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlElement";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlElement";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlEntityReference>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlEntityReference";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlEntityReference";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlLoadSettings";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlLoadSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlNamedNodeMap";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlNamedNodeMap";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlNodeList>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlNodeList";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlNodeList";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlProcessingInstruction";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlProcessingInstruction";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::XmlText>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.XmlText";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "XmlText";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom._IXmlCharacterData";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "_IXmlCharacterData";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::IXmlNode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom._IXmlNode";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "_IXmlNode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom._IXmlNodeSelector";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "_IXmlNodeSelector";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom._IXmlNodeSerializer";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "_IXmlNodeSerializer";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Xml::Dom::IXmlText>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom._IXmlText";
-        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "_IXmlText";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -206,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Data::Xml::Dom

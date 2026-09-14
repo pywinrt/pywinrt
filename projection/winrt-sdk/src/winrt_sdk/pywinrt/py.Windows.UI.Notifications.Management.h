@@ -6,36 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.UI.Notifications.h>
 
 #include <winrt/Windows.UI.Notifications.Management.h>
+#include "py.Windows.UI.Notifications.Management.types.h"
 
-namespace py::proj::Windows::UI::Notifications::Management
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Notifications::Management::UserNotificationListenerAccessStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::UI::Notifications::Management::UserNotificationListenerAccessStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.management.UserNotificationListenerAccessStatus";
-        static constexpr const char* module_name = "winrt.windows.ui.notifications.management";
-        static constexpr const char* type_name = "UserNotificationListenerAccessStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Notifications::Management::UserNotificationListener>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.management.UserNotificationListener";
-        static constexpr const char* module_name = "winrt.windows.ui.notifications.management";
-        static constexpr const char* type_name = "UserNotificationListener";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -45,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.UI.Notifications.h")
-#include "py.Windows.UI.Notifications.h"
+#if __has_include("py.Windows.UI.Notifications.types.h")
+#include "py.Windows.UI.Notifications.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Notifications::Management

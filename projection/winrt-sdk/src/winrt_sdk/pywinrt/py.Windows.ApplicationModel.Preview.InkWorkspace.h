@@ -4,33 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Graphics.Imaging.h>
 
 #include <winrt/Windows.ApplicationModel.Preview.InkWorkspace.h>
+#include "py.Windows.ApplicationModel.Preview.InkWorkspace.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Preview::InkWorkspace
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.preview.inkworkspace.InkWorkspaceHostedAppManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.inkworkspace";
-        static constexpr const char* type_name = "InkWorkspaceHostedAppManager";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Preview::InkWorkspace

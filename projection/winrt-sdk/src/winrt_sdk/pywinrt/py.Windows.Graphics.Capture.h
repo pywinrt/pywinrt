@@ -6,93 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Graphics.h>
-#include <winrt/Windows.Graphics.DirectX.h>
-#include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
-#include <winrt/Windows.Security.Authorization.AppCapabilityAccess.h>
-#include <winrt/Windows.System.h>
-#include <winrt/Windows.UI.h>
-#include <winrt/Windows.UI.Composition.h>
 
 #include <winrt/Windows.Graphics.Capture.h>
+#include "py.Windows.Graphics.Capture.types.h"
 
-namespace py::proj::Windows::Graphics::Capture
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Capture::GraphicsCaptureDirtyRegionMode> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureAccessKind";
-        static constexpr const char* module_name = "winrt.windows.graphics.capture";
-        static constexpr const char* type_name = "GraphicsCaptureAccessKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureDirtyRegionMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureDirtyRegionMode";
-        static constexpr const char* module_name = "winrt.windows.graphics.capture";
-        static constexpr const char* type_name = "GraphicsCaptureDirtyRegionMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.Direct3D11CaptureFrame";
-        static constexpr const char* module_name = "winrt.windows.graphics.capture";
-        static constexpr const char* type_name = "Direct3D11CaptureFrame";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.Direct3D11CaptureFramePool";
-        static constexpr const char* module_name = "winrt.windows.graphics.capture";
-        static constexpr const char* type_name = "Direct3D11CaptureFramePool";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccess>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureAccess";
-        static constexpr const char* module_name = "winrt.windows.graphics.capture";
-        static constexpr const char* type_name = "GraphicsCaptureAccess";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureItem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureItem";
-        static constexpr const char* module_name = "winrt.windows.graphics.capture";
-        static constexpr const char* type_name = "GraphicsCaptureItem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCapturePicker>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCapturePicker";
-        static constexpr const char* module_name = "winrt.windows.graphics.capture";
-        static constexpr const char* type_name = "GraphicsCapturePicker";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureSession>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureSession";
-        static constexpr const char* module_name = "winrt.windows.graphics.capture";
-        static constexpr const char* type_name = "GraphicsCaptureSession";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -102,32 +19,32 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
+#if __has_include("py.Windows.Graphics.types.h")
+#include "py.Windows.Graphics.types.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.DirectX.h")
-#include "py.Windows.Graphics.DirectX.h"
+#if __has_include("py.Windows.Graphics.DirectX.types.h")
+#include "py.Windows.Graphics.DirectX.types.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.types.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.types.h"
 #endif
 
-#if __has_include("py.Windows.Security.Authorization.AppCapabilityAccess.h")
-#include "py.Windows.Security.Authorization.AppCapabilityAccess.h"
+#if __has_include("py.Windows.Security.Authorization.AppCapabilityAccess.types.h")
+#include "py.Windows.Security.Authorization.AppCapabilityAccess.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
+#if __has_include("py.Windows.UI.Composition.types.h")
+#include "py.Windows.UI.Composition.types.h"
 #endif
 
 namespace py::impl::Windows::Graphics::Capture

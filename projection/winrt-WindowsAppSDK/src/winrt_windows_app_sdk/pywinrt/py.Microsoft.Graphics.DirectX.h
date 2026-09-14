@@ -6,58 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Microsoft.Graphics.DirectX.h>
+#include "py.Microsoft.Graphics.DirectX.types.h"
 
-namespace py::proj::Microsoft::Graphics::DirectX
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Graphics::DirectX::DirectXAlphaMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Graphics::DirectX::DirectXColorSpace> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Graphics::DirectX::DirectXPrimitiveTopology> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::Graphics::DirectX::DirectXAlphaMode>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.directx.DirectXAlphaMode";
-        static constexpr const char* module_name = "winui3.microsoft.graphics.directx";
-        static constexpr const char* type_name = "DirectXAlphaMode";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Graphics::DirectX::DirectXColorSpace>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.directx.DirectXColorSpace";
-        static constexpr const char* module_name = "winui3.microsoft.graphics.directx";
-        static constexpr const char* type_name = "DirectXColorSpace";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.directx.DirectXPixelFormat";
-        static constexpr const char* module_name = "winui3.microsoft.graphics.directx";
-        static constexpr const char* type_name = "DirectXPixelFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Graphics::DirectX::DirectXPrimitiveTopology>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.directx.DirectXPrimitiveTopology";
-        static constexpr const char* module_name = "winui3.microsoft.graphics.directx";
-        static constexpr const char* type_name = "DirectXPrimitiveTopology";
-    };
-}
 
 namespace py::impl::Microsoft::Graphics::DirectX
 {

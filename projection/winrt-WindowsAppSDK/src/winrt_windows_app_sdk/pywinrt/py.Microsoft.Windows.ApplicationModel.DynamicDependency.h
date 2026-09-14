@@ -4,94 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.h>
 
 #include <winrt/Microsoft.Windows.ApplicationModel.DynamicDependency.h>
-
-namespace py::proj::Microsoft::Windows::ApplicationModel::DynamicDependency
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyLifetimeArtifactKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyProcessorArchitectures> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId> = "T{Q:id:}";
+#include "py.Microsoft.Windows.ApplicationModel.DynamicDependency.types.h"
 
 
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyLifetimeArtifactKind>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyLifetimeArtifactKind";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency";
-        static constexpr const char* type_name = "PackageDependencyLifetimeArtifactKind";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyProcessorArchitectures>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyProcessorArchitectures";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency";
-        static constexpr const char* type_name = "PackageDependencyProcessorArchitectures";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency.AddPackageDependencyOptions";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency";
-        static constexpr const char* type_name = "AddPackageDependencyOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency.CreatePackageDependencyOptions";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency";
-        static constexpr const char* type_name = "CreatePackageDependencyOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency.PackageDependency";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency";
-        static constexpr const char* type_name = "PackageDependency";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContext";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency";
-        static constexpr const char* type_name = "PackageDependencyContext";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyRank>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyRank";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency";
-        static constexpr const char* type_name = "PackageDependencyRank";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>
-    {
-        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyContextId_from_tuple";
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.dynamicdependency";
-        static constexpr const char* type_name = "PackageDependencyContextId";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
+#if __has_include("py.Windows.ApplicationModel.types.h")
+#include "py.Windows.ApplicationModel.types.h"
 #endif
 
 namespace py::impl::Microsoft::Windows::ApplicationModel::DynamicDependency

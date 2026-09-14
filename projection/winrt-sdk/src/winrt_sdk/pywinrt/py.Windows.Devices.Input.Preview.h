@@ -4,113 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.HumanInterfaceDevice.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Input.Preview.h>
-
-namespace py::proj::Windows::Devices::Input::Preview
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview> = "i";
+#include "py.Windows.Devices.Input.Preview.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazeDeviceConfigurationStatePreview";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazeDeviceConfigurationStatePreview";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDevicePreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazeDevicePreview";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazeDevicePreview";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazeDeviceWatcherAddedPreviewEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazeDeviceWatcherAddedPreviewEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazeDeviceWatcherPreview";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazeDeviceWatcherPreview";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazeDeviceWatcherRemovedPreviewEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazeDeviceWatcherRemovedPreviewEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazeDeviceWatcherUpdatedPreviewEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazeDeviceWatcherUpdatedPreviewEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazeEnteredPreviewEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazeEnteredPreviewEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazeExitedPreviewEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazeExitedPreviewEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazeInputSourcePreview";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazeInputSourcePreview";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazeMovedPreviewEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazeMovedPreviewEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Input::Preview::GazePointPreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.preview.GazePointPreview";
-        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
-        static constexpr const char* type_name = "GazePointPreview";
-    };
-}
-
-#if __has_include("py.Windows.Devices.HumanInterfaceDevice.h")
-#include "py.Windows.Devices.HumanInterfaceDevice.h"
+#if __has_include("py.Windows.Devices.HumanInterfaceDevice.types.h")
+#include "py.Windows.Devices.HumanInterfaceDevice.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

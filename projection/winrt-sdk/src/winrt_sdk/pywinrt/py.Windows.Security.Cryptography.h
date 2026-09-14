@@ -4,39 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Security.Cryptography.h>
-
-namespace py::proj::Windows::Security::Cryptography
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Cryptography::BinaryStringEncoding> = "i";
+#include "py.Windows.Security.Cryptography.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Security::Cryptography::BinaryStringEncoding>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.BinaryStringEncoding";
-        static constexpr const char* module_name = "winrt.windows.security.cryptography";
-        static constexpr const char* type_name = "BinaryStringEncoding";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Cryptography::CryptographicBuffer>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.CryptographicBuffer";
-        static constexpr const char* module_name = "winrt.windows.security.cryptography";
-        static constexpr const char* type_name = "CryptographicBuffer";
-    };
-}
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Security::Cryptography

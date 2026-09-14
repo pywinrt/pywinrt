@@ -6,79 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.System.RemoteDesktop.Provider.h>
+#include "py.Windows.System.RemoteDesktop.Provider.types.h"
 
-namespace py::proj::Windows::System::RemoteDesktop::Provider
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopLocalAction> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopConnectionStatus";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
-        static constexpr const char* type_name = "RemoteDesktopConnectionStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopLocalAction>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopLocalAction";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
-        static constexpr const char* type_name = "RemoteDesktopLocalAction";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::Provider::PerformLocalActionRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.PerformLocalActionRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
-        static constexpr const char* type_name = "PerformLocalActionRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopConnectionInfo";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
-        static constexpr const char* type_name = "RemoteDesktopConnectionInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopConnectionRemoteInfo";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
-        static constexpr const char* type_name = "RemoteDesktopConnectionRemoteInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopInfo";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
-        static constexpr const char* type_name = "RemoteDesktopInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopRegistrar>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopRegistrar";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
-        static constexpr const char* type_name = "RemoteDesktopRegistrar";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -88,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Windows::System::RemoteDesktop::Provider

@@ -8,76 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.UI.Popups.h>
+#include "py.Windows.UI.Popups.types.h"
 
-namespace py::proj::Windows::UI::Popups
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Popups::MessageDialogOptions> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Popups::Placement> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::UI::Popups::MessageDialogOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.MessageDialogOptions";
-        static constexpr const char* module_name = "winrt.windows.ui.popups";
-        static constexpr const char* type_name = "MessageDialogOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Popups::Placement>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.Placement";
-        static constexpr const char* module_name = "winrt.windows.ui.popups";
-        static constexpr const char* type_name = "Placement";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Popups::MessageDialog>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.MessageDialog";
-        static constexpr const char* module_name = "winrt.windows.ui.popups";
-        static constexpr const char* type_name = "MessageDialog";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Popups::PopupMenu>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.PopupMenu";
-        static constexpr const char* module_name = "winrt.windows.ui.popups";
-        static constexpr const char* type_name = "PopupMenu";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Popups::UICommand>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.UICommand";
-        static constexpr const char* module_name = "winrt.windows.ui.popups";
-        static constexpr const char* type_name = "UICommand";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Popups::UICommandSeparator>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.UICommandSeparator";
-        static constexpr const char* module_name = "winrt.windows.ui.popups";
-        static constexpr const char* type_name = "UICommandSeparator";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Popups::IUICommand>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups._IUICommand";
-        static constexpr const char* module_name = "winrt.windows.ui.popups";
-        static constexpr const char* type_name = "_IUICommand";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

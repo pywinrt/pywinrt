@@ -4,47 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.Composition.h>
 
 #include <winrt/Microsoft.UI.Composition.Diagnostics.h>
-
-namespace py::proj::Microsoft::UI::Composition::Diagnostics
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds> = "I";
+#include "py.Microsoft.UI.Composition.Diagnostics.types.h"
 
 
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.diagnostics.CompositionDebugOverdrawContentKinds";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.diagnostics";
-        static constexpr const char* type_name = "CompositionDebugOverdrawContentKinds";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugHeatMaps>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.diagnostics.CompositionDebugHeatMaps";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.diagnostics";
-        static constexpr const char* type_name = "CompositionDebugHeatMaps";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugSettings>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.diagnostics.CompositionDebugSettings";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.diagnostics";
-        static constexpr const char* type_name = "CompositionDebugSettings";
-    };
-}
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
+#if __has_include("py.Microsoft.UI.Composition.types.h")
+#include "py.Microsoft.UI.Composition.types.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Composition::Diagnostics

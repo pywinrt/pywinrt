@@ -5,32 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Security.Cryptography.DataProtection.h>
+#include "py.Windows.Security.Cryptography.DataProtection.types.h"
 
-namespace py::proj::Windows::Security::Cryptography::DataProtection
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Security::Cryptography::DataProtection::DataProtectionProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.dataprotection.DataProtectionProvider";
-        static constexpr const char* module_name = "winrt.windows.security.cryptography.dataprotection";
-        static constexpr const char* type_name = "DataProtectionProvider";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Security::Cryptography::DataProtection

@@ -6,49 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.System.Power.h>
 
 #include <winrt/Windows.Devices.Power.h>
+#include "py.Windows.Devices.Power.types.h"
 
-namespace py::proj::Windows::Devices::Power
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Power::Battery>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.power.Battery";
-        static constexpr const char* module_name = "winrt.windows.devices.power";
-        static constexpr const char* type_name = "Battery";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Power::BatteryReport>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.power.BatteryReport";
-        static constexpr const char* module_name = "winrt.windows.devices.power";
-        static constexpr const char* type_name = "BatteryReport";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Power::PowerGridData>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.power.PowerGridData";
-        static constexpr const char* module_name = "winrt.windows.devices.power";
-        static constexpr const char* type_name = "PowerGridData";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Power::PowerGridForecast>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.power.PowerGridForecast";
-        static constexpr const char* module_name = "winrt.windows.devices.power";
-        static constexpr const char* type_name = "PowerGridForecast";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -58,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.System.Power.h")
-#include "py.Windows.System.Power.h"
+#if __has_include("py.Windows.System.Power.types.h")
+#include "py.Windows.System.Power.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::Power

@@ -4,85 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.UI.h>
 
 #include <winrt/Microsoft.UI.h>
-
-namespace py::proj::Microsoft::UI
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::DisplayId> = "T{Q:value:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::IconId> = "T{Q:value:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::WindowId> = "T{Q:value:}";
+#include "py.Microsoft.UI.types.h"
 
 
-    template<>
-    struct py_type<winrt::Microsoft::UI::ColorHelper>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.ColorHelper";
-        static constexpr const char* module_name = "winui3.microsoft.ui";
-        static constexpr const char* type_name = "ColorHelper";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Colors>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.Colors";
-        static constexpr const char* module_name = "winui3.microsoft.ui";
-        static constexpr const char* type_name = "Colors";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::IClosableNotifier>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui._IClosableNotifier";
-        static constexpr const char* module_name = "winui3.microsoft.ui";
-        static constexpr const char* type_name = "_IClosableNotifier";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::DisplayId>
-    {
-        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui.DisplayId_from_tuple";
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.DisplayId";
-        static constexpr const char* module_name = "winui3.microsoft.ui";
-        static constexpr const char* type_name = "DisplayId";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::IconId>
-    {
-        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui.IconId_from_tuple";
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.IconId";
-        static constexpr const char* module_name = "winui3.microsoft.ui";
-        static constexpr const char* type_name = "IconId";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::WindowId>
-    {
-        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui.WindowId_from_tuple";
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.WindowId";
-        static constexpr const char* module_name = "winui3.microsoft.ui";
-        static constexpr const char* type_name = "WindowId";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Microsoft::UI

@@ -4,140 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.System.h>
-#include <winrt/Windows.System.RemoteSystems.h>
 
 #include <winrt/Windows.ApplicationModel.AppService.h>
-
-namespace py::proj::Windows::ApplicationModel::AppService
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::AppService::AppServiceClosedStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::AppService::AppServiceConnectionStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::AppService::AppServiceResponseStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponseStatus> = "i";
+#include "py.Windows.ApplicationModel.AppService.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceClosedStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceClosedStatus";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceClosedStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceConnectionStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceConnectionStatus";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceConnectionStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceResponseStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceResponseStatus";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceResponseStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponseStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.StatelessAppServiceResponseStatus";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "StatelessAppServiceResponseStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceCatalog";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceCatalog";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceClosedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceClosedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceConnection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceConnection";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceConnection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceDeferral>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceDeferral";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceDeferral";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceRequest";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceRequestReceivedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceRequestReceivedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceResponse>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceResponse";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceResponse";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.AppServiceTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "AppServiceTriggerDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appservice.StatelessAppServiceResponse";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
-        static constexpr const char* type_name = "StatelessAppServiceResponse";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
+#if __has_include("py.Windows.ApplicationModel.types.h")
+#include "py.Windows.ApplicationModel.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -148,12 +23,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
-#if __has_include("py.Windows.System.RemoteSystems.h")
-#include "py.Windows.System.RemoteSystems.h"
+#if __has_include("py.Windows.System.RemoteSystems.types.h")
+#include "py.Windows.System.RemoteSystems.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::AppService

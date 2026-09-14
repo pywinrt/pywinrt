@@ -6,76 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
 
 #include <winrt/Windows.Media.AppRecording.h>
+#include "py.Windows.Media.AppRecording.types.h"
 
-namespace py::proj::Windows::Media::AppRecording
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotOption> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotOption>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingSaveScreenshotOption";
-        static constexpr const char* module_name = "winrt.windows.media.apprecording";
-        static constexpr const char* type_name = "AppRecordingSaveScreenshotOption";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingManager";
-        static constexpr const char* module_name = "winrt.windows.media.apprecording";
-        static constexpr const char* type_name = "AppRecordingManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingResult";
-        static constexpr const char* module_name = "winrt.windows.media.apprecording";
-        static constexpr const char* type_name = "AppRecordingResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingSaveScreenshotResult";
-        static constexpr const char* module_name = "winrt.windows.media.apprecording";
-        static constexpr const char* type_name = "AppRecordingSaveScreenshotResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingSavedScreenshotInfo";
-        static constexpr const char* module_name = "winrt.windows.media.apprecording";
-        static constexpr const char* type_name = "AppRecordingSavedScreenshotInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingStatus";
-        static constexpr const char* module_name = "winrt.windows.media.apprecording";
-        static constexpr const char* type_name = "AppRecordingStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingStatusDetails";
-        static constexpr const char* module_name = "winrt.windows.media.apprecording";
-        static constexpr const char* type_name = "AppRecordingStatusDetails";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -85,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
 namespace py::impl::Windows::Media::AppRecording

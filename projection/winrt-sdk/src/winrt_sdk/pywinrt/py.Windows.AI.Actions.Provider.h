@@ -4,41 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.AI.Actions.h>
-#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.AI.Actions.Provider.h>
+#include "py.Windows.AI.Actions.Provider.types.h"
 
-namespace py::proj::Windows::AI::Actions::Provider
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.provider._IActionFeedbackHandler";
-        static constexpr const char* module_name = "winrt.windows.ai.actions.provider";
-        static constexpr const char* type_name = "_IActionFeedbackHandler";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::AI::Actions::Provider::IActionProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.provider._IActionProvider";
-        static constexpr const char* module_name = "winrt.windows.ai.actions.provider";
-        static constexpr const char* type_name = "_IActionProvider";
-    };
-}
-
-#if __has_include("py.Windows.AI.Actions.h")
-#include "py.Windows.AI.Actions.h"
+#if __has_include("py.Windows.AI.Actions.types.h")
+#include "py.Windows.AI.Actions.types.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 namespace py::impl::Windows::AI::Actions::Provider

@@ -8,38 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Sensors.Custom.h>
+#include "py.Windows.Devices.Sensors.Custom.types.h"
 
-namespace py::proj::Windows::Devices::Sensors::Custom
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensor>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.custom.CustomSensor";
-        static constexpr const char* module_name = "winrt.windows.devices.sensors.custom";
-        static constexpr const char* type_name = "CustomSensor";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReading>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.custom.CustomSensorReading";
-        static constexpr const char* module_name = "winrt.windows.devices.sensors.custom";
-        static constexpr const char* type_name = "CustomSensorReading";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.custom.CustomSensorReadingChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.sensors.custom";
-        static constexpr const char* type_name = "CustomSensorReadingChangedEventArgs";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

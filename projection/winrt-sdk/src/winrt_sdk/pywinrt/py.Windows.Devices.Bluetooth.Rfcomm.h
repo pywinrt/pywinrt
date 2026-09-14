@@ -4,62 +4,19 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Bluetooth.h>
-#include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Networking.h>
-#include <winrt/Windows.Networking.Sockets.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Devices.Bluetooth.Rfcomm.h>
+#include "py.Windows.Devices.Bluetooth.Rfcomm.types.h"
 
-namespace py::proj::Windows::Devices::Bluetooth::Rfcomm
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.rfcomm.RfcommDeviceService";
-        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
-        static constexpr const char* type_name = "RfcommDeviceService";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.rfcomm.RfcommDeviceServicesResult";
-        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
-        static constexpr const char* type_name = "RfcommDeviceServicesResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId";
-        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
-        static constexpr const char* type_name = "RfcommServiceId";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.rfcomm.RfcommServiceProvider";
-        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
-        static constexpr const char* type_name = "RfcommServiceProvider";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Bluetooth.h")
-#include "py.Windows.Devices.Bluetooth.h"
+#if __has_include("py.Windows.Devices.Bluetooth.types.h")
+#include "py.Windows.Devices.Bluetooth.types.h"
 #endif
 
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
+#if __has_include("py.Windows.Devices.Enumeration.types.h")
+#include "py.Windows.Devices.Enumeration.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -70,16 +27,16 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
+#if __has_include("py.Windows.Networking.types.h")
+#include "py.Windows.Networking.types.h"
 #endif
 
-#if __has_include("py.Windows.Networking.Sockets.h")
-#include "py.Windows.Networking.Sockets.h"
+#if __has_include("py.Windows.Networking.Sockets.types.h")
+#include "py.Windows.Networking.Sockets.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::Bluetooth::Rfcomm

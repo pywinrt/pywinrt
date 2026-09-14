@@ -4,57 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.Core.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Microsoft.Windows.AppLifecycle.h>
-
-namespace py::proj::Microsoft::Windows::AppLifecycle
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AppLifecycle::ExtendedActivationKind> = "i";
+#include "py.Microsoft.Windows.AppLifecycle.types.h"
 
 
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppLifecycle::ExtendedActivationKind>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applifecycle.ExtendedActivationKind";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applifecycle";
-        static constexpr const char* type_name = "ExtendedActivationKind";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applifecycle.ActivationRegistrationManager";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applifecycle";
-        static constexpr const char* type_name = "ActivationRegistrationManager";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppLifecycle::AppActivationArguments>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applifecycle.AppActivationArguments";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applifecycle";
-        static constexpr const char* type_name = "AppActivationArguments";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppLifecycle::AppInstance>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applifecycle.AppInstance";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applifecycle";
-        static constexpr const char* type_name = "AppInstance";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.Core.h")
-#include "py.Windows.ApplicationModel.Core.h"
+#if __has_include("py.Windows.ApplicationModel.Core.types.h")
+#include "py.Windows.ApplicationModel.Core.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

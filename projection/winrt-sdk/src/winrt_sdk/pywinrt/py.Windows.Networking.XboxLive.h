@@ -6,167 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Networking.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Networking.XboxLive.h>
+#include "py.Windows.Networking.XboxLive.types.h"
 
-namespace py::proj::Windows::Networking::XboxLive
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::XboxLive::XboxLiveNetworkAccessKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurementStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::XboxLive::XboxLiveSocketKind> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveEndpointPairCreationBehaviors";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveEndpointPairCreationBehaviors";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveEndpointPairCreationStatus";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveEndpointPairCreationStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveEndpointPairState";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveEndpointPairState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveNetworkAccessKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveNetworkAccessKind";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveNetworkAccessKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurementStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveQualityOfServiceMeasurementStatus";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveQualityOfServiceMeasurementStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveQualityOfServiceMetric";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveQualityOfServiceMetric";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveSocketKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveSocketKind";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveSocketKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveDeviceAddress";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveDeviceAddress";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveEndpointPair";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveEndpointPair";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveEndpointPairCreationResult";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveEndpointPairCreationResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveEndpointPairStateChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveEndpointPairStateChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveEndpointPairTemplate";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveEndpointPairTemplate";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveInboundEndpointPairCreatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveInboundEndpointPairCreatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveQualityOfServiceMeasurement";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveQualityOfServiceMeasurement";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveQualityOfServiceMetricResult";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveQualityOfServiceMetricResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.xboxlive.XboxLiveQualityOfServicePrivatePayloadResult";
-        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
-        static constexpr const char* type_name = "XboxLiveQualityOfServicePrivatePayloadResult";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -176,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
+#if __has_include("py.Windows.Networking.types.h")
+#include "py.Windows.Networking.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Networking::XboxLive

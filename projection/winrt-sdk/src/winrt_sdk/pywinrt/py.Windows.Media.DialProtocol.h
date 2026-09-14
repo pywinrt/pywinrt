@@ -4,132 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.UI.Popups.h>
 
 #include <winrt/Windows.Media.DialProtocol.h>
-
-namespace py::proj::Windows::Media::DialProtocol
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::DialProtocol::DialAppLaunchResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::DialProtocol::DialAppState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::DialProtocol::DialAppStopResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::DialProtocol::DialDeviceDisplayStatus> = "i";
+#include "py.Windows.Media.DialProtocol.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialAppLaunchResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialAppLaunchResult";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialAppLaunchResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialAppState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialAppState";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialAppState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialAppStopResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialAppStopResult";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialAppStopResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialDeviceDisplayStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDeviceDisplayStatus";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialDeviceDisplayStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialApp>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialApp";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialApp";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialAppStateDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialAppStateDetails";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialAppStateDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDevice";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialDevicePicker>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDevicePicker";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialDevicePicker";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialDevicePickerFilter>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDevicePickerFilter";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialDevicePickerFilter";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDeviceSelectedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialDeviceSelectedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDisconnectButtonClickedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialDisconnectButtonClickedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::DialProtocol::DialReceiverApp>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialReceiverApp";
-        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
-        static constexpr const char* type_name = "DialReceiverApp";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
+#if __has_include("py.Windows.Devices.Enumeration.types.h")
+#include "py.Windows.Devices.Enumeration.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -140,12 +23,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
+#if __has_include("py.Windows.UI.Popups.types.h")
+#include "py.Windows.UI.Popups.types.h"
 #endif
 
 namespace py::impl::Windows::Media::DialProtocol

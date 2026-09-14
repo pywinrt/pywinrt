@@ -4,49 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.Contacts.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.ApplicationModel.Contacts.Provider.h>
-
-namespace py::proj::Windows::ApplicationModel::Contacts::Provider
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Contacts::Provider::AddContactResult> = "i";
+#include "py.Windows.ApplicationModel.Contacts.Provider.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Contacts::Provider::AddContactResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.provider.AddContactResult";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.provider";
-        static constexpr const char* type_name = "AddContactResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.provider.ContactPickerUI";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.provider";
-        static constexpr const char* type_name = "ContactPickerUI";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.provider.ContactRemovedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.provider";
-        static constexpr const char* type_name = "ContactRemovedEventArgs";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.Contacts.h")
-#include "py.Windows.ApplicationModel.Contacts.h"
+#if __has_include("py.Windows.ApplicationModel.Contacts.types.h")
+#include "py.Windows.ApplicationModel.Contacts.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

@@ -6,36 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.UI.Xaml.Automation.Text.h>
+#include "py.Windows.UI.Xaml.Automation.Text.types.h"
 
-namespace py::proj::Windows::UI::Xaml::Automation::Text
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Xaml::Automation::Text::TextUnit> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.text.TextPatternRangeEndpoint";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.text";
-        static constexpr const char* type_name = "TextPatternRangeEndpoint";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Automation::Text::TextUnit>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.text.TextUnit";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.text";
-        static constexpr const char* type_name = "TextUnit";
-    };
-}
 
 namespace py::impl::Windows::UI::Xaml::Automation::Text
 {

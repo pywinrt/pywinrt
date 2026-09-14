@@ -4,76 +4,11 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Globalization.PhoneNumberFormatting.h>
+#include "py.Windows.Globalization.PhoneNumberFormatting.types.h"
 
-namespace py::proj::Windows::Globalization::PhoneNumberFormatting
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PhoneNumberFormat";
-        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
-        static constexpr const char* type_name = "PhoneNumberFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PhoneNumberMatchResult";
-        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
-        static constexpr const char* type_name = "PhoneNumberMatchResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PhoneNumberParseResult";
-        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
-        static constexpr const char* type_name = "PhoneNumberParseResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PredictedPhoneNumberKind";
-        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
-        static constexpr const char* type_name = "PredictedPhoneNumberKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PhoneNumberFormatter";
-        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
-        static constexpr const char* type_name = "PhoneNumberFormatter";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PhoneNumberInfo";
-        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
-        static constexpr const char* type_name = "PhoneNumberInfo";
-    };
-}
 
 namespace py::impl::Windows::Globalization::PhoneNumberFormatting
 {

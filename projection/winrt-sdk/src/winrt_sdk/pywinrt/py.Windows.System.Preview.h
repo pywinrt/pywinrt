@@ -4,56 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Sensors.h>
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.System.Preview.h>
-
-namespace py::proj::Windows::System::Preview
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Preview::HingeState> = "i";
+#include "py.Windows.System.Preview.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::System::Preview::HingeState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.preview.HingeState";
-        static constexpr const char* module_name = "winrt.windows.system.preview";
-        static constexpr const char* type_name = "HingeState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.preview.TwoPanelHingedDevicePosturePreview";
-        static constexpr const char* module_name = "winrt.windows.system.preview";
-        static constexpr const char* type_name = "TwoPanelHingedDevicePosturePreview";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.preview.TwoPanelHingedDevicePosturePreviewReading";
-        static constexpr const char* module_name = "winrt.windows.system.preview";
-        static constexpr const char* type_name = "TwoPanelHingedDevicePosturePreviewReading";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.system.preview";
-        static constexpr const char* type_name = "TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Sensors.h")
-#include "py.Windows.Devices.Sensors.h"
+#if __has_include("py.Windows.Devices.Sensors.types.h")
+#include "py.Windows.Devices.Sensors.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

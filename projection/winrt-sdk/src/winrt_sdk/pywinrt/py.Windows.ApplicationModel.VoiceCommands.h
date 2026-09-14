@@ -4,127 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.AppService.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Globalization.h>
-#include <winrt/Windows.Media.SpeechRecognition.h>
-#include <winrt/Windows.Storage.h>
 
 #include <winrt/Windows.ApplicationModel.VoiceCommands.h>
-
-namespace py::proj::Windows::ApplicationModel::VoiceCommands
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType> = "i";
+#include "py.Windows.ApplicationModel.VoiceCommands.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandCompletionReason";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandCompletionReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandContentTileType";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandContentTileType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommand";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommand";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandCompletedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandCompletedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandConfirmationResult";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandConfirmationResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandContentTile";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandContentTile";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandDefinition";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandDefinition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandDefinitionManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandDefinitionManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandDisambiguationResult";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandDisambiguationResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandResponse";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandResponse";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandServiceConnection";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandServiceConnection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.voicecommands.VoiceCommandUserMessage";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
-        static constexpr const char* type_name = "VoiceCommandUserMessage";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.AppService.h")
-#include "py.Windows.ApplicationModel.AppService.h"
+#if __has_include("py.Windows.ApplicationModel.AppService.types.h")
+#include "py.Windows.ApplicationModel.AppService.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -135,16 +23,16 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
+#if __has_include("py.Windows.Globalization.types.h")
+#include "py.Windows.Globalization.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.SpeechRecognition.h")
-#include "py.Windows.Media.SpeechRecognition.h"
+#if __has_include("py.Windows.Media.SpeechRecognition.types.h")
+#include "py.Windows.Media.SpeechRecognition.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::VoiceCommands

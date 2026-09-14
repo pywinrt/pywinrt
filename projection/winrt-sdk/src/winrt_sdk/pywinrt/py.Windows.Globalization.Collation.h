@@ -7,30 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Globalization.Collation.h>
+#include "py.Windows.Globalization.Collation.types.h"
 
-namespace py::proj::Windows::Globalization::Collation
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::Collation::CharacterGrouping>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.collation.CharacterGrouping";
-        static constexpr const char* module_name = "winrt.windows.globalization.collation";
-        static constexpr const char* type_name = "CharacterGrouping";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::Collation::CharacterGroupings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.collation.CharacterGroupings";
-        static constexpr const char* module_name = "winrt.windows.globalization.collation";
-        static constexpr const char* type_name = "CharacterGroupings";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"

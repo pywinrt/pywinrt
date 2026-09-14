@@ -4,46 +4,21 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.Activation.h>
-#include <winrt/Windows.Foundation.Numerics.h>
-#include <winrt/Windows.Perception.Spatial.h>
 
 #include <winrt/Windows.ApplicationModel.Preview.Holographic.h>
+#include "py.Windows.ApplicationModel.Preview.Holographic.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Preview::Holographic
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.preview.holographic.HolographicApplicationPreview";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.holographic";
-        static constexpr const char* type_name = "HolographicApplicationPreview";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.preview.holographic.HolographicKeyboardPlacementOverridePreview";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.holographic";
-        static constexpr const char* type_name = "HolographicKeyboardPlacementOverridePreview";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
+#if __has_include("py.Windows.ApplicationModel.Activation.types.h")
+#include "py.Windows.ApplicationModel.Activation.types.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
 #endif
 
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
+#if __has_include("py.Windows.Perception.Spatial.types.h")
+#include "py.Windows.Perception.Spatial.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Preview::Holographic

@@ -7,33 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Graphics.Effects.h>
 
 #include <winrt/Microsoft.UI.Composition.Effects.h>
+#include "py.Microsoft.UI.Composition.Effects.types.h"
 
-namespace py::proj::Microsoft::UI::Composition::Effects
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Composition::Effects::SceneLightingEffectReflectanceModel> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::Effects::SceneLightingEffectReflectanceModel>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.effects.SceneLightingEffectReflectanceModel";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.effects";
-        static constexpr const char* type_name = "SceneLightingEffectReflectanceModel";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::Effects::SceneLightingEffect>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.effects.SceneLightingEffect";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.effects";
-        static constexpr const char* type_name = "SceneLightingEffect";
-    };
-}
 
 #if __has_include("py.Windows.Graphics.Effects.h")
 #include "py.Windows.Graphics.Effects.h"

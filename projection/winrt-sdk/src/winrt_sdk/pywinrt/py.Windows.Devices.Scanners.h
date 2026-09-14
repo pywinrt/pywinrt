@@ -6,139 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Graphics.Printing.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Devices.Scanners.h>
+#include "py.Windows.Devices.Scanners.types.h"
 
-namespace py::proj::Windows::Devices::Scanners
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Scanners::ImageScannerColorMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Scanners::ImageScannerFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Scanners::ImageScannerScanSource> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Scanners::ImageScannerResolution> = "T{f:dpi_x:f:dpi_y:}";
-
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerAutoCroppingMode";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScannerAutoCroppingMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerColorMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerColorMode";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScannerColorMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerFormat";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScannerFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerScanSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerScanSource";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScannerScanSource";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScanner>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScanner";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScanner";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerAutoConfiguration";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScannerAutoConfiguration";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerFeederConfiguration";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScannerFeederConfiguration";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerFlatbedConfiguration";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScannerFlatbedConfiguration";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerPreviewResult";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScannerPreviewResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerScanResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerScanResult";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScannerScanResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners._IImageScannerFormatConfiguration";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "_IImageScannerFormatConfiguration";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners._IImageScannerSourceConfiguration";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "_IImageScannerSourceConfiguration";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerResolution>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_scanners.ImageScannerResolution_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerResolution";
-        static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "ImageScannerResolution";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -148,16 +19,16 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.Printing.h")
-#include "py.Windows.Graphics.Printing.h"
+#if __has_include("py.Windows.Graphics.Printing.types.h")
+#include "py.Windows.Graphics.Printing.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::Scanners

@@ -6,52 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.ApplicationModel.Store.LicenseManagement.h>
+#include "py.Windows.ApplicationModel.Store.LicenseManagement.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Store::LicenseManagement
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseRefreshOption> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseRefreshOption>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.licensemanagement.LicenseRefreshOption";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
-        static constexpr const char* type_name = "LicenseRefreshOption";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.licensemanagement.LicenseManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
-        static constexpr const char* type_name = "LicenseManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.licensemanagement.LicenseSatisfactionInfo";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
-        static constexpr const char* type_name = "LicenseSatisfactionInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.licensemanagement.LicenseSatisfactionResult";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
-        static constexpr const char* type_name = "LicenseSatisfactionResult";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -61,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Store::LicenseManagement

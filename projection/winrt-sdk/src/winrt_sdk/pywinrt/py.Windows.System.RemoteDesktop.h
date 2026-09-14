@@ -6,22 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.System.RemoteDesktop.h>
+#include "py.Windows.System.RemoteDesktop.types.h"
 
-namespace py::proj::Windows::System::RemoteDesktop
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::InteractiveSession>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.InteractiveSession";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop";
-        static constexpr const char* type_name = "InteractiveSession";
-    };
-}
 
 namespace py::impl::Windows::System::RemoteDesktop
 {

@@ -6,49 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Microsoft.Windows.AI.ContentSafety.h>
+#include "py.Microsoft.Windows.AI.ContentSafety.types.h"
 
-namespace py::proj::Microsoft::Windows::AI::ContentSafety
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AI::ContentSafety::SeverityLevel> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AI::ContentSafety::SeverityLevel>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.contentsafety.SeverityLevel";
-        static constexpr const char* module_name = "winui3.microsoft.windows.ai.contentsafety";
-        static constexpr const char* type_name = "SeverityLevel";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AI::ContentSafety::ContentFilterOptions>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.contentsafety.ContentFilterOptions";
-        static constexpr const char* module_name = "winui3.microsoft.windows.ai.contentsafety";
-        static constexpr const char* type_name = "ContentFilterOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AI::ContentSafety::ImageContentFilterSeverity>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.contentsafety.ImageContentFilterSeverity";
-        static constexpr const char* module_name = "winui3.microsoft.windows.ai.contentsafety";
-        static constexpr const char* type_name = "ImageContentFilterSeverity";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AI::ContentSafety::TextContentFilterSeverity>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.contentsafety.TextContentFilterSeverity";
-        static constexpr const char* module_name = "winui3.microsoft.windows.ai.contentsafety";
-        static constexpr const char* type_name = "TextContentFilterSeverity";
-    };
-}
 
 namespace py::impl::Microsoft::Windows::AI::ContentSafety
 {

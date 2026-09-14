@@ -6,162 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Security.Cryptography.Core.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.Security.Credentials.h>
+#include "py.Windows.Security.Credentials.types.h"
 
-namespace py::proj::Windows::Security::Credentials
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Credentials::KeyCredentialAttestationStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Credentials::KeyCredentialCreationOption> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Credentials::KeyCredentialStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Credentials::WebAccountPictureSize> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Credentials::WebAccountState> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialAttestationStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialAttestationStatus";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "KeyCredentialAttestationStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialCreationOption>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialCreationOption";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "KeyCredentialCreationOption";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialStatus";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "KeyCredentialStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::WebAccountPictureSize>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.WebAccountPictureSize";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "WebAccountPictureSize";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::WebAccountState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.WebAccountState";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "WebAccountState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::KeyCredential>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredential";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "KeyCredential";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialAttestationResult";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "KeyCredentialAttestationResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialManager";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "KeyCredentialManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialOperationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialOperationResult";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "KeyCredentialOperationResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialRetrievalResult";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "KeyCredentialRetrievalResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::PasswordCredential>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.PasswordCredential";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "PasswordCredential";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.PasswordCredentialPropertyStore";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "PasswordCredentialPropertyStore";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::PasswordVault>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.PasswordVault";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "PasswordVault";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::WebAccount>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.WebAccount";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "WebAccount";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::WebAccountProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.WebAccountProvider";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "WebAccountProvider";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Credentials::IWebAccount>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials._IWebAccount";
-        static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "_IWebAccount";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -171,16 +19,16 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Security.Cryptography.Core.h")
-#include "py.Windows.Security.Cryptography.Core.h"
+#if __has_include("py.Windows.Security.Cryptography.Core.types.h")
+#include "py.Windows.Security.Cryptography.Core.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Security::Credentials

@@ -5,40 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Storage.h>
 
 #include <winrt/Windows.ApplicationModel.Calls.Provider.h>
+#include "py.Windows.ApplicationModel.Calls.Provider.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Calls::Provider
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.provider.PhoneCallOrigin";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.provider";
-        static constexpr const char* type_name = "PhoneCallOrigin";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.provider.PhoneCallOriginManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.provider";
-        static constexpr const char* type_name = "PhoneCallOriginManager";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Calls::Provider

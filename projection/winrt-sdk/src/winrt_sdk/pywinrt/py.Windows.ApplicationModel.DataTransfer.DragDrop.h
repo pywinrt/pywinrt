@@ -6,25 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.ApplicationModel.DataTransfer.DragDrop.h>
+#include "py.Windows.ApplicationModel.DataTransfer.DragDrop.types.h"
 
-namespace py::proj::Windows::ApplicationModel::DataTransfer::DragDrop
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers> = "I";
-
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.DragDropModifiers";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop";
-        static constexpr const char* type_name = "DragDropModifiers";
-    };
-}
 
 namespace py::impl::Windows::ApplicationModel::DataTransfer::DragDrop
 {

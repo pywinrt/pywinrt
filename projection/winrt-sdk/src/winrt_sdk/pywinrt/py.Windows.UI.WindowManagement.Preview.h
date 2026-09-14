@@ -4,33 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.UI.WindowManagement.h>
 
 #include <winrt/Windows.UI.WindowManagement.Preview.h>
+#include "py.Windows.UI.WindowManagement.Preview.types.h"
 
-namespace py::proj::Windows::UI::WindowManagement::Preview
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::UI::WindowManagement::Preview::WindowManagementPreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.preview.WindowManagementPreview";
-        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement.preview";
-        static constexpr const char* type_name = "WindowManagementPreview";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.WindowManagement.h")
-#include "py.Windows.UI.WindowManagement.h"
+#if __has_include("py.Windows.UI.WindowManagement.types.h")
+#include "py.Windows.UI.WindowManagement.types.h"
 #endif
 
 namespace py::impl::Windows::UI::WindowManagement::Preview

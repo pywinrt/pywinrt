@@ -4,257 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.Core.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Graphics.h>
-#include <winrt/Windows.Media.Core.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Media.Miracast.h>
-
-namespace py::proj::Windows::Media::Miracast
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Miracast::MiracastReceiverAuthorizationMethod> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDeviceUsageMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Miracast::MiracastReceiverListeningStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Miracast::MiracastReceiverSessionStartStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Miracast::MiracastReceiverWiFiStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Miracast::MiracastTransmitterAuthorizationStatus> = "i";
+#include "py.Windows.Media.Miracast.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverApplySettingsStatus";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverApplySettingsStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverAuthorizationMethod>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverAuthorizationMethod";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverAuthorizationMethod";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverDisconnectReason";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverDisconnectReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDeviceUsageMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverGameControllerDeviceUsageMode";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverGameControllerDeviceUsageMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverListeningStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverListeningStatus";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverListeningStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverSessionStartStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverSessionStartStatus";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverSessionStartStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverWiFiStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverWiFiStatus";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverWiFiStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastTransmitterAuthorizationStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastTransmitterAuthorizationStatus";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastTransmitterAuthorizationStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiver>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiver";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiver";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverApplySettingsResult";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverApplySettingsResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverConnection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverConnection";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverConnection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverConnectionCreatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverConnectionCreatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverCursorImageChannel";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverCursorImageChannel";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverCursorImageChannelSettings";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverCursorImageChannelSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverDisconnectedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverDisconnectedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverGameControllerDevice";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverGameControllerDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverInputDevices>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverInputDevices";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverInputDevices";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverKeyboardDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverKeyboardDevice";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverKeyboardDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverMediaSourceCreatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverMediaSourceCreatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverSession>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverSession";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverSession";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverSessionStartResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverSessionStartResult";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverSessionStartResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverSettings";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverStatus";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverStreamControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverStreamControl";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverStreamControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastReceiverVideoStreamSettings";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastReceiverVideoStreamSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Miracast::MiracastTransmitter>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.miracast.MiracastTransmitter";
-        static constexpr const char* module_name = "winrt.windows.media.miracast";
-        static constexpr const char* type_name = "MiracastTransmitter";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.Core.h")
-#include "py.Windows.ApplicationModel.Core.h"
+#if __has_include("py.Windows.ApplicationModel.Core.types.h")
+#include "py.Windows.ApplicationModel.Core.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -265,16 +23,16 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
+#if __has_include("py.Windows.Graphics.types.h")
+#include "py.Windows.Graphics.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.Core.h")
-#include "py.Windows.Media.Core.h"
+#if __has_include("py.Windows.Media.Core.types.h")
+#include "py.Windows.Media.Core.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Miracast

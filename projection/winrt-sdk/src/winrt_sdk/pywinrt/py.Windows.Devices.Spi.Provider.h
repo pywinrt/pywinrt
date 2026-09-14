@@ -8,68 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Spi.Provider.h>
+#include "py.Windows.Devices.Spi.Provider.types.h"
 
-namespace py::proj::Windows::Devices::Spi::Provider
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Spi::Provider::ProviderSpiMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Spi::Provider::ProviderSpiSharingMode> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider.ProviderSpiMode";
-        static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
-        static constexpr const char* type_name = "ProviderSpiMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiSharingMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider.ProviderSpiSharingMode";
-        static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
-        static constexpr const char* type_name = "ProviderSpiSharingMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider.ProviderSpiConnectionSettings";
-        static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
-        static constexpr const char* type_name = "ProviderSpiConnectionSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider._ISpiControllerProvider";
-        static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
-        static constexpr const char* type_name = "_ISpiControllerProvider";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider._ISpiDeviceProvider";
-        static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
-        static constexpr const char* type_name = "_ISpiDeviceProvider";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Spi::Provider::ISpiProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider._ISpiProvider";
-        static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
-        static constexpr const char* type_name = "_ISpiProvider";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

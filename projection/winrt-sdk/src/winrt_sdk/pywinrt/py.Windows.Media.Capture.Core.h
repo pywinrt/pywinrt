@@ -5,40 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Media.Capture.h>
 
 #include <winrt/Windows.Media.Capture.Core.h>
+#include "py.Windows.Media.Capture.Core.types.h"
 
-namespace py::proj::Windows::Media::Capture::Core
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.core.VariablePhotoCapturedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.capture.core";
-        static constexpr const char* type_name = "VariablePhotoCapturedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.core.VariablePhotoSequenceCapture";
-        static constexpr const char* module_name = "winrt.windows.media.capture.core";
-        static constexpr const char* type_name = "VariablePhotoSequenceCapture";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Media.Capture.h")
-#include "py.Windows.Media.Capture.h"
+#if __has_include("py.Windows.Media.Capture.types.h")
+#include "py.Windows.Media.Capture.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Capture::Core

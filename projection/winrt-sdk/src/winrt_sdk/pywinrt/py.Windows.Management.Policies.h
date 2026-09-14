@@ -5,56 +5,21 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.Management.Policies.h>
+#include "py.Windows.Management.Policies.types.h"
 
-namespace py::proj::Windows::Management::Policies
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Management::Policies::NamedPolicyKind> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Management::Policies::NamedPolicyKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.policies.NamedPolicyKind";
-        static constexpr const char* module_name = "winrt.windows.management.policies";
-        static constexpr const char* type_name = "NamedPolicyKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Management::Policies::NamedPolicy>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.policies.NamedPolicy";
-        static constexpr const char* module_name = "winrt.windows.management.policies";
-        static constexpr const char* type_name = "NamedPolicy";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Management::Policies::NamedPolicyData>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.policies.NamedPolicyData";
-        static constexpr const char* module_name = "winrt.windows.management.policies";
-        static constexpr const char* type_name = "NamedPolicyData";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Management::Policies

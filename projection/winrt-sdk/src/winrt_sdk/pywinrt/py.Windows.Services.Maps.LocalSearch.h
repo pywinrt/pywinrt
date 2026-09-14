@@ -4,91 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Globalization.h>
-#include <winrt/Windows.Services.Maps.h>
 
 #include <winrt/Windows.Services.Maps.LocalSearch.h>
-
-namespace py::proj::Windows::Services::Maps::LocalSearch
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderStatus> = "i";
+#include "py.Windows.Services.Maps.LocalSearch.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocationFinderStatus";
-        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
-        static constexpr const char* type_name = "LocalLocationFinderStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalCategories";
-        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
-        static constexpr const char* type_name = "LocalCategories";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocation";
-        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
-        static constexpr const char* type_name = "LocalLocation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocationFinder";
-        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
-        static constexpr const char* type_name = "LocalLocationFinder";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocationFinderResult";
-        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
-        static constexpr const char* type_name = "LocalLocationFinderResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocationHoursOfOperationItem";
-        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
-        static constexpr const char* type_name = "LocalLocationHoursOfOperationItem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocationRatingInfo";
-        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
-        static constexpr const char* type_name = "LocalLocationRatingInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.PlaceInfoHelper";
-        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
-        static constexpr const char* type_name = "PlaceInfoHelper";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
+#if __has_include("py.Windows.Devices.Geolocation.types.h")
+#include "py.Windows.Devices.Geolocation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -99,12 +23,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
+#if __has_include("py.Windows.Globalization.types.h")
+#include "py.Windows.Globalization.types.h"
 #endif
 
-#if __has_include("py.Windows.Services.Maps.h")
-#include "py.Windows.Services.Maps.h"
+#if __has_include("py.Windows.Services.Maps.types.h")
+#include "py.Windows.Services.Maps.types.h"
 #endif
 
 namespace py::impl::Windows::Services::Maps::LocalSearch

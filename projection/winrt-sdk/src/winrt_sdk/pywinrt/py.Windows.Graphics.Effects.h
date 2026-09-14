@@ -6,30 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.Graphics.Effects.h>
+#include "py.Windows.Graphics.Effects.types.h"
 
-namespace py::proj::Windows::Graphics::Effects
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Effects::IGraphicsEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.effects._IGraphicsEffect";
-        static constexpr const char* module_name = "winrt.windows.graphics.effects";
-        static constexpr const char* type_name = "_IGraphicsEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.effects._IGraphicsEffectSource";
-        static constexpr const char* module_name = "winrt.windows.graphics.effects";
-        static constexpr const char* type_name = "_IGraphicsEffectSource";
-    };
-}
 
 namespace py::impl::Windows::Graphics::Effects
 {

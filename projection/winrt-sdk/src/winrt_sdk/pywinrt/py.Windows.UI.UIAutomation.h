@@ -6,46 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.UI.UIAutomation.h>
+#include "py.Windows.UI.UIAutomation.types.h"
 
-namespace py::proj::Windows::UI::UIAutomation
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::UI::UIAutomation::AutomationConnection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.AutomationConnection";
-        static constexpr const char* module_name = "winrt.windows.ui.uiautomation";
-        static constexpr const char* type_name = "AutomationConnection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.AutomationConnectionBoundObject";
-        static constexpr const char* module_name = "winrt.windows.ui.uiautomation";
-        static constexpr const char* type_name = "AutomationConnectionBoundObject";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::UIAutomation::AutomationElement>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.AutomationElement";
-        static constexpr const char* module_name = "winrt.windows.ui.uiautomation";
-        static constexpr const char* type_name = "AutomationElement";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::UIAutomation::AutomationTextRange>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.AutomationTextRange";
-        static constexpr const char* module_name = "winrt.windows.ui.uiautomation";
-        static constexpr const char* type_name = "AutomationTextRange";
-    };
-}
 
 namespace py::impl::Windows::UI::UIAutomation
 {

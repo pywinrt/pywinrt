@@ -6,174 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.Web.Http.h>
 
 #include <winrt/Windows.Media.Streaming.Adaptive.h>
+#include "py.Windows.Media.Streaming.Adaptive.types.h"
 
-namespace py::proj::Windows::Media::Streaming::Adaptive
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceResourceType> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceCreationStatus";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceCreationStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDiagnosticType";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDiagnosticType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDownloadBitrateChangedReason";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadBitrateChangedReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceResourceType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceResourceType";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceResourceType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSource";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSource";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceAdvancedSettings";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceAdvancedSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceCorrelatedTimes";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceCorrelatedTimes";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceCreationResult";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceCreationResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDiagnosticAvailableEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDiagnostics";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDiagnostics";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadBitrateChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadCompletedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDownloadFailedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadFailedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDownloadRequestedDeferral";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadRequestedDeferral";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDownloadResult";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDownloadStatistics";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadStatistics";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.streaming.adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
-        static constexpr const char* type_name = "AdaptiveMediaSourcePlaybackBitrateChangedEventArgs";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -183,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
+#if __has_include("py.Windows.Web.Http.types.h")
+#include "py.Windows.Web.Http.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Streaming::Adaptive

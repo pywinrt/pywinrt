@@ -4,50 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.Wallet.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.ApplicationModel.Wallet.System.h>
-
-namespace py::proj::Windows::ApplicationModel::Wallet::System
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Wallet::System::WalletItemAppAssociation> = "i";
+#include "py.Windows.ApplicationModel.Wallet.System.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletItemAppAssociation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.wallet.system.WalletItemAppAssociation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet.system";
-        static constexpr const char* type_name = "WalletItemAppAssociation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.wallet.system.WalletItemSystemStore";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet.system";
-        static constexpr const char* type_name = "WalletItemSystemStore";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletManagerSystem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.wallet.system.WalletManagerSystem";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet.system";
-        static constexpr const char* type_name = "WalletManagerSystem";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.Wallet.h")
-#include "py.Windows.ApplicationModel.Wallet.h"
+#if __has_include("py.Windows.ApplicationModel.Wallet.types.h")
+#include "py.Windows.ApplicationModel.Wallet.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -58,8 +23,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Wallet::System

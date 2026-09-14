@@ -7,63 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.ApplicationModel.ExtendedExecution.Foreground.h>
+#include "py.Windows.ApplicationModel.ExtendedExecution.Foreground.types.h"
 
-namespace py::proj::Windows::ApplicationModel::ExtendedExecution::Foreground
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.foreground.ExtendedExecutionForegroundReason";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
-        static constexpr const char* type_name = "ExtendedExecutionForegroundReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.foreground.ExtendedExecutionForegroundResult";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
-        static constexpr const char* type_name = "ExtendedExecutionForegroundResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.foreground.ExtendedExecutionForegroundRevokedReason";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
-        static constexpr const char* type_name = "ExtendedExecutionForegroundRevokedReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.foreground.ExtendedExecutionForegroundRevokedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
-        static constexpr const char* type_name = "ExtendedExecutionForegroundRevokedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.foreground.ExtendedExecutionForegroundSession";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
-        static constexpr const char* type_name = "ExtendedExecutionForegroundSession";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

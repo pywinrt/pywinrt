@@ -5,32 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.UI.Composition.h>
 
 #include <winrt/Windows.UI.Composition.Core.h>
+#include "py.Windows.UI.Composition.Core.types.h"
 
-namespace py::proj::Windows::UI::Composition::Core
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::UI::Composition::Core::CompositorController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.core.CompositorController";
-        static constexpr const char* module_name = "winrt.windows.ui.composition.core";
-        static constexpr const char* type_name = "CompositorController";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
+#if __has_include("py.Windows.UI.Composition.types.h")
+#include "py.Windows.UI.Composition.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Composition::Core

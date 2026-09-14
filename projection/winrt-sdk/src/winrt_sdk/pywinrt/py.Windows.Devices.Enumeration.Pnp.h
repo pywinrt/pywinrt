@@ -4,65 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Enumeration.Pnp.h>
-
-namespace py::proj::Windows::Devices::Enumeration::Pnp
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectType> = "i";
+#include "py.Windows.Devices.Enumeration.Pnp.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.pnp.PnpObjectType";
-        static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
-        static constexpr const char* type_name = "PnpObjectType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObject>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.pnp.PnpObject";
-        static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
-        static constexpr const char* type_name = "PnpObject";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.pnp.PnpObjectCollection";
-        static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
-        static constexpr const char* type_name = "PnpObjectCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.pnp.PnpObjectUpdate";
-        static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
-        static constexpr const char* type_name = "PnpObjectUpdate";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.pnp.PnpObjectWatcher";
-        static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
-        static constexpr const char* type_name = "PnpObjectWatcher";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
+#if __has_include("py.Windows.Devices.Enumeration.types.h")
+#include "py.Windows.Devices.Enumeration.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

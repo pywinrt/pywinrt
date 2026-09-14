@@ -4,46 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.SocialInfo.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.ApplicationModel.SocialInfo.Provider.h>
+#include "py.Windows.ApplicationModel.SocialInfo.Provider.types.h"
 
-namespace py::proj::Windows::ApplicationModel::SocialInfo::Provider
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.provider.SocialDashboardItemUpdater";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo.provider";
-        static constexpr const char* type_name = "SocialDashboardItemUpdater";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.provider.SocialFeedUpdater";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo.provider";
-        static constexpr const char* type_name = "SocialFeedUpdater";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.provider.SocialInfoProviderManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo.provider";
-        static constexpr const char* type_name = "SocialInfoProviderManager";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.SocialInfo.h")
-#include "py.Windows.ApplicationModel.SocialInfo.h"
+#if __has_include("py.Windows.ApplicationModel.SocialInfo.types.h")
+#include "py.Windows.ApplicationModel.SocialInfo.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

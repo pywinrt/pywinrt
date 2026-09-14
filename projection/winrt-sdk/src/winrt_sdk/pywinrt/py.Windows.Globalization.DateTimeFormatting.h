@@ -4,106 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Globalization.DateTimeFormatting.h>
-
-namespace py::proj::Windows::Globalization::DateTimeFormatting
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::DateTimeFormatting::DayFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::DateTimeFormatting::DayOfWeekFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::DateTimeFormatting::HourFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::DateTimeFormatting::MinuteFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::DateTimeFormatting::MonthFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::DateTimeFormatting::SecondFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Globalization::DateTimeFormatting::YearFormat> = "i";
+#include "py.Windows.Globalization.DateTimeFormatting.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Globalization::DateTimeFormatting::DayFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.DayFormat";
-        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
-        static constexpr const char* type_name = "DayFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::DateTimeFormatting::DayOfWeekFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.DayOfWeekFormat";
-        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
-        static constexpr const char* type_name = "DayOfWeekFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::DateTimeFormatting::HourFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.HourFormat";
-        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
-        static constexpr const char* type_name = "HourFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::DateTimeFormatting::MinuteFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.MinuteFormat";
-        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
-        static constexpr const char* type_name = "MinuteFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::DateTimeFormatting::MonthFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.MonthFormat";
-        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
-        static constexpr const char* type_name = "MonthFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::DateTimeFormatting::SecondFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.SecondFormat";
-        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
-        static constexpr const char* type_name = "SecondFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::DateTimeFormatting::YearFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.YearFormat";
-        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
-        static constexpr const char* type_name = "YearFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.DateTimeFormatter";
-        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
-        static constexpr const char* type_name = "DateTimeFormatter";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.Collections.h")

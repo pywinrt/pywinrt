@@ -7,71 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.System.Power.h>
+#include "py.Windows.System.Power.types.h"
 
-namespace py::proj::Windows::System::Power
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Power::BatteryStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Power::EnergySaverStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Power::PowerSupplyStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::System::Power::BatteryStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.power.BatteryStatus";
-        static constexpr const char* module_name = "winrt.windows.system.power";
-        static constexpr const char* type_name = "BatteryStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Power::EnergySaverStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.power.EnergySaverStatus";
-        static constexpr const char* module_name = "winrt.windows.system.power";
-        static constexpr const char* type_name = "EnergySaverStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Power::PowerSupplyStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.power.PowerSupplyStatus";
-        static constexpr const char* module_name = "winrt.windows.system.power";
-        static constexpr const char* type_name = "PowerSupplyStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Power::BackgroundEnergyManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.power.BackgroundEnergyManager";
-        static constexpr const char* module_name = "winrt.windows.system.power";
-        static constexpr const char* type_name = "BackgroundEnergyManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Power::ForegroundEnergyManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.power.ForegroundEnergyManager";
-        static constexpr const char* module_name = "winrt.windows.system.power";
-        static constexpr const char* type_name = "ForegroundEnergyManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Power::PowerManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.power.PowerManager";
-        static constexpr const char* module_name = "winrt.windows.system.power";
-        static constexpr const char* type_name = "PowerManager";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

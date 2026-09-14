@@ -4,123 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.ApplicationModel.Calls.Background.h>
-
-namespace py::proj::Windows::ApplicationModel::Calls::Background
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType> = "i";
+#include "py.Windows.ApplicationModel.Calls.Background.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneCallBlockedReason";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneCallBlockedReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneIncomingCallDismissedReason";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneIncomingCallDismissedReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneLineChangeKind";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneLineChangeKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneLineProperties";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneLineProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneTriggerType";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneTriggerType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneCallBlockedTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneCallBlockedTriggerDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneCallOriginDataRequestTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneCallOriginDataRequestTriggerDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneIncomingCallDismissedTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneIncomingCallDismissedTriggerDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneIncomingCallNotificationTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneIncomingCallNotificationTriggerDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneLineChangedTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneLineChangedTriggerDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.background.PhoneNewVoicemailMessageTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
-        static constexpr const char* type_name = "PhoneNewVoicemailMessageTriggerDetails";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Calls::Background

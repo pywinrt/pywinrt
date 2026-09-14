@@ -5,82 +5,33 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Media.Core.h>
-#include <winrt/Windows.Media.MediaProperties.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Media.Transcoding.h>
+#include "py.Windows.Media.Transcoding.types.h"
 
-namespace py::proj::Windows::Media::Transcoding
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Transcoding::TranscodeFailureReason> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.transcoding.MediaVideoProcessingAlgorithm";
-        static constexpr const char* module_name = "winrt.windows.media.transcoding";
-        static constexpr const char* type_name = "MediaVideoProcessingAlgorithm";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Transcoding::TranscodeFailureReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.transcoding.TranscodeFailureReason";
-        static constexpr const char* module_name = "winrt.windows.media.transcoding";
-        static constexpr const char* type_name = "TranscodeFailureReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Transcoding::MediaTranscoder>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.transcoding.MediaTranscoder";
-        static constexpr const char* module_name = "winrt.windows.media.transcoding";
-        static constexpr const char* type_name = "MediaTranscoder";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Transcoding::PrepareTranscodeResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.transcoding.PrepareTranscodeResult";
-        static constexpr const char* module_name = "winrt.windows.media.transcoding";
-        static constexpr const char* type_name = "PrepareTranscodeResult";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.Core.h")
-#include "py.Windows.Media.Core.h"
+#if __has_include("py.Windows.Media.Core.types.h")
+#include "py.Windows.Media.Core.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.MediaProperties.h")
-#include "py.Windows.Media.MediaProperties.h"
+#if __has_include("py.Windows.Media.MediaProperties.types.h")
+#include "py.Windows.Media.MediaProperties.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Transcoding

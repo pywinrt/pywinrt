@@ -4,110 +4,30 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Graphics.Imaging.h>
-#include <winrt/Microsoft.UI.Content.h>
-#include <winrt/Microsoft.UI.Input.h>
 
 #include <winrt/Microsoft.UI.Input.DragDrop.h>
-
-namespace py::proj::Microsoft::UI::Input::DragDrop
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::DragDrop::DragDropModifiers> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::DragDrop::DragUIContentMode> = "i";
+#include "py.Microsoft.UI.Input.DragDrop.types.h"
 
 
-    template<>
-    struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragDropModifiers>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.dragdrop.DragDropModifiers";
-        static constexpr const char* module_name = "winui3.microsoft.ui.input.dragdrop";
-        static constexpr const char* type_name = "DragDropModifiers";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragUIContentMode>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.dragdrop.DragUIContentMode";
-        static constexpr const char* module_name = "winui3.microsoft.ui.input.dragdrop";
-        static constexpr const char* type_name = "DragUIContentMode";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragDropManager>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.dragdrop.DragDropManager";
-        static constexpr const char* module_name = "winui3.microsoft.ui.input.dragdrop";
-        static constexpr const char* type_name = "DragDropManager";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragInfo>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.dragdrop.DragInfo";
-        static constexpr const char* module_name = "winui3.microsoft.ui.input.dragdrop";
-        static constexpr const char* type_name = "DragInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragOperation>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.dragdrop.DragOperation";
-        static constexpr const char* module_name = "winui3.microsoft.ui.input.dragdrop";
-        static constexpr const char* type_name = "DragOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragUIOverride>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.dragdrop.DragUIOverride";
-        static constexpr const char* module_name = "winui3.microsoft.ui.input.dragdrop";
-        static constexpr const char* type_name = "DragUIOverride";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Input::DragDrop::DropOperationTargetRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.dragdrop.DropOperationTargetRequestedEventArgs";
-        static constexpr const char* module_name = "winui3.microsoft.ui.input.dragdrop";
-        static constexpr const char* type_name = "DropOperationTargetRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Input::DragDrop::IDropOperationTarget>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.dragdrop._IDropOperationTarget";
-        static constexpr const char* module_name = "winui3.microsoft.ui.input.dragdrop";
-        static constexpr const char* type_name = "_IDropOperationTarget";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
-#if __has_include("py.Microsoft.UI.Content.h")
-#include "py.Microsoft.UI.Content.h"
+#if __has_include("py.Microsoft.UI.Content.types.h")
+#include "py.Microsoft.UI.Content.types.h"
 #endif
 
-#if __has_include("py.Microsoft.UI.Input.h")
-#include "py.Microsoft.UI.Input.h"
+#if __has_include("py.Microsoft.UI.Input.types.h")
+#include "py.Microsoft.UI.Input.types.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Input::DragDrop

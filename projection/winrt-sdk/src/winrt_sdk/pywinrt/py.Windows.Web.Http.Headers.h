@@ -6,284 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Globalization.h>
-#include <winrt/Windows.Networking.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.Web.Http.h>
 
 #include <winrt/Windows.Web.Http.Headers.h>
+#include "py.Windows.Web.Http.Headers.types.h"
 
-namespace py::proj::Windows::Web::Http::Headers
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpCacheDirectiveHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpCacheDirectiveHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpChallengeHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpChallengeHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpChallengeHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpChallengeHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpConnectionOptionHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpConnectionOptionHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpConnectionOptionHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpContentCodingHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpContentCodingHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpContentCodingHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpContentCodingHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpContentCodingWithQualityHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpContentCodingWithQualityHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpContentDispositionHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpContentDispositionHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentHeaderCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpContentHeaderCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpContentHeaderCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpContentRangeHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpContentRangeHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpCookiePairHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpCookiePairHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpCookiePairHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpCookiePairHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpCredentialsHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpCredentialsHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpDateOrDeltaHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpDateOrDeltaHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpExpectationHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpExpectationHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpExpectationHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpExpectationHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpLanguageHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpLanguageHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpLanguageRangeWithQualityHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpLanguageRangeWithQualityHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpLanguageRangeWithQualityHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpLanguageRangeWithQualityHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpMediaTypeHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpMediaTypeHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpMediaTypeWithQualityHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpMediaTypeWithQualityHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpMediaTypeWithQualityHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpMediaTypeWithQualityHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpMethodHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpMethodHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpNameValueHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpNameValueHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpProductHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpProductHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpProductHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpProductInfoHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpProductInfoHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpProductInfoHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpProductInfoHeaderValueCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpRequestHeaderCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpRequestHeaderCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpResponseHeaderCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpResponseHeaderCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpTransferCodingHeaderValue";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpTransferCodingHeaderValue";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.headers.HttpTransferCodingHeaderValueCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http.headers";
-        static constexpr const char* type_name = "HttpTransferCodingHeaderValueCollection";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -293,20 +19,20 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
+#if __has_include("py.Windows.Globalization.types.h")
+#include "py.Windows.Globalization.types.h"
 #endif
 
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
+#if __has_include("py.Windows.Networking.types.h")
+#include "py.Windows.Networking.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
+#if __has_include("py.Windows.Web.Http.types.h")
+#include "py.Windows.Web.Http.types.h"
 #endif
 
 namespace py::impl::Windows::Web::Http::Headers

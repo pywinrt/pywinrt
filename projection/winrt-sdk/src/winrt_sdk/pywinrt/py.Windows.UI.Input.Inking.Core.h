@@ -6,71 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Foundation.Numerics.h>
-#include <winrt/Windows.UI.Composition.h>
-#include <winrt/Windows.UI.Core.h>
-#include <winrt/Windows.UI.Input.Inking.h>
 
 #include <winrt/Windows.UI.Input.Inking.Core.h>
+#include "py.Windows.UI.Input.Inking.Core.types.h"
 
-namespace py::proj::Windows::UI::Input::Inking::Core
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeDisposition> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeDisposition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreWetStrokeDisposition";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
-        static constexpr const char* type_name = "CoreWetStrokeDisposition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreIncrementalInkStroke";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
-        static constexpr const char* type_name = "CoreIncrementalInkStroke";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreInkIndependentInputSource";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
-        static constexpr const char* type_name = "CoreInkIndependentInputSource";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreInkPresenterHost>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreInkPresenterHost";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
-        static constexpr const char* type_name = "CoreInkPresenterHost";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreWetStrokeUpdateEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
-        static constexpr const char* type_name = "CoreWetStrokeUpdateEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreWetStrokeUpdateSource";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
-        static constexpr const char* type_name = "CoreWetStrokeUpdateSource";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -80,20 +19,20 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
+#if __has_include("py.Windows.UI.Composition.types.h")
+#include "py.Windows.UI.Composition.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
+#if __has_include("py.Windows.UI.Core.types.h")
+#include "py.Windows.UI.Core.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Input.Inking.h")
-#include "py.Windows.UI.Input.Inking.h"
+#if __has_include("py.Windows.UI.Input.Inking.types.h")
+#include "py.Windows.UI.Input.Inking.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Input::Inking::Core

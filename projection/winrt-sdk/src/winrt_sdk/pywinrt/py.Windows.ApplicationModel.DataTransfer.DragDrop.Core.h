@@ -4,94 +4,26 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.DataTransfer.h>
-#include <winrt/Windows.ApplicationModel.DataTransfer.DragDrop.h>
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Graphics.Imaging.h>
 
 #include <winrt/Windows.ApplicationModel.DataTransfer.DragDrop.Core.h>
-
-namespace py::proj::Windows::ApplicationModel::DataTransfer::DragDrop::Core
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIContentMode> = "I";
+#include "py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIContentMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIContentMode";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
-        static constexpr const char* type_name = "CoreDragUIContentMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragDropManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
-        static constexpr const char* type_name = "CoreDragDropManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragInfo";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
-        static constexpr const char* type_name = "CoreDragInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragOperation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
-        static constexpr const char* type_name = "CoreDragOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIOverride";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
-        static constexpr const char* type_name = "CoreDragUIOverride";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDropOperationTargetRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
-        static constexpr const char* type_name = "CoreDropOperationTargetRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core._ICoreDropOperationTarget";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
-        static constexpr const char* type_name = "_ICoreDropOperationTarget";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.DragDrop.h")
-#include "py.Windows.ApplicationModel.DataTransfer.DragDrop.h"
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.DragDrop.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.DragDrop.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::DataTransfer::DragDrop::Core

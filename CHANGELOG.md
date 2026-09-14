@@ -17,6 +17,11 @@
   now `create_tile_updater_for_application_for_user()`. The old name is the
   overload that takes an application id, so it could not be kept as an alias.
 - Greatly improved the speed of the `PyWinRT` code generation tool.
+- Greatly reduced the compile time of the projection. The generated `py.*.h`
+  headers now only include the full C++/WinRT header of the namespaces whose
+  delegates, generic types or interface methods they use; everything else
+  comes from a new light `py.*.types.h` header that only maps C++/WinRT types
+  to their Python types.
 - The CMake build now uses embedded (`/Z7`) debug information on MSVC, which
   roughly halves the time to build the precompiled header, and shares the
   precompiled header with the interop and test packages too.

@@ -6,198 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Graphics.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Graphics.Display.h>
+#include "py.Windows.Graphics.Display.types.h"
 
-namespace py::proj::Windows::Graphics::Display
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::AdvancedColorKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideOptions> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideScenario> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::DisplayBrightnessScenario> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::DisplayColorOverrideScenario> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::DisplayOrientations> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::HdrMetadataFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::ResolutionScale> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Display::NitRange> = "T{f:min_nits:f:max_nits:f:step_size_nits:}";
-
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::AdvancedColorKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.AdvancedColorKind";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "AdvancedColorKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayBrightnessOverrideOptions";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayBrightnessOverrideOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideScenario>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayBrightnessOverrideScenario";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayBrightnessOverrideScenario";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayBrightnessScenario>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayBrightnessScenario";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayBrightnessScenario";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayColorOverrideScenario>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayColorOverrideScenario";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayColorOverrideScenario";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayOrientations>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayOrientations";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayOrientations";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::HdrMetadataFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.HdrMetadataFormat";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "HdrMetadataFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::ResolutionScale>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.ResolutionScale";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "ResolutionScale";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::AdvancedColorInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.AdvancedColorInfo";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "AdvancedColorInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::BrightnessOverride>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.BrightnessOverride";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "BrightnessOverride";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.BrightnessOverrideSettings";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "BrightnessOverrideSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::ColorOverrideSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.ColorOverrideSettings";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "ColorOverrideSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverride>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayEnhancementOverride";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayEnhancementOverride";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayEnhancementOverrideCapabilities";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayEnhancementOverrideCapabilities";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayEnhancementOverrideCapabilitiesChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayInformation";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayInformation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayProperties";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::DisplayServices>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.DisplayServices";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "DisplayServices";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::Display::NitRange>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_display.NitRange_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.NitRange";
-        static constexpr const char* module_name = "winrt.windows.graphics.display";
-        static constexpr const char* type_name = "NitRange";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -207,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
+#if __has_include("py.Windows.Graphics.types.h")
+#include "py.Windows.Graphics.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Graphics::Display

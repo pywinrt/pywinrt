@@ -4,36 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.UI.Text.h>
 
 #include <winrt/Windows.Globalization.Fonts.h>
+#include "py.Windows.Globalization.Fonts.types.h"
 
-namespace py::proj::Windows::Globalization::Fonts
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::Fonts::LanguageFont>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.fonts.LanguageFont";
-        static constexpr const char* module_name = "winrt.windows.globalization.fonts";
-        static constexpr const char* type_name = "LanguageFont";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Globalization::Fonts::LanguageFontGroup>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.fonts.LanguageFontGroup";
-        static constexpr const char* module_name = "winrt.windows.globalization.fonts";
-        static constexpr const char* type_name = "LanguageFontGroup";
-    };
-}
-
-#if __has_include("py.Windows.UI.Text.h")
-#include "py.Windows.UI.Text.h"
+#if __has_include("py.Windows.UI.Text.types.h")
+#include "py.Windows.UI.Text.types.h"
 #endif
 
 namespace py::impl::Windows::Globalization::Fonts

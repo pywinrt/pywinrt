@@ -4,58 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Microsoft.Windows.Widgets.Notifications.h>
-
-namespace py::proj::Microsoft::Windows::Widgets::Notifications
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Widgets::Notifications::AnnouncementActionKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Widgets::Notifications::AnnouncementTextColor> = "i";
+#include "py.Microsoft.Windows.Widgets.Notifications.types.h"
 
 
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Notifications::AnnouncementActionKind>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.notifications.AnnouncementActionKind";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.notifications";
-        static constexpr const char* type_name = "AnnouncementActionKind";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Notifications::AnnouncementTextColor>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.notifications.AnnouncementTextColor";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.notifications";
-        static constexpr const char* type_name = "AnnouncementTextColor";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.notifications.FeedAnnouncement";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.notifications";
-        static constexpr const char* type_name = "FeedAnnouncement";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncementInvokedArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.notifications.FeedAnnouncementInvokedArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.notifications";
-        static constexpr const char* type_name = "FeedAnnouncementInvokedArgs";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 namespace py::impl::Microsoft::Windows::Widgets::Notifications

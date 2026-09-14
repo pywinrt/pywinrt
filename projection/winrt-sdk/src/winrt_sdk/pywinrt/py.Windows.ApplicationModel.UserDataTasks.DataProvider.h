@@ -4,117 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.UserDataTasks.h>
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.ApplicationModel.UserDataTasks.DataProvider.h>
+#include "py.Windows.ApplicationModel.UserDataTasks.DataProvider.types.h"
 
-namespace py::proj::Windows::ApplicationModel::UserDataTasks::DataProvider
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskDataProviderConnection";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskDataProviderConnection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskDataProviderTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskDataProviderTriggerDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskListCompleteTaskRequest";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskListCompleteTaskRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskListCompleteTaskRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskListCompleteTaskRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskListCreateOrUpdateTaskRequest";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskListCreateOrUpdateTaskRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskListCreateOrUpdateTaskRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskListDeleteTaskRequest";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskListDeleteTaskRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskListDeleteTaskRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskListDeleteTaskRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskListSkipOccurrenceRequest";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskListSkipOccurrenceRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskListSkipOccurrenceRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskListSkipOccurrenceRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskListSyncManagerSyncRequest";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskListSyncManagerSyncRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider.UserDataTaskListSyncManagerSyncRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
-        static constexpr const char* type_name = "UserDataTaskListSyncManagerSyncRequestEventArgs";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.UserDataTasks.h")
-#include "py.Windows.ApplicationModel.UserDataTasks.h"
+#if __has_include("py.Windows.ApplicationModel.UserDataTasks.types.h")
+#include "py.Windows.ApplicationModel.UserDataTasks.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

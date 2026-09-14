@@ -6,84 +6,12 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Media.h>
 #include <winrt/Windows.Media.Core.h>
 #include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Media.SpeechSynthesis.h>
+#include "py.Windows.Media.SpeechSynthesis.types.h"
 
-namespace py::proj::Windows::Media::SpeechSynthesis
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::SpeechSynthesis::VoiceGender> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.SpeechAppendedSilence";
-        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
-        static constexpr const char* type_name = "SpeechAppendedSilence";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.SpeechPunctuationSilence";
-        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
-        static constexpr const char* type_name = "SpeechPunctuationSilence";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SpeechSynthesis::VoiceGender>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.VoiceGender";
-        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
-        static constexpr const char* type_name = "VoiceGender";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.SpeechSynthesisStream";
-        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
-        static constexpr const char* type_name = "SpeechSynthesisStream";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.SpeechSynthesizer";
-        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
-        static constexpr const char* type_name = "SpeechSynthesizer";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.SpeechSynthesizerOptions";
-        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
-        static constexpr const char* type_name = "SpeechSynthesizerOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.VoiceInformation";
-        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
-        static constexpr const char* type_name = "VoiceInformation";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -93,8 +21,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
+#if __has_include("py.Windows.Media.types.h")
+#include "py.Windows.Media.types.h"
 #endif
 
 #if __has_include("py.Windows.Media.Core.h")

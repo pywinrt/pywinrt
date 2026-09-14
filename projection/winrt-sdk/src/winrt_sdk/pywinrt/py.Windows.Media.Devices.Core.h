@@ -6,150 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Foundation.Numerics.h>
-#include <winrt/Windows.Media.MediaProperties.h>
-#include <winrt/Windows.Perception.Spatial.h>
 
 #include <winrt/Windows.Media.Devices.Core.h>
+#include "py.Windows.Media.Devices.Core.types.h"
 
-namespace py::proj::Windows::Media::Devices::Core
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Devices::Core::FrameFlashMode> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameFlashMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameFlashMode";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameFlashMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::CameraIntrinsics>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.CameraIntrinsics";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "CameraIntrinsics";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.DepthCorrelatedCoordinateMapper";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "DepthCorrelatedCoordinateMapper";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameControlCapabilities>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameControlCapabilities";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameControlCapabilities";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameController";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameController";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameExposureCapabilities";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameExposureCapabilities";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameExposureCompensationCapabilities";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameExposureCompensationCapabilities";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameExposureCompensationControl";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameExposureCompensationControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameExposureControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameExposureControl";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameExposureControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameFlashCapabilities";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameFlashCapabilities";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameFlashControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameFlashControl";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameFlashControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameFocusCapabilities";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameFocusCapabilities";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameFocusControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameFocusControl";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameFocusControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameIsoSpeedCapabilities";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameIsoSpeedCapabilities";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.FrameIsoSpeedControl";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "FrameIsoSpeedControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.core.VariablePhotoSequenceController";
-        static constexpr const char* module_name = "winrt.windows.media.devices.core";
-        static constexpr const char* type_name = "VariablePhotoSequenceController";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -159,16 +19,16 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.MediaProperties.h")
-#include "py.Windows.Media.MediaProperties.h"
+#if __has_include("py.Windows.Media.MediaProperties.types.h")
+#include "py.Windows.Media.MediaProperties.types.h"
 #endif
 
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
+#if __has_include("py.Windows.Perception.Spatial.types.h")
+#include "py.Windows.Perception.Spatial.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Devices::Core

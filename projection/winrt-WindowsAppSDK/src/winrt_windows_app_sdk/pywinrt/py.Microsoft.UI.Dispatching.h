@@ -7,76 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Microsoft.UI.Dispatching.h>
+#include "py.Microsoft.UI.Dispatching.types.h"
 
-namespace py::proj::Microsoft::UI::Dispatching
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Dispatching::DispatcherQueuePriority> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Dispatching::DispatcherRunOptions> = "I";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherQueuePriority>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.dispatching.DispatcherQueuePriority";
-        static constexpr const char* module_name = "winui3.microsoft.ui.dispatching";
-        static constexpr const char* type_name = "DispatcherQueuePriority";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherRunOptions>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.dispatching.DispatcherRunOptions";
-        static constexpr const char* module_name = "winui3.microsoft.ui.dispatching";
-        static constexpr const char* type_name = "DispatcherRunOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherExitDeferral>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.dispatching.DispatcherExitDeferral";
-        static constexpr const char* module_name = "winui3.microsoft.ui.dispatching";
-        static constexpr const char* type_name = "DispatcherExitDeferral";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherQueue>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.dispatching.DispatcherQueue";
-        static constexpr const char* module_name = "winui3.microsoft.ui.dispatching";
-        static constexpr const char* type_name = "DispatcherQueue";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherQueueController>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.dispatching.DispatcherQueueController";
-        static constexpr const char* module_name = "winui3.microsoft.ui.dispatching";
-        static constexpr const char* type_name = "DispatcherQueueController";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.dispatching.DispatcherQueueShutdownStartingEventArgs";
-        static constexpr const char* module_name = "winui3.microsoft.ui.dispatching";
-        static constexpr const char* type_name = "DispatcherQueueShutdownStartingEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherQueueTimer>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.dispatching.DispatcherQueueTimer";
-        static constexpr const char* module_name = "winui3.microsoft.ui.dispatching";
-        static constexpr const char* type_name = "DispatcherQueueTimer";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

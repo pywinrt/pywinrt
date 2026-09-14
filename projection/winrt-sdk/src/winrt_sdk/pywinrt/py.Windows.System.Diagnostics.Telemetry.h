@@ -6,49 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.System.Diagnostics.Telemetry.h>
+#include "py.Windows.System.Diagnostics.Telemetry.types.h"
 
-namespace py::proj::Windows::System::Diagnostics::Telemetry
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.telemetry.PlatformTelemetryRegistrationStatus";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
-        static constexpr const char* type_name = "PlatformTelemetryRegistrationStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.telemetry.PlatformTelemetryClient";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
-        static constexpr const char* type_name = "PlatformTelemetryClient";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.telemetry.PlatformTelemetryRegistrationResult";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
-        static constexpr const char* type_name = "PlatformTelemetryRegistrationResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.telemetry.PlatformTelemetryRegistrationSettings";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
-        static constexpr const char* type_name = "PlatformTelemetryRegistrationSettings";
-    };
-}
 
 namespace py::impl::Windows::System::Diagnostics::Telemetry
 {

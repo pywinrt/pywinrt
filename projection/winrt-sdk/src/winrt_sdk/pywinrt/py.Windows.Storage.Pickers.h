@@ -6,88 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.Storage.Pickers.h>
+#include "py.Windows.Storage.Pickers.types.h"
 
-namespace py::proj::Windows::Storage::Pickers
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::Pickers::PickerLocationId> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::Pickers::PickerViewMode> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::PickerLocationId>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.PickerLocationId";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers";
-        static constexpr const char* type_name = "PickerLocationId";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::PickerViewMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.PickerViewMode";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers";
-        static constexpr const char* type_name = "PickerViewMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::FileExtensionVector>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FileExtensionVector";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers";
-        static constexpr const char* type_name = "FileExtensionVector";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::FileOpenPicker>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FileOpenPicker";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers";
-        static constexpr const char* type_name = "FileOpenPicker";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FilePickerFileTypesOrderedMap";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers";
-        static constexpr const char* type_name = "FilePickerFileTypesOrderedMap";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::FilePickerSelectedFilesArray>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FilePickerSelectedFilesArray";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers";
-        static constexpr const char* type_name = "FilePickerSelectedFilesArray";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::FileSavePicker>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FileSavePicker";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers";
-        static constexpr const char* type_name = "FileSavePicker";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::Pickers::FolderPicker>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FolderPicker";
-        static constexpr const char* module_name = "winrt.windows.storage.pickers";
-        static constexpr const char* type_name = "FolderPicker";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -97,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Storage::Pickers

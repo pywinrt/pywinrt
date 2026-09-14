@@ -4,51 +4,26 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.Contacts.h>
-#include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.ApplicationModel.DataTransfer.ShareTarget.h>
+#include "py.Windows.ApplicationModel.DataTransfer.ShareTarget.types.h"
 
-namespace py::proj::Windows::ApplicationModel::DataTransfer::ShareTarget
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.sharetarget.QuickLink";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.sharetarget";
-        static constexpr const char* type_name = "QuickLink";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.sharetarget.ShareOperation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.sharetarget";
-        static constexpr const char* type_name = "ShareOperation";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.Contacts.h")
-#include "py.Windows.ApplicationModel.Contacts.h"
+#if __has_include("py.Windows.ApplicationModel.Contacts.types.h")
+#include "py.Windows.ApplicationModel.Contacts.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::DataTransfer::ShareTarget

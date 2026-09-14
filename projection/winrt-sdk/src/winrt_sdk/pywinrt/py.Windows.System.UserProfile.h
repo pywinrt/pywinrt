@@ -6,133 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Globalization.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.System.UserProfile.h>
+#include "py.Windows.System.UserProfile.types.h"
 
-namespace py::proj::Windows::System::UserProfile
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::UserProfile::AccountPictureKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::UserProfile::SetAccountPictureResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::UserProfile::SetImageFeedResult> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::AccountPictureKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.AccountPictureKind";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "AccountPictureKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::SetAccountPictureResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.SetAccountPictureResult";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "SetAccountPictureResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::SetImageFeedResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.SetImageFeedResult";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "SetImageFeedResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::AdvertisingManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.AdvertisingManager";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "AdvertisingManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.AdvertisingManagerForUser";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "AdvertisingManagerForUser";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::AssignedAccessSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.AssignedAccessSettings";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "AssignedAccessSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::DiagnosticsSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.DiagnosticsSettings";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "DiagnosticsSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::FirstSignInSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.FirstSignInSettings";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "FirstSignInSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::GlobalizationPreferences>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.GlobalizationPreferences";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "GlobalizationPreferences";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.GlobalizationPreferencesForUser";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "GlobalizationPreferencesForUser";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::LockScreen>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.LockScreen";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "LockScreen";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::UserInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.UserInformation";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "UserInformation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.UserProfilePersonalizationSettings";
-        static constexpr const char* module_name = "winrt.windows.system.userprofile";
-        static constexpr const char* type_name = "UserProfilePersonalizationSettings";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -142,20 +19,20 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
+#if __has_include("py.Windows.Globalization.types.h")
+#include "py.Windows.Globalization.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::System::UserProfile

@@ -6,119 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.Security.Authentication.OnlineId.h>
+#include "py.Windows.Security.Authentication.OnlineId.types.h"
 
-namespace py::proj::Windows::Security::Authentication::OnlineId
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Authentication::OnlineId::CredentialPromptType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::CredentialPromptType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.CredentialPromptType";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "CredentialPromptType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdSystemTicketStatus";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "OnlineIdSystemTicketStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdAuthenticator";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "OnlineIdAuthenticator";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdServiceTicket";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "OnlineIdServiceTicket";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdServiceTicketRequest";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "OnlineIdServiceTicketRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdSystemAuthenticator";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "OnlineIdSystemAuthenticator";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdSystemAuthenticatorForUser";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "OnlineIdSystemAuthenticatorForUser";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdSystemIdentity";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "OnlineIdSystemIdentity";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdSystemTicketResult";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "OnlineIdSystemTicketResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.SignOutUserOperation";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "SignOutUserOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.UserAuthenticationOperation";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "UserAuthenticationOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.UserIdentity";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
-        static constexpr const char* type_name = "UserIdentity";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -128,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Security::Authentication::OnlineId

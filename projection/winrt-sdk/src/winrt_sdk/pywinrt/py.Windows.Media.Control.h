@@ -6,117 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Media.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Media.Control.h>
+#include "py.Windows.Media.Control.types.h"
 
-namespace py::proj::Windows::Media::Control
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionPlaybackStatus";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionPlaybackStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.CurrentSessionChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "CurrentSessionChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSession";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSession";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionManager";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionMediaProperties";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionMediaProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionPlaybackControls";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionPlaybackControls";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionPlaybackInfo";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionPlaybackInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionTimelineProperties";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionTimelineProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.MediaPropertiesChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "MediaPropertiesChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.PlaybackInfoChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "PlaybackInfoChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::SessionsChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.SessionsChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "SessionsChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.control.TimelinePropertiesChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.control";
-        static constexpr const char* type_name = "TimelinePropertiesChangedEventArgs";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -126,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
+#if __has_include("py.Windows.Media.types.h")
+#include "py.Windows.Media.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Control

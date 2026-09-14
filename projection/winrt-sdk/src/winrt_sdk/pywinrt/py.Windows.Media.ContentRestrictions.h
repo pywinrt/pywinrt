@@ -6,63 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Media.ContentRestrictions.h>
+#include "py.Windows.Media.ContentRestrictions.types.h"
 
-namespace py::proj::Windows::Media::ContentRestrictions
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::ContentRestrictions::ContentAccessRestrictionLevel> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::ContentRestrictions::RatedContentCategory> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::ContentRestrictions::ContentAccessRestrictionLevel>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.contentrestrictions.ContentAccessRestrictionLevel";
-        static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
-        static constexpr const char* type_name = "ContentAccessRestrictionLevel";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ContentRestrictions::RatedContentCategory>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.contentrestrictions.RatedContentCategory";
-        static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
-        static constexpr const char* type_name = "RatedContentCategory";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.contentrestrictions.ContentRestrictionsBrowsePolicy";
-        static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
-        static constexpr const char* type_name = "ContentRestrictionsBrowsePolicy";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ContentRestrictions::RatedContentDescription>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.contentrestrictions.RatedContentDescription";
-        static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
-        static constexpr const char* type_name = "RatedContentDescription";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ContentRestrictions::RatedContentRestrictions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.contentrestrictions.RatedContentRestrictions";
-        static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
-        static constexpr const char* type_name = "RatedContentRestrictions";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -72,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Media::ContentRestrictions

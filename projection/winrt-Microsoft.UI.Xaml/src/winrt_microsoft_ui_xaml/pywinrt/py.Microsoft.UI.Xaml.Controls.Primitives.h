@@ -5,192 +5,43 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Foundation.Numerics.h>
-#include <winrt/Windows.UI.h>
+#include <winrt/Windows.UI.Composition.h>
 #include <winrt/Windows.UI.Xaml.h>
-#include <winrt/Windows.UI.Xaml.Automation.Peers.h>
 #include <winrt/Windows.UI.Xaml.Controls.h>
-#include <winrt/Windows.UI.Xaml.Interop.h>
+#include <winrt/Windows.UI.Xaml.Controls.Primitives.h>
+#include <winrt/Windows.UI.Xaml.Data.h>
 #include <winrt/Microsoft.UI.Xaml.Controls.h>
 
 #include <winrt/Microsoft.UI.Xaml.Controls.Primitives.h>
+#include "py.Microsoft.UI.Xaml.Controls.Primitives.types.h"
 
-namespace py::proj::Microsoft::UI::Xaml::Controls::Primitives
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverterKind> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterKind>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.CornerRadiusFilterKind";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "CornerRadiusFilterKind";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverterKind>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.CornerRadiusToThicknessConverterKind";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "CornerRadiusToThicknessConverterKind";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::AutoSuggestBoxHelper>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.AutoSuggestBoxHelper";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "AutoSuggestBoxHelper";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.ColorPickerSlider";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "ColorPickerSlider";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.ColorSpectrum";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "ColorSpectrum";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.ColumnMajorUniformToLargestGridLayout";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "ColumnMajorUniformToLargestGridLayout";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::ComboBoxHelper>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.ComboBoxHelper";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "ComboBoxHelper";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.CommandBarFlyoutCommandBar";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "CommandBarFlyoutCommandBar";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarAutomationProperties>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.CommandBarFlyoutCommandBarAutomationProperties";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "CommandBarFlyoutCommandBarAutomationProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.CommandBarFlyoutCommandBarTemplateSettings";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "CommandBarFlyoutCommandBarTemplateSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterConverter>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.CornerRadiusFilterConverter";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "CornerRadiusFilterConverter";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverter>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.CornerRadiusToThicknessConverter";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "CornerRadiusToThicknessConverter";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.InfoBarPanel";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "InfoBarPanel";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.MonochromaticOverlayPresenter";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "MonochromaticOverlayPresenter";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.NavigationViewItemPresenter";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "NavigationViewItemPresenter";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.NavigationViewItemPresenterTemplateSettings";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "NavigationViewItemPresenterTemplateSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.controls.primitives.TabViewListView";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "TabViewListView";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 #if __has_include("py.Windows.UI.Xaml.h")
 #include "py.Windows.UI.Xaml.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
-#include "py.Windows.UI.Xaml.Automation.Peers.h"
+#if __has_include("py.Windows.UI.Xaml.Automation.Peers.types.h")
+#include "py.Windows.UI.Xaml.Automation.Peers.types.h"
 #endif
 
 #if __has_include("py.Windows.UI.Xaml.Controls.h")
 #include "py.Windows.UI.Xaml.Controls.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.Interop.h")
-#include "py.Windows.UI.Xaml.Interop.h"
+#if __has_include("py.Windows.UI.Xaml.Interop.types.h")
+#include "py.Windows.UI.Xaml.Interop.types.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.Xaml.Controls.h")

@@ -4,146 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Data.Json.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.System.Diagnostics.h>
-
-namespace py::proj::Windows::System::Diagnostics
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Diagnostics::DiagnosticActionState> = "i";
+#include "py.Windows.System.Diagnostics.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::DiagnosticActionState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.DiagnosticActionState";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "DiagnosticActionState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::DiagnosticActionResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.DiagnosticActionResult";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "DiagnosticActionResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::DiagnosticInvoker>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.DiagnosticInvoker";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "DiagnosticInvoker";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::ProcessCpuUsage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.ProcessCpuUsage";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "ProcessCpuUsage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::ProcessCpuUsageReport>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.ProcessCpuUsageReport";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "ProcessCpuUsageReport";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.ProcessDiagnosticInfo";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "ProcessDiagnosticInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::ProcessDiskUsage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.ProcessDiskUsage";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "ProcessDiskUsage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::ProcessDiskUsageReport>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.ProcessDiskUsageReport";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "ProcessDiskUsageReport";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.ProcessMemoryUsage";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "ProcessMemoryUsage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsageReport>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.ProcessMemoryUsageReport";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "ProcessMemoryUsageReport";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::SystemCpuUsage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.SystemCpuUsage";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "SystemCpuUsage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::SystemCpuUsageReport>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.SystemCpuUsageReport";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "SystemCpuUsageReport";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::SystemDiagnosticInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.SystemDiagnosticInfo";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "SystemDiagnosticInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::SystemMemoryUsage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.SystemMemoryUsage";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "SystemMemoryUsage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Diagnostics::SystemMemoryUsageReport>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.SystemMemoryUsageReport";
-        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
-        static constexpr const char* type_name = "SystemMemoryUsageReport";
-    };
-}
-
-#if __has_include("py.Windows.Data.Json.h")
-#include "py.Windows.Data.Json.h"
+#if __has_include("py.Windows.Data.Json.types.h")
+#include "py.Windows.Data.Json.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -154,8 +23,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::System::Diagnostics

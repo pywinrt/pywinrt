@@ -5,51 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Web.h>
+#include "py.Windows.Web.types.h"
 
-namespace py::proj::Windows::Web
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::WebErrorStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Web::WebErrorStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.WebErrorStatus";
-        static constexpr const char* module_name = "winrt.windows.web";
-        static constexpr const char* type_name = "WebErrorStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::WebError>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.WebError";
-        static constexpr const char* module_name = "winrt.windows.web";
-        static constexpr const char* type_name = "WebError";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::IUriToStreamResolver>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web._IUriToStreamResolver";
-        static constexpr const char* module_name = "winrt.windows.web";
-        static constexpr const char* type_name = "_IUriToStreamResolver";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Web
