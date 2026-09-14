@@ -259,6 +259,25 @@ else()
     )
 endif()
 
+# The runtime module gets a precompiled header of its own rather than sharing
+# the common one. Its five translation units all define PYWINRT_RUNTIME_MODULE,
+# which selects the implementation side of pybase.h's runtime API; the other
+# packages get the client side, a set of inline forwarders through the
+# winrt._winrt capsule that would collide with the real definitions here. So
+# the two cannot share a precompiled header, but the runtime still parses the
+# same ~6 s of pybase.h and cppwinrt headers in every one of its translation
+# units, and those are rebuilt on exactly the edits the iteration loop is made
+# of.
+#
+# The sources do the #define themselves because the setuptools build (used for
+# the wheels) has no other way to set it, but the precompiled header is its own
+# translation unit compiled ahead of them, so the target needs the definition
+# too. It has to be defined empty to match the #define in the sources,
+# otherwise MSVC warns about a macro redefinition and /WX turns that into an
+# error.
+target_compile_definitions(_winrt PRIVATE "PYWINRT_RUNTIME_MODULE=")
+target_precompile_headers(_winrt PRIVATE ${pch_headers_common})
+
 set(pch_headers_winrt_xaml ${pch_headers_common}
     "${WINRT_SDK_PATH}/pywinrt/py.Windows.UI.Xaml.types.h"
     "${WINRT_SDK_PATH}/pywinrt/py.Windows.UI.Xaml.Controls.types.h"
