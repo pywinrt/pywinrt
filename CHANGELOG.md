@@ -76,6 +76,11 @@
 - Fixed `@typing.overload` missing from the type hints of overloaded methods.
 - Fixed methods being silently dropped when two overloads could not be told
   apart.
+- Fixed building the `Windows.Graphics.DirectX.Direct3D11` interop module on
+  MSYS2. mingw-w64 now ships an interop header, so the `__has_include` check
+  stopped selecting our own declarations, but the `.idl` that header is
+  generated from is missing `CreateDirect3D11SurfaceFromDXGISurface`, which is
+  now declared separately there.
 
 ## [v3.2.1] - 2025-06-06
 
