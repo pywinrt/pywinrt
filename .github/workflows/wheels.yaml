@@ -1,8 +1,10 @@
 name: wheels
 concurrency: wheels-${{ github.ref }}
-on: 
+on:
   push:
       tags: [wheels/*]
+  # allows compile testing all packages on a branch before merging
+  workflow_dispatch:
 
 jobs:
   sdist:
@@ -73,6 +75,8 @@ jobs:
           path: wheelhouse/
   publish:
     needs: [sdist, bdist]
+    # only publish tagged releases, not manually triggered compile tests
+    if: startsWith(github.ref, 'refs/tags/wheels/')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
