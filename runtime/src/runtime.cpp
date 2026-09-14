@@ -6,7 +6,7 @@
 
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
-#include "pyruntime.h"
+#include "module_state.h"
 
 // "backport" of Python 3.12 function.
 #if PY_VERSION_HEX < 0x030C0000

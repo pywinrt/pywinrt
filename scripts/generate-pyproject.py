@@ -53,13 +53,13 @@ RUNTIME_PACKAGE_FIND_SRC = """
 where = ["python"]
 """
 
-# pyruntime.h is private to the runtime's own translation units, so it is not
+# module_state.h is private to the runtime's own translation units, so it is not
 # package data the way the public headers are, but the sdist still has to
 # carry it or building winrt-runtime from source fails.
 RUNTIME_MANIFEST_IN = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
-include src/pyruntime.h
+include src/module_state.h
 """
 
 SDK_PACKAGE_TEMPLATE = """\
