@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_graphics_printing3d import (
     Printing3DBufferDescription,
@@ -129,4 +130,7 @@ class Printing3DTextureEdgeBehavior(enum.IntEnum):
     MIRROR = 2
     CLAMP = 3
 
+winrt.runtime._internals.alias_method(Printing3DModel, "try_partial_repair_with_time_async", "try_partial_repair_async")
+winrt.runtime._internals.alias_method(Printing3DModel, "try_reduce_faces_with_options_and_time_async", "try_reduce_faces_async")
+winrt.runtime._internals.alias_method(Printing3DModel, "try_reduce_faces_with_options_async", "try_reduce_faces_async")
 Print3DTaskSourceRequestedHandler = typing.Callable[[Print3DTaskSourceRequestedArgs], None]

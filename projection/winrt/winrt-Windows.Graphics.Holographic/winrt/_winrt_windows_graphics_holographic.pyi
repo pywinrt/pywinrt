@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -141,11 +142,22 @@ class HolographicCameraPose(winrt.system.Object):
 class HolographicCameraRenderingParameters(winrt.system.Object):
     # System.Void Windows.Graphics.Holographic.HolographicCameraRenderingParameters::CommitDirect3D11DepthBuffer(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface)
     def commit_direct3d11_depth_buffer(self, value: windows_graphics_directx_direct3d11.IDirect3DSurface, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Graphics.Holographic.HolographicCameraRenderingParameters::SetFocusPoint(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3)
     def set_focus_point(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    @typing.overload
     # System.Void Windows.Graphics.Holographic.HolographicCameraRenderingParameters::SetFocusPoint(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3)
-    def set_focus_point_with_normal(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], normal: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    def set_focus_point(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], normal: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    @typing.overload
     # System.Void Windows.Graphics.Holographic.HolographicCameraRenderingParameters::SetFocusPoint(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3)
+    def set_focus_point(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], normal: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], linear_velocity: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    # Deprecated alias of set_focus_point() for pywinrt v3.x compatibility.
+    # System.Void Windows.Graphics.Holographic.HolographicCameraRenderingParameters::SetFocusPoint(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3)
+    @deprecated("Use set_focus_point() instead.")
+    def set_focus_point_with_normal(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], normal: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    # Deprecated alias of set_focus_point() for pywinrt v3.x compatibility.
+    # System.Void Windows.Graphics.Holographic.HolographicCameraRenderingParameters::SetFocusPoint(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3)
+    @deprecated("Use set_focus_point() instead.")
     def set_focus_point_with_normal_linear_velocity(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], normal: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], linear_velocity: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
     # Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface Windows.Graphics.Holographic.HolographicCameraRenderingParameters::get_Direct3D11BackBuffer()
     @_property
@@ -218,9 +230,15 @@ class HolographicFrame(winrt.system.Object):
     def get_quad_layer_update_parameters(self, layer: HolographicQuadLayer, /) -> HolographicQuadLayerUpdateParameters: ...
     # Windows.Graphics.Holographic.HolographicCameraRenderingParameters Windows.Graphics.Holographic.HolographicFrame::GetRenderingParameters(Windows.Graphics.Holographic.HolographicCameraPose)
     def get_rendering_parameters(self, camera_pose: HolographicCameraPose, /) -> HolographicCameraRenderingParameters: ...
+    @typing.overload
     # Windows.Graphics.Holographic.HolographicFramePresentResult Windows.Graphics.Holographic.HolographicFrame::PresentUsingCurrentPrediction()
     def present_using_current_prediction(self) -> HolographicFramePresentResult: ...
+    @typing.overload
     # Windows.Graphics.Holographic.HolographicFramePresentResult Windows.Graphics.Holographic.HolographicFrame::PresentUsingCurrentPrediction(Windows.Graphics.Holographic.HolographicFramePresentWaitBehavior)
+    def present_using_current_prediction(self, wait_behavior: HolographicFramePresentWaitBehavior, /) -> HolographicFramePresentResult: ...
+    # Deprecated alias of present_using_current_prediction() for pywinrt v3.x compatibility.
+    # Windows.Graphics.Holographic.HolographicFramePresentResult Windows.Graphics.Holographic.HolographicFrame::PresentUsingCurrentPrediction(Windows.Graphics.Holographic.HolographicFramePresentWaitBehavior)
+    @deprecated("Use present_using_current_prediction() instead.")
     def present_using_current_prediction_with_behavior(self, wait_behavior: HolographicFramePresentWaitBehavior, /) -> HolographicFramePresentResult: ...
     # System.Void Windows.Graphics.Holographic.HolographicFrame::UpdateCurrentPrediction()
     def update_current_prediction(self) -> None: ...

@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_store_preview_installcontrol import (
     AppInstallItem,
@@ -67,3 +68,20 @@ class GetEntitlementStatus(enum.IntEnum):
     NETWORK_ERROR = 2
     SERVER_ERROR = 3
 
+winrt.runtime._internals.alias_method(AppInstallItem, "cancel_with_telemetry", "cancel")
+winrt.runtime._internals.alias_method(AppInstallItem, "pause_with_telemetry", "pause")
+winrt.runtime._internals.alias_method(AppInstallItem, "restart_with_telemetry", "restart")
+winrt.runtime._internals.alias_method(AppInstallManager, "cancel_with_telemetry", "cancel")
+winrt.runtime._internals.alias_method(AppInstallManager, "get_is_app_allowed_to_install_with_telemetry_async", "get_is_app_allowed_to_install_async")
+winrt.runtime._internals.alias_method(AppInstallManager, "pause_with_telemetry", "pause")
+winrt.runtime._internals.alias_method(AppInstallManager, "restart_with_telemetry", "restart")
+winrt.runtime._internals.alias_method(AppInstallManager, "search_for_all_updates_with_telemetry_async", "search_for_all_updates_async")
+winrt.runtime._internals.alias_method(AppInstallManager, "search_for_all_updates_with_update_options_async", "search_for_all_updates_async")
+winrt.runtime._internals.alias_method(AppInstallManager, "search_for_all_updates_with_update_options_for_user_async", "search_for_all_updates_for_user_async")
+winrt.runtime._internals.alias_method(AppInstallManager, "search_for_updates_with_telemetry_async", "search_for_updates_async")
+winrt.runtime._internals.alias_method(AppInstallManager, "search_for_updates_with_update_options_async", "search_for_updates_async")
+winrt.runtime._internals.alias_method(AppInstallManager, "search_for_updates_with_update_options_for_user_async", "search_for_updates_for_user_async")
+winrt.runtime._internals.alias_method(AppInstallManager, "start_app_install_with_telemetry_async", "start_app_install_async")
+winrt.runtime._internals.alias_method(AppInstallManager, "start_product_install_with_options_async", "start_product_install_async")
+winrt.runtime._internals.alias_method(AppInstallManager, "start_product_install_with_options_for_user_async", "start_product_install_for_user_async")
+winrt.runtime._internals.alias_method(AppInstallManager, "update_app_by_package_family_name_with_telemetry_async", "update_app_by_package_family_name_async")

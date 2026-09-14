@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -28,19 +29,41 @@ class SpatialGraphInteropFrameOfReferencePreview(winrt.system.Object):
 
 @typing.final
 class SpatialGraphInteropPreview_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::CreateCoordinateSystemForNode(System.Guid)
     def create_coordinate_system_for_node(cls, node_id: _uuid.UUID, /) -> windows_perception_spatial.SpatialCoordinateSystem: ...
+    @typing.overload
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::CreateCoordinateSystemForNode(System.Guid,Windows.Foundation.Numerics.Vector3)
-    def create_coordinate_system_for_node_with_position(cls, node_id: _uuid.UUID, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_perception_spatial.SpatialCoordinateSystem: ...
+    def create_coordinate_system_for_node(cls, node_id: _uuid.UUID, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_perception_spatial.SpatialCoordinateSystem: ...
+    @typing.overload
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::CreateCoordinateSystemForNode(System.Guid,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
+    def create_coordinate_system_for_node(cls, node_id: _uuid.UUID, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_perception_spatial.SpatialCoordinateSystem: ...
+    # Deprecated alias of create_coordinate_system_for_node() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::CreateCoordinateSystemForNode(System.Guid,Windows.Foundation.Numerics.Vector3)
+    @deprecated("Use create_coordinate_system_for_node() instead.")
+    def create_coordinate_system_for_node_with_position(cls, node_id: _uuid.UUID, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_perception_spatial.SpatialCoordinateSystem: ...
+    # Deprecated alias of create_coordinate_system_for_node() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::CreateCoordinateSystemForNode(System.Guid,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
+    @deprecated("Use create_coordinate_system_for_node() instead.")
     def create_coordinate_system_for_node_with_position_and_orientation(cls, node_id: _uuid.UUID, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_perception_spatial.SpatialCoordinateSystem: ...
     # Windows.Perception.Spatial.SpatialLocator Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::CreateLocatorForNode(System.Guid)
     def create_locator_for_node(cls, node_id: _uuid.UUID, /) -> windows_perception_spatial.SpatialLocator: ...
+    @typing.overload
     # Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::TryCreateFrameOfReference(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_create_frame_of_reference(cls, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> typing.Optional[SpatialGraphInteropFrameOfReferencePreview]: ...
+    @typing.overload
     # Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::TryCreateFrameOfReference(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3)
-    def try_create_frame_of_reference_with_position(cls, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> typing.Optional[SpatialGraphInteropFrameOfReferencePreview]: ...
+    def try_create_frame_of_reference(cls, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> typing.Optional[SpatialGraphInteropFrameOfReferencePreview]: ...
+    @typing.overload
     # Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::TryCreateFrameOfReference(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
+    def try_create_frame_of_reference(cls, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> typing.Optional[SpatialGraphInteropFrameOfReferencePreview]: ...
+    # Deprecated alias of try_create_frame_of_reference() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::TryCreateFrameOfReference(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3)
+    @deprecated("Use try_create_frame_of_reference() instead.")
+    def try_create_frame_of_reference_with_position(cls, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> typing.Optional[SpatialGraphInteropFrameOfReferencePreview]: ...
+    # Deprecated alias of try_create_frame_of_reference() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::TryCreateFrameOfReference(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
+    @deprecated("Use try_create_frame_of_reference() instead.")
     def try_create_frame_of_reference_with_position_and_orientation(cls, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> typing.Optional[SpatialGraphInteropFrameOfReferencePreview]: ...
 
 @typing.final

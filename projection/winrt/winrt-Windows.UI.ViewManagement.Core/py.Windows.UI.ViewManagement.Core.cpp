@@ -881,6 +881,37 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
                 return nullptr;
             }
         }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"TryShow", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryShow(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -913,48 +944,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
                 {
                     auto _gil = release_gil();
                     return self->obj.TryShowPrimaryView();
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CoreInputView_TryShowWithKind(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputView* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.Core.CoreInputView", L"TryShow", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.TryShow(param0);
                 }());
             }
             catch (...)
@@ -1499,7 +1488,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { "try_hide_primary_view", reinterpret_cast<PyCFunction>(CoreInputView_TryHidePrimaryView), METH_VARARGS, nullptr },
         { "try_show", reinterpret_cast<PyCFunction>(CoreInputView_TryShow), METH_VARARGS, nullptr },
         { "try_show_primary_view", reinterpret_cast<PyCFunction>(CoreInputView_TryShowPrimaryView), METH_VARARGS, nullptr },
-        { "try_show_with_kind", reinterpret_cast<PyCFunction>(CoreInputView_TryShowWithKind), METH_VARARGS, nullptr },
         { "try_transfer_x_y_focus_to_primary_view", reinterpret_cast<PyCFunction>(CoreInputView_TryTransferXYFocusToPrimaryView), METH_VARARGS, nullptr },
         { "add_occlusions_changed", reinterpret_cast<PyCFunction>(CoreInputView_add_OcclusionsChanged), METH_O, nullptr },
         { "remove_occlusions_changed", reinterpret_cast<PyCFunction>(CoreInputView_remove_OcclusionsChanged), METH_O, nullptr },

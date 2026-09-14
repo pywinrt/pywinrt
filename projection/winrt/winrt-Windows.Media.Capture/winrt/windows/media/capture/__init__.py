@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_capture import (
     WhiteBalanceGain,
@@ -469,5 +470,13 @@ class VideoRotation(enum.IntEnum):
     CLOCKWISE180_DEGREES = 2
     CLOCKWISE270_DEGREES = 3
 
+winrt.runtime._internals.alias_method(AdvancedPhotoCapture, "capture_with_context_async", "capture_async")
+winrt.runtime._internals.alias_method(MediaCapture, "create_frame_reader_with_subtype_and_size_async", "create_frame_reader_async")
+winrt.runtime._internals.alias_method(MediaCapture, "create_frame_reader_with_subtype_async", "create_frame_reader_async")
+winrt.runtime._internals.alias_method(MediaCapture, "get_preview_frame_copy_async", "get_preview_frame_async")
+winrt.runtime._internals.alias_method(MediaCapture, "initialize_with_settings_async", "initialize_async")
+winrt.runtime._internals.alias_method(MediaCapture, "prepare_low_lag_record_to_custom_sink_id_async", "prepare_low_lag_record_to_custom_sink_async")
+winrt.runtime._internals.alias_method(MediaCapture, "start_preview_to_custom_sink_id_async", "start_preview_to_custom_sink_async")
+winrt.runtime._internals.alias_method(MediaCapture, "start_record_to_custom_sink_id_async", "start_record_to_custom_sink_async")
 MediaCaptureFailedEventHandler = typing.Callable[[MediaCapture, MediaCaptureFailedEventArgs], None]
 RecordLimitationExceededEventHandler = typing.Callable[[MediaCapture], None]

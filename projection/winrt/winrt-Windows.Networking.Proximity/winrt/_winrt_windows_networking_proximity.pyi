@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -34,9 +35,15 @@ class PeerFinder_Static(winrt._winrt.IInspectable_Static):
     def create_watcher(cls) -> PeerWatcher: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.Proximity.PeerInformation>> Windows.Networking.Proximity.PeerFinder::FindAllPeersAsync()
     def find_all_peers_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[PeerInformation]]: ...
+    @typing.overload
     # System.Void Windows.Networking.Proximity.PeerFinder::Start()
     def start(cls) -> None: ...
+    @typing.overload
     # System.Void Windows.Networking.Proximity.PeerFinder::Start(System.String)
+    def start(cls, peer_message: str, /) -> None: ...
+    # Deprecated alias of start() for pywinrt v3.x compatibility.
+    # System.Void Windows.Networking.Proximity.PeerFinder::Start(System.String)
+    @deprecated("Use start() instead.")
     def start_with_message(cls, peer_message: str, /) -> None: ...
     # System.Void Windows.Networking.Proximity.PeerFinder::Stop()
     def stop(cls) -> None: ...
@@ -154,17 +161,35 @@ class ProximityDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ProximityDevice(winrt.system.Object, metaclass=ProximityDevice_Static):
+    @typing.overload
     # System.Int64 Windows.Networking.Proximity.ProximityDevice::PublishBinaryMessage(System.String,Windows.Storage.Streams.IBuffer)
     def publish_binary_message(self, message_type: str, message: winrt.system.Buffer, /) -> winrt.system.Int64: ...
+    @typing.overload
     # System.Int64 Windows.Networking.Proximity.ProximityDevice::PublishBinaryMessage(System.String,Windows.Storage.Streams.IBuffer,Windows.Networking.Proximity.MessageTransmittedHandler)
+    def publish_binary_message(self, message_type: str, message: winrt.system.Buffer, message_transmitted_handler: MessageTransmittedHandler, /) -> winrt.system.Int64: ...
+    # Deprecated alias of publish_binary_message() for pywinrt v3.x compatibility.
+    # System.Int64 Windows.Networking.Proximity.ProximityDevice::PublishBinaryMessage(System.String,Windows.Storage.Streams.IBuffer,Windows.Networking.Proximity.MessageTransmittedHandler)
+    @deprecated("Use publish_binary_message() instead.")
     def publish_binary_message_with_callback(self, message_type: str, message: winrt.system.Buffer, message_transmitted_handler: MessageTransmittedHandler, /) -> winrt.system.Int64: ...
+    @typing.overload
     # System.Int64 Windows.Networking.Proximity.ProximityDevice::PublishMessage(System.String,System.String)
     def publish_message(self, message_type: str, message: str, /) -> winrt.system.Int64: ...
+    @typing.overload
     # System.Int64 Windows.Networking.Proximity.ProximityDevice::PublishMessage(System.String,System.String,Windows.Networking.Proximity.MessageTransmittedHandler)
+    def publish_message(self, message_type: str, message: str, message_transmitted_handler: MessageTransmittedHandler, /) -> winrt.system.Int64: ...
+    # Deprecated alias of publish_message() for pywinrt v3.x compatibility.
+    # System.Int64 Windows.Networking.Proximity.ProximityDevice::PublishMessage(System.String,System.String,Windows.Networking.Proximity.MessageTransmittedHandler)
+    @deprecated("Use publish_message() instead.")
     def publish_message_with_callback(self, message_type: str, message: str, message_transmitted_handler: MessageTransmittedHandler, /) -> winrt.system.Int64: ...
+    @typing.overload
     # System.Int64 Windows.Networking.Proximity.ProximityDevice::PublishUriMessage(Windows.Foundation.Uri)
     def publish_uri_message(self, message: windows_foundation.Uri, /) -> winrt.system.Int64: ...
+    @typing.overload
     # System.Int64 Windows.Networking.Proximity.ProximityDevice::PublishUriMessage(Windows.Foundation.Uri,Windows.Networking.Proximity.MessageTransmittedHandler)
+    def publish_uri_message(self, message: windows_foundation.Uri, message_transmitted_handler: MessageTransmittedHandler, /) -> winrt.system.Int64: ...
+    # Deprecated alias of publish_uri_message() for pywinrt v3.x compatibility.
+    # System.Int64 Windows.Networking.Proximity.ProximityDevice::PublishUriMessage(Windows.Foundation.Uri,Windows.Networking.Proximity.MessageTransmittedHandler)
+    @deprecated("Use publish_uri_message() instead.")
     def publish_uri_message_with_callback(self, message: windows_foundation.Uri, message_transmitted_handler: MessageTransmittedHandler, /) -> winrt.system.Int64: ...
     # System.Void Windows.Networking.Proximity.ProximityDevice::StopPublishingMessage(System.Int64)
     def stop_publishing_message(self, message_id: winrt.system.Int64, /) -> None: ...

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -113,9 +114,15 @@ class AppBroadcastTriggerProviderInfo(winrt.system.Object):
 @typing.final
 class ApplicationTrigger(winrt.system.Object, IBackgroundTrigger):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.ApplicationTriggerResult> Windows.ApplicationModel.Background.ApplicationTrigger::RequestAsync()
     def request_async(self) -> windows_foundation.IAsyncOperation[ApplicationTriggerResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.ApplicationTriggerResult> Windows.ApplicationModel.Background.ApplicationTrigger::RequestAsync(Windows.Foundation.Collections.ValueSet)
+    def request_async(self, arguments: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[ApplicationTriggerResult]: ...
+    # Deprecated alias of request_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.ApplicationTriggerResult> Windows.ApplicationModel.Background.ApplicationTrigger::RequestAsync(Windows.Foundation.Collections.ValueSet)
+    @deprecated("Use request_async() instead.")
     def request_async_with_arguments(self, arguments: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[ApplicationTriggerResult]: ...
 
 @typing.final
@@ -130,21 +137,45 @@ class AppointmentStoreNotificationTrigger(winrt.system.Object, IBackgroundTrigge
 
 @typing.final
 class BackgroundExecutionManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.ApplicationModel.Background.BackgroundAccessStatus Windows.ApplicationModel.Background.BackgroundExecutionManager::GetAccessStatus()
     def get_access_status(cls) -> BackgroundAccessStatus: ...
+    @typing.overload
     # Windows.ApplicationModel.Background.BackgroundAccessStatus Windows.ApplicationModel.Background.BackgroundExecutionManager::GetAccessStatus(System.String)
+    def get_access_status(cls, application_id: str, /) -> BackgroundAccessStatus: ...
+    # Deprecated alias of get_access_status() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Background.BackgroundAccessStatus Windows.ApplicationModel.Background.BackgroundExecutionManager::GetAccessStatus(System.String)
+    @deprecated("Use get_access_status() instead.")
     def get_access_status_for_application(cls, application_id: str, /) -> BackgroundAccessStatus: ...
+    @typing.overload
     # Windows.ApplicationModel.Background.BackgroundAccessStatus Windows.ApplicationModel.Background.BackgroundExecutionManager::GetAccessStatusForModernStandby()
     def get_access_status_for_modern_standby(cls) -> BackgroundAccessStatus: ...
+    @typing.overload
     # Windows.ApplicationModel.Background.BackgroundAccessStatus Windows.ApplicationModel.Background.BackgroundExecutionManager::GetAccessStatusForModernStandby(System.String)
+    def get_access_status_for_modern_standby(cls, application_id: str, /) -> BackgroundAccessStatus: ...
+    # Deprecated alias of get_access_status_for_modern_standby() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Background.BackgroundAccessStatus Windows.ApplicationModel.Background.BackgroundExecutionManager::GetAccessStatusForModernStandby(System.String)
+    @deprecated("Use get_access_status_for_modern_standby() instead.")
     def get_access_status_for_modern_standby_for_application(cls, application_id: str, /) -> BackgroundAccessStatus: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Background.BackgroundExecutionManager::RemoveAccess()
     def remove_access(cls) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Background.BackgroundExecutionManager::RemoveAccess(System.String)
+    def remove_access(cls, application_id: str, /) -> None: ...
+    # Deprecated alias of remove_access() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Background.BackgroundExecutionManager::RemoveAccess(System.String)
+    @deprecated("Use remove_access() instead.")
     def remove_access_for_application(cls, application_id: str, /) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.BackgroundAccessStatus> Windows.ApplicationModel.Background.BackgroundExecutionManager::RequestAccessAsync()
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[BackgroundAccessStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.BackgroundAccessStatus> Windows.ApplicationModel.Background.BackgroundExecutionManager::RequestAccessAsync(System.String)
+    def request_access_async(cls, application_id: str, /) -> windows_foundation.IAsyncOperation[BackgroundAccessStatus]: ...
+    # Deprecated alias of request_access_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.BackgroundAccessStatus> Windows.ApplicationModel.Background.BackgroundExecutionManager::RequestAccessAsync(System.String)
+    @deprecated("Use request_access_async() instead.")
     def request_access_for_application_async(cls, application_id: str, /) -> windows_foundation.IAsyncOperation[BackgroundAccessStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Background.BackgroundExecutionManager::RequestAccessKindAsync(Windows.ApplicationModel.Background.BackgroundAccessRequestKind,System.String)
     def request_access_kind_async(cls, requested_access: BackgroundAccessRequestKind, reason: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -502,17 +533,37 @@ class DeviceManufacturerNotificationTrigger(winrt.system.Object, IBackgroundTrig
 @typing.final
 class DeviceServicingTrigger(winrt.system.Object, IBackgroundTrigger):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.DeviceTriggerResult> Windows.ApplicationModel.Background.DeviceServicingTrigger::RequestAsync(System.String,Windows.Foundation.TimeSpan)
-    def request_async_simple(self, device_id: str, expected_duration: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[DeviceTriggerResult]: ...
+    def request_async(self, device_id: str, expected_duration: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[DeviceTriggerResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.DeviceTriggerResult> Windows.ApplicationModel.Background.DeviceServicingTrigger::RequestAsync(System.String,Windows.Foundation.TimeSpan,System.String)
+    def request_async(self, device_id: str, expected_duration: datetime.timedelta, arguments: str, /) -> windows_foundation.IAsyncOperation[DeviceTriggerResult]: ...
+    # Deprecated alias of request_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.DeviceTriggerResult> Windows.ApplicationModel.Background.DeviceServicingTrigger::RequestAsync(System.String,Windows.Foundation.TimeSpan)
+    @deprecated("Use request_async() instead.")
+    def request_async_simple(self, device_id: str, expected_duration: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[DeviceTriggerResult]: ...
+    # Deprecated alias of request_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.DeviceTriggerResult> Windows.ApplicationModel.Background.DeviceServicingTrigger::RequestAsync(System.String,Windows.Foundation.TimeSpan,System.String)
+    @deprecated("Use request_async() instead.")
     def request_async_with_arguments(self, device_id: str, expected_duration: datetime.timedelta, arguments: str, /) -> windows_foundation.IAsyncOperation[DeviceTriggerResult]: ...
 
 @typing.final
 class DeviceUseTrigger(winrt.system.Object, IBackgroundTrigger):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.DeviceTriggerResult> Windows.ApplicationModel.Background.DeviceUseTrigger::RequestAsync(System.String)
-    def request_async_simple(self, device_id: str, /) -> windows_foundation.IAsyncOperation[DeviceTriggerResult]: ...
+    def request_async(self, device_id: str, /) -> windows_foundation.IAsyncOperation[DeviceTriggerResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.DeviceTriggerResult> Windows.ApplicationModel.Background.DeviceUseTrigger::RequestAsync(System.String,System.String)
+    def request_async(self, device_id: str, arguments: str, /) -> windows_foundation.IAsyncOperation[DeviceTriggerResult]: ...
+    # Deprecated alias of request_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.DeviceTriggerResult> Windows.ApplicationModel.Background.DeviceUseTrigger::RequestAsync(System.String)
+    @deprecated("Use request_async() instead.")
+    def request_async_simple(self, device_id: str, /) -> windows_foundation.IAsyncOperation[DeviceTriggerResult]: ...
+    # Deprecated alias of request_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.DeviceTriggerResult> Windows.ApplicationModel.Background.DeviceUseTrigger::RequestAsync(System.String,System.String)
+    @deprecated("Use request_async() instead.")
     def request_async_with_arguments(self, device_id: str, arguments: str, /) -> windows_foundation.IAsyncOperation[DeviceTriggerResult]: ...
 
 @typing.final
@@ -595,9 +646,15 @@ class MaintenanceTrigger(winrt.system.Object, IBackgroundTrigger):
 @typing.final
 class MediaProcessingTrigger(winrt.system.Object, IBackgroundTrigger):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> Windows.ApplicationModel.Background.MediaProcessingTrigger::RequestAsync()
     def request_async(self) -> windows_foundation.IAsyncOperation[MediaProcessingTriggerResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> Windows.ApplicationModel.Background.MediaProcessingTrigger::RequestAsync(Windows.Foundation.Collections.ValueSet)
+    def request_async(self, arguments: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[MediaProcessingTriggerResult]: ...
+    # Deprecated alias of request_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> Windows.ApplicationModel.Background.MediaProcessingTrigger::RequestAsync(Windows.Foundation.Collections.ValueSet)
+    @deprecated("Use request_async() instead.")
     def request_async_with_arguments(self, arguments: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[MediaProcessingTriggerResult]: ...
 
 @typing.final

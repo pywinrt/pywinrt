@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_networking_backgroundtransfer import (
     BackgroundDownloadProgress,
@@ -83,3 +84,9 @@ class BackgroundTransferStatus(enum.IntEnum):
     PAUSED_RECOVERABLE_WEB_ERROR_STATUS = 8
     PAUSED_SYSTEM_POLICY = 32
 
+winrt.runtime._internals.alias_method(BackgroundDownloader, "create_download_from_file", "create_download")
+winrt.runtime._internals.alias_static_method(BackgroundDownloader, "get_current_downloads_for_group_async", "get_current_downloads_async")
+winrt.runtime._internals.alias_method(BackgroundUploader, "create_upload_with_form_data_and_auto_boundary_async", "create_upload_async")
+winrt.runtime._internals.alias_method(BackgroundUploader, "create_upload_with_sub_type_and_boundary_async", "create_upload_async")
+winrt.runtime._internals.alias_method(BackgroundUploader, "create_upload_with_sub_type_async", "create_upload_async")
+winrt.runtime._internals.alias_static_method(BackgroundUploader, "get_current_uploads_for_group_async", "get_current_uploads_async")

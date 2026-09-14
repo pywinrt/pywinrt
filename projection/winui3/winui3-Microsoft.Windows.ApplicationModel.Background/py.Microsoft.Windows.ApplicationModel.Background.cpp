@@ -119,18 +119,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BackgroundTaskBuilder_Register2(py::wrapper::Microsoft::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -419,7 +408,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Background
     static PyMethodDef _methods_BackgroundTaskBuilder[] = {
         { "add_condition", reinterpret_cast<PyCFunction>(BackgroundTaskBuilder_AddCondition), METH_VARARGS, nullptr },
         { "register", reinterpret_cast<PyCFunction>(BackgroundTaskBuilder_Register), METH_VARARGS, nullptr },
-        { "register2", reinterpret_cast<PyCFunction>(BackgroundTaskBuilder_Register2), METH_VARARGS, nullptr },
         { "set_task_entry_point_clsid", reinterpret_cast<PyCFunction>(BackgroundTaskBuilder_SetTaskEntryPointClsid), METH_VARARGS, nullptr },
         { "set_trigger", reinterpret_cast<PyCFunction>(BackgroundTaskBuilder_SetTrigger), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundTaskBuilder, METH_O | METH_STATIC, nullptr },

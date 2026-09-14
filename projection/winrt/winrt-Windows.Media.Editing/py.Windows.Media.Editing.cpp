@@ -1785,18 +1785,7 @@ namespace py::cpp::Windows::Media::Editing
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaComposition_GenerateMediaStreamSourceWithProfile(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -2044,18 +2033,39 @@ namespace py::cpp::Windows::Media::Editing
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 2)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"RenderToFileAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Media::Editing::MediaTrimmingPreference>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RenderToFileAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* MediaComposition_RenderToFileWithProfileAsync(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -2080,49 +2090,6 @@ namespace py::cpp::Windows::Media::Editing
                 {
                     auto _gil = release_gil();
                     return self->obj.RenderToFileAsync(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaComposition_RenderToFileWithTrimmingPreferenceAsync(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Editing.MediaComposition", L"RenderToFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Media::Editing::MediaTrimmingPreference>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.RenderToFileAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -2358,13 +2325,10 @@ namespace py::cpp::Windows::Media::Editing
         { "clone", reinterpret_cast<PyCFunction>(MediaComposition_Clone), METH_VARARGS, nullptr },
         { "create_default_encoding_profile", reinterpret_cast<PyCFunction>(MediaComposition_CreateDefaultEncodingProfile), METH_VARARGS, nullptr },
         { "generate_media_stream_source", reinterpret_cast<PyCFunction>(MediaComposition_GenerateMediaStreamSource), METH_VARARGS, nullptr },
-        { "generate_media_stream_source_with_profile", reinterpret_cast<PyCFunction>(MediaComposition_GenerateMediaStreamSourceWithProfile), METH_VARARGS, nullptr },
         { "generate_preview_media_stream_source", reinterpret_cast<PyCFunction>(MediaComposition_GeneratePreviewMediaStreamSource), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(MediaComposition_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "get_thumbnails_async", reinterpret_cast<PyCFunction>(MediaComposition_GetThumbnailsAsync), METH_VARARGS, nullptr },
         { "render_to_file_async", reinterpret_cast<PyCFunction>(MediaComposition_RenderToFileAsync), METH_VARARGS, nullptr },
-        { "render_to_file_with_profile_async", reinterpret_cast<PyCFunction>(MediaComposition_RenderToFileWithProfileAsync), METH_VARARGS, nullptr },
-        { "render_to_file_with_trimming_preference_async", reinterpret_cast<PyCFunction>(MediaComposition_RenderToFileWithTrimmingPreferenceAsync), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(MediaComposition_SaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaComposition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaComposition), METH_O | METH_STATIC, nullptr },

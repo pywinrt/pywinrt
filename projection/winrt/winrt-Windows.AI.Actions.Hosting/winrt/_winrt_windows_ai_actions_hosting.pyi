@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -21,9 +22,15 @@ class ActionCatalog(winrt.system.Object, windows_foundation.IClosable):
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.AI.Actions.Hosting.ActionCatalog::Close()
     def close(self) -> None: ...
+    @typing.overload
     # Windows.AI.Actions.Hosting.ActionInstance[] Windows.AI.Actions.Hosting.ActionCatalog::GetActionsForInputs(Windows.AI.Actions.ActionEntity[])
     def get_actions_for_inputs(self, input_entities: typing.Union[winrt.system.Array[windows_ai_actions.ActionEntity], winrt.system.ReadableBuffer], /) -> winrt.system.Array[ActionInstance]: ...
+    @typing.overload
     # Windows.AI.Actions.Hosting.ActionInstance[] Windows.AI.Actions.Hosting.ActionCatalog::GetActionsForInputs(Windows.AI.Actions.ActionEntity[],Windows.UI.WindowId)
+    def get_actions_for_inputs(self, input_entities: typing.Union[winrt.system.Array[windows_ai_actions.ActionEntity], winrt.system.ReadableBuffer], invoker_window_id: typing.Union[windows_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> winrt.system.Array[ActionInstance]: ...
+    # Deprecated alias of get_actions_for_inputs() for pywinrt v3.x compatibility.
+    # Windows.AI.Actions.Hosting.ActionInstance[] Windows.AI.Actions.Hosting.ActionCatalog::GetActionsForInputs(Windows.AI.Actions.ActionEntity[],Windows.UI.WindowId)
+    @deprecated("Use get_actions_for_inputs() instead.")
     def get_actions_for_inputs2(self, input_entities: typing.Union[winrt.system.Array[windows_ai_actions.ActionEntity], winrt.system.ReadableBuffer], invoker_window_id: typing.Union[windows_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> winrt.system.Array[ActionInstance]: ...
     # Windows.AI.Actions.Hosting.ActionDefinition[] Windows.AI.Actions.Hosting.ActionCatalog::GetAllActions()
     def get_all_actions(self) -> winrt.system.Array[ActionDefinition]: ...

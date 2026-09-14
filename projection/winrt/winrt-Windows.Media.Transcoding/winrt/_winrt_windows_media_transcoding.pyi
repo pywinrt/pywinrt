@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -23,13 +24,25 @@ Self = typing.TypeVar('Self')
 @typing.final
 class MediaTranscoder(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # System.Void Windows.Media.Transcoding.MediaTranscoder::AddAudioEffect(System.String)
     def add_audio_effect(self, activatable_class_id: str, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Transcoding.MediaTranscoder::AddAudioEffect(System.String,System.Boolean,Windows.Foundation.Collections.IPropertySet)
+    def add_audio_effect(self, activatable_class_id: str, effect_required: bool, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    # Deprecated alias of add_audio_effect() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.Transcoding.MediaTranscoder::AddAudioEffect(System.String,System.Boolean,Windows.Foundation.Collections.IPropertySet)
+    @deprecated("Use add_audio_effect() instead.")
     def add_audio_effect_with_settings(self, activatable_class_id: str, effect_required: bool, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Transcoding.MediaTranscoder::AddVideoEffect(System.String)
     def add_video_effect(self, activatable_class_id: str, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Transcoding.MediaTranscoder::AddVideoEffect(System.String,System.Boolean,Windows.Foundation.Collections.IPropertySet)
+    def add_video_effect(self, activatable_class_id: str, effect_required: bool, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    # Deprecated alias of add_video_effect() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.Transcoding.MediaTranscoder::AddVideoEffect(System.String,System.Boolean,Windows.Foundation.Collections.IPropertySet)
+    @deprecated("Use add_video_effect() instead.")
     def add_video_effect_with_settings(self, activatable_class_id: str, effect_required: bool, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
     # System.Void Windows.Media.Transcoding.MediaTranscoder::ClearEffects()
     def clear_effects(self) -> None: ...

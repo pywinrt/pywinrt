@@ -716,7 +716,38 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 2)
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"Add", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Add(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
         {
             try
             {
@@ -759,51 +790,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"AddOrReplace", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-
-                {
-                    auto _gil = release_gil();
-                    self->obj.AddOrReplace(param0, param1, param2);
-                }
-
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemAccessList_AddOrReplaceOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
         if (arg_count == 2)
         {
             try
@@ -837,18 +823,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemAccessList_AddOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 3)
         {
             try
             {
@@ -856,22 +831,25 @@ namespace py::cpp::Windows::Storage::AccessCache
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"Add", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemAccessList", L"AddOrReplace", 3);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(1);
+                    py::set_arg_count_version_error(3);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Add(param0);
-                }());
+                    self->obj.AddOrReplace(param0, param1, param2);
+                }
+
+                Py_RETURN_NONE;
             }
             catch (...)
             {
@@ -1046,18 +1024,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemAccessList_GetFileWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1131,18 +1098,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemAccessList_GetFolderWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1216,18 +1172,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemAccessList_GetItemWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1396,17 +1341,12 @@ namespace py::cpp::Windows::Storage::AccessCache
     static PyMethodDef _methods_StorageItemAccessList[] = {
         { "add", reinterpret_cast<PyCFunction>(StorageItemAccessList_Add), METH_VARARGS, nullptr },
         { "add_or_replace", reinterpret_cast<PyCFunction>(StorageItemAccessList_AddOrReplace), METH_VARARGS, nullptr },
-        { "add_or_replace_overload_default_metadata", reinterpret_cast<PyCFunction>(StorageItemAccessList_AddOrReplaceOverloadDefaultMetadata), METH_VARARGS, nullptr },
-        { "add_overload_default_metadata", reinterpret_cast<PyCFunction>(StorageItemAccessList_AddOverloadDefaultMetadata), METH_VARARGS, nullptr },
         { "check_access", reinterpret_cast<PyCFunction>(StorageItemAccessList_CheckAccess), METH_VARARGS, nullptr },
         { "clear", reinterpret_cast<PyCFunction>(StorageItemAccessList_Clear), METH_VARARGS, nullptr },
         { "contains_item", reinterpret_cast<PyCFunction>(StorageItemAccessList_ContainsItem), METH_VARARGS, nullptr },
         { "get_file_async", reinterpret_cast<PyCFunction>(StorageItemAccessList_GetFileAsync), METH_VARARGS, nullptr },
-        { "get_file_with_options_async", reinterpret_cast<PyCFunction>(StorageItemAccessList_GetFileWithOptionsAsync), METH_VARARGS, nullptr },
         { "get_folder_async", reinterpret_cast<PyCFunction>(StorageItemAccessList_GetFolderAsync), METH_VARARGS, nullptr },
-        { "get_folder_with_options_async", reinterpret_cast<PyCFunction>(StorageItemAccessList_GetFolderWithOptionsAsync), METH_VARARGS, nullptr },
         { "get_item_async", reinterpret_cast<PyCFunction>(StorageItemAccessList_GetItemAsync), METH_VARARGS, nullptr },
-        { "get_item_with_options_async", reinterpret_cast<PyCFunction>(StorageItemAccessList_GetItemWithOptionsAsync), METH_VARARGS, nullptr },
         { "remove", reinterpret_cast<PyCFunction>(StorageItemAccessList_Remove), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StorageItemAccessList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageItemAccessList), METH_O | METH_STATIC, nullptr },
@@ -1452,7 +1392,38 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 2)
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"Add", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Add(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
         {
             try
             {
@@ -1484,18 +1455,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemMostRecentlyUsedList_AddOrReplace(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -1503,7 +1463,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"AddOrReplace", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"Add", 3);
                 }
 
                 if (!is_overload_present.value())
@@ -1512,16 +1472,15 @@ namespace py::cpp::Windows::Storage::AccessCache
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::AccessCache::RecentStorageItemVisibility>(args, 2);
 
+                return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    self->obj.AddOrReplace(param0, param1, param2);
-                }
-
-                Py_RETURN_NONE;
+                    return self->obj.Add(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1536,7 +1495,7 @@ namespace py::cpp::Windows::Storage::AccessCache
         }
     }
 
-    static PyObject* StorageItemMostRecentlyUsedList_AddOrReplaceOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
+    static PyObject* StorageItemMostRecentlyUsedList_AddOrReplace(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1573,18 +1532,41 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 3)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"AddOrReplace", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOrReplace(param0, param1, param2);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* StorageItemMostRecentlyUsedList_AddOrReplaceWithMetadataAndVisibility(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -1612,92 +1594,6 @@ namespace py::cpp::Windows::Storage::AccessCache
                 }
 
                 Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemMostRecentlyUsedList_AddOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"Add", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.Add(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemMostRecentlyUsedList_AddWithMetadataAndVisibility(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList", L"Add", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::AccessCache::RecentStorageItemVisibility>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.Add(param0, param1, param2);
-                }());
             }
             catch (...)
             {
@@ -1872,18 +1768,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemMostRecentlyUsedList_GetFileWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1957,18 +1842,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemMostRecentlyUsedList_GetFolderWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2042,18 +1916,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemMostRecentlyUsedList_GetItemWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2287,19 +2150,12 @@ namespace py::cpp::Windows::Storage::AccessCache
     static PyMethodDef _methods_StorageItemMostRecentlyUsedList[] = {
         { "add", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_Add), METH_VARARGS, nullptr },
         { "add_or_replace", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_AddOrReplace), METH_VARARGS, nullptr },
-        { "add_or_replace_overload_default_metadata", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_AddOrReplaceOverloadDefaultMetadata), METH_VARARGS, nullptr },
-        { "add_or_replace_with_metadata_and_visibility", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_AddOrReplaceWithMetadataAndVisibility), METH_VARARGS, nullptr },
-        { "add_overload_default_metadata", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_AddOverloadDefaultMetadata), METH_VARARGS, nullptr },
-        { "add_with_metadata_and_visibility", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_AddWithMetadataAndVisibility), METH_VARARGS, nullptr },
         { "check_access", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_CheckAccess), METH_VARARGS, nullptr },
         { "clear", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_Clear), METH_VARARGS, nullptr },
         { "contains_item", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_ContainsItem), METH_VARARGS, nullptr },
         { "get_file_async", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_GetFileAsync), METH_VARARGS, nullptr },
-        { "get_file_with_options_async", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_GetFileWithOptionsAsync), METH_VARARGS, nullptr },
         { "get_folder_async", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_GetFolderAsync), METH_VARARGS, nullptr },
-        { "get_folder_with_options_async", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_GetFolderWithOptionsAsync), METH_VARARGS, nullptr },
         { "get_item_async", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_GetItemAsync), METH_VARARGS, nullptr },
-        { "get_item_with_options_async", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_GetItemWithOptionsAsync), METH_VARARGS, nullptr },
         { "remove", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_Remove), METH_VARARGS, nullptr },
         { "add_item_removed", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_add_ItemRemoved), METH_O, nullptr },
         { "remove_item_removed", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_remove_ItemRemoved), METH_O, nullptr },
@@ -2349,7 +2205,38 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 2)
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"Add", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Add(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
         {
             try
             {
@@ -2392,51 +2279,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"AddOrReplace", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-
-                {
-                    auto _gil = release_gil();
-                    self->obj.AddOrReplace(param0, param1, param2);
-                }
-
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IStorageItemAccessList_AddOrReplaceOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
         if (arg_count == 2)
         {
             try
@@ -2470,18 +2312,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IStorageItemAccessList_AddOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 3)
         {
             try
             {
@@ -2489,22 +2320,25 @@ namespace py::cpp::Windows::Storage::AccessCache
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"Add", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.AccessCache.IStorageItemAccessList", L"AddOrReplace", 3);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(1);
+                    py::set_arg_count_version_error(3);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.Add(param0);
-                }());
+                    self->obj.AddOrReplace(param0, param1, param2);
+                }
+
+                Py_RETURN_NONE;
             }
             catch (...)
             {
@@ -2679,18 +2513,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IStorageItemAccessList_GetFileWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2764,18 +2587,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IStorageItemAccessList_GetFolderWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2849,18 +2661,7 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IStorageItemAccessList_GetItemWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -3005,17 +2806,12 @@ namespace py::cpp::Windows::Storage::AccessCache
     static PyMethodDef _methods_IStorageItemAccessList[] = {
         { "add", reinterpret_cast<PyCFunction>(IStorageItemAccessList_Add), METH_VARARGS, nullptr },
         { "add_or_replace", reinterpret_cast<PyCFunction>(IStorageItemAccessList_AddOrReplace), METH_VARARGS, nullptr },
-        { "add_or_replace_overload_default_metadata", reinterpret_cast<PyCFunction>(IStorageItemAccessList_AddOrReplaceOverloadDefaultMetadata), METH_VARARGS, nullptr },
-        { "add_overload_default_metadata", reinterpret_cast<PyCFunction>(IStorageItemAccessList_AddOverloadDefaultMetadata), METH_VARARGS, nullptr },
         { "check_access", reinterpret_cast<PyCFunction>(IStorageItemAccessList_CheckAccess), METH_VARARGS, nullptr },
         { "clear", reinterpret_cast<PyCFunction>(IStorageItemAccessList_Clear), METH_VARARGS, nullptr },
         { "contains_item", reinterpret_cast<PyCFunction>(IStorageItemAccessList_ContainsItem), METH_VARARGS, nullptr },
         { "get_file_async", reinterpret_cast<PyCFunction>(IStorageItemAccessList_GetFileAsync), METH_VARARGS, nullptr },
-        { "get_file_with_options_async", reinterpret_cast<PyCFunction>(IStorageItemAccessList_GetFileWithOptionsAsync), METH_VARARGS, nullptr },
         { "get_folder_async", reinterpret_cast<PyCFunction>(IStorageItemAccessList_GetFolderAsync), METH_VARARGS, nullptr },
-        { "get_folder_with_options_async", reinterpret_cast<PyCFunction>(IStorageItemAccessList_GetFolderWithOptionsAsync), METH_VARARGS, nullptr },
         { "get_item_async", reinterpret_cast<PyCFunction>(IStorageItemAccessList_GetItemAsync), METH_VARARGS, nullptr },
-        { "get_item_with_options_async", reinterpret_cast<PyCFunction>(IStorageItemAccessList_GetItemWithOptionsAsync), METH_VARARGS, nullptr },
         { "remove", reinterpret_cast<PyCFunction>(IStorageItemAccessList_Remove), METH_VARARGS, nullptr },
         { }};
 
@@ -3049,6 +2845,48 @@ namespace py::cpp::Windows::Storage::AccessCache
         ImplementsIStorageItemAccessList() = delete;
         ImplementsIStorageItemAccessList(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageItemAccessList, winrt::Windows::Storage::AccessCache::IStorageItemAccessList>(py_obj, runtime_class)
         {
+        }
+
+        auto Add(winrt::Windows::Storage::IStorageItem const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_overload_default_metadata")};
+                if (!method)
+                {
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "add"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
         }
 
         auto Add(winrt::Windows::Storage::IStorageItem const& param0, winrt::hstring const& param1)
@@ -3088,6 +2926,58 @@ namespace py::cpp::Windows::Storage::AccessCache
                 }
 
                 return py::convert_to<winrt::hstring>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto AddOrReplace(winrt::hstring const& param0, winrt::Windows::Storage::IStorageItem const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_or_replace_overload_default_metadata")};
+                if (!method)
+                {
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "add_or_replace"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
             }
             catch (python_exception)
             {
@@ -3136,80 +3026,6 @@ namespace py::cpp::Windows::Storage::AccessCache
                 {
                     throw python_exception();
                 }
-            }
-            catch (python_exception)
-            {
-                py::write_unraisable_and_throw();
-            }
-        }
-
-        auto AddOrReplace(winrt::hstring const& param0, winrt::Windows::Storage::IStorageItem const& param1)
-        {
-            try
-            {
-                py::pyobj_handle self{this->get_py_obj()};
-
-                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_or_replace_overload_default_metadata")};
-                if (!method)
-                {
-                    throw python_exception();
-                }
-
-                py::pyobj_handle py_param0{py::convert(param0)};
-                if (!py_param0)
-                {
-                    throw python_exception();
-                }
-
-                py::pyobj_handle py_param1{py::convert(param1)};
-                if (!py_param1)
-                {
-                    throw python_exception();
-                }
-
-                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                if (!args)
-                {
-                    throw python_exception();
-                }
-
-                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
-                if (!return_value)
-                {
-                    throw python_exception();
-                }
-            }
-            catch (python_exception)
-            {
-                py::write_unraisable_and_throw();
-            }
-        }
-
-        auto Add(winrt::Windows::Storage::IStorageItem const& param0)
-        {
-            try
-            {
-                py::pyobj_handle self{this->get_py_obj()};
-
-                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_overload_default_metadata")};
-                if (!method)
-                {
-                    throw python_exception();
-                }
-
-                py::pyobj_handle py_param0{py::convert(param0)};
-                if (!py_param0)
-                {
-                    throw python_exception();
-                }
-
-                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
-                if (!return_value)
-                {
-                    throw python_exception();
-                }
-
-                return py::convert_to<winrt::hstring>(return_value.get());
             }
             catch (python_exception)
             {
@@ -3346,7 +3162,17 @@ namespace py::cpp::Windows::Storage::AccessCache
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_file_with_options_async")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "get_file_async"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};
@@ -3422,7 +3248,17 @@ namespace py::cpp::Windows::Storage::AccessCache
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_folder_with_options_async")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "get_folder_async"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};
@@ -3498,7 +3334,17 @@ namespace py::cpp::Windows::Storage::AccessCache
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_item_with_options_async")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "get_item_async"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};

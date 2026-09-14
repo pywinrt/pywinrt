@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -124,11 +125,22 @@ class UserDataAccountManagerForUser(winrt.system.Object):
 
 @typing.final
 class UserDataAccountStore(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore::CreateAccountAsync(System.String)
     def create_account_async(self, user_display_name: str, /) -> windows_foundation.IAsyncOperation[UserDataAccount]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore::CreateAccountAsync(System.String,System.String,System.String)
-    def create_account_with_package_relative_app_id_and_enterprise_id_async(self, user_display_name: str, package_relative_app_id: str, enterprise_id: str, /) -> windows_foundation.IAsyncOperation[UserDataAccount]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore::CreateAccountAsync(System.String,System.String)
+    def create_account_async(self, user_display_name: str, package_relative_app_id: str, /) -> windows_foundation.IAsyncOperation[UserDataAccount]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore::CreateAccountAsync(System.String,System.String,System.String)
+    def create_account_async(self, user_display_name: str, package_relative_app_id: str, enterprise_id: str, /) -> windows_foundation.IAsyncOperation[UserDataAccount]: ...
+    # Deprecated alias of create_account_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore::CreateAccountAsync(System.String,System.String,System.String)
+    @deprecated("Use create_account_async() instead.")
+    def create_account_with_package_relative_app_id_and_enterprise_id_async(self, user_display_name: str, package_relative_app_id: str, enterprise_id: str, /) -> windows_foundation.IAsyncOperation[UserDataAccount]: ...
+    # Deprecated alias of create_account_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore::CreateAccountAsync(System.String,System.String)
+    @deprecated("Use create_account_async() instead.")
     def create_account_with_package_relative_app_id_async(self, user_display_name: str, package_relative_app_id: str, /) -> windows_foundation.IAsyncOperation[UserDataAccount]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.UserDataAccounts.UserDataAccount>> Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore::FindAccountsAsync()
     def find_accounts_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[UserDataAccount]]: ...

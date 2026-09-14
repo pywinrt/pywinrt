@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_authentication_identity_provider import (
     SecondaryAuthenticationFactorAuthentication,
@@ -127,3 +128,4 @@ class SecondaryAuthenticationFactorRegistrationStatus(enum.IntEnum):
     PIN_SETUP_REQUIRED = 3
     DISABLED_BY_POLICY = 4
 
+winrt.runtime._internals.alias_static_method(SecondaryAuthenticationFactorRegistration, "register_device_presence_monitoring_with_new_device_async", "register_device_presence_monitoring_async")

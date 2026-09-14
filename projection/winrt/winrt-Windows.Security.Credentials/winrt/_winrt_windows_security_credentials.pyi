@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -26,9 +27,19 @@ class KeyCredential(winrt.system.Object):
     def get_attestation_async(self) -> windows_foundation.IAsyncOperation[KeyCredentialAttestationResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.KeyCredentialOperationResult> Windows.Security.Credentials.KeyCredential::RequestSignAsync(Windows.Storage.Streams.IBuffer)
     def request_sign_async(self, data: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[KeyCredentialOperationResult]: ...
-    # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredential::RetrievePublicKey(Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType)
-    def retrieve_public_key_with_blob_type(self, blob_type: windows_security_cryptography_core.CryptographicPublicKeyBlobType, /) -> winrt.system.Buffer: ...
+    @typing.overload
     # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredential::RetrievePublicKey()
+    def retrieve_public_key(self) -> winrt.system.Buffer: ...
+    @typing.overload
+    # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredential::RetrievePublicKey(Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType)
+    def retrieve_public_key(self, blob_type: windows_security_cryptography_core.CryptographicPublicKeyBlobType, /) -> winrt.system.Buffer: ...
+    # Deprecated alias of retrieve_public_key() for pywinrt v3.x compatibility.
+    # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredential::RetrievePublicKey(Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType)
+    @deprecated("Use retrieve_public_key() instead.")
+    def retrieve_public_key_with_blob_type(self, blob_type: windows_security_cryptography_core.CryptographicPublicKeyBlobType, /) -> winrt.system.Buffer: ...
+    # Deprecated alias of retrieve_public_key() for pywinrt v3.x compatibility.
+    # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredential::RetrievePublicKey()
+    @deprecated("Use retrieve_public_key() instead.")
     def retrieve_public_key_with_default_blob_type(self) -> winrt.system.Buffer: ...
     # System.String Windows.Security.Credentials.KeyCredential::get_Name()
     @_property
@@ -163,9 +174,15 @@ class WebAccount(winrt.system.Object, IWebAccount):
     def __new__(cls: typing.Type[Self], web_account_provider: WebAccountProvider, user_name: str, state: WebAccountState) -> Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Security.Credentials.WebAccount::GetPictureAsync(Windows.Security.Credentials.WebAccountPictureSize)
     def get_picture_async(self, desized_size: WebAccountPictureSize, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Security.Credentials.WebAccount::SignOutAsync()
     def sign_out_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Security.Credentials.WebAccount::SignOutAsync(System.String)
+    def sign_out_async(self, client_id: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of sign_out_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Security.Credentials.WebAccount::SignOutAsync(System.String)
+    @deprecated("Use sign_out_async() instead.")
     def sign_out_with_client_id_async(self, client_id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Security.Credentials.WebAccountState Windows.Security.Credentials.WebAccount::get_State()
     @_property

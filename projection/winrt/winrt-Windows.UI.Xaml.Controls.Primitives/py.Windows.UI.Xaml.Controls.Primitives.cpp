@@ -6928,7 +6928,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* FlyoutBase_CreatePresenter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* FlyoutBase_CreatePresenter_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -7051,7 +7051,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* FlyoutBase_OnProcessKeyboardAccelerators(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* FlyoutBase_OnProcessKeyboardAccelerators_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -8785,9 +8785,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_FlyoutBase[] = {
-        { "_create_presenter", reinterpret_cast<PyCFunction>(FlyoutBase_CreatePresenter), METH_VARARGS, nullptr },
+        { "_create_presenter", reinterpret_cast<PyCFunction>(FlyoutBase_CreatePresenter_protected), METH_VARARGS, nullptr },
         { "hide", reinterpret_cast<PyCFunction>(FlyoutBase_Hide), METH_VARARGS, nullptr },
-        { "_on_process_keyboard_accelerators", reinterpret_cast<PyCFunction>(FlyoutBase_OnProcessKeyboardAccelerators), METH_VARARGS, nullptr },
+        { "_on_process_keyboard_accelerators", reinterpret_cast<PyCFunction>(FlyoutBase_OnProcessKeyboardAccelerators_protected), METH_VARARGS, nullptr },
         { "show_at", reinterpret_cast<PyCFunction>(FlyoutBase_ShowAt), METH_VARARGS, nullptr },
         { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(FlyoutBase_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(FlyoutBase_add_Closed), METH_O, nullptr },
@@ -22884,7 +22884,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* PickerFlyoutBase_OnConfirmed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* PickerFlyoutBase_OnConfirmed_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -22969,7 +22969,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* PickerFlyoutBase_ShouldShowConfirmationButtons(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* PickerFlyoutBase_ShouldShowConfirmationButtons_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -23064,8 +23064,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_PickerFlyoutBase[] = {
-        { "_on_confirmed", reinterpret_cast<PyCFunction>(PickerFlyoutBase_OnConfirmed), METH_VARARGS, nullptr },
-        { "_should_show_confirmation_buttons", reinterpret_cast<PyCFunction>(PickerFlyoutBase_ShouldShowConfirmationButtons), METH_VARARGS, nullptr },
+        { "_on_confirmed", reinterpret_cast<PyCFunction>(PickerFlyoutBase_OnConfirmed_protected), METH_VARARGS, nullptr },
+        { "_should_show_confirmation_buttons", reinterpret_cast<PyCFunction>(PickerFlyoutBase_ShouldShowConfirmationButtons_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PickerFlyoutBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PickerFlyoutBase), METH_O | METH_STATIC, nullptr },
         { }};
@@ -25748,7 +25748,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* RangeBase_OnMaximumChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* RangeBase_OnMaximumChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -25792,7 +25792,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RangeBase_OnMinimumChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* RangeBase_OnMinimumChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -25836,7 +25836,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* RangeBase_OnValueChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* RangeBase_OnValueChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -26465,9 +26465,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_RangeBase[] = {
-        { "_on_maximum_changed", reinterpret_cast<PyCFunction>(RangeBase_OnMaximumChanged), METH_VARARGS, nullptr },
-        { "_on_minimum_changed", reinterpret_cast<PyCFunction>(RangeBase_OnMinimumChanged), METH_VARARGS, nullptr },
-        { "_on_value_changed", reinterpret_cast<PyCFunction>(RangeBase_OnValueChanged), METH_VARARGS, nullptr },
+        { "_on_maximum_changed", reinterpret_cast<PyCFunction>(RangeBase_OnMaximumChanged_protected), METH_VARARGS, nullptr },
+        { "_on_minimum_changed", reinterpret_cast<PyCFunction>(RangeBase_OnMinimumChanged_protected), METH_VARARGS, nullptr },
+        { "_on_value_changed", reinterpret_cast<PyCFunction>(RangeBase_OnValueChanged_protected), METH_VARARGS, nullptr },
         { "add_value_changed", reinterpret_cast<PyCFunction>(RangeBase_add_ValueChanged), METH_O, nullptr },
         { "remove_value_changed", reinterpret_cast<PyCFunction>(RangeBase_remove_ValueChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_RangeBase, METH_O | METH_STATIC, nullptr },
@@ -29742,7 +29742,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ToggleButton_OnToggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ToggleButton_OnToggle_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -30201,7 +30201,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_ToggleButton[] = {
-        { "_on_toggle", reinterpret_cast<PyCFunction>(ToggleButton_OnToggle), METH_VARARGS, nullptr },
+        { "_on_toggle", reinterpret_cast<PyCFunction>(ToggleButton_OnToggle_protected), METH_VARARGS, nullptr },
         { "add_checked", reinterpret_cast<PyCFunction>(ToggleButton_add_Checked), METH_O, nullptr },
         { "remove_checked", reinterpret_cast<PyCFunction>(ToggleButton_remove_Checked), METH_O, nullptr },
         { "add_indeterminate", reinterpret_cast<PyCFunction>(ToggleButton_add_Indeterminate), METH_O, nullptr },

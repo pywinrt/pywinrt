@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -73,12 +74,18 @@ class CoreInputView(winrt.system.Object, metaclass=CoreInputView_Static):
     def try_hide(self) -> bool: ...
     # System.Boolean Windows.UI.ViewManagement.Core.CoreInputView::TryHidePrimaryView()
     def try_hide_primary_view(self) -> bool: ...
+    @typing.overload
     # System.Boolean Windows.UI.ViewManagement.Core.CoreInputView::TryShow()
     def try_show(self) -> bool: ...
+    @typing.overload
+    # System.Boolean Windows.UI.ViewManagement.Core.CoreInputView::TryShow(Windows.UI.ViewManagement.Core.CoreInputViewKind)
+    def try_show(self, type: CoreInputViewKind, /) -> bool: ...
+    # Deprecated alias of try_show() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.UI.ViewManagement.Core.CoreInputView::TryShow(Windows.UI.ViewManagement.Core.CoreInputViewKind)
+    @deprecated("Use try_show() instead.")
+    def try_show_with_kind(self, type: CoreInputViewKind, /) -> bool: ...
     # System.Boolean Windows.UI.ViewManagement.Core.CoreInputView::TryShowPrimaryView()
     def try_show_primary_view(self) -> bool: ...
-    # System.Boolean Windows.UI.ViewManagement.Core.CoreInputView::TryShow(Windows.UI.ViewManagement.Core.CoreInputViewKind)
-    def try_show_with_kind(self, type: CoreInputViewKind, /) -> bool: ...
     # System.Boolean Windows.UI.ViewManagement.Core.CoreInputView::TryTransferXYFocusToPrimaryView(Windows.Foundation.Rect,Windows.UI.ViewManagement.Core.CoreInputViewXYFocusTransferDirection)
     def try_transfer_x_y_focus_to_primary_view(self, origin: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], direction: CoreInputViewXYFocusTransferDirection, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.ViewManagement.Core.CoreInputView::add_OcclusionsChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.ViewManagement.Core.CoreInputView,Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs>)

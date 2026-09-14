@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -21,13 +22,25 @@ Self = typing.TypeVar('Self')
 class PnpObject_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.Pnp.PnpObject> Windows.Devices.Enumeration.Pnp.PnpObject::CreateFromIdAsync(Windows.Devices.Enumeration.Pnp.PnpObjectType,System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def create_from_id_async(cls, type: PnpObjectType, id: str, requested_properties: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[PnpObject]: ...
+    @typing.overload
     # Windows.Devices.Enumeration.Pnp.PnpObjectWatcher Windows.Devices.Enumeration.Pnp.PnpObject::CreateWatcher(Windows.Devices.Enumeration.Pnp.PnpObjectType,Windows.Foundation.Collections.IIterable`1<System.String>)
     def create_watcher(cls, type: PnpObjectType, requested_properties: typing.Iterable[str], /) -> PnpObjectWatcher: ...
+    @typing.overload
     # Windows.Devices.Enumeration.Pnp.PnpObjectWatcher Windows.Devices.Enumeration.Pnp.PnpObject::CreateWatcher(Windows.Devices.Enumeration.Pnp.PnpObjectType,Windows.Foundation.Collections.IIterable`1<System.String>,System.String)
+    def create_watcher(cls, type: PnpObjectType, requested_properties: typing.Iterable[str], aqs_filter: str, /) -> PnpObjectWatcher: ...
+    # Deprecated alias of create_watcher() for pywinrt v3.x compatibility.
+    # Windows.Devices.Enumeration.Pnp.PnpObjectWatcher Windows.Devices.Enumeration.Pnp.PnpObject::CreateWatcher(Windows.Devices.Enumeration.Pnp.PnpObjectType,Windows.Foundation.Collections.IIterable`1<System.String>,System.String)
+    @deprecated("Use create_watcher() instead.")
     def create_watcher_aqs_filter(cls, type: PnpObjectType, requested_properties: typing.Iterable[str], aqs_filter: str, /) -> PnpObjectWatcher: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.Pnp.PnpObjectCollection> Windows.Devices.Enumeration.Pnp.PnpObject::FindAllAsync(Windows.Devices.Enumeration.Pnp.PnpObjectType,Windows.Foundation.Collections.IIterable`1<System.String>)
     def find_all_async(cls, type: PnpObjectType, requested_properties: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[PnpObjectCollection]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.Pnp.PnpObjectCollection> Windows.Devices.Enumeration.Pnp.PnpObject::FindAllAsync(Windows.Devices.Enumeration.Pnp.PnpObjectType,Windows.Foundation.Collections.IIterable`1<System.String>,System.String)
+    def find_all_async(cls, type: PnpObjectType, requested_properties: typing.Iterable[str], aqs_filter: str, /) -> windows_foundation.IAsyncOperation[PnpObjectCollection]: ...
+    # Deprecated alias of find_all_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.Pnp.PnpObjectCollection> Windows.Devices.Enumeration.Pnp.PnpObject::FindAllAsync(Windows.Devices.Enumeration.Pnp.PnpObjectType,Windows.Foundation.Collections.IIterable`1<System.String>,System.String)
+    @deprecated("Use find_all_async() instead.")
     def find_all_async_aqs_filter(cls, type: PnpObjectType, requested_properties: typing.Iterable[str], aqs_filter: str, /) -> windows_foundation.IAsyncOperation[PnpObjectCollection]: ...
 
 @typing.final

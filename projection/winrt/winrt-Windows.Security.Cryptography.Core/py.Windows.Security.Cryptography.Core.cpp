@@ -847,7 +847,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         }
     }
 
-    static PyObject* AsymmetricKeyAlgorithmProvider_ImportDefaultPrivateKeyBlob(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
+    static PyObject* AsymmetricKeyAlgorithmProvider_ImportKeyPair(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -882,60 +882,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AsymmetricKeyAlgorithmProvider_ImportDefaultPublicKeyBlob(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportPublicKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ImportPublicKey(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AsymmetricKeyAlgorithmProvider_ImportKeyPairWithBlobType(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -974,11 +921,42 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         }
     }
 
-    static PyObject* AsymmetricKeyAlgorithmProvider_ImportPublicKeyWithBlobType(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
+    static PyObject* AsymmetricKeyAlgorithmProvider_ImportPublicKey(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 2)
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportPublicKey", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportPublicKey(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
         {
             try
             {
@@ -1117,10 +1095,8 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { "create_key_pair", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_CreateKeyPair), METH_VARARGS, nullptr },
         { "create_key_pair_with_curve_name", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_CreateKeyPairWithCurveName), METH_VARARGS, nullptr },
         { "create_key_pair_with_curve_parameters", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_CreateKeyPairWithCurveParameters), METH_VARARGS, nullptr },
-        { "import_default_private_key_blob", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_ImportDefaultPrivateKeyBlob), METH_VARARGS, nullptr },
-        { "import_default_public_key_blob", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_ImportDefaultPublicKeyBlob), METH_VARARGS, nullptr },
-        { "import_key_pair_with_blob_type", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_ImportKeyPairWithBlobType), METH_VARARGS, nullptr },
-        { "import_public_key_with_blob_type", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_ImportPublicKeyWithBlobType), METH_VARARGS, nullptr },
+        { "import_key_pair", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_ImportKeyPair), METH_VARARGS, nullptr },
+        { "import_public_key", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_ImportPublicKey), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AsymmetricKeyAlgorithmProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AsymmetricKeyAlgorithmProvider), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1918,7 +1894,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         Py_DECREF(tp);
     }
 
-    static PyObject* CryptographicKey_ExportDefaultPrivateKeyBlobType(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, PyObject* args) noexcept
+    static PyObject* CryptographicKey_Export(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1951,58 +1927,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CryptographicKey_ExportDefaultPublicKeyBlobType(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"ExportPublicKey", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ExportPublicKey();
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CryptographicKey_ExportPrivateKeyWithBlobType(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -2040,11 +1965,40 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         }
     }
 
-    static PyObject* CryptographicKey_ExportPublicKeyWithBlobType(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, PyObject* args) noexcept
+    static PyObject* CryptographicKey_ExportPublicKey(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 1)
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"ExportPublicKey", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ExportPublicKey();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
         {
             try
             {
@@ -2137,10 +2091,8 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     }
 
     static PyMethodDef _methods_CryptographicKey[] = {
-        { "export_default_private_key_blob_type", reinterpret_cast<PyCFunction>(CryptographicKey_ExportDefaultPrivateKeyBlobType), METH_VARARGS, nullptr },
-        { "export_default_public_key_blob_type", reinterpret_cast<PyCFunction>(CryptographicKey_ExportDefaultPublicKeyBlobType), METH_VARARGS, nullptr },
-        { "export_private_key_with_blob_type", reinterpret_cast<PyCFunction>(CryptographicKey_ExportPrivateKeyWithBlobType), METH_VARARGS, nullptr },
-        { "export_public_key_with_blob_type", reinterpret_cast<PyCFunction>(CryptographicKey_ExportPublicKeyWithBlobType), METH_VARARGS, nullptr },
+        { "export", reinterpret_cast<PyCFunction>(CryptographicKey_Export), METH_VARARGS, nullptr },
+        { "export_public_key", reinterpret_cast<PyCFunction>(CryptographicKey_ExportPublicKey), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CryptographicKey, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CryptographicKey), METH_O | METH_STATIC, nullptr },
         { }};

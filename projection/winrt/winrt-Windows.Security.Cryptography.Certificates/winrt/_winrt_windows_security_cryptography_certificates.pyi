@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -21,15 +22,27 @@ Self = typing.TypeVar('Self')
 @typing.final
 class Certificate(winrt.system.Object):
     def __new__(cls: typing.Type[Self], cert_blob: winrt.system.Buffer) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Cryptography.Certificates.CertificateChain> Windows.Security.Cryptography.Certificates.Certificate::BuildChainAsync(Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.Certificate>)
     def build_chain_async(self, certificates: typing.Iterable[Certificate], /) -> windows_foundation.IAsyncOperation[CertificateChain]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Cryptography.Certificates.CertificateChain> Windows.Security.Cryptography.Certificates.Certificate::BuildChainAsync(Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.Certificate>,Windows.Security.Cryptography.Certificates.ChainBuildingParameters)
+    def build_chain_async(self, certificates: typing.Iterable[Certificate], parameters: ChainBuildingParameters, /) -> windows_foundation.IAsyncOperation[CertificateChain]: ...
+    # Deprecated alias of build_chain_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Cryptography.Certificates.CertificateChain> Windows.Security.Cryptography.Certificates.Certificate::BuildChainAsync(Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.Certificate>,Windows.Security.Cryptography.Certificates.ChainBuildingParameters)
+    @deprecated("Use build_chain_async() instead.")
     def build_chain_with_parameters_async(self, certificates: typing.Iterable[Certificate], parameters: ChainBuildingParameters, /) -> windows_foundation.IAsyncOperation[CertificateChain]: ...
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Certificates.Certificate::GetCertificateBlob()
     def get_certificate_blob(self) -> winrt.system.Buffer: ...
+    @typing.overload
     # System.Byte[] Windows.Security.Cryptography.Certificates.Certificate::GetHashValue()
     def get_hash_value(self) -> winrt.system.Array[winrt.system.UInt8]: ...
+    @typing.overload
     # System.Byte[] Windows.Security.Cryptography.Certificates.Certificate::GetHashValue(System.String)
+    def get_hash_value(self, hash_algorithm_name: str, /) -> winrt.system.Array[winrt.system.UInt8]: ...
+    # Deprecated alias of get_hash_value() for pywinrt v3.x compatibility.
+    # System.Byte[] Windows.Security.Cryptography.Certificates.Certificate::GetHashValue(System.String)
+    @deprecated("Use get_hash_value() instead.")
     def get_hash_value_with_algorithm(self, hash_algorithm_name: str, /) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.String Windows.Security.Cryptography.Certificates.Certificate::get_FriendlyName()
     @_property
@@ -93,20 +106,37 @@ class Certificate(winrt.system.Object):
 class CertificateChain(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.Certificate> Windows.Security.Cryptography.Certificates.CertificateChain::GetCertificates(System.Boolean)
     def get_certificates(self, include_root: bool, /) -> typing.Sequence[Certificate]: ...
+    @typing.overload
     # Windows.Security.Cryptography.Certificates.ChainValidationResult Windows.Security.Cryptography.Certificates.CertificateChain::Validate()
     def validate(self) -> ChainValidationResult: ...
+    @typing.overload
     # Windows.Security.Cryptography.Certificates.ChainValidationResult Windows.Security.Cryptography.Certificates.CertificateChain::Validate(Windows.Security.Cryptography.Certificates.ChainValidationParameters)
+    def validate(self, parameter: ChainValidationParameters, /) -> ChainValidationResult: ...
+    # Deprecated alias of validate() for pywinrt v3.x compatibility.
+    # Windows.Security.Cryptography.Certificates.ChainValidationResult Windows.Security.Cryptography.Certificates.CertificateChain::Validate(Windows.Security.Cryptography.Certificates.ChainValidationParameters)
+    @deprecated("Use validate() instead.")
     def validate_with_parameters(self, parameter: ChainValidationParameters, /) -> ChainValidationResult: ...
 
 @typing.final
 class CertificateEnrollmentManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager::CreateRequestAsync(Windows.Security.Cryptography.Certificates.CertificateRequestProperties)
     def create_request_async(cls, request: CertificateRequestProperties, /) -> windows_foundation.IAsyncOperation[str]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager::ImportPfxDataAsync(System.String,System.String,Windows.Security.Cryptography.Certificates.PfxImportParameters)
+    def import_pfx_data_async(cls, pfx_data: str, password: str, pfx_import_parameters: PfxImportParameters, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager::ImportPfxDataAsync(System.String,System.String,Windows.Security.Cryptography.Certificates.ExportOption,Windows.Security.Cryptography.Certificates.KeyProtectionLevel,Windows.Security.Cryptography.Certificates.InstallOptions,System.String)
     def import_pfx_data_async(cls, pfx_data: str, password: str, exportable: ExportOption, key_protection_level: KeyProtectionLevel, install_option: InstallOptions, friendly_name: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager::ImportPfxDataAsync(System.String,System.String,Windows.Security.Cryptography.Certificates.ExportOption,Windows.Security.Cryptography.Certificates.KeyProtectionLevel,Windows.Security.Cryptography.Certificates.InstallOptions,System.String,System.String)
+    def import_pfx_data_async(cls, pfx_data: str, password: str, exportable: ExportOption, key_protection_level: KeyProtectionLevel, install_option: InstallOptions, friendly_name: str, key_storage_provider: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of import_pfx_data_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager::ImportPfxDataAsync(System.String,System.String,Windows.Security.Cryptography.Certificates.ExportOption,Windows.Security.Cryptography.Certificates.KeyProtectionLevel,Windows.Security.Cryptography.Certificates.InstallOptions,System.String,System.String)
+    @deprecated("Use import_pfx_data_async() instead.")
     def import_pfx_data_to_ksp_async(cls, pfx_data: str, password: str, exportable: ExportOption, key_protection_level: KeyProtectionLevel, install_option: InstallOptions, friendly_name: str, key_storage_provider: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of import_pfx_data_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager::ImportPfxDataAsync(System.String,System.String,Windows.Security.Cryptography.Certificates.PfxImportParameters)
+    @deprecated("Use import_pfx_data_async() instead.")
     def import_pfx_data_to_ksp_with_parameters_async(cls, pfx_data: str, password: str, pfx_import_parameters: PfxImportParameters, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager::InstallCertificateAsync(System.String,Windows.Security.Cryptography.Certificates.InstallOptions)
     def install_certificate_async(cls, certificate: str, install_option: InstallOptions, /) -> windows_foundation.IAsyncAction: ...
@@ -370,9 +400,15 @@ class CertificateStore(winrt.system.Object):
 
 @typing.final
 class CertificateStores_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.Certificate>> Windows.Security.Cryptography.Certificates.CertificateStores::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[Certificate]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.Certificate>> Windows.Security.Cryptography.Certificates.CertificateStores::FindAllAsync(Windows.Security.Cryptography.Certificates.CertificateQuery)
+    def find_all_async(cls, query: CertificateQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[Certificate]]: ...
+    # Deprecated alias of find_all_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.Certificate>> Windows.Security.Cryptography.Certificates.CertificateStores::FindAllAsync(Windows.Security.Cryptography.Certificates.CertificateQuery)
+    @deprecated("Use find_all_async() instead.")
     def find_all_with_query_async(cls, query: CertificateQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[Certificate]]: ...
     # Windows.Security.Cryptography.Certificates.CertificateStore Windows.Security.Cryptography.Certificates.CertificateStores::GetStoreByName(System.String)
     def get_store_by_name(cls, store_name: str, /) -> CertificateStore: ...
@@ -552,9 +588,15 @@ class KeyAlgorithmNames(winrt.system.Object, metaclass=KeyAlgorithmNames_Static)
 
 @typing.final
 class KeyAttestationHelper_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Security.Cryptography.Certificates.KeyAttestationHelper::DecryptTpmAttestationCredentialAsync(System.String)
     def decrypt_tpm_attestation_credential_async(cls, credential: str, /) -> windows_foundation.IAsyncOperation[str]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Security.Cryptography.Certificates.KeyAttestationHelper::DecryptTpmAttestationCredentialAsync(System.String,System.String)
+    def decrypt_tpm_attestation_credential_async(cls, credential: str, container_name: str, /) -> windows_foundation.IAsyncOperation[str]: ...
+    # Deprecated alias of decrypt_tpm_attestation_credential_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Security.Cryptography.Certificates.KeyAttestationHelper::DecryptTpmAttestationCredentialAsync(System.String,System.String)
+    @deprecated("Use decrypt_tpm_attestation_credential_async() instead.")
     def decrypt_tpm_attestation_credential_with_container_name_async(cls, credential: str, container_name: str, /) -> windows_foundation.IAsyncOperation[str]: ...
     # System.String Windows.Security.Cryptography.Certificates.KeyAttestationHelper::GetTpmAttestationCredentialId(System.String)
     def get_tpm_attestation_credential_id(cls, credential: str, /) -> str: ...
@@ -691,11 +733,22 @@ class SubjectAlternativeNameInfo(winrt.system.Object):
 class UserCertificateEnrollmentManager(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager::CreateRequestAsync(Windows.Security.Cryptography.Certificates.CertificateRequestProperties)
     def create_request_async(self, request: CertificateRequestProperties, /) -> windows_foundation.IAsyncOperation[str]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager::ImportPfxDataAsync(System.String,System.String,Windows.Security.Cryptography.Certificates.PfxImportParameters)
+    def import_pfx_data_async(self, pfx_data: str, password: str, pfx_import_parameters: PfxImportParameters, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager::ImportPfxDataAsync(System.String,System.String,Windows.Security.Cryptography.Certificates.ExportOption,Windows.Security.Cryptography.Certificates.KeyProtectionLevel,Windows.Security.Cryptography.Certificates.InstallOptions,System.String)
     def import_pfx_data_async(self, pfx_data: str, password: str, exportable: ExportOption, key_protection_level: KeyProtectionLevel, install_option: InstallOptions, friendly_name: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager::ImportPfxDataAsync(System.String,System.String,Windows.Security.Cryptography.Certificates.ExportOption,Windows.Security.Cryptography.Certificates.KeyProtectionLevel,Windows.Security.Cryptography.Certificates.InstallOptions,System.String,System.String)
+    def import_pfx_data_async(self, pfx_data: str, password: str, exportable: ExportOption, key_protection_level: KeyProtectionLevel, install_option: InstallOptions, friendly_name: str, key_storage_provider: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of import_pfx_data_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager::ImportPfxDataAsync(System.String,System.String,Windows.Security.Cryptography.Certificates.ExportOption,Windows.Security.Cryptography.Certificates.KeyProtectionLevel,Windows.Security.Cryptography.Certificates.InstallOptions,System.String,System.String)
+    @deprecated("Use import_pfx_data_async() instead.")
     def import_pfx_data_to_ksp_async(self, pfx_data: str, password: str, exportable: ExportOption, key_protection_level: KeyProtectionLevel, install_option: InstallOptions, friendly_name: str, key_storage_provider: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of import_pfx_data_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager::ImportPfxDataAsync(System.String,System.String,Windows.Security.Cryptography.Certificates.PfxImportParameters)
+    @deprecated("Use import_pfx_data_async() instead.")
     def import_pfx_data_to_ksp_with_parameters_async(self, pfx_data: str, password: str, pfx_import_parameters: PfxImportParameters, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager::InstallCertificateAsync(System.String,Windows.Security.Cryptography.Certificates.InstallOptions)
     def install_certificate_async(self, certificate: str, install_option: InstallOptions, /) -> windows_foundation.IAsyncAction: ...

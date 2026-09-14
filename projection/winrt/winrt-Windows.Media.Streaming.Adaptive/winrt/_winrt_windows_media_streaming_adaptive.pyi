@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -21,13 +22,25 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AdaptiveMediaSource_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::CreateFromStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Foundation.Uri,System.String)
     def create_from_stream_async(cls, stream: windows_storage_streams.IInputStream, uri: windows_foundation.Uri, content_type: str, /) -> windows_foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::CreateFromStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Foundation.Uri,System.String,Windows.Web.Http.HttpClient)
+    def create_from_stream_async(cls, stream: windows_storage_streams.IInputStream, uri: windows_foundation.Uri, content_type: str, http_client: windows_web_http.HttpClient, /) -> windows_foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...
+    # Deprecated alias of create_from_stream_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::CreateFromStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Foundation.Uri,System.String,Windows.Web.Http.HttpClient)
+    @deprecated("Use create_from_stream_async() instead.")
     def create_from_stream_with_downloader_async(cls, stream: windows_storage_streams.IInputStream, uri: windows_foundation.Uri, content_type: str, http_client: windows_web_http.HttpClient, /) -> windows_foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::CreateFromUriAsync(Windows.Foundation.Uri)
     def create_from_uri_async(cls, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::CreateFromUriAsync(Windows.Foundation.Uri,Windows.Web.Http.HttpClient)
+    def create_from_uri_async(cls, uri: windows_foundation.Uri, http_client: windows_web_http.HttpClient, /) -> windows_foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...
+    # Deprecated alias of create_from_uri_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::CreateFromUriAsync(Windows.Foundation.Uri,Windows.Web.Http.HttpClient)
+    @deprecated("Use create_from_uri_async() instead.")
     def create_from_uri_with_downloader_async(cls, uri: windows_foundation.Uri, http_client: windows_web_http.HttpClient, /) -> windows_foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...
     # System.Boolean Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::IsContentTypeSupported(System.String)
     def is_content_type_supported(cls, content_type: str, /) -> bool: ...

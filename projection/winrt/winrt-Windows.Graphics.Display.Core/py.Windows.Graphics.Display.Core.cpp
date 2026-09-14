@@ -176,18 +176,39 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 2)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"RequestSetCurrentDisplayModeAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestSetCurrentDisplayModeAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* HdmiDisplayInformation_RequestSetCurrentDisplayModeWithHdrAndMetadataAsync(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -212,49 +233,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
                 {
                     auto _gil = release_gil();
                     return self->obj.RequestSetCurrentDisplayModeAsync(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HdmiDisplayInformation_RequestSetCurrentDisplayModeWithHdrAsync(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.Core.HdmiDisplayInformation", L"RequestSetCurrentDisplayModeAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.RequestSetCurrentDisplayModeAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -403,8 +381,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { "get_current_display_mode", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_GetCurrentDisplayMode), METH_VARARGS, nullptr },
         { "get_supported_display_modes", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_GetSupportedDisplayModes), METH_VARARGS, nullptr },
         { "request_set_current_display_mode_async", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_RequestSetCurrentDisplayModeAsync), METH_VARARGS, nullptr },
-        { "request_set_current_display_mode_with_hdr_and_metadata_async", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_RequestSetCurrentDisplayModeWithHdrAndMetadataAsync), METH_VARARGS, nullptr },
-        { "request_set_current_display_mode_with_hdr_async", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_RequestSetCurrentDisplayModeWithHdrAsync), METH_VARARGS, nullptr },
         { "set_default_display_mode_async", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_SetDefaultDisplayModeAsync), METH_VARARGS, nullptr },
         { "add_display_modes_changed", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_add_DisplayModesChanged), METH_O, nullptr },
         { "remove_display_modes_changed", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_remove_DisplayModesChanged), METH_O, nullptr },

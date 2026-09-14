@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_haptics import (
     KnownSimpleHapticsControllerWaveforms,
@@ -24,3 +25,4 @@ class VibrationAccessStatus(enum.IntEnum):
     DENIED_BY_SYSTEM = 2
     DENIED_BY_ENERGY_SAVER = 3
 
+winrt.runtime._internals.alias_method(SimpleHapticsController, "send_haptic_feedback_with_intensity", "send_haptic_feedback")

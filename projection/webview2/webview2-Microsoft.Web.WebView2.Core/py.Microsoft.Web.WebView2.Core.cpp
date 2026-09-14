@@ -9767,18 +9767,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CoreWebView2Environment_GetAvailableBrowserVersionString2(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -9796,18 +9785,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CoreWebView2Environment_GetAvailableBrowserVersionStringWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -10131,8 +10109,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "create_async", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateAsync), METH_VARARGS, nullptr },
         { "create_with_options_async", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateWithOptionsAsync), METH_VARARGS, nullptr },
         { "get_available_browser_version_string", reinterpret_cast<PyCFunction>(CoreWebView2Environment_GetAvailableBrowserVersionString), METH_VARARGS, nullptr },
-        { "get_available_browser_version_string2", reinterpret_cast<PyCFunction>(CoreWebView2Environment_GetAvailableBrowserVersionString2), METH_VARARGS, nullptr },
-        { "get_available_browser_version_string_with_options", reinterpret_cast<PyCFunction>(CoreWebView2Environment_GetAvailableBrowserVersionStringWithOptions), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_CoreWebView2Environment_Static[] = 
@@ -17480,7 +17456,23 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 1)
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearBrowsingDataAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
         {
             try
             {
@@ -17510,33 +17502,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 {
                     auto _gil = release_gil();
                     return self->obj.ClearBrowsingDataAsync(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CoreWebView2Profile_ClearBrowsingDataAsync2(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ClearBrowsingDataAsync();
                 }());
             }
             catch (...)
@@ -18014,7 +17979,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2Profile[] = {
         { "add_browser_extension_async", reinterpret_cast<PyCFunction>(CoreWebView2Profile_AddBrowserExtensionAsync), METH_VARARGS, nullptr },
         { "clear_browsing_data_async", reinterpret_cast<PyCFunction>(CoreWebView2Profile_ClearBrowsingDataAsync), METH_VARARGS, nullptr },
-        { "clear_browsing_data_async2", reinterpret_cast<PyCFunction>(CoreWebView2Profile_ClearBrowsingDataAsync2), METH_VARARGS, nullptr },
         { "delete", reinterpret_cast<PyCFunction>(CoreWebView2Profile_Delete), METH_VARARGS, nullptr },
         { "get_browser_extensions_async", reinterpret_cast<PyCFunction>(CoreWebView2Profile_GetBrowserExtensionsAsync), METH_VARARGS, nullptr },
         { "get_non_default_permission_settings_async", reinterpret_cast<PyCFunction>(CoreWebView2Profile_GetNonDefaultPermissionSettingsAsync), METH_VARARGS, nullptr },

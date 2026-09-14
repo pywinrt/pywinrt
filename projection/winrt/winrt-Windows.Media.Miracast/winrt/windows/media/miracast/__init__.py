@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_miracast import (
     MiracastReceiver,
@@ -109,3 +110,4 @@ class MiracastTransmitterAuthorizationStatus(enum.IntEnum):
     ALWAYS_PROMPT = 2
     BLOCKED = 3
 
+winrt.runtime._internals.alias_method(MiracastReceiverConnection, "disconnect_with_message", "disconnect")

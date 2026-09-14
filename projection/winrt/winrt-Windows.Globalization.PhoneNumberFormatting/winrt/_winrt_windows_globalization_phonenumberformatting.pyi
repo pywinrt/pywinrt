@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -29,22 +30,34 @@ class PhoneNumberFormatter_Static(winrt._winrt.IInspectable_Static):
 @typing.final
 class PhoneNumberFormatter(winrt.system.Object, metaclass=PhoneNumberFormatter_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::Format(Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo)
     def format(self, number: PhoneNumberInfo, /) -> str: ...
+    @typing.overload
+    # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::Format(Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo,Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormat)
+    def format(self, number: PhoneNumberInfo, number_format: PhoneNumberFormat, /) -> str: ...
+    # Deprecated alias of format() for pywinrt v3.x compatibility.
+    # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::Format(Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo,Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormat)
+    @deprecated("Use format() instead.")
+    def format_with_output_format(self, number: PhoneNumberInfo, number_format: PhoneNumberFormat, /) -> str: ...
     # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::FormatPartialString(System.String)
     def format_partial_string(self, number: str, /) -> str: ...
     # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::FormatString(System.String)
     def format_string(self, number: str, /) -> str: ...
     # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::FormatStringWithLeftToRightMarkers(System.String)
     def format_string_with_left_to_right_markers(self, number: str, /) -> str: ...
-    # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::Format(Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo,Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormat)
-    def format_with_output_format(self, number: PhoneNumberInfo, number_format: PhoneNumberFormat, /) -> str: ...
 
 @typing.final
 class PhoneNumberInfo_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo::TryParse(System.String,Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo&)
     def try_parse(cls, input: str, /) -> typing.Tuple[PhoneNumberParseResult, PhoneNumberInfo]: ...
+    @typing.overload
     # Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo::TryParse(System.String,System.String,Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo&)
+    def try_parse(cls, input: str, region_code: str, /) -> typing.Tuple[PhoneNumberParseResult, PhoneNumberInfo]: ...
+    # Deprecated alias of try_parse() for pywinrt v3.x compatibility.
+    # Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo::TryParse(System.String,System.String,Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo&)
+    @deprecated("Use try_parse() instead.")
     def try_parse_with_region(cls, input: str, region_code: str, /) -> typing.Tuple[PhoneNumberParseResult, PhoneNumberInfo]: ...
 
 @typing.final

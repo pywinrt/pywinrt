@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -27,9 +28,15 @@ class XamlDirect_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class XamlDirect(winrt.system.Object, metaclass=XamlDirect_Static):
+    @typing.overload
     # System.Void Windows.UI.Xaml.Core.Direct.XamlDirect::AddEventHandler(Windows.UI.Xaml.Core.Direct.IXamlDirectObject,Windows.UI.Xaml.Core.Direct.XamlEventIndex,System.Object)
     def add_event_handler(self, xaml_direct_object: IXamlDirectObject, event_index: XamlEventIndex, handler: winrt.system.Object, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Xaml.Core.Direct.XamlDirect::AddEventHandler(Windows.UI.Xaml.Core.Direct.IXamlDirectObject,Windows.UI.Xaml.Core.Direct.XamlEventIndex,System.Object,System.Boolean)
+    def add_event_handler(self, xaml_direct_object: IXamlDirectObject, event_index: XamlEventIndex, handler: winrt.system.Object, handled_events_too: bool, /) -> None: ...
+    # Deprecated alias of add_event_handler() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Xaml.Core.Direct.XamlDirect::AddEventHandler(Windows.UI.Xaml.Core.Direct.IXamlDirectObject,Windows.UI.Xaml.Core.Direct.XamlEventIndex,System.Object,System.Boolean)
+    @deprecated("Use add_event_handler() instead.")
     def add_event_handler_handled_events_too(self, xaml_direct_object: IXamlDirectObject, event_index: XamlEventIndex, handler: winrt.system.Object, handled_events_too: bool, /) -> None: ...
     # System.Void Windows.UI.Xaml.Core.Direct.XamlDirect::AddToCollection(Windows.UI.Xaml.Core.Direct.IXamlDirectObject,Windows.UI.Xaml.Core.Direct.IXamlDirectObject)
     def add_to_collection(self, xaml_direct_object: IXamlDirectObject, value: IXamlDirectObject, /) -> None: ...

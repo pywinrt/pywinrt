@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_windows_applicationmodel_dynamicdependency import (
     PackageDependencyContextId,
@@ -37,3 +38,5 @@ class PackageDependencyProcessorArchitectures(enum.IntFlag):
     ARM64 = 0x10
     X86_ON_ARM64 = 0x20
 
+winrt.runtime._internals.alias_method(PackageDependency, "add2", "add")
+winrt.runtime._internals.alias_static_method(PackageDependency, "create2", "create")

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -116,9 +117,15 @@ class UserDataTaskList(winrt.system.Object):
     def delete_task_async(self, user_data_task_id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataTasks.UserDataTask> Windows.ApplicationModel.UserDataTasks.UserDataTaskList::GetTaskAsync(System.String)
     def get_task_async(self, user_data_task: str, /) -> windows_foundation.IAsyncOperation[UserDataTask]: ...
+    @typing.overload
     # Windows.ApplicationModel.UserDataTasks.UserDataTaskReader Windows.ApplicationModel.UserDataTasks.UserDataTaskList::GetTaskReader()
     def get_task_reader(self) -> UserDataTaskReader: ...
+    @typing.overload
     # Windows.ApplicationModel.UserDataTasks.UserDataTaskReader Windows.ApplicationModel.UserDataTasks.UserDataTaskList::GetTaskReader(Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions)
+    def get_task_reader(self, options: UserDataTaskQueryOptions, /) -> UserDataTaskReader: ...
+    # Deprecated alias of get_task_reader() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.UserDataTasks.UserDataTaskReader Windows.ApplicationModel.UserDataTasks.UserDataTaskList::GetTaskReader(Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions)
+    @deprecated("Use get_task_reader() instead.")
     def get_task_reader_with_options(self, options: UserDataTaskQueryOptions, /) -> UserDataTaskReader: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.UserDataTaskList::RegisterSyncManagerAsync()
     def register_sync_manager_async(self) -> windows_foundation.IAsyncAction: ...
@@ -316,9 +323,15 @@ class UserDataTaskRegenerationProperties(winrt.system.Object):
 
 @typing.final
 class UserDataTaskStore(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> Windows.ApplicationModel.UserDataTasks.UserDataTaskStore::CreateListAsync(System.String)
     def create_list_async(self, name: str, /) -> windows_foundation.IAsyncOperation[UserDataTaskList]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> Windows.ApplicationModel.UserDataTasks.UserDataTaskStore::CreateListAsync(System.String,System.String)
+    def create_list_async(self, name: str, user_data_account_id: str, /) -> windows_foundation.IAsyncOperation[UserDataTaskList]: ...
+    # Deprecated alias of create_list_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> Windows.ApplicationModel.UserDataTasks.UserDataTaskStore::CreateListAsync(System.String,System.String)
+    @deprecated("Use create_list_async() instead.")
     def create_list_in_account_async(self, name: str, user_data_account_id: str, /) -> windows_foundation.IAsyncOperation[UserDataTaskList]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.UserDataTasks.UserDataTaskList>> Windows.ApplicationModel.UserDataTasks.UserDataTaskStore::FindListsAsync()
     def find_lists_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[UserDataTaskList]]: ...

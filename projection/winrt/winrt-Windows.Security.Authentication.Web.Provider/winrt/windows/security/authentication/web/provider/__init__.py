@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_authentication_web_provider import (
     WebAccountClientView,
@@ -79,3 +80,9 @@ class WebAccountSelectionOptions(enum.IntFlag):
     DEFAULT = 0x0
     NEW = 0x1
 
+winrt.runtime._internals.alias_static_method(WebAccountManager, "add_web_account_with_scope_and_map_async", "add_web_account_async")
+winrt.runtime._internals.alias_static_method(WebAccountManager, "add_web_account_with_scope_async", "add_web_account_async")
+winrt.runtime._internals.alias_static_method(WebAccountManager, "add_web_account_with_scope_and_map_for_user_async", "add_web_account_for_user_async")
+winrt.runtime._internals.alias_static_method(WebAccountManager, "add_web_account_with_scope_for_user_async", "add_web_account_for_user_async")
+winrt.runtime._internals.alias_method(WebAccountProviderGetTokenSilentOperation, "report_user_interaction_required_with_error", "report_user_interaction_required")
+winrt.runtime._internals.alias_method(_IWebAccountProviderSilentReportOperation, "report_user_interaction_required_with_error", "report_user_interaction_required")

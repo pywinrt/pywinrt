@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -32,9 +33,15 @@ class LightSensorChromaticity:
 class Accelerometer_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Accelerometer> Windows.Devices.Sensors.Accelerometer::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Accelerometer]: ...
+    @typing.overload
     # Windows.Devices.Sensors.Accelerometer Windows.Devices.Sensors.Accelerometer::GetDefault()
     def get_default(cls) -> Accelerometer: ...
+    @typing.overload
     # Windows.Devices.Sensors.Accelerometer Windows.Devices.Sensors.Accelerometer::GetDefault(Windows.Devices.Sensors.AccelerometerReadingType)
+    def get_default(cls, reading_type: AccelerometerReadingType, /) -> Accelerometer: ...
+    # Deprecated alias of get_default() for pywinrt v3.x compatibility.
+    # Windows.Devices.Sensors.Accelerometer Windows.Devices.Sensors.Accelerometer::GetDefault(Windows.Devices.Sensors.AccelerometerReadingType)
+    @deprecated("Use get_default() instead.")
     def get_default_with_accelerometer_reading_type(cls, reading_type: AccelerometerReadingType, /) -> Accelerometer: ...
     # System.String Windows.Devices.Sensors.Accelerometer::GetDeviceSelector(Windows.Devices.Sensors.AccelerometerReadingType)
     def get_device_selector(cls, reading_type: AccelerometerReadingType, /) -> str: ...
@@ -147,9 +154,15 @@ class ActivitySensor_Static(winrt._winrt.IInspectable_Static):
     def get_default_async(cls) -> windows_foundation.IAsyncOperation[ActivitySensor]: ...
     # System.String Windows.Devices.Sensors.ActivitySensor::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sensors.ActivitySensorReading>> Windows.Devices.Sensors.ActivitySensor::GetSystemHistoryAsync(Windows.Foundation.DateTime)
     def get_system_history_async(cls, from_time: datetime.datetime, /) -> windows_foundation.IAsyncOperation[typing.Sequence[ActivitySensorReading]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sensors.ActivitySensorReading>> Windows.Devices.Sensors.ActivitySensor::GetSystemHistoryAsync(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)
+    def get_system_history_async(cls, from_time: datetime.datetime, duration: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[typing.Sequence[ActivitySensorReading]]: ...
+    # Deprecated alias of get_system_history_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sensors.ActivitySensorReading>> Windows.Devices.Sensors.ActivitySensor::GetSystemHistoryAsync(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)
+    @deprecated("Use get_system_history_async() instead.")
     def get_system_history_with_duration_async(cls, from_time: datetime.datetime, duration: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[typing.Sequence[ActivitySensorReading]]: ...
 
 @typing.final
@@ -845,12 +858,18 @@ class HumanPresenceSettings(winrt.system.Object, metaclass=HumanPresenceSettings
 class Inclinometer_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Inclinometer> Windows.Devices.Sensors.Inclinometer::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Inclinometer]: ...
+    @typing.overload
     # Windows.Devices.Sensors.Inclinometer Windows.Devices.Sensors.Inclinometer::GetDefault()
     def get_default(cls) -> Inclinometer: ...
+    @typing.overload
+    # Windows.Devices.Sensors.Inclinometer Windows.Devices.Sensors.Inclinometer::GetDefault(Windows.Devices.Sensors.SensorReadingType)
+    def get_default(cls, sensor_readingtype: SensorReadingType, /) -> Inclinometer: ...
+    # Deprecated alias of get_default() for pywinrt v3.x compatibility.
+    # Windows.Devices.Sensors.Inclinometer Windows.Devices.Sensors.Inclinometer::GetDefault(Windows.Devices.Sensors.SensorReadingType)
+    @deprecated("Use get_default() instead.")
+    def get_default_with_sensor_reading_type(cls, sensor_readingtype: SensorReadingType, /) -> Inclinometer: ...
     # Windows.Devices.Sensors.Inclinometer Windows.Devices.Sensors.Inclinometer::GetDefaultForRelativeReadings()
     def get_default_for_relative_readings(cls) -> Inclinometer: ...
-    # Windows.Devices.Sensors.Inclinometer Windows.Devices.Sensors.Inclinometer::GetDefault(Windows.Devices.Sensors.SensorReadingType)
-    def get_default_with_sensor_reading_type(cls, sensor_readingtype: SensorReadingType, /) -> Inclinometer: ...
     # System.String Windows.Devices.Sensors.Inclinometer::GetDeviceSelector(Windows.Devices.Sensors.SensorReadingType)
     def get_device_selector(cls, reading_type: SensorReadingType, /) -> str: ...
 
@@ -1163,17 +1182,34 @@ class OnlookerDetectionOptions(winrt.system.Object):
 class OrientationSensor_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.OrientationSensor> Windows.Devices.Sensors.OrientationSensor::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[OrientationSensor]: ...
+    @typing.overload
     # Windows.Devices.Sensors.OrientationSensor Windows.Devices.Sensors.OrientationSensor::GetDefault()
     def get_default(cls) -> OrientationSensor: ...
+    @typing.overload
+    # Windows.Devices.Sensors.OrientationSensor Windows.Devices.Sensors.OrientationSensor::GetDefault(Windows.Devices.Sensors.SensorReadingType)
+    def get_default(cls, sensor_readingtype: SensorReadingType, /) -> OrientationSensor: ...
+    @typing.overload
+    # Windows.Devices.Sensors.OrientationSensor Windows.Devices.Sensors.OrientationSensor::GetDefault(Windows.Devices.Sensors.SensorReadingType,Windows.Devices.Sensors.SensorOptimizationGoal)
+    def get_default(cls, sensor_reading_type: SensorReadingType, optimization_goal: SensorOptimizationGoal, /) -> OrientationSensor: ...
+    # Deprecated alias of get_default() for pywinrt v3.x compatibility.
+    # Windows.Devices.Sensors.OrientationSensor Windows.Devices.Sensors.OrientationSensor::GetDefault(Windows.Devices.Sensors.SensorReadingType)
+    @deprecated("Use get_default() instead.")
+    def get_default_with_sensor_reading_type(cls, sensor_readingtype: SensorReadingType, /) -> OrientationSensor: ...
+    # Deprecated alias of get_default() for pywinrt v3.x compatibility.
+    # Windows.Devices.Sensors.OrientationSensor Windows.Devices.Sensors.OrientationSensor::GetDefault(Windows.Devices.Sensors.SensorReadingType,Windows.Devices.Sensors.SensorOptimizationGoal)
+    @deprecated("Use get_default() instead.")
+    def get_default_with_sensor_reading_type_and_sensor_optimization_goal(cls, sensor_reading_type: SensorReadingType, optimization_goal: SensorOptimizationGoal, /) -> OrientationSensor: ...
     # Windows.Devices.Sensors.OrientationSensor Windows.Devices.Sensors.OrientationSensor::GetDefaultForRelativeReadings()
     def get_default_for_relative_readings(cls) -> OrientationSensor: ...
-    # Windows.Devices.Sensors.OrientationSensor Windows.Devices.Sensors.OrientationSensor::GetDefault(Windows.Devices.Sensors.SensorReadingType)
-    def get_default_with_sensor_reading_type(cls, sensor_readingtype: SensorReadingType, /) -> OrientationSensor: ...
-    # Windows.Devices.Sensors.OrientationSensor Windows.Devices.Sensors.OrientationSensor::GetDefault(Windows.Devices.Sensors.SensorReadingType,Windows.Devices.Sensors.SensorOptimizationGoal)
-    def get_default_with_sensor_reading_type_and_sensor_optimization_goal(cls, sensor_reading_type: SensorReadingType, optimization_goal: SensorOptimizationGoal, /) -> OrientationSensor: ...
+    @typing.overload
     # System.String Windows.Devices.Sensors.OrientationSensor::GetDeviceSelector(Windows.Devices.Sensors.SensorReadingType)
     def get_device_selector(cls, reading_type: SensorReadingType, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Sensors.OrientationSensor::GetDeviceSelector(Windows.Devices.Sensors.SensorReadingType,Windows.Devices.Sensors.SensorOptimizationGoal)
+    def get_device_selector(cls, reading_type: SensorReadingType, optimization_goal: SensorOptimizationGoal, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.Sensors.OrientationSensor::GetDeviceSelector(Windows.Devices.Sensors.SensorReadingType,Windows.Devices.Sensors.SensorOptimizationGoal)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_with_sensor_reading_type_and_sensor_optimization_goal(cls, reading_type: SensorReadingType, optimization_goal: SensorOptimizationGoal, /) -> str: ...
 
 @typing.final
@@ -1252,9 +1288,15 @@ class Pedometer_Static(winrt._winrt.IInspectable_Static):
     def get_device_selector(cls) -> str: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sensors.PedometerReading> Windows.Devices.Sensors.Pedometer::GetReadingsFromTriggerDetails(Windows.Devices.Sensors.SensorDataThresholdTriggerDetails)
     def get_readings_from_trigger_details(cls, trigger_details: SensorDataThresholdTriggerDetails, /) -> typing.Sequence[PedometerReading]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sensors.PedometerReading>> Windows.Devices.Sensors.Pedometer::GetSystemHistoryAsync(Windows.Foundation.DateTime)
     def get_system_history_async(cls, from_time: datetime.datetime, /) -> windows_foundation.IAsyncOperation[typing.Sequence[PedometerReading]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sensors.PedometerReading>> Windows.Devices.Sensors.Pedometer::GetSystemHistoryAsync(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)
+    def get_system_history_async(cls, from_time: datetime.datetime, duration: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[typing.Sequence[PedometerReading]]: ...
+    # Deprecated alias of get_system_history_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sensors.PedometerReading>> Windows.Devices.Sensors.Pedometer::GetSystemHistoryAsync(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)
+    @deprecated("Use get_system_history_async() instead.")
     def get_system_history_with_duration_async(cls, from_time: datetime.datetime, duration: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[typing.Sequence[PedometerReading]]: ...
 
 @typing.final

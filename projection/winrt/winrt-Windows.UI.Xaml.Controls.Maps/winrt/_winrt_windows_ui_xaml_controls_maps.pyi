@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -352,13 +353,25 @@ class MapControl_Static(windows_ui_xaml_controls.Control_Static):
 @typing.final
 class MapControl(windows_ui_xaml_controls.Control, metaclass=MapControl_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Xaml.Controls.Maps.MapElement> Windows.UI.Xaml.Controls.Maps.MapControl::FindMapElementsAtOffset(Windows.Foundation.Point)
     def find_map_elements_at_offset(self, offset: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> typing.Sequence[MapElement]: ...
+    @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Xaml.Controls.Maps.MapElement> Windows.UI.Xaml.Controls.Maps.MapControl::FindMapElementsAtOffset(Windows.Foundation.Point,System.Double)
+    def find_map_elements_at_offset(self, offset: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], radius: winrt.system.Double, /) -> typing.Sequence[MapElement]: ...
+    # Deprecated alias of find_map_elements_at_offset() for pywinrt v3.x compatibility.
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Xaml.Controls.Maps.MapElement> Windows.UI.Xaml.Controls.Maps.MapControl::FindMapElementsAtOffset(Windows.Foundation.Point,System.Double)
+    @deprecated("Use find_map_elements_at_offset() instead.")
     def find_map_elements_at_offset_with_radius(self, offset: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], radius: winrt.system.Double, /) -> typing.Sequence[MapElement]: ...
+    @typing.overload
     # System.Void Windows.UI.Xaml.Controls.Maps.MapControl::GetLocationFromOffset(Windows.Foundation.Point,Windows.Devices.Geolocation.Geopoint&)
     def get_location_from_offset(self, offset: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_devices_geolocation.Geopoint: ...
+    @typing.overload
     # System.Void Windows.UI.Xaml.Controls.Maps.MapControl::GetLocationFromOffset(Windows.Foundation.Point,Windows.Devices.Geolocation.AltitudeReferenceSystem,Windows.Devices.Geolocation.Geopoint&)
+    def get_location_from_offset(self, offset: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], desired_reference_system: windows_devices_geolocation.AltitudeReferenceSystem, /) -> windows_devices_geolocation.Geopoint: ...
+    # Deprecated alias of get_location_from_offset() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Xaml.Controls.Maps.MapControl::GetLocationFromOffset(Windows.Foundation.Point,Windows.Devices.Geolocation.AltitudeReferenceSystem,Windows.Devices.Geolocation.Geopoint&)
+    @deprecated("Use get_location_from_offset() instead.")
     def get_location_from_offset_with_reference_system(self, offset: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], desired_reference_system: windows_devices_geolocation.AltitudeReferenceSystem, /) -> windows_devices_geolocation.Geopoint: ...
     # System.Void Windows.UI.Xaml.Controls.Maps.MapControl::GetOffsetFromLocation(Windows.Devices.Geolocation.Geopoint,Windows.Foundation.Point&)
     def get_offset_from_location(self, location: windows_devices_geolocation.Geopoint, /) -> windows_foundation.Point: ...
@@ -382,9 +395,15 @@ class MapControl(windows_ui_xaml_controls.Control, metaclass=MapControl_Static):
     def stop_continuous_tilt(self) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.Maps.MapControl::StopContinuousZoom()
     def stop_continuous_zoom(self) -> None: ...
+    @typing.overload
     # System.Boolean Windows.UI.Xaml.Controls.Maps.MapControl::TryGetLocationFromOffset(Windows.Foundation.Point,Windows.Devices.Geolocation.Geopoint&)
     def try_get_location_from_offset(self, offset: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> typing.Tuple[bool, windows_devices_geolocation.Geopoint]: ...
+    @typing.overload
     # System.Boolean Windows.UI.Xaml.Controls.Maps.MapControl::TryGetLocationFromOffset(Windows.Foundation.Point,Windows.Devices.Geolocation.AltitudeReferenceSystem,Windows.Devices.Geolocation.Geopoint&)
+    def try_get_location_from_offset(self, offset: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], desired_reference_system: windows_devices_geolocation.AltitudeReferenceSystem, /) -> typing.Tuple[bool, windows_devices_geolocation.Geopoint]: ...
+    # Deprecated alias of try_get_location_from_offset() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.UI.Xaml.Controls.Maps.MapControl::TryGetLocationFromOffset(Windows.Foundation.Point,Windows.Devices.Geolocation.AltitudeReferenceSystem,Windows.Devices.Geolocation.Geopoint&)
+    @deprecated("Use try_get_location_from_offset() instead.")
     def try_get_location_from_offset_with_reference_system(self, offset: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], desired_reference_system: windows_devices_geolocation.AltitudeReferenceSystem, /) -> typing.Tuple[bool, windows_devices_geolocation.Geopoint]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TryPanAsync(System.Double,System.Double)
     def try_pan_async(self, horizontal_pixels: winrt.system.Double, vertical_pixels: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -394,20 +413,46 @@ class MapControl(windows_ui_xaml_controls.Control, metaclass=MapControl_Static):
     def try_rotate_async(self, degrees: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TryRotateToAsync(System.Double)
     def try_rotate_to_async(self, angle_in_degrees: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetSceneAsync(Windows.UI.Xaml.Controls.Maps.MapScene)
     def try_set_scene_async(self, scene: MapScene, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetSceneAsync(Windows.UI.Xaml.Controls.Maps.MapScene,Windows.UI.Xaml.Controls.Maps.MapAnimationKind)
+    def try_set_scene_async(self, scene: MapScene, animation_kind: MapAnimationKind, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_set_scene_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetSceneAsync(Windows.UI.Xaml.Controls.Maps.MapScene,Windows.UI.Xaml.Controls.Maps.MapAnimationKind)
+    @deprecated("Use try_set_scene_async() instead.")
     def try_set_scene_with_animation_async(self, scene: MapScene, animation_kind: MapAnimationKind, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint)
+    def try_set_view_async(self, center: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint,Windows.Foundation.IReference`1<System.Double>)
+    def try_set_view_async(self, center: windows_devices_geolocation.Geopoint, zoom_level: typing.Optional[winrt.system.Double], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>)
+    def try_set_view_async(self, center: windows_devices_geolocation.Geopoint, zoom_level: typing.Optional[winrt.system.Double], heading: typing.Optional[winrt.system.Double], desired_pitch: typing.Optional[winrt.system.Double], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.UI.Xaml.Controls.Maps.MapAnimationKind)
+    def try_set_view_async(self, center: windows_devices_geolocation.Geopoint, zoom_level: typing.Optional[winrt.system.Double], heading: typing.Optional[winrt.system.Double], desired_pitch: typing.Optional[winrt.system.Double], animation: MapAnimationKind, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_set_view_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint,Windows.Foundation.IReference`1<System.Double>)
+    @deprecated("Use try_set_view_async() instead.")
+    def try_set_view_with_center_and_zoom_async(self, center: windows_devices_geolocation.Geopoint, zoom_level: typing.Optional[winrt.system.Double], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_set_view_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint)
+    @deprecated("Use try_set_view_async() instead.")
+    def try_set_view_with_center_async(self, center: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_set_view_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>)
+    @deprecated("Use try_set_view_async() instead.")
+    def try_set_view_with_center_zoom_heading_and_pitch_async(self, center: windows_devices_geolocation.Geopoint, zoom_level: typing.Optional[winrt.system.Double], heading: typing.Optional[winrt.system.Double], desired_pitch: typing.Optional[winrt.system.Double], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_set_view_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.UI.Xaml.Controls.Maps.MapAnimationKind)
+    @deprecated("Use try_set_view_async() instead.")
+    def try_set_view_with_center_zoom_heading_pitch_and_animation_async(self, center: windows_devices_geolocation.Geopoint, zoom_level: typing.Optional[winrt.system.Double], heading: typing.Optional[winrt.system.Double], desired_pitch: typing.Optional[winrt.system.Double], animation: MapAnimationKind, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewBoundsAsync(Windows.Devices.Geolocation.GeoboundingBox,Windows.Foundation.IReference`1<Windows.UI.Xaml.Thickness>,Windows.UI.Xaml.Controls.Maps.MapAnimationKind)
     def try_set_view_bounds_async(self, bounds: windows_devices_geolocation.GeoboundingBox, margin: typing.Optional[windows_ui_xaml.Thickness], animation: MapAnimationKind, /) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint,Windows.Foundation.IReference`1<System.Double>)
-    def try_set_view_with_center_and_zoom_async(self, center: windows_devices_geolocation.Geopoint, zoom_level: typing.Optional[winrt.system.Double], /) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint)
-    def try_set_view_with_center_async(self, center: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>)
-    def try_set_view_with_center_zoom_heading_and_pitch_async(self, center: windows_devices_geolocation.Geopoint, zoom_level: typing.Optional[winrt.system.Double], heading: typing.Optional[winrt.system.Double], desired_pitch: typing.Optional[winrt.system.Double], /) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TrySetViewAsync(Windows.Devices.Geolocation.Geopoint,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.UI.Xaml.Controls.Maps.MapAnimationKind)
-    def try_set_view_with_center_zoom_heading_pitch_and_animation_async(self, center: windows_devices_geolocation.Geopoint, zoom_level: typing.Optional[winrt.system.Double], heading: typing.Optional[winrt.system.Double], desired_pitch: typing.Optional[winrt.system.Double], animation: MapAnimationKind, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TryTiltAsync(System.Double)
     def try_tilt_async(self, degrees: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.Maps.MapControl::TryTiltToAsync(System.Double)
@@ -1224,9 +1269,15 @@ class MapLayer(windows_ui_xaml.DependencyObject, metaclass=MapLayer_Static):
     def map_tab_index(self, value: winrt.system.Int32) -> None: ...
 
 class MapModel3D_Static(windows_ui_xaml.DependencyObject_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.Maps.MapModel3D> Windows.UI.Xaml.Controls.Maps.MapModel3D::CreateFrom3MFAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
     def create_from_3mf_async(cls, source: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[MapModel3D]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.Maps.MapModel3D> Windows.UI.Xaml.Controls.Maps.MapModel3D::CreateFrom3MFAsync(Windows.Storage.Streams.IRandomAccessStreamReference,Windows.UI.Xaml.Controls.Maps.MapModel3DShadingOption)
+    def create_from_3mf_async(cls, source: windows_storage_streams.IRandomAccessStreamReference, shading_option: MapModel3DShadingOption, /) -> windows_foundation.IAsyncOperation[MapModel3D]: ...
+    # Deprecated alias of create_from_3mf_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.Maps.MapModel3D> Windows.UI.Xaml.Controls.Maps.MapModel3D::CreateFrom3MFAsync(Windows.Storage.Streams.IRandomAccessStreamReference,Windows.UI.Xaml.Controls.Maps.MapModel3DShadingOption)
+    @deprecated("Use create_from_3mf_async() instead.")
     def create_from_3mf_with_shading_option_async(cls, source: windows_storage_streams.IRandomAccessStreamReference, shading_option: MapModel3DShadingOption, /) -> windows_foundation.IAsyncOperation[MapModel3D]: ...
 
 class MapModel3D(windows_ui_xaml.DependencyObject, metaclass=MapModel3D_Static):
@@ -1354,23 +1405,47 @@ class MapRouteView(windows_ui_xaml.DependencyObject, metaclass=MapRouteView_Stat
 
 @typing.final
 class MapScene_Static(windows_ui_xaml.DependencyObject_Static):
+    @typing.overload
     # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromBoundingBox(Windows.Devices.Geolocation.GeoboundingBox)
     def create_from_bounding_box(cls, bounds: windows_devices_geolocation.GeoboundingBox, /) -> MapScene: ...
+    @typing.overload
     # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromBoundingBox(Windows.Devices.Geolocation.GeoboundingBox,System.Double,System.Double)
+    def create_from_bounding_box(cls, bounds: windows_devices_geolocation.GeoboundingBox, heading_in_degrees: winrt.system.Double, pitch_in_degrees: winrt.system.Double, /) -> MapScene: ...
+    # Deprecated alias of create_from_bounding_box() for pywinrt v3.x compatibility.
+    # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromBoundingBox(Windows.Devices.Geolocation.GeoboundingBox,System.Double,System.Double)
+    @deprecated("Use create_from_bounding_box() instead.")
     def create_from_bounding_box_with_heading_and_pitch(cls, bounds: windows_devices_geolocation.GeoboundingBox, heading_in_degrees: winrt.system.Double, pitch_in_degrees: winrt.system.Double, /) -> MapScene: ...
     # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromCamera(Windows.UI.Xaml.Controls.Maps.MapCamera)
     def create_from_camera(cls, camera: MapCamera, /) -> MapScene: ...
+    @typing.overload
     # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromLocation(Windows.Devices.Geolocation.Geopoint)
     def create_from_location(cls, location: windows_devices_geolocation.Geopoint, /) -> MapScene: ...
+    @typing.overload
+    # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromLocation(Windows.Devices.Geolocation.Geopoint,System.Double,System.Double)
+    def create_from_location(cls, location: windows_devices_geolocation.Geopoint, heading_in_degrees: winrt.system.Double, pitch_in_degrees: winrt.system.Double, /) -> MapScene: ...
+    # Deprecated alias of create_from_location() for pywinrt v3.x compatibility.
+    # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromLocation(Windows.Devices.Geolocation.Geopoint,System.Double,System.Double)
+    @deprecated("Use create_from_location() instead.")
+    def create_from_location_with_heading_and_pitch(cls, location: windows_devices_geolocation.Geopoint, heading_in_degrees: winrt.system.Double, pitch_in_degrees: winrt.system.Double, /) -> MapScene: ...
+    @typing.overload
     # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromLocationAndRadius(Windows.Devices.Geolocation.Geopoint,System.Double)
     def create_from_location_and_radius(cls, location: windows_devices_geolocation.Geopoint, radius_in_meters: winrt.system.Double, /) -> MapScene: ...
+    @typing.overload
     # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromLocationAndRadius(Windows.Devices.Geolocation.Geopoint,System.Double,System.Double,System.Double)
+    def create_from_location_and_radius(cls, location: windows_devices_geolocation.Geopoint, radius_in_meters: winrt.system.Double, heading_in_degrees: winrt.system.Double, pitch_in_degrees: winrt.system.Double, /) -> MapScene: ...
+    # Deprecated alias of create_from_location_and_radius() for pywinrt v3.x compatibility.
+    # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromLocationAndRadius(Windows.Devices.Geolocation.Geopoint,System.Double,System.Double,System.Double)
+    @deprecated("Use create_from_location_and_radius() instead.")
     def create_from_location_and_radius_with_heading_and_pitch(cls, location: windows_devices_geolocation.Geopoint, radius_in_meters: winrt.system.Double, heading_in_degrees: winrt.system.Double, pitch_in_degrees: winrt.system.Double, /) -> MapScene: ...
-    # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromLocation(Windows.Devices.Geolocation.Geopoint,System.Double,System.Double)
-    def create_from_location_with_heading_and_pitch(cls, location: windows_devices_geolocation.Geopoint, heading_in_degrees: winrt.system.Double, pitch_in_degrees: winrt.system.Double, /) -> MapScene: ...
+    @typing.overload
     # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromLocations(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>)
     def create_from_locations(cls, locations: typing.Iterable[windows_devices_geolocation.Geopoint], /) -> MapScene: ...
+    @typing.overload
     # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromLocations(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>,System.Double,System.Double)
+    def create_from_locations(cls, locations: typing.Iterable[windows_devices_geolocation.Geopoint], heading_in_degrees: winrt.system.Double, pitch_in_degrees: winrt.system.Double, /) -> MapScene: ...
+    # Deprecated alias of create_from_locations() for pywinrt v3.x compatibility.
+    # Windows.UI.Xaml.Controls.Maps.MapScene Windows.UI.Xaml.Controls.Maps.MapScene::CreateFromLocations(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>,System.Double,System.Double)
+    @deprecated("Use create_from_locations() instead.")
     def create_from_locations_with_heading_and_pitch(cls, locations: typing.Iterable[windows_devices_geolocation.Geopoint], heading_in_degrees: winrt.system.Double, pitch_in_degrees: winrt.system.Double, /) -> MapScene: ...
 
 @typing.final
@@ -1943,9 +2018,19 @@ class StreetsideExperience(MapCustomExperience):
 
 @typing.final
 class StreetsidePanorama_Static(windows_ui_xaml.DependencyObject_Static):
-    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> Windows.UI.Xaml.Controls.Maps.StreetsidePanorama::FindNearbyAsync(Windows.Devices.Geolocation.Geopoint,System.Double)
-    def find_nearby_with_location_and_radius_async(cls, location: windows_devices_geolocation.Geopoint, radius_in_meters: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[StreetsidePanorama]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> Windows.UI.Xaml.Controls.Maps.StreetsidePanorama::FindNearbyAsync(Windows.Devices.Geolocation.Geopoint)
+    def find_nearby_async(cls, location: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[StreetsidePanorama]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> Windows.UI.Xaml.Controls.Maps.StreetsidePanorama::FindNearbyAsync(Windows.Devices.Geolocation.Geopoint,System.Double)
+    def find_nearby_async(cls, location: windows_devices_geolocation.Geopoint, radius_in_meters: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[StreetsidePanorama]: ...
+    # Deprecated alias of find_nearby_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> Windows.UI.Xaml.Controls.Maps.StreetsidePanorama::FindNearbyAsync(Windows.Devices.Geolocation.Geopoint,System.Double)
+    @deprecated("Use find_nearby_async() instead.")
+    def find_nearby_with_location_and_radius_async(cls, location: windows_devices_geolocation.Geopoint, radius_in_meters: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[StreetsidePanorama]: ...
+    # Deprecated alias of find_nearby_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> Windows.UI.Xaml.Controls.Maps.StreetsidePanorama::FindNearbyAsync(Windows.Devices.Geolocation.Geopoint)
+    @deprecated("Use find_nearby_async() instead.")
     def find_nearby_with_location_async(cls, location: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[StreetsidePanorama]: ...
 
 @typing.final

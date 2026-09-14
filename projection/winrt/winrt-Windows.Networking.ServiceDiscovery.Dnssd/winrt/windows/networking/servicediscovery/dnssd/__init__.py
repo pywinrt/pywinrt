@@ -35,3 +35,7 @@ class DnssdServiceWatcherStatus(enum.IntEnum):
     ABORTED = 5
 
 winrt.runtime._internals.mixin_sequence(DnssdServiceInstanceCollection)
+winrt.runtime._internals.alias_method(DnssdServiceInstance, "register_datagram_socket_async1", "register_datagram_socket_async")
+winrt.runtime._internals.alias_method(DnssdServiceInstance, "register_datagram_socket_async2", "register_datagram_socket_async")
+winrt.runtime._internals.alias_method(DnssdServiceInstance, "register_stream_socket_listener_async1", "register_stream_socket_listener_async")
+winrt.runtime._internals.alias_method(DnssdServiceInstance, "register_stream_socket_listener_async2", "register_stream_socket_listener_async")

@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_globalization import (
     ApplicationLanguages,
@@ -48,3 +49,11 @@ class LanguageLayoutDirection(enum.IntEnum):
     TTB_LTR = 2
     TTB_RTL = 3
 
+winrt.runtime._internals.alias_method(Calendar, "day_of_week_as_full_solo_string", "day_of_week_as_solo_string")
+winrt.runtime._internals.alias_method(Calendar, "day_of_week_as_full_string", "day_of_week_as_string")
+winrt.runtime._internals.alias_method(Calendar, "era_as_full_string", "era_as_string")
+winrt.runtime._internals.alias_method(Calendar, "month_as_full_solo_string", "month_as_solo_string")
+winrt.runtime._internals.alias_method(Calendar, "month_as_full_string", "month_as_string")
+winrt.runtime._internals.alias_method(Calendar, "period_as_full_string", "period_as_string")
+winrt.runtime._internals.alias_method(Calendar, "time_zone_as_full_string", "time_zone_as_string")
+winrt.runtime._internals.alias_static_method(JapanesePhoneticAnalyzer, "get_words_with_mono_ruby_option", "get_words")

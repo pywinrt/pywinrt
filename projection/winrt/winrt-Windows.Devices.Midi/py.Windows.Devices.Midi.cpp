@@ -3839,18 +3839,7 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MidiSynthesizer_CreateFromAudioDeviceAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -4227,7 +4216,6 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyMethodDef methods_MidiSynthesizer_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(MidiSynthesizer_CreateAsync), METH_VARARGS, nullptr },
-        { "create_from_audio_device_async", reinterpret_cast<PyCFunction>(MidiSynthesizer_CreateFromAudioDeviceAsync), METH_VARARGS, nullptr },
         { "is_synthesizer", reinterpret_cast<PyCFunction>(MidiSynthesizer_IsSynthesizer), METH_VARARGS, nullptr },
         { }};
 

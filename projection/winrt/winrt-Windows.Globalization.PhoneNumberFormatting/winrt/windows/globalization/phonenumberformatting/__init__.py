@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_globalization_phonenumberformatting import (
     PhoneNumberFormatter,
@@ -50,3 +51,5 @@ class PredictedPhoneNumberKind(enum.IntEnum):
     VOICEMAIL = 10
     UNKNOWN = 11
 
+winrt.runtime._internals.alias_method(PhoneNumberFormatter, "format_with_output_format", "format")
+winrt.runtime._internals.alias_static_method(PhoneNumberInfo, "try_parse_with_region", "try_parse")

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -72,10 +73,16 @@ class ApplicationData_Static(winrt._winrt.IInspectable_Static):
 class ApplicationData(winrt.system.Object, windows_foundation.IClosable, metaclass=ApplicationData_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.ApplicationData::ClearAsync()
-    def clear_all_async(self) -> windows_foundation.IAsyncAction: ...
+    def clear_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.ApplicationData::ClearAsync(Windows.Storage.ApplicationDataLocality)
     def clear_async(self, locality: ApplicationDataLocality, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of clear_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.ApplicationData::ClearAsync()
+    @deprecated("Use clear_async() instead.")
+    def clear_all_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.ApplicationData::ClearPublisherCacheFolderAsync(System.String)
     def clear_publisher_cache_folder_async(self, folder_name: str, /) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Storage.ApplicationData::Close()
@@ -215,22 +222,46 @@ class CachedFileManager(winrt.system.Object, metaclass=CachedFileManager_Static)
 
 @typing.final
 class DownloadsFolder_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.DownloadsFolder::CreateFileAsync(System.String)
     def create_file_async(cls, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.DownloadsFolder::CreateFileAsync(System.String,Windows.Storage.CreationCollisionOption)
+    def create_file_async(cls, desired_name: str, option: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Deprecated alias of create_file_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.DownloadsFolder::CreateFileAsync(System.String,Windows.Storage.CreationCollisionOption)
+    @deprecated("Use create_file_async() instead.")
+    def create_file_with_collision_option_async(cls, desired_name: str, option: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.DownloadsFolder::CreateFileForUserAsync(Windows.System.User,System.String)
     def create_file_for_user_async(cls, user: windows_system.User, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.DownloadsFolder::CreateFileForUserAsync(Windows.System.User,System.String,Windows.Storage.CreationCollisionOption)
+    def create_file_for_user_async(cls, user: windows_system.User, desired_name: str, option: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Deprecated alias of create_file_for_user_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.DownloadsFolder::CreateFileForUserAsync(Windows.System.User,System.String,Windows.Storage.CreationCollisionOption)
+    @deprecated("Use create_file_for_user_async() instead.")
     def create_file_for_user_with_collision_option_async(cls, user: windows_system.User, desired_name: str, option: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.DownloadsFolder::CreateFileAsync(System.String,Windows.Storage.CreationCollisionOption)
-    def create_file_with_collision_option_async(cls, desired_name: str, option: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.DownloadsFolder::CreateFolderAsync(System.String)
     def create_folder_async(cls, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.DownloadsFolder::CreateFolderAsync(System.String,Windows.Storage.CreationCollisionOption)
+    def create_folder_async(cls, desired_name: str, option: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    # Deprecated alias of create_folder_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.DownloadsFolder::CreateFolderAsync(System.String,Windows.Storage.CreationCollisionOption)
+    @deprecated("Use create_folder_async() instead.")
+    def create_folder_with_collision_option_async(cls, desired_name: str, option: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.DownloadsFolder::CreateFolderForUserAsync(Windows.System.User,System.String)
     def create_folder_for_user_async(cls, user: windows_system.User, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.DownloadsFolder::CreateFolderForUserAsync(Windows.System.User,System.String,Windows.Storage.CreationCollisionOption)
+    def create_folder_for_user_async(cls, user: windows_system.User, desired_name: str, option: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    # Deprecated alias of create_folder_for_user_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.DownloadsFolder::CreateFolderForUserAsync(Windows.System.User,System.String,Windows.Storage.CreationCollisionOption)
+    @deprecated("Use create_folder_for_user_async() instead.")
     def create_folder_for_user_with_collision_option_async(cls, user: windows_system.User, desired_name: str, option: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.DownloadsFolder::CreateFolderAsync(System.String,Windows.Storage.CreationCollisionOption)
-    def create_folder_with_collision_option_async(cls, desired_name: str, option: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
 
 @typing.final
 class DownloadsFolder(winrt.system.Object, metaclass=DownloadsFolder_Static):
@@ -238,35 +269,71 @@ class DownloadsFolder(winrt.system.Object, metaclass=DownloadsFolder_Static):
 
 @typing.final
 class FileIO_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::AppendLinesAsync(Windows.Storage.IStorageFile,Windows.Foundation.Collections.IIterable`1<System.String>)
     def append_lines_async(cls, file: IStorageFile, lines: typing.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::AppendLinesAsync(Windows.Storage.IStorageFile,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Storage.Streams.UnicodeEncoding)
+    def append_lines_async(cls, file: IStorageFile, lines: typing.Iterable[str], encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of append_lines_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::AppendLinesAsync(Windows.Storage.IStorageFile,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use append_lines_async() instead.")
     def append_lines_with_encoding_async(cls, file: IStorageFile, lines: typing.Iterable[str], encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::AppendTextAsync(Windows.Storage.IStorageFile,System.String)
     def append_text_async(cls, file: IStorageFile, contents: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::AppendTextAsync(Windows.Storage.IStorageFile,System.String,Windows.Storage.Streams.UnicodeEncoding)
+    def append_text_async(cls, file: IStorageFile, contents: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of append_text_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::AppendTextAsync(Windows.Storage.IStorageFile,System.String,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use append_text_async() instead.")
     def append_text_with_encoding_async(cls, file: IStorageFile, contents: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Storage.FileIO::ReadBufferAsync(Windows.Storage.IStorageFile)
     def read_buffer_async(cls, file: IStorageFile, /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<System.String>> Windows.Storage.FileIO::ReadLinesAsync(Windows.Storage.IStorageFile)
     def read_lines_async(cls, file: IStorageFile, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[str]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<System.String>> Windows.Storage.FileIO::ReadLinesAsync(Windows.Storage.IStorageFile,Windows.Storage.Streams.UnicodeEncoding)
+    def read_lines_async(cls, file: IStorageFile, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[str]]: ...
+    # Deprecated alias of read_lines_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<System.String>> Windows.Storage.FileIO::ReadLinesAsync(Windows.Storage.IStorageFile,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use read_lines_async() instead.")
     def read_lines_with_encoding_async(cls, file: IStorageFile, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[str]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Storage.FileIO::ReadTextAsync(Windows.Storage.IStorageFile)
     def read_text_async(cls, file: IStorageFile, /) -> windows_foundation.IAsyncOperation[str]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Storage.FileIO::ReadTextAsync(Windows.Storage.IStorageFile,Windows.Storage.Streams.UnicodeEncoding)
+    def read_text_async(cls, file: IStorageFile, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncOperation[str]: ...
+    # Deprecated alias of read_text_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Storage.FileIO::ReadTextAsync(Windows.Storage.IStorageFile,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use read_text_async() instead.")
     def read_text_with_encoding_async(cls, file: IStorageFile, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::WriteBufferAsync(Windows.Storage.IStorageFile,Windows.Storage.Streams.IBuffer)
     def write_buffer_async(cls, file: IStorageFile, buffer: winrt.system.Buffer, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::WriteBytesAsync(Windows.Storage.IStorageFile,System.Byte[])
     def write_bytes_async(cls, file: IStorageFile, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::WriteLinesAsync(Windows.Storage.IStorageFile,Windows.Foundation.Collections.IIterable`1<System.String>)
     def write_lines_async(cls, file: IStorageFile, lines: typing.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::WriteLinesAsync(Windows.Storage.IStorageFile,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Storage.Streams.UnicodeEncoding)
+    def write_lines_async(cls, file: IStorageFile, lines: typing.Iterable[str], encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of write_lines_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::WriteLinesAsync(Windows.Storage.IStorageFile,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use write_lines_async() instead.")
     def write_lines_with_encoding_async(cls, file: IStorageFile, lines: typing.Iterable[str], encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::WriteTextAsync(Windows.Storage.IStorageFile,System.String)
     def write_text_async(cls, file: IStorageFile, contents: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::WriteTextAsync(Windows.Storage.IStorageFile,System.String,Windows.Storage.Streams.UnicodeEncoding)
+    def write_text_async(cls, file: IStorageFile, contents: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of write_text_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::WriteTextAsync(Windows.Storage.IStorageFile,System.String,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use write_text_async() instead.")
     def write_text_with_encoding_async(cls, file: IStorageFile, contents: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -329,35 +396,71 @@ class KnownFolders(winrt.system.Object, metaclass=KnownFolders_Static):
 
 @typing.final
 class PathIO_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::AppendLinesAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def append_lines_async(cls, absolute_path: str, lines: typing.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::AppendLinesAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Storage.Streams.UnicodeEncoding)
+    def append_lines_async(cls, absolute_path: str, lines: typing.Iterable[str], encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of append_lines_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::AppendLinesAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use append_lines_async() instead.")
     def append_lines_with_encoding_async(cls, absolute_path: str, lines: typing.Iterable[str], encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::AppendTextAsync(System.String,System.String)
     def append_text_async(cls, absolute_path: str, contents: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::AppendTextAsync(System.String,System.String,Windows.Storage.Streams.UnicodeEncoding)
+    def append_text_async(cls, absolute_path: str, contents: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of append_text_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::AppendTextAsync(System.String,System.String,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use append_text_async() instead.")
     def append_text_with_encoding_async(cls, absolute_path: str, contents: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Storage.PathIO::ReadBufferAsync(System.String)
     def read_buffer_async(cls, absolute_path: str, /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<System.String>> Windows.Storage.PathIO::ReadLinesAsync(System.String)
     def read_lines_async(cls, absolute_path: str, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[str]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<System.String>> Windows.Storage.PathIO::ReadLinesAsync(System.String,Windows.Storage.Streams.UnicodeEncoding)
+    def read_lines_async(cls, absolute_path: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[str]]: ...
+    # Deprecated alias of read_lines_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<System.String>> Windows.Storage.PathIO::ReadLinesAsync(System.String,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use read_lines_async() instead.")
     def read_lines_with_encoding_async(cls, absolute_path: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[str]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Storage.PathIO::ReadTextAsync(System.String)
     def read_text_async(cls, absolute_path: str, /) -> windows_foundation.IAsyncOperation[str]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Storage.PathIO::ReadTextAsync(System.String,Windows.Storage.Streams.UnicodeEncoding)
+    def read_text_async(cls, absolute_path: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncOperation[str]: ...
+    # Deprecated alias of read_text_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Storage.PathIO::ReadTextAsync(System.String,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use read_text_async() instead.")
     def read_text_with_encoding_async(cls, absolute_path: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::WriteBufferAsync(System.String,Windows.Storage.Streams.IBuffer)
     def write_buffer_async(cls, absolute_path: str, buffer: winrt.system.Buffer, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::WriteBytesAsync(System.String,System.Byte[])
     def write_bytes_async(cls, absolute_path: str, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::WriteLinesAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def write_lines_async(cls, absolute_path: str, lines: typing.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::WriteLinesAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Storage.Streams.UnicodeEncoding)
+    def write_lines_async(cls, absolute_path: str, lines: typing.Iterable[str], encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of write_lines_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::WriteLinesAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use write_lines_async() instead.")
     def write_lines_with_encoding_async(cls, absolute_path: str, lines: typing.Iterable[str], encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::WriteTextAsync(System.String,System.String)
     def write_text_async(cls, absolute_path: str, contents: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::WriteTextAsync(System.String,System.String,Windows.Storage.Streams.UnicodeEncoding)
+    def write_text_async(cls, absolute_path: str, contents: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of write_text_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::WriteTextAsync(System.String,System.String,Windows.Storage.Streams.UnicodeEncoding)
+    @deprecated("Use write_text_async() instead.")
     def write_text_with_encoding_async(cls, absolute_path: str, contents: str, encoding: windows_storage_streams.UnicodeEncoding, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -401,31 +504,74 @@ class StorageFile_Static(winrt._winrt.IInspectable_Static):
 class StorageFile(winrt.system.Object, IStorageFile2, IStorageFilePropertiesWithAvailability, IStorageItemPropertiesWithProvider, IStorageItem2, IStorageItemProperties2, IStorageItemProperties, IStorageFile, windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, IStorageItem, metaclass=StorageFile_Static):
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::CopyAndReplaceAsync(Windows.Storage.IStorageFile)
     def copy_and_replace_async(self, file_to_replace: IStorageFile, /) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
-    def copy_overload(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFile::CopyAsync(Windows.Storage.IStorageFolder)
-    def copy_overload_default_name_and_options(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    def copy_async(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String)
+    def copy_async(self, destination_folder: IStorageFolder, desired_new_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
+    def copy_async(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Deprecated alias of copy_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
+    @deprecated("Use copy_async() instead.")
+    def copy_overload(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Deprecated alias of copy_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFile::CopyAsync(Windows.Storage.IStorageFolder)
+    @deprecated("Use copy_async() instead.")
+    def copy_overload_default_name_and_options(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Deprecated alias of copy_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String)
+    @deprecated("Use copy_async() instead.")
     def copy_overload_default_options(self, destination_folder: IStorageFolder, desired_new_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::DeleteAsync()
+    def delete_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::DeleteAsync(Windows.Storage.StorageDeleteOption)
     def delete_async(self, option: StorageDeleteOption, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of delete_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::DeleteAsync()
+    @deprecated("Use delete_async() instead.")
     def delete_async_overload_default_options(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.BasicProperties> Windows.Storage.StorageFile::GetBasicPropertiesAsync()
     def get_basic_properties_async(self) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.BasicProperties]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.StorageFile::GetParentAsync()
     def get_parent_async(self) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFile::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFile::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFile::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32,Windows.Storage.FileProperties.ThumbnailOptions)
     def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, options: windows_storage_fileproperties.ThumbnailOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_scaled_image_as_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFile::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    @deprecated("Use get_scaled_image_as_thumbnail_async() instead.")
     def get_scaled_image_as_thumbnail_async_overload_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_scaled_image_as_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFile::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    @deprecated("Use get_scaled_image_as_thumbnail_async() instead.")
     def get_scaled_image_as_thumbnail_async_overload_default_size_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFile::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    def get_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFile::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    def get_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFile::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32,Windows.Storage.FileProperties.ThumbnailOptions)
     def get_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, options: windows_storage_fileproperties.ThumbnailOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFile::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    @deprecated("Use get_thumbnail_async() instead.")
     def get_thumbnail_async_overload_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFile::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    @deprecated("Use get_thumbnail_async() instead.")
     def get_thumbnail_async_overload_default_size_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
     # System.Boolean Windows.Storage.StorageFile::IsEqual(Windows.Storage.IStorageItem)
     def is_equal(self, item: IStorageItem, /) -> bool: ...
@@ -433,27 +579,60 @@ class StorageFile(winrt.system.Object, IStorageFile2, IStorageFilePropertiesWith
     def is_of_type(self, type: StorageItemTypes, /) -> bool: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::MoveAndReplaceAsync(Windows.Storage.IStorageFile)
     def move_and_replace_async(self, file_to_replace: IStorageFile, /) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
-    def move_overload(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::MoveAsync(Windows.Storage.IStorageFolder)
-    def move_overload_default_name_and_options(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncAction: ...
+    def move_async(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String)
+    def move_async(self, destination_folder: IStorageFolder, desired_new_name: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
+    def move_async(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of move_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
+    @deprecated("Use move_async() instead.")
+    def move_overload(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of move_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::MoveAsync(Windows.Storage.IStorageFolder)
+    @deprecated("Use move_async() instead.")
+    def move_overload_default_name_and_options(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of move_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String)
+    @deprecated("Use move_async() instead.")
     def move_overload_default_options(self, destination_folder: IStorageFolder, desired_new_name: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.StorageFile::OpenAsync(Windows.Storage.FileAccessMode)
     def open_async(self, access_mode: FileAccessMode, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.StorageFile::OpenAsync(Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions)
+    def open_async(self, access_mode: FileAccessMode, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
+    # Deprecated alias of open_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.StorageFile::OpenAsync(Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions)
+    @deprecated("Use open_async() instead.")
+    def open_with_options_async(self, access_mode: FileAccessMode, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Storage.StorageFile::OpenReadAsync()
     def open_read_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IInputStream> Windows.Storage.StorageFile::OpenSequentialReadAsync()
     def open_sequential_read_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IInputStream]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.StorageFile::OpenTransactedWriteAsync()
     def open_transacted_write_async(self) -> windows_foundation.IAsyncOperation[StorageStreamTransaction]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.StorageFile::OpenTransactedWriteAsync(Windows.Storage.StorageOpenOptions)
+    def open_transacted_write_async(self, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[StorageStreamTransaction]: ...
+    # Deprecated alias of open_transacted_write_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.StorageFile::OpenTransactedWriteAsync(Windows.Storage.StorageOpenOptions)
+    @deprecated("Use open_transacted_write_async() instead.")
     def open_transacted_write_with_options_async(self, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[StorageStreamTransaction]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.StorageFile::OpenAsync(Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions)
-    def open_with_options_async(self, access_mode: FileAccessMode, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::RenameAsync(System.String)
+    def rename_async(self, desired_name: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::RenameAsync(System.String,Windows.Storage.NameCollisionOption)
     def rename_async(self, desired_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of rename_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::RenameAsync(System.String)
+    @deprecated("Use rename_async() instead.")
     def rename_async_overload_default_options(self, desired_name: str, /) -> windows_foundation.IAsyncAction: ...
     # System.String Windows.Storage.StorageFile::get_ContentType()
     @_property
@@ -503,23 +682,47 @@ class StorageFolder_Static(winrt._winrt.IInspectable_Static):
 class StorageFolder(winrt.system.Object, IStorageItemPropertiesWithProvider, IStorageFolder2, IStorageItem2, IStorageItemProperties2, IStorageItemProperties, windows_storage_search.IStorageFolderQueryOperations, IStorageFolder, IStorageItem, metaclass=StorageFolder_Static):
     # System.Boolean Windows.Storage.StorageFolder::AreQueryOptionsSupported(Windows.Storage.Search.QueryOptions)
     def are_query_options_supported(self, query_options: windows_storage_search.QueryOptions, /) -> bool: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFolder::CreateFileAsync(System.String)
+    def create_file_async(self, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFolder::CreateFileAsync(System.String,Windows.Storage.CreationCollisionOption)
     def create_file_async(self, desired_name: str, options: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Deprecated alias of create_file_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFolder::CreateFileAsync(System.String)
+    @deprecated("Use create_file_async() instead.")
     def create_file_async_overload_default_options(self, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
+    # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.StorageFolder::CreateFileQuery()
+    def create_file_query(self) -> windows_storage_search.StorageFileQueryResult: ...
+    @typing.overload
     # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.StorageFolder::CreateFileQuery(Windows.Storage.Search.CommonFileQuery)
     def create_file_query(self, query: windows_storage_search.CommonFileQuery, /) -> windows_storage_search.StorageFileQueryResult: ...
+    # Deprecated alias of create_file_query() for pywinrt v3.x compatibility.
     # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.StorageFolder::CreateFileQuery()
+    @deprecated("Use create_file_query() instead.")
     def create_file_query_overload_default(self) -> windows_storage_search.StorageFileQueryResult: ...
     # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.StorageFolder::CreateFileQueryWithOptions(Windows.Storage.Search.QueryOptions)
     def create_file_query_with_options(self, query_options: windows_storage_search.QueryOptions, /) -> windows_storage_search.StorageFileQueryResult: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.StorageFolder::CreateFolderAsync(System.String)
+    def create_folder_async(self, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.StorageFolder::CreateFolderAsync(System.String,Windows.Storage.CreationCollisionOption)
     def create_folder_async(self, desired_name: str, options: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    # Deprecated alias of create_folder_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.StorageFolder::CreateFolderAsync(System.String)
+    @deprecated("Use create_folder_async() instead.")
     def create_folder_async_overload_default_options(self, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    @typing.overload
+    # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.StorageFolder::CreateFolderQuery()
+    def create_folder_query(self) -> windows_storage_search.StorageFolderQueryResult: ...
+    @typing.overload
     # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.StorageFolder::CreateFolderQuery(Windows.Storage.Search.CommonFolderQuery)
     def create_folder_query(self, query: windows_storage_search.CommonFolderQuery, /) -> windows_storage_search.StorageFolderQueryResult: ...
+    # Deprecated alias of create_folder_query() for pywinrt v3.x compatibility.
     # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.StorageFolder::CreateFolderQuery()
+    @deprecated("Use create_folder_query() instead.")
     def create_folder_query_overload_default(self) -> windows_storage_search.StorageFolderQueryResult: ...
     # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.StorageFolder::CreateFolderQueryWithOptions(Windows.Storage.Search.QueryOptions)
     def create_folder_query_with_options(self, query_options: windows_storage_search.QueryOptions, /) -> windows_storage_search.StorageFolderQueryResult: ...
@@ -527,49 +730,105 @@ class StorageFolder(winrt.system.Object, IStorageItemPropertiesWithProvider, ISt
     def create_item_query(self) -> windows_storage_search.StorageItemQueryResult: ...
     # Windows.Storage.Search.StorageItemQueryResult Windows.Storage.StorageFolder::CreateItemQueryWithOptions(Windows.Storage.Search.QueryOptions)
     def create_item_query_with_options(self, query_options: windows_storage_search.QueryOptions, /) -> windows_storage_search.StorageItemQueryResult: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.StorageFolder::DeleteAsync()
+    def delete_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFolder::DeleteAsync(Windows.Storage.StorageDeleteOption)
     def delete_async(self, option: StorageDeleteOption, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of delete_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFolder::DeleteAsync()
+    @deprecated("Use delete_async() instead.")
     def delete_async_overload_default_options(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.BasicProperties> Windows.Storage.StorageFolder::GetBasicPropertiesAsync()
     def get_basic_properties_async(self) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.BasicProperties]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFolder::GetFileAsync(System.String)
     def get_file_async(self, name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.StorageFolder::GetFilesAsync()
+    def get_files_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFile]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.StorageFolder::GetFilesAsync(Windows.Storage.Search.CommonFileQuery)
+    def get_files_async(self, query: windows_storage_search.CommonFileQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFile]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.StorageFolder::GetFilesAsync(Windows.Storage.Search.CommonFileQuery,System.UInt32,System.UInt32)
     def get_files_async(self, query: windows_storage_search.CommonFileQuery, start_index: winrt.system.UInt32, max_items_to_retrieve: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFile]]: ...
+    # Deprecated alias of get_files_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.StorageFolder::GetFilesAsync()
+    @deprecated("Use get_files_async() instead.")
     def get_files_async_overload_default_options_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFile]]: ...
+    # Deprecated alias of get_files_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.StorageFolder::GetFilesAsync(Windows.Storage.Search.CommonFileQuery)
+    @deprecated("Use get_files_async() instead.")
     def get_files_async_overload_default_start_and_count(self, query: windows_storage_search.CommonFileQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFile]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.StorageFolder::GetFolderAsync(System.String)
     def get_folder_async(self, name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.StorageFolder::GetFoldersAsync()
+    def get_folders_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFolder]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.StorageFolder::GetFoldersAsync(Windows.Storage.Search.CommonFolderQuery)
+    def get_folders_async(self, query: windows_storage_search.CommonFolderQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFolder]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.StorageFolder::GetFoldersAsync(Windows.Storage.Search.CommonFolderQuery,System.UInt32,System.UInt32)
     def get_folders_async(self, query: windows_storage_search.CommonFolderQuery, start_index: winrt.system.UInt32, max_items_to_retrieve: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFolder]]: ...
+    # Deprecated alias of get_folders_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.StorageFolder::GetFoldersAsync()
+    @deprecated("Use get_folders_async() instead.")
     def get_folders_async_overload_default_options_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFolder]]: ...
+    # Deprecated alias of get_folders_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.StorageFolder::GetFoldersAsync(Windows.Storage.Search.CommonFolderQuery)
+    @deprecated("Use get_folders_async() instead.")
     def get_folders_async_overload_default_start_and_count(self, query: windows_storage_search.CommonFolderQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFolder]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Search.IndexedState> Windows.Storage.StorageFolder::GetIndexedStateAsync()
     def get_indexed_state_async(self) -> windows_foundation.IAsyncOperation[windows_storage_search.IndexedState]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.StorageFolder::GetItemAsync(System.String)
     def get_item_async(self, name: str, /) -> windows_foundation.IAsyncOperation[IStorageItem]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>> Windows.Storage.StorageFolder::GetItemsAsync()
+    def get_items_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[IStorageItem]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>> Windows.Storage.StorageFolder::GetItemsAsync(System.UInt32,System.UInt32)
     def get_items_async(self, start_index: winrt.system.UInt32, max_items_to_retrieve: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[IStorageItem]]: ...
+    # Deprecated alias of get_items_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>> Windows.Storage.StorageFolder::GetItemsAsync()
+    @deprecated("Use get_items_async() instead.")
     def get_items_async_overload_default_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[IStorageItem]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.StorageFolder::GetParentAsync()
     def get_parent_async(self) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFolder::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFolder::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFolder::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32,Windows.Storage.FileProperties.ThumbnailOptions)
     def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, options: windows_storage_fileproperties.ThumbnailOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_scaled_image_as_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFolder::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    @deprecated("Use get_scaled_image_as_thumbnail_async() instead.")
     def get_scaled_image_as_thumbnail_async_overload_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_scaled_image_as_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFolder::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    @deprecated("Use get_scaled_image_as_thumbnail_async() instead.")
     def get_scaled_image_as_thumbnail_async_overload_default_size_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFolder::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    def get_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFolder::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    def get_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFolder::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32,Windows.Storage.FileProperties.ThumbnailOptions)
     def get_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, options: windows_storage_fileproperties.ThumbnailOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFolder::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    @deprecated("Use get_thumbnail_async() instead.")
     def get_thumbnail_async_overload_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.StorageFolder::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    @deprecated("Use get_thumbnail_async() instead.")
     def get_thumbnail_async_overload_default_size_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
     # System.Boolean Windows.Storage.StorageFolder::IsCommonFileQuerySupported(Windows.Storage.Search.CommonFileQuery)
     def is_common_file_query_supported(self, query: windows_storage_search.CommonFileQuery, /) -> bool: ...
@@ -579,9 +838,15 @@ class StorageFolder(winrt.system.Object, IStorageItemPropertiesWithProvider, ISt
     def is_equal(self, item: IStorageItem, /) -> bool: ...
     # System.Boolean Windows.Storage.StorageFolder::IsOfType(Windows.Storage.StorageItemTypes)
     def is_of_type(self, type: StorageItemTypes, /) -> bool: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.StorageFolder::RenameAsync(System.String)
+    def rename_async(self, desired_name: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFolder::RenameAsync(System.String,Windows.Storage.NameCollisionOption)
     def rename_async(self, desired_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of rename_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFolder::RenameAsync(System.String)
+    @deprecated("Use rename_async() instead.")
     def rename_async_overload_default_options(self, desired_name: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Storage.StorageLibraryChangeTracker Windows.Storage.StorageFolder::TryGetChangeTracker()
     def try_get_change_tracker(self) -> typing.Optional[StorageLibraryChangeTracker]: ...
@@ -673,9 +938,15 @@ class StorageLibraryChangeReader(winrt.system.Object):
 class StorageLibraryChangeTracker(winrt.system.Object):
     # System.Void Windows.Storage.StorageLibraryChangeTracker::Disable()
     def disable(self) -> None: ...
+    @typing.overload
     # System.Void Windows.Storage.StorageLibraryChangeTracker::Enable()
     def enable(self) -> None: ...
+    @typing.overload
     # System.Void Windows.Storage.StorageLibraryChangeTracker::Enable(Windows.Storage.StorageLibraryChangeTrackerOptions)
+    def enable(self, options: StorageLibraryChangeTrackerOptions, /) -> None: ...
+    # Deprecated alias of enable() for pywinrt v3.x compatibility.
+    # System.Void Windows.Storage.StorageLibraryChangeTracker::Enable(Windows.Storage.StorageLibraryChangeTrackerOptions)
+    @deprecated("Use enable() instead.")
     def enable_with_options(self, options: StorageLibraryChangeTrackerOptions, /) -> None: ...
     # Windows.Storage.StorageLibraryChangeReader Windows.Storage.StorageLibraryChangeTracker::GetChangeReader()
     def get_change_reader(self) -> StorageLibraryChangeReader: ...
@@ -1022,26 +1293,56 @@ class IStorageFile(windows_storage_streams.IInputStreamReference, windows_storag
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::CopyAndReplaceAsync(Windows.Storage.IStorageFile)
     @abstractmethod
     def copy_and_replace_async(self, file_to_replace: IStorageFile, /) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
-    @abstractmethod
-    def copy_overload(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFile::CopyAsync(Windows.Storage.IStorageFolder)
     @abstractmethod
-    def copy_overload_default_name_and_options(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    def copy_async(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String)
     @abstractmethod
+    def copy_async(self, destination_folder: IStorageFolder, desired_new_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
+    @abstractmethod
+    def copy_async(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Deprecated alias of copy_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
+    @deprecated("Use copy_async() instead.")
+    def copy_overload(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Deprecated alias of copy_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFile::CopyAsync(Windows.Storage.IStorageFolder)
+    @deprecated("Use copy_async() instead.")
+    def copy_overload_default_name_and_options(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Deprecated alias of copy_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String)
+    @deprecated("Use copy_async() instead.")
     def copy_overload_default_options(self, destination_folder: IStorageFolder, desired_new_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAndReplaceAsync(Windows.Storage.IStorageFile)
     @abstractmethod
     def move_and_replace_async(self, file_to_replace: IStorageFile, /) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
-    @abstractmethod
-    def move_overload(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAsync(Windows.Storage.IStorageFolder)
     @abstractmethod
-    def move_overload_default_name_and_options(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncAction: ...
+    def move_async(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String)
     @abstractmethod
+    def move_async(self, destination_folder: IStorageFolder, desired_new_name: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
+    @abstractmethod
+    def move_async(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of move_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
+    @deprecated("Use move_async() instead.")
+    def move_overload(self, destination_folder: IStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of move_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAsync(Windows.Storage.IStorageFolder)
+    @deprecated("Use move_async() instead.")
+    def move_overload_default_name_and_options(self, destination_folder: IStorageFolder, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of move_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String)
+    @deprecated("Use move_async() instead.")
     def move_overload_default_options(self, destination_folder: IStorageFolder, desired_new_name: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.IStorageFile::OpenAsync(Windows.Storage.FileAccessMode)
     @abstractmethod
@@ -1062,12 +1363,20 @@ class IStorageFile(windows_storage_streams.IInputStreamReference, windows_storag
 class _IStorageFile2: ...
 
 class IStorageFile2(winrt._winrt.IInspectable):
-    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.IStorageFile2::OpenTransactedWriteAsync(Windows.Storage.StorageOpenOptions)
-    @abstractmethod
-    def open_transacted_write_with_options_async(self, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[StorageStreamTransaction]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.IStorageFile2::OpenAsync(Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions)
     @abstractmethod
+    def open_async(self, access_mode: FileAccessMode, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
+    # Deprecated alias of open_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.IStorageFile2::OpenAsync(Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions)
+    @deprecated("Use open_async() instead.")
     def open_with_options_async(self, access_mode: FileAccessMode, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.IStorageFile2::OpenTransactedWriteAsync(Windows.Storage.StorageOpenOptions)
+    @abstractmethod
+    def open_transacted_write_async(self, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[StorageStreamTransaction]: ...
+    # Deprecated alias of open_transacted_write_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.IStorageFile2::OpenTransactedWriteAsync(Windows.Storage.StorageOpenOptions)
+    @deprecated("Use open_transacted_write_async() instead.")
+    def open_transacted_write_with_options_async(self, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[StorageStreamTransaction]: ...
 
 @typing.final
 class _IStorageFilePropertiesWithAvailability: ...
@@ -1082,35 +1391,59 @@ class IStorageFilePropertiesWithAvailability(winrt._winrt.IInspectable):
 class _IStorageFolder: ...
 
 class IStorageFolder(IStorageItem, winrt._winrt.IInspectable):
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFolder::CreateFileAsync(System.String)
+    @abstractmethod
+    def create_file_async(self, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFolder::CreateFileAsync(System.String,Windows.Storage.CreationCollisionOption)
     @abstractmethod
     def create_file_async(self, desired_name: str, options: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Deprecated alias of create_file_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFolder::CreateFileAsync(System.String)
-    @abstractmethod
+    @deprecated("Use create_file_async() instead.")
     def create_file_async_overload_default_options(self, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageFolder::CreateFolderAsync(System.String)
+    @abstractmethod
+    def create_folder_async(self, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageFolder::CreateFolderAsync(System.String,Windows.Storage.CreationCollisionOption)
     @abstractmethod
     def create_folder_async(self, desired_name: str, options: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    # Deprecated alias of create_folder_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageFolder::CreateFolderAsync(System.String)
-    @abstractmethod
+    @deprecated("Use create_folder_async() instead.")
     def create_folder_async_overload_default_options(self, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFolder::GetFileAsync(System.String)
     @abstractmethod
     def get_file_async(self, name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.IStorageFolder::GetFilesAsync()
     @abstractmethod
+    def get_files_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFile]]: ...
+    # Deprecated alias of get_files_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.IStorageFolder::GetFilesAsync()
+    @deprecated("Use get_files_async() instead.")
     def get_files_async_overload_default_options_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFile]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageFolder::GetFolderAsync(System.String)
     @abstractmethod
     def get_folder_async(self, name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.IStorageFolder::GetFoldersAsync()
     @abstractmethod
+    def get_folders_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFolder]]: ...
+    # Deprecated alias of get_folders_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.IStorageFolder::GetFoldersAsync()
+    @deprecated("Use get_folders_async() instead.")
     def get_folders_async_overload_default_options_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFolder]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.IStorageFolder::GetItemAsync(System.String)
     @abstractmethod
     def get_item_async(self, name: str, /) -> windows_foundation.IAsyncOperation[IStorageItem]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>> Windows.Storage.IStorageFolder::GetItemsAsync()
     @abstractmethod
+    def get_items_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[IStorageItem]]: ...
+    # Deprecated alias of get_items_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>> Windows.Storage.IStorageFolder::GetItemsAsync()
+    @deprecated("Use get_items_async() instead.")
     def get_items_async_overload_default_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[IStorageItem]]: ...
 
 @typing.final
@@ -1125,11 +1458,17 @@ class IStorageFolder2(winrt._winrt.IInspectable):
 class _IStorageItem: ...
 
 class IStorageItem(winrt._winrt.IInspectable):
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::DeleteAsync()
+    @abstractmethod
+    def delete_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::DeleteAsync(Windows.Storage.StorageDeleteOption)
     @abstractmethod
     def delete_async(self, option: StorageDeleteOption, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of delete_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::DeleteAsync()
-    @abstractmethod
+    @deprecated("Use delete_async() instead.")
     def delete_async_overload_default_options(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.BasicProperties> Windows.Storage.IStorageItem::GetBasicPropertiesAsync()
     @abstractmethod
@@ -1137,11 +1476,17 @@ class IStorageItem(winrt._winrt.IInspectable):
     # System.Boolean Windows.Storage.IStorageItem::IsOfType(Windows.Storage.StorageItemTypes)
     @abstractmethod
     def is_of_type(self, type: StorageItemTypes, /) -> bool: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::RenameAsync(System.String)
+    @abstractmethod
+    def rename_async(self, desired_name: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::RenameAsync(System.String,Windows.Storage.NameCollisionOption)
     @abstractmethod
     def rename_async(self, desired_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of rename_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::RenameAsync(System.String)
-    @abstractmethod
+    @deprecated("Use rename_async() instead.")
     def rename_async_overload_default_options(self, desired_name: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Storage.FileAttributes Windows.Storage.IStorageItem::get_Attributes()
     @_property
@@ -1175,14 +1520,25 @@ class IStorageItem2(IStorageItem, winrt._winrt.IInspectable):
 class _IStorageItemProperties: ...
 
 class IStorageItemProperties(winrt._winrt.IInspectable):
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    @abstractmethod
+    def get_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    @abstractmethod
+    def get_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32,Windows.Storage.FileProperties.ThumbnailOptions)
     @abstractmethod
     def get_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, options: windows_storage_fileproperties.ThumbnailOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
-    @abstractmethod
+    @deprecated("Use get_thumbnail_async() instead.")
     def get_thumbnail_async_overload_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
-    @abstractmethod
+    @deprecated("Use get_thumbnail_async() instead.")
     def get_thumbnail_async_overload_default_size_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
     # System.String Windows.Storage.IStorageItemProperties::get_DisplayName()
     @_property
@@ -1205,14 +1561,25 @@ class IStorageItemProperties(winrt._winrt.IInspectable):
 class _IStorageItemProperties2: ...
 
 class IStorageItemProperties2(IStorageItemProperties, winrt._winrt.IInspectable):
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    @abstractmethod
+    def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    @abstractmethod
+    def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32,Windows.Storage.FileProperties.ThumbnailOptions)
     @abstractmethod
     def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, options: windows_storage_fileproperties.ThumbnailOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_scaled_image_as_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
-    @abstractmethod
+    @deprecated("Use get_scaled_image_as_thumbnail_async() instead.")
     def get_scaled_image_as_thumbnail_async_overload_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Deprecated alias of get_scaled_image_as_thumbnail_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
-    @abstractmethod
+    @deprecated("Use get_scaled_image_as_thumbnail_async() instead.")
     def get_scaled_image_as_thumbnail_async_overload_default_size_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
 
 @typing.final

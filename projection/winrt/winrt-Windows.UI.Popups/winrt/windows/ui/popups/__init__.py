@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_popups import (
     MessageDialog,
@@ -36,4 +37,6 @@ class Placement(enum.IntEnum):
     LEFT = 3
     RIGHT = 4
 
+winrt.runtime._internals.alias_method(PopupMenu, "show_async_with_rect", "show_for_selection_async")
+winrt.runtime._internals.alias_method(PopupMenu, "show_async_with_rect_and_placement", "show_for_selection_async")
 UICommandInvokedHandler = typing.Callable[[IUICommand], None]

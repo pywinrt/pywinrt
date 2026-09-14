@@ -429,18 +429,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* GameSaveBlobInfoQuery_GetBlobInfoWithIndexAndMaxAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -545,7 +534,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyMethodDef _methods_GameSaveBlobInfoQuery[] = {
         { "get_blob_info_async", reinterpret_cast<PyCFunction>(GameSaveBlobInfoQuery_GetBlobInfoAsync), METH_VARARGS, nullptr },
-        { "get_blob_info_with_index_and_max_async", reinterpret_cast<PyCFunction>(GameSaveBlobInfoQuery_GetBlobInfoWithIndexAndMaxAsync), METH_VARARGS, nullptr },
         { "get_item_count_async", reinterpret_cast<PyCFunction>(GameSaveBlobInfoQuery_GetItemCountAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GameSaveBlobInfoQuery, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameSaveBlobInfoQuery), METH_O | METH_STATIC, nullptr },
@@ -1305,18 +1293,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* GameSaveContainerInfoQuery_GetContainerInfoWithIndexAndMaxAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1421,7 +1398,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyMethodDef _methods_GameSaveContainerInfoQuery[] = {
         { "get_container_info_async", reinterpret_cast<PyCFunction>(GameSaveContainerInfoQuery_GetContainerInfoAsync), METH_VARARGS, nullptr },
-        { "get_container_info_with_index_and_max_async", reinterpret_cast<PyCFunction>(GameSaveContainerInfoQuery_GetContainerInfoWithIndexAndMaxAsync), METH_VARARGS, nullptr },
         { "get_item_count_async", reinterpret_cast<PyCFunction>(GameSaveContainerInfoQuery_GetItemCountAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GameSaveContainerInfoQuery, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameSaveContainerInfoQuery), METH_O | METH_STATIC, nullptr },
@@ -1630,18 +1606,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* GameSaveProvider_CreateContainerInfoQueryWithName(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1934,7 +1899,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static PyMethodDef _methods_GameSaveProvider[] = {
         { "create_container", reinterpret_cast<PyCFunction>(GameSaveProvider_CreateContainer), METH_VARARGS, nullptr },
         { "create_container_info_query", reinterpret_cast<PyCFunction>(GameSaveProvider_CreateContainerInfoQuery), METH_VARARGS, nullptr },
-        { "create_container_info_query_with_name", reinterpret_cast<PyCFunction>(GameSaveProvider_CreateContainerInfoQueryWithName), METH_VARARGS, nullptr },
         { "delete_container_async", reinterpret_cast<PyCFunction>(GameSaveProvider_DeleteContainerAsync), METH_VARARGS, nullptr },
         { "get_remaining_bytes_in_quota_async", reinterpret_cast<PyCFunction>(GameSaveProvider_GetRemainingBytesInQuotaAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GameSaveProvider, METH_O | METH_STATIC, nullptr },

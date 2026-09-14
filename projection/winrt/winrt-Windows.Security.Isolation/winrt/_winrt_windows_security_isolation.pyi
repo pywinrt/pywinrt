@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -29,11 +30,18 @@ class IsolatedWindowsEnvironmentCreateProgress:
 
 @typing.final
 class IsolatedWindowsEnvironment_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> Windows.Security.Isolation.IsolatedWindowsEnvironment::CreateAsync(Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def create_async(cls, options: IsolatedWindowsEnvironmentOptions, /) -> windows_foundation.IAsyncOperationWithProgress[IsolatedWindowsEnvironmentCreateResult, IsolatedWindowsEnvironmentCreateProgress]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> Windows.Security.Isolation.IsolatedWindowsEnvironment::CreateAsync(Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def create_async(cls, options: IsolatedWindowsEnvironmentOptions, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperationWithProgress[IsolatedWindowsEnvironmentCreateResult, IsolatedWindowsEnvironmentCreateProgress]: ...
+    # Deprecated alias of create_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> Windows.Security.Isolation.IsolatedWindowsEnvironment::CreateAsync(Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
+    # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use create_async() instead.")
     def create_with_telemetry_async(cls, options: IsolatedWindowsEnvironmentOptions, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperationWithProgress[IsolatedWindowsEnvironmentCreateResult, IsolatedWindowsEnvironmentCreateProgress]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Isolation.IsolatedWindowsEnvironment> Windows.Security.Isolation.IsolatedWindowsEnvironment::FindByOwnerId(System.String)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -50,44 +58,86 @@ class IsolatedWindowsEnvironment(winrt.system.Object, metaclass=IsolatedWindowsE
     # Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo Windows.Security.Isolation.IsolatedWindowsEnvironment::GetUserInfo()
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_user_info(self) -> IsolatedWindowsEnvironmentUserInfo: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::LaunchFileWithUIAsync(System.String,System.String,System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
-    # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def launch_file_with_ui_and_telemetry_async(self, app_exe_path: str, arguments_template: str, file_path: str, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentLaunchFileResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::LaunchFileWithUIAsync(System.String,System.String,System.String)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def launch_file_with_ui_async(self, app_exe_path: str, arguments_template: str, file_path: str, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentLaunchFileResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::LaunchFileWithUIAsync(System.String,System.String,System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
+    # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def launch_file_with_ui_async(self, app_exe_path: str, arguments_template: str, file_path: str, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentLaunchFileResult]: ...
+    # Deprecated alias of launch_file_with_ui_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::LaunchFileWithUIAsync(System.String,System.String,System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
+    # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use launch_file_with_ui_async() instead.")
+    def launch_file_with_ui_and_telemetry_async(self, app_exe_path: str, arguments_template: str, file_path: str, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentLaunchFileResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::PostMessageToReceiverAsync(System.Guid,Windows.Foundation.Collections.IIterable`1<System.Object>)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def post_message_to_receiver_async(self, receiver_id: _uuid.UUID, message: typing.Iterable[winrt.system.Object], /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentPostMessageResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::PostMessageToReceiverAsync(System.Guid,Windows.Foundation.Collections.IIterable`1<System.Object>,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def post_message_to_receiver_async(self, receiver_id: _uuid.UUID, message: typing.Iterable[winrt.system.Object], telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentPostMessageResult]: ...
+    # Deprecated alias of post_message_to_receiver_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::PostMessageToReceiverAsync(System.Guid,Windows.Foundation.Collections.IIterable`1<System.Object>,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
+    # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use post_message_to_receiver_async() instead.")
     def post_message_to_receiver_with_telemetry_async(self, receiver_id: _uuid.UUID, message: typing.Iterable[winrt.system.Object], telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentPostMessageResult]: ...
     # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironment::RegisterMessageReceiver(System.Guid,Windows.Security.Isolation.MessageReceivedCallback)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def register_message_receiver(self, receiver_id: _uuid.UUID, message_received_callback: MessageReceivedCallback, /) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::ShareFileAsync(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def share_file_async(self, file_path: str, options: IsolatedWindowsEnvironmentShareFileRequestOptions, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentShareFileResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::ShareFileAsync(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def share_file_async(self, file_path: str, options: IsolatedWindowsEnvironmentShareFileRequestOptions, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentShareFileResult]: ...
+    # Deprecated alias of share_file_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::ShareFileAsync(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
+    # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use share_file_async() instead.")
     def share_file_with_telemetry_async(self, file_path: str, options: IsolatedWindowsEnvironmentShareFileRequestOptions, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentShareFileResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::ShareFolderAsync(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def share_folder_async(self, host_folder: str, request_options: IsolatedWindowsEnvironmentShareFolderRequestOptions, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentShareFolderResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::ShareFolderAsync(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def share_folder_async(self, host_folder: str, request_options: IsolatedWindowsEnvironmentShareFolderRequestOptions, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentShareFolderResult]: ...
+    # Deprecated alias of share_folder_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::ShareFolderAsync(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
+    # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use share_folder_async() instead.")
     def share_folder_with_telemetry_async(self, host_folder: str, request_options: IsolatedWindowsEnvironmentShareFolderRequestOptions, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentShareFolderResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::StartProcessSilentlyAsync(System.String,System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def start_process_silently_async(self, host_exe_path: str, arguments: str, activator: IsolatedWindowsEnvironmentActivator, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentStartProcessResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::StartProcessSilentlyAsync(System.String,System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def start_process_silently_async(self, host_exe_path: str, arguments: str, activator: IsolatedWindowsEnvironmentActivator, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentStartProcessResult]: ...
+    # Deprecated alias of start_process_silently_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::StartProcessSilentlyAsync(System.String,System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
+    # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use start_process_silently_async() instead.")
     def start_process_silently_with_telemetry_async(self, host_exe_path: str, arguments: str, activator: IsolatedWindowsEnvironmentActivator, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentStartProcessResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Security.Isolation.IsolatedWindowsEnvironment::TerminateAsync()
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def terminate_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Security.Isolation.IsolatedWindowsEnvironment::TerminateAsync(Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def terminate_async(self, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of terminate_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Security.Isolation.IsolatedWindowsEnvironment::TerminateAsync(Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
+    # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use terminate_async() instead.")
     def terminate_with_telemetry_async(self, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironment::UnregisterMessageReceiver(System.Guid)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")

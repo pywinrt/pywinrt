@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_perception_spatial import (
     SpatialBoundingBox,
@@ -100,3 +101,12 @@ class SpatialPerceptionAccessStatus(enum.IntEnum):
     DENIED_BY_USER = 2
     DENIED_BY_SYSTEM = 3
 
+winrt.runtime._internals.alias_static_method(SpatialAnchor, "try_create_with_position_and_orientation_relative_to", "try_create_relative_to")
+winrt.runtime._internals.alias_static_method(SpatialAnchor, "try_create_with_position_relative_to", "try_create_relative_to")
+winrt.runtime._internals.alias_static_method(SpatialEntityStore, "try_get_for_remote_system_session", "try_get")
+winrt.runtime._internals.alias_method(SpatialLocator, "create_attached_frame_of_reference_at_current_heading_with_position", "create_attached_frame_of_reference_at_current_heading")
+winrt.runtime._internals.alias_method(SpatialLocator, "create_attached_frame_of_reference_at_current_heading_with_position_and_orientation", "create_attached_frame_of_reference_at_current_heading")
+winrt.runtime._internals.alias_method(SpatialLocator, "create_attached_frame_of_reference_at_current_heading_with_position_and_orientation_and_relative_heading", "create_attached_frame_of_reference_at_current_heading")
+winrt.runtime._internals.alias_method(SpatialLocator, "create_stationary_frame_of_reference_at_current_location_with_position", "create_stationary_frame_of_reference_at_current_location")
+winrt.runtime._internals.alias_method(SpatialLocator, "create_stationary_frame_of_reference_at_current_location_with_position_and_orientation", "create_stationary_frame_of_reference_at_current_location")
+winrt.runtime._internals.alias_method(SpatialLocator, "create_stationary_frame_of_reference_at_current_location_with_position_and_orientation_and_relative_heading", "create_stationary_frame_of_reference_at_current_location")

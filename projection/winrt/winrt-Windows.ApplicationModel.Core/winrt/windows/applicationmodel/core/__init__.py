@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_core import (
     AppListEntry,
@@ -39,3 +40,5 @@ class AppRestartFailureReason(enum.IntEnum):
     INVALID_USER = 2
     OTHER = 3
 
+winrt.runtime._internals.alias_static_method(CoreApplication, "create_new_view_from_main_view", "create_new_view")
+winrt.runtime._internals.alias_static_method(CoreApplication, "create_new_view_with_view_source", "create_new_view")

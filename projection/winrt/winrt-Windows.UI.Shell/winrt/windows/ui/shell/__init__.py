@@ -71,3 +71,5 @@ class ShareWindowCommand(enum.IntEnum):
     STOP_SHARING = 2
 
 winrt.runtime._internals.mixin_mutable_sequence(WindowTabCollection)
+winrt.runtime._internals.alias_method(FocusSessionManager, "try_start_focus_session2", "try_start_focus_session")
+winrt.runtime._internals.alias_static_method(WindowTabIcon, "create_from_font_glyph_with_uri", "create_from_font_glyph")

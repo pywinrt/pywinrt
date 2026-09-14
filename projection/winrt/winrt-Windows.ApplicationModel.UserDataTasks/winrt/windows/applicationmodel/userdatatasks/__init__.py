@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_userdatatasks import (
     UserDataTask,
@@ -123,3 +124,5 @@ class UserDataTaskWeekOfMonth(enum.IntEnum):
     FOURTH = 3
     LAST = 4
 
+winrt.runtime._internals.alias_method(UserDataTaskList, "get_task_reader_with_options", "get_task_reader")
+winrt.runtime._internals.alias_method(UserDataTaskStore, "create_list_in_account_async", "create_list_async")

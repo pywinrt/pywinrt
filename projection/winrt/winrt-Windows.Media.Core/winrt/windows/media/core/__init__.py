@@ -401,3 +401,8 @@ class VideoStabilizationEffectEnabledChangedReason(enum.IntEnum):
     RUNNING_SLOWLY = 2
 
 winrt.runtime._internals.mixin_mutable_mapping(MediaStreamSamplePropertySet)
+winrt.runtime._internals.alias_method(MseSourceBuffer, "append_stream_max_size", "append_stream")
+winrt.runtime._internals.alias_static_method(TimedTextSource, "create_from_stream_with_language", "create_from_stream")
+winrt.runtime._internals.alias_static_method(TimedTextSource, "create_from_stream_with_index_and_language", "create_from_stream_with_index")
+winrt.runtime._internals.alias_static_method(TimedTextSource, "create_from_uri_with_language", "create_from_uri")
+winrt.runtime._internals.alias_static_method(TimedTextSource, "create_from_uri_with_index_and_language", "create_from_uri_with_index")

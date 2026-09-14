@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -25,9 +26,15 @@ class PwmController_Static(winrt._winrt.IInspectable_Static):
     def get_controllers_async(cls, provider: windows_devices_pwm_provider.IPwmProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[PwmController]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Pwm.PwmController> Windows.Devices.Pwm.PwmController::GetDefaultAsync()
     def get_default_async(cls) -> windows_foundation.IAsyncOperation[PwmController]: ...
+    @typing.overload
     # System.String Windows.Devices.Pwm.PwmController::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Pwm.PwmController::GetDeviceSelector(System.String)
+    def get_device_selector(cls, friendly_name: str, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.Pwm.PwmController::GetDeviceSelector(System.String)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_from_friendly_name(cls, friendly_name: str, /) -> str: ...
 
 @typing.final

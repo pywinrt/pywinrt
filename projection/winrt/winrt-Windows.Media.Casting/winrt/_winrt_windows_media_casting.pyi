@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -91,9 +92,15 @@ class CastingDevicePicker(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Windows.Media.Casting.CastingDevicePicker::Hide()
     def hide(self) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Casting.CastingDevicePicker::Show(Windows.Foundation.Rect)
     def show(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Casting.CastingDevicePicker::Show(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    def show(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> None: ...
+    # Deprecated alias of show() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.Casting.CastingDevicePicker::Show(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    @deprecated("Use show() instead.")
     def show_with_placement(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Casting.CastingDevicePicker::add_CastingDevicePickerDismissed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Casting.CastingDevicePicker,System.Object>)
     def add_casting_device_picker_dismissed(self, handler: windows_foundation.TypedEventHandler[CastingDevicePicker, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...

@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_isolation import (
     IsolatedWindowsEnvironmentCreateProgress,
@@ -174,5 +175,12 @@ class IsolatedWindowsEnvironmentStartProcessStatus(enum.IntEnum):
     FILE_NOT_FOUND = 3
     APP_NOT_REGISTERED = 4
 
+winrt.runtime._internals.alias_static_method(IsolatedWindowsEnvironment, "create_with_telemetry_async", "create_async")
+winrt.runtime._internals.alias_method(IsolatedWindowsEnvironment, "launch_file_with_ui_and_telemetry_async", "launch_file_with_ui_async")
+winrt.runtime._internals.alias_method(IsolatedWindowsEnvironment, "post_message_to_receiver_with_telemetry_async", "post_message_to_receiver_async")
+winrt.runtime._internals.alias_method(IsolatedWindowsEnvironment, "share_file_with_telemetry_async", "share_file_async")
+winrt.runtime._internals.alias_method(IsolatedWindowsEnvironment, "share_folder_with_telemetry_async", "share_folder_async")
+winrt.runtime._internals.alias_method(IsolatedWindowsEnvironment, "start_process_silently_with_telemetry_async", "start_process_silently_async")
+winrt.runtime._internals.alias_method(IsolatedWindowsEnvironment, "terminate_with_telemetry_async", "terminate_async")
 HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, typing.Sequence[winrt.system.Object]], None]
 MessageReceivedCallback = typing.Callable[[_uuid.UUID, typing.Sequence[winrt.system.Object]], None]

@@ -56,18 +56,39 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 2)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"TryCreateRelativeTo", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialAnchor::TryCreateRelativeTo(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* SpatialAnchor_TryCreateWithPositionAndOrientationRelativeTo(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -92,49 +113,6 @@ namespace py::cpp::Windows::Perception::Spatial
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Perception::Spatial::SpatialAnchor::TryCreateRelativeTo(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SpatialAnchor_TryCreateWithPositionRelativeTo(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.SpatialAnchor", L"TryCreateRelativeTo", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Perception::Spatial::SpatialAnchor::TryCreateRelativeTo(param0, param1);
                 }());
             }
             catch (...)
@@ -361,8 +339,6 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyMethodDef methods_SpatialAnchor_Static[] = {
         { "try_create_relative_to", reinterpret_cast<PyCFunction>(SpatialAnchor_TryCreateRelativeTo), METH_VARARGS, nullptr },
-        { "try_create_with_position_and_orientation_relative_to", reinterpret_cast<PyCFunction>(SpatialAnchor_TryCreateWithPositionAndOrientationRelativeTo), METH_VARARGS, nullptr },
-        { "try_create_with_position_relative_to", reinterpret_cast<PyCFunction>(SpatialAnchor_TryCreateWithPositionRelativeTo), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_SpatialAnchor_Static[] = 
@@ -2277,7 +2253,7 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static PyObject* SpatialEntityStore_TryGetForRemoteSystemSession(PyObject* /*unused*/, PyObject* args) noexcept
+    static PyObject* SpatialEntityStore_TryGet(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -2403,7 +2379,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { }};
 
     static PyMethodDef methods_SpatialEntityStore_Static[] = {
-        { "try_get_for_remote_system_session", reinterpret_cast<PyCFunction>(SpatialEntityStore_TryGetForRemoteSystemSession), METH_VARARGS, nullptr },
+        { "try_get", reinterpret_cast<PyCFunction>(SpatialEntityStore_TryGet), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_SpatialEntityStore_Static[] = 
@@ -3322,18 +3298,7 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeadingWithPosition(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -3364,18 +3329,7 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeadingWithPositionAndOrientation(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -3407,18 +3361,7 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeadingWithPositionAndOrientationAndRelativeHeading(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -3491,18 +3434,7 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocationWithPosition(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -3533,18 +3465,7 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocationWithPositionAndOrientation(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -3576,18 +3497,7 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocationWithPositionAndOrientationAndRelativeHeading(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -3896,13 +3806,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyMethodDef _methods_SpatialLocator[] = {
         { "create_attached_frame_of_reference_at_current_heading", reinterpret_cast<PyCFunction>(SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeading), METH_VARARGS, nullptr },
-        { "create_attached_frame_of_reference_at_current_heading_with_position", reinterpret_cast<PyCFunction>(SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeadingWithPosition), METH_VARARGS, nullptr },
-        { "create_attached_frame_of_reference_at_current_heading_with_position_and_orientation", reinterpret_cast<PyCFunction>(SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeadingWithPositionAndOrientation), METH_VARARGS, nullptr },
-        { "create_attached_frame_of_reference_at_current_heading_with_position_and_orientation_and_relative_heading", reinterpret_cast<PyCFunction>(SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeadingWithPositionAndOrientationAndRelativeHeading), METH_VARARGS, nullptr },
         { "create_stationary_frame_of_reference_at_current_location", reinterpret_cast<PyCFunction>(SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocation), METH_VARARGS, nullptr },
-        { "create_stationary_frame_of_reference_at_current_location_with_position", reinterpret_cast<PyCFunction>(SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocationWithPosition), METH_VARARGS, nullptr },
-        { "create_stationary_frame_of_reference_at_current_location_with_position_and_orientation", reinterpret_cast<PyCFunction>(SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocationWithPositionAndOrientation), METH_VARARGS, nullptr },
-        { "create_stationary_frame_of_reference_at_current_location_with_position_and_orientation_and_relative_heading", reinterpret_cast<PyCFunction>(SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocationWithPositionAndOrientationAndRelativeHeading), METH_VARARGS, nullptr },
         { "try_locate_at_timestamp", reinterpret_cast<PyCFunction>(SpatialLocator_TryLocateAtTimestamp), METH_VARARGS, nullptr },
         { "add_locatability_changed", reinterpret_cast<PyCFunction>(SpatialLocator_add_LocatabilityChanged), METH_O, nullptr },
         { "remove_locatability_changed", reinterpret_cast<PyCFunction>(SpatialLocator_remove_LocatabilityChanged), METH_O, nullptr },

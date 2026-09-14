@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -159,9 +160,15 @@ class DataWriter(winrt.system.Object, windows_foundation.IClosable, IDataWriter)
     def store_async(self) -> DataWriterStoreOperation: ...
     # System.Void Windows.Storage.Streams.DataWriter::WriteBoolean(System.Boolean)
     def write_boolean(self, value: bool, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Storage.Streams.DataWriter::WriteBuffer(Windows.Storage.Streams.IBuffer)
     def write_buffer(self, buffer: winrt.system.Buffer, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Storage.Streams.DataWriter::WriteBuffer(Windows.Storage.Streams.IBuffer,System.UInt32,System.UInt32)
+    def write_buffer(self, buffer: winrt.system.Buffer, start: winrt.system.UInt32, count: winrt.system.UInt32, /) -> None: ...
+    # Deprecated alias of write_buffer() for pywinrt v3.x compatibility.
+    # System.Void Windows.Storage.Streams.DataWriter::WriteBuffer(Windows.Storage.Streams.IBuffer,System.UInt32,System.UInt32)
+    @deprecated("Use write_buffer() instead.")
     def write_buffer_range(self, buffer: winrt.system.Buffer, start: winrt.system.UInt32, count: winrt.system.UInt32, /) -> None: ...
     # System.Void Windows.Storage.Streams.DataWriter::WriteByte(System.Byte)
     def write_byte(self, value: winrt.system.UInt8, /) -> None: ...
@@ -253,22 +260,46 @@ class FileOutputStream(winrt.system.Object, IOutputStream, windows_foundation.IC
 
 @typing.final
 class FileRandomAccessStream_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.Streams.FileRandomAccessStream::OpenAsync(System.String,Windows.Storage.FileAccessMode)
     def open_async(cls, file_path: str, access_mode: windows_storage.FileAccessMode, /) -> windows_foundation.IAsyncOperation[IRandomAccessStream]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.Streams.FileRandomAccessStream::OpenAsync(System.String,Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions,Windows.Storage.Streams.FileOpenDisposition)
+    def open_async(cls, file_path: str, access_mode: windows_storage.FileAccessMode, sharing_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[IRandomAccessStream]: ...
+    # Deprecated alias of open_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.Streams.FileRandomAccessStream::OpenAsync(System.String,Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions,Windows.Storage.Streams.FileOpenDisposition)
+    @deprecated("Use open_async() instead.")
+    def open_with_options_async(cls, file_path: str, access_mode: windows_storage.FileAccessMode, sharing_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[IRandomAccessStream]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.Streams.FileRandomAccessStream::OpenForUserAsync(Windows.System.User,System.String,Windows.Storage.FileAccessMode)
     def open_for_user_async(cls, user: windows_system.User, file_path: str, access_mode: windows_storage.FileAccessMode, /) -> windows_foundation.IAsyncOperation[IRandomAccessStream]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.Streams.FileRandomAccessStream::OpenForUserAsync(Windows.System.User,System.String,Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions,Windows.Storage.Streams.FileOpenDisposition)
+    def open_for_user_async(cls, user: windows_system.User, file_path: str, access_mode: windows_storage.FileAccessMode, sharing_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[IRandomAccessStream]: ...
+    # Deprecated alias of open_for_user_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.Streams.FileRandomAccessStream::OpenForUserAsync(Windows.System.User,System.String,Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions,Windows.Storage.Streams.FileOpenDisposition)
+    @deprecated("Use open_for_user_async() instead.")
     def open_for_user_with_options_async(cls, user: windows_system.User, file_path: str, access_mode: windows_storage.FileAccessMode, sharing_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[IRandomAccessStream]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.Streams.FileRandomAccessStream::OpenTransactedWriteAsync(System.String)
     def open_transacted_write_async(cls, file_path: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageStreamTransaction]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.Streams.FileRandomAccessStream::OpenTransactedWriteAsync(System.String,Windows.Storage.StorageOpenOptions,Windows.Storage.Streams.FileOpenDisposition)
+    def open_transacted_write_async(cls, file_path: str, open_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageStreamTransaction]: ...
+    # Deprecated alias of open_transacted_write_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.Streams.FileRandomAccessStream::OpenTransactedWriteAsync(System.String,Windows.Storage.StorageOpenOptions,Windows.Storage.Streams.FileOpenDisposition)
+    @deprecated("Use open_transacted_write_async() instead.")
+    def open_transacted_write_with_options_async(cls, file_path: str, open_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageStreamTransaction]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.Streams.FileRandomAccessStream::OpenTransactedWriteForUserAsync(Windows.System.User,System.String)
     def open_transacted_write_for_user_async(cls, user: windows_system.User, file_path: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageStreamTransaction]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.Streams.FileRandomAccessStream::OpenTransactedWriteForUserAsync(Windows.System.User,System.String,Windows.Storage.StorageOpenOptions,Windows.Storage.Streams.FileOpenDisposition)
+    def open_transacted_write_for_user_async(cls, user: windows_system.User, file_path: str, open_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageStreamTransaction]: ...
+    # Deprecated alias of open_transacted_write_for_user_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.Streams.FileRandomAccessStream::OpenTransactedWriteForUserAsync(Windows.System.User,System.String,Windows.Storage.StorageOpenOptions,Windows.Storage.Streams.FileOpenDisposition)
+    @deprecated("Use open_transacted_write_for_user_async() instead.")
     def open_transacted_write_for_user_with_options_async(cls, user: windows_system.User, file_path: str, open_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageStreamTransaction]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.Streams.FileRandomAccessStream::OpenTransactedWriteAsync(System.String,Windows.Storage.StorageOpenOptions,Windows.Storage.Streams.FileOpenDisposition)
-    def open_transacted_write_with_options_async(cls, file_path: str, open_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageStreamTransaction]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.Streams.FileRandomAccessStream::OpenAsync(System.String,Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions,Windows.Storage.Streams.FileOpenDisposition)
-    def open_with_options_async(cls, file_path: str, access_mode: windows_storage.FileAccessMode, sharing_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[IRandomAccessStream]: ...
 
 @typing.final
 class FileRandomAccessStream(winrt.system.Object, IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, metaclass=FileRandomAccessStream_Static):
@@ -367,9 +398,15 @@ class OutputStreamOverStream(winrt.system.Object, IOutputStream, windows_foundat
 class RandomAccessStream_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt64,System.UInt64> Windows.Storage.Streams.RandomAccessStream::CopyAndCloseAsync(Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream)
     def copy_and_close_async(cls, source: IInputStream, destination: IOutputStream, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt64, winrt.system.UInt64]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt64,System.UInt64> Windows.Storage.Streams.RandomAccessStream::CopyAsync(Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream)
     def copy_async(cls, source: IInputStream, destination: IOutputStream, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt64, winrt.system.UInt64]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt64,System.UInt64> Windows.Storage.Streams.RandomAccessStream::CopyAsync(Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream,System.UInt64)
+    def copy_async(cls, source: IInputStream, destination: IOutputStream, bytes_to_copy: winrt.system.UInt64, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt64, winrt.system.UInt64]: ...
+    # Deprecated alias of copy_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt64,System.UInt64> Windows.Storage.Streams.RandomAccessStream::CopyAsync(Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream,System.UInt64)
+    @deprecated("Use copy_async() instead.")
     def copy_size_async(cls, source: IInputStream, destination: IOutputStream, bytes_to_copy: winrt.system.UInt64, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt64, winrt.system.UInt64]: ...
 
 @typing.final
@@ -566,11 +603,17 @@ class IDataWriter(winrt._winrt.IInspectable):
     # System.Void Windows.Storage.Streams.IDataWriter::WriteBoolean(System.Boolean)
     @abstractmethod
     def write_boolean(self, value: bool, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Storage.Streams.IDataWriter::WriteBuffer(Windows.Storage.Streams.IBuffer)
     @abstractmethod
     def write_buffer(self, buffer: winrt.system.Buffer, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Storage.Streams.IDataWriter::WriteBuffer(Windows.Storage.Streams.IBuffer,System.UInt32,System.UInt32)
     @abstractmethod
+    def write_buffer(self, buffer: winrt.system.Buffer, start: winrt.system.UInt32, count: winrt.system.UInt32, /) -> None: ...
+    # Deprecated alias of write_buffer() for pywinrt v3.x compatibility.
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteBuffer(Windows.Storage.Streams.IBuffer,System.UInt32,System.UInt32)
+    @deprecated("Use write_buffer() instead.")
     def write_buffer_range(self, buffer: winrt.system.Buffer, start: winrt.system.UInt32, count: winrt.system.UInt32, /) -> None: ...
     # System.Void Windows.Storage.Streams.IDataWriter::WriteByte(System.Byte)
     @abstractmethod

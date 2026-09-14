@@ -1043,18 +1043,7 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SecondaryTile_FindAllForApplicationAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1165,18 +1154,7 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SecondaryTile_RequestCreateAsyncWithPoint(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1214,7 +1192,7 @@ namespace py::cpp::Windows::UI::StartScreen
         }
     }
 
-    static PyObject* SecondaryTile_RequestCreateAsyncWithRect(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
+    static PyObject* SecondaryTile_RequestCreateForSelectionAsync(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1249,18 +1227,7 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SecondaryTile_RequestCreateAsyncWithRectAndPlacement(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1332,18 +1299,7 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SecondaryTile_RequestDeleteAsyncWithPoint(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1381,7 +1337,7 @@ namespace py::cpp::Windows::UI::StartScreen
         }
     }
 
-    static PyObject* SecondaryTile_RequestDeleteAsyncWithRect(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
+    static PyObject* SecondaryTile_RequestDeleteForSelectionAsync(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1416,18 +1372,7 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SecondaryTile_RequestDeleteAsyncWithRectAndPlacement(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2593,13 +2538,9 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyMethodDef _methods_SecondaryTile[] = {
         { "request_create_async", reinterpret_cast<PyCFunction>(SecondaryTile_RequestCreateAsync), METH_VARARGS, nullptr },
-        { "request_create_async_with_point", reinterpret_cast<PyCFunction>(SecondaryTile_RequestCreateAsyncWithPoint), METH_VARARGS, nullptr },
-        { "request_create_async_with_rect", reinterpret_cast<PyCFunction>(SecondaryTile_RequestCreateAsyncWithRect), METH_VARARGS, nullptr },
-        { "request_create_async_with_rect_and_placement", reinterpret_cast<PyCFunction>(SecondaryTile_RequestCreateAsyncWithRectAndPlacement), METH_VARARGS, nullptr },
+        { "request_create_for_selection_async", reinterpret_cast<PyCFunction>(SecondaryTile_RequestCreateForSelectionAsync), METH_VARARGS, nullptr },
         { "request_delete_async", reinterpret_cast<PyCFunction>(SecondaryTile_RequestDeleteAsync), METH_VARARGS, nullptr },
-        { "request_delete_async_with_point", reinterpret_cast<PyCFunction>(SecondaryTile_RequestDeleteAsyncWithPoint), METH_VARARGS, nullptr },
-        { "request_delete_async_with_rect", reinterpret_cast<PyCFunction>(SecondaryTile_RequestDeleteAsyncWithRect), METH_VARARGS, nullptr },
-        { "request_delete_async_with_rect_and_placement", reinterpret_cast<PyCFunction>(SecondaryTile_RequestDeleteAsyncWithRectAndPlacement), METH_VARARGS, nullptr },
+        { "request_delete_for_selection_async", reinterpret_cast<PyCFunction>(SecondaryTile_RequestDeleteForSelectionAsync), METH_VARARGS, nullptr },
         { "update_async", reinterpret_cast<PyCFunction>(SecondaryTile_UpdateAsync), METH_VARARGS, nullptr },
         { "add_visual_elements_requested", reinterpret_cast<PyCFunction>(SecondaryTile_add_VisualElementsRequested), METH_O, nullptr },
         { "remove_visual_elements_requested", reinterpret_cast<PyCFunction>(SecondaryTile_remove_VisualElementsRequested), METH_O, nullptr },
@@ -2645,7 +2586,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static PyMethodDef methods_SecondaryTile_Static[] = {
         { "exists", reinterpret_cast<PyCFunction>(SecondaryTile_Exists), METH_VARARGS, nullptr },
         { "find_all_async", reinterpret_cast<PyCFunction>(SecondaryTile_FindAllAsync), METH_VARARGS, nullptr },
-        { "find_all_for_application_async", reinterpret_cast<PyCFunction>(SecondaryTile_FindAllForApplicationAsync), METH_VARARGS, nullptr },
         { "find_all_for_package_async", reinterpret_cast<PyCFunction>(SecondaryTile_FindAllForPackageAsync), METH_VARARGS, nullptr },
         { }};
 

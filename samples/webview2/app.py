@@ -117,7 +117,7 @@ class App(Application, IXamlMetadataProvider):
 
             env = op.get_results()
 
-            ensure_op = webview.ensure_core_webview2_with_environment_async(env)
+            ensure_op = webview.ensure_core_webview2_async(env)
 
             def on_ensure(op: IAsyncAction, status: AsyncStatus):
                 if status == AsyncStatus.ERROR:

@@ -1058,18 +1058,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ApplicationTrigger_RequestAsyncWithArguments(py::wrapper::Windows::ApplicationModel::Background::ApplicationTrigger* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1133,7 +1122,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyMethodDef _methods_ApplicationTrigger[] = {
         { "request_async", reinterpret_cast<PyCFunction>(ApplicationTrigger_RequestAsync), METH_VARARGS, nullptr },
-        { "request_async_with_arguments", reinterpret_cast<PyCFunction>(ApplicationTrigger_RequestAsyncWithArguments), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ApplicationTrigger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationTrigger), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1376,18 +1364,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BackgroundExecutionManager_GetAccessStatusForApplication(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1458,18 +1435,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BackgroundExecutionManager_GetAccessStatusForModernStandbyForApplication(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1541,18 +1507,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BackgroundExecutionManager_RemoveAccessForApplication(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1624,18 +1579,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BackgroundExecutionManager_RequestAccessForApplicationAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1783,13 +1727,9 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyMethodDef methods_BackgroundExecutionManager_Static[] = {
         { "get_access_status", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_GetAccessStatus), METH_VARARGS, nullptr },
-        { "get_access_status_for_application", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_GetAccessStatusForApplication), METH_VARARGS, nullptr },
         { "get_access_status_for_modern_standby", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_GetAccessStatusForModernStandby), METH_VARARGS, nullptr },
-        { "get_access_status_for_modern_standby_for_application", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_GetAccessStatusForModernStandbyForApplication), METH_VARARGS, nullptr },
         { "remove_access", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RemoveAccess), METH_VARARGS, nullptr },
-        { "remove_access_for_application", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RemoveAccessForApplication), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RequestAccessAsync), METH_VARARGS, nullptr },
-        { "request_access_for_application_async", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RequestAccessForApplicationAsync), METH_VARARGS, nullptr },
         { "request_access_kind_async", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RequestAccessKindAsync), METH_VARARGS, nullptr },
         { "request_access_kind_for_modern_standby_async", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RequestAccessKindForModernStandbyAsync), METH_VARARGS, nullptr },
         { }};
@@ -6526,7 +6466,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         Py_DECREF(tp);
     }
 
-    static PyObject* DeviceServicingTrigger_RequestAsyncSimple(py::wrapper::Windows::ApplicationModel::Background::DeviceServicingTrigger* self, PyObject* args) noexcept
+    static PyObject* DeviceServicingTrigger_RequestAsync(py::wrapper::Windows::ApplicationModel::Background::DeviceServicingTrigger* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -6562,18 +6502,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* DeviceServicingTrigger_RequestAsyncWithArguments(py::wrapper::Windows::ApplicationModel::Background::DeviceServicingTrigger* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -6638,8 +6567,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef _methods_DeviceServicingTrigger[] = {
-        { "request_async_simple", reinterpret_cast<PyCFunction>(DeviceServicingTrigger_RequestAsyncSimple), METH_VARARGS, nullptr },
-        { "request_async_with_arguments", reinterpret_cast<PyCFunction>(DeviceServicingTrigger_RequestAsyncWithArguments), METH_VARARGS, nullptr },
+        { "request_async", reinterpret_cast<PyCFunction>(DeviceServicingTrigger_RequestAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DeviceServicingTrigger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceServicingTrigger), METH_O | METH_STATIC, nullptr },
         { }};
@@ -6700,7 +6628,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         Py_DECREF(tp);
     }
 
-    static PyObject* DeviceUseTrigger_RequestAsyncSimple(py::wrapper::Windows::ApplicationModel::Background::DeviceUseTrigger* self, PyObject* args) noexcept
+    static PyObject* DeviceUseTrigger_RequestAsync(py::wrapper::Windows::ApplicationModel::Background::DeviceUseTrigger* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -6735,18 +6663,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* DeviceUseTrigger_RequestAsyncWithArguments(py::wrapper::Windows::ApplicationModel::Background::DeviceUseTrigger* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -6810,8 +6727,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef _methods_DeviceUseTrigger[] = {
-        { "request_async_simple", reinterpret_cast<PyCFunction>(DeviceUseTrigger_RequestAsyncSimple), METH_VARARGS, nullptr },
-        { "request_async_with_arguments", reinterpret_cast<PyCFunction>(DeviceUseTrigger_RequestAsyncWithArguments), METH_VARARGS, nullptr },
+        { "request_async", reinterpret_cast<PyCFunction>(DeviceUseTrigger_RequestAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DeviceUseTrigger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceUseTrigger), METH_O | METH_STATIC, nullptr },
         { }};
@@ -8026,18 +7942,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaProcessingTrigger_RequestAsyncWithArguments(py::wrapper::Windows::ApplicationModel::Background::MediaProcessingTrigger* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -8101,7 +8006,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyMethodDef _methods_MediaProcessingTrigger[] = {
         { "request_async", reinterpret_cast<PyCFunction>(MediaProcessingTrigger_RequestAsync), METH_VARARGS, nullptr },
-        { "request_async_with_arguments", reinterpret_cast<PyCFunction>(MediaProcessingTrigger_RequestAsyncWithArguments), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaProcessingTrigger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaProcessingTrigger), METH_O | METH_STATIC, nullptr },
         { }};

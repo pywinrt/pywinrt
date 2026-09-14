@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -20,9 +21,15 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class SpatialSurfaceInfo(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo::TryComputeLatestMeshAsync(System.Double)
     def try_compute_latest_mesh_async(self, max_triangles_per_cubic_meter: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[typing.Optional[SpatialSurfaceMesh]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo::TryComputeLatestMeshAsync(System.Double,Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions)
+    def try_compute_latest_mesh_async(self, max_triangles_per_cubic_meter: winrt.system.Double, options: SpatialSurfaceMeshOptions, /) -> windows_foundation.IAsyncOperation[typing.Optional[SpatialSurfaceMesh]]: ...
+    # Deprecated alias of try_compute_latest_mesh_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo::TryComputeLatestMeshAsync(System.Double,Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions)
+    @deprecated("Use try_compute_latest_mesh_async() instead.")
     def try_compute_latest_mesh_with_options_async(self, max_triangles_per_cubic_meter: winrt.system.Double, options: SpatialSurfaceMeshOptions, /) -> windows_foundation.IAsyncOperation[typing.Optional[SpatialSurfaceMesh]]: ...
     # Windows.Foundation.IReference`1<Windows.Perception.Spatial.SpatialBoundingOrientedBox> Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo::TryGetBounds(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_get_bounds(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> typing.Optional[windows_perception_spatial.SpatialBoundingOrientedBox]: ...

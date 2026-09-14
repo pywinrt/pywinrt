@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_uiautomation_core import (
     AutomationAnnotationTypeRegistration,
@@ -45,3 +46,4 @@ class AutomationRemoteOperationStatus(enum.IntEnum):
     UNHANDLED_EXCEPTION = 3
     EXECUTION_FAILURE = 4
 
+winrt.runtime._internals.alias_method(CoreAutomationRemoteOperationContext, "set_operand2", "set_operand")

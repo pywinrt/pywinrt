@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -66,9 +67,15 @@ class I2cController(winrt.system.Object, metaclass=I2cController_Static):
 class I2cDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.I2c.I2cDevice> Windows.Devices.I2c.I2cDevice::FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)
     def from_id_async(cls, device_id: str, settings: I2cConnectionSettings, /) -> windows_foundation.IAsyncOperation[I2cDevice]: ...
+    @typing.overload
     # System.String Windows.Devices.I2c.I2cDevice::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.I2c.I2cDevice::GetDeviceSelector(System.String)
+    def get_device_selector(cls, friendly_name: str, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.I2c.I2cDevice::GetDeviceSelector(System.String)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_from_friendly_name(cls, friendly_name: str, /) -> str: ...
 
 @typing.final
@@ -103,10 +110,16 @@ class II2cDeviceStatics(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.I2c.I2cDevice> Windows.Devices.I2c.II2cDeviceStatics::FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)
     @abstractmethod
     def from_id_async(self, device_id: str, settings: I2cConnectionSettings, /) -> windows_foundation.IAsyncOperation[I2cDevice]: ...
+    @typing.overload
     # System.String Windows.Devices.I2c.II2cDeviceStatics::GetDeviceSelector()
     @abstractmethod
     def get_device_selector(self) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.I2c.II2cDeviceStatics::GetDeviceSelector(System.String)
     @abstractmethod
+    def get_device_selector(self, friendly_name: str, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.I2c.II2cDeviceStatics::GetDeviceSelector(System.String)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_from_friendly_name(self, friendly_name: str, /) -> str: ...
 

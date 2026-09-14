@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -131,14 +132,34 @@ class XboxLiveEndpointPairTemplate_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class XboxLiveEndpointPairTemplate(winrt.system.Object, metaclass=XboxLiveEndpointPairTemplate_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress)
-    def create_endpoint_pair_default_async(self, device_address: XboxLiveDeviceAddress, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairForPortsAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress,System.String,System.String)
-    def create_endpoint_pair_for_ports_default_async(self, device_address: XboxLiveDeviceAddress, initiator_port: str, acceptor_port: str, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairForPortsAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress,System.String,System.String,Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors)
-    def create_endpoint_pair_for_ports_with_behaviors_async(self, device_address: XboxLiveDeviceAddress, initiator_port: str, acceptor_port: str, behaviors: XboxLiveEndpointPairCreationBehaviors, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
+    def create_endpoint_pair_async(self, device_address: XboxLiveDeviceAddress, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress,Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors)
+    def create_endpoint_pair_async(self, device_address: XboxLiveDeviceAddress, behaviors: XboxLiveEndpointPairCreationBehaviors, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
+    # Deprecated alias of create_endpoint_pair_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress)
+    @deprecated("Use create_endpoint_pair_async() instead.")
+    def create_endpoint_pair_default_async(self, device_address: XboxLiveDeviceAddress, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
+    # Deprecated alias of create_endpoint_pair_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress,Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors)
+    @deprecated("Use create_endpoint_pair_async() instead.")
     def create_endpoint_pair_with_behaviors_async(self, device_address: XboxLiveDeviceAddress, behaviors: XboxLiveEndpointPairCreationBehaviors, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairForPortsAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress,System.String,System.String)
+    def create_endpoint_pair_for_ports_async(self, device_address: XboxLiveDeviceAddress, initiator_port: str, acceptor_port: str, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairForPortsAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress,System.String,System.String,Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors)
+    def create_endpoint_pair_for_ports_async(self, device_address: XboxLiveDeviceAddress, initiator_port: str, acceptor_port: str, behaviors: XboxLiveEndpointPairCreationBehaviors, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
+    # Deprecated alias of create_endpoint_pair_for_ports_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairForPortsAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress,System.String,System.String)
+    @deprecated("Use create_endpoint_pair_for_ports_async() instead.")
+    def create_endpoint_pair_for_ports_default_async(self, device_address: XboxLiveDeviceAddress, initiator_port: str, acceptor_port: str, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
+    # Deprecated alias of create_endpoint_pair_for_ports_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairForPortsAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress,System.String,System.String,Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors)
+    @deprecated("Use create_endpoint_pair_for_ports_async() instead.")
+    def create_endpoint_pair_for_ports_with_behaviors_async(self, device_address: XboxLiveDeviceAddress, initiator_port: str, acceptor_port: str, behaviors: XboxLiveEndpointPairCreationBehaviors, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::add_InboundEndpointPairCreated(Windows.Foundation.TypedEventHandler`2<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate,Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs>)
     def add_inbound_endpoint_pair_created(self, handler: windows_foundation.TypedEventHandler[XboxLiveEndpointPairTemplate, XboxLiveInboundEndpointPairCreatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::remove_InboundEndpointPairCreated(Windows.Foundation.EventRegistrationToken)

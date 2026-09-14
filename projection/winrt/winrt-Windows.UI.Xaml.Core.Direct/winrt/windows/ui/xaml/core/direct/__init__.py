@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_xaml_core_direct import (
     XamlDirect,
@@ -2080,3 +2081,4 @@ class XamlTypeIndex(enum.IntEnum):
     THEME_SHADOW = 964
     XAML_UI_COMMAND = 969
 
+winrt.runtime._internals.alias_method(XamlDirect, "add_event_handler_handled_events_too", "add_event_handler")

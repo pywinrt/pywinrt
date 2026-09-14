@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -53,9 +54,15 @@ class FocusSessionManager(winrt.system.Object, metaclass=FocusSessionManager_Sta
     def deactivate_focus(self) -> None: ...
     # Windows.UI.Shell.FocusSession Windows.UI.Shell.FocusSessionManager::GetSession(System.String)
     def get_session(self, id: str, /) -> FocusSession: ...
+    @typing.overload
     # Windows.UI.Shell.FocusSession Windows.UI.Shell.FocusSessionManager::TryStartFocusSession()
     def try_start_focus_session(self) -> typing.Optional[FocusSession]: ...
+    @typing.overload
     # Windows.UI.Shell.FocusSession Windows.UI.Shell.FocusSessionManager::TryStartFocusSession(Windows.Foundation.DateTime)
+    def try_start_focus_session(self, end_time: datetime.datetime, /) -> typing.Optional[FocusSession]: ...
+    # Deprecated alias of try_start_focus_session() for pywinrt v3.x compatibility.
+    # Windows.UI.Shell.FocusSession Windows.UI.Shell.FocusSessionManager::TryStartFocusSession(Windows.Foundation.DateTime)
+    @deprecated("Use try_start_focus_session() instead.")
     def try_start_focus_session2(self, end_time: datetime.datetime, /) -> typing.Optional[FocusSession]: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Shell.FocusSessionManager::add_IsFocusActiveChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Shell.FocusSessionManager,System.Object>)
     def add_is_focus_active_changed(self, handler: windows_foundation.TypedEventHandler[FocusSessionManager, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -243,9 +250,15 @@ class WindowTabGroup(winrt.system.Object):
 
 @typing.final
 class WindowTabIcon_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.UI.Shell.WindowTabIcon Windows.UI.Shell.WindowTabIcon::CreateFromFontGlyph(System.String,System.String)
     def create_from_font_glyph(cls, glyph: str, font_family: str, /) -> WindowTabIcon: ...
+    @typing.overload
     # Windows.UI.Shell.WindowTabIcon Windows.UI.Shell.WindowTabIcon::CreateFromFontGlyph(System.String,System.String,Windows.Foundation.Uri)
+    def create_from_font_glyph(cls, glyph: str, font_family: str, font_uri: windows_foundation.Uri, /) -> WindowTabIcon: ...
+    # Deprecated alias of create_from_font_glyph() for pywinrt v3.x compatibility.
+    # Windows.UI.Shell.WindowTabIcon Windows.UI.Shell.WindowTabIcon::CreateFromFontGlyph(System.String,System.String,Windows.Foundation.Uri)
+    @deprecated("Use create_from_font_glyph() instead.")
     def create_from_font_glyph_with_uri(cls, glyph: str, font_family: str, font_uri: windows_foundation.Uri, /) -> WindowTabIcon: ...
     # Windows.UI.Shell.WindowTabIcon Windows.UI.Shell.WindowTabIcon::CreateFromImage(Windows.Storage.Streams.IRandomAccessStreamReference)
     def create_from_image(cls, image: windows_storage_streams.IRandomAccessStreamReference, /) -> WindowTabIcon: ...

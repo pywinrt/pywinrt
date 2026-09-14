@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_input import (
     CrossSlideThresholds,
@@ -224,3 +225,6 @@ class TouchpadGlobalGestureKinds(enum.IntFlag):
     FOUR_FINGER_ACTIONS = 0x10
     FIVE_FINGER_ACTIONS = 0x20
 
+winrt.runtime._internals.alias_static_method(PointerPoint, "get_current_point_transformed", "get_current_point")
+winrt.runtime._internals.alias_static_method(PointerPoint, "get_intermediate_points_transformed", "get_intermediate_points")
+winrt.runtime._internals.alias_static_method(RadialControllerMenuItem, "create_from_font_glyph_with_uri", "create_from_font_glyph")

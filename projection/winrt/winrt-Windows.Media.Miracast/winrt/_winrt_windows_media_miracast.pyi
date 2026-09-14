@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -65,9 +66,15 @@ class MiracastReceiverConnection(winrt.system.Object, windows_foundation.IClosab
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Media.Miracast.MiracastReceiverConnection::Close()
     def close(self) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Miracast.MiracastReceiverConnection::Disconnect(Windows.Media.Miracast.MiracastReceiverDisconnectReason)
     def disconnect(self, reason: MiracastReceiverDisconnectReason, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Miracast.MiracastReceiverConnection::Disconnect(Windows.Media.Miracast.MiracastReceiverDisconnectReason,System.String)
+    def disconnect(self, reason: MiracastReceiverDisconnectReason, message: str, /) -> None: ...
+    # Deprecated alias of disconnect() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.Miracast.MiracastReceiverConnection::Disconnect(Windows.Media.Miracast.MiracastReceiverDisconnectReason,System.String)
+    @deprecated("Use disconnect() instead.")
     def disconnect_with_message(self, reason: MiracastReceiverDisconnectReason, message: str, /) -> None: ...
     # System.Void Windows.Media.Miracast.MiracastReceiverConnection::Pause()
     def pause(self) -> None: ...

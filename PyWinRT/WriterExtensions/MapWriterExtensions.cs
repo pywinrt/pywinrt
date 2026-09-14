@@ -11,7 +11,7 @@ static class MapWriterExtensions
 
         w.WriteTryCatch(() =>
         {
-            var method = type.Methods.Single(m => m.Name == "First");
+            var method = type.GetMethod("First", 0);
             var self = type.GetMethodInvokeContext(method);
 
             w.WriteLine("py::pyobj_handle iter{py::convert([&]()");
@@ -97,7 +97,7 @@ static class MapWriterExtensions
 
     private static void WriteMapContainsBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var method = type.Methods.Single(m => m.Name == "HasKey");
+        var method = type.GetMethod("HasKey", 1);
         var keyType = method.Method.Parameters[0].ParameterType.ToCppTypeName(method.GenericArgMap);
         var self = type.GetMethodInvokeContext(method);
 
@@ -136,7 +136,7 @@ static class MapWriterExtensions
     /// </summary>
     private static void WriteMapSubscriptBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var method = type.Methods.Single(m => m.Name == "Lookup");
+        var method = type.GetMethod("Lookup", 1);
         var keyType = method.Method.Parameters[0].ParameterType.ToCppTypeName(method.GenericArgMap);
         var self = type.GetMethodInvokeContext(method);
 
@@ -194,7 +194,7 @@ static class MapWriterExtensions
     /// </summary>
     private static void WriteMapAssignBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var method = type.Methods.Single(m => m.Name == "Lookup");
+        var method = type.GetMethod("Lookup", 1);
         var keyType = method.Method.Parameters[0].ParameterType.ToCppTypeName(method.GenericArgMap);
         var valueType = method.Method.ReturnType.ToCppTypeName(method.GenericArgMap);
         var self = type.GetMethodInvokeContext(method);
@@ -245,7 +245,7 @@ static class MapWriterExtensions
         out string keyParamType
     )
     {
-        var method = type.Methods.Single(m => m.Name == "Lookup");
+        var method = type.GetMethod("Lookup", 1);
         var nullabilityInfo = nullabilityMap.GetValueOrDefault(
             method.Signature,
             new MethodNullabilityInfo(method.Method)
@@ -281,7 +281,7 @@ static class MapWriterExtensions
         string keyParamType
     )
     {
-        var setMethod = type.Methods.Single(m => m.Name == "Insert");
+        var setMethod = type.GetMethod("Insert", 2);
         var setNullabilityInfo = nullabilityMap.GetValueOrDefault(
             setMethod.Signature,
             new MethodNullabilityInfo(setMethod.Method)

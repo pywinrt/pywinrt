@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -18,11 +19,22 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ThreadPool_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler)
     def run_async(cls, handler: WorkItemHandler, /) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler,Windows.System.Threading.WorkItemPriority,Windows.System.Threading.WorkItemOptions)
-    def run_with_priority_and_options_async(cls, handler: WorkItemHandler, priority: WorkItemPriority, options: WorkItemOptions, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler,Windows.System.Threading.WorkItemPriority)
+    def run_async(cls, handler: WorkItemHandler, priority: WorkItemPriority, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler,Windows.System.Threading.WorkItemPriority,Windows.System.Threading.WorkItemOptions)
+    def run_async(cls, handler: WorkItemHandler, priority: WorkItemPriority, options: WorkItemOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of run_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler,Windows.System.Threading.WorkItemPriority,Windows.System.Threading.WorkItemOptions)
+    @deprecated("Use run_async() instead.")
+    def run_with_priority_and_options_async(cls, handler: WorkItemHandler, priority: WorkItemPriority, options: WorkItemOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of run_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler,Windows.System.Threading.WorkItemPriority)
+    @deprecated("Use run_async() instead.")
     def run_with_priority_async(cls, handler: WorkItemHandler, priority: WorkItemPriority, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -31,13 +43,25 @@ class ThreadPool(winrt.system.Object, metaclass=ThreadPool_Static):
 
 @typing.final
 class ThreadPoolTimer_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreatePeriodicTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan)
     def create_periodic_timer(cls, handler: TimerElapsedHandler, period: datetime.timedelta, /) -> ThreadPoolTimer: ...
+    @typing.overload
     # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreatePeriodicTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan,Windows.System.Threading.TimerDestroyedHandler)
+    def create_periodic_timer(cls, handler: TimerElapsedHandler, period: datetime.timedelta, destroyed: TimerDestroyedHandler, /) -> ThreadPoolTimer: ...
+    # Deprecated alias of create_periodic_timer() for pywinrt v3.x compatibility.
+    # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreatePeriodicTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan,Windows.System.Threading.TimerDestroyedHandler)
+    @deprecated("Use create_periodic_timer() instead.")
     def create_periodic_timer_with_completion(cls, handler: TimerElapsedHandler, period: datetime.timedelta, destroyed: TimerDestroyedHandler, /) -> ThreadPoolTimer: ...
+    @typing.overload
     # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreateTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan)
     def create_timer(cls, handler: TimerElapsedHandler, delay: datetime.timedelta, /) -> ThreadPoolTimer: ...
+    @typing.overload
     # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreateTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan,Windows.System.Threading.TimerDestroyedHandler)
+    def create_timer(cls, handler: TimerElapsedHandler, delay: datetime.timedelta, destroyed: TimerDestroyedHandler, /) -> ThreadPoolTimer: ...
+    # Deprecated alias of create_timer() for pywinrt v3.x compatibility.
+    # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreateTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan,Windows.System.Threading.TimerDestroyedHandler)
+    @deprecated("Use create_timer() instead.")
     def create_timer_with_completion(cls, handler: TimerElapsedHandler, delay: datetime.timedelta, destroyed: TimerDestroyedHandler, /) -> ThreadPoolTimer: ...
 
 @typing.final

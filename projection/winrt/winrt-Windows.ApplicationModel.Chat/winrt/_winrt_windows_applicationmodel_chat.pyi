@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -40,13 +41,25 @@ class ChatCapabilities(winrt.system.Object):
 
 @typing.final
 class ChatCapabilitiesManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatCapabilities> Windows.ApplicationModel.Chat.ChatCapabilitiesManager::GetCachedCapabilitiesAsync(System.String)
     def get_cached_capabilities_async(cls, address: str, /) -> windows_foundation.IAsyncOperation[ChatCapabilities]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatCapabilities> Windows.ApplicationModel.Chat.ChatCapabilitiesManager::GetCachedCapabilitiesAsync(System.String,System.String)
+    def get_cached_capabilities_async(cls, address: str, transport_id: str, /) -> windows_foundation.IAsyncOperation[ChatCapabilities]: ...
+    # Deprecated alias of get_cached_capabilities_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatCapabilities> Windows.ApplicationModel.Chat.ChatCapabilitiesManager::GetCachedCapabilitiesAsync(System.String,System.String)
+    @deprecated("Use get_cached_capabilities_async() instead.")
     def get_cached_capabilities_for_transport_async(cls, address: str, transport_id: str, /) -> windows_foundation.IAsyncOperation[ChatCapabilities]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatCapabilities> Windows.ApplicationModel.Chat.ChatCapabilitiesManager::GetCapabilitiesFromNetworkAsync(System.String)
     def get_capabilities_from_network_async(cls, address: str, /) -> windows_foundation.IAsyncOperation[ChatCapabilities]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatCapabilities> Windows.ApplicationModel.Chat.ChatCapabilitiesManager::GetCapabilitiesFromNetworkAsync(System.String,System.String)
+    def get_capabilities_from_network_async(cls, address: str, transport_id: str, /) -> windows_foundation.IAsyncOperation[ChatCapabilities]: ...
+    # Deprecated alias of get_capabilities_from_network_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatCapabilities> Windows.ApplicationModel.Chat.ChatCapabilitiesManager::GetCapabilitiesFromNetworkAsync(System.String,System.String)
+    @deprecated("Use get_capabilities_from_network_async() instead.")
     def get_capabilities_from_network_for_transport_async(cls, address: str, transport_id: str, /) -> windows_foundation.IAsyncOperation[ChatCapabilities]: ...
 
 @typing.final
@@ -59,10 +72,16 @@ class ChatConversation(winrt.system.Object, IChatItem):
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.ApplicationModel.Chat.ChatMessageReader Windows.ApplicationModel.Chat.ChatConversation::GetMessageReader()
     def get_message_reader(self) -> ChatMessageReader: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatConversation::MarkMessagesAsReadAsync()
-    def mark_all_messages_as_read_async(self) -> windows_foundation.IAsyncAction: ...
+    def mark_messages_as_read_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatConversation::MarkMessagesAsReadAsync(Windows.Foundation.DateTime)
     def mark_messages_as_read_async(self, value: datetime.datetime, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of mark_messages_as_read_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatConversation::MarkMessagesAsReadAsync()
+    @deprecated("Use mark_messages_as_read_async() instead.")
+    def mark_all_messages_as_read_async(self) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.ApplicationModel.Chat.ChatConversation::NotifyLocalParticipantComposing(System.String,System.String,System.Boolean)
     def notify_local_participant_composing(self, transport_id: str, participant_address: str, is_composing: bool, /) -> None: ...
     # System.Void Windows.ApplicationModel.Chat.ChatConversation::NotifyRemoteParticipantComposing(System.String,System.String,System.Boolean)
@@ -112,9 +131,15 @@ class ChatConversation(winrt.system.Object, IChatItem):
 
 @typing.final
 class ChatConversationReader(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.ChatConversation>> Windows.ApplicationModel.Chat.ChatConversationReader::ReadBatchAsync()
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[ChatConversation]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.ChatConversation>> Windows.ApplicationModel.Chat.ChatConversationReader::ReadBatchAsync(System.Int32)
+    def read_batch_async(self, count: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[ChatConversation]]: ...
+    # Deprecated alias of read_batch_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.ChatConversation>> Windows.ApplicationModel.Chat.ChatConversationReader::ReadBatchAsync(System.Int32)
+    @deprecated("Use read_batch_async() instead.")
     def read_batch_with_count_async(self, count: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[ChatConversation]]: ...
 
 @typing.final
@@ -432,9 +457,15 @@ class ChatMessageNotificationTriggerDetails(winrt.system.Object):
 
 @typing.final
 class ChatMessageReader(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.ChatMessage>> Windows.ApplicationModel.Chat.ChatMessageReader::ReadBatchAsync()
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[ChatMessage]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.ChatMessage>> Windows.ApplicationModel.Chat.ChatMessageReader::ReadBatchAsync(System.Int32)
+    def read_batch_async(self, count: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[ChatMessage]]: ...
+    # Deprecated alias of read_batch_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.ChatMessage>> Windows.ApplicationModel.Chat.ChatMessageReader::ReadBatchAsync(System.Int32)
+    @deprecated("Use read_batch_async() instead.")
     def read_batch_with_count_async(self, count: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[ChatMessage]]: ...
 
 @typing.final
@@ -445,35 +476,69 @@ class ChatMessageStore(winrt.system.Object):
     def download_message_async(self, local_chat_message_id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatMessage> Windows.ApplicationModel.Chat.ChatMessageStore::ForwardMessageAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def forward_message_async(self, local_chat_message_id: str, addresses: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[ChatMessage]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatConversation> Windows.ApplicationModel.Chat.ChatMessageStore::GetConversationAsync(System.String)
     def get_conversation_async(self, conversation_id: str, /) -> windows_foundation.IAsyncOperation[ChatConversation]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatConversation> Windows.ApplicationModel.Chat.ChatMessageStore::GetConversationAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
+    def get_conversation_async(self, conversation_id: str, transport_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[ChatConversation]: ...
+    # Deprecated alias of get_conversation_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatConversation> Windows.ApplicationModel.Chat.ChatMessageStore::GetConversationAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
+    @deprecated("Use get_conversation_async() instead.")
     def get_conversation_for_transports_async(self, conversation_id: str, transport_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[ChatConversation]: ...
-    # Windows.ApplicationModel.Chat.ChatConversationReader Windows.ApplicationModel.Chat.ChatMessageStore::GetConversationReader(Windows.Foundation.Collections.IIterable`1<System.String>)
-    def get_conversation_for_transports_reader(self, transport_ids: typing.Iterable[str], /) -> ChatConversationReader: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatConversation> Windows.ApplicationModel.Chat.ChatMessageStore::GetConversationFromThreadingInfoAsync(Windows.ApplicationModel.Chat.ChatConversationThreadingInfo)
     def get_conversation_from_threading_info_async(self, threading_info: ChatConversationThreadingInfo, /) -> windows_foundation.IAsyncOperation[ChatConversation]: ...
+    @typing.overload
     # Windows.ApplicationModel.Chat.ChatConversationReader Windows.ApplicationModel.Chat.ChatMessageStore::GetConversationReader()
     def get_conversation_reader(self) -> ChatConversationReader: ...
+    @typing.overload
+    # Windows.ApplicationModel.Chat.ChatConversationReader Windows.ApplicationModel.Chat.ChatMessageStore::GetConversationReader(Windows.Foundation.Collections.IIterable`1<System.String>)
+    def get_conversation_reader(self, transport_ids: typing.Iterable[str], /) -> ChatConversationReader: ...
+    # Deprecated alias of get_conversation_reader() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Chat.ChatConversationReader Windows.ApplicationModel.Chat.ChatMessageStore::GetConversationReader(Windows.Foundation.Collections.IIterable`1<System.String>)
+    @deprecated("Use get_conversation_reader() instead.")
+    def get_conversation_for_transports_reader(self, transport_ids: typing.Iterable[str], /) -> ChatConversationReader: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatMessage> Windows.ApplicationModel.Chat.ChatMessageStore::GetMessageAsync(System.String)
     def get_message_async(self, local_chat_message_id: str, /) -> windows_foundation.IAsyncOperation[ChatMessage]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatMessage> Windows.ApplicationModel.Chat.ChatMessageStore::GetMessageByRemoteIdAsync(System.String,System.String)
     def get_message_by_remote_id_async(self, transport_id: str, remote_id: str, /) -> windows_foundation.IAsyncOperation[ChatMessage]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatMessage> Windows.ApplicationModel.Chat.ChatMessageStore::GetMessageBySyncIdAsync(System.String)
     def get_message_by_sync_id_async(self, sync_id: str, /) -> windows_foundation.IAsyncOperation[ChatMessage]: ...
+    @typing.overload
     # Windows.ApplicationModel.Chat.ChatMessageReader Windows.ApplicationModel.Chat.ChatMessageStore::GetMessageReader()
-    def get_message_reader1(self) -> ChatMessageReader: ...
+    def get_message_reader(self) -> ChatMessageReader: ...
+    @typing.overload
     # Windows.ApplicationModel.Chat.ChatMessageReader Windows.ApplicationModel.Chat.ChatMessageStore::GetMessageReader(Windows.Foundation.TimeSpan)
+    def get_message_reader(self, recent_time_limit: datetime.timedelta, /) -> ChatMessageReader: ...
+    # Deprecated alias of get_message_reader() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Chat.ChatMessageReader Windows.ApplicationModel.Chat.ChatMessageStore::GetMessageReader()
+    @deprecated("Use get_message_reader() instead.")
+    def get_message_reader1(self) -> ChatMessageReader: ...
+    # Deprecated alias of get_message_reader() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Chat.ChatMessageReader Windows.ApplicationModel.Chat.ChatMessageStore::GetMessageReader(Windows.Foundation.TimeSpan)
+    @deprecated("Use get_message_reader() instead.")
     def get_message_reader2(self, recent_time_limit: datetime.timedelta, /) -> ChatMessageReader: ...
     # Windows.ApplicationModel.Chat.ChatSearchReader Windows.ApplicationModel.Chat.ChatMessageStore::GetSearchReader(Windows.ApplicationModel.Chat.ChatQueryOptions)
     def get_search_reader(self, value: ChatQueryOptions, /) -> ChatSearchReader: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Int32> Windows.ApplicationModel.Chat.ChatMessageStore::GetUnseenCountAsync()
     def get_unseen_count_async(self) -> windows_foundation.IAsyncOperation[winrt.system.Int32]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Int32> Windows.ApplicationModel.Chat.ChatMessageStore::GetUnseenCountAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
+    def get_unseen_count_async(self, transport_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[winrt.system.Int32]: ...
+    # Deprecated alias of get_unseen_count_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Int32> Windows.ApplicationModel.Chat.ChatMessageStore::GetUnseenCountAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
+    @deprecated("Use get_unseen_count_async() instead.")
     def get_unseen_count_for_transports_reader_async(self, transport_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[winrt.system.Int32]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatMessageStore::MarkAsSeenAsync()
     def mark_as_seen_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatMessageStore::MarkAsSeenAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
+    def mark_as_seen_async(self, transport_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of mark_as_seen_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatMessageStore::MarkAsSeenAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
+    @deprecated("Use mark_as_seen_async() instead.")
     def mark_as_seen_for_transports_async(self, transport_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatMessageStore::MarkMessageReadAsync(System.String)
     def mark_message_read_async(self, local_chat_message_id: str, /) -> windows_foundation.IAsyncAction: ...
@@ -615,9 +680,15 @@ class ChatRecipientDeliveryInfo(winrt.system.Object):
 
 @typing.final
 class ChatSearchReader(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.IChatItem>> Windows.ApplicationModel.Chat.ChatSearchReader::ReadBatchAsync()
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[IChatItem]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.IChatItem>> Windows.ApplicationModel.Chat.ChatSearchReader::ReadBatchAsync(System.Int32)
+    def read_batch_async(self, count: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[IChatItem]]: ...
+    # Deprecated alias of read_batch_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.IChatItem>> Windows.ApplicationModel.Chat.ChatSearchReader::ReadBatchAsync(System.Int32)
+    @deprecated("Use read_batch_async() instead.")
     def read_batch_with_count_async(self, count: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[IChatItem]]: ...
 
 @typing.final

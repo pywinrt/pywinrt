@@ -400,7 +400,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* AppBar_OnClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* AppBar_OnClosed_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -443,7 +443,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBar_OnClosing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* AppBar_OnClosing_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -486,7 +486,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBar_OnOpened(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* AppBar_OnOpened_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -529,7 +529,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* AppBar_OnOpening(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* AppBar_OnOpening_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1283,10 +1283,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_AppBar[] = {
-        { "_on_closed", reinterpret_cast<PyCFunction>(AppBar_OnClosed), METH_VARARGS, nullptr },
-        { "_on_closing", reinterpret_cast<PyCFunction>(AppBar_OnClosing), METH_VARARGS, nullptr },
-        { "_on_opened", reinterpret_cast<PyCFunction>(AppBar_OnOpened), METH_VARARGS, nullptr },
-        { "_on_opening", reinterpret_cast<PyCFunction>(AppBar_OnOpening), METH_VARARGS, nullptr },
+        { "_on_closed", reinterpret_cast<PyCFunction>(AppBar_OnClosed_protected), METH_VARARGS, nullptr },
+        { "_on_closing", reinterpret_cast<PyCFunction>(AppBar_OnClosing_protected), METH_VARARGS, nullptr },
+        { "_on_opened", reinterpret_cast<PyCFunction>(AppBar_OnOpened_protected), METH_VARARGS, nullptr },
+        { "_on_opening", reinterpret_cast<PyCFunction>(AppBar_OnOpening_protected), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(AppBar_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(AppBar_remove_Closed), METH_O, nullptr },
         { "add_opened", reinterpret_cast<PyCFunction>(AppBar_add_Opened), METH_O, nullptr },
@@ -16893,18 +16893,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CalendarViewDayItemChangingEventArgs_RegisterUpdateCallbackWithPhase(py::wrapper::Windows::UI::Xaml::Controls::CalendarViewDayItemChangingEventArgs* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -17060,7 +17049,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyMethodDef _methods_CalendarViewDayItemChangingEventArgs[] = {
         { "register_update_callback", reinterpret_cast<PyCFunction>(CalendarViewDayItemChangingEventArgs_RegisterUpdateCallback), METH_VARARGS, nullptr },
-        { "register_update_callback_with_phase", reinterpret_cast<PyCFunction>(CalendarViewDayItemChangingEventArgs_RegisterUpdateCallbackWithPhase), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CalendarViewDayItemChangingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CalendarViewDayItemChangingEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
@@ -23543,18 +23531,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ContainerContentChangingEventArgs_RegisterUpdateCallbackWithPhase(py::wrapper::Windows::UI::Xaml::Controls::ContainerContentChangingEventArgs* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -23839,7 +23816,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyMethodDef _methods_ContainerContentChangingEventArgs[] = {
         { "register_update_callback", reinterpret_cast<PyCFunction>(ContainerContentChangingEventArgs_RegisterUpdateCallback), METH_VARARGS, nullptr },
-        { "register_update_callback_with_phase", reinterpret_cast<PyCFunction>(ContainerContentChangingEventArgs_RegisterUpdateCallbackWithPhase), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContainerContentChangingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContainerContentChangingEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
@@ -24103,7 +24079,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* ContentControl_OnContentChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ContentControl_OnContentChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -24147,7 +24123,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ContentControl_OnContentTemplateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ContentControl_OnContentTemplateChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -24191,7 +24167,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ContentControl_OnContentTemplateSelectorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ContentControl_OnContentTemplateSelectorChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -24686,9 +24662,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_ContentControl[] = {
-        { "_on_content_changed", reinterpret_cast<PyCFunction>(ContentControl_OnContentChanged), METH_VARARGS, nullptr },
-        { "_on_content_template_changed", reinterpret_cast<PyCFunction>(ContentControl_OnContentTemplateChanged), METH_VARARGS, nullptr },
-        { "_on_content_template_selector_changed", reinterpret_cast<PyCFunction>(ContentControl_OnContentTemplateSelectorChanged), METH_VARARGS, nullptr },
+        { "_on_content_changed", reinterpret_cast<PyCFunction>(ContentControl_OnContentChanged_protected), METH_VARARGS, nullptr },
+        { "_on_content_template_changed", reinterpret_cast<PyCFunction>(ContentControl_OnContentTemplateChanged_protected), METH_VARARGS, nullptr },
+        { "_on_content_template_selector_changed", reinterpret_cast<PyCFunction>(ContentControl_OnContentTemplateSelectorChanged_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentControl), METH_O | METH_STATIC, nullptr },
         { }};
@@ -24918,18 +24894,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ContentDialog_ShowAsyncWithPlacement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -27166,7 +27131,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     static PyMethodDef _methods_ContentDialog[] = {
         { "hide", reinterpret_cast<PyCFunction>(ContentDialog_Hide), METH_VARARGS, nullptr },
         { "show_async", reinterpret_cast<PyCFunction>(ContentDialog_ShowAsync), METH_VARARGS, nullptr },
-        { "show_async_with_placement", reinterpret_cast<PyCFunction>(ContentDialog_ShowAsyncWithPlacement), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(ContentDialog_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(ContentDialog_remove_Closed), METH_O, nullptr },
         { "add_closing", reinterpret_cast<PyCFunction>(ContentDialog_add_Closing), METH_O, nullptr },
@@ -28351,7 +28315,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* ContentPresenter_OnContentTemplateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ContentPresenter_OnContentTemplateChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -28395,7 +28359,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ContentPresenter_OnContentTemplateSelectorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ContentPresenter_OnContentTemplateSelectorChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -31107,8 +31071,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_ContentPresenter[] = {
-        { "_on_content_template_changed", reinterpret_cast<PyCFunction>(ContentPresenter_OnContentTemplateChanged), METH_VARARGS, nullptr },
-        { "_on_content_template_selector_changed", reinterpret_cast<PyCFunction>(ContentPresenter_OnContentTemplateSelectorChanged), METH_VARARGS, nullptr },
+        { "_on_content_template_changed", reinterpret_cast<PyCFunction>(ContentPresenter_OnContentTemplateChanged_protected), METH_VARARGS, nullptr },
+        { "_on_content_template_selector_changed", reinterpret_cast<PyCFunction>(ContentPresenter_OnContentTemplateSelectorChanged_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentPresenter), METH_O | METH_STATIC, nullptr },
         { }};
@@ -32512,7 +32476,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_GetTemplateChild(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_GetTemplateChild_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32554,7 +32518,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnCharacterReceived(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnCharacterReceived_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32597,7 +32561,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnDoubleTapped(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnDoubleTapped_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32640,7 +32604,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnDragEnter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnDragEnter_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32683,7 +32647,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnDragLeave(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnDragLeave_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32726,7 +32690,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnDragOver(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnDragOver_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32769,7 +32733,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnDrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnDrop_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32812,7 +32776,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnGotFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnGotFocus_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32855,7 +32819,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnHolding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnHolding_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32898,7 +32862,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnKeyDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnKeyDown_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32941,7 +32905,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnKeyUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnKeyUp_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -32984,7 +32948,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnLostFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnLostFocus_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33027,7 +32991,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnManipulationCompleted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnManipulationCompleted_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33070,7 +33034,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnManipulationDelta(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnManipulationDelta_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33113,7 +33077,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnManipulationInertiaStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnManipulationInertiaStarting_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33156,7 +33120,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnManipulationStarted(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnManipulationStarted_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33199,7 +33163,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnManipulationStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnManipulationStarting_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33242,7 +33206,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnPointerCanceled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnPointerCanceled_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33285,7 +33249,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnPointerCaptureLost(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnPointerCaptureLost_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33328,7 +33292,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnPointerEntered(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnPointerEntered_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33371,7 +33335,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnPointerExited(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnPointerExited_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33414,7 +33378,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnPointerMoved(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnPointerMoved_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33457,7 +33421,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnPointerPressed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnPointerPressed_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33500,7 +33464,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnPointerReleased(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnPointerReleased_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33543,7 +33507,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnPointerWheelChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnPointerWheelChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33586,7 +33550,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnPreviewKeyDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnPreviewKeyDown_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33629,7 +33593,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnPreviewKeyUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnPreviewKeyUp_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33672,7 +33636,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnRightTapped(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnRightTapped_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -33715,7 +33679,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Control_OnTapped(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Control_OnTapped_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -37328,35 +37292,35 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     static PyMethodDef _methods_Control[] = {
         { "apply_template", reinterpret_cast<PyCFunction>(Control_ApplyTemplate), METH_VARARGS, nullptr },
         { "focus", reinterpret_cast<PyCFunction>(Control_Focus), METH_VARARGS, nullptr },
-        { "_get_template_child", reinterpret_cast<PyCFunction>(Control_GetTemplateChild), METH_VARARGS, nullptr },
-        { "_on_character_received", reinterpret_cast<PyCFunction>(Control_OnCharacterReceived), METH_VARARGS, nullptr },
-        { "_on_double_tapped", reinterpret_cast<PyCFunction>(Control_OnDoubleTapped), METH_VARARGS, nullptr },
-        { "_on_drag_enter", reinterpret_cast<PyCFunction>(Control_OnDragEnter), METH_VARARGS, nullptr },
-        { "_on_drag_leave", reinterpret_cast<PyCFunction>(Control_OnDragLeave), METH_VARARGS, nullptr },
-        { "_on_drag_over", reinterpret_cast<PyCFunction>(Control_OnDragOver), METH_VARARGS, nullptr },
-        { "_on_drop", reinterpret_cast<PyCFunction>(Control_OnDrop), METH_VARARGS, nullptr },
-        { "_on_got_focus", reinterpret_cast<PyCFunction>(Control_OnGotFocus), METH_VARARGS, nullptr },
-        { "_on_holding", reinterpret_cast<PyCFunction>(Control_OnHolding), METH_VARARGS, nullptr },
-        { "_on_key_down", reinterpret_cast<PyCFunction>(Control_OnKeyDown), METH_VARARGS, nullptr },
-        { "_on_key_up", reinterpret_cast<PyCFunction>(Control_OnKeyUp), METH_VARARGS, nullptr },
-        { "_on_lost_focus", reinterpret_cast<PyCFunction>(Control_OnLostFocus), METH_VARARGS, nullptr },
-        { "_on_manipulation_completed", reinterpret_cast<PyCFunction>(Control_OnManipulationCompleted), METH_VARARGS, nullptr },
-        { "_on_manipulation_delta", reinterpret_cast<PyCFunction>(Control_OnManipulationDelta), METH_VARARGS, nullptr },
-        { "_on_manipulation_inertia_starting", reinterpret_cast<PyCFunction>(Control_OnManipulationInertiaStarting), METH_VARARGS, nullptr },
-        { "_on_manipulation_started", reinterpret_cast<PyCFunction>(Control_OnManipulationStarted), METH_VARARGS, nullptr },
-        { "_on_manipulation_starting", reinterpret_cast<PyCFunction>(Control_OnManipulationStarting), METH_VARARGS, nullptr },
-        { "_on_pointer_canceled", reinterpret_cast<PyCFunction>(Control_OnPointerCanceled), METH_VARARGS, nullptr },
-        { "_on_pointer_capture_lost", reinterpret_cast<PyCFunction>(Control_OnPointerCaptureLost), METH_VARARGS, nullptr },
-        { "_on_pointer_entered", reinterpret_cast<PyCFunction>(Control_OnPointerEntered), METH_VARARGS, nullptr },
-        { "_on_pointer_exited", reinterpret_cast<PyCFunction>(Control_OnPointerExited), METH_VARARGS, nullptr },
-        { "_on_pointer_moved", reinterpret_cast<PyCFunction>(Control_OnPointerMoved), METH_VARARGS, nullptr },
-        { "_on_pointer_pressed", reinterpret_cast<PyCFunction>(Control_OnPointerPressed), METH_VARARGS, nullptr },
-        { "_on_pointer_released", reinterpret_cast<PyCFunction>(Control_OnPointerReleased), METH_VARARGS, nullptr },
-        { "_on_pointer_wheel_changed", reinterpret_cast<PyCFunction>(Control_OnPointerWheelChanged), METH_VARARGS, nullptr },
-        { "_on_preview_key_down", reinterpret_cast<PyCFunction>(Control_OnPreviewKeyDown), METH_VARARGS, nullptr },
-        { "_on_preview_key_up", reinterpret_cast<PyCFunction>(Control_OnPreviewKeyUp), METH_VARARGS, nullptr },
-        { "_on_right_tapped", reinterpret_cast<PyCFunction>(Control_OnRightTapped), METH_VARARGS, nullptr },
-        { "_on_tapped", reinterpret_cast<PyCFunction>(Control_OnTapped), METH_VARARGS, nullptr },
+        { "_get_template_child", reinterpret_cast<PyCFunction>(Control_GetTemplateChild_protected), METH_VARARGS, nullptr },
+        { "_on_character_received", reinterpret_cast<PyCFunction>(Control_OnCharacterReceived_protected), METH_VARARGS, nullptr },
+        { "_on_double_tapped", reinterpret_cast<PyCFunction>(Control_OnDoubleTapped_protected), METH_VARARGS, nullptr },
+        { "_on_drag_enter", reinterpret_cast<PyCFunction>(Control_OnDragEnter_protected), METH_VARARGS, nullptr },
+        { "_on_drag_leave", reinterpret_cast<PyCFunction>(Control_OnDragLeave_protected), METH_VARARGS, nullptr },
+        { "_on_drag_over", reinterpret_cast<PyCFunction>(Control_OnDragOver_protected), METH_VARARGS, nullptr },
+        { "_on_drop", reinterpret_cast<PyCFunction>(Control_OnDrop_protected), METH_VARARGS, nullptr },
+        { "_on_got_focus", reinterpret_cast<PyCFunction>(Control_OnGotFocus_protected), METH_VARARGS, nullptr },
+        { "_on_holding", reinterpret_cast<PyCFunction>(Control_OnHolding_protected), METH_VARARGS, nullptr },
+        { "_on_key_down", reinterpret_cast<PyCFunction>(Control_OnKeyDown_protected), METH_VARARGS, nullptr },
+        { "_on_key_up", reinterpret_cast<PyCFunction>(Control_OnKeyUp_protected), METH_VARARGS, nullptr },
+        { "_on_lost_focus", reinterpret_cast<PyCFunction>(Control_OnLostFocus_protected), METH_VARARGS, nullptr },
+        { "_on_manipulation_completed", reinterpret_cast<PyCFunction>(Control_OnManipulationCompleted_protected), METH_VARARGS, nullptr },
+        { "_on_manipulation_delta", reinterpret_cast<PyCFunction>(Control_OnManipulationDelta_protected), METH_VARARGS, nullptr },
+        { "_on_manipulation_inertia_starting", reinterpret_cast<PyCFunction>(Control_OnManipulationInertiaStarting_protected), METH_VARARGS, nullptr },
+        { "_on_manipulation_started", reinterpret_cast<PyCFunction>(Control_OnManipulationStarted_protected), METH_VARARGS, nullptr },
+        { "_on_manipulation_starting", reinterpret_cast<PyCFunction>(Control_OnManipulationStarting_protected), METH_VARARGS, nullptr },
+        { "_on_pointer_canceled", reinterpret_cast<PyCFunction>(Control_OnPointerCanceled_protected), METH_VARARGS, nullptr },
+        { "_on_pointer_capture_lost", reinterpret_cast<PyCFunction>(Control_OnPointerCaptureLost_protected), METH_VARARGS, nullptr },
+        { "_on_pointer_entered", reinterpret_cast<PyCFunction>(Control_OnPointerEntered_protected), METH_VARARGS, nullptr },
+        { "_on_pointer_exited", reinterpret_cast<PyCFunction>(Control_OnPointerExited_protected), METH_VARARGS, nullptr },
+        { "_on_pointer_moved", reinterpret_cast<PyCFunction>(Control_OnPointerMoved_protected), METH_VARARGS, nullptr },
+        { "_on_pointer_pressed", reinterpret_cast<PyCFunction>(Control_OnPointerPressed_protected), METH_VARARGS, nullptr },
+        { "_on_pointer_released", reinterpret_cast<PyCFunction>(Control_OnPointerReleased_protected), METH_VARARGS, nullptr },
+        { "_on_pointer_wheel_changed", reinterpret_cast<PyCFunction>(Control_OnPointerWheelChanged_protected), METH_VARARGS, nullptr },
+        { "_on_preview_key_down", reinterpret_cast<PyCFunction>(Control_OnPreviewKeyDown_protected), METH_VARARGS, nullptr },
+        { "_on_preview_key_up", reinterpret_cast<PyCFunction>(Control_OnPreviewKeyUp_protected), METH_VARARGS, nullptr },
+        { "_on_right_tapped", reinterpret_cast<PyCFunction>(Control_OnRightTapped_protected), METH_VARARGS, nullptr },
+        { "_on_tapped", reinterpret_cast<PyCFunction>(Control_OnTapped_protected), METH_VARARGS, nullptr },
         { "remove_focus_engagement", reinterpret_cast<PyCFunction>(Control_RemoveFocusEngagement), METH_VARARGS, nullptr },
         { "add_is_enabled_changed", reinterpret_cast<PyCFunction>(Control_add_IsEnabledChanged), METH_O, nullptr },
         { "remove_is_enabled_changed", reinterpret_cast<PyCFunction>(Control_remove_IsEnabledChanged), METH_O, nullptr },
@@ -37905,7 +37869,38 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 2)
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.DataTemplateSelector", L"SelectTemplate", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::DataTemplateSelector>().SelectTemplate(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
         {
             try
             {
@@ -37944,7 +37939,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* DataTemplateSelector_SelectTemplateCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* DataTemplateSelector_SelectTemplateCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -37987,49 +37982,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* DataTemplateSelector_SelectTemplateForItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.DataTemplateSelector", L"SelectTemplate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::DataTemplateSelector>().SelectTemplate(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* DataTemplateSelector_SelectTemplateForItemCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* DataTemplateSelector_SelectTemplateForItemCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -38099,9 +38052,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         { "get_element", reinterpret_cast<PyCFunction>(DataTemplateSelector_GetElement), METH_VARARGS, nullptr },
         { "recycle_element", reinterpret_cast<PyCFunction>(DataTemplateSelector_RecycleElement), METH_VARARGS, nullptr },
         { "select_template", reinterpret_cast<PyCFunction>(DataTemplateSelector_SelectTemplate), METH_VARARGS, nullptr },
-        { "_select_template_core", reinterpret_cast<PyCFunction>(DataTemplateSelector_SelectTemplateCore), METH_VARARGS, nullptr },
-        { "select_template_for_item", reinterpret_cast<PyCFunction>(DataTemplateSelector_SelectTemplateForItem), METH_VARARGS, nullptr },
-        { "_select_template_for_item_core", reinterpret_cast<PyCFunction>(DataTemplateSelector_SelectTemplateForItemCore), METH_VARARGS, nullptr },
+        { "_select_template_core", reinterpret_cast<PyCFunction>(DataTemplateSelector_SelectTemplateCore_protected), METH_VARARGS, nullptr },
+        { "_select_template_for_item_core", reinterpret_cast<PyCFunction>(DataTemplateSelector_SelectTemplateForItemCore_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DataTemplateSelector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataTemplateSelector), METH_O | METH_STATIC, nullptr },
         { }};
@@ -44406,18 +44358,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Frame_SetNavigationStateWithNavigationControl(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -45405,7 +45346,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         { "navigate", reinterpret_cast<PyCFunction>(Frame_Navigate), METH_VARARGS, nullptr },
         { "navigate_to_type", reinterpret_cast<PyCFunction>(Frame_NavigateToType), METH_VARARGS, nullptr },
         { "set_navigation_state", reinterpret_cast<PyCFunction>(Frame_SetNavigationState), METH_VARARGS, nullptr },
-        { "set_navigation_state_with_navigation_control", reinterpret_cast<PyCFunction>(Frame_SetNavigationStateWithNavigationControl), METH_VARARGS, nullptr },
         { "add_navigated", reinterpret_cast<PyCFunction>(Frame_add_Navigated), METH_O, nullptr },
         { "remove_navigated", reinterpret_cast<PyCFunction>(Frame_remove_Navigated), METH_O, nullptr },
         { "add_navigating", reinterpret_cast<PyCFunction>(Frame_add_Navigating), METH_O, nullptr },
@@ -48153,7 +48093,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* GroupStyleSelector_SelectGroupStyleCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* GroupStyleSelector_SelectGroupStyleCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -48222,7 +48162,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyMethodDef _methods_GroupStyleSelector[] = {
         { "select_group_style", reinterpret_cast<PyCFunction>(GroupStyleSelector_SelectGroupStyle), METH_VARARGS, nullptr },
-        { "_select_group_style_core", reinterpret_cast<PyCFunction>(GroupStyleSelector_SelectGroupStyleCore), METH_VARARGS, nullptr },
+        { "_select_group_style_core", reinterpret_cast<PyCFunction>(GroupStyleSelector_SelectGroupStyleCore_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GroupStyleSelector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GroupStyleSelector), METH_O | METH_STATIC, nullptr },
         { }};
@@ -55955,7 +55895,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* InkToolbarCustomPen_CreateInkDrawingAttributesCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* InkToolbarCustomPen_CreateInkDrawingAttributesCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -56024,7 +55964,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyMethodDef _methods_InkToolbarCustomPen[] = {
         { "create_ink_drawing_attributes", reinterpret_cast<PyCFunction>(InkToolbarCustomPen_CreateInkDrawingAttributes), METH_VARARGS, nullptr },
-        { "_create_ink_drawing_attributes_core", reinterpret_cast<PyCFunction>(InkToolbarCustomPen_CreateInkDrawingAttributesCore), METH_VARARGS, nullptr },
+        { "_create_ink_drawing_attributes_core", reinterpret_cast<PyCFunction>(InkToolbarCustomPen_CreateInkDrawingAttributesCore_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkToolbarCustomPen, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkToolbarCustomPen), METH_O | METH_STATIC, nullptr },
         { }};
@@ -58725,7 +58665,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* ItemsControl_ClearContainerForItemOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ItemsControl_ClearContainerForItemOverride_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -58853,7 +58793,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ItemsControl_GetContainerForItemOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ItemsControl_GetContainerForItemOverride_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59019,7 +58959,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ItemsControl_IsItemItsOwnContainerOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ItemsControl_IsItemItsOwnContainerOverride_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59145,7 +59085,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ItemsControl_OnGroupStyleSelectorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ItemsControl_OnGroupStyleSelectorChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59189,7 +59129,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ItemsControl_OnItemContainerStyleChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ItemsControl_OnItemContainerStyleChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59233,7 +59173,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ItemsControl_OnItemContainerStyleSelectorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ItemsControl_OnItemContainerStyleSelectorChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59277,7 +59217,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ItemsControl_OnItemTemplateChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ItemsControl_OnItemTemplateChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59321,7 +59261,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ItemsControl_OnItemTemplateSelectorChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ItemsControl_OnItemTemplateSelectorChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59365,7 +59305,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ItemsControl_OnItemsChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ItemsControl_OnItemsChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59408,7 +59348,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ItemsControl_PrepareContainerForItemOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ItemsControl_PrepareContainerForItemOverride_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -60548,21 +60488,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_ItemsControl[] = {
-        { "_clear_container_for_item_override", reinterpret_cast<PyCFunction>(ItemsControl_ClearContainerForItemOverride), METH_VARARGS, nullptr },
+        { "_clear_container_for_item_override", reinterpret_cast<PyCFunction>(ItemsControl_ClearContainerForItemOverride_protected), METH_VARARGS, nullptr },
         { "container_from_index", reinterpret_cast<PyCFunction>(ItemsControl_ContainerFromIndex), METH_VARARGS, nullptr },
         { "container_from_item", reinterpret_cast<PyCFunction>(ItemsControl_ContainerFromItem), METH_VARARGS, nullptr },
-        { "_get_container_for_item_override", reinterpret_cast<PyCFunction>(ItemsControl_GetContainerForItemOverride), METH_VARARGS, nullptr },
+        { "_get_container_for_item_override", reinterpret_cast<PyCFunction>(ItemsControl_GetContainerForItemOverride_protected), METH_VARARGS, nullptr },
         { "group_header_container_from_item_container", reinterpret_cast<PyCFunction>(ItemsControl_GroupHeaderContainerFromItemContainer), METH_VARARGS, nullptr },
         { "index_from_container", reinterpret_cast<PyCFunction>(ItemsControl_IndexFromContainer), METH_VARARGS, nullptr },
-        { "_is_item_its_own_container_override", reinterpret_cast<PyCFunction>(ItemsControl_IsItemItsOwnContainerOverride), METH_VARARGS, nullptr },
+        { "_is_item_its_own_container_override", reinterpret_cast<PyCFunction>(ItemsControl_IsItemItsOwnContainerOverride_protected), METH_VARARGS, nullptr },
         { "item_from_container", reinterpret_cast<PyCFunction>(ItemsControl_ItemFromContainer), METH_VARARGS, nullptr },
-        { "_on_group_style_selector_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnGroupStyleSelectorChanged), METH_VARARGS, nullptr },
-        { "_on_item_container_style_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnItemContainerStyleChanged), METH_VARARGS, nullptr },
-        { "_on_item_container_style_selector_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnItemContainerStyleSelectorChanged), METH_VARARGS, nullptr },
-        { "_on_item_template_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnItemTemplateChanged), METH_VARARGS, nullptr },
-        { "_on_item_template_selector_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnItemTemplateSelectorChanged), METH_VARARGS, nullptr },
-        { "_on_items_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnItemsChanged), METH_VARARGS, nullptr },
-        { "_prepare_container_for_item_override", reinterpret_cast<PyCFunction>(ItemsControl_PrepareContainerForItemOverride), METH_VARARGS, nullptr },
+        { "_on_group_style_selector_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnGroupStyleSelectorChanged_protected), METH_VARARGS, nullptr },
+        { "_on_item_container_style_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnItemContainerStyleChanged_protected), METH_VARARGS, nullptr },
+        { "_on_item_container_style_selector_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnItemContainerStyleSelectorChanged_protected), METH_VARARGS, nullptr },
+        { "_on_item_template_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnItemTemplateChanged_protected), METH_VARARGS, nullptr },
+        { "_on_item_template_selector_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnItemTemplateSelectorChanged_protected), METH_VARARGS, nullptr },
+        { "_on_items_changed", reinterpret_cast<PyCFunction>(ItemsControl_OnItemsChanged_protected), METH_VARARGS, nullptr },
+        { "_prepare_container_for_item_override", reinterpret_cast<PyCFunction>(ItemsControl_PrepareContainerForItemOverride_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ItemsControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ItemsControl), METH_O | METH_STATIC, nullptr },
         { }};
@@ -81753,7 +81693,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* Page_OnNavigatedFrom(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Page_OnNavigatedFrom_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -81796,7 +81736,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Page_OnNavigatedTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Page_OnNavigatedTo_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -81839,7 +81779,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Page_OnNavigatingFrom(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Page_OnNavigatingFrom_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -82234,9 +82174,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_Page[] = {
-        { "_on_navigated_from", reinterpret_cast<PyCFunction>(Page_OnNavigatedFrom), METH_VARARGS, nullptr },
-        { "_on_navigated_to", reinterpret_cast<PyCFunction>(Page_OnNavigatedTo), METH_VARARGS, nullptr },
-        { "_on_navigating_from", reinterpret_cast<PyCFunction>(Page_OnNavigatingFrom), METH_VARARGS, nullptr },
+        { "_on_navigated_from", reinterpret_cast<PyCFunction>(Page_OnNavigatedFrom_protected), METH_VARARGS, nullptr },
+        { "_on_navigated_to", reinterpret_cast<PyCFunction>(Page_OnNavigatedTo_protected), METH_VARARGS, nullptr },
+        { "_on_navigating_from", reinterpret_cast<PyCFunction>(Page_OnNavigatingFrom_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Page, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Page), METH_O | METH_STATIC, nullptr },
         { }};
@@ -109022,18 +108962,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ScrollViewer_ChangeViewWithOptionalAnimation(py::wrapper::Windows::UI::Xaml::Controls::ScrollViewer* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -114493,7 +114422,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyMethodDef _methods_ScrollViewer[] = {
         { "change_view", reinterpret_cast<PyCFunction>(ScrollViewer_ChangeView), METH_VARARGS, nullptr },
-        { "change_view_with_optional_animation", reinterpret_cast<PyCFunction>(ScrollViewer_ChangeViewWithOptionalAnimation), METH_VARARGS, nullptr },
         { "invalidate_scroll_info", reinterpret_cast<PyCFunction>(ScrollViewer_InvalidateScrollInfo), METH_VARARGS, nullptr },
         { "register_anchor_candidate", reinterpret_cast<PyCFunction>(ScrollViewer_RegisterAnchorCandidate), METH_VARARGS, nullptr },
         { "scroll_to_horizontal_offset", reinterpret_cast<PyCFunction>(ScrollViewer_ScrollToHorizontalOffset), METH_VARARGS, nullptr },
@@ -123416,7 +123344,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* StyleSelector_SelectStyleCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* StyleSelector_SelectStyleCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -123485,7 +123413,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
 
     static PyMethodDef _methods_StyleSelector[] = {
         { "select_style", reinterpret_cast<PyCFunction>(StyleSelector_SelectStyle), METH_VARARGS, nullptr },
-        { "_select_style_core", reinterpret_cast<PyCFunction>(StyleSelector_SelectStyleCore), METH_VARARGS, nullptr },
+        { "_select_style_core", reinterpret_cast<PyCFunction>(StyleSelector_SelectStyleCore_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StyleSelector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StyleSelector), METH_O | METH_STATIC, nullptr },
         { }};
@@ -139043,7 +138971,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* ToggleSwitch_OnHeaderChanged(py::wrapper::Windows::UI::Xaml::Controls::ToggleSwitch* self, PyObject* args) noexcept
+    static PyObject* ToggleSwitch_OnHeaderChanged_protected(py::wrapper::Windows::UI::Xaml::Controls::ToggleSwitch* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -139087,7 +139015,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ToggleSwitch_OnOffContentChanged(py::wrapper::Windows::UI::Xaml::Controls::ToggleSwitch* self, PyObject* args) noexcept
+    static PyObject* ToggleSwitch_OnOffContentChanged_protected(py::wrapper::Windows::UI::Xaml::Controls::ToggleSwitch* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -139131,7 +139059,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ToggleSwitch_OnOnContentChanged(py::wrapper::Windows::UI::Xaml::Controls::ToggleSwitch* self, PyObject* args) noexcept
+    static PyObject* ToggleSwitch_OnOnContentChanged_protected(py::wrapper::Windows::UI::Xaml::Controls::ToggleSwitch* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -139175,7 +139103,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ToggleSwitch_OnToggled(py::wrapper::Windows::UI::Xaml::Controls::ToggleSwitch* self, PyObject* args) noexcept
+    static PyObject* ToggleSwitch_OnToggled_protected(py::wrapper::Windows::UI::Xaml::Controls::ToggleSwitch* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -140029,10 +139957,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_ToggleSwitch[] = {
-        { "_on_header_changed", reinterpret_cast<PyCFunction>(ToggleSwitch_OnHeaderChanged), METH_VARARGS, nullptr },
-        { "_on_off_content_changed", reinterpret_cast<PyCFunction>(ToggleSwitch_OnOffContentChanged), METH_VARARGS, nullptr },
-        { "_on_on_content_changed", reinterpret_cast<PyCFunction>(ToggleSwitch_OnOnContentChanged), METH_VARARGS, nullptr },
-        { "_on_toggled", reinterpret_cast<PyCFunction>(ToggleSwitch_OnToggled), METH_VARARGS, nullptr },
+        { "_on_header_changed", reinterpret_cast<PyCFunction>(ToggleSwitch_OnHeaderChanged_protected), METH_VARARGS, nullptr },
+        { "_on_off_content_changed", reinterpret_cast<PyCFunction>(ToggleSwitch_OnOffContentChanged_protected), METH_VARARGS, nullptr },
+        { "_on_on_content_changed", reinterpret_cast<PyCFunction>(ToggleSwitch_OnOnContentChanged_protected), METH_VARARGS, nullptr },
+        { "_on_toggled", reinterpret_cast<PyCFunction>(ToggleSwitch_OnToggled_protected), METH_VARARGS, nullptr },
         { "add_toggled", reinterpret_cast<PyCFunction>(ToggleSwitch_add_Toggled), METH_O, nullptr },
         { "remove_toggled", reinterpret_cast<PyCFunction>(ToggleSwitch_remove_Toggled), METH_O, nullptr },
         { "_assign_array_", _assign_array_ToggleSwitch, METH_O | METH_STATIC, nullptr },
@@ -148682,7 +148610,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* VirtualizingPanel_AddInternalChild(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingPanel_AddInternalChild_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -148725,7 +148653,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingPanel_BringIndexIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingPanel_BringIndexIntoView_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -148768,7 +148696,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingPanel_InsertInternalChild(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingPanel_InsertInternalChild_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -148812,7 +148740,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingPanel_OnClearChildren(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingPanel_OnClearChildren_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -148853,7 +148781,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingPanel_OnItemsChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingPanel_OnItemsChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -148897,7 +148825,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingPanel_RemoveInternalChildRange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingPanel_RemoveInternalChildRange_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -148996,12 +148924,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_VirtualizingPanel[] = {
-        { "_add_internal_child", reinterpret_cast<PyCFunction>(VirtualizingPanel_AddInternalChild), METH_VARARGS, nullptr },
-        { "_bring_index_into_view", reinterpret_cast<PyCFunction>(VirtualizingPanel_BringIndexIntoView), METH_VARARGS, nullptr },
-        { "_insert_internal_child", reinterpret_cast<PyCFunction>(VirtualizingPanel_InsertInternalChild), METH_VARARGS, nullptr },
-        { "_on_clear_children", reinterpret_cast<PyCFunction>(VirtualizingPanel_OnClearChildren), METH_VARARGS, nullptr },
-        { "_on_items_changed", reinterpret_cast<PyCFunction>(VirtualizingPanel_OnItemsChanged), METH_VARARGS, nullptr },
-        { "_remove_internal_child_range", reinterpret_cast<PyCFunction>(VirtualizingPanel_RemoveInternalChildRange), METH_VARARGS, nullptr },
+        { "_add_internal_child", reinterpret_cast<PyCFunction>(VirtualizingPanel_AddInternalChild_protected), METH_VARARGS, nullptr },
+        { "_bring_index_into_view", reinterpret_cast<PyCFunction>(VirtualizingPanel_BringIndexIntoView_protected), METH_VARARGS, nullptr },
+        { "_insert_internal_child", reinterpret_cast<PyCFunction>(VirtualizingPanel_InsertInternalChild_protected), METH_VARARGS, nullptr },
+        { "_on_clear_children", reinterpret_cast<PyCFunction>(VirtualizingPanel_OnClearChildren_protected), METH_VARARGS, nullptr },
+        { "_on_items_changed", reinterpret_cast<PyCFunction>(VirtualizingPanel_OnItemsChanged_protected), METH_VARARGS, nullptr },
+        { "_remove_internal_child_range", reinterpret_cast<PyCFunction>(VirtualizingPanel_RemoveInternalChildRange_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VirtualizingPanel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VirtualizingPanel), METH_O | METH_STATIC, nullptr },
         { }};

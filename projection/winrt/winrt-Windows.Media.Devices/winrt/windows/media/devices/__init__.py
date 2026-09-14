@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_devices import (
     AdvancedPhotoCaptureSettings,
@@ -320,6 +321,9 @@ class ZoomTransitionMode(enum.IntEnum):
     DIRECT = 1
     SMOOTH = 2
 
+winrt.runtime._internals.alias_method(DigitalWindowControl, "configure_with_bounds", "configure")
+winrt.runtime._internals.alias_method(FocusControl, "set_preset_with_completion_option_async", "set_preset_async")
+winrt.runtime._internals.alias_method(RegionsOfInterestControl, "set_regions_with_lock_async", "set_regions_async")
 CallControlEventHandler = typing.Callable[[CallControl], None]
 DialRequestedEventHandler = typing.Callable[[CallControl, DialRequestedEventArgs], None]
 KeypadPressedEventHandler = typing.Callable[[CallControl, KeypadPressedEventArgs], None]

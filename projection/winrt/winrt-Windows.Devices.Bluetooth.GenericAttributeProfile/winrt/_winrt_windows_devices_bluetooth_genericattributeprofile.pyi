@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -33,32 +34,62 @@ class GattCharacteristic(winrt.system.Object, metaclass=GattCharacteristic_Stati
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetDescriptors(System.Guid)
     # @deprecated("Use GetDescriptorsForUuidAsync instead of GetDescriptors.  For more information, see MSDN.")
     def get_descriptors(self, descriptor_uuid: _uuid.UUID, /) -> typing.Sequence[GattDescriptor]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetDescriptorsAsync()
     def get_descriptors_async(self) -> windows_foundation.IAsyncOperation[GattDescriptorsResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetDescriptorsAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_descriptors_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattDescriptorsResult]: ...
+    # Deprecated alias of get_descriptors_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetDescriptorsAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_descriptors_async() instead.")
+    def get_descriptors_with_cache_mode_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattDescriptorsResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetDescriptorsForUuidAsync(System.Guid)
     def get_descriptors_for_uuid_async(self, descriptor_uuid: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[GattDescriptorsResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetDescriptorsForUuidAsync(System.Guid,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_descriptors_for_uuid_async(self, descriptor_uuid: _uuid.UUID, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattDescriptorsResult]: ...
+    # Deprecated alias of get_descriptors_for_uuid_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetDescriptorsForUuidAsync(System.Guid,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_descriptors_for_uuid_async() instead.")
     def get_descriptors_for_uuid_with_cache_mode_async(self, descriptor_uuid: _uuid.UUID, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattDescriptorsResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetDescriptorsAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
-    def get_descriptors_with_cache_mode_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattDescriptorsResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::ReadClientCharacteristicConfigurationDescriptorAsync()
     def read_client_characteristic_configuration_descriptor_async(self) -> windows_foundation.IAsyncOperation[GattReadClientCharacteristicConfigurationDescriptorResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::ReadValueAsync()
     def read_value_async(self) -> windows_foundation.IAsyncOperation[GattReadResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::ReadValueAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def read_value_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattReadResult]: ...
+    # Deprecated alias of read_value_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::ReadValueAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use read_value_async() instead.")
     def read_value_with_cache_mode_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattReadResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::WriteClientCharacteristicConfigurationDescriptorAsync(Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientCharacteristicConfigurationDescriptorValue)
     def write_client_characteristic_configuration_descriptor_async(self, client_characteristic_configuration_descriptor_value: GattClientCharacteristicConfigurationDescriptorValue, /) -> windows_foundation.IAsyncOperation[GattCommunicationStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::WriteClientCharacteristicConfigurationDescriptorWithResultAsync(Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientCharacteristicConfigurationDescriptorValue)
     def write_client_characteristic_configuration_descriptor_with_result_async(self, client_characteristic_configuration_descriptor_value: GattClientCharacteristicConfigurationDescriptorValue, /) -> windows_foundation.IAsyncOperation[GattWriteResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::WriteValueAsync(Windows.Storage.Streams.IBuffer)
     def write_value_async(self, value: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[GattCommunicationStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::WriteValueAsync(Windows.Storage.Streams.IBuffer,Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteOption)
+    def write_value_async(self, value: winrt.system.Buffer, write_option: GattWriteOption, /) -> windows_foundation.IAsyncOperation[GattCommunicationStatus]: ...
+    # Deprecated alias of write_value_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::WriteValueAsync(Windows.Storage.Streams.IBuffer,Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteOption)
+    @deprecated("Use write_value_async() instead.")
     def write_value_with_option_async(self, value: winrt.system.Buffer, write_option: GattWriteOption, /) -> windows_foundation.IAsyncOperation[GattCommunicationStatus]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::WriteValueWithResultAsync(Windows.Storage.Streams.IBuffer,Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteOption)
-    def write_value_with_result_and_option_async(self, value: winrt.system.Buffer, write_option: GattWriteOption, /) -> windows_foundation.IAsyncOperation[GattWriteResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::WriteValueWithResultAsync(Windows.Storage.Streams.IBuffer)
     def write_value_with_result_async(self, value: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[GattWriteResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::WriteValueWithResultAsync(Windows.Storage.Streams.IBuffer,Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteOption)
+    def write_value_with_result_async(self, value: winrt.system.Buffer, write_option: GattWriteOption, /) -> windows_foundation.IAsyncOperation[GattWriteResult]: ...
+    # Deprecated alias of write_value_with_result_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::WriteValueWithResultAsync(Windows.Storage.Streams.IBuffer,Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteOption)
+    @deprecated("Use write_value_with_result_async() instead.")
+    def write_value_with_result_and_option_async(self, value: winrt.system.Buffer, write_option: GattWriteOption, /) -> windows_foundation.IAsyncOperation[GattWriteResult]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::add_ValueChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs>)
     def add_value_changed(self, value_changed_handler: windows_foundation.TypedEventHandler[GattCharacteristic, GattValueChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::remove_ValueChanged(Windows.Foundation.EventRegistrationToken)
@@ -373,9 +404,15 @@ class GattDescriptor_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GattDescriptor(winrt.system.Object, metaclass=GattDescriptor_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor::ReadValueAsync()
     def read_value_async(self) -> windows_foundation.IAsyncOperation[GattReadResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor::ReadValueAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def read_value_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattReadResult]: ...
+    # Deprecated alias of read_value_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor::ReadValueAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use read_value_async() instead.")
     def read_value_with_cache_mode_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattReadResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor::WriteValueAsync(Windows.Storage.Streams.IBuffer)
     def write_value_async(self, value: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[GattCommunicationStatus]: ...
@@ -436,18 +473,36 @@ class GattDeviceService_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::ConvertShortIdToUuid(System.UInt16)
     # @deprecated("Use BluetoothUuidHelper instead of ConvertShortIdToUuid.  For more information, see MSDN.")
     def convert_short_id_to_uuid(cls, short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[GattDeviceService]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::FromIdAsync(System.String,Windows.Devices.Bluetooth.GenericAttributeProfile.GattSharingMode)
+    def from_id_async(cls, device_id: str, sharing_mode: GattSharingMode, /) -> windows_foundation.IAsyncOperation[GattDeviceService]: ...
+    # Deprecated alias of from_id_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::FromIdAsync(System.String,Windows.Devices.Bluetooth.GenericAttributeProfile.GattSharingMode)
+    @deprecated("Use from_id_async() instead.")
     def from_id_with_sharing_mode_async(cls, device_id: str, sharing_mode: GattSharingMode, /) -> windows_foundation.IAsyncOperation[GattDeviceService]: ...
+    @typing.overload
     # System.String Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(Windows.Devices.Bluetooth.BluetoothDeviceId)
     def get_device_selector_for_bluetooth_device_id(cls, bluetooth_device_id: windows_devices_bluetooth.BluetoothDeviceId, /) -> str: ...
+    @typing.overload
+    # System.String Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(Windows.Devices.Bluetooth.BluetoothDeviceId,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_device_selector_for_bluetooth_device_id(cls, bluetooth_device_id: windows_devices_bluetooth.BluetoothDeviceId, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
+    # Deprecated alias of get_device_selector_for_bluetooth_device_id() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(Windows.Devices.Bluetooth.BluetoothDeviceId,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_device_selector_for_bluetooth_device_id() instead.")
+    def get_device_selector_for_bluetooth_device_id_with_cache_mode(cls, bluetooth_device_id: windows_devices_bluetooth.BluetoothDeviceId, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetDeviceSelectorForBluetoothDeviceIdAndUuid(Windows.Devices.Bluetooth.BluetoothDeviceId,System.Guid)
     def get_device_selector_for_bluetooth_device_id_and_uuid(cls, bluetooth_device_id: windows_devices_bluetooth.BluetoothDeviceId, service_uuid: _uuid.UUID, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetDeviceSelectorForBluetoothDeviceIdAndUuid(Windows.Devices.Bluetooth.BluetoothDeviceId,System.Guid,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_device_selector_for_bluetooth_device_id_and_uuid(cls, bluetooth_device_id: windows_devices_bluetooth.BluetoothDeviceId, service_uuid: _uuid.UUID, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
+    # Deprecated alias of get_device_selector_for_bluetooth_device_id_and_uuid() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetDeviceSelectorForBluetoothDeviceIdAndUuid(Windows.Devices.Bluetooth.BluetoothDeviceId,System.Guid,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_device_selector_for_bluetooth_device_id_and_uuid() instead.")
     def get_device_selector_for_bluetooth_device_id_and_uuid_with_cache_mode(cls, bluetooth_device_id: windows_devices_bluetooth.BluetoothDeviceId, service_uuid: _uuid.UUID, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
-    # System.String Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(Windows.Devices.Bluetooth.BluetoothDeviceId,Windows.Devices.Bluetooth.BluetoothCacheMode)
-    def get_device_selector_for_bluetooth_device_id_with_cache_mode(cls, bluetooth_device_id: windows_devices_bluetooth.BluetoothDeviceId, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
     # System.String Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetDeviceSelectorFromShortId(System.UInt16)
     # @deprecated("Use GetDeviceSelectorFromUuid instead of GetDeviceSelectorFromShortId.  For more information, see MSDN.")
     def get_device_selector_from_short_id(cls, service_short_id: winrt.system.UInt16, /) -> str: ...
@@ -469,25 +524,49 @@ class GattDeviceService(winrt.system.Object, windows_foundation.IClosable, metac
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetCharacteristics(System.Guid)
     # @deprecated("Use GetCharacteristicsForUuidAsync instead of GetCharacteristics.  For more information, see MSDN.")
     def get_characteristics(self, characteristic_uuid: _uuid.UUID, /) -> typing.Sequence[GattCharacteristic]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetCharacteristicsAsync()
     def get_characteristics_async(self) -> windows_foundation.IAsyncOperation[GattCharacteristicsResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetCharacteristicsAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_characteristics_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattCharacteristicsResult]: ...
+    # Deprecated alias of get_characteristics_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetCharacteristicsAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_characteristics_async() instead.")
+    def get_characteristics_with_cache_mode_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattCharacteristicsResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetCharacteristicsForUuidAsync(System.Guid)
     def get_characteristics_for_uuid_async(self, characteristic_uuid: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[GattCharacteristicsResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetCharacteristicsForUuidAsync(System.Guid,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_characteristics_for_uuid_async(self, characteristic_uuid: _uuid.UUID, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattCharacteristicsResult]: ...
+    # Deprecated alias of get_characteristics_for_uuid_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetCharacteristicsForUuidAsync(System.Guid,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_characteristics_for_uuid_async() instead.")
     def get_characteristics_for_uuid_with_cache_mode_async(self, characteristic_uuid: _uuid.UUID, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattCharacteristicsResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetCharacteristicsAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
-    def get_characteristics_with_cache_mode_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattCharacteristicsResult]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetIncludedServices(System.Guid)
     # @deprecated("Use GetIncludedServicesForUuidAsync instead of GetIncludedServices.  For more information, see MSDN.")
     def get_included_services(self, service_uuid: _uuid.UUID, /) -> typing.Sequence[GattDeviceService]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetIncludedServicesAsync()
     def get_included_services_async(self) -> windows_foundation.IAsyncOperation[GattDeviceServicesResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetIncludedServicesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_included_services_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattDeviceServicesResult]: ...
+    # Deprecated alias of get_included_services_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetIncludedServicesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_included_services_async() instead.")
+    def get_included_services_with_cache_mode_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattDeviceServicesResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetIncludedServicesForUuidAsync(System.Guid)
     def get_included_services_for_uuid_async(self, service_uuid: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[GattDeviceServicesResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetIncludedServicesForUuidAsync(System.Guid,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_included_services_for_uuid_async(self, service_uuid: _uuid.UUID, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattDeviceServicesResult]: ...
+    # Deprecated alias of get_included_services_for_uuid_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetIncludedServicesForUuidAsync(System.Guid,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_included_services_for_uuid_async() instead.")
     def get_included_services_for_uuid_with_cache_mode_async(self, service_uuid: _uuid.UUID, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattDeviceServicesResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetIncludedServicesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
-    def get_included_services_with_cache_mode_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattDeviceServicesResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::OpenAsync(Windows.Devices.Bluetooth.GenericAttributeProfile.GattSharingMode)
     def open_async(self, sharing_mode: GattSharingMode, /) -> windows_foundation.IAsyncOperation[GattOpenStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.DeviceAccessStatus> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::RequestAccessAsync()
@@ -533,9 +612,15 @@ class GattDeviceServicesResult(winrt.system.Object):
 class GattLocalCharacteristic(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic::CreateDescriptorAsync(System.Guid,Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorParameters)
     def create_descriptor_async(self, descriptor_uuid: _uuid.UUID, parameters: GattLocalDescriptorParameters, /) -> windows_foundation.IAsyncOperation[GattLocalDescriptorResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic::NotifyValueAsync(Windows.Storage.Streams.IBuffer)
     def notify_value_async(self, value: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[typing.Sequence[GattClientNotificationResult]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic::NotifyValueAsync(Windows.Storage.Streams.IBuffer,Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient)
+    def notify_value_async(self, value: winrt.system.Buffer, subscribed_client: GattSubscribedClient, /) -> windows_foundation.IAsyncOperation[GattClientNotificationResult]: ...
+    # Deprecated alias of notify_value_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic::NotifyValueAsync(Windows.Storage.Streams.IBuffer,Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient)
+    @deprecated("Use notify_value_async() instead.")
     def notify_value_for_subscribed_client_async(self, value: winrt.system.Buffer, subscribed_client: GattSubscribedClient, /) -> windows_foundation.IAsyncOperation[GattClientNotificationResult]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic::add_ReadRequested(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs>)
     def add_read_requested(self, handler: windows_foundation.TypedEventHandler[GattLocalCharacteristic, GattReadRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -940,9 +1025,15 @@ class GattServiceProvider_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GattServiceProvider(winrt.system.Object, metaclass=GattServiceProvider_Static):
+    @typing.overload
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider::StartAdvertising()
     def start_advertising(self) -> None: ...
+    @typing.overload
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider::StartAdvertising(Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters)
+    def start_advertising(self, parameters: GattServiceProviderAdvertisingParameters, /) -> None: ...
+    # Deprecated alias of start_advertising() for pywinrt v3.x compatibility.
+    # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider::StartAdvertising(Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters)
+    @deprecated("Use start_advertising() instead.")
     def start_advertising_with_parameters(self, parameters: GattServiceProviderAdvertisingParameters, /) -> None: ...
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider::StopAdvertising()
     def stop_advertising(self) -> None: ...

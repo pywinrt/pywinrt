@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -49,11 +50,22 @@ class CivicAddress(winrt.system.Object):
 
 @typing.final
 class GeoboundingBox_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Devices.Geolocation.GeoboundingBox Windows.Devices.Geolocation.GeoboundingBox::TryCompute(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.BasicGeoposition>)
     def try_compute(cls, positions: typing.Iterable[BasicGeoposition], /) -> GeoboundingBox: ...
+    @typing.overload
     # Windows.Devices.Geolocation.GeoboundingBox Windows.Devices.Geolocation.GeoboundingBox::TryCompute(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.BasicGeoposition>,Windows.Devices.Geolocation.AltitudeReferenceSystem)
-    def try_compute_with_altitude_reference(cls, positions: typing.Iterable[BasicGeoposition], altitude_ref_system: AltitudeReferenceSystem, /) -> GeoboundingBox: ...
+    def try_compute(cls, positions: typing.Iterable[BasicGeoposition], altitude_ref_system: AltitudeReferenceSystem, /) -> GeoboundingBox: ...
+    @typing.overload
     # Windows.Devices.Geolocation.GeoboundingBox Windows.Devices.Geolocation.GeoboundingBox::TryCompute(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.BasicGeoposition>,Windows.Devices.Geolocation.AltitudeReferenceSystem,System.UInt32)
+    def try_compute(cls, positions: typing.Iterable[BasicGeoposition], altitude_ref_system: AltitudeReferenceSystem, spatial_reference_id: winrt.system.UInt32, /) -> GeoboundingBox: ...
+    # Deprecated alias of try_compute() for pywinrt v3.x compatibility.
+    # Windows.Devices.Geolocation.GeoboundingBox Windows.Devices.Geolocation.GeoboundingBox::TryCompute(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.BasicGeoposition>,Windows.Devices.Geolocation.AltitudeReferenceSystem)
+    @deprecated("Use try_compute() instead.")
+    def try_compute_with_altitude_reference(cls, positions: typing.Iterable[BasicGeoposition], altitude_ref_system: AltitudeReferenceSystem, /) -> GeoboundingBox: ...
+    # Deprecated alias of try_compute() for pywinrt v3.x compatibility.
+    # Windows.Devices.Geolocation.GeoboundingBox Windows.Devices.Geolocation.GeoboundingBox::TryCompute(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.BasicGeoposition>,Windows.Devices.Geolocation.AltitudeReferenceSystem,System.UInt32)
+    @deprecated("Use try_compute() instead.")
     def try_compute_with_altitude_reference_and_spatial_reference(cls, positions: typing.Iterable[BasicGeoposition], altitude_ref_system: AltitudeReferenceSystem, spatial_reference_id: winrt.system.UInt32, /) -> GeoboundingBox: ...
 
 @typing.final
@@ -175,11 +187,18 @@ class GeocoordinateSatelliteData(winrt.system.Object):
 
 @typing.final
 class Geolocator_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Geolocation.Geoposition>> Windows.Devices.Geolocation.Geolocator::GetGeopositionHistoryAsync(Windows.Foundation.DateTime)
     # @deprecated("GetGeopositionHistoryAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_geoposition_history_async(cls, start_time: datetime.datetime, /) -> windows_foundation.IAsyncOperation[typing.Sequence[Geoposition]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Geolocation.Geoposition>> Windows.Devices.Geolocation.Geolocator::GetGeopositionHistoryAsync(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)
     # @deprecated("GetGeopositionHistoryWithDurationAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def get_geoposition_history_async(cls, start_time: datetime.datetime, duration: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[typing.Sequence[Geoposition]]: ...
+    # Deprecated alias of get_geoposition_history_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Geolocation.Geoposition>> Windows.Devices.Geolocation.Geolocator::GetGeopositionHistoryAsync(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)
+    # @deprecated("GetGeopositionHistoryWithDurationAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use get_geoposition_history_async() instead.")
     def get_geoposition_history_with_duration_async(cls, start_time: datetime.datetime, duration: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[typing.Sequence[Geoposition]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Geolocation.GeolocationAccessStatus> Windows.Devices.Geolocation.Geolocator::RequestAccessAsync()
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[GeolocationAccessStatus]: ...
@@ -198,9 +217,15 @@ class Geolocator(winrt.system.Object, metaclass=Geolocator_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Windows.Devices.Geolocation.Geolocator::AllowFallbackToConsentlessPositions()
     def allow_fallback_to_consentless_positions(self) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Geolocation.Geoposition> Windows.Devices.Geolocation.Geolocator::GetGeopositionAsync()
     def get_geoposition_async(self) -> windows_foundation.IAsyncOperation[Geoposition]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Geolocation.Geoposition> Windows.Devices.Geolocation.Geolocator::GetGeopositionAsync(Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan)
+    def get_geoposition_async(self, maximum_age: datetime.timedelta, timeout: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[Geoposition]: ...
+    # Deprecated alias of get_geoposition_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Geolocation.Geoposition> Windows.Devices.Geolocation.Geolocator::GetGeopositionAsync(Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan)
+    @deprecated("Use get_geoposition_async() instead.")
     def get_geoposition_async_with_age_and_timeout(self, maximum_age: datetime.timedelta, timeout: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[Geoposition]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Geolocation.Geolocator::add_PositionChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Geolocation.Geolocator,Windows.Devices.Geolocation.PositionChangedEventArgs>)
     def add_position_changed(self, handler: windows_foundation.TypedEventHandler[Geolocator, PositionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...

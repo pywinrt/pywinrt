@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -68,15 +69,27 @@ class DialDevicePicker(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Windows.Media.DialProtocol.DialDevicePicker::Hide()
     def hide(self) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.DialProtocol.DialDevice> Windows.Media.DialProtocol.DialDevicePicker::PickSingleDialDeviceAsync(Windows.Foundation.Rect)
     def pick_single_dial_device_async(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[DialDevice]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.DialProtocol.DialDevice> Windows.Media.DialProtocol.DialDevicePicker::PickSingleDialDeviceAsync(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    def pick_single_dial_device_async(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> windows_foundation.IAsyncOperation[DialDevice]: ...
+    # Deprecated alias of pick_single_dial_device_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Media.DialProtocol.DialDevice> Windows.Media.DialProtocol.DialDevicePicker::PickSingleDialDeviceAsync(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    @deprecated("Use pick_single_dial_device_async() instead.")
     def pick_single_dial_device_async_with_placement(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> windows_foundation.IAsyncOperation[DialDevice]: ...
     # System.Void Windows.Media.DialProtocol.DialDevicePicker::SetDisplayStatus(Windows.Media.DialProtocol.DialDevice,Windows.Media.DialProtocol.DialDeviceDisplayStatus)
     def set_display_status(self, device: DialDevice, status: DialDeviceDisplayStatus, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.DialProtocol.DialDevicePicker::Show(Windows.Foundation.Rect)
     def show(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.DialProtocol.DialDevicePicker::Show(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    def show(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> None: ...
+    # Deprecated alias of show() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.DialProtocol.DialDevicePicker::Show(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    @deprecated("Use show() instead.")
     def show_with_placement(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.DialProtocol.DialDevicePicker::add_DialDevicePickerDismissed(Windows.Foundation.TypedEventHandler`2<Windows.Media.DialProtocol.DialDevicePicker,System.Object>)
     def add_dial_device_picker_dismissed(self, handler: windows_foundation.TypedEventHandler[DialDevicePicker, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...

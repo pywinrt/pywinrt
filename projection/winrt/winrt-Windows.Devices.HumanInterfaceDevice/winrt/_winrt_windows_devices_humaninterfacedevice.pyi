@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -82,9 +83,15 @@ class HidCollection(winrt.system.Object):
 class HidDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.HumanInterfaceDevice.HidDevice> Windows.Devices.HumanInterfaceDevice.HidDevice::FromIdAsync(System.String,Windows.Storage.FileAccessMode)
     def from_id_async(cls, device_id: str, access_mode: windows_storage.FileAccessMode, /) -> windows_foundation.IAsyncOperation[HidDevice]: ...
+    @typing.overload
     # System.String Windows.Devices.HumanInterfaceDevice.HidDevice::GetDeviceSelector(System.UInt16,System.UInt16)
     def get_device_selector(cls, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.HumanInterfaceDevice.HidDevice::GetDeviceSelector(System.UInt16,System.UInt16,System.UInt16,System.UInt16)
+    def get_device_selector(cls, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, vendor_id: winrt.system.UInt16, product_id: winrt.system.UInt16, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.HumanInterfaceDevice.HidDevice::GetDeviceSelector(System.UInt16,System.UInt16,System.UInt16,System.UInt16)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_vid_pid(cls, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, vendor_id: winrt.system.UInt16, product_id: winrt.system.UInt16, /) -> str: ...
 
 @typing.final
@@ -93,23 +100,47 @@ class HidDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=Hid
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.HumanInterfaceDevice.HidDevice::Close()
     def close(self) -> None: ...
+    @typing.overload
     # Windows.Devices.HumanInterfaceDevice.HidFeatureReport Windows.Devices.HumanInterfaceDevice.HidDevice::CreateFeatureReport()
     def create_feature_report(self) -> HidFeatureReport: ...
+    @typing.overload
     # Windows.Devices.HumanInterfaceDevice.HidFeatureReport Windows.Devices.HumanInterfaceDevice.HidDevice::CreateFeatureReport(System.UInt16)
+    def create_feature_report(self, report_id: winrt.system.UInt16, /) -> HidFeatureReport: ...
+    # Deprecated alias of create_feature_report() for pywinrt v3.x compatibility.
+    # Windows.Devices.HumanInterfaceDevice.HidFeatureReport Windows.Devices.HumanInterfaceDevice.HidDevice::CreateFeatureReport(System.UInt16)
+    @deprecated("Use create_feature_report() instead.")
     def create_feature_report_by_id(self, report_id: winrt.system.UInt16, /) -> HidFeatureReport: ...
+    @typing.overload
     # Windows.Devices.HumanInterfaceDevice.HidOutputReport Windows.Devices.HumanInterfaceDevice.HidDevice::CreateOutputReport()
     def create_output_report(self) -> HidOutputReport: ...
+    @typing.overload
     # Windows.Devices.HumanInterfaceDevice.HidOutputReport Windows.Devices.HumanInterfaceDevice.HidDevice::CreateOutputReport(System.UInt16)
+    def create_output_report(self, report_id: winrt.system.UInt16, /) -> HidOutputReport: ...
+    # Deprecated alias of create_output_report() for pywinrt v3.x compatibility.
+    # Windows.Devices.HumanInterfaceDevice.HidOutputReport Windows.Devices.HumanInterfaceDevice.HidDevice::CreateOutputReport(System.UInt16)
+    @deprecated("Use create_output_report() instead.")
     def create_output_report_by_id(self, report_id: winrt.system.UInt16, /) -> HidOutputReport: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> Windows.Devices.HumanInterfaceDevice.HidDevice::GetBooleanControlDescriptions(Windows.Devices.HumanInterfaceDevice.HidReportType,System.UInt16,System.UInt16)
     def get_boolean_control_descriptions(self, report_type: HidReportType, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, /) -> typing.Sequence[HidBooleanControlDescription]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.HumanInterfaceDevice.HidFeatureReport> Windows.Devices.HumanInterfaceDevice.HidDevice::GetFeatureReportAsync()
     def get_feature_report_async(self) -> windows_foundation.IAsyncOperation[HidFeatureReport]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.HumanInterfaceDevice.HidFeatureReport> Windows.Devices.HumanInterfaceDevice.HidDevice::GetFeatureReportAsync(System.UInt16)
+    def get_feature_report_async(self, report_id: winrt.system.UInt16, /) -> windows_foundation.IAsyncOperation[HidFeatureReport]: ...
+    # Deprecated alias of get_feature_report_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.HumanInterfaceDevice.HidFeatureReport> Windows.Devices.HumanInterfaceDevice.HidDevice::GetFeatureReportAsync(System.UInt16)
+    @deprecated("Use get_feature_report_async() instead.")
     def get_feature_report_by_id_async(self, report_id: winrt.system.UInt16, /) -> windows_foundation.IAsyncOperation[HidFeatureReport]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.HumanInterfaceDevice.HidInputReport> Windows.Devices.HumanInterfaceDevice.HidDevice::GetInputReportAsync()
     def get_input_report_async(self) -> windows_foundation.IAsyncOperation[HidInputReport]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.HumanInterfaceDevice.HidInputReport> Windows.Devices.HumanInterfaceDevice.HidDevice::GetInputReportAsync(System.UInt16)
+    def get_input_report_async(self, report_id: winrt.system.UInt16, /) -> windows_foundation.IAsyncOperation[HidInputReport]: ...
+    # Deprecated alias of get_input_report_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.HumanInterfaceDevice.HidInputReport> Windows.Devices.HumanInterfaceDevice.HidDevice::GetInputReportAsync(System.UInt16)
+    @deprecated("Use get_input_report_async() instead.")
     def get_input_report_by_id_async(self, report_id: winrt.system.UInt16, /) -> windows_foundation.IAsyncOperation[HidInputReport]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> Windows.Devices.HumanInterfaceDevice.HidDevice::GetNumericControlDescriptions(Windows.Devices.HumanInterfaceDevice.HidReportType,System.UInt16,System.UInt16)
     def get_numeric_control_descriptions(self, report_type: HidReportType, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, /) -> typing.Sequence[HidNumericControlDescription]: ...

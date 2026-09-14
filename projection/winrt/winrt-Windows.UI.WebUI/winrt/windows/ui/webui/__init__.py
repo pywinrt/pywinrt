@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_webui import (
     ActivatedDeferral,
@@ -162,6 +163,7 @@ class PrintContent(enum.IntEnum):
     CUSTOM_PAGE_RANGE = 2
     CURRENT_SELECTION = 3
 
+winrt.runtime._internals.alias_static_method(WebUIView, "create_with_uri_async", "create_async")
 ActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.IActivatedEventArgs"], None]
 BackgroundActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.IBackgroundActivatedEventArgs"], None]
 EnteredBackgroundEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.IEnteredBackgroundEventArgs"], None]

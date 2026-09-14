@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_enterprisedata import (
     BufferProtectUnprotectResult,
@@ -101,3 +102,15 @@ class ProtectionPolicyRequestAccessBehavior(enum.IntEnum):
     DECRYPT = 0
     TREAT_OVERRIDE_POLICY_AS_BLOCK = 1
 
+winrt.runtime._internals.alias_static_method(FileProtectionManager, "load_file_from_container_with_target_and_name_collision_option_async", "load_file_from_container_async")
+winrt.runtime._internals.alias_static_method(FileProtectionManager, "load_file_from_container_with_target_async", "load_file_from_container_async")
+winrt.runtime._internals.alias_static_method(FileProtectionManager, "save_file_as_container_with_sharing_async", "save_file_as_container_async")
+winrt.runtime._internals.alias_static_method(FileProtectionManager, "unprotect_with_options_async", "unprotect_async")
+winrt.runtime._internals.alias_static_method(ProtectionPolicyManager, "request_access_with_auditing_info_async", "request_access_async")
+winrt.runtime._internals.alias_static_method(ProtectionPolicyManager, "request_access_with_behavior_async", "request_access_async")
+winrt.runtime._internals.alias_static_method(ProtectionPolicyManager, "request_access_with_message_async", "request_access_async")
+winrt.runtime._internals.alias_static_method(ProtectionPolicyManager, "request_access_for_app_with_auditing_info_async", "request_access_for_app_async")
+winrt.runtime._internals.alias_static_method(ProtectionPolicyManager, "request_access_for_app_with_behavior_async", "request_access_for_app_async")
+winrt.runtime._internals.alias_static_method(ProtectionPolicyManager, "request_access_for_app_with_message_async", "request_access_for_app_async")
+winrt.runtime._internals.alias_static_method(ProtectionPolicyManager, "request_access_to_files_for_app_with_message_and_behavior_async", "request_access_to_files_for_app_async")
+winrt.runtime._internals.alias_static_method(ProtectionPolicyManager, "request_access_to_files_for_process_with_message_and_behavior_async", "request_access_to_files_for_process_async")

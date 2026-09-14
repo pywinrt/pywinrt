@@ -316,18 +316,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AuthRequestParams_CreateForAuthorizationCodeRequest2(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -938,7 +927,6 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
 
     static PyMethodDef methods_AuthRequestParams_Static[] = {
         { "create_for_authorization_code_request", reinterpret_cast<PyCFunction>(AuthRequestParams_CreateForAuthorizationCodeRequest), METH_VARARGS, nullptr },
-        { "create_for_authorization_code_request2", reinterpret_cast<PyCFunction>(AuthRequestParams_CreateForAuthorizationCodeRequest2), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_AuthRequestParams_Static[] = 
@@ -1859,18 +1847,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* OAuth2Manager_RequestTokenAsync2(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -1936,7 +1913,6 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
         { "complete_auth_request", reinterpret_cast<PyCFunction>(OAuth2Manager_CompleteAuthRequest), METH_VARARGS, nullptr },
         { "request_auth_with_params_async", reinterpret_cast<PyCFunction>(OAuth2Manager_RequestAuthWithParamsAsync), METH_VARARGS, nullptr },
         { "request_token_async", reinterpret_cast<PyCFunction>(OAuth2Manager_RequestTokenAsync), METH_VARARGS, nullptr },
-        { "request_token_async2", reinterpret_cast<PyCFunction>(OAuth2Manager_RequestTokenAsync2), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_OAuth2Manager_Static[] = 

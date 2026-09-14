@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_networking_xboxlive import (
     XboxLiveDeviceAddress,
@@ -93,3 +94,7 @@ class XboxLiveSocketKind(enum.IntEnum):
     DATAGRAM = 1
     STREAM = 2
 
+winrt.runtime._internals.alias_method(XboxLiveEndpointPairTemplate, "create_endpoint_pair_default_async", "create_endpoint_pair_async")
+winrt.runtime._internals.alias_method(XboxLiveEndpointPairTemplate, "create_endpoint_pair_with_behaviors_async", "create_endpoint_pair_async")
+winrt.runtime._internals.alias_method(XboxLiveEndpointPairTemplate, "create_endpoint_pair_for_ports_default_async", "create_endpoint_pair_for_ports_async")
+winrt.runtime._internals.alias_method(XboxLiveEndpointPairTemplate, "create_endpoint_pair_for_ports_with_behaviors_async", "create_endpoint_pair_for_ports_async")

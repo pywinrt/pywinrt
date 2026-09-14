@@ -2357,6 +2357,38 @@ namespace py::cpp::Windows::ApplicationModel
                 return nullptr;
             }
         }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.FullTrustProcessLauncher", L"LaunchFullTrustProcessForAppAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::FullTrustProcessLauncher::LaunchFullTrustProcessForAppAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -2407,49 +2439,6 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static PyObject* FullTrustProcessLauncher_LaunchFullTrustProcessForAppWithParametersAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.FullTrustProcessLauncher", L"LaunchFullTrustProcessForAppAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::ApplicationModel::FullTrustProcessLauncher::LaunchFullTrustProcessForAppAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* FullTrustProcessLauncher_LaunchFullTrustProcessForCurrentAppAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -2475,6 +2464,37 @@ namespace py::cpp::Windows::ApplicationModel
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::ApplicationModel::FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.FullTrustProcessLauncher", L"LaunchFullTrustProcessForCurrentAppAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppAsync(param0);
                 }());
             }
             catch (...)
@@ -2532,48 +2552,6 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static PyObject* FullTrustProcessLauncher_LaunchFullTrustProcessForCurrentAppWithParametersAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.FullTrustProcessLauncher", L"LaunchFullTrustProcessForCurrentAppAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::ApplicationModel::FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppAsync(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_FullTrustProcessLauncher[] = {
         { }};
 
@@ -2599,10 +2577,8 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef methods_FullTrustProcessLauncher_Static[] = {
         { "launch_full_trust_process_for_app_async", reinterpret_cast<PyCFunction>(FullTrustProcessLauncher_LaunchFullTrustProcessForAppAsync), METH_VARARGS, nullptr },
         { "launch_full_trust_process_for_app_with_arguments_async", reinterpret_cast<PyCFunction>(FullTrustProcessLauncher_LaunchFullTrustProcessForAppWithArgumentsAsync), METH_VARARGS, nullptr },
-        { "launch_full_trust_process_for_app_with_parameters_async", reinterpret_cast<PyCFunction>(FullTrustProcessLauncher_LaunchFullTrustProcessForAppWithParametersAsync), METH_VARARGS, nullptr },
         { "launch_full_trust_process_for_current_app_async", reinterpret_cast<PyCFunction>(FullTrustProcessLauncher_LaunchFullTrustProcessForCurrentAppAsync), METH_VARARGS, nullptr },
         { "launch_full_trust_process_for_current_app_with_arguments_async", reinterpret_cast<PyCFunction>(FullTrustProcessLauncher_LaunchFullTrustProcessForCurrentAppWithArgumentsAsync), METH_VARARGS, nullptr },
-        { "launch_full_trust_process_for_current_app_with_parameters_async", reinterpret_cast<PyCFunction>(FullTrustProcessLauncher_LaunchFullTrustProcessForCurrentAppWithParametersAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_FullTrustProcessLauncher_Static[] = 
@@ -3477,18 +3453,7 @@ namespace py::cpp::Windows::ApplicationModel
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Package_StageContentGroupsWithPriorityAsync(py::wrapper::Windows::ApplicationModel::Package* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -4504,7 +4469,6 @@ namespace py::cpp::Windows::ApplicationModel
         { "launch", reinterpret_cast<PyCFunction>(Package_Launch), METH_VARARGS, nullptr },
         { "set_in_use_async", reinterpret_cast<PyCFunction>(Package_SetInUseAsync), METH_VARARGS, nullptr },
         { "stage_content_groups_async", reinterpret_cast<PyCFunction>(Package_StageContentGroupsAsync), METH_VARARGS, nullptr },
-        { "stage_content_groups_with_priority_async", reinterpret_cast<PyCFunction>(Package_StageContentGroupsWithPriorityAsync), METH_VARARGS, nullptr },
         { "verify_content_integrity_async", reinterpret_cast<PyCFunction>(Package_VerifyContentIntegrityAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Package, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Package), METH_O | METH_STATIC, nullptr },

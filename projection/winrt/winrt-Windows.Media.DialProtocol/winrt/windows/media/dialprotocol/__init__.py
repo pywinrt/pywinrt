@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_dialprotocol import (
     DialApp,
@@ -55,3 +56,5 @@ class DialDeviceDisplayStatus(enum.IntEnum):
     DISCONNECTED = 4
     ERROR = 5
 
+winrt.runtime._internals.alias_method(DialDevicePicker, "pick_single_dial_device_async_with_placement", "pick_single_dial_device_async")
+winrt.runtime._internals.alias_method(DialDevicePicker, "show_with_placement", "show")

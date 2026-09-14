@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_windows_management_deployment import (
     PackageDeploymentProgress,
@@ -74,3 +75,4 @@ class StubPackageOption(enum.IntEnum):
     INSTALL_STUB = 2
     USE_PREFERENCE = 3
 
+winrt.runtime._internals.alias_method(PackageRuntimeManager, "add_package_set_with_options", "add_package_set")

@@ -1424,6 +1424,13 @@ winrt.runtime._internals.mixin_mutable_sequence(ItemCollection)
 winrt.runtime._internals.mixin_mutable_sequence(RowDefinitionCollection)
 winrt.runtime._internals.mixin_mutable_sequence(SwipeItems)
 winrt.runtime._internals.mixin_mutable_sequence(UIElementCollection)
+winrt.runtime._internals.alias_method(CalendarViewDayItemChangingEventArgs, "register_update_callback_with_phase", "register_update_callback")
+winrt.runtime._internals.alias_method(ContainerContentChangingEventArgs, "register_update_callback_with_phase", "register_update_callback")
+winrt.runtime._internals.alias_method(ContentDialog, "show_async_with_placement", "show_async")
+winrt.runtime._internals.alias_method(DataTemplateSelector, "select_template_for_item", "select_template")
+winrt.runtime._internals.alias_method(Frame, "set_navigation_state_with_navigation_control", "set_navigation_state")
+winrt.runtime._internals.alias_method(ListViewBase, "scroll_into_view_with_alignment", "scroll_into_view")
+winrt.runtime._internals.alias_method(ScrollViewer, "change_view_with_optional_animation", "change_view")
 BackClickEventHandler = typing.Callable[[winrt.system.Object, BackClickEventArgs], None]
 CalendarViewDayItemChangingEventHandler = typing.Callable[[CalendarView, CalendarViewDayItemChangingEventArgs], None]
 CleanUpVirtualizedItemEventHandler = typing.Callable[[winrt.system.Object, CleanUpVirtualizedItemEventArgs], None]

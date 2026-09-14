@@ -1015,18 +1015,7 @@ namespace py::cpp::Windows::Devices::Spi
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SpiDevice_GetDeviceSelectorFromFriendlyName(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1383,7 +1372,6 @@ namespace py::cpp::Windows::Devices::Spi
         { "from_id_async", reinterpret_cast<PyCFunction>(SpiDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_bus_info", reinterpret_cast<PyCFunction>(SpiDevice_GetBusInfo), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(SpiDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(SpiDevice_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_SpiDevice_Static[] = 
@@ -1538,18 +1526,7 @@ namespace py::cpp::Windows::Devices::Spi
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ISpiDeviceStatics_GetDeviceSelectorFromFriendlyName(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1591,7 +1568,6 @@ namespace py::cpp::Windows::Devices::Spi
         { "from_id_async", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_FromIdAsync), METH_VARARGS, nullptr },
         { "get_bus_info", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_GetBusInfo), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_GetDeviceSelector), METH_VARARGS, nullptr },
-        { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISpiDeviceStatics[] = {
@@ -1735,7 +1711,17 @@ namespace py::cpp::Windows::Devices::Spi
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_device_selector_from_friendly_name")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "get_device_selector"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -85,29 +86,69 @@ class WebAuthenticationCoreManager_Static(winrt._winrt.IInspectable_Static):
     def create_web_account_monitor(cls, web_accounts: typing.Iterable[windows_security_credentials.WebAccount], /) -> WebAccountMonitor: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindAccountAsync(Windows.Security.Credentials.WebAccountProvider,System.String)
     def find_account_async(cls, provider: windows_security_credentials.WebAccountProvider, web_account_id: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccountProvider> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindAccountProviderAsync(System.String)
     def find_account_provider_async(cls, web_account_provider_id: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccountProvider> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindAccountProviderAsync(System.String,System.String)
-    def find_account_provider_with_authority_async(cls, web_account_provider_id: str, authority: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    def find_account_provider_async(cls, web_account_provider_id: str, authority: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccountProvider> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindAccountProviderAsync(System.String,System.String,Windows.System.User)
+    def find_account_provider_async(cls, web_account_provider_id: str, authority: str, user: windows_system.User, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    # Deprecated alias of find_account_provider_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccountProvider> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindAccountProviderAsync(System.String,System.String)
+    @deprecated("Use find_account_provider_async() instead.")
+    def find_account_provider_with_authority_async(cls, web_account_provider_id: str, authority: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    # Deprecated alias of find_account_provider_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccountProvider> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindAccountProviderAsync(System.String,System.String,Windows.System.User)
+    @deprecated("Use find_account_provider_async() instead.")
     def find_account_provider_with_authority_for_user_async(cls, web_account_provider_id: str, authority: str, user: windows_system.User, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindAllAccountsAsync(Windows.Security.Credentials.WebAccountProvider)
     def find_all_accounts_async(cls, provider: windows_security_credentials.WebAccountProvider, /) -> windows_foundation.IAsyncOperation[FindAllAccountsResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindAllAccountsAsync(Windows.Security.Credentials.WebAccountProvider,System.String)
+    def find_all_accounts_async(cls, provider: windows_security_credentials.WebAccountProvider, client_id: str, /) -> windows_foundation.IAsyncOperation[FindAllAccountsResult]: ...
+    # Deprecated alias of find_all_accounts_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindAllAccountsAsync(Windows.Security.Credentials.WebAccountProvider,System.String)
+    @deprecated("Use find_all_accounts_async() instead.")
     def find_all_accounts_with_client_id_async(cls, provider: windows_security_credentials.WebAccountProvider, client_id: str, /) -> windows_foundation.IAsyncOperation[FindAllAccountsResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccountProvider> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindSystemAccountProviderAsync(System.String)
     def find_system_account_provider_async(cls, web_account_provider_id: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccountProvider> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindSystemAccountProviderAsync(System.String,System.String)
-    def find_system_account_provider_with_authority_async(cls, web_account_provider_id: str, authority: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    def find_system_account_provider_async(cls, web_account_provider_id: str, authority: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccountProvider> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindSystemAccountProviderAsync(System.String,System.String,Windows.System.User)
+    def find_system_account_provider_async(cls, web_account_provider_id: str, authority: str, user: windows_system.User, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    # Deprecated alias of find_system_account_provider_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccountProvider> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindSystemAccountProviderAsync(System.String,System.String)
+    @deprecated("Use find_system_account_provider_async() instead.")
+    def find_system_account_provider_with_authority_async(cls, web_account_provider_id: str, authority: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    # Deprecated alias of find_system_account_provider_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccountProvider> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::FindSystemAccountProviderAsync(System.String,System.String,Windows.System.User)
+    @deprecated("Use find_system_account_provider_async() instead.")
     def find_system_account_provider_with_authority_for_user_async(cls, web_account_provider_id: str, authority: str, user: windows_system.User, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccountProvider]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::GetTokenSilentlyAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest)
     def get_token_silently_async(cls, request: WebTokenRequest, /) -> windows_foundation.IAsyncOperation[WebTokenRequestResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::GetTokenSilentlyAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest,Windows.Security.Credentials.WebAccount)
+    def get_token_silently_async(cls, request: WebTokenRequest, web_account: windows_security_credentials.WebAccount, /) -> windows_foundation.IAsyncOperation[WebTokenRequestResult]: ...
+    # Deprecated alias of get_token_silently_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::GetTokenSilentlyAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest,Windows.Security.Credentials.WebAccount)
+    @deprecated("Use get_token_silently_async() instead.")
     def get_token_silently_with_web_account_async(cls, request: WebTokenRequest, web_account: windows_security_credentials.WebAccount, /) -> windows_foundation.IAsyncOperation[WebTokenRequestResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::RequestTokenAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest)
     def request_token_async(cls, request: WebTokenRequest, /) -> windows_foundation.IAsyncOperation[WebTokenRequestResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::RequestTokenAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest,Windows.Security.Credentials.WebAccount)
+    def request_token_async(cls, request: WebTokenRequest, web_account: windows_security_credentials.WebAccount, /) -> windows_foundation.IAsyncOperation[WebTokenRequestResult]: ...
+    # Deprecated alias of request_token_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::RequestTokenAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest,Windows.Security.Credentials.WebAccount)
+    @deprecated("Use request_token_async() instead.")
     def request_token_with_web_account_async(cls, request: WebTokenRequest, web_account: windows_security_credentials.WebAccount, /) -> windows_foundation.IAsyncOperation[WebTokenRequestResult]: ...
 
 @typing.final

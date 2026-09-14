@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -76,9 +77,15 @@ class SemanticTextQuery(winrt.system.Object):
 @typing.final
 class TextConversionGenerator(winrt.system.Object):
     def __new__(cls: typing.Type[Self], language_tag: str) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextConversionGenerator::GetCandidatesAsync(System.String)
     def get_candidates_async(self, input: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextConversionGenerator::GetCandidatesAsync(System.String,System.UInt32)
+    def get_candidates_async(self, input: str, max_candidates: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
+    # Deprecated alias of get_candidates_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextConversionGenerator::GetCandidatesAsync(System.String,System.UInt32)
+    @deprecated("Use get_candidates_async() instead.")
     def get_candidates_with_max_count_async(self, input: str, max_candidates: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
     # System.Boolean Windows.Data.Text.TextConversionGenerator::get_LanguageAvailableButNotInstalled()
     @_property
@@ -99,11 +106,22 @@ class TextPhoneme(winrt.system.Object):
 @typing.final
 class TextPredictionGenerator(winrt.system.Object):
     def __new__(cls: typing.Type[Self], language_tag: str) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextPredictionGenerator::GetCandidatesAsync(System.String)
     def get_candidates_async(self, input: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextPredictionGenerator::GetCandidatesAsync(System.String,System.UInt32)
-    def get_candidates_with_max_count_async(self, input: str, max_candidates: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
+    def get_candidates_async(self, input: str, max_candidates: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextPredictionGenerator::GetCandidatesAsync(System.String,System.UInt32,Windows.Data.Text.TextPredictionOptions,Windows.Foundation.Collections.IIterable`1<System.String>)
+    def get_candidates_async(self, input: str, max_candidates: winrt.system.UInt32, prediction_options: TextPredictionOptions, previous_strings: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
+    # Deprecated alias of get_candidates_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextPredictionGenerator::GetCandidatesAsync(System.String,System.UInt32)
+    @deprecated("Use get_candidates_async() instead.")
+    def get_candidates_with_max_count_async(self, input: str, max_candidates: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
+    # Deprecated alias of get_candidates_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextPredictionGenerator::GetCandidatesAsync(System.String,System.UInt32,Windows.Data.Text.TextPredictionOptions,Windows.Foundation.Collections.IIterable`1<System.String>)
+    @deprecated("Use get_candidates_async() instead.")
     def get_candidates_with_parameters_async(self, input: str, max_candidates: winrt.system.UInt32, prediction_options: TextPredictionOptions, previous_strings: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextPredictionGenerator::GetNextWordCandidatesAsync(System.UInt32,Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_next_word_candidates_async(self, max_candidates: winrt.system.UInt32, previous_strings: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...

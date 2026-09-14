@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -1053,9 +1054,15 @@ class MseSourceBuffer(winrt.system.Object):
     def abort(self) -> None: ...
     # System.Void Windows.Media.Core.MseSourceBuffer::AppendBuffer(Windows.Storage.Streams.IBuffer)
     def append_buffer(self, buffer: winrt.system.Buffer, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Core.MseSourceBuffer::AppendStream(Windows.Storage.Streams.IInputStream)
     def append_stream(self, stream: windows_storage_streams.IInputStream, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Core.MseSourceBuffer::AppendStream(Windows.Storage.Streams.IInputStream,System.UInt64)
+    def append_stream(self, stream: windows_storage_streams.IInputStream, max_size: winrt.system.UInt64, /) -> None: ...
+    # Deprecated alias of append_stream() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.Core.MseSourceBuffer::AppendStream(Windows.Storage.Streams.IInputStream,System.UInt64)
+    @deprecated("Use append_stream() instead.")
     def append_stream_max_size(self, stream: windows_storage_streams.IInputStream, max_size: winrt.system.UInt64, /) -> None: ...
     # System.Void Windows.Media.Core.MseSourceBuffer::Remove(Windows.Foundation.TimeSpan,Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan>)
     def remove(self, start: datetime.timedelta, end: typing.Optional[datetime.timedelta], /) -> None: ...
@@ -1569,22 +1576,46 @@ class TimedTextRuby(winrt.system.Object):
 
 @typing.final
 class TimedTextSource_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromStream(Windows.Storage.Streams.IRandomAccessStream)
     def create_from_stream(cls, stream: windows_storage_streams.IRandomAccessStream, /) -> TimedTextSource: ...
+    @typing.overload
+    # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromStream(Windows.Storage.Streams.IRandomAccessStream,System.String)
+    def create_from_stream(cls, stream: windows_storage_streams.IRandomAccessStream, default_language: str, /) -> TimedTextSource: ...
+    # Deprecated alias of create_from_stream() for pywinrt v3.x compatibility.
+    # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromStream(Windows.Storage.Streams.IRandomAccessStream,System.String)
+    @deprecated("Use create_from_stream() instead.")
+    def create_from_stream_with_language(cls, stream: windows_storage_streams.IRandomAccessStream, default_language: str, /) -> TimedTextSource: ...
+    @typing.overload
     # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromStreamWithIndex(Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream)
     def create_from_stream_with_index(cls, stream: windows_storage_streams.IRandomAccessStream, index_stream: windows_storage_streams.IRandomAccessStream, /) -> TimedTextSource: ...
+    @typing.overload
     # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromStreamWithIndex(Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream,System.String)
+    def create_from_stream_with_index(cls, stream: windows_storage_streams.IRandomAccessStream, index_stream: windows_storage_streams.IRandomAccessStream, default_language: str, /) -> TimedTextSource: ...
+    # Deprecated alias of create_from_stream_with_index() for pywinrt v3.x compatibility.
+    # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromStreamWithIndex(Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream,System.String)
+    @deprecated("Use create_from_stream_with_index() instead.")
     def create_from_stream_with_index_and_language(cls, stream: windows_storage_streams.IRandomAccessStream, index_stream: windows_storage_streams.IRandomAccessStream, default_language: str, /) -> TimedTextSource: ...
-    # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromStream(Windows.Storage.Streams.IRandomAccessStream,System.String)
-    def create_from_stream_with_language(cls, stream: windows_storage_streams.IRandomAccessStream, default_language: str, /) -> TimedTextSource: ...
+    @typing.overload
     # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromUri(Windows.Foundation.Uri)
     def create_from_uri(cls, uri: windows_foundation.Uri, /) -> TimedTextSource: ...
+    @typing.overload
+    # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromUri(Windows.Foundation.Uri,System.String)
+    def create_from_uri(cls, uri: windows_foundation.Uri, default_language: str, /) -> TimedTextSource: ...
+    # Deprecated alias of create_from_uri() for pywinrt v3.x compatibility.
+    # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromUri(Windows.Foundation.Uri,System.String)
+    @deprecated("Use create_from_uri() instead.")
+    def create_from_uri_with_language(cls, uri: windows_foundation.Uri, default_language: str, /) -> TimedTextSource: ...
+    @typing.overload
     # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromUriWithIndex(Windows.Foundation.Uri,Windows.Foundation.Uri)
     def create_from_uri_with_index(cls, uri: windows_foundation.Uri, index_uri: windows_foundation.Uri, /) -> TimedTextSource: ...
+    @typing.overload
     # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromUriWithIndex(Windows.Foundation.Uri,Windows.Foundation.Uri,System.String)
+    def create_from_uri_with_index(cls, uri: windows_foundation.Uri, index_uri: windows_foundation.Uri, default_language: str, /) -> TimedTextSource: ...
+    # Deprecated alias of create_from_uri_with_index() for pywinrt v3.x compatibility.
+    # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromUriWithIndex(Windows.Foundation.Uri,Windows.Foundation.Uri,System.String)
+    @deprecated("Use create_from_uri_with_index() instead.")
     def create_from_uri_with_index_and_language(cls, uri: windows_foundation.Uri, index_uri: windows_foundation.Uri, default_language: str, /) -> TimedTextSource: ...
-    # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromUri(Windows.Foundation.Uri,System.String)
-    def create_from_uri_with_language(cls, uri: windows_foundation.Uri, default_language: str, /) -> TimedTextSource: ...
 
 @typing.final
 class TimedTextSource(winrt.system.Object, metaclass=TimedTextSource_Static):

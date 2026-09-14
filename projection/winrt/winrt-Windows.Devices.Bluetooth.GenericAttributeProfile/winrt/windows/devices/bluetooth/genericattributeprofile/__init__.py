@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_bluetooth_genericattributeprofile import (
     GattCharacteristic,
@@ -157,3 +158,18 @@ class GattWriteOption(enum.IntEnum):
     WRITE_WITH_RESPONSE = 0
     WRITE_WITHOUT_RESPONSE = 1
 
+winrt.runtime._internals.alias_method(GattCharacteristic, "get_descriptors_with_cache_mode_async", "get_descriptors_async")
+winrt.runtime._internals.alias_method(GattCharacteristic, "get_descriptors_for_uuid_with_cache_mode_async", "get_descriptors_for_uuid_async")
+winrt.runtime._internals.alias_method(GattCharacteristic, "read_value_with_cache_mode_async", "read_value_async")
+winrt.runtime._internals.alias_method(GattCharacteristic, "write_value_with_option_async", "write_value_async")
+winrt.runtime._internals.alias_method(GattCharacteristic, "write_value_with_result_and_option_async", "write_value_with_result_async")
+winrt.runtime._internals.alias_method(GattDescriptor, "read_value_with_cache_mode_async", "read_value_async")
+winrt.runtime._internals.alias_static_method(GattDeviceService, "from_id_with_sharing_mode_async", "from_id_async")
+winrt.runtime._internals.alias_method(GattDeviceService, "get_characteristics_with_cache_mode_async", "get_characteristics_async")
+winrt.runtime._internals.alias_method(GattDeviceService, "get_characteristics_for_uuid_with_cache_mode_async", "get_characteristics_for_uuid_async")
+winrt.runtime._internals.alias_static_method(GattDeviceService, "get_device_selector_for_bluetooth_device_id_with_cache_mode", "get_device_selector_for_bluetooth_device_id")
+winrt.runtime._internals.alias_static_method(GattDeviceService, "get_device_selector_for_bluetooth_device_id_and_uuid_with_cache_mode", "get_device_selector_for_bluetooth_device_id_and_uuid")
+winrt.runtime._internals.alias_method(GattDeviceService, "get_included_services_with_cache_mode_async", "get_included_services_async")
+winrt.runtime._internals.alias_method(GattDeviceService, "get_included_services_for_uuid_with_cache_mode_async", "get_included_services_for_uuid_async")
+winrt.runtime._internals.alias_method(GattLocalCharacteristic, "notify_value_for_subscribed_client_async", "notify_value_async")
+winrt.runtime._internals.alias_method(GattServiceProvider, "start_advertising_with_parameters", "start_advertising")

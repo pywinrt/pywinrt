@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -173,11 +174,22 @@ class FocusChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class FocusNavigationRequest_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Microsoft.UI.Input.FocusNavigationRequest Microsoft.UI.Input.FocusNavigationRequest::Create(Microsoft.UI.Input.FocusNavigationReason)
     def create(cls, reason: FocusNavigationReason, /) -> FocusNavigationRequest: ...
+    @typing.overload
     # Microsoft.UI.Input.FocusNavigationRequest Microsoft.UI.Input.FocusNavigationRequest::Create(Microsoft.UI.Input.FocusNavigationReason,Windows.Foundation.Rect)
-    def create_with_hint_rect(cls, reason: FocusNavigationReason, hint_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> FocusNavigationRequest: ...
+    def create(cls, reason: FocusNavigationReason, hint_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> FocusNavigationRequest: ...
+    @typing.overload
     # Microsoft.UI.Input.FocusNavigationRequest Microsoft.UI.Input.FocusNavigationRequest::Create(Microsoft.UI.Input.FocusNavigationReason,Windows.Foundation.Rect,System.Guid)
+    def create(cls, reason: FocusNavigationReason, hint_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], correlation_id: _uuid.UUID, /) -> FocusNavigationRequest: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Microsoft.UI.Input.FocusNavigationRequest Microsoft.UI.Input.FocusNavigationRequest::Create(Microsoft.UI.Input.FocusNavigationReason,Windows.Foundation.Rect)
+    @deprecated("Use create() instead.")
+    def create_with_hint_rect(cls, reason: FocusNavigationReason, hint_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> FocusNavigationRequest: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Microsoft.UI.Input.FocusNavigationRequest Microsoft.UI.Input.FocusNavigationRequest::Create(Microsoft.UI.Input.FocusNavigationReason,Windows.Foundation.Rect,System.Guid)
+    @deprecated("Use create() instead.")
     def create_with_hint_rect_and_id(cls, reason: FocusNavigationReason, hint_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], correlation_id: _uuid.UUID, /) -> FocusNavigationRequest: ...
 
 @typing.final

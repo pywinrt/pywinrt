@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_services_store import (
     StorePackageUpdateStatus,
@@ -164,3 +165,9 @@ class StoreUninstallStorePackageStatus(enum.IntEnum):
     UNINSTALL_NOT_APPLICABLE = 3
     ERROR = 4
 
+winrt.runtime._internals.alias_method(StoreAvailability, "request_purchase_with_purchase_properties_async", "request_purchase_async")
+winrt.runtime._internals.alias_method(StoreContext, "get_store_products_with_options_async", "get_store_products_async")
+winrt.runtime._internals.alias_method(StoreContext, "request_download_and_install_store_packages_with_install_options_async", "request_download_and_install_store_packages_async")
+winrt.runtime._internals.alias_method(StoreContext, "request_purchase_with_purchase_properties_async", "request_purchase_async")
+winrt.runtime._internals.alias_method(StoreProduct, "request_purchase_with_purchase_properties_async", "request_purchase_async")
+winrt.runtime._internals.alias_method(StoreSku, "request_purchase_with_purchase_properties_async", "request_purchase_async")

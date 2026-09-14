@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_networking_connectivity import (
     NetworkUsageStates,
@@ -200,4 +201,5 @@ class WwanNetworkRegistrationState(enum.IntEnum):
     PARTNER = 5
     DENIED = 6
 
+winrt.runtime._internals.alias_method(ConnectionProfile, "get_local_usage_per_roaming_states", "get_local_usage")
 NetworkStatusChangedEventHandler = typing.Callable[[winrt.system.Object], None]

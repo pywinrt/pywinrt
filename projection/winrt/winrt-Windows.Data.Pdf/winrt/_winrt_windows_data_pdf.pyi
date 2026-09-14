@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -20,13 +21,25 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PdfDocument_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Pdf.PdfDocument> Windows.Data.Pdf.PdfDocument::LoadFromFileAsync(Windows.Storage.IStorageFile)
     def load_from_file_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[PdfDocument]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Pdf.PdfDocument> Windows.Data.Pdf.PdfDocument::LoadFromFileAsync(Windows.Storage.IStorageFile,System.String)
+    def load_from_file_async(cls, file: windows_storage.IStorageFile, password: str, /) -> windows_foundation.IAsyncOperation[PdfDocument]: ...
+    # Deprecated alias of load_from_file_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Data.Pdf.PdfDocument> Windows.Data.Pdf.PdfDocument::LoadFromFileAsync(Windows.Storage.IStorageFile,System.String)
+    @deprecated("Use load_from_file_async() instead.")
     def load_from_file_with_password_async(cls, file: windows_storage.IStorageFile, password: str, /) -> windows_foundation.IAsyncOperation[PdfDocument]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Pdf.PdfDocument> Windows.Data.Pdf.PdfDocument::LoadFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream)
     def load_from_stream_async(cls, input_stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[PdfDocument]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Pdf.PdfDocument> Windows.Data.Pdf.PdfDocument::LoadFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream,System.String)
+    def load_from_stream_async(cls, input_stream: windows_storage_streams.IRandomAccessStream, password: str, /) -> windows_foundation.IAsyncOperation[PdfDocument]: ...
+    # Deprecated alias of load_from_stream_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Data.Pdf.PdfDocument> Windows.Data.Pdf.PdfDocument::LoadFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream,System.String)
+    @deprecated("Use load_from_stream_async() instead.")
     def load_from_stream_with_password_async(cls, input_stream: windows_storage_streams.IRandomAccessStream, password: str, /) -> windows_foundation.IAsyncOperation[PdfDocument]: ...
 
 @typing.final
@@ -48,9 +61,15 @@ class PdfPage(winrt.system.Object, windows_foundation.IClosable):
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.Data.Pdf.PdfPage::PreparePageAsync()
     def prepare_page_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Data.Pdf.PdfPage::RenderToStreamAsync(Windows.Storage.Streams.IRandomAccessStream)
     def render_to_stream_async(self, output_stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Data.Pdf.PdfPage::RenderToStreamAsync(Windows.Storage.Streams.IRandomAccessStream,Windows.Data.Pdf.PdfPageRenderOptions)
+    def render_to_stream_async(self, output_stream: windows_storage_streams.IRandomAccessStream, options: PdfPageRenderOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of render_to_stream_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Data.Pdf.PdfPage::RenderToStreamAsync(Windows.Storage.Streams.IRandomAccessStream,Windows.Data.Pdf.PdfPageRenderOptions)
+    @deprecated("Use render_to_stream_async() instead.")
     def render_with_options_to_stream_async(self, output_stream: windows_storage_streams.IRandomAccessStream, options: PdfPageRenderOptions, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Data.Pdf.PdfPageDimensions Windows.Data.Pdf.PdfPage::get_Dimensions()
     @_property

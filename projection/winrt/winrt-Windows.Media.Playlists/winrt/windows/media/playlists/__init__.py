@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_playlists import (
     Playlist,
@@ -17,3 +18,4 @@ class PlaylistFormat(enum.IntEnum):
     ZUNE = 1
     M3U = 2
 
+winrt.runtime._internals.alias_method(Playlist, "save_as_with_format_async", "save_as_async")

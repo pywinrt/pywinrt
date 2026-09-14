@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_cryptography_certificates import (
     Certificate,
@@ -118,3 +119,12 @@ class SignatureValidationResult(enum.IntEnum):
     INVALID_SIGNATURE = 3
     OTHER_ERRORS = 4
 
+winrt.runtime._internals.alias_method(Certificate, "build_chain_with_parameters_async", "build_chain_async")
+winrt.runtime._internals.alias_method(Certificate, "get_hash_value_with_algorithm", "get_hash_value")
+winrt.runtime._internals.alias_method(CertificateChain, "validate_with_parameters", "validate")
+winrt.runtime._internals.alias_static_method(CertificateEnrollmentManager, "import_pfx_data_to_ksp_async", "import_pfx_data_async")
+winrt.runtime._internals.alias_static_method(CertificateEnrollmentManager, "import_pfx_data_to_ksp_with_parameters_async", "import_pfx_data_async")
+winrt.runtime._internals.alias_static_method(CertificateStores, "find_all_with_query_async", "find_all_async")
+winrt.runtime._internals.alias_static_method(KeyAttestationHelper, "decrypt_tpm_attestation_credential_with_container_name_async", "decrypt_tpm_attestation_credential_async")
+winrt.runtime._internals.alias_method(UserCertificateEnrollmentManager, "import_pfx_data_to_ksp_async", "import_pfx_data_async")
+winrt.runtime._internals.alias_method(UserCertificateEnrollmentManager, "import_pfx_data_to_ksp_with_parameters_async", "import_pfx_data_async")

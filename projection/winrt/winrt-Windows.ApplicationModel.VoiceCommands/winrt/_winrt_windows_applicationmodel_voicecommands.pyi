@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -127,14 +128,26 @@ class VoiceCommandDisambiguationResult(winrt.system.Object):
 
 @typing.final
 class VoiceCommandResponse_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponse(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage)
     def create_response(cls, user_message: VoiceCommandUserMessage, /) -> VoiceCommandResponse: ...
+    @typing.overload
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponse(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile>)
+    def create_response(cls, message: VoiceCommandUserMessage, content_tiles: typing.Iterable[VoiceCommandContentTile], /) -> VoiceCommandResponse: ...
+    # Deprecated alias of create_response() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponse(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile>)
+    @deprecated("Use create_response() instead.")
+    def create_response_with_tiles(cls, message: VoiceCommandUserMessage, content_tiles: typing.Iterable[VoiceCommandContentTile], /) -> VoiceCommandResponse: ...
+    @typing.overload
     # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponseForPrompt(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage)
     def create_response_for_prompt(cls, message: VoiceCommandUserMessage, repeat_message: VoiceCommandUserMessage, /) -> VoiceCommandResponse: ...
+    @typing.overload
     # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponseForPrompt(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile>)
+    def create_response_for_prompt(cls, message: VoiceCommandUserMessage, repeat_message: VoiceCommandUserMessage, content_tiles: typing.Iterable[VoiceCommandContentTile], /) -> VoiceCommandResponse: ...
+    # Deprecated alias of create_response_for_prompt() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponseForPrompt(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile>)
+    @deprecated("Use create_response_for_prompt() instead.")
     def create_response_for_prompt_with_tiles(cls, message: VoiceCommandUserMessage, repeat_message: VoiceCommandUserMessage, content_tiles: typing.Iterable[VoiceCommandContentTile], /) -> VoiceCommandResponse: ...
-    # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponse(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile>)
-    def create_response_with_tiles(cls, message: VoiceCommandUserMessage, content_tiles: typing.Iterable[VoiceCommandContentTile], /) -> VoiceCommandResponse: ...
     # System.UInt32 Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::get_MaxSupportedVoiceCommandContentTiles()
     @_property
     def max_supported_voice_command_content_tiles(cls) -> winrt.system.UInt32: ...

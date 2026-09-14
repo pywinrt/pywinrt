@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -36,9 +37,15 @@ class FaceDetector_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class FaceDetector(winrt.system.Object, metaclass=FaceDetector_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>> Windows.Media.FaceAnalysis.FaceDetector::DetectFacesAsync(Windows.Graphics.Imaging.SoftwareBitmap)
     def detect_faces_async(self, image: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[DetectedFace]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>> Windows.Media.FaceAnalysis.FaceDetector::DetectFacesAsync(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Graphics.Imaging.BitmapBounds)
+    def detect_faces_async(self, image: windows_graphics_imaging.SoftwareBitmap, search_area: typing.Union[windows_graphics_imaging.BitmapBounds, typing.Tuple[winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32]], /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[DetectedFace]]: ...
+    # Deprecated alias of detect_faces_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>> Windows.Media.FaceAnalysis.FaceDetector::DetectFacesAsync(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Graphics.Imaging.BitmapBounds)
+    @deprecated("Use detect_faces_async() instead.")
     def detect_faces_with_search_area_async(self, image: windows_graphics_imaging.SoftwareBitmap, search_area: typing.Union[windows_graphics_imaging.BitmapBounds, typing.Tuple[winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32]], /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[DetectedFace]]: ...
     # Windows.Graphics.Imaging.BitmapSize Windows.Media.FaceAnalysis.FaceDetector::get_MinDetectableFaceSize()
     @_property

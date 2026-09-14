@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_system_diagnostics_deviceportal import (
     DevicePortalConnection,
@@ -24,3 +25,6 @@ class DevicePortalConnectionClosedReason(enum.IntEnum):
     USER_NOT_PRESENT = 4
     SERVICE_TERMINATED = 5
 
+winrt.runtime._internals.alias_method(DevicePortalConnection, "get_server_message_web_socket_for_request2", "get_server_message_web_socket_for_request")
+winrt.runtime._internals.alias_method(DevicePortalConnection, "get_server_message_web_socket_for_request3", "get_server_message_web_socket_for_request")
+winrt.runtime._internals.alias_method(DevicePortalConnection, "get_server_stream_web_socket_for_request2", "get_server_stream_web_socket_for_request")

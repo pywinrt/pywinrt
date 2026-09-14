@@ -819,18 +819,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HidDevice_CreateFeatureReportById(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -901,18 +890,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HidDevice_CreateOutputReportById(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1073,18 +1051,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HidDevice_GetDeviceSelectorVidPid(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -1158,18 +1125,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HidDevice_GetFeatureReportByIdAsync(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1240,18 +1196,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HidDevice_GetInputReportByIdAsync(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1682,14 +1627,10 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static PyMethodDef _methods_HidDevice[] = {
         { "close", reinterpret_cast<PyCFunction>(HidDevice_Close), METH_VARARGS, nullptr },
         { "create_feature_report", reinterpret_cast<PyCFunction>(HidDevice_CreateFeatureReport), METH_VARARGS, nullptr },
-        { "create_feature_report_by_id", reinterpret_cast<PyCFunction>(HidDevice_CreateFeatureReportById), METH_VARARGS, nullptr },
         { "create_output_report", reinterpret_cast<PyCFunction>(HidDevice_CreateOutputReport), METH_VARARGS, nullptr },
-        { "create_output_report_by_id", reinterpret_cast<PyCFunction>(HidDevice_CreateOutputReportById), METH_VARARGS, nullptr },
         { "get_boolean_control_descriptions", reinterpret_cast<PyCFunction>(HidDevice_GetBooleanControlDescriptions), METH_VARARGS, nullptr },
         { "get_feature_report_async", reinterpret_cast<PyCFunction>(HidDevice_GetFeatureReportAsync), METH_VARARGS, nullptr },
-        { "get_feature_report_by_id_async", reinterpret_cast<PyCFunction>(HidDevice_GetFeatureReportByIdAsync), METH_VARARGS, nullptr },
         { "get_input_report_async", reinterpret_cast<PyCFunction>(HidDevice_GetInputReportAsync), METH_VARARGS, nullptr },
-        { "get_input_report_by_id_async", reinterpret_cast<PyCFunction>(HidDevice_GetInputReportByIdAsync), METH_VARARGS, nullptr },
         { "get_numeric_control_descriptions", reinterpret_cast<PyCFunction>(HidDevice_GetNumericControlDescriptions), METH_VARARGS, nullptr },
         { "send_feature_report_async", reinterpret_cast<PyCFunction>(HidDevice_SendFeatureReportAsync), METH_VARARGS, nullptr },
         { "send_output_report_async", reinterpret_cast<PyCFunction>(HidDevice_SendOutputReportAsync), METH_VARARGS, nullptr },
@@ -1729,7 +1670,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static PyMethodDef methods_HidDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(HidDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(HidDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { "get_device_selector_vid_pid", reinterpret_cast<PyCFunction>(HidDevice_GetDeviceSelectorVidPid), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_HidDevice_Static[] = 

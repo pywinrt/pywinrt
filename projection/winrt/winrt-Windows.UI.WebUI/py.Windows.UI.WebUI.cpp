@@ -15042,18 +15042,7 @@ namespace py::cpp::Windows::UI::WebUI
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* WebUIView_CreateWithUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -17286,7 +17275,6 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyMethodDef methods_WebUIView_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(WebUIView_CreateAsync), METH_VARARGS, nullptr },
-        { "create_with_uri_async", reinterpret_cast<PyCFunction>(WebUIView_CreateWithUriAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_WebUIView_Static[] = 

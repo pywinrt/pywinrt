@@ -1800,18 +1800,7 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* JsonObject_GetNamedArrayOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1885,18 +1874,7 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* JsonObject_GetNamedBooleanOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1970,18 +1948,7 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* JsonObject_GetNamedNumberOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2055,18 +2022,7 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* JsonObject_GetNamedObjectOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2140,18 +2096,7 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* JsonObject_GetNamedStringOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2225,18 +2170,7 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* JsonObject_GetNamedValueOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -3066,17 +3000,11 @@ namespace py::cpp::Windows::Data::Json
         { "get_array", reinterpret_cast<PyCFunction>(JsonObject_GetArray), METH_VARARGS, nullptr },
         { "get_boolean", reinterpret_cast<PyCFunction>(JsonObject_GetBoolean), METH_VARARGS, nullptr },
         { "get_named_array", reinterpret_cast<PyCFunction>(JsonObject_GetNamedArray), METH_VARARGS, nullptr },
-        { "get_named_array_or_default", reinterpret_cast<PyCFunction>(JsonObject_GetNamedArrayOrDefault), METH_VARARGS, nullptr },
         { "get_named_boolean", reinterpret_cast<PyCFunction>(JsonObject_GetNamedBoolean), METH_VARARGS, nullptr },
-        { "get_named_boolean_or_default", reinterpret_cast<PyCFunction>(JsonObject_GetNamedBooleanOrDefault), METH_VARARGS, nullptr },
         { "get_named_number", reinterpret_cast<PyCFunction>(JsonObject_GetNamedNumber), METH_VARARGS, nullptr },
-        { "get_named_number_or_default", reinterpret_cast<PyCFunction>(JsonObject_GetNamedNumberOrDefault), METH_VARARGS, nullptr },
         { "get_named_object", reinterpret_cast<PyCFunction>(JsonObject_GetNamedObject), METH_VARARGS, nullptr },
-        { "get_named_object_or_default", reinterpret_cast<PyCFunction>(JsonObject_GetNamedObjectOrDefault), METH_VARARGS, nullptr },
         { "get_named_string", reinterpret_cast<PyCFunction>(JsonObject_GetNamedString), METH_VARARGS, nullptr },
-        { "get_named_string_or_default", reinterpret_cast<PyCFunction>(JsonObject_GetNamedStringOrDefault), METH_VARARGS, nullptr },
         { "get_named_value", reinterpret_cast<PyCFunction>(JsonObject_GetNamedValue), METH_VARARGS, nullptr },
-        { "get_named_value_or_default", reinterpret_cast<PyCFunction>(JsonObject_GetNamedValueOrDefault), METH_VARARGS, nullptr },
         { "get_number", reinterpret_cast<PyCFunction>(JsonObject_GetNumber), METH_VARARGS, nullptr },
         { "get_object", reinterpret_cast<PyCFunction>(JsonObject_GetObject), METH_VARARGS, nullptr },
         { "get_string", reinterpret_cast<PyCFunction>(JsonObject_GetString), METH_VARARGS, nullptr },

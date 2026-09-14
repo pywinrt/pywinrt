@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -22,9 +23,15 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class GameList_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> Windows.Gaming.Preview.GamesEnumeration.GameList::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[GameListEntry]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> Windows.Gaming.Preview.GamesEnumeration.GameList::FindAllAsync(System.String)
+    def find_all_async(cls, package_family_name: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[GameListEntry]]: ...
+    # Deprecated alias of find_all_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> Windows.Gaming.Preview.GamesEnumeration.GameList::FindAllAsync(System.String)
+    @deprecated("Use find_all_async() instead.")
     def find_all_async_package_family_name(cls, package_family_name: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[GameListEntry]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.Preview.GamesEnumeration.GameListEntry> Windows.Gaming.Preview.GamesEnumeration.GameList::MergeEntriesAsync(Windows.Gaming.Preview.GamesEnumeration.GameListEntry,Windows.Gaming.Preview.GamesEnumeration.GameListEntry)
     def merge_entries_async(cls, left: GameListEntry, right: GameListEntry, /) -> windows_foundation.IAsyncOperation[GameListEntry]: ...
@@ -53,9 +60,15 @@ class GameListEntry(winrt.system.Object, IGameListEntry):
     def launch_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetCategoryAsync(Windows.Gaming.Preview.GamesEnumeration.GameListCategory)
     def set_category_async(self, value: GameListCategory, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetLauncherExecutableFileAsync(Windows.Storage.IStorageFile)
     def set_launcher_executable_file_async(self, executable_file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetLauncherExecutableFileAsync(Windows.Storage.IStorageFile,System.String)
+    def set_launcher_executable_file_async(self, executable_file: windows_storage.IStorageFile, launch_params: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of set_launcher_executable_file_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetLauncherExecutableFileAsync(Windows.Storage.IStorageFile,System.String)
+    @deprecated("Use set_launcher_executable_file_async() instead.")
     def set_launcher_executable_file_with_params_async(self, executable_file: windows_storage.IStorageFile, launch_params: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetTitleIdAsync(System.String)
     def set_title_id_async(self, id: str, /) -> windows_foundation.IAsyncAction: ...

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -18,15 +19,27 @@ Self = typing.TypeVar('Self')
 class ResourceLoader_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.ApplicationModel.Resources.ResourceLoader::GetDefaultPriPath(System.String)
     def get_default_pri_path(cls, package_full_name: str, /) -> str: ...
+    @typing.overload
     # Windows.ApplicationModel.Resources.ResourceLoader Windows.ApplicationModel.Resources.ResourceLoader::GetForCurrentView()
     def get_for_current_view(cls) -> ResourceLoader: ...
+    @typing.overload
     # Windows.ApplicationModel.Resources.ResourceLoader Windows.ApplicationModel.Resources.ResourceLoader::GetForCurrentView(System.String)
+    def get_for_current_view(cls, name: str, /) -> ResourceLoader: ...
+    # Deprecated alias of get_for_current_view() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Resources.ResourceLoader Windows.ApplicationModel.Resources.ResourceLoader::GetForCurrentView(System.String)
+    @deprecated("Use get_for_current_view() instead.")
     def get_for_current_view_with_name(cls, name: str, /) -> ResourceLoader: ...
     # Windows.ApplicationModel.Resources.ResourceLoader Windows.ApplicationModel.Resources.ResourceLoader::GetForUIContext(Windows.UI.UIContext)
     def get_for_ui_context(cls, context: windows_ui.UIContext, /) -> ResourceLoader: ...
+    @typing.overload
     # Windows.ApplicationModel.Resources.ResourceLoader Windows.ApplicationModel.Resources.ResourceLoader::GetForViewIndependentUse()
     def get_for_view_independent_use(cls) -> ResourceLoader: ...
+    @typing.overload
     # Windows.ApplicationModel.Resources.ResourceLoader Windows.ApplicationModel.Resources.ResourceLoader::GetForViewIndependentUse(System.String)
+    def get_for_view_independent_use(cls, name: str, /) -> ResourceLoader: ...
+    # Deprecated alias of get_for_view_independent_use() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Resources.ResourceLoader Windows.ApplicationModel.Resources.ResourceLoader::GetForViewIndependentUse(System.String)
+    @deprecated("Use get_for_view_independent_use() instead.")
     def get_for_view_independent_use_with_name(cls, name: str, /) -> ResourceLoader: ...
     # System.String Windows.ApplicationModel.Resources.ResourceLoader::GetStringForReference(Windows.Foundation.Uri)
     def get_string_for_reference(cls, uri: windows_foundation.Uri, /) -> str: ...

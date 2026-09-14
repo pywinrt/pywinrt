@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -53,11 +54,23 @@ class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
     # System.Void Windows.ApplicationModel.Search.SearchPane::SetLocalContentSuggestionSettings(Windows.ApplicationModel.Search.LocalContentSuggestionSettings)
     # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def set_local_content_suggestion_settings(self, settings: LocalContentSuggestionSettings, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Search.SearchPane::Show()
     # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
-    def show_overload_default(self) -> None: ...
+    def show(self) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Search.SearchPane::Show(System.String)
     # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    def show(self, query: str, /) -> None: ...
+    # Deprecated alias of show() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Search.SearchPane::Show()
+    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("Use show() instead.")
+    def show_overload_default(self) -> None: ...
+    # Deprecated alias of show() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Search.SearchPane::Show(System.String)
+    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("Use show() instead.")
     def show_overload_with_query(self, query: str, /) -> None: ...
     # System.Boolean Windows.ApplicationModel.Search.SearchPane::TrySetQueryText(System.String)
     # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")

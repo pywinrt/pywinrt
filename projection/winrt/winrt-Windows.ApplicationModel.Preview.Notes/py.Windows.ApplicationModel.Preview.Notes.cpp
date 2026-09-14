@@ -611,18 +611,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* NotesWindowManagerPreview_ShowNoteRelativeToWithOptions(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -700,18 +689,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* NotesWindowManagerPreview_ShowNoteWithPlacementWithOptions(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -1053,9 +1031,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { "set_thumbnail_image_for_task_switcher_async", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_SetThumbnailImageForTaskSwitcherAsync), METH_VARARGS, nullptr },
         { "show_note", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_ShowNote), METH_VARARGS, nullptr },
         { "show_note_relative_to", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_ShowNoteRelativeTo), METH_VARARGS, nullptr },
-        { "show_note_relative_to_with_options", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_ShowNoteRelativeToWithOptions), METH_VARARGS, nullptr },
         { "show_note_with_placement", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_ShowNoteWithPlacement), METH_VARARGS, nullptr },
-        { "show_note_with_placement_with_options", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_ShowNoteWithPlacementWithOptions), METH_VARARGS, nullptr },
         { "try_set_note_size", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_TrySetNoteSize), METH_VARARGS, nullptr },
         { "add_note_placement_changed", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_add_NotePlacementChanged), METH_O, nullptr },
         { "remove_note_placement_changed", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_remove_NotePlacementChanged), METH_O, nullptr },

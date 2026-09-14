@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_content import (
     ChildSiteLink,
@@ -95,3 +96,6 @@ class ContentSizePolicy(enum.IntEnum):
     RESIZE_CONTENT_TO_PARENT_WINDOW = 1
     RESIZE_PARENT_WINDOW_TO_CONTENT = 2
 
+winrt.runtime._internals.alias_method(ContentCoordinateConverter, "convert_local_to_screen_with_point", "convert_local_to_screen")
+winrt.runtime._internals.alias_method(ContentCoordinateConverter, "convert_local_to_screen_with_points_and_rounding_mode", "convert_local_to_screen")
+winrt.runtime._internals.alias_method(ContentCoordinateConverter, "convert_screen_to_local_with_point", "convert_screen_to_local")

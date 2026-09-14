@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_core import (
     CorePhysicalKeyStatus,
@@ -189,5 +190,8 @@ class CoreWindowFlowDirection(enum.IntEnum):
     LEFT_TO_RIGHT = 0
     RIGHT_TO_LEFT = 1
 
+winrt.runtime._internals.alias_method(CoreDispatcher, "should_yield_to_priority", "should_yield")
+winrt.runtime._internals.alias_method(CoreIndependentInputSourceController, "set_controlled_input_with_filters", "set_controlled_input")
+winrt.runtime._internals.alias_method(TouchHitTestingEventArgs, "evaluate_proximity_to_rect", "evaluate_proximity")
 DispatchedHandler = typing.Callable[[], None]
 IdleDispatchedHandler = typing.Callable[[IdleDispatchedHandlerArgs], None]

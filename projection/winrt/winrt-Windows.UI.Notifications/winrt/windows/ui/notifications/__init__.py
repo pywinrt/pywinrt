@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_notifications import (
     AdaptiveNotificationText,
@@ -300,3 +301,22 @@ class UserNotificationChangedKind(enum.IntEnum):
     ADDED = 0
     REMOVED = 1
 
+winrt.runtime._internals.alias_static_method(BadgeUpdateManager, "create_badge_updater_for_application_with_id", "create_badge_updater_for_application")
+winrt.runtime._internals.alias_method(BadgeUpdateManagerForUser, "create_badge_updater_for_application_with_id", "create_badge_updater_for_application")
+winrt.runtime._internals.alias_method(BadgeUpdater, "start_periodic_update_at_time", "start_periodic_update")
+winrt.runtime._internals.alias_static_method(TileFlyoutUpdateManager, "create_tile_flyout_updater_for_application_with_id", "create_tile_flyout_updater_for_application")
+winrt.runtime._internals.alias_method(TileFlyoutUpdater, "start_periodic_update_at_time", "start_periodic_update")
+winrt.runtime._internals.alias_static_method(TileUpdateManager, "create_tile_updater_for_application_with_id", "create_tile_updater_for_application")
+winrt.runtime._internals.alias_method(TileUpdateManagerForUser, "create_tile_updater_for_application_with_id", "create_tile_updater_for_application")
+winrt.runtime._internals.alias_method(TileUpdater, "start_periodic_update_at_time", "start_periodic_update")
+winrt.runtime._internals.alias_method(TileUpdater, "start_periodic_update_batch_at_time", "start_periodic_update_batch")
+winrt.runtime._internals.alias_method(ToastNotificationHistory, "clear_with_id", "clear")
+winrt.runtime._internals.alias_method(ToastNotificationHistory, "get_history_with_id", "get_history")
+winrt.runtime._internals.alias_method(ToastNotificationHistory, "remove_grouped_tag", "remove")
+winrt.runtime._internals.alias_method(ToastNotificationHistory, "remove_grouped_tag_with_id", "remove")
+winrt.runtime._internals.alias_method(ToastNotificationHistory, "remove_group_with_id", "remove_group")
+winrt.runtime._internals.alias_static_method(ToastNotificationManager, "create_toast_notifier_with_id", "create_toast_notifier")
+winrt.runtime._internals.alias_method(ToastNotificationManagerForUser, "create_toast_notifier_with_id", "create_toast_notifier")
+winrt.runtime._internals.alias_method(ToastNotificationManagerForUser, "get_toast_collection_manager_with_app_id", "get_toast_collection_manager")
+winrt.runtime._internals.alias_method(ToastNotifier, "update_with_tag", "update")
+winrt.runtime._internals.alias_method(ToastNotifier, "update_with_tag_and_group", "update")

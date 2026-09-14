@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -105,22 +106,39 @@ class InteractionTracker(microsoft_ui_composition.CompositionObject, metaclass=I
     def configure_scale_inertia_modifiers(self, modifiers: typing.Iterable[InteractionTrackerInertiaModifier], /) -> None: ...
     # System.Void Microsoft.UI.Composition.Interactions.InteractionTracker::ConfigureVector2PositionInertiaModifiers(Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier>)
     def configure_vector2_position_inertia_modifiers(self, modifiers: typing.Iterable[InteractionTrackerVector2InertiaModifier], /) -> None: ...
+    @typing.overload
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3)
     def try_update_position(self, value: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> winrt.system.Int32: ...
+    @typing.overload
+    # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption)
+    def try_update_position(self, value: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], option: InteractionTrackerClampingOption, /) -> winrt.system.Int32: ...
+    @typing.overload
+    # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption,Microsoft.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption)
+    def try_update_position(self, value: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], option: InteractionTrackerClampingOption, pos_update_option: InteractionTrackerPositionUpdateOption, /) -> winrt.system.Int32: ...
+    @typing.overload
+    # Deprecated alias of try_update_position() for pywinrt v3.x compatibility.
+    # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption)
+    @deprecated("Use try_update_position() instead.")
+    def try_update_position_with_option(self, value: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], option: InteractionTrackerClampingOption, /) -> winrt.system.Int32: ...
+    @typing.overload
+    # Deprecated alias of try_update_position() for pywinrt v3.x compatibility.
+    # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption,Microsoft.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption)
+    @deprecated("Use try_update_position() instead.")
+    def try_update_position_with_option(self, value: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], option: InteractionTrackerClampingOption, pos_update_option: InteractionTrackerPositionUpdateOption, /) -> winrt.system.Int32: ...
+    @typing.overload
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionBy(Windows.Foundation.Numerics.Vector3)
     def try_update_position_by(self, amount: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> winrt.system.Int32: ...
+    @typing.overload
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionBy(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption)
+    def try_update_position_by(self, amount: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], option: InteractionTrackerClampingOption, /) -> winrt.system.Int32: ...
+    # Deprecated alias of try_update_position_by() for pywinrt v3.x compatibility.
+    # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionBy(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption)
+    @deprecated("Use try_update_position_by() instead.")
     def try_update_position_by_with_option(self, amount: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], option: InteractionTrackerClampingOption, /) -> winrt.system.Int32: ...
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionWithAdditionalVelocity(Windows.Foundation.Numerics.Vector3)
     def try_update_position_with_additional_velocity(self, velocity_in_pixels_per_second: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> winrt.system.Int32: ...
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionWithAnimation(Microsoft.UI.Composition.CompositionAnimation)
     def try_update_position_with_animation(self, animation: microsoft_ui_composition.CompositionAnimation, /) -> winrt.system.Int32: ...
-    @typing.overload
-    # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption)
-    def try_update_position_with_option(self, value: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], option: InteractionTrackerClampingOption, /) -> winrt.system.Int32: ...
-    @typing.overload
-    # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption,Microsoft.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption)
-    def try_update_position_with_option(self, value: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], option: InteractionTrackerClampingOption, pos_update_option: InteractionTrackerPositionUpdateOption, /) -> winrt.system.Int32: ...
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdateScale(System.Single,Windows.Foundation.Numerics.Vector3)
     def try_update_scale(self, value: winrt.system.Single, center_point: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> winrt.system.Int32: ...
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdateScaleWithAdditionalVelocity(System.Single,Windows.Foundation.Numerics.Vector3)

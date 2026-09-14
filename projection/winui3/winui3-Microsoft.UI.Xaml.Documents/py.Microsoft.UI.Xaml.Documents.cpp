@@ -6424,7 +6424,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_OnDisconnectVisualChildren(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* TextElement_OnDisconnectVisualChildren_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -8687,7 +8687,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyMethodDef _methods_TextElement[] = {
         { "find_name", reinterpret_cast<PyCFunction>(TextElement_FindName), METH_VARARGS, nullptr },
-        { "_on_disconnect_visual_children", reinterpret_cast<PyCFunction>(TextElement_OnDisconnectVisualChildren), METH_VARARGS, nullptr },
+        { "_on_disconnect_visual_children", reinterpret_cast<PyCFunction>(TextElement_OnDisconnectVisualChildren_protected), METH_VARARGS, nullptr },
         { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(TextElement_add_AccessKeyDisplayDismissed), METH_O, nullptr },
         { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(TextElement_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
         { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(TextElement_add_AccessKeyDisplayRequested), METH_O, nullptr },

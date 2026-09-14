@@ -97,18 +97,7 @@ namespace py::cpp::Windows::AI::Actions::Hosting
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ActionCatalog_GetActionsForInputs2(py::wrapper::Windows::AI::Actions::Hosting::ActionCatalog* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -302,7 +291,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
     static PyMethodDef _methods_ActionCatalog[] = {
         { "close", reinterpret_cast<PyCFunction>(ActionCatalog_Close), METH_VARARGS, nullptr },
         { "get_actions_for_inputs", reinterpret_cast<PyCFunction>(ActionCatalog_GetActionsForInputs), METH_VARARGS, nullptr },
-        { "get_actions_for_inputs2", reinterpret_cast<PyCFunction>(ActionCatalog_GetActionsForInputs2), METH_VARARGS, nullptr },
         { "get_all_actions", reinterpret_cast<PyCFunction>(ActionCatalog_GetAllActions), METH_VARARGS, nullptr },
         { "add_changed", reinterpret_cast<PyCFunction>(ActionCatalog_add_Changed), METH_O, nullptr },
         { "remove_changed", reinterpret_cast<PyCFunction>(ActionCatalog_remove_Changed), METH_O, nullptr },

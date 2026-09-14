@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_media_imaging import (
     BitmapImage,
@@ -61,4 +62,5 @@ class SvgImageSourceLoadStatus(enum.IntEnum):
     INVALID_FORMAT = 2
     OTHER = 3
 
+winrt.runtime._internals.alias_method(RenderTargetBitmap, "render_to_size_async", "render_async")
 DownloadProgressEventHandler = typing.Callable[[winrt.system.Object, DownloadProgressEventArgs], None]

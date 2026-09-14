@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_graphics_holographic import (
     HolographicAdapterId,
@@ -83,3 +84,6 @@ class HolographicViewConfigurationKind(enum.IntEnum):
     DISPLAY = 0
     PHOTO_VIDEO_CAMERA = 1
 
+winrt.runtime._internals.alias_method(HolographicCameraRenderingParameters, "set_focus_point_with_normal", "set_focus_point")
+winrt.runtime._internals.alias_method(HolographicCameraRenderingParameters, "set_focus_point_with_normal_linear_velocity", "set_focus_point")
+winrt.runtime._internals.alias_method(HolographicFrame, "present_using_current_prediction_with_behavior", "present_using_current_prediction")

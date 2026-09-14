@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_store import (
     CurrentApp,
@@ -51,4 +52,8 @@ class ProductType(enum.IntEnum):
     DURABLE = 1
     CONSUMABLE = 2
 
+winrt.runtime._internals.alias_static_method(CurrentApp, "request_product_purchase_with_display_properties_async", "request_product_purchase_async")
+winrt.runtime._internals.alias_static_method(CurrentApp, "request_product_purchase_with_results_async", "request_product_purchase_async")
+winrt.runtime._internals.alias_static_method(CurrentAppSimulator, "request_product_purchase_with_display_properties_async", "request_product_purchase_async")
+winrt.runtime._internals.alias_static_method(CurrentAppSimulator, "request_product_purchase_with_results_async", "request_product_purchase_async")
 LicenseChangedEventHandler = typing.Callable[[], None]

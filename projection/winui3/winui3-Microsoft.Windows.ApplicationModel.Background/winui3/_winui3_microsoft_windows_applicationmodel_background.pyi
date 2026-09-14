@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -18,9 +19,15 @@ class BackgroundTaskBuilder(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder::AddCondition(Windows.ApplicationModel.Background.IBackgroundCondition)
     def add_condition(self, condition: windows_applicationmodel_background.IBackgroundCondition, /) -> None: ...
+    @typing.overload
     # Windows.ApplicationModel.Background.BackgroundTaskRegistration Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder::Register()
     def register(self) -> windows_applicationmodel_background.BackgroundTaskRegistration: ...
+    @typing.overload
     # Windows.ApplicationModel.Background.BackgroundTaskRegistration Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder::Register(System.String)
+    def register(self, name: str, /) -> windows_applicationmodel_background.BackgroundTaskRegistration: ...
+    # Deprecated alias of register() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Background.BackgroundTaskRegistration Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder::Register(System.String)
+    @deprecated("Use register() instead.")
     def register2(self, name: str, /) -> windows_applicationmodel_background.BackgroundTaskRegistration: ...
     # System.Void Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder::SetTaskEntryPointClsid(System.Guid)
     def set_task_entry_point_clsid(self, cls_id: _uuid.UUID, /) -> None: ...

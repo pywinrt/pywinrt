@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -401,15 +402,32 @@ class Printing3DModel(winrt.system.Object):
     def repair_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.Boolean,System.Double> Windows.Graphics.Printing3D.Printing3DModel::RepairWithProgressAsync()
     def repair_with_progress_async(self) -> windows_foundation.IAsyncOperationWithProgress[bool, winrt.system.Double]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Graphics.Printing3D.Printing3DModel::TryPartialRepairAsync()
     def try_partial_repair_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Graphics.Printing3D.Printing3DModel::TryPartialRepairAsync(Windows.Foundation.TimeSpan)
+    def try_partial_repair_async(self, max_wait_time: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_partial_repair_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Graphics.Printing3D.Printing3DModel::TryPartialRepairAsync(Windows.Foundation.TimeSpan)
+    @deprecated("Use try_partial_repair_async() instead.")
     def try_partial_repair_with_time_async(self, max_wait_time: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.Boolean,System.Double> Windows.Graphics.Printing3D.Printing3DModel::TryReduceFacesAsync()
     def try_reduce_faces_async(self) -> windows_foundation.IAsyncOperationWithProgress[bool, winrt.system.Double]: ...
-    # Windows.Foundation.IAsyncOperationWithProgress`2<System.Boolean,System.Double> Windows.Graphics.Printing3D.Printing3DModel::TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions,Windows.Foundation.TimeSpan)
-    def try_reduce_faces_with_options_and_time_async(self, printing_3d_face_reduction_options: Printing3DFaceReductionOptions, max_wait: datetime.timedelta, /) -> windows_foundation.IAsyncOperationWithProgress[bool, winrt.system.Double]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.Boolean,System.Double> Windows.Graphics.Printing3D.Printing3DModel::TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions)
+    def try_reduce_faces_async(self, printing_3d_face_reduction_options: Printing3DFaceReductionOptions, /) -> windows_foundation.IAsyncOperationWithProgress[bool, winrt.system.Double]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.Boolean,System.Double> Windows.Graphics.Printing3D.Printing3DModel::TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions,Windows.Foundation.TimeSpan)
+    def try_reduce_faces_async(self, printing_3d_face_reduction_options: Printing3DFaceReductionOptions, max_wait: datetime.timedelta, /) -> windows_foundation.IAsyncOperationWithProgress[bool, winrt.system.Double]: ...
+    # Deprecated alias of try_reduce_faces_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.Boolean,System.Double> Windows.Graphics.Printing3D.Printing3DModel::TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions,Windows.Foundation.TimeSpan)
+    @deprecated("Use try_reduce_faces_async() instead.")
+    def try_reduce_faces_with_options_and_time_async(self, printing_3d_face_reduction_options: Printing3DFaceReductionOptions, max_wait: datetime.timedelta, /) -> windows_foundation.IAsyncOperationWithProgress[bool, winrt.system.Double]: ...
+    # Deprecated alias of try_reduce_faces_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.Boolean,System.Double> Windows.Graphics.Printing3D.Printing3DModel::TryReduceFacesAsync(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions)
+    @deprecated("Use try_reduce_faces_async() instead.")
     def try_reduce_faces_with_options_async(self, printing_3d_face_reduction_options: Printing3DFaceReductionOptions, /) -> windows_foundation.IAsyncOperationWithProgress[bool, winrt.system.Double]: ...
     # System.String Windows.Graphics.Printing3D.Printing3DModel::get_Version()
     @_property

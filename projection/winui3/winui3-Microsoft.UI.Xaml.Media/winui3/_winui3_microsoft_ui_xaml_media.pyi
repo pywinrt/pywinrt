@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -834,13 +835,25 @@ class LoadedImageSourceLoadCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class LoadedImageSurface_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Microsoft.UI.Xaml.Media.LoadedImageSurface Microsoft.UI.Xaml.Media.LoadedImageSurface::StartLoadFromStream(Windows.Storage.Streams.IRandomAccessStream)
     def start_load_from_stream(cls, stream: windows_storage_streams.IRandomAccessStream, /) -> LoadedImageSurface: ...
+    @typing.overload
     # Microsoft.UI.Xaml.Media.LoadedImageSurface Microsoft.UI.Xaml.Media.LoadedImageSurface::StartLoadFromStream(Windows.Storage.Streams.IRandomAccessStream,Windows.Foundation.Size)
+    def start_load_from_stream(cls, stream: windows_storage_streams.IRandomAccessStream, desired_max_size: typing.Union[windows_foundation.Size, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> LoadedImageSurface: ...
+    # Deprecated alias of start_load_from_stream() for pywinrt v3.x compatibility.
+    # Microsoft.UI.Xaml.Media.LoadedImageSurface Microsoft.UI.Xaml.Media.LoadedImageSurface::StartLoadFromStream(Windows.Storage.Streams.IRandomAccessStream,Windows.Foundation.Size)
+    @deprecated("Use start_load_from_stream() instead.")
     def start_load_from_stream_with_size(cls, stream: windows_storage_streams.IRandomAccessStream, desired_max_size: typing.Union[windows_foundation.Size, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> LoadedImageSurface: ...
+    @typing.overload
     # Microsoft.UI.Xaml.Media.LoadedImageSurface Microsoft.UI.Xaml.Media.LoadedImageSurface::StartLoadFromUri(Windows.Foundation.Uri)
     def start_load_from_uri(cls, uri: windows_foundation.Uri, /) -> LoadedImageSurface: ...
+    @typing.overload
     # Microsoft.UI.Xaml.Media.LoadedImageSurface Microsoft.UI.Xaml.Media.LoadedImageSurface::StartLoadFromUri(Windows.Foundation.Uri,Windows.Foundation.Size)
+    def start_load_from_uri(cls, uri: windows_foundation.Uri, desired_max_size: typing.Union[windows_foundation.Size, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> LoadedImageSurface: ...
+    # Deprecated alias of start_load_from_uri() for pywinrt v3.x compatibility.
+    # Microsoft.UI.Xaml.Media.LoadedImageSurface Microsoft.UI.Xaml.Media.LoadedImageSurface::StartLoadFromUri(Windows.Foundation.Uri,Windows.Foundation.Size)
+    @deprecated("Use start_load_from_uri() instead.")
     def start_load_from_uri_with_size(cls, uri: windows_foundation.Uri, desired_max_size: typing.Union[windows_foundation.Size, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> LoadedImageSurface: ...
 
 @typing.final
@@ -1762,11 +1775,21 @@ class TranslateTransform(Transform, metaclass=TranslateTransform_Static):
 class VisualTreeHelper_Static(winrt._winrt.IInspectable_Static):
     # System.Void Microsoft.UI.Xaml.Media.VisualTreeHelper::DisconnectChildrenRecursive(Microsoft.UI.Xaml.UIElement)
     def disconnect_children_recursive(cls, element: microsoft_ui_xaml.UIElement, /) -> None: ...
-    # Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Media.VisualTreeHelper::FindElementsInHostCoordinates(Windows.Foundation.Point,Microsoft.UI.Xaml.UIElement,System.Boolean)
-    def find_all_elements_in_host_coordinates_point(cls, intersecting_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], subtree: microsoft_ui_xaml.UIElement, include_all_elements: bool, /) -> typing.Iterable[microsoft_ui_xaml.UIElement]: ...
     # Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Media.VisualTreeHelper::FindElementsInHostCoordinates(Windows.Foundation.Rect,Microsoft.UI.Xaml.UIElement,System.Boolean)
     def find_all_elements_in_host_coordinates_rect(cls, intersecting_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], subtree: microsoft_ui_xaml.UIElement, include_all_elements: bool, /) -> typing.Iterable[microsoft_ui_xaml.UIElement]: ...
+    @typing.overload
     # Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Media.VisualTreeHelper::FindElementsInHostCoordinates(Windows.Foundation.Point,Microsoft.UI.Xaml.UIElement)
+    def find_elements_in_host_coordinates(cls, intersecting_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], subtree: microsoft_ui_xaml.UIElement, /) -> typing.Iterable[microsoft_ui_xaml.UIElement]: ...
+    @typing.overload
+    # Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Media.VisualTreeHelper::FindElementsInHostCoordinates(Windows.Foundation.Point,Microsoft.UI.Xaml.UIElement,System.Boolean)
+    def find_elements_in_host_coordinates(cls, intersecting_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], subtree: microsoft_ui_xaml.UIElement, include_all_elements: bool, /) -> typing.Iterable[microsoft_ui_xaml.UIElement]: ...
+    # Deprecated alias of find_elements_in_host_coordinates() for pywinrt v3.x compatibility.
+    # Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Media.VisualTreeHelper::FindElementsInHostCoordinates(Windows.Foundation.Point,Microsoft.UI.Xaml.UIElement,System.Boolean)
+    @deprecated("Use find_elements_in_host_coordinates() instead.")
+    def find_all_elements_in_host_coordinates_point(cls, intersecting_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], subtree: microsoft_ui_xaml.UIElement, include_all_elements: bool, /) -> typing.Iterable[microsoft_ui_xaml.UIElement]: ...
+    # Deprecated alias of find_elements_in_host_coordinates() for pywinrt v3.x compatibility.
+    # Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Media.VisualTreeHelper::FindElementsInHostCoordinates(Windows.Foundation.Point,Microsoft.UI.Xaml.UIElement)
+    @deprecated("Use find_elements_in_host_coordinates() instead.")
     def find_elements_in_host_coordinates_point(cls, intersecting_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], subtree: microsoft_ui_xaml.UIElement, /) -> typing.Iterable[microsoft_ui_xaml.UIElement]: ...
     # Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Media.VisualTreeHelper::FindElementsInHostCoordinates(Windows.Foundation.Rect,Microsoft.UI.Xaml.UIElement)
     def find_elements_in_host_coordinates_rect(cls, intersecting_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], subtree: microsoft_ui_xaml.UIElement, /) -> typing.Iterable[microsoft_ui_xaml.UIElement]: ...

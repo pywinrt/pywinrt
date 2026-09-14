@@ -94,6 +94,39 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
         }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CreateDownload", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDownload(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -145,50 +178,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static PyObject* BackgroundDownloader_CreateDownloadFromFile(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CreateDownload", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.CreateDownload(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* BackgroundDownloader_GetCurrentDownloadsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -222,18 +211,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BackgroundDownloader_GetCurrentDownloadsForGroupAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1146,7 +1124,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyMethodDef _methods_BackgroundDownloader[] = {
         { "create_download", reinterpret_cast<PyCFunction>(BackgroundDownloader_CreateDownload), METH_VARARGS, nullptr },
         { "create_download_async", reinterpret_cast<PyCFunction>(BackgroundDownloader_CreateDownloadAsync), METH_VARARGS, nullptr },
-        { "create_download_from_file", reinterpret_cast<PyCFunction>(BackgroundDownloader_CreateDownloadFromFile), METH_VARARGS, nullptr },
         { "set_request_header", reinterpret_cast<PyCFunction>(BackgroundDownloader_SetRequestHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundDownloader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundDownloader), METH_O | METH_STATIC, nullptr },
@@ -1185,7 +1162,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyMethodDef methods_BackgroundDownloader_Static[] = {
         { "get_current_downloads_async", reinterpret_cast<PyCFunction>(BackgroundDownloader_GetCurrentDownloadsAsync), METH_VARARGS, nullptr },
-        { "get_current_downloads_for_group_async", reinterpret_cast<PyCFunction>(BackgroundDownloader_GetCurrentDownloadsForGroupAsync), METH_VARARGS, nullptr },
         { "get_current_downloads_for_transfer_group_async", reinterpret_cast<PyCFunction>(BackgroundDownloader_GetCurrentDownloadsForTransferGroupAsync), METH_VARARGS, nullptr },
         { "request_unconstrained_downloads_async", reinterpret_cast<PyCFunction>(BackgroundDownloader_RequestUnconstrainedDownloadsAsync), METH_VARARGS, nullptr },
         { }};
@@ -2351,50 +2327,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static PyObject* BackgroundUploader_CreateUploadFromStreamAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadFromStreamAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.CreateUploadFromStreamAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BackgroundUploader_CreateUploadWithFormDataAndAutoBoundaryAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
+    static PyObject* BackgroundUploader_CreateUploadAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -2430,18 +2363,40 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 3)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateUploadAsync(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* BackgroundUploader_CreateUploadWithSubTypeAndBoundaryAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -2482,11 +2437,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static PyObject* BackgroundUploader_CreateUploadWithSubTypeAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
+    static PyObject* BackgroundUploader_CreateUploadFromStreamAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 3)
+        if (arg_count == 2)
         {
             try
             {
@@ -2494,23 +2449,22 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadFromStreamAsync", 2);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(2);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.CreateUploadAsync(param0, param1, param2);
+                    return self->obj.CreateUploadFromStreamAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -2559,18 +2513,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BackgroundUploader_GetCurrentUploadsForGroupAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -3482,10 +3425,8 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyMethodDef _methods_BackgroundUploader[] = {
         { "create_upload", reinterpret_cast<PyCFunction>(BackgroundUploader_CreateUpload), METH_VARARGS, nullptr },
+        { "create_upload_async", reinterpret_cast<PyCFunction>(BackgroundUploader_CreateUploadAsync), METH_VARARGS, nullptr },
         { "create_upload_from_stream_async", reinterpret_cast<PyCFunction>(BackgroundUploader_CreateUploadFromStreamAsync), METH_VARARGS, nullptr },
-        { "create_upload_with_form_data_and_auto_boundary_async", reinterpret_cast<PyCFunction>(BackgroundUploader_CreateUploadWithFormDataAndAutoBoundaryAsync), METH_VARARGS, nullptr },
-        { "create_upload_with_sub_type_and_boundary_async", reinterpret_cast<PyCFunction>(BackgroundUploader_CreateUploadWithSubTypeAndBoundaryAsync), METH_VARARGS, nullptr },
-        { "create_upload_with_sub_type_async", reinterpret_cast<PyCFunction>(BackgroundUploader_CreateUploadWithSubTypeAsync), METH_VARARGS, nullptr },
         { "set_request_header", reinterpret_cast<PyCFunction>(BackgroundUploader_SetRequestHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundUploader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundUploader), METH_O | METH_STATIC, nullptr },
@@ -3524,7 +3465,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyMethodDef methods_BackgroundUploader_Static[] = {
         { "get_current_uploads_async", reinterpret_cast<PyCFunction>(BackgroundUploader_GetCurrentUploadsAsync), METH_VARARGS, nullptr },
-        { "get_current_uploads_for_group_async", reinterpret_cast<PyCFunction>(BackgroundUploader_GetCurrentUploadsForGroupAsync), METH_VARARGS, nullptr },
         { "get_current_uploads_for_transfer_group_async", reinterpret_cast<PyCFunction>(BackgroundUploader_GetCurrentUploadsForTransferGroupAsync), METH_VARARGS, nullptr },
         { "request_unconstrained_uploads_async", reinterpret_cast<PyCFunction>(BackgroundUploader_RequestUnconstrainedUploadsAsync), METH_VARARGS, nullptr },
         { }};

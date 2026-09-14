@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_services_maps_guidance import (
     GuidanceAudioNotificationRequestedEventArgs,
@@ -128,3 +129,4 @@ class GuidanceMode(enum.IntEnum):
     NAVIGATION = 2
     TRACKING = 3
 
+winrt.runtime._internals.alias_method(GuidanceNavigator, "update_user_location_with_position_override", "update_user_location")

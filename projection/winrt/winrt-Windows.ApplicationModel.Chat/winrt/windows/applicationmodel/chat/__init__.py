@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_chat import (
     ChatCapabilities,
@@ -201,3 +202,15 @@ class RcsServiceKind(enum.IntEnum):
     FILE_TRANSFER = 2
     CAPABILITY = 3
 
+winrt.runtime._internals.alias_static_method(ChatCapabilitiesManager, "get_cached_capabilities_for_transport_async", "get_cached_capabilities_async")
+winrt.runtime._internals.alias_static_method(ChatCapabilitiesManager, "get_capabilities_from_network_for_transport_async", "get_capabilities_from_network_async")
+winrt.runtime._internals.alias_method(ChatConversation, "mark_all_messages_as_read_async", "mark_messages_as_read_async")
+winrt.runtime._internals.alias_method(ChatConversationReader, "read_batch_with_count_async", "read_batch_async")
+winrt.runtime._internals.alias_method(ChatMessageReader, "read_batch_with_count_async", "read_batch_async")
+winrt.runtime._internals.alias_method(ChatMessageStore, "get_conversation_for_transports_async", "get_conversation_async")
+winrt.runtime._internals.alias_method(ChatMessageStore, "get_conversation_for_transports_reader", "get_conversation_reader")
+winrt.runtime._internals.alias_method(ChatMessageStore, "get_message_reader1", "get_message_reader")
+winrt.runtime._internals.alias_method(ChatMessageStore, "get_message_reader2", "get_message_reader")
+winrt.runtime._internals.alias_method(ChatMessageStore, "get_unseen_count_for_transports_reader_async", "get_unseen_count_async")
+winrt.runtime._internals.alias_method(ChatMessageStore, "mark_as_seen_for_transports_async", "mark_as_seen_async")
+winrt.runtime._internals.alias_method(ChatSearchReader, "read_batch_with_count_async", "read_batch_async")

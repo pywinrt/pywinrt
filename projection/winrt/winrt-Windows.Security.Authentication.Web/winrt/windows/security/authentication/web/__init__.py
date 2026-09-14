@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_authentication_web import (
     WebAuthenticationBroker,
@@ -33,3 +34,8 @@ class WebAuthenticationStatus(enum.IntEnum):
     USER_CANCEL = 1
     ERROR_HTTP = 2
 
+winrt.runtime._internals.alias_static_method(WebAuthenticationBroker, "authenticate_with_callback_uri_and_continue", "authenticate_and_continue")
+winrt.runtime._internals.alias_static_method(WebAuthenticationBroker, "authenticate_with_callback_uri_continuation_data_and_options_and_continue", "authenticate_and_continue")
+winrt.runtime._internals.alias_static_method(WebAuthenticationBroker, "authenticate_with_callback_uri_async", "authenticate_async")
+winrt.runtime._internals.alias_static_method(WebAuthenticationBroker, "authenticate_without_callback_uri_async", "authenticate_async")
+winrt.runtime._internals.alias_static_method(WebAuthenticationBroker, "authenticate_silently_with_options_async", "authenticate_silently_async")

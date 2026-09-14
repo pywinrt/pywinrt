@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_authentication_onlineid import (
     OnlineIdAuthenticator,
@@ -41,3 +42,4 @@ class OnlineIdSystemTicketStatus(enum.IntEnum):
     ERROR = 1
     SERVICE_CONNECTION_ERROR = 2
 
+winrt.runtime._internals.alias_method(OnlineIdAuthenticator, "authenticate_user_async_advanced", "authenticate_user_async")

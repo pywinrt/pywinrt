@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_printers import (
     IppAttributeError,
@@ -101,3 +102,6 @@ class VirtualPrinterPreferredInputFormat(enum.IntEnum):
     OPEN_XPS = 0
     POST_SCRIPT = 1
 
+winrt.runtime._internals.alias_static_method(VirtualPrinterManager, "find_all_virtual_printers2", "find_all_virtual_printers")
+winrt.runtime._internals.alias_static_method(VirtualPrinterManager, "install_virtual_printer_async2", "install_virtual_printer_async")
+winrt.runtime._internals.alias_static_method(VirtualPrinterManager, "install_virtual_printer_for_all_users_async2", "install_virtual_printer_for_all_users_async")

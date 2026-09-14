@@ -3496,18 +3496,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ConnectedAnimation_TryStartWithCoordinatedElements(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -3777,7 +3766,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         { "cancel", reinterpret_cast<PyCFunction>(ConnectedAnimation_Cancel), METH_VARARGS, nullptr },
         { "set_animation_component", reinterpret_cast<PyCFunction>(ConnectedAnimation_SetAnimationComponent), METH_VARARGS, nullptr },
         { "try_start", reinterpret_cast<PyCFunction>(ConnectedAnimation_TryStart), METH_VARARGS, nullptr },
-        { "try_start_with_coordinated_elements", reinterpret_cast<PyCFunction>(ConnectedAnimation_TryStartWithCoordinatedElements), METH_VARARGS, nullptr },
         { "add_completed", reinterpret_cast<PyCFunction>(ConnectedAnimation_add_Completed), METH_O, nullptr },
         { "remove_completed", reinterpret_cast<PyCFunction>(ConnectedAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_ConnectedAnimation, METH_O | METH_STATIC, nullptr },
@@ -13386,7 +13374,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
-    static PyObject* NavigationTransitionInfo_GetNavigationStateCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* NavigationTransitionInfo_GetNavigationStateCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -13426,7 +13414,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         }
     }
 
-    static PyObject* NavigationTransitionInfo_SetNavigationStateCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* NavigationTransitionInfo_SetNavigationStateCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -13494,8 +13482,8 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_NavigationTransitionInfo[] = {
-        { "_get_navigation_state_core", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_GetNavigationStateCore), METH_VARARGS, nullptr },
-        { "_set_navigation_state_core", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_SetNavigationStateCore), METH_VARARGS, nullptr },
+        { "_get_navigation_state_core", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_GetNavigationStateCore_protected), METH_VARARGS, nullptr },
+        { "_set_navigation_state_core", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_SetNavigationStateCore_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
         { }};

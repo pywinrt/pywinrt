@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -162,9 +163,15 @@ class InkManager(winrt.system.Object, IInkRecognizerContainer, IInkStrokeContain
     def process_pointer_up(self, pointer_point: windows_ui_input.PointerPoint, /) -> windows_foundation.Rect: ...
     # System.Object Windows.UI.Input.Inking.InkManager::ProcessPointerUpdate(Windows.UI.Input.PointerPoint)
     def process_pointer_update(self, pointer_point: windows_ui_input.PointerPoint, /) -> winrt.system.Object: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkRecognitionResult>> Windows.UI.Input.Inking.InkManager::RecognizeAsync(Windows.UI.Input.Inking.InkRecognitionTarget)
+    def recognize_async(self, recognition_target: InkRecognitionTarget, /) -> windows_foundation.IAsyncOperation[typing.Sequence[InkRecognitionResult]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkRecognitionResult>> Windows.UI.Input.Inking.InkManager::RecognizeAsync(Windows.UI.Input.Inking.InkStrokeContainer,Windows.UI.Input.Inking.InkRecognitionTarget)
     def recognize_async(self, stroke_collection: InkStrokeContainer, recognition_target: InkRecognitionTarget, /) -> windows_foundation.IAsyncOperation[typing.Sequence[InkRecognitionResult]]: ...
+    # Deprecated alias of recognize_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkRecognitionResult>> Windows.UI.Input.Inking.InkManager::RecognizeAsync(Windows.UI.Input.Inking.InkRecognitionTarget)
+    @deprecated("Use recognize_async() instead.")
     def recognize_async2(self, recognition_target: InkRecognitionTarget, /) -> windows_foundation.IAsyncOperation[typing.Sequence[InkRecognitionResult]]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt32,System.UInt32> Windows.UI.Input.Inking.InkManager::SaveAsync(Windows.Storage.Streams.IOutputStream)
     def save_async(self, output_stream: windows_storage_streams.IOutputStream, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
@@ -538,9 +545,15 @@ class InkStrokeContainer(winrt.system.Object, IInkStrokeContainer):
     def move_selected(self, translation: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.Rect: ...
     # Windows.Foundation.Rect Windows.UI.Input.Inking.InkStrokeContainer::PasteFromClipboard(Windows.Foundation.Point)
     def paste_from_clipboard(self, position: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.Rect: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt32,System.UInt32> Windows.UI.Input.Inking.InkStrokeContainer::SaveAsync(Windows.Storage.Streams.IOutputStream)
     def save_async(self, output_stream: windows_storage_streams.IOutputStream, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt32,System.UInt32> Windows.UI.Input.Inking.InkStrokeContainer::SaveAsync(Windows.Storage.Streams.IOutputStream,Windows.UI.Input.Inking.InkPersistenceFormat)
+    def save_async(self, output_stream: windows_storage_streams.IOutputStream, ink_persistence_format: InkPersistenceFormat, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
+    # Deprecated alias of save_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt32,System.UInt32> Windows.UI.Input.Inking.InkStrokeContainer::SaveAsync(Windows.Storage.Streams.IOutputStream,Windows.UI.Input.Inking.InkPersistenceFormat)
+    @deprecated("Use save_async() instead.")
     def save_with_format_async(self, output_stream: windows_storage_streams.IOutputStream, ink_persistence_format: InkPersistenceFormat, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
     # Windows.Foundation.Rect Windows.UI.Input.Inking.InkStrokeContainer::SelectWithLine(Windows.Foundation.Point,Windows.Foundation.Point)
     def select_with_line(self, from_: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], to: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.Rect: ...

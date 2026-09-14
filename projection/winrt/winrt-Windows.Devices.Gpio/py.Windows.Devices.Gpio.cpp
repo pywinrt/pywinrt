@@ -1286,18 +1286,7 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* GpioController_OpenPinWithSharingMode(py::wrapper::Windows::Devices::Gpio::GpioController* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1455,7 +1444,6 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyMethodDef _methods_GpioController[] = {
         { "open_pin", reinterpret_cast<PyCFunction>(GpioController_OpenPin), METH_VARARGS, nullptr },
-        { "open_pin_with_sharing_mode", reinterpret_cast<PyCFunction>(GpioController_OpenPinWithSharingMode), METH_VARARGS, nullptr },
         { "try_open_pin", reinterpret_cast<PyCFunction>(GpioController_TryOpenPin), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GpioController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GpioController), METH_O | METH_STATIC, nullptr },

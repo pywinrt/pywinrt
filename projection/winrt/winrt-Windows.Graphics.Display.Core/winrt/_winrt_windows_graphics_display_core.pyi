@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -57,11 +58,22 @@ class HdmiDisplayInformation(winrt.system.Object, metaclass=HdmiDisplayInformati
     def get_current_display_mode(self) -> HdmiDisplayMode: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Display.Core.HdmiDisplayMode> Windows.Graphics.Display.Core.HdmiDisplayInformation::GetSupportedDisplayModes()
     def get_supported_display_modes(self) -> typing.Sequence[HdmiDisplayMode]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Graphics.Display.Core.HdmiDisplayInformation::RequestSetCurrentDisplayModeAsync(Windows.Graphics.Display.Core.HdmiDisplayMode)
     def request_set_current_display_mode_async(self, mode: HdmiDisplayMode, /) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Graphics.Display.Core.HdmiDisplayInformation::RequestSetCurrentDisplayModeAsync(Windows.Graphics.Display.Core.HdmiDisplayMode,Windows.Graphics.Display.Core.HdmiDisplayHdrOption,Windows.Graphics.Display.Core.HdmiDisplayHdr2086Metadata)
-    def request_set_current_display_mode_with_hdr_and_metadata_async(self, mode: HdmiDisplayMode, hdr_option: HdmiDisplayHdrOption, hdr_metadata: typing.Union[HdmiDisplayHdr2086Metadata, typing.Tuple[winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Graphics.Display.Core.HdmiDisplayInformation::RequestSetCurrentDisplayModeAsync(Windows.Graphics.Display.Core.HdmiDisplayMode,Windows.Graphics.Display.Core.HdmiDisplayHdrOption)
+    def request_set_current_display_mode_async(self, mode: HdmiDisplayMode, hdr_option: HdmiDisplayHdrOption, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Graphics.Display.Core.HdmiDisplayInformation::RequestSetCurrentDisplayModeAsync(Windows.Graphics.Display.Core.HdmiDisplayMode,Windows.Graphics.Display.Core.HdmiDisplayHdrOption,Windows.Graphics.Display.Core.HdmiDisplayHdr2086Metadata)
+    def request_set_current_display_mode_async(self, mode: HdmiDisplayMode, hdr_option: HdmiDisplayHdrOption, hdr_metadata: typing.Union[HdmiDisplayHdr2086Metadata, typing.Tuple[winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of request_set_current_display_mode_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Graphics.Display.Core.HdmiDisplayInformation::RequestSetCurrentDisplayModeAsync(Windows.Graphics.Display.Core.HdmiDisplayMode,Windows.Graphics.Display.Core.HdmiDisplayHdrOption,Windows.Graphics.Display.Core.HdmiDisplayHdr2086Metadata)
+    @deprecated("Use request_set_current_display_mode_async() instead.")
+    def request_set_current_display_mode_with_hdr_and_metadata_async(self, mode: HdmiDisplayMode, hdr_option: HdmiDisplayHdrOption, hdr_metadata: typing.Union[HdmiDisplayHdr2086Metadata, typing.Tuple[winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of request_set_current_display_mode_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Graphics.Display.Core.HdmiDisplayInformation::RequestSetCurrentDisplayModeAsync(Windows.Graphics.Display.Core.HdmiDisplayMode,Windows.Graphics.Display.Core.HdmiDisplayHdrOption)
+    @deprecated("Use request_set_current_display_mode_async() instead.")
     def request_set_current_display_mode_with_hdr_async(self, mode: HdmiDisplayMode, hdr_option: HdmiDisplayHdrOption, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncAction Windows.Graphics.Display.Core.HdmiDisplayInformation::SetDefaultDisplayModeAsync()
     def set_default_display_mode_async(self) -> windows_foundation.IAsyncAction: ...

@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_transcoding import (
     MediaTranscoder,
@@ -25,3 +26,5 @@ class TranscodeFailureReason(enum.IntEnum):
     INVALID_PROFILE = 2
     CODEC_NOT_FOUND = 3
 
+winrt.runtime._internals.alias_method(MediaTranscoder, "add_audio_effect_with_settings", "add_audio_effect")
+winrt.runtime._internals.alias_method(MediaTranscoder, "add_video_effect_with_settings", "add_video_effect")

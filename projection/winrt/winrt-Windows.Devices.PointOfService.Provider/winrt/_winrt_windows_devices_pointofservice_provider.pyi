@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -23,11 +24,22 @@ Self = typing.TypeVar('Self')
 class BarcodeScannerDisableScannerRequest(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest::ReportFailedAsync()
     def report_failed_async(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest::ReportFailedAsync(System.Int32,System.String)
-    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest::ReportFailedAsync(System.Int32)
+    def report_failed_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest::ReportFailedAsync(System.Int32,System.String)
+    def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest::ReportFailedAsync(System.Int32,System.String)
+    @deprecated("Use report_failed_async() instead.")
+    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest::ReportFailedAsync(System.Int32)
+    @deprecated("Use report_failed_async() instead.")
     def report_failed_with_failed_reason_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -42,11 +54,22 @@ class BarcodeScannerDisableScannerRequestEventArgs(winrt.system.Object):
 class BarcodeScannerEnableScannerRequest(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest::ReportFailedAsync()
     def report_failed_async(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest::ReportFailedAsync(System.Int32,System.String)
-    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest::ReportFailedAsync(System.Int32)
+    def report_failed_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest::ReportFailedAsync(System.Int32,System.String)
+    def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest::ReportFailedAsync(System.Int32,System.String)
+    @deprecated("Use report_failed_async() instead.")
+    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest::ReportFailedAsync(System.Int32)
+    @deprecated("Use report_failed_async() instead.")
     def report_failed_with_failed_reason_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -86,11 +109,22 @@ class BarcodeScannerFrameReaderFrameArrivedEventArgs(winrt.system.Object):
 class BarcodeScannerGetSymbologyAttributesRequest(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest::ReportCompletedAsync(Windows.Devices.PointOfService.BarcodeSymbologyAttributes)
     def report_completed_async(self, attributes: windows_devices_pointofservice.BarcodeSymbologyAttributes, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest::ReportFailedAsync()
     def report_failed_async(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest::ReportFailedAsync(System.Int32,System.String)
-    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest::ReportFailedAsync(System.Int32)
+    def report_failed_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest::ReportFailedAsync(System.Int32,System.String)
+    def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest::ReportFailedAsync(System.Int32,System.String)
+    @deprecated("Use report_failed_async() instead.")
+    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest::ReportFailedAsync(System.Int32)
+    @deprecated("Use report_failed_async() instead.")
     def report_failed_with_failed_reason_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
     # System.UInt32 Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest::get_Symbology()
     @_property
@@ -108,11 +142,22 @@ class BarcodeScannerGetSymbologyAttributesRequestEventArgs(winrt.system.Object):
 class BarcodeScannerHideVideoPreviewRequest(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest::ReportFailedAsync()
     def report_failed_async(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest::ReportFailedAsync(System.Int32,System.String)
-    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest::ReportFailedAsync(System.Int32)
+    def report_failed_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest::ReportFailedAsync(System.Int32,System.String)
+    def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest::ReportFailedAsync(System.Int32,System.String)
+    @deprecated("Use report_failed_async() instead.")
+    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest::ReportFailedAsync(System.Int32)
+    @deprecated("Use report_failed_async() instead.")
     def report_failed_with_failed_reason_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -129,15 +174,32 @@ class BarcodeScannerProviderConnection(winrt.system.Object, windows_foundation.I
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::Close()
     def close(self) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader> Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::CreateFrameReaderAsync()
     def create_frame_reader_async(self) -> windows_foundation.IAsyncOperation[BarcodeScannerFrameReader]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader> Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::CreateFrameReaderAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapSize)
-    def create_frame_reader_with_format_and_size_async(self, preferred_format: windows_graphics_imaging.BitmapPixelFormat, preferred_size: typing.Union[windows_graphics_imaging.BitmapSize, typing.Tuple[winrt.system.UInt32, winrt.system.UInt32]], /) -> windows_foundation.IAsyncOperation[BarcodeScannerFrameReader]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader> Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::CreateFrameReaderAsync(Windows.Graphics.Imaging.BitmapPixelFormat)
+    def create_frame_reader_async(self, preferred_format: windows_graphics_imaging.BitmapPixelFormat, /) -> windows_foundation.IAsyncOperation[BarcodeScannerFrameReader]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader> Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::CreateFrameReaderAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapSize)
+    def create_frame_reader_async(self, preferred_format: windows_graphics_imaging.BitmapPixelFormat, preferred_size: typing.Union[windows_graphics_imaging.BitmapSize, typing.Tuple[winrt.system.UInt32, winrt.system.UInt32]], /) -> windows_foundation.IAsyncOperation[BarcodeScannerFrameReader]: ...
+    # Deprecated alias of create_frame_reader_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader> Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::CreateFrameReaderAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapSize)
+    @deprecated("Use create_frame_reader_async() instead.")
+    def create_frame_reader_with_format_and_size_async(self, preferred_format: windows_graphics_imaging.BitmapPixelFormat, preferred_size: typing.Union[windows_graphics_imaging.BitmapSize, typing.Tuple[winrt.system.UInt32, winrt.system.UInt32]], /) -> windows_foundation.IAsyncOperation[BarcodeScannerFrameReader]: ...
+    # Deprecated alias of create_frame_reader_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader> Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::CreateFrameReaderAsync(Windows.Graphics.Imaging.BitmapPixelFormat)
+    @deprecated("Use create_frame_reader_async() instead.")
     def create_frame_reader_with_format_async(self, preferred_format: windows_graphics_imaging.BitmapPixelFormat, /) -> windows_foundation.IAsyncOperation[BarcodeScannerFrameReader]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::ReportErrorAsync(Windows.Devices.PointOfService.UnifiedPosErrorData)
     def report_error_async(self, error_data: windows_devices_pointofservice.UnifiedPosErrorData, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::ReportErrorAsync(Windows.Devices.PointOfService.UnifiedPosErrorData,System.Boolean,Windows.Devices.PointOfService.BarcodeScannerReport)
+    def report_error_async(self, error_data: windows_devices_pointofservice.UnifiedPosErrorData, is_retriable: bool, scan_report: windows_devices_pointofservice.BarcodeScannerReport, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_error_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::ReportErrorAsync(Windows.Devices.PointOfService.UnifiedPosErrorData,System.Boolean,Windows.Devices.PointOfService.BarcodeScannerReport)
+    @deprecated("Use report_error_async() instead.")
     def report_error_async_with_scan_report(self, error_data: windows_devices_pointofservice.UnifiedPosErrorData, is_retriable: bool, scan_report: windows_devices_pointofservice.BarcodeScannerReport, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::ReportScannedDataAsync(Windows.Devices.PointOfService.BarcodeScannerReport)
     def report_scanned_data_async(self, report: windows_devices_pointofservice.BarcodeScannerReport, /) -> windows_foundation.IAsyncAction: ...
@@ -215,11 +277,22 @@ class BarcodeScannerProviderTriggerDetails(winrt.system.Object):
 class BarcodeScannerSetActiveSymbologiesRequest(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest::ReportFailedAsync()
     def report_failed_async(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest::ReportFailedAsync(System.Int32,System.String)
-    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest::ReportFailedAsync(System.Int32)
+    def report_failed_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest::ReportFailedAsync(System.Int32,System.String)
+    def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest::ReportFailedAsync(System.Int32,System.String)
+    @deprecated("Use report_failed_async() instead.")
+    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest::ReportFailedAsync(System.Int32)
+    @deprecated("Use report_failed_async() instead.")
     def report_failed_with_failed_reason_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest::get_Symbologies()
     @_property
@@ -237,11 +310,22 @@ class BarcodeScannerSetActiveSymbologiesRequestEventArgs(winrt.system.Object):
 class BarcodeScannerSetSymbologyAttributesRequest(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest::ReportFailedAsync()
     def report_failed_async(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest::ReportFailedAsync(System.Int32,System.String)
-    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest::ReportFailedAsync(System.Int32)
+    def report_failed_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest::ReportFailedAsync(System.Int32,System.String)
+    def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest::ReportFailedAsync(System.Int32,System.String)
+    @deprecated("Use report_failed_async() instead.")
+    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest::ReportFailedAsync(System.Int32)
+    @deprecated("Use report_failed_async() instead.")
     def report_failed_with_failed_reason_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Devices.PointOfService.BarcodeSymbologyAttributes Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest::get_Attributes()
     @_property
@@ -262,11 +346,22 @@ class BarcodeScannerSetSymbologyAttributesRequestEventArgs(winrt.system.Object):
 class BarcodeScannerStartSoftwareTriggerRequest(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest::ReportFailedAsync()
     def report_failed_async(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest::ReportFailedAsync(System.Int32,System.String)
-    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest::ReportFailedAsync(System.Int32)
+    def report_failed_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest::ReportFailedAsync(System.Int32,System.String)
+    def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest::ReportFailedAsync(System.Int32,System.String)
+    @deprecated("Use report_failed_async() instead.")
+    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest::ReportFailedAsync(System.Int32)
+    @deprecated("Use report_failed_async() instead.")
     def report_failed_with_failed_reason_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -281,11 +376,22 @@ class BarcodeScannerStartSoftwareTriggerRequestEventArgs(winrt.system.Object):
 class BarcodeScannerStopSoftwareTriggerRequest(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest::ReportFailedAsync()
     def report_failed_async(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest::ReportFailedAsync(System.Int32,System.String)
-    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest::ReportFailedAsync(System.Int32)
+    def report_failed_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest::ReportFailedAsync(System.Int32,System.String)
+    def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest::ReportFailedAsync(System.Int32,System.String)
+    @deprecated("Use report_failed_async() instead.")
+    def report_failed_with_failed_reason_and_description_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of report_failed_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest::ReportFailedAsync(System.Int32)
+    @deprecated("Use report_failed_async() instead.")
     def report_failed_with_failed_reason_async(self, reason: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final

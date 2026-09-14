@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -69,21 +70,45 @@ class ImageFeatureValue(winrt.system.Object, ILearningModelFeatureValue, metacla
 
 @typing.final
 class LearningModel_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.LearningModel Windows.AI.MachineLearning.LearningModel::LoadFromFilePath(System.String)
     def load_from_file_path(cls, file_path: str, /) -> LearningModel: ...
+    @typing.overload
     # Windows.AI.MachineLearning.LearningModel Windows.AI.MachineLearning.LearningModel::LoadFromFilePath(System.String,Windows.AI.MachineLearning.ILearningModelOperatorProvider)
+    def load_from_file_path(cls, file_path: str, operator_provider: ILearningModelOperatorProvider, /) -> LearningModel: ...
+    # Deprecated alias of load_from_file_path() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.LearningModel Windows.AI.MachineLearning.LearningModel::LoadFromFilePath(System.String,Windows.AI.MachineLearning.ILearningModelOperatorProvider)
+    @deprecated("Use load_from_file_path() instead.")
     def load_from_file_path_with_operator_provider(cls, file_path: str, operator_provider: ILearningModelOperatorProvider, /) -> LearningModel: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.LearningModel> Windows.AI.MachineLearning.LearningModel::LoadFromStorageFileAsync(Windows.Storage.IStorageFile)
     def load_from_storage_file_async(cls, model_file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[LearningModel]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.LearningModel> Windows.AI.MachineLearning.LearningModel::LoadFromStorageFileAsync(Windows.Storage.IStorageFile,Windows.AI.MachineLearning.ILearningModelOperatorProvider)
+    def load_from_storage_file_async(cls, model_file: windows_storage.IStorageFile, operator_provider: ILearningModelOperatorProvider, /) -> windows_foundation.IAsyncOperation[LearningModel]: ...
+    # Deprecated alias of load_from_storage_file_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.LearningModel> Windows.AI.MachineLearning.LearningModel::LoadFromStorageFileAsync(Windows.Storage.IStorageFile,Windows.AI.MachineLearning.ILearningModelOperatorProvider)
+    @deprecated("Use load_from_storage_file_async() instead.")
     def load_from_storage_file_with_operator_provider_async(cls, model_file: windows_storage.IStorageFile, operator_provider: ILearningModelOperatorProvider, /) -> windows_foundation.IAsyncOperation[LearningModel]: ...
+    @typing.overload
     # Windows.AI.MachineLearning.LearningModel Windows.AI.MachineLearning.LearningModel::LoadFromStream(Windows.Storage.Streams.IRandomAccessStreamReference)
     def load_from_stream(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, /) -> LearningModel: ...
+    @typing.overload
+    # Windows.AI.MachineLearning.LearningModel Windows.AI.MachineLearning.LearningModel::LoadFromStream(Windows.Storage.Streams.IRandomAccessStreamReference,Windows.AI.MachineLearning.ILearningModelOperatorProvider)
+    def load_from_stream(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, operator_provider: ILearningModelOperatorProvider, /) -> LearningModel: ...
+    # Deprecated alias of load_from_stream() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.LearningModel Windows.AI.MachineLearning.LearningModel::LoadFromStream(Windows.Storage.Streams.IRandomAccessStreamReference,Windows.AI.MachineLearning.ILearningModelOperatorProvider)
+    @deprecated("Use load_from_stream() instead.")
+    def load_from_stream_with_operator_provider(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, operator_provider: ILearningModelOperatorProvider, /) -> LearningModel: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.LearningModel> Windows.AI.MachineLearning.LearningModel::LoadFromStreamAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
     def load_from_stream_async(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[LearningModel]: ...
-    # Windows.AI.MachineLearning.LearningModel Windows.AI.MachineLearning.LearningModel::LoadFromStream(Windows.Storage.Streams.IRandomAccessStreamReference,Windows.AI.MachineLearning.ILearningModelOperatorProvider)
-    def load_from_stream_with_operator_provider(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, operator_provider: ILearningModelOperatorProvider, /) -> LearningModel: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.LearningModel> Windows.AI.MachineLearning.LearningModel::LoadFromStreamAsync(Windows.Storage.Streams.IRandomAccessStreamReference,Windows.AI.MachineLearning.ILearningModelOperatorProvider)
+    def load_from_stream_async(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, operator_provider: ILearningModelOperatorProvider, /) -> windows_foundation.IAsyncOperation[LearningModel]: ...
+    # Deprecated alias of load_from_stream_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.LearningModel> Windows.AI.MachineLearning.LearningModel::LoadFromStreamAsync(Windows.Storage.Streams.IRandomAccessStreamReference,Windows.AI.MachineLearning.ILearningModelOperatorProvider)
+    @deprecated("Use load_from_stream_async() instead.")
     def load_from_stream_with_operator_provider_async(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, operator_provider: ILearningModelOperatorProvider, /) -> windows_foundation.IAsyncOperation[LearningModel]: ...
 
 @typing.final
@@ -124,9 +149,15 @@ class LearningModelBinding(winrt.system.Object, winrt._winrt.Mapping[str, winrt.
     def __contains__(self, key: object) -> bool: ...
     def __getitem__(self, key: str) -> winrt.system.Object: ...
     def __new__(cls: typing.Type[Self], session: LearningModelSession) -> Self: ...
+    @typing.overload
     # System.Void Windows.AI.MachineLearning.LearningModelBinding::Bind(System.String,System.Object)
     def bind(self, name: str, value: winrt.system.Object, /) -> None: ...
+    @typing.overload
     # System.Void Windows.AI.MachineLearning.LearningModelBinding::Bind(System.String,System.Object,Windows.Foundation.Collections.IPropertySet)
+    def bind(self, name: str, value: winrt.system.Object, props: windows_foundation_collections.IPropertySet, /) -> None: ...
+    # Deprecated alias of bind() for pywinrt v3.x compatibility.
+    # System.Void Windows.AI.MachineLearning.LearningModelBinding::Bind(System.String,System.Object,Windows.Foundation.Collections.IPropertySet)
+    @deprecated("Use bind() instead.")
     def bind_with_properties(self, name: str, value: winrt.system.Object, props: windows_foundation_collections.IPropertySet, /) -> None: ...
     # System.Void Windows.AI.MachineLearning.LearningModelBinding::Clear()
     def clear(self) -> None: ...
@@ -261,9 +292,15 @@ class SequenceFeatureDescriptor(winrt.system.Object, ILearningModelFeatureDescri
 
 @typing.final
 class TensorBoolean_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorBoolean Windows.AI.MachineLearning.TensorBoolean::Create()
     def create(cls) -> TensorBoolean: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorBoolean Windows.AI.MachineLearning.TensorBoolean::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorBoolean: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorBoolean Windows.AI.MachineLearning.TensorBoolean::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorBoolean: ...
     # Windows.AI.MachineLearning.TensorBoolean Windows.AI.MachineLearning.TensorBoolean::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.Boolean[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[bool], winrt.system.ReadableBuffer], /) -> TensorBoolean: ...
@@ -296,9 +333,15 @@ class TensorBoolean(winrt.system.Object, windows_foundation.IMemoryBuffer, windo
 
 @typing.final
 class TensorDouble_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorDouble Windows.AI.MachineLearning.TensorDouble::Create()
     def create(cls) -> TensorDouble: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorDouble Windows.AI.MachineLearning.TensorDouble::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorDouble: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorDouble Windows.AI.MachineLearning.TensorDouble::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorDouble: ...
     # Windows.AI.MachineLearning.TensorDouble Windows.AI.MachineLearning.TensorDouble::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.Double[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.Double], winrt.system.ReadableBuffer], /) -> TensorDouble: ...
@@ -352,9 +395,15 @@ class TensorFeatureDescriptor(winrt.system.Object, ILearningModelFeatureDescript
 
 @typing.final
 class TensorFloat_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorFloat Windows.AI.MachineLearning.TensorFloat::Create()
     def create(cls) -> TensorFloat: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorFloat Windows.AI.MachineLearning.TensorFloat::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorFloat: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorFloat Windows.AI.MachineLearning.TensorFloat::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorFloat: ...
     # Windows.AI.MachineLearning.TensorFloat Windows.AI.MachineLearning.TensorFloat::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.Single[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.Single], winrt.system.ReadableBuffer], /) -> TensorFloat: ...
@@ -387,9 +436,15 @@ class TensorFloat(winrt.system.Object, windows_foundation.IMemoryBuffer, windows
 
 @typing.final
 class TensorFloat16Bit_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorFloat16Bit Windows.AI.MachineLearning.TensorFloat16Bit::Create()
     def create(cls) -> TensorFloat16Bit: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorFloat16Bit Windows.AI.MachineLearning.TensorFloat16Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorFloat16Bit: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorFloat16Bit Windows.AI.MachineLearning.TensorFloat16Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorFloat16Bit: ...
     # Windows.AI.MachineLearning.TensorFloat16Bit Windows.AI.MachineLearning.TensorFloat16Bit::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.Single[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.Single], winrt.system.ReadableBuffer], /) -> TensorFloat16Bit: ...
@@ -422,9 +477,15 @@ class TensorFloat16Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, wi
 
 @typing.final
 class TensorInt16Bit_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorInt16Bit Windows.AI.MachineLearning.TensorInt16Bit::Create()
     def create(cls) -> TensorInt16Bit: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorInt16Bit Windows.AI.MachineLearning.TensorInt16Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorInt16Bit: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorInt16Bit Windows.AI.MachineLearning.TensorInt16Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorInt16Bit: ...
     # Windows.AI.MachineLearning.TensorInt16Bit Windows.AI.MachineLearning.TensorInt16Bit::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.Int16[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.Int16], winrt.system.ReadableBuffer], /) -> TensorInt16Bit: ...
@@ -457,9 +518,15 @@ class TensorInt16Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, wind
 
 @typing.final
 class TensorInt32Bit_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorInt32Bit Windows.AI.MachineLearning.TensorInt32Bit::Create()
     def create(cls) -> TensorInt32Bit: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorInt32Bit Windows.AI.MachineLearning.TensorInt32Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorInt32Bit: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorInt32Bit Windows.AI.MachineLearning.TensorInt32Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorInt32Bit: ...
     # Windows.AI.MachineLearning.TensorInt32Bit Windows.AI.MachineLearning.TensorInt32Bit::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.Int32[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.Int32], winrt.system.ReadableBuffer], /) -> TensorInt32Bit: ...
@@ -492,9 +559,15 @@ class TensorInt32Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, wind
 
 @typing.final
 class TensorInt64Bit_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorInt64Bit Windows.AI.MachineLearning.TensorInt64Bit::Create()
     def create(cls) -> TensorInt64Bit: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorInt64Bit Windows.AI.MachineLearning.TensorInt64Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorInt64Bit: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorInt64Bit Windows.AI.MachineLearning.TensorInt64Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorInt64Bit: ...
     # Windows.AI.MachineLearning.TensorInt64Bit Windows.AI.MachineLearning.TensorInt64Bit::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.Int64[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], /) -> TensorInt64Bit: ...
@@ -527,9 +600,15 @@ class TensorInt64Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, wind
 
 @typing.final
 class TensorInt8Bit_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorInt8Bit Windows.AI.MachineLearning.TensorInt8Bit::Create()
     def create(cls) -> TensorInt8Bit: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorInt8Bit Windows.AI.MachineLearning.TensorInt8Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorInt8Bit: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorInt8Bit Windows.AI.MachineLearning.TensorInt8Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorInt8Bit: ...
     # Windows.AI.MachineLearning.TensorInt8Bit Windows.AI.MachineLearning.TensorInt8Bit::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.Byte[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> TensorInt8Bit: ...
@@ -562,9 +641,15 @@ class TensorInt8Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windo
 
 @typing.final
 class TensorString_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorString Windows.AI.MachineLearning.TensorString::Create()
     def create(cls) -> TensorString: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorString Windows.AI.MachineLearning.TensorString::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorString: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorString Windows.AI.MachineLearning.TensorString::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorString: ...
     # Windows.AI.MachineLearning.TensorString Windows.AI.MachineLearning.TensorString::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.String[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[str], winrt.system.ReadableBuffer], /) -> TensorString: ...
@@ -595,9 +680,15 @@ class TensorString(winrt.system.Object, windows_foundation.IMemoryBuffer, window
 
 @typing.final
 class TensorUInt16Bit_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorUInt16Bit Windows.AI.MachineLearning.TensorUInt16Bit::Create()
     def create(cls) -> TensorUInt16Bit: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorUInt16Bit Windows.AI.MachineLearning.TensorUInt16Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorUInt16Bit: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorUInt16Bit Windows.AI.MachineLearning.TensorUInt16Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorUInt16Bit: ...
     # Windows.AI.MachineLearning.TensorUInt16Bit Windows.AI.MachineLearning.TensorUInt16Bit::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.UInt16[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.UInt16], winrt.system.ReadableBuffer], /) -> TensorUInt16Bit: ...
@@ -630,9 +721,15 @@ class TensorUInt16Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, win
 
 @typing.final
 class TensorUInt32Bit_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorUInt32Bit Windows.AI.MachineLearning.TensorUInt32Bit::Create()
     def create(cls) -> TensorUInt32Bit: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorUInt32Bit Windows.AI.MachineLearning.TensorUInt32Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorUInt32Bit: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorUInt32Bit Windows.AI.MachineLearning.TensorUInt32Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorUInt32Bit: ...
     # Windows.AI.MachineLearning.TensorUInt32Bit Windows.AI.MachineLearning.TensorUInt32Bit::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.UInt32[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.UInt32], winrt.system.ReadableBuffer], /) -> TensorUInt32Bit: ...
@@ -665,9 +762,15 @@ class TensorUInt32Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, win
 
 @typing.final
 class TensorUInt64Bit_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorUInt64Bit Windows.AI.MachineLearning.TensorUInt64Bit::Create()
     def create(cls) -> TensorUInt64Bit: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorUInt64Bit Windows.AI.MachineLearning.TensorUInt64Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorUInt64Bit: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorUInt64Bit Windows.AI.MachineLearning.TensorUInt64Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorUInt64Bit: ...
     # Windows.AI.MachineLearning.TensorUInt64Bit Windows.AI.MachineLearning.TensorUInt64Bit::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.UInt64[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.UInt64], winrt.system.ReadableBuffer], /) -> TensorUInt64Bit: ...
@@ -700,9 +803,15 @@ class TensorUInt64Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, win
 
 @typing.final
 class TensorUInt8Bit_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.AI.MachineLearning.TensorUInt8Bit Windows.AI.MachineLearning.TensorUInt8Bit::Create()
     def create(cls) -> TensorUInt8Bit: ...
+    @typing.overload
     # Windows.AI.MachineLearning.TensorUInt8Bit Windows.AI.MachineLearning.TensorUInt8Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    def create(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorUInt8Bit: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.AI.MachineLearning.TensorUInt8Bit Windows.AI.MachineLearning.TensorUInt8Bit::Create(Windows.Foundation.Collections.IIterable`1<System.Int64>)
+    @deprecated("Use create() instead.")
     def create2(cls, shape: typing.Iterable[winrt.system.Int64], /) -> TensorUInt8Bit: ...
     # Windows.AI.MachineLearning.TensorUInt8Bit Windows.AI.MachineLearning.TensorUInt8Bit::CreateFromArray(Windows.Foundation.Collections.IIterable`1<System.Int64>,System.Byte[])
     def create_from_array(cls, shape: typing.Iterable[winrt.system.Int64], data: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> TensorUInt8Bit: ...

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -89,9 +90,15 @@ class JumpListItem(winrt.system.Object, metaclass=JumpListItem_Static):
 class SecondaryTile_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.UI.StartScreen.SecondaryTile::Exists(System.String)
     def exists(cls, tile_id: str, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.UI.StartScreen.SecondaryTile>> Windows.UI.StartScreen.SecondaryTile::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[SecondaryTile]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.UI.StartScreen.SecondaryTile>> Windows.UI.StartScreen.SecondaryTile::FindAllAsync(System.String)
+    def find_all_async(cls, application_id: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[SecondaryTile]]: ...
+    # Deprecated alias of find_all_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.UI.StartScreen.SecondaryTile>> Windows.UI.StartScreen.SecondaryTile::FindAllAsync(System.String)
+    @deprecated("Use find_all_async() instead.")
     def find_all_for_application_async(cls, application_id: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[SecondaryTile]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.UI.StartScreen.SecondaryTile>> Windows.UI.StartScreen.SecondaryTile::FindAllForPackageAsync()
     def find_all_for_package_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[SecondaryTile]]: ...
@@ -108,21 +115,53 @@ class SecondaryTile(winrt.system.Object, metaclass=SecondaryTile_Static):
     def __new__(cls: typing.Type[Self], tile_id: str) -> Self: ...
     @typing.overload
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestCreateAsync()
     def request_create_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestCreateAsync(Windows.Foundation.Point)
+    def request_create_async(self, invocation_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of request_create_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestCreateAsync(Windows.Foundation.Point)
+    @deprecated("Use request_create_async() instead.")
     def request_create_async_with_point(self, invocation_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestCreateForSelectionAsync(Windows.Foundation.Rect)
-    def request_create_async_with_rect(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    def request_create_for_selection_async(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestCreateForSelectionAsync(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    def request_create_for_selection_async(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of request_create_for_selection_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestCreateForSelectionAsync(Windows.Foundation.Rect)
+    @deprecated("Use request_create_for_selection_async() instead.")
+    def request_create_async_with_rect(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of request_create_for_selection_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestCreateForSelectionAsync(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    @deprecated("Use request_create_for_selection_async() instead.")
     def request_create_async_with_rect_and_placement(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestDeleteAsync()
     def request_delete_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestDeleteAsync(Windows.Foundation.Point)
+    def request_delete_async(self, invocation_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of request_delete_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestDeleteAsync(Windows.Foundation.Point)
+    @deprecated("Use request_delete_async() instead.")
     def request_delete_async_with_point(self, invocation_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestDeleteForSelectionAsync(Windows.Foundation.Rect)
-    def request_delete_async_with_rect(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    def request_delete_for_selection_async(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestDeleteForSelectionAsync(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    def request_delete_for_selection_async(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of request_delete_for_selection_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestDeleteForSelectionAsync(Windows.Foundation.Rect)
+    @deprecated("Use request_delete_for_selection_async() instead.")
+    def request_delete_async_with_rect(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of request_delete_for_selection_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::RequestDeleteForSelectionAsync(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    @deprecated("Use request_delete_for_selection_async() instead.")
     def request_delete_async_with_rect_and_placement(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.SecondaryTile::UpdateAsync()
     def update_async(self) -> windows_foundation.IAsyncOperation[bool]: ...

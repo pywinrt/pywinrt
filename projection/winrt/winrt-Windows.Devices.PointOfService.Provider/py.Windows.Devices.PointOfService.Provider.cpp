@@ -94,18 +94,38 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest", L"ReportFailedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* BarcodeScannerDisableScannerRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -129,48 +149,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 {
                     auto _gil = release_gil();
                     return self->obj.ReportFailedAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BarcodeScannerDisableScannerRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest", L"ReportFailedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<int32_t>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ReportFailedAsync(param0);
                 }());
             }
             catch (...)
@@ -213,8 +191,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static PyMethodDef _methods_BarcodeScannerDisableScannerRequest[] = {
         { "report_completed_async", reinterpret_cast<PyCFunction>(BarcodeScannerDisableScannerRequest_ReportCompletedAsync), METH_VARARGS, nullptr },
         { "report_failed_async", reinterpret_cast<PyCFunction>(BarcodeScannerDisableScannerRequest_ReportFailedAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_and_description_async", reinterpret_cast<PyCFunction>(BarcodeScannerDisableScannerRequest_ReportFailedWithFailedReasonAndDescriptionAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_async", reinterpret_cast<PyCFunction>(BarcodeScannerDisableScannerRequest_ReportFailedWithFailedReasonAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BarcodeScannerDisableScannerRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerDisableScannerRequest), METH_O | METH_STATIC, nullptr },
         { }};
@@ -461,18 +437,38 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest", L"ReportFailedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* BarcodeScannerEnableScannerRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -496,48 +492,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 {
                     auto _gil = release_gil();
                     return self->obj.ReportFailedAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BarcodeScannerEnableScannerRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest", L"ReportFailedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<int32_t>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ReportFailedAsync(param0);
                 }());
             }
             catch (...)
@@ -580,8 +534,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static PyMethodDef _methods_BarcodeScannerEnableScannerRequest[] = {
         { "report_completed_async", reinterpret_cast<PyCFunction>(BarcodeScannerEnableScannerRequest_ReportCompletedAsync), METH_VARARGS, nullptr },
         { "report_failed_async", reinterpret_cast<PyCFunction>(BarcodeScannerEnableScannerRequest_ReportFailedAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_and_description_async", reinterpret_cast<PyCFunction>(BarcodeScannerEnableScannerRequest_ReportFailedWithFailedReasonAndDescriptionAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_async", reinterpret_cast<PyCFunction>(BarcodeScannerEnableScannerRequest_ReportFailedWithFailedReasonAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BarcodeScannerEnableScannerRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerEnableScannerRequest), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1285,18 +1237,38 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"ReportFailedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* BarcodeScannerGetSymbologyAttributesRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1320,48 +1292,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 {
                     auto _gil = release_gil();
                     return self->obj.ReportFailedAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BarcodeScannerGetSymbologyAttributesRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest", L"ReportFailedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<int32_t>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ReportFailedAsync(param0);
                 }());
             }
             catch (...)
@@ -1434,8 +1364,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static PyMethodDef _methods_BarcodeScannerGetSymbologyAttributesRequest[] = {
         { "report_completed_async", reinterpret_cast<PyCFunction>(BarcodeScannerGetSymbologyAttributesRequest_ReportCompletedAsync), METH_VARARGS, nullptr },
         { "report_failed_async", reinterpret_cast<PyCFunction>(BarcodeScannerGetSymbologyAttributesRequest_ReportFailedAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_and_description_async", reinterpret_cast<PyCFunction>(BarcodeScannerGetSymbologyAttributesRequest_ReportFailedWithFailedReasonAndDescriptionAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_async", reinterpret_cast<PyCFunction>(BarcodeScannerGetSymbologyAttributesRequest_ReportFailedWithFailedReasonAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BarcodeScannerGetSymbologyAttributesRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerGetSymbologyAttributesRequest), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1683,18 +1611,38 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest", L"ReportFailedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* BarcodeScannerHideVideoPreviewRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1718,48 +1666,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 {
                     auto _gil = release_gil();
                     return self->obj.ReportFailedAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BarcodeScannerHideVideoPreviewRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest", L"ReportFailedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<int32_t>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ReportFailedAsync(param0);
                 }());
             }
             catch (...)
@@ -1802,8 +1708,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static PyMethodDef _methods_BarcodeScannerHideVideoPreviewRequest[] = {
         { "report_completed_async", reinterpret_cast<PyCFunction>(BarcodeScannerHideVideoPreviewRequest_ReportCompletedAsync), METH_VARARGS, nullptr },
         { "report_failed_async", reinterpret_cast<PyCFunction>(BarcodeScannerHideVideoPreviewRequest_ReportFailedAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_and_description_async", reinterpret_cast<PyCFunction>(BarcodeScannerHideVideoPreviewRequest_ReportFailedWithFailedReasonAndDescriptionAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_async", reinterpret_cast<PyCFunction>(BarcodeScannerHideVideoPreviewRequest_ReportFailedWithFailedReasonAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BarcodeScannerHideVideoPreviewRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerHideVideoPreviewRequest), METH_O | METH_STATIC, nullptr },
         { }};
@@ -2051,18 +1955,38 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CreateFrameReaderAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameReaderAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* BarcodeScannerProviderConnection_CreateFrameReaderWithFormatAndSizeAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2086,48 +2010,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 {
                     auto _gil = release_gil();
                     return self->obj.CreateFrameReaderAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BarcodeScannerProviderConnection_CreateFrameReaderWithFormatAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection", L"CreateFrameReaderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.CreateFrameReaderAsync(param0);
                 }());
             }
             catch (...)
@@ -2178,18 +2060,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BarcodeScannerProviderConnection_ReportErrorAsyncWithScanReport(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -3221,10 +3092,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static PyMethodDef _methods_BarcodeScannerProviderConnection[] = {
         { "close", reinterpret_cast<PyCFunction>(BarcodeScannerProviderConnection_Close), METH_VARARGS, nullptr },
         { "create_frame_reader_async", reinterpret_cast<PyCFunction>(BarcodeScannerProviderConnection_CreateFrameReaderAsync), METH_VARARGS, nullptr },
-        { "create_frame_reader_with_format_and_size_async", reinterpret_cast<PyCFunction>(BarcodeScannerProviderConnection_CreateFrameReaderWithFormatAndSizeAsync), METH_VARARGS, nullptr },
-        { "create_frame_reader_with_format_async", reinterpret_cast<PyCFunction>(BarcodeScannerProviderConnection_CreateFrameReaderWithFormatAsync), METH_VARARGS, nullptr },
         { "report_error_async", reinterpret_cast<PyCFunction>(BarcodeScannerProviderConnection_ReportErrorAsync), METH_VARARGS, nullptr },
-        { "report_error_async_with_scan_report", reinterpret_cast<PyCFunction>(BarcodeScannerProviderConnection_ReportErrorAsyncWithScanReport), METH_VARARGS, nullptr },
         { "report_scanned_data_async", reinterpret_cast<PyCFunction>(BarcodeScannerProviderConnection_ReportScannedDataAsync), METH_VARARGS, nullptr },
         { "report_trigger_state_async", reinterpret_cast<PyCFunction>(BarcodeScannerProviderConnection_ReportTriggerStateAsync), METH_VARARGS, nullptr },
         { "start", reinterpret_cast<PyCFunction>(BarcodeScannerProviderConnection_Start), METH_VARARGS, nullptr },
@@ -3457,18 +3325,38 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"ReportFailedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* BarcodeScannerSetActiveSymbologiesRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -3492,48 +3380,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 {
                     auto _gil = release_gil();
                     return self->obj.ReportFailedAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BarcodeScannerSetActiveSymbologiesRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest", L"ReportFailedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<int32_t>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ReportFailedAsync(param0);
                 }());
             }
             catch (...)
@@ -3606,8 +3452,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static PyMethodDef _methods_BarcodeScannerSetActiveSymbologiesRequest[] = {
         { "report_completed_async", reinterpret_cast<PyCFunction>(BarcodeScannerSetActiveSymbologiesRequest_ReportCompletedAsync), METH_VARARGS, nullptr },
         { "report_failed_async", reinterpret_cast<PyCFunction>(BarcodeScannerSetActiveSymbologiesRequest_ReportFailedAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_and_description_async", reinterpret_cast<PyCFunction>(BarcodeScannerSetActiveSymbologiesRequest_ReportFailedWithFailedReasonAndDescriptionAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_async", reinterpret_cast<PyCFunction>(BarcodeScannerSetActiveSymbologiesRequest_ReportFailedWithFailedReasonAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BarcodeScannerSetActiveSymbologiesRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerSetActiveSymbologiesRequest), METH_O | METH_STATIC, nullptr },
         { }};
@@ -3855,18 +3699,38 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"ReportFailedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* BarcodeScannerSetSymbologyAttributesRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -3890,48 +3754,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 {
                     auto _gil = release_gil();
                     return self->obj.ReportFailedAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BarcodeScannerSetSymbologyAttributesRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest", L"ReportFailedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<int32_t>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ReportFailedAsync(param0);
                 }());
             }
             catch (...)
@@ -4034,8 +3856,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static PyMethodDef _methods_BarcodeScannerSetSymbologyAttributesRequest[] = {
         { "report_completed_async", reinterpret_cast<PyCFunction>(BarcodeScannerSetSymbologyAttributesRequest_ReportCompletedAsync), METH_VARARGS, nullptr },
         { "report_failed_async", reinterpret_cast<PyCFunction>(BarcodeScannerSetSymbologyAttributesRequest_ReportFailedAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_and_description_async", reinterpret_cast<PyCFunction>(BarcodeScannerSetSymbologyAttributesRequest_ReportFailedWithFailedReasonAndDescriptionAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_async", reinterpret_cast<PyCFunction>(BarcodeScannerSetSymbologyAttributesRequest_ReportFailedWithFailedReasonAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BarcodeScannerSetSymbologyAttributesRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerSetSymbologyAttributesRequest), METH_O | METH_STATIC, nullptr },
         { }};
@@ -4284,18 +4104,38 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest", L"ReportFailedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* BarcodeScannerStartSoftwareTriggerRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -4319,48 +4159,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 {
                     auto _gil = release_gil();
                     return self->obj.ReportFailedAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BarcodeScannerStartSoftwareTriggerRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest", L"ReportFailedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<int32_t>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ReportFailedAsync(param0);
                 }());
             }
             catch (...)
@@ -4403,8 +4201,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static PyMethodDef _methods_BarcodeScannerStartSoftwareTriggerRequest[] = {
         { "report_completed_async", reinterpret_cast<PyCFunction>(BarcodeScannerStartSoftwareTriggerRequest_ReportCompletedAsync), METH_VARARGS, nullptr },
         { "report_failed_async", reinterpret_cast<PyCFunction>(BarcodeScannerStartSoftwareTriggerRequest_ReportFailedAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_and_description_async", reinterpret_cast<PyCFunction>(BarcodeScannerStartSoftwareTriggerRequest_ReportFailedWithFailedReasonAndDescriptionAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_async", reinterpret_cast<PyCFunction>(BarcodeScannerStartSoftwareTriggerRequest_ReportFailedWithFailedReasonAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BarcodeScannerStartSoftwareTriggerRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerStartSoftwareTriggerRequest), METH_O | METH_STATIC, nullptr },
         { }};
@@ -4651,18 +4447,38 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest", L"ReportFailedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* BarcodeScannerStopSoftwareTriggerRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -4686,48 +4502,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
                 {
                     auto _gil = release_gil();
                     return self->obj.ReportFailedAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BarcodeScannerStopSoftwareTriggerRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest", L"ReportFailedAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<int32_t>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ReportFailedAsync(param0);
                 }());
             }
             catch (...)
@@ -4770,8 +4544,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static PyMethodDef _methods_BarcodeScannerStopSoftwareTriggerRequest[] = {
         { "report_completed_async", reinterpret_cast<PyCFunction>(BarcodeScannerStopSoftwareTriggerRequest_ReportCompletedAsync), METH_VARARGS, nullptr },
         { "report_failed_async", reinterpret_cast<PyCFunction>(BarcodeScannerStopSoftwareTriggerRequest_ReportFailedAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_and_description_async", reinterpret_cast<PyCFunction>(BarcodeScannerStopSoftwareTriggerRequest_ReportFailedWithFailedReasonAndDescriptionAsync), METH_VARARGS, nullptr },
-        { "report_failed_with_failed_reason_async", reinterpret_cast<PyCFunction>(BarcodeScannerStopSoftwareTriggerRequest_ReportFailedWithFailedReasonAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BarcodeScannerStopSoftwareTriggerRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerStopSoftwareTriggerRequest), METH_O | METH_STATIC, nullptr },
         { }};

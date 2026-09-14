@@ -257,49 +257,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"CreateNewView", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CoreApplication_CreateNewViewFromMainView(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
         if (arg_count == 0)
         {
             try
@@ -329,18 +286,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CoreApplication_CreateNewViewWithViewSource(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -363,6 +309,38 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"CreateNewView", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView(param0, param1);
                 }());
             }
             catch (...)
@@ -1358,8 +1336,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyMethodDef methods_CoreApplication_Static[] = {
         { "create_new_view", reinterpret_cast<PyCFunction>(CoreApplication_CreateNewView), METH_VARARGS, nullptr },
-        { "create_new_view_from_main_view", reinterpret_cast<PyCFunction>(CoreApplication_CreateNewViewFromMainView), METH_VARARGS, nullptr },
-        { "create_new_view_with_view_source", reinterpret_cast<PyCFunction>(CoreApplication_CreateNewViewWithViewSource), METH_VARARGS, nullptr },
         { "decrement_application_use_count", reinterpret_cast<PyCFunction>(CoreApplication_DecrementApplicationUseCount), METH_VARARGS, nullptr },
         { "enable_prelaunch", reinterpret_cast<PyCFunction>(CoreApplication_EnablePrelaunch), METH_VARARGS, nullptr },
         { "exit", reinterpret_cast<PyCFunction>(CoreApplication_Exit), METH_VARARGS, nullptr },

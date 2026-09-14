@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -37,10 +38,17 @@ class HolographicKeyboardPlacementOverridePreview(winrt.system.Object, metaclass
     # System.Void Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::ResetPlacementOverride()
     # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
     def reset_placement_override(self) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::SetPlacementOverride(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3)
     # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
     def set_placement_override(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, top_center_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], normal: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::SetPlacementOverride(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector2)
     # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
+    def set_placement_override(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, top_center_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], normal: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], max_size: typing.Union[windows_foundation_numerics.Vector2, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    # Deprecated alias of set_placement_override() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::SetPlacementOverride(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector2)
+    # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
+    @deprecated("Use set_placement_override() instead.")
     def set_placement_override_with_max_size(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, top_center_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], normal: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], max_size: typing.Union[windows_foundation_numerics.Vector2, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
 

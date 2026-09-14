@@ -34,27 +34,62 @@ static class ObjectWriterExtensions
 
             var hasMembers = false;
 
-            foreach (var method in type.Methods.Where(m => m.IsStatic))
+            foreach (var group in type.MethodGroups.Where(g => g.IsStatic))
             {
-                if (type.Methods.Count(m => m.Name == method.Name) > 1)
+                foreach (var method in group.Overloads)
                 {
-                    w.WriteLine("@typing.overload");
+                    if (group.IsOverloaded)
+                    {
+                        w.WriteLine("@typing.overload");
+                    }
+
+                    if (
+                        type.IsComposable
+                        && !group.IsOverridable
+                        && method.IsExclusiveTo
+                        // mypy rule: @typing.final can only be applied to the first overload
+                        && method == group.Overloads[0]
+                    )
+                    {
+                        w.WriteLine("@typing.final");
+                    }
+
+                    w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap, "cls");
+
+                    hasMembers = true;
                 }
 
-                if (
-                    type.IsComposable
-                    && !method.IsOverridable
-                    && method.IsExclusiveTo
-                    // mypy rule: @typing.final can only be applied to the first overload
-                    && method == type.Methods.FirstOrDefault(m => m.Name == method.Name, method)
-                )
+                foreach (var alias in group.Aliases)
                 {
-                    w.WriteLine("@typing.final");
+                    foreach (var method in alias.Methods)
+                    {
+                        if (alias.Methods.Count > 1)
+                        {
+                            w.WriteLine("@typing.overload");
+                        }
+
+                        if (
+                            type.IsComposable
+                            && !group.IsOverridable
+                            && method.IsExclusiveTo
+                            // mypy rule: @typing.final can only be applied to the first overload
+                            && method == alias.Methods[0]
+                        )
+                        {
+                            w.WriteLine("@typing.final");
+                        }
+
+                        w.WritePythonMethodTyping(
+                            method,
+                            ns,
+                            nullabilityMap,
+                            packageMap,
+                            "cls",
+                            aliasPyName: alias.PyName,
+                            aliasTarget: group.PyName
+                        );
+                    }
                 }
-
-                w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap, "cls");
-
-                hasMembers = true;
             }
 
             foreach (var evt in type.Events.Where(e => e.IsStatic))
@@ -112,7 +147,7 @@ static class ObjectWriterExtensions
 
         if (type.IsPyMapping)
         {
-            var method = type.Methods.Single(m => m.Name == "Lookup");
+            var method = type.GetMethod("Lookup", 1);
             var nullabilityInfo = nullabilityMap.GetValueOrDefault(
                 method.Signature,
                 new MethodNullabilityInfo(method.Method)
@@ -143,7 +178,7 @@ static class ObjectWriterExtensions
         }
         else if (type.IsPySequence)
         {
-            var method = type.Methods.Single(m => m.Name == "GetAt");
+            var method = type.GetMethod("GetAt", 1);
             var nullabilityInfo = nullabilityMap.GetValueOrDefault(
                 method.Signature,
                 new MethodNullabilityInfo(method.Method)
@@ -291,7 +326,7 @@ static class ObjectWriterExtensions
         }
         else if (type.IsPyIterable)
         {
-            var method = type.Methods.Single(m => m.Name == "First");
+            var method = type.GetMethod("First", 0);
             var nullabilityInfo = nullabilityMap.GetValueOrDefault(
                 method.Signature,
                 new MethodNullabilityInfo(method.Method)
@@ -334,31 +369,71 @@ static class ObjectWriterExtensions
             didWriteLine = true;
         }
 
-        foreach (var method in type.Methods.Where(m => !m.IsStatic))
+        foreach (var group in type.MethodGroups.Where(g => !g.IsStatic))
         {
-            if (type.Methods.Count(m => m.Name == method.Name) > 1)
+            foreach (var method in group.Overloads)
             {
-                w.WriteLine("@typing.overload");
+                if (group.IsOverloaded)
+                {
+                    w.WriteLine("@typing.overload");
+                }
+
+                if (
+                    type.IsComposable
+                    && !group.IsOverridable
+                    && method.IsExclusiveTo
+                    // mypy rule: @typing.final can only be applied to the first overload
+                    && method == group.Overloads[0]
+                )
+                {
+                    // HACK: There are a couple of problematic methods. Subclasses of
+                    // DependencyObject like to override SetValue with a different
+                    // parameter type. Subclasses of FlyoutBase like to override ShowAt.
+                    var typeIgnore = method.IsProblematicOverride() ? "  # type: ignore[misc]" : "";
+
+                    w.WriteLine($"@typing.final{typeIgnore}");
+                }
+
+                w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap);
+                didWriteLine = true;
             }
 
-            if (
-                type.IsComposable
-                && !method.IsOverridable
-                && method.IsExclusiveTo
-                // mypy rule: @typing.final can only be applied to the first overload
-                && method == type.Methods.FirstOrDefault(m => m.Name == method.Name, method)
-            )
+            foreach (var alias in group.Aliases)
             {
-                // HACK: There are a couple of problematic methods. Subclasses of
-                // DependencyObject like to override SetValue with a different
-                // parameter type. Subclasses of FlyoutBase like to override ShowAt.
-                var typeIgnore = method.IsProblematicOverride() ? "  # type: ignore[misc]" : "";
+                foreach (var method in alias.Methods)
+                {
+                    if (alias.Methods.Count > 1)
+                    {
+                        w.WriteLine("@typing.overload");
+                    }
 
-                w.WriteLine($"@typing.final{typeIgnore}");
+                    if (
+                        type.IsComposable
+                        && !group.IsOverridable
+                        && method.IsExclusiveTo
+                        // mypy rule: @typing.final can only be applied to the first overload
+                        && method == alias.Methods[0]
+                    )
+                    {
+                        var typeIgnore = method.IsProblematicOverride()
+                            ? "  # type: ignore[misc]"
+                            : "";
+
+                        w.WriteLine($"@typing.final{typeIgnore}");
+                    }
+
+                    w.WritePythonMethodTyping(
+                        method,
+                        ns,
+                        nullabilityMap,
+                        packageMap,
+                        aliasPyName: alias.PyName,
+                        aliasTarget: group.PyName
+                    );
+
+                    didWriteLine = true;
+                }
             }
-
-            w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap);
-            didWriteLine = true;
         }
 
         foreach (var evt in type.Events.Where(e => !e.IsStatic))

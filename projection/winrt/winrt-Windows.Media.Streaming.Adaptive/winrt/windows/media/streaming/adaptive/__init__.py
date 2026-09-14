@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_streaming_adaptive import (
     AdaptiveMediaSource,
@@ -78,3 +79,5 @@ class AdaptiveMediaSourceResourceType(enum.IntEnum):
     INITIALIZATION_VECTOR = 4
     MEDIA_SEGMENT_INDEX = 5
 
+winrt.runtime._internals.alias_static_method(AdaptiveMediaSource, "create_from_stream_with_downloader_async", "create_from_stream_async")
+winrt.runtime._internals.alias_static_method(AdaptiveMediaSource, "create_from_uri_with_downloader_async", "create_from_uri_async")

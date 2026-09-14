@@ -122,18 +122,7 @@ namespace py::cpp::Windows::Media::Playlists
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Playlist_SaveAsWithFormatAsync(py::wrapper::Windows::Media::Playlists::Playlist* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -270,7 +259,6 @@ namespace py::cpp::Windows::Media::Playlists
 
     static PyMethodDef _methods_Playlist[] = {
         { "save_as_async", reinterpret_cast<PyCFunction>(Playlist_SaveAsAsync), METH_VARARGS, nullptr },
-        { "save_as_with_format_async", reinterpret_cast<PyCFunction>(Playlist_SaveAsWithFormatAsync), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(Playlist_SaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Playlist, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Playlist), METH_O | METH_STATIC, nullptr },

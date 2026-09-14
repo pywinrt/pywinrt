@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_networking_vpn import (
     VpnAppId,
@@ -211,3 +212,7 @@ class VpnRoutingPolicyType(enum.IntEnum):
     SPLIT_ROUTING = 0
     FORCE_ALL_TRAFFIC_OVER_VPN = 1
 
+winrt.runtime._internals.alias_method(VpnChannel, "request_credentials_simple_async", "request_credentials_async")
+winrt.runtime._internals.alias_method(VpnChannel, "request_credentials_with_certificate_async", "request_credentials_async")
+winrt.runtime._internals.alias_method(VpnChannel, "request_credentials_with_options_async", "request_credentials_async")
+winrt.runtime._internals.alias_method(VpnChannel, "start_with_multiple_transports", "start_with_traffic_filter")

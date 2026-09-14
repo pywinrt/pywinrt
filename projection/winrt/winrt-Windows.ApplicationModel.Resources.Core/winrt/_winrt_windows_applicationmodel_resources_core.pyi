@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -37,14 +38,26 @@ class ResourceLayoutInfo:
 
 @typing.final
 class NamedResource(winrt.system.Object):
+    @typing.overload
     # Windows.ApplicationModel.Resources.Core.ResourceCandidate Windows.ApplicationModel.Resources.Core.NamedResource::Resolve()
     def resolve(self) -> ResourceCandidate: ...
+    @typing.overload
+    # Windows.ApplicationModel.Resources.Core.ResourceCandidate Windows.ApplicationModel.Resources.Core.NamedResource::Resolve(Windows.ApplicationModel.Resources.Core.ResourceContext)
+    def resolve(self, resource_context: ResourceContext, /) -> ResourceCandidate: ...
+    # Deprecated alias of resolve() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Resources.Core.ResourceCandidate Windows.ApplicationModel.Resources.Core.NamedResource::Resolve(Windows.ApplicationModel.Resources.Core.ResourceContext)
+    @deprecated("Use resolve() instead.")
+    def resolve_for_context(self, resource_context: ResourceContext, /) -> ResourceCandidate: ...
+    @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Resources.Core.ResourceCandidate> Windows.ApplicationModel.Resources.Core.NamedResource::ResolveAll()
     def resolve_all(self) -> typing.Sequence[ResourceCandidate]: ...
+    @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Resources.Core.ResourceCandidate> Windows.ApplicationModel.Resources.Core.NamedResource::ResolveAll(Windows.ApplicationModel.Resources.Core.ResourceContext)
+    def resolve_all(self, resource_context: ResourceContext, /) -> typing.Sequence[ResourceCandidate]: ...
+    # Deprecated alias of resolve_all() for pywinrt v3.x compatibility.
+    # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Resources.Core.ResourceCandidate> Windows.ApplicationModel.Resources.Core.NamedResource::ResolveAll(Windows.ApplicationModel.Resources.Core.ResourceContext)
+    @deprecated("Use resolve_all() instead.")
     def resolve_all_for_context(self, resource_context: ResourceContext, /) -> typing.Sequence[ResourceCandidate]: ...
-    # Windows.ApplicationModel.Resources.Core.ResourceCandidate Windows.ApplicationModel.Resources.Core.NamedResource::Resolve(Windows.ApplicationModel.Resources.Core.ResourceContext)
-    def resolve_for_context(self, resource_context: ResourceContext, /) -> ResourceCandidate: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Resources.Core.ResourceCandidate> Windows.ApplicationModel.Resources.Core.NamedResource::get_Candidates()
     @_property
     def candidates(self) -> typing.Sequence[ResourceCandidate]: ...
@@ -109,13 +122,25 @@ class ResourceContext_Static(winrt._winrt.IInspectable_Static):
     def get_for_ui_context(cls, context: windows_ui.UIContext, /) -> ResourceContext: ...
     # Windows.ApplicationModel.Resources.Core.ResourceContext Windows.ApplicationModel.Resources.Core.ResourceContext::GetForViewIndependentUse()
     def get_for_view_independent_use(cls) -> ResourceContext: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Resources.Core.ResourceContext::ResetGlobalQualifierValues()
     def reset_global_qualifier_values(cls) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Resources.Core.ResourceContext::ResetGlobalQualifierValues(Windows.Foundation.Collections.IIterable`1<System.String>)
+    def reset_global_qualifier_values(cls, qualifier_names: typing.Iterable[str], /) -> None: ...
+    # Deprecated alias of reset_global_qualifier_values() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Resources.Core.ResourceContext::ResetGlobalQualifierValues(Windows.Foundation.Collections.IIterable`1<System.String>)
+    @deprecated("Use reset_global_qualifier_values() instead.")
     def reset_global_qualifier_values_for_specified_qualifiers(cls, qualifier_names: typing.Iterable[str], /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Resources.Core.ResourceContext::SetGlobalQualifierValue(System.String,System.String)
     def set_global_qualifier_value(cls, key: str, value: str, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Resources.Core.ResourceContext::SetGlobalQualifierValue(System.String,System.String,Windows.ApplicationModel.Resources.Core.ResourceQualifierPersistence)
+    def set_global_qualifier_value(cls, key: str, value: str, persistence: ResourceQualifierPersistence, /) -> None: ...
+    # Deprecated alias of set_global_qualifier_value() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Resources.Core.ResourceContext::SetGlobalQualifierValue(System.String,System.String,Windows.ApplicationModel.Resources.Core.ResourceQualifierPersistence)
+    @deprecated("Use set_global_qualifier_value() instead.")
     def set_global_qualifier_value_with_persistence(cls, key: str, value: str, persistence: ResourceQualifierPersistence, /) -> None: ...
 
 @typing.final
@@ -125,9 +150,15 @@ class ResourceContext(winrt.system.Object, metaclass=ResourceContext_Static):
     def clone(self) -> ResourceContext: ...
     # System.Void Windows.ApplicationModel.Resources.Core.ResourceContext::OverrideToMatch(Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Resources.Core.ResourceQualifier>)
     def override_to_match(self, result: typing.Iterable[ResourceQualifier], /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Resources.Core.ResourceContext::Reset()
     def reset(self) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Resources.Core.ResourceContext::Reset(Windows.Foundation.Collections.IIterable`1<System.String>)
+    def reset(self, qualifier_names: typing.Iterable[str], /) -> None: ...
+    # Deprecated alias of reset() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Resources.Core.ResourceContext::Reset(Windows.Foundation.Collections.IIterable`1<System.String>)
+    @deprecated("Use reset() instead.")
     def reset_qualifier_values(self, qualifier_names: typing.Iterable[str], /) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.ApplicationModel.Resources.Core.ResourceContext::get_Languages()
     @_property
@@ -197,9 +228,15 @@ class ResourceMap(winrt.system.Object, winrt._winrt.Mapping[str, NamedResource])
     def first(self) -> windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, NamedResource]]: ...
     # Windows.ApplicationModel.Resources.Core.ResourceMap Windows.ApplicationModel.Resources.Core.ResourceMap::GetSubtree(System.String)
     def get_subtree(self, reference: str, /) -> ResourceMap: ...
+    @typing.overload
     # Windows.ApplicationModel.Resources.Core.ResourceCandidate Windows.ApplicationModel.Resources.Core.ResourceMap::GetValue(System.String)
     def get_value(self, resource: str, /) -> ResourceCandidate: ...
+    @typing.overload
     # Windows.ApplicationModel.Resources.Core.ResourceCandidate Windows.ApplicationModel.Resources.Core.ResourceMap::GetValue(System.String,Windows.ApplicationModel.Resources.Core.ResourceContext)
+    def get_value(self, resource: str, context: ResourceContext, /) -> ResourceCandidate: ...
+    # Deprecated alias of get_value() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Resources.Core.ResourceCandidate Windows.ApplicationModel.Resources.Core.ResourceMap::GetValue(System.String,Windows.ApplicationModel.Resources.Core.ResourceContext)
+    @deprecated("Use get_value() instead.")
     def get_value_for_context(self, resource: str, context: ResourceContext, /) -> ResourceCandidate: ...
     # System.Boolean Windows.ApplicationModel.Resources.Core.ResourceMap::HasKey(System.String)
     def has_key(self, key: str, /) -> bool: ...

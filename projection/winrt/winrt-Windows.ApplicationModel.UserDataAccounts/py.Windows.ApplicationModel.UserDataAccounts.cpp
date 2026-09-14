@@ -1495,18 +1495,39 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 2)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"CreateAccountAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAccountAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* UserDataAccountStore_CreateAccountWithPackageRelativeAppIdAndEnterpriseIdAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -1531,49 +1552,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
                 {
                     auto _gil = release_gil();
                     return self->obj.CreateAccountAsync(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UserDataAccountStore_CreateAccountWithPackageRelativeAppIdAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"CreateAccountAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.CreateAccountAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -1762,8 +1740,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyMethodDef _methods_UserDataAccountStore[] = {
         { "create_account_async", reinterpret_cast<PyCFunction>(UserDataAccountStore_CreateAccountAsync), METH_VARARGS, nullptr },
-        { "create_account_with_package_relative_app_id_and_enterprise_id_async", reinterpret_cast<PyCFunction>(UserDataAccountStore_CreateAccountWithPackageRelativeAppIdAndEnterpriseIdAsync), METH_VARARGS, nullptr },
-        { "create_account_with_package_relative_app_id_async", reinterpret_cast<PyCFunction>(UserDataAccountStore_CreateAccountWithPackageRelativeAppIdAsync), METH_VARARGS, nullptr },
         { "find_accounts_async", reinterpret_cast<PyCFunction>(UserDataAccountStore_FindAccountsAsync), METH_VARARGS, nullptr },
         { "get_account_async", reinterpret_cast<PyCFunction>(UserDataAccountStore_GetAccountAsync), METH_VARARGS, nullptr },
         { "add_store_changed", reinterpret_cast<PyCFunction>(UserDataAccountStore_add_StoreChanged), METH_O, nullptr },

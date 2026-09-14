@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -29,13 +30,25 @@ class PreallocatedWorkItem(winrt.system.Object):
 
 @typing.final
 class SignalNotifier_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.System.Threading.Core.SignalNotifier Windows.System.Threading.Core.SignalNotifier::AttachToEvent(System.String,Windows.System.Threading.Core.SignalHandler)
     def attach_to_event(cls, name: str, handler: SignalHandler, /) -> SignalNotifier: ...
+    @typing.overload
     # Windows.System.Threading.Core.SignalNotifier Windows.System.Threading.Core.SignalNotifier::AttachToEvent(System.String,Windows.System.Threading.Core.SignalHandler,Windows.Foundation.TimeSpan)
+    def attach_to_event(cls, name: str, handler: SignalHandler, timeout: datetime.timedelta, /) -> SignalNotifier: ...
+    # Deprecated alias of attach_to_event() for pywinrt v3.x compatibility.
+    # Windows.System.Threading.Core.SignalNotifier Windows.System.Threading.Core.SignalNotifier::AttachToEvent(System.String,Windows.System.Threading.Core.SignalHandler,Windows.Foundation.TimeSpan)
+    @deprecated("Use attach_to_event() instead.")
     def attach_to_event_with_timeout(cls, name: str, handler: SignalHandler, timeout: datetime.timedelta, /) -> SignalNotifier: ...
+    @typing.overload
     # Windows.System.Threading.Core.SignalNotifier Windows.System.Threading.Core.SignalNotifier::AttachToSemaphore(System.String,Windows.System.Threading.Core.SignalHandler)
     def attach_to_semaphore(cls, name: str, handler: SignalHandler, /) -> SignalNotifier: ...
+    @typing.overload
     # Windows.System.Threading.Core.SignalNotifier Windows.System.Threading.Core.SignalNotifier::AttachToSemaphore(System.String,Windows.System.Threading.Core.SignalHandler,Windows.Foundation.TimeSpan)
+    def attach_to_semaphore(cls, name: str, handler: SignalHandler, timeout: datetime.timedelta, /) -> SignalNotifier: ...
+    # Deprecated alias of attach_to_semaphore() for pywinrt v3.x compatibility.
+    # Windows.System.Threading.Core.SignalNotifier Windows.System.Threading.Core.SignalNotifier::AttachToSemaphore(System.String,Windows.System.Threading.Core.SignalHandler,Windows.Foundation.TimeSpan)
+    @deprecated("Use attach_to_semaphore() instead.")
     def attach_to_semaphore_with_timeout(cls, name: str, handler: SignalHandler, timeout: datetime.timedelta, /) -> SignalNotifier: ...
 
 @typing.final

@@ -3,6 +3,7 @@
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_system_threading_core import (
     PreallocatedWorkItem,
@@ -15,4 +16,6 @@ __all__ = [
     "SignalHandler",
 ]
 
+winrt.runtime._internals.alias_static_method(SignalNotifier, "attach_to_event_with_timeout", "attach_to_event")
+winrt.runtime._internals.alias_static_method(SignalNotifier, "attach_to_semaphore_with_timeout", "attach_to_semaphore")
 SignalHandler = typing.Callable[[SignalNotifier, bool], None]

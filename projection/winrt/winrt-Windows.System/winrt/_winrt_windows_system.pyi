@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -43,9 +44,15 @@ class AppDiagnosticInfo_Static(winrt._winrt.IInspectable_Static):
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[DiagnosticAccessStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.System.AppDiagnosticInfo>> Windows.System.AppDiagnosticInfo::RequestInfoAsync()
     def request_info_async(cls) -> windows_foundation.IAsyncOperation[typing.MutableSequence[AppDiagnosticInfo]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.System.AppDiagnosticInfo>> Windows.System.AppDiagnosticInfo::RequestInfoForAppAsync()
     def request_info_for_app_async(cls) -> windows_foundation.IAsyncOperation[typing.MutableSequence[AppDiagnosticInfo]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.System.AppDiagnosticInfo>> Windows.System.AppDiagnosticInfo::RequestInfoForAppAsync(System.String)
+    def request_info_for_app_async(cls, app_user_model_id: str, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[AppDiagnosticInfo]]: ...
+    # Deprecated alias of request_info_for_app_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.System.AppDiagnosticInfo>> Windows.System.AppDiagnosticInfo::RequestInfoForAppAsync(System.String)
+    @deprecated("Use request_info_for_app_async() instead.")
     def request_info_for_app_user_model_id(cls, app_user_model_id: str, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[AppDiagnosticInfo]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.System.AppDiagnosticInfo>> Windows.System.AppDiagnosticInfo::RequestInfoForPackageAsync(System.String)
     def request_info_for_package_async(cls, package_family_name: str, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[AppDiagnosticInfo]]: ...
@@ -316,9 +323,15 @@ class DispatcherQueue_Static(winrt._winrt.IInspectable_Static):
 class DispatcherQueue(winrt.system.Object, metaclass=DispatcherQueue_Static):
     # Windows.System.DispatcherQueueTimer Windows.System.DispatcherQueue::CreateTimer()
     def create_timer(self) -> DispatcherQueueTimer: ...
+    @typing.overload
     # System.Boolean Windows.System.DispatcherQueue::TryEnqueue(Windows.System.DispatcherQueueHandler)
     def try_enqueue(self, callback: DispatcherQueueHandler, /) -> bool: ...
+    @typing.overload
     # System.Boolean Windows.System.DispatcherQueue::TryEnqueue(Windows.System.DispatcherQueuePriority,Windows.System.DispatcherQueueHandler)
+    def try_enqueue(self, priority: DispatcherQueuePriority, callback: DispatcherQueueHandler, /) -> bool: ...
+    # Deprecated alias of try_enqueue() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.System.DispatcherQueue::TryEnqueue(Windows.System.DispatcherQueuePriority,Windows.System.DispatcherQueueHandler)
+    @deprecated("Use try_enqueue() instead.")
     def try_enqueue_with_priority(self, priority: DispatcherQueuePriority, callback: DispatcherQueueHandler, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.System.DispatcherQueue::add_ShutdownCompleted(Windows.Foundation.TypedEventHandler`2<Windows.System.DispatcherQueue,System.Object>)
     def add_shutdown_completed(self, handler: windows_foundation.TypedEventHandler[DispatcherQueue, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -441,57 +454,139 @@ class Launcher_Static(winrt._winrt.IInspectable_Static):
     def find_app_uri_handlers_async(cls, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_applicationmodel.AppInfo]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.AppInfo>> Windows.System.Launcher::FindFileHandlersAsync(System.String)
     def find_file_handlers_async(cls, extension: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_applicationmodel.AppInfo]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.AppInfo>> Windows.System.Launcher::FindUriSchemeHandlersAsync(System.String)
     def find_uri_scheme_handlers_async(cls, scheme: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_applicationmodel.AppInfo]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.AppInfo>> Windows.System.Launcher::FindUriSchemeHandlersAsync(System.String,Windows.System.LaunchQuerySupportType)
+    def find_uri_scheme_handlers_async(cls, scheme: str, launch_query_support_type: LaunchQuerySupportType, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_applicationmodel.AppInfo]]: ...
+    # Deprecated alias of find_uri_scheme_handlers_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.AppInfo>> Windows.System.Launcher::FindUriSchemeHandlersAsync(System.String,Windows.System.LaunchQuerySupportType)
+    @deprecated("Use find_uri_scheme_handlers_async() instead.")
     def find_uri_scheme_handlers_with_launch_uri_type_async(cls, scheme: str, launch_query_support_type: LaunchQuerySupportType, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_applicationmodel.AppInfo]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFileAsync(Windows.Storage.IStorageFile)
     def launch_file_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFileAsync(Windows.Storage.IStorageFile,Windows.System.LauncherOptions)
+    def launch_file_async(cls, file: windows_storage.IStorageFile, options: LauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of launch_file_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFileAsync(Windows.Storage.IStorageFile,Windows.System.LauncherOptions)
+    @deprecated("Use launch_file_async() instead.")
     def launch_file_with_options_async(cls, file: windows_storage.IStorageFile, options: LauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderAsync(Windows.Storage.IStorageFolder)
     def launch_folder_async(cls, folder: windows_storage.IStorageFolder, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderAsync(Windows.Storage.IStorageFolder,Windows.System.FolderLauncherOptions)
+    def launch_folder_async(cls, folder: windows_storage.IStorageFolder, options: FolderLauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of launch_folder_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderAsync(Windows.Storage.IStorageFolder,Windows.System.FolderLauncherOptions)
+    @deprecated("Use launch_folder_async() instead.")
+    def launch_folder_with_options_async(cls, folder: windows_storage.IStorageFolder, options: FolderLauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderPathAsync(System.String)
     def launch_folder_path_async(cls, path: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderPathAsync(System.String,Windows.System.FolderLauncherOptions)
+    def launch_folder_path_async(cls, path: str, options: FolderLauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of launch_folder_path_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderPathAsync(System.String,Windows.System.FolderLauncherOptions)
+    @deprecated("Use launch_folder_path_async() instead.")
+    def launch_folder_path_with_options_async(cls, path: str, options: FolderLauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderPathForUserAsync(Windows.System.User,System.String)
     def launch_folder_path_for_user_async(cls, user: User, path: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderPathAsync(System.String,Windows.System.FolderLauncherOptions)
-    def launch_folder_path_with_options_async(cls, path: str, options: FolderLauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderPathForUserAsync(Windows.System.User,System.String,Windows.System.FolderLauncherOptions)
+    def launch_folder_path_for_user_async(cls, user: User, path: str, options: FolderLauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of launch_folder_path_for_user_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderPathForUserAsync(Windows.System.User,System.String,Windows.System.FolderLauncherOptions)
+    @deprecated("Use launch_folder_path_for_user_async() instead.")
     def launch_folder_path_with_options_for_user_async(cls, user: User, path: str, options: FolderLauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchFolderAsync(Windows.Storage.IStorageFolder,Windows.System.FolderLauncherOptions)
-    def launch_folder_with_options_async(cls, folder: windows_storage.IStorageFolder, options: FolderLauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchUriAsync(Windows.Foundation.Uri)
     def launch_uri_async(cls, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchUriAsync(Windows.Foundation.Uri,Windows.System.LauncherOptions)
+    def launch_uri_async(cls, uri: windows_foundation.Uri, options: LauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchUriAsync(Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
+    def launch_uri_async(cls, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of launch_uri_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchUriAsync(Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
+    @deprecated("Use launch_uri_async() instead.")
+    def launch_uri_with_data_async(cls, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of launch_uri_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchUriAsync(Windows.Foundation.Uri,Windows.System.LauncherOptions)
+    @deprecated("Use launch_uri_async() instead.")
+    def launch_uri_with_options_async(cls, uri: windows_foundation.Uri, options: LauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriResult> Windows.System.Launcher::LaunchUriForResultsAsync(Windows.Foundation.Uri,Windows.System.LauncherOptions)
     def launch_uri_for_results_async(cls, uri: windows_foundation.Uri, options: LauncherOptions, /) -> windows_foundation.IAsyncOperation[LaunchUriResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriResult> Windows.System.Launcher::LaunchUriForResultsAsync(Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
+    def launch_uri_for_results_async(cls, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[LaunchUriResult]: ...
+    # Deprecated alias of launch_uri_for_results_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriResult> Windows.System.Launcher::LaunchUriForResultsAsync(Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
+    @deprecated("Use launch_uri_for_results_async() instead.")
+    def launch_uri_for_results_with_data_async(cls, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[LaunchUriResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriResult> Windows.System.Launcher::LaunchUriForResultsForUserAsync(Windows.System.User,Windows.Foundation.Uri,Windows.System.LauncherOptions)
     def launch_uri_for_results_for_user_async(cls, user: User, uri: windows_foundation.Uri, options: LauncherOptions, /) -> windows_foundation.IAsyncOperation[LaunchUriResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriResult> Windows.System.Launcher::LaunchUriForResultsAsync(Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
-    def launch_uri_for_results_with_data_async(cls, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[LaunchUriResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriResult> Windows.System.Launcher::LaunchUriForResultsForUserAsync(Windows.System.User,Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
+    def launch_uri_for_results_for_user_async(cls, user: User, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[LaunchUriResult]: ...
+    # Deprecated alias of launch_uri_for_results_for_user_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriResult> Windows.System.Launcher::LaunchUriForResultsForUserAsync(Windows.System.User,Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
+    @deprecated("Use launch_uri_for_results_for_user_async() instead.")
     def launch_uri_for_results_with_data_for_user_async(cls, user: User, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[LaunchUriResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriStatus> Windows.System.Launcher::LaunchUriForUserAsync(Windows.System.User,Windows.Foundation.Uri)
     def launch_uri_for_user_async(cls, user: User, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[LaunchUriStatus]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchUriAsync(Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
-    def launch_uri_with_data_async(cls, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriStatus> Windows.System.Launcher::LaunchUriForUserAsync(Windows.System.User,Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
-    def launch_uri_with_data_for_user_async(cls, user: User, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[LaunchUriStatus]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Launcher::LaunchUriAsync(Windows.Foundation.Uri,Windows.System.LauncherOptions)
-    def launch_uri_with_options_async(cls, uri: windows_foundation.Uri, options: LauncherOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriStatus> Windows.System.Launcher::LaunchUriForUserAsync(Windows.System.User,Windows.Foundation.Uri,Windows.System.LauncherOptions)
+    def launch_uri_for_user_async(cls, user: User, uri: windows_foundation.Uri, options: LauncherOptions, /) -> windows_foundation.IAsyncOperation[LaunchUriStatus]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriStatus> Windows.System.Launcher::LaunchUriForUserAsync(Windows.System.User,Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
+    def launch_uri_for_user_async(cls, user: User, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[LaunchUriStatus]: ...
+    # Deprecated alias of launch_uri_for_user_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriStatus> Windows.System.Launcher::LaunchUriForUserAsync(Windows.System.User,Windows.Foundation.Uri,Windows.System.LauncherOptions,Windows.Foundation.Collections.ValueSet)
+    @deprecated("Use launch_uri_for_user_async() instead.")
+    def launch_uri_with_data_for_user_async(cls, user: User, uri: windows_foundation.Uri, options: LauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[LaunchUriStatus]: ...
+    # Deprecated alias of launch_uri_for_user_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchUriStatus> Windows.System.Launcher::LaunchUriForUserAsync(Windows.System.User,Windows.Foundation.Uri,Windows.System.LauncherOptions)
+    @deprecated("Use launch_uri_for_user_async() instead.")
     def launch_uri_with_options_for_user_async(cls, user: User, uri: windows_foundation.Uri, options: LauncherOptions, /) -> windows_foundation.IAsyncOperation[LaunchUriStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchQuerySupportStatus> Windows.System.Launcher::QueryAppUriSupportAsync(Windows.Foundation.Uri)
     def query_app_uri_support_async(cls, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[LaunchQuerySupportStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchQuerySupportStatus> Windows.System.Launcher::QueryAppUriSupportAsync(Windows.Foundation.Uri,System.String)
+    def query_app_uri_support_async(cls, uri: windows_foundation.Uri, package_family_name: str, /) -> windows_foundation.IAsyncOperation[LaunchQuerySupportStatus]: ...
+    # Deprecated alias of query_app_uri_support_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchQuerySupportStatus> Windows.System.Launcher::QueryAppUriSupportAsync(Windows.Foundation.Uri,System.String)
+    @deprecated("Use query_app_uri_support_async() instead.")
     def query_app_uri_support_with_package_family_name_async(cls, uri: windows_foundation.Uri, package_family_name: str, /) -> windows_foundation.IAsyncOperation[LaunchQuerySupportStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchQuerySupportStatus> Windows.System.Launcher::QueryFileSupportAsync(Windows.Storage.StorageFile)
     def query_file_support_async(cls, file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncOperation[LaunchQuerySupportStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchQuerySupportStatus> Windows.System.Launcher::QueryFileSupportAsync(Windows.Storage.StorageFile,System.String)
+    def query_file_support_async(cls, file: windows_storage.StorageFile, package_family_name: str, /) -> windows_foundation.IAsyncOperation[LaunchQuerySupportStatus]: ...
+    # Deprecated alias of query_file_support_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchQuerySupportStatus> Windows.System.Launcher::QueryFileSupportAsync(Windows.Storage.StorageFile,System.String)
+    @deprecated("Use query_file_support_async() instead.")
     def query_file_support_with_package_family_name_async(cls, file: windows_storage.StorageFile, package_family_name: str, /) -> windows_foundation.IAsyncOperation[LaunchQuerySupportStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchQuerySupportStatus> Windows.System.Launcher::QueryUriSupportAsync(Windows.Foundation.Uri,Windows.System.LaunchQuerySupportType)
     def query_uri_support_async(cls, uri: windows_foundation.Uri, launch_query_support_type: LaunchQuerySupportType, /) -> windows_foundation.IAsyncOperation[LaunchQuerySupportStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchQuerySupportStatus> Windows.System.Launcher::QueryUriSupportAsync(Windows.Foundation.Uri,Windows.System.LaunchQuerySupportType,System.String)
+    def query_uri_support_async(cls, uri: windows_foundation.Uri, launch_query_support_type: LaunchQuerySupportType, package_family_name: str, /) -> windows_foundation.IAsyncOperation[LaunchQuerySupportStatus]: ...
+    # Deprecated alias of query_uri_support_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.LaunchQuerySupportStatus> Windows.System.Launcher::QueryUriSupportAsync(Windows.Foundation.Uri,Windows.System.LaunchQuerySupportType,System.String)
+    @deprecated("Use query_uri_support_async() instead.")
     def query_uri_support_with_package_family_name_async(cls, uri: windows_foundation.Uri, launch_query_support_type: LaunchQuerySupportType, package_family_name: str, /) -> windows_foundation.IAsyncOperation[LaunchQuerySupportStatus]: ...
 
 @typing.final
@@ -631,9 +726,15 @@ class MemoryManager(winrt.system.Object, metaclass=MemoryManager_Static):
 
 @typing.final
 class ProcessLauncher_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.ProcessLauncherResult> Windows.System.ProcessLauncher::RunToCompletionAsync(System.String,System.String)
     def run_to_completion_async(cls, file_name: str, args: str, /) -> windows_foundation.IAsyncOperation[ProcessLauncherResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.ProcessLauncherResult> Windows.System.ProcessLauncher::RunToCompletionAsync(System.String,System.String,Windows.System.ProcessLauncherOptions)
+    def run_to_completion_async(cls, file_name: str, args: str, options: ProcessLauncherOptions, /) -> windows_foundation.IAsyncOperation[ProcessLauncherResult]: ...
+    # Deprecated alias of run_to_completion_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.ProcessLauncherResult> Windows.System.ProcessLauncher::RunToCompletionAsync(System.String,System.String,Windows.System.ProcessLauncherOptions)
+    @deprecated("Use run_to_completion_async() instead.")
     def run_to_completion_async_with_options(cls, file_name: str, args: str, options: ProcessLauncherOptions, /) -> windows_foundation.IAsyncOperation[ProcessLauncherResult]: ...
 
 @typing.final
@@ -690,11 +791,22 @@ class ProtocolForResultsOperation(winrt.system.Object):
 
 @typing.final
 class RemoteLauncher_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.RemoteLaunchUriStatus> Windows.System.RemoteLauncher::LaunchUriAsync(Windows.System.RemoteSystems.RemoteSystemConnectionRequest,Windows.Foundation.Uri)
     def launch_uri_async(cls, remote_system_connection_request: windows_system_remotesystems.RemoteSystemConnectionRequest, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[RemoteLaunchUriStatus]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.System.RemoteLaunchUriStatus> Windows.System.RemoteLauncher::LaunchUriAsync(Windows.System.RemoteSystems.RemoteSystemConnectionRequest,Windows.Foundation.Uri,Windows.System.RemoteLauncherOptions,Windows.Foundation.Collections.ValueSet)
-    def launch_uri_with_data_async(cls, remote_system_connection_request: windows_system_remotesystems.RemoteSystemConnectionRequest, uri: windows_foundation.Uri, options: RemoteLauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[RemoteLaunchUriStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.RemoteLaunchUriStatus> Windows.System.RemoteLauncher::LaunchUriAsync(Windows.System.RemoteSystems.RemoteSystemConnectionRequest,Windows.Foundation.Uri,Windows.System.RemoteLauncherOptions)
+    def launch_uri_async(cls, remote_system_connection_request: windows_system_remotesystems.RemoteSystemConnectionRequest, uri: windows_foundation.Uri, options: RemoteLauncherOptions, /) -> windows_foundation.IAsyncOperation[RemoteLaunchUriStatus]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.RemoteLaunchUriStatus> Windows.System.RemoteLauncher::LaunchUriAsync(Windows.System.RemoteSystems.RemoteSystemConnectionRequest,Windows.Foundation.Uri,Windows.System.RemoteLauncherOptions,Windows.Foundation.Collections.ValueSet)
+    def launch_uri_async(cls, remote_system_connection_request: windows_system_remotesystems.RemoteSystemConnectionRequest, uri: windows_foundation.Uri, options: RemoteLauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[RemoteLaunchUriStatus]: ...
+    # Deprecated alias of launch_uri_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.RemoteLaunchUriStatus> Windows.System.RemoteLauncher::LaunchUriAsync(Windows.System.RemoteSystems.RemoteSystemConnectionRequest,Windows.Foundation.Uri,Windows.System.RemoteLauncherOptions,Windows.Foundation.Collections.ValueSet)
+    @deprecated("Use launch_uri_async() instead.")
+    def launch_uri_with_data_async(cls, remote_system_connection_request: windows_system_remotesystems.RemoteSystemConnectionRequest, uri: windows_foundation.Uri, options: RemoteLauncherOptions, input_data: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[RemoteLaunchUriStatus]: ...
+    # Deprecated alias of launch_uri_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.RemoteLaunchUriStatus> Windows.System.RemoteLauncher::LaunchUriAsync(Windows.System.RemoteSystems.RemoteSystemConnectionRequest,Windows.Foundation.Uri,Windows.System.RemoteLauncherOptions)
+    @deprecated("Use launch_uri_async() instead.")
     def launch_uri_with_options_async(cls, remote_system_connection_request: windows_system_remotesystems.RemoteSystemConnectionRequest, uri: windows_foundation.Uri, options: RemoteLauncherOptions, /) -> windows_foundation.IAsyncOperation[RemoteLaunchUriStatus]: ...
 
 @typing.final
@@ -720,9 +832,15 @@ class ShutdownManager_Static(winrt._winrt.IInspectable_Static):
     def begin_shutdown(cls, shutdown_kind: ShutdownKind, timeout: datetime.timedelta, /) -> None: ...
     # System.Void Windows.System.ShutdownManager::CancelShutdown()
     def cancel_shutdown(cls) -> None: ...
+    @typing.overload
     # System.Void Windows.System.ShutdownManager::EnterPowerState(Windows.System.PowerState)
     def enter_power_state(cls, power_state: PowerState, /) -> None: ...
+    @typing.overload
     # System.Void Windows.System.ShutdownManager::EnterPowerState(Windows.System.PowerState,Windows.Foundation.TimeSpan)
+    def enter_power_state(cls, power_state: PowerState, wake_up_after: datetime.timedelta, /) -> None: ...
+    # Deprecated alias of enter_power_state() for pywinrt v3.x compatibility.
+    # System.Void Windows.System.ShutdownManager::EnterPowerState(Windows.System.PowerState,Windows.Foundation.TimeSpan)
+    @deprecated("Use enter_power_state() instead.")
     def enter_power_state_with_time_span(cls, power_state: PowerState, wake_up_after: datetime.timedelta, /) -> None: ...
     # System.Boolean Windows.System.ShutdownManager::IsPowerStateSupported(Windows.System.PowerState)
     def is_power_state_supported(cls, power_state: PowerState, /) -> bool: ...
@@ -755,13 +873,26 @@ class TimeZoneSettings(winrt.system.Object, metaclass=TimeZoneSettings_Static):
 class User_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.UserWatcher Windows.System.User::CreateWatcher()
     def create_watcher(cls) -> UserWatcher: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.User>> Windows.System.User::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[User]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.User>> Windows.System.User::FindAllAsync(Windows.System.UserType)
     # @deprecated("FindAllAsyncByType is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.")
-    def find_all_async_by_type(cls, type: UserType, /) -> windows_foundation.IAsyncOperation[typing.Sequence[User]]: ...
+    def find_all_async(cls, type: UserType, /) -> windows_foundation.IAsyncOperation[typing.Sequence[User]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.User>> Windows.System.User::FindAllAsync(Windows.System.UserType,Windows.System.UserAuthenticationStatus)
     # @deprecated("FindAllAsyncByTypeAndStatus is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.")
+    def find_all_async(cls, type: UserType, status: UserAuthenticationStatus, /) -> windows_foundation.IAsyncOperation[typing.Sequence[User]]: ...
+    # Deprecated alias of find_all_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.User>> Windows.System.User::FindAllAsync(Windows.System.UserType)
+    # @deprecated("FindAllAsyncByType is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.")
+    @deprecated("Use find_all_async() instead.")
+    def find_all_async_by_type(cls, type: UserType, /) -> windows_foundation.IAsyncOperation[typing.Sequence[User]]: ...
+    # Deprecated alias of find_all_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.User>> Windows.System.User::FindAllAsync(Windows.System.UserType,Windows.System.UserAuthenticationStatus)
+    # @deprecated("FindAllAsyncByTypeAndStatus is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.")
+    @deprecated("Use find_all_async() instead.")
     def find_all_async_by_type_and_status(cls, type: UserType, status: UserAuthenticationStatus, /) -> windows_foundation.IAsyncOperation[typing.Sequence[User]]: ...
     # Windows.System.User Windows.System.User::GetDefault()
     def get_default(cls) -> User: ...

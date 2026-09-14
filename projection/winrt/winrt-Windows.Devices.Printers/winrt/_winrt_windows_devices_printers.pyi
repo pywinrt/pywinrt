@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -369,17 +370,35 @@ class VirtualPrinterInstallationResult(winrt.system.Object):
 
 @typing.final
 class VirtualPrinterManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Printers.VirtualPrinterManager::FindAllVirtualPrinters()
     def find_all_virtual_printers(cls) -> typing.Sequence[str]: ...
+    @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Printers.VirtualPrinterManager::FindAllVirtualPrinters(System.String)
+    def find_all_virtual_printers(cls, app_package_family_name: str, /) -> typing.Sequence[str]: ...
+    # Deprecated alias of find_all_virtual_printers() for pywinrt v3.x compatibility.
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Printers.VirtualPrinterManager::FindAllVirtualPrinters(System.String)
+    @deprecated("Use find_all_virtual_printers() instead.")
     def find_all_virtual_printers2(cls, app_package_family_name: str, /) -> typing.Sequence[str]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.VirtualPrinterInstallationResult> Windows.Devices.Printers.VirtualPrinterManager::InstallVirtualPrinterAsync(Windows.Devices.Printers.VirtualPrinterInstallationParameters)
     def install_virtual_printer_async(cls, parameters: VirtualPrinterInstallationParameters, /) -> windows_foundation.IAsyncOperation[VirtualPrinterInstallationResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.VirtualPrinterInstallationResult> Windows.Devices.Printers.VirtualPrinterManager::InstallVirtualPrinterAsync(Windows.Devices.Printers.VirtualPrinterInstallationParameters,System.String)
+    def install_virtual_printer_async(cls, parameters: VirtualPrinterInstallationParameters, app_package_family_name: str, /) -> windows_foundation.IAsyncOperation[VirtualPrinterInstallationResult]: ...
+    # Deprecated alias of install_virtual_printer_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.VirtualPrinterInstallationResult> Windows.Devices.Printers.VirtualPrinterManager::InstallVirtualPrinterAsync(Windows.Devices.Printers.VirtualPrinterInstallationParameters,System.String)
+    @deprecated("Use install_virtual_printer_async() instead.")
     def install_virtual_printer_async2(cls, parameters: VirtualPrinterInstallationParameters, app_package_family_name: str, /) -> windows_foundation.IAsyncOperation[VirtualPrinterInstallationResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.VirtualPrinterInstallationResult> Windows.Devices.Printers.VirtualPrinterManager::InstallVirtualPrinterForAllUsersAsync(Windows.Devices.Printers.VirtualPrinterInstallationParameters)
     def install_virtual_printer_for_all_users_async(cls, parameters: VirtualPrinterInstallationParameters, /) -> windows_foundation.IAsyncOperation[VirtualPrinterInstallationResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.VirtualPrinterInstallationResult> Windows.Devices.Printers.VirtualPrinterManager::InstallVirtualPrinterForAllUsersAsync(Windows.Devices.Printers.VirtualPrinterInstallationParameters,System.String)
+    def install_virtual_printer_for_all_users_async(cls, parameters: VirtualPrinterInstallationParameters, app_package_family_name: str, /) -> windows_foundation.IAsyncOperation[VirtualPrinterInstallationResult]: ...
+    # Deprecated alias of install_virtual_printer_for_all_users_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.VirtualPrinterInstallationResult> Windows.Devices.Printers.VirtualPrinterManager::InstallVirtualPrinterForAllUsersAsync(Windows.Devices.Printers.VirtualPrinterInstallationParameters,System.String)
+    @deprecated("Use install_virtual_printer_for_all_users_async() instead.")
     def install_virtual_printer_for_all_users_async2(cls, parameters: VirtualPrinterInstallationParameters, app_package_family_name: str, /) -> windows_foundation.IAsyncOperation[VirtualPrinterInstallationResult]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.Printers.VirtualPrinterManager::RemoveVirtualPrinterAsync(System.String)
     def remove_virtual_printer_async(cls, printer_name: str, /) -> windows_foundation.IAsyncOperation[bool]: ...

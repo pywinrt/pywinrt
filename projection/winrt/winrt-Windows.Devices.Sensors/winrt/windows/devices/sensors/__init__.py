@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_sensors import (
     LightSensorChromaticity,
@@ -253,3 +254,10 @@ class SimpleOrientation(enum.IntEnum):
     FACEUP = 4
     FACEDOWN = 5
 
+winrt.runtime._internals.alias_static_method(Accelerometer, "get_default_with_accelerometer_reading_type", "get_default")
+winrt.runtime._internals.alias_static_method(ActivitySensor, "get_system_history_with_duration_async", "get_system_history_async")
+winrt.runtime._internals.alias_static_method(Inclinometer, "get_default_with_sensor_reading_type", "get_default")
+winrt.runtime._internals.alias_static_method(OrientationSensor, "get_default_with_sensor_reading_type", "get_default")
+winrt.runtime._internals.alias_static_method(OrientationSensor, "get_default_with_sensor_reading_type_and_sensor_optimization_goal", "get_default")
+winrt.runtime._internals.alias_static_method(OrientationSensor, "get_device_selector_with_sensor_reading_type_and_sensor_optimization_goal", "get_device_selector")
+winrt.runtime._internals.alias_static_method(Pedometer, "get_system_history_with_duration_async", "get_system_history_async")

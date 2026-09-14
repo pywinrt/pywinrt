@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_background import (
     ActivitySensorTrigger,
@@ -295,6 +296,16 @@ class SystemTriggerType(enum.IntEnum):
     POWER_STATE_CHANGE = 14
     DEFAULT_SIGN_IN_ACCOUNT_CHANGE = 15
 
+winrt.runtime._internals.alias_method(ApplicationTrigger, "request_async_with_arguments", "request_async")
+winrt.runtime._internals.alias_static_method(BackgroundExecutionManager, "get_access_status_for_application", "get_access_status")
+winrt.runtime._internals.alias_static_method(BackgroundExecutionManager, "get_access_status_for_modern_standby_for_application", "get_access_status_for_modern_standby")
+winrt.runtime._internals.alias_static_method(BackgroundExecutionManager, "remove_access_for_application", "remove_access")
+winrt.runtime._internals.alias_static_method(BackgroundExecutionManager, "request_access_for_application_async", "request_access_async")
+winrt.runtime._internals.alias_method(DeviceServicingTrigger, "request_async_simple", "request_async")
+winrt.runtime._internals.alias_method(DeviceServicingTrigger, "request_async_with_arguments", "request_async")
+winrt.runtime._internals.alias_method(DeviceUseTrigger, "request_async_simple", "request_async")
+winrt.runtime._internals.alias_method(DeviceUseTrigger, "request_async_with_arguments", "request_async")
+winrt.runtime._internals.alias_method(MediaProcessingTrigger, "request_async_with_arguments", "request_async")
 BackgroundTaskCanceledEventHandler = typing.Callable[[IBackgroundTaskInstance, BackgroundTaskCancellationReason], None]
 BackgroundTaskCompletedEventHandler = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskCompletedEventArgs], None]
 BackgroundTaskProgressEventHandler = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskProgressEventArgs], None]

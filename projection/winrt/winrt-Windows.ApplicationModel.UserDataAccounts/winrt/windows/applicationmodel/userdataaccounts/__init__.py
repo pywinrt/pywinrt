@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_userdataaccounts import (
     UserDataAccount,
@@ -36,3 +37,5 @@ class UserDataAccountStoreAccessType(enum.IntEnum):
     ALL_ACCOUNTS_READ_ONLY = 0
     APP_ACCOUNTS_READ_WRITE = 1
 
+winrt.runtime._internals.alias_method(UserDataAccountStore, "create_account_with_package_relative_app_id_and_enterprise_id_async", "create_account_async")
+winrt.runtime._internals.alias_method(UserDataAccountStore, "create_account_with_package_relative_app_id_async", "create_account_async")

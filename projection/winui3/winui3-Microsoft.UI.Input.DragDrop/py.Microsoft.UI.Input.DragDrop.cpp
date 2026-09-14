@@ -638,18 +638,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* DragOperation_SetDragUIContentFromSoftwareBitmap2(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -950,7 +939,6 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
     static PyMethodDef _methods_DragOperation[] = {
         { "close", reinterpret_cast<PyCFunction>(DragOperation_Close), METH_VARARGS, nullptr },
         { "set_drag_ui_content_from_software_bitmap", reinterpret_cast<PyCFunction>(DragOperation_SetDragUIContentFromSoftwareBitmap), METH_VARARGS, nullptr },
-        { "set_drag_ui_content_from_software_bitmap2", reinterpret_cast<PyCFunction>(DragOperation_SetDragUIContentFromSoftwareBitmap2), METH_VARARGS, nullptr },
         { "start_async", reinterpret_cast<PyCFunction>(DragOperation_StartAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DragOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragOperation), METH_O | METH_STATIC, nullptr },
@@ -1072,18 +1060,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* DragUIOverride_SetContentFromSoftwareBitmap2(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1426,7 +1403,6 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
     static PyMethodDef _methods_DragUIOverride[] = {
         { "clear", reinterpret_cast<PyCFunction>(DragUIOverride_Clear), METH_VARARGS, nullptr },
         { "set_content_from_software_bitmap", reinterpret_cast<PyCFunction>(DragUIOverride_SetContentFromSoftwareBitmap), METH_VARARGS, nullptr },
-        { "set_content_from_software_bitmap2", reinterpret_cast<PyCFunction>(DragUIOverride_SetContentFromSoftwareBitmap2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DragUIOverride, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragUIOverride), METH_O | METH_STATIC, nullptr },
         { }};

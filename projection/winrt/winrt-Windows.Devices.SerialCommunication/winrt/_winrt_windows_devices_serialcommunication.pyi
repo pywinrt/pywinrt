@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -32,9 +33,15 @@ class PinChangedEventArgs(winrt.system.Object):
 class SerialDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SerialCommunication.SerialDevice> Windows.Devices.SerialCommunication.SerialDevice::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[SerialDevice]: ...
+    @typing.overload
     # System.String Windows.Devices.SerialCommunication.SerialDevice::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.SerialCommunication.SerialDevice::GetDeviceSelector(System.String)
+    def get_device_selector(cls, port_name: str, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.SerialCommunication.SerialDevice::GetDeviceSelector(System.String)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_from_port_name(cls, port_name: str, /) -> str: ...
     # System.String Windows.Devices.SerialCommunication.SerialDevice::GetDeviceSelectorFromUsbVidPid(System.UInt16,System.UInt16)
     def get_device_selector_from_usb_vid_pid(cls, vendor_id: winrt.system.UInt16, product_id: winrt.system.UInt16, /) -> str: ...

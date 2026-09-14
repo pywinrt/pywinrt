@@ -671,18 +671,7 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MdmSession_StartWithAlertsAsync(py::wrapper::Windows::Management::MdmSession* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -868,7 +857,6 @@ namespace py::cpp::Windows::Management
         { "attach_async", reinterpret_cast<PyCFunction>(MdmSession_AttachAsync), METH_VARARGS, nullptr },
         { "delete", reinterpret_cast<PyCFunction>(MdmSession_Delete), METH_VARARGS, nullptr },
         { "start_async", reinterpret_cast<PyCFunction>(MdmSession_StartAsync), METH_VARARGS, nullptr },
-        { "start_with_alerts_async", reinterpret_cast<PyCFunction>(MdmSession_StartWithAlertsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MdmSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MdmSession), METH_O | METH_STATIC, nullptr },
         { }};

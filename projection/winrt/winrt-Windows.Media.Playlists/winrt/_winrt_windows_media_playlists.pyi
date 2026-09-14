@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -25,9 +26,15 @@ class Playlist_Static(winrt._winrt.IInspectable_Static):
 @typing.final
 class Playlist(winrt.system.Object, metaclass=Playlist_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Media.Playlists.Playlist::SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
     def save_as_async(self, save_location: windows_storage.IStorageFolder, desired_name: str, option: windows_storage.NameCollisionOption, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Media.Playlists.Playlist::SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)
+    def save_as_async(self, save_location: windows_storage.IStorageFolder, desired_name: str, option: windows_storage.NameCollisionOption, playlist_format: PlaylistFormat, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    # Deprecated alias of save_as_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Media.Playlists.Playlist::SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)
+    @deprecated("Use save_as_async() instead.")
     def save_as_with_format_async(self, save_location: windows_storage.IStorageFolder, desired_name: str, option: windows_storage.NameCollisionOption, playlist_format: PlaylistFormat, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Playlists.Playlist::SaveAsync()
     def save_async(self) -> windows_foundation.IAsyncAction: ...

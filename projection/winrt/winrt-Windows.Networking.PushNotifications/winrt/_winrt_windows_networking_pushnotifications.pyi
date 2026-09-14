@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -36,9 +37,15 @@ class PushNotificationChannel(winrt.system.Object):
 
 @typing.final
 class PushNotificationChannelManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManager::CreatePushNotificationChannelForApplicationAsync()
     def create_push_notification_channel_for_application_async(cls) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManager::CreatePushNotificationChannelForApplicationAsync(System.String)
+    def create_push_notification_channel_for_application_async(cls, application_id: str, /) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
+    # Deprecated alias of create_push_notification_channel_for_application_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManager::CreatePushNotificationChannelForApplicationAsync(System.String)
+    @deprecated("Use create_push_notification_channel_for_application_async() instead.")
     def create_push_notification_channel_for_application_async_with_id(cls, application_id: str, /) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManager::CreatePushNotificationChannelForSecondaryTileAsync(System.String)
     def create_push_notification_channel_for_secondary_tile_async(cls, tile_id: str, /) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
@@ -57,15 +64,27 @@ class PushNotificationChannelManager(winrt.system.Object, metaclass=PushNotifica
 
 @typing.final
 class PushNotificationChannelManagerForUser(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser::CreatePushNotificationChannelForApplicationAsync()
     def create_push_notification_channel_for_application_async(self) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser::CreatePushNotificationChannelForApplicationAsync(System.String)
+    def create_push_notification_channel_for_application_async(self, application_id: str, /) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
+    # Deprecated alias of create_push_notification_channel_for_application_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser::CreatePushNotificationChannelForApplicationAsync(System.String)
+    @deprecated("Use create_push_notification_channel_for_application_async() instead.")
     def create_push_notification_channel_for_application_async_with_id(self, application_id: str, /) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser::CreatePushNotificationChannelForSecondaryTileAsync(System.String)
     def create_push_notification_channel_for_secondary_tile_async(self, tile_id: str, /) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser::CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(Windows.Storage.Streams.IBuffer,System.String)
     def create_raw_push_notification_channel_with_alternate_key_for_application_async(self, app_server_key: winrt.system.Buffer, channel_id: str, /) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser::CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(Windows.Storage.Streams.IBuffer,System.String,System.String)
+    def create_raw_push_notification_channel_with_alternate_key_for_application_async(self, app_server_key: winrt.system.Buffer, channel_id: str, app_id: str, /) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
+    # Deprecated alias of create_raw_push_notification_channel_with_alternate_key_for_application_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser::CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(Windows.Storage.Streams.IBuffer,System.String,System.String)
+    @deprecated("Use create_raw_push_notification_channel_with_alternate_key_for_application_async() instead.")
     def create_raw_push_notification_channel_with_alternate_key_for_application_async_with_id(self, app_server_key: winrt.system.Buffer, channel_id: str, app_id: str, /) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
     # Windows.System.User Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser::get_User()
     @_property

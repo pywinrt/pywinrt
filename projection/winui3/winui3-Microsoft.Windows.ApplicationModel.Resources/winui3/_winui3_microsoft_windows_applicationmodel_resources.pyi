@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -114,19 +115,37 @@ class ResourceManager(winrt.system.Object, IResourceManager):
 class ResourceMap(winrt.system.Object):
     # Microsoft.Windows.ApplicationModel.Resources.ResourceMap Microsoft.Windows.ApplicationModel.Resources.ResourceMap::GetSubtree(System.String)
     def get_subtree(self, reference: str, /) -> ResourceMap: ...
+    @typing.overload
     # Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate Microsoft.Windows.ApplicationModel.Resources.ResourceMap::GetValue(System.String)
     def get_value(self, resource: str, /) -> ResourceCandidate: ...
+    @typing.overload
+    # Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate Microsoft.Windows.ApplicationModel.Resources.ResourceMap::GetValue(System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceContext)
+    def get_value(self, resource: str, context: ResourceContext, /) -> ResourceCandidate: ...
+    # Deprecated alias of get_value() for pywinrt v3.x compatibility.
+    # Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate Microsoft.Windows.ApplicationModel.Resources.ResourceMap::GetValue(System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceContext)
+    @deprecated("Use get_value() instead.")
+    def get_value_with_context(self, resource: str, context: ResourceContext, /) -> ResourceCandidate: ...
+    @typing.overload
     # Windows.Foundation.Collections.IKeyValuePair`2<System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate> Microsoft.Windows.ApplicationModel.Resources.ResourceMap::GetValueByIndex(System.UInt32)
     def get_value_by_index(self, index: winrt.system.UInt32, /) -> windows_foundation_collections.IKeyValuePair[str, ResourceCandidate]: ...
+    @typing.overload
     # Windows.Foundation.Collections.IKeyValuePair`2<System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate> Microsoft.Windows.ApplicationModel.Resources.ResourceMap::GetValueByIndex(System.UInt32,Microsoft.Windows.ApplicationModel.Resources.ResourceContext)
+    def get_value_by_index(self, index: winrt.system.UInt32, context: ResourceContext, /) -> windows_foundation_collections.IKeyValuePair[str, ResourceCandidate]: ...
+    # Deprecated alias of get_value_by_index() for pywinrt v3.x compatibility.
+    # Windows.Foundation.Collections.IKeyValuePair`2<System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate> Microsoft.Windows.ApplicationModel.Resources.ResourceMap::GetValueByIndex(System.UInt32,Microsoft.Windows.ApplicationModel.Resources.ResourceContext)
+    @deprecated("Use get_value_by_index() instead.")
     def get_value_by_index_with_context(self, index: winrt.system.UInt32, context: ResourceContext, /) -> windows_foundation_collections.IKeyValuePair[str, ResourceCandidate]: ...
-    # Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate Microsoft.Windows.ApplicationModel.Resources.ResourceMap::GetValue(System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceContext)
-    def get_value_with_context(self, resource: str, context: ResourceContext, /) -> ResourceCandidate: ...
     # Microsoft.Windows.ApplicationModel.Resources.ResourceMap Microsoft.Windows.ApplicationModel.Resources.ResourceMap::TryGetSubtree(System.String)
     def try_get_subtree(self, reference: str, /) -> typing.Optional[ResourceMap]: ...
+    @typing.overload
     # Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate Microsoft.Windows.ApplicationModel.Resources.ResourceMap::TryGetValue(System.String)
     def try_get_value(self, resource: str, /) -> typing.Optional[ResourceCandidate]: ...
+    @typing.overload
     # Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate Microsoft.Windows.ApplicationModel.Resources.ResourceMap::TryGetValue(System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceContext)
+    def try_get_value(self, resource: str, context: ResourceContext, /) -> typing.Optional[ResourceCandidate]: ...
+    # Deprecated alias of try_get_value() for pywinrt v3.x compatibility.
+    # Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate Microsoft.Windows.ApplicationModel.Resources.ResourceMap::TryGetValue(System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceContext)
+    @deprecated("Use try_get_value() instead.")
     def try_get_value_with_context(self, resource: str, context: ResourceContext, /) -> typing.Optional[ResourceCandidate]: ...
     # System.UInt32 Microsoft.Windows.ApplicationModel.Resources.ResourceMap::get_ResourceCount()
     @_property

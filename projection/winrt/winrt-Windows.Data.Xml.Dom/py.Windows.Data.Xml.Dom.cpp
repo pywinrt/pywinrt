@@ -7613,18 +7613,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* XmlDocument_LoadFromFileWithSettingsAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -7698,18 +7687,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* XmlDocument_LoadFromUriWithSettingsAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -7784,6 +7762,39 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
         }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadXml", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>(args, 1);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.LoadXml(param0, param1);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -7827,18 +7838,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* XmlDocument_LoadXmlFromBufferWithSettings(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -7861,50 +7861,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 {
                     auto _gil = release_gil();
                     self->obj.LoadXmlFromBuffer(param0, param1);
-                }
-
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* XmlDocument_LoadXmlWithSettings(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Xml.Dom.XmlDocument", L"LoadXml", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>(args, 1);
-
-                {
-                    auto _gil = release_gil();
-                    self->obj.LoadXml(param0, param1);
                 }
 
                 Py_RETURN_NONE;
@@ -8992,8 +8948,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "insert_before", reinterpret_cast<PyCFunction>(XmlDocument_InsertBefore), METH_VARARGS, nullptr },
         { "load_xml", reinterpret_cast<PyCFunction>(XmlDocument_LoadXml), METH_VARARGS, nullptr },
         { "load_xml_from_buffer", reinterpret_cast<PyCFunction>(XmlDocument_LoadXmlFromBuffer), METH_VARARGS, nullptr },
-        { "load_xml_from_buffer_with_settings", reinterpret_cast<PyCFunction>(XmlDocument_LoadXmlFromBufferWithSettings), METH_VARARGS, nullptr },
-        { "load_xml_with_settings", reinterpret_cast<PyCFunction>(XmlDocument_LoadXmlWithSettings), METH_VARARGS, nullptr },
         { "normalize", reinterpret_cast<PyCFunction>(XmlDocument_Normalize), METH_VARARGS, nullptr },
         { "remove_child", reinterpret_cast<PyCFunction>(XmlDocument_RemoveChild), METH_VARARGS, nullptr },
         { "replace_child", reinterpret_cast<PyCFunction>(XmlDocument_ReplaceChild), METH_VARARGS, nullptr },
@@ -9047,9 +9001,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyMethodDef methods_XmlDocument_Static[] = {
         { "load_from_file_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromFileAsync), METH_VARARGS, nullptr },
-        { "load_from_file_with_settings_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromFileWithSettingsAsync), METH_VARARGS, nullptr },
         { "load_from_uri_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromUriAsync), METH_VARARGS, nullptr },
-        { "load_from_uri_with_settings_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromUriWithSettingsAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_XmlDocument_Static[] = 

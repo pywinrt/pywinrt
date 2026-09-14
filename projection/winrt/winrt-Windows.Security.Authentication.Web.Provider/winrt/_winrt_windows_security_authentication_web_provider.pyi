@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -42,17 +43,39 @@ class WebAccountClientView(winrt.system.Object):
 
 @typing.final
 class WebAccountManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountAsync(System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>)
     def add_web_account_async(cls, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountAsync(System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope)
+    def add_web_account_async(cls, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountAsync(System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope,System.String)
+    def add_web_account_async(cls, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, per_user_web_account_id: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
+    # Deprecated alias of add_web_account_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountAsync(System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope,System.String)
+    @deprecated("Use add_web_account_async() instead.")
+    def add_web_account_with_scope_and_map_async(cls, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, per_user_web_account_id: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
+    # Deprecated alias of add_web_account_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountAsync(System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope)
+    @deprecated("Use add_web_account_async() instead.")
+    def add_web_account_with_scope_async(cls, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountForUserAsync(Windows.System.User,System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>)
     def add_web_account_for_user_async(cls, user: windows_system.User, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountAsync(System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope,System.String)
-    def add_web_account_with_scope_and_map_async(cls, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, per_user_web_account_id: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountForUserAsync(Windows.System.User,System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope,System.String)
-    def add_web_account_with_scope_and_map_for_user_async(cls, user: windows_system.User, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, per_user_web_account_id: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountAsync(System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope)
-    def add_web_account_with_scope_async(cls, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountForUserAsync(Windows.System.User,System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope)
+    def add_web_account_for_user_async(cls, user: windows_system.User, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountForUserAsync(Windows.System.User,System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope,System.String)
+    def add_web_account_for_user_async(cls, user: windows_system.User, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, per_user_web_account_id: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
+    # Deprecated alias of add_web_account_for_user_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountForUserAsync(Windows.System.User,System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope,System.String)
+    @deprecated("Use add_web_account_for_user_async() instead.")
+    def add_web_account_with_scope_and_map_for_user_async(cls, user: windows_system.User, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, per_user_web_account_id: str, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
+    # Deprecated alias of add_web_account_for_user_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountForUserAsync(Windows.System.User,System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Security.Authentication.Web.Provider.WebAccountScope)
+    @deprecated("Use add_web_account_for_user_async() instead.")
     def add_web_account_with_scope_for_user_async(cls, user: windows_system.User, web_account_id: str, web_account_user_name: str, props: typing.Mapping[str, str], scope: WebAccountScope, /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...
     # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Web.Provider.WebAccountManager::ClearPerUserFromPerAppAccountAsync(Windows.Security.Credentials.WebAccount)
     def clear_per_user_from_per_app_account_async(cls, per_app_account: windows_security_credentials.WebAccount, /) -> windows_foundation.IAsyncAction: ...
@@ -122,9 +145,15 @@ class WebAccountProviderGetTokenSilentOperation(winrt.system.Object, IWebAccount
     def report_completed(self) -> None: ...
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation::ReportError(Windows.Security.Authentication.Web.Core.WebProviderError)
     def report_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation::ReportUserInteractionRequired()
     def report_user_interaction_required(self) -> None: ...
+    @typing.overload
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation::ReportUserInteractionRequired(Windows.Security.Authentication.Web.Core.WebProviderError)
+    def report_user_interaction_required(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
+    # Deprecated alias of report_user_interaction_required() for pywinrt v3.x compatibility.
+    # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation::ReportUserInteractionRequired(Windows.Security.Authentication.Web.Core.WebProviderError)
+    @deprecated("Use report_user_interaction_required() instead.")
     def report_user_interaction_required_with_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
     # Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation::get_Kind()
     @_property
@@ -288,11 +317,17 @@ class IWebAccountProviderOperation(winrt._winrt.IInspectable):
 class _IWebAccountProviderSilentReportOperation: ...
 
 class IWebAccountProviderSilentReportOperation(IWebAccountProviderBaseReportOperation, winrt._winrt.IInspectable):
+    @typing.overload
     # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation::ReportUserInteractionRequired()
     @abstractmethod
     def report_user_interaction_required(self) -> None: ...
+    @typing.overload
     # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation::ReportUserInteractionRequired(Windows.Security.Authentication.Web.Core.WebProviderError)
     @abstractmethod
+    def report_user_interaction_required(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
+    # Deprecated alias of report_user_interaction_required() for pywinrt v3.x compatibility.
+    # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation::ReportUserInteractionRequired(Windows.Security.Authentication.Web.Core.WebProviderError)
+    @deprecated("Use report_user_interaction_required() instead.")
     def report_user_interaction_required_with_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
 
 @typing.final

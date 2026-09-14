@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_gaming_xboxlive_storage import (
     GameSaveBlobGetResult,
@@ -49,3 +50,6 @@ class GameSaveErrorStatus(enum.IntEnum):
     USER_HAS_NO_XBOX_LIVE_INFO = -2138898420
     OBJECT_EXPIRED = -2138898419
 
+winrt.runtime._internals.alias_method(GameSaveBlobInfoQuery, "get_blob_info_with_index_and_max_async", "get_blob_info_async")
+winrt.runtime._internals.alias_method(GameSaveContainerInfoQuery, "get_container_info_with_index_and_max_async", "get_container_info_async")
+winrt.runtime._internals.alias_method(GameSaveProvider, "create_container_info_query_with_name", "create_container_info_query")

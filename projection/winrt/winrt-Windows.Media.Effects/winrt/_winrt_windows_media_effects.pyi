@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -74,13 +75,25 @@ class AudioEffectDefinition(winrt.system.Object, IAudioEffectDefinition):
 
 @typing.final
 class AudioEffectsManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Media.Effects.AudioCaptureEffectsManager Windows.Media.Effects.AudioEffectsManager::CreateAudioCaptureEffectsManager(System.String,Windows.Media.Capture.MediaCategory)
     def create_audio_capture_effects_manager(cls, device_id: str, category: windows_media_capture.MediaCategory, /) -> AudioCaptureEffectsManager: ...
+    @typing.overload
     # Windows.Media.Effects.AudioCaptureEffectsManager Windows.Media.Effects.AudioEffectsManager::CreateAudioCaptureEffectsManager(System.String,Windows.Media.Capture.MediaCategory,Windows.Media.AudioProcessing)
+    def create_audio_capture_effects_manager(cls, device_id: str, category: windows_media_capture.MediaCategory, mode: windows_media.AudioProcessing, /) -> AudioCaptureEffectsManager: ...
+    # Deprecated alias of create_audio_capture_effects_manager() for pywinrt v3.x compatibility.
+    # Windows.Media.Effects.AudioCaptureEffectsManager Windows.Media.Effects.AudioEffectsManager::CreateAudioCaptureEffectsManager(System.String,Windows.Media.Capture.MediaCategory,Windows.Media.AudioProcessing)
+    @deprecated("Use create_audio_capture_effects_manager() instead.")
     def create_audio_capture_effects_manager_with_mode(cls, device_id: str, category: windows_media_capture.MediaCategory, mode: windows_media.AudioProcessing, /) -> AudioCaptureEffectsManager: ...
+    @typing.overload
     # Windows.Media.Effects.AudioRenderEffectsManager Windows.Media.Effects.AudioEffectsManager::CreateAudioRenderEffectsManager(System.String,Windows.Media.Render.AudioRenderCategory)
     def create_audio_render_effects_manager(cls, device_id: str, category: windows_media_render.AudioRenderCategory, /) -> AudioRenderEffectsManager: ...
+    @typing.overload
     # Windows.Media.Effects.AudioRenderEffectsManager Windows.Media.Effects.AudioEffectsManager::CreateAudioRenderEffectsManager(System.String,Windows.Media.Render.AudioRenderCategory,Windows.Media.AudioProcessing)
+    def create_audio_render_effects_manager(cls, device_id: str, category: windows_media_render.AudioRenderCategory, mode: windows_media.AudioProcessing, /) -> AudioRenderEffectsManager: ...
+    # Deprecated alias of create_audio_render_effects_manager() for pywinrt v3.x compatibility.
+    # Windows.Media.Effects.AudioRenderEffectsManager Windows.Media.Effects.AudioEffectsManager::CreateAudioRenderEffectsManager(System.String,Windows.Media.Render.AudioRenderCategory,Windows.Media.AudioProcessing)
+    @deprecated("Use create_audio_render_effects_manager() instead.")
     def create_audio_render_effects_manager_with_mode(cls, device_id: str, category: windows_media_render.AudioRenderCategory, mode: windows_media.AudioProcessing, /) -> AudioRenderEffectsManager: ...
 
 @typing.final

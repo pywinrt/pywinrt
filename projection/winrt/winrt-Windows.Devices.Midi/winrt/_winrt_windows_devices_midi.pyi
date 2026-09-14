@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -297,9 +298,15 @@ class MidiStopMessage(winrt.system.Object, IMidiMessage):
 
 @typing.final
 class MidiSynthesizer_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Midi.MidiSynthesizer> Windows.Devices.Midi.MidiSynthesizer::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[MidiSynthesizer]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Midi.MidiSynthesizer> Windows.Devices.Midi.MidiSynthesizer::CreateAsync(Windows.Devices.Enumeration.DeviceInformation)
+    def create_async(cls, audio_device: windows_devices_enumeration.DeviceInformation, /) -> windows_foundation.IAsyncOperation[MidiSynthesizer]: ...
+    # Deprecated alias of create_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Midi.MidiSynthesizer> Windows.Devices.Midi.MidiSynthesizer::CreateAsync(Windows.Devices.Enumeration.DeviceInformation)
+    @deprecated("Use create_async() instead.")
     def create_from_audio_device_async(cls, audio_device: windows_devices_enumeration.DeviceInformation, /) -> windows_foundation.IAsyncOperation[MidiSynthesizer]: ...
     # System.Boolean Windows.Devices.Midi.MidiSynthesizer::IsSynthesizer(Windows.Devices.Enumeration.DeviceInformation)
     def is_synthesizer(cls, midi_device: windows_devices_enumeration.DeviceInformation, /) -> bool: ...

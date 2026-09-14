@@ -218,18 +218,7 @@ namespace py::cpp::Windows::System::Threading::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SignalNotifier_AttachToEventWithTimeout(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -305,18 +294,7 @@ namespace py::cpp::Windows::System::Threading::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SignalNotifier_AttachToSemaphoreWithTimeout(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -491,9 +469,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyMethodDef methods_SignalNotifier_Static[] = {
         { "attach_to_event", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToEvent), METH_VARARGS, nullptr },
-        { "attach_to_event_with_timeout", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToEventWithTimeout), METH_VARARGS, nullptr },
         { "attach_to_semaphore", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToSemaphore), METH_VARARGS, nullptr },
-        { "attach_to_semaphore_with_timeout", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToSemaphoreWithTimeout), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_SignalNotifier_Static[] = 

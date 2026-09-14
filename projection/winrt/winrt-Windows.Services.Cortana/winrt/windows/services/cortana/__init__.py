@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_services_cortana import (
     CortanaActionableInsights,
@@ -37,3 +38,6 @@ class CortanaPermissionsChangeResult(enum.IntEnum):
     UNAVAILABLE = 1
     DISABLED_BY_POLICY = 2
 
+winrt.runtime._internals.alias_method(CortanaActionableInsights, "show_insights_with_options_async", "show_insights_async")
+winrt.runtime._internals.alias_method(CortanaActionableInsights, "show_insights_for_image_with_options_async", "show_insights_for_image_async")
+winrt.runtime._internals.alias_method(CortanaActionableInsights, "show_insights_for_text_with_options_async", "show_insights_for_text_async")

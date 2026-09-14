@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -65,9 +66,15 @@ class MdmSession(winrt.system.Object):
     def attach_async(self) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Management.MdmSession::Delete()
     def delete(self) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Management.MdmSession::StartAsync()
     def start_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Management.MdmSession::StartAsync(Windows.Foundation.Collections.IIterable`1<Windows.Management.MdmAlert>)
+    def start_async(self, alerts: typing.Iterable[MdmAlert], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of start_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Management.MdmSession::StartAsync(Windows.Foundation.Collections.IIterable`1<Windows.Management.MdmAlert>)
+    @deprecated("Use start_async() instead.")
     def start_with_alerts_async(self, alerts: typing.Iterable[MdmAlert], /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Management.MdmAlert> Windows.Management.MdmSession::get_Alerts()
     @_property

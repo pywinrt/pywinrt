@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -227,18 +228,30 @@ class FullTrustProcessLaunchResult(winrt.system.Object):
 
 @typing.final
 class FullTrustProcessLauncher_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForAppAsync(System.String)
     def launch_full_trust_process_for_app_async(cls, full_trust_package_relative_app_id: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForAppAsync(System.String,System.String)
+    def launch_full_trust_process_for_app_async(cls, full_trust_package_relative_app_id: str, parameter_group_id: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of launch_full_trust_process_for_app_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForAppAsync(System.String,System.String)
+    @deprecated("Use launch_full_trust_process_for_app_async() instead.")
+    def launch_full_trust_process_for_app_with_parameters_async(cls, full_trust_package_relative_app_id: str, parameter_group_id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.FullTrustProcessLaunchResult> Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForAppWithArgumentsAsync(System.String,System.String)
     def launch_full_trust_process_for_app_with_arguments_async(cls, full_trust_package_relative_app_id: str, command_line: str, /) -> windows_foundation.IAsyncOperation[FullTrustProcessLaunchResult]: ...
-    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForAppAsync(System.String,System.String)
-    def launch_full_trust_process_for_app_with_parameters_async(cls, full_trust_package_relative_app_id: str, parameter_group_id: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppAsync()
     def launch_full_trust_process_for_current_app_async(cls) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppAsync(System.String)
+    def launch_full_trust_process_for_current_app_async(cls, parameter_group_id: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of launch_full_trust_process_for_current_app_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppAsync(System.String)
+    @deprecated("Use launch_full_trust_process_for_current_app_async() instead.")
+    def launch_full_trust_process_for_current_app_with_parameters_async(cls, parameter_group_id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.FullTrustProcessLaunchResult> Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppWithArgumentsAsync(System.String)
     def launch_full_trust_process_for_current_app_with_arguments_async(cls, command_line: str, /) -> windows_foundation.IAsyncOperation[FullTrustProcessLaunchResult]: ...
-    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppAsync(System.String)
-    def launch_full_trust_process_for_current_app_with_parameters_async(cls, parameter_group_id: str, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class FullTrustProcessLauncher(winrt.system.Object, metaclass=FullTrustProcessLauncher_Static):
@@ -301,9 +314,15 @@ class Package(winrt.system.Object, metaclass=Package_Static):
     def launch(self, parameters: str, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Package::SetInUseAsync(System.Boolean)
     def set_in_use_async(self, in_use: bool, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.PackageContentGroup>> Windows.ApplicationModel.Package::StageContentGroupsAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def stage_content_groups_async(self, names: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[PackageContentGroup]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.PackageContentGroup>> Windows.ApplicationModel.Package::StageContentGroupsAsync(Windows.Foundation.Collections.IIterable`1<System.String>,System.Boolean)
+    def stage_content_groups_async(self, names: typing.Iterable[str], move_to_head_of_queue: bool, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[PackageContentGroup]]: ...
+    # Deprecated alias of stage_content_groups_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.PackageContentGroup>> Windows.ApplicationModel.Package::StageContentGroupsAsync(Windows.Foundation.Collections.IIterable`1<System.String>,System.Boolean)
+    @deprecated("Use stage_content_groups_async() instead.")
     def stage_content_groups_with_priority_async(self, names: typing.Iterable[str], move_to_head_of_queue: bool, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[PackageContentGroup]]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Package::VerifyContentIntegrityAsync()
     def verify_content_integrity_async(self) -> windows_foundation.IAsyncOperation[bool]: ...

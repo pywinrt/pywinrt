@@ -80,18 +80,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Certificate_BuildChainWithParametersAsync(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -203,18 +192,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Certificate_GetHashValueWithAlgorithm(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -857,10 +835,8 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyMethodDef _methods_Certificate[] = {
         { "build_chain_async", reinterpret_cast<PyCFunction>(Certificate_BuildChainAsync), METH_VARARGS, nullptr },
-        { "build_chain_with_parameters_async", reinterpret_cast<PyCFunction>(Certificate_BuildChainWithParametersAsync), METH_VARARGS, nullptr },
         { "get_certificate_blob", reinterpret_cast<PyCFunction>(Certificate_GetCertificateBlob), METH_VARARGS, nullptr },
         { "get_hash_value", reinterpret_cast<PyCFunction>(Certificate_GetHashValue), METH_VARARGS, nullptr },
-        { "get_hash_value_with_algorithm", reinterpret_cast<PyCFunction>(Certificate_GetHashValueWithAlgorithm), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Certificate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Certificate), METH_O | METH_STATIC, nullptr },
         { }};
@@ -992,18 +968,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CertificateChain_ValidateWithParameters(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateChain* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1068,7 +1033,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static PyMethodDef _methods_CertificateChain[] = {
         { "get_certificates", reinterpret_cast<PyCFunction>(CertificateChain_GetCertificates), METH_VARARGS, nullptr },
         { "validate", reinterpret_cast<PyCFunction>(CertificateChain_Validate), METH_VARARGS, nullptr },
-        { "validate_with_parameters", reinterpret_cast<PyCFunction>(CertificateChain_ValidateWithParameters), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CertificateChain, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CertificateChain), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1145,7 +1109,40 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 6)
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"ImportPfxDataAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::ImportPfxDataAsync(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 6)
         {
             try
             {
@@ -1181,18 +1178,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CertificateEnrollmentManager_ImportPfxDataToKspAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 7)
+        else if (arg_count == 7)
         {
             try
             {
@@ -1221,50 +1207,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::ImportPfxDataAsync(param0, param1, param2, param3, param4, param5, param6);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CertificateEnrollmentManager_ImportPfxDataToKspWithParametersAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"ImportPfxDataAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::ImportPfxDataAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -1379,8 +1321,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static PyMethodDef methods_CertificateEnrollmentManager_Static[] = {
         { "create_request_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_CreateRequestAsync), METH_VARARGS, nullptr },
         { "import_pfx_data_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_ImportPfxDataAsync), METH_VARARGS, nullptr },
-        { "import_pfx_data_to_ksp_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_ImportPfxDataToKspAsync), METH_VARARGS, nullptr },
-        { "import_pfx_data_to_ksp_with_parameters_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_ImportPfxDataToKspWithParametersAsync), METH_VARARGS, nullptr },
         { "install_certificate_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_InstallCertificateAsync), METH_VARARGS, nullptr },
         { }};
 
@@ -4581,18 +4521,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CertificateStores_FindAllWithQueryAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -4800,7 +4729,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyMethodDef methods_CertificateStores_Static[] = {
         { "find_all_async", reinterpret_cast<PyCFunction>(CertificateStores_FindAllAsync), METH_VARARGS, nullptr },
-        { "find_all_with_query_async", reinterpret_cast<PyCFunction>(CertificateStores_FindAllWithQueryAsync), METH_VARARGS, nullptr },
         { "get_store_by_name", reinterpret_cast<PyCFunction>(CertificateStores_GetStoreByName), METH_VARARGS, nullptr },
         { "get_user_store_by_name", reinterpret_cast<PyCFunction>(CertificateStores_GetUserStoreByName), METH_VARARGS, nullptr },
         { }};
@@ -6902,18 +6830,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* KeyAttestationHelper_DecryptTpmAttestationCredentialWithContainerNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -7018,7 +6935,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyMethodDef methods_KeyAttestationHelper_Static[] = {
         { "decrypt_tpm_attestation_credential_async", reinterpret_cast<PyCFunction>(KeyAttestationHelper_DecryptTpmAttestationCredentialAsync), METH_VARARGS, nullptr },
-        { "decrypt_tpm_attestation_credential_with_container_name_async", reinterpret_cast<PyCFunction>(KeyAttestationHelper_DecryptTpmAttestationCredentialWithContainerNameAsync), METH_VARARGS, nullptr },
         { "get_tpm_attestation_credential_id", reinterpret_cast<PyCFunction>(KeyAttestationHelper_GetTpmAttestationCredentialId), METH_VARARGS, nullptr },
         { }};
 
@@ -8478,7 +8394,40 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 6)
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportPfxDataAsync(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 6)
         {
             try
             {
@@ -8514,18 +8463,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UserCertificateEnrollmentManager_ImportPfxDataToKspAsync(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 7)
+        else if (arg_count == 7)
         {
             try
             {
@@ -8554,50 +8492,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 {
                     auto _gil = release_gil();
                     return self->obj.ImportPfxDataAsync(param0, param1, param2, param3, param4, param5, param6);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UserCertificateEnrollmentManager_ImportPfxDataToKspWithParametersAsync(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.ImportPfxDataAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -8683,8 +8577,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static PyMethodDef _methods_UserCertificateEnrollmentManager[] = {
         { "create_request_async", reinterpret_cast<PyCFunction>(UserCertificateEnrollmentManager_CreateRequestAsync), METH_VARARGS, nullptr },
         { "import_pfx_data_async", reinterpret_cast<PyCFunction>(UserCertificateEnrollmentManager_ImportPfxDataAsync), METH_VARARGS, nullptr },
-        { "import_pfx_data_to_ksp_async", reinterpret_cast<PyCFunction>(UserCertificateEnrollmentManager_ImportPfxDataToKspAsync), METH_VARARGS, nullptr },
-        { "import_pfx_data_to_ksp_with_parameters_async", reinterpret_cast<PyCFunction>(UserCertificateEnrollmentManager_ImportPfxDataToKspWithParametersAsync), METH_VARARGS, nullptr },
         { "install_certificate_async", reinterpret_cast<PyCFunction>(UserCertificateEnrollmentManager_InstallCertificateAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserCertificateEnrollmentManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserCertificateEnrollmentManager), METH_O | METH_STATIC, nullptr },

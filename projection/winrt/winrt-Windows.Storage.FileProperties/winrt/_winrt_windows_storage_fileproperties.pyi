@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -24,9 +25,15 @@ Self = typing.TypeVar('Self')
 class BasicProperties(winrt.system.Object, IStorageItemExtraProperties):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.BasicProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.MutableMapping[str, winrt.system.Object]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.BasicProperties::SavePropertiesAsync()
+    def save_properties_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.BasicProperties::SavePropertiesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>>)
     def save_properties_async(self, properties_to_save: typing.Union[typing.Mapping[str, winrt.system.Object], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of save_properties_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.BasicProperties::SavePropertiesAsync()
+    @deprecated("Use save_properties_async() instead.")
     def save_properties_async_overload_default(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.DateTime Windows.Storage.FileProperties.BasicProperties::get_DateModified()
     @_property
@@ -42,9 +49,15 @@ class BasicProperties(winrt.system.Object, IStorageItemExtraProperties):
 class DocumentProperties(winrt.system.Object, IStorageItemExtraProperties):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.DocumentProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.MutableMapping[str, winrt.system.Object]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.DocumentProperties::SavePropertiesAsync()
+    def save_properties_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.DocumentProperties::SavePropertiesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>>)
     def save_properties_async(self, properties_to_save: typing.Union[typing.Mapping[str, winrt.system.Object], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of save_properties_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.DocumentProperties::SavePropertiesAsync()
+    @deprecated("Use save_properties_async() instead.")
     def save_properties_async_overload_default(self) -> windows_foundation.IAsyncAction: ...
     # System.String Windows.Storage.FileProperties.DocumentProperties::get_Title()
     @_property
@@ -82,9 +95,15 @@ class GeotagHelper(winrt.system.Object, metaclass=GeotagHelper_Static):
 class ImageProperties(winrt.system.Object, IStorageItemExtraProperties):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.ImageProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.MutableMapping[str, winrt.system.Object]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.ImageProperties::SavePropertiesAsync()
+    def save_properties_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.ImageProperties::SavePropertiesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>>)
     def save_properties_async(self, properties_to_save: typing.Union[typing.Mapping[str, winrt.system.Object], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of save_properties_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.ImageProperties::SavePropertiesAsync()
+    @deprecated("Use save_properties_async() instead.")
     def save_properties_async_overload_default(self) -> windows_foundation.IAsyncAction: ...
     # System.String Windows.Storage.FileProperties.ImageProperties::get_Title()
     @_property
@@ -142,9 +161,15 @@ class ImageProperties(winrt.system.Object, IStorageItemExtraProperties):
 class MusicProperties(winrt.system.Object, IStorageItemExtraProperties):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.MusicProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.MutableMapping[str, winrt.system.Object]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.MusicProperties::SavePropertiesAsync()
+    def save_properties_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.MusicProperties::SavePropertiesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>>)
     def save_properties_async(self, properties_to_save: typing.Union[typing.Mapping[str, winrt.system.Object], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of save_properties_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.MusicProperties::SavePropertiesAsync()
+    @deprecated("Use save_properties_async() instead.")
     def save_properties_async_overload_default(self) -> windows_foundation.IAsyncAction: ...
     # System.UInt32 Windows.Storage.FileProperties.MusicProperties::get_Year()
     @_property
@@ -234,9 +259,15 @@ class StorageItemContentProperties(winrt.system.Object, IStorageItemExtraPropert
     def get_video_properties_async(self) -> windows_foundation.IAsyncOperation[VideoProperties]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.StorageItemContentProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.MutableMapping[str, winrt.system.Object]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.StorageItemContentProperties::SavePropertiesAsync()
+    def save_properties_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.StorageItemContentProperties::SavePropertiesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>>)
     def save_properties_async(self, properties_to_save: typing.Union[typing.Mapping[str, winrt.system.Object], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of save_properties_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.StorageItemContentProperties::SavePropertiesAsync()
+    @deprecated("Use save_properties_async() instead.")
     def save_properties_async_overload_default(self) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -294,9 +325,15 @@ class StorageItemThumbnail(winrt.system.Object, windows_storage_streams.IRandomA
 class VideoProperties(winrt.system.Object, IStorageItemExtraProperties):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.VideoProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.MutableMapping[str, winrt.system.Object]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.VideoProperties::SavePropertiesAsync()
+    def save_properties_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.VideoProperties::SavePropertiesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>>)
     def save_properties_async(self, properties_to_save: typing.Union[typing.Mapping[str, winrt.system.Object], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of save_properties_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.VideoProperties::SavePropertiesAsync()
+    @deprecated("Use save_properties_async() instead.")
     def save_properties_async_overload_default(self) -> windows_foundation.IAsyncAction: ...
     # System.UInt32 Windows.Storage.FileProperties.VideoProperties::get_Year()
     @_property
@@ -369,10 +406,16 @@ class IStorageItemExtraProperties(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.IStorageItemExtraProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     @abstractmethod
     def retrieve_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.MutableMapping[str, winrt.system.Object]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.IStorageItemExtraProperties::SavePropertiesAsync()
+    @abstractmethod
+    def save_properties_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.IStorageItemExtraProperties::SavePropertiesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>>)
     @abstractmethod
     def save_properties_async(self, properties_to_save: typing.Union[typing.Mapping[str, winrt.system.Object], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of save_properties_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.IStorageItemExtraProperties::SavePropertiesAsync()
-    @abstractmethod
+    @deprecated("Use save_properties_async() instead.")
     def save_properties_async_overload_default(self) -> windows_foundation.IAsyncAction: ...
 

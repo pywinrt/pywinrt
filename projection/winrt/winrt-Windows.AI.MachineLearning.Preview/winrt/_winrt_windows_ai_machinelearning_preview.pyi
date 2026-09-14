@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -84,11 +85,18 @@ class LearningModelBindingPreview(winrt.system.Object, winrt._winrt.Mapping[str,
     def __contains__(self, key: object) -> bool: ...
     def __getitem__(self, key: str) -> winrt.system.Object: ...
     def __new__(cls: typing.Type[Self], model: LearningModelPreview) -> Self: ...
+    @typing.overload
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Bind(System.String,System.Object)
     # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
     def bind(self, name: str, value: winrt.system.Object, /) -> None: ...
+    @typing.overload
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Bind(System.String,System.Object,Windows.Foundation.Collections.IPropertySet)
     # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
+    def bind(self, name: str, value: winrt.system.Object, metadata: windows_foundation_collections.IPropertySet, /) -> None: ...
+    # Deprecated alias of bind() for pywinrt v3.x compatibility.
+    # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Bind(System.String,System.Object,Windows.Foundation.Collections.IPropertySet)
+    # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
+    @deprecated("Use bind() instead.")
     def bind_with_properties(self, name: str, value: winrt.system.Object, metadata: windows_foundation_collections.IPropertySet, /) -> None: ...
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Clear()
     # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -493,13 +494,25 @@ class XmlComment(winrt.system.Object, IXmlCharacterData, IXmlNode, IXmlNodeSeria
 
 @typing.final
 class XmlDocument_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Xml.Dom.XmlDocument> Windows.Data.Xml.Dom.XmlDocument::LoadFromFileAsync(Windows.Storage.IStorageFile)
     def load_from_file_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[XmlDocument]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Xml.Dom.XmlDocument> Windows.Data.Xml.Dom.XmlDocument::LoadFromFileAsync(Windows.Storage.IStorageFile,Windows.Data.Xml.Dom.XmlLoadSettings)
+    def load_from_file_async(cls, file: windows_storage.IStorageFile, load_settings: XmlLoadSettings, /) -> windows_foundation.IAsyncOperation[XmlDocument]: ...
+    # Deprecated alias of load_from_file_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Data.Xml.Dom.XmlDocument> Windows.Data.Xml.Dom.XmlDocument::LoadFromFileAsync(Windows.Storage.IStorageFile,Windows.Data.Xml.Dom.XmlLoadSettings)
+    @deprecated("Use load_from_file_async() instead.")
     def load_from_file_with_settings_async(cls, file: windows_storage.IStorageFile, load_settings: XmlLoadSettings, /) -> windows_foundation.IAsyncOperation[XmlDocument]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Xml.Dom.XmlDocument> Windows.Data.Xml.Dom.XmlDocument::LoadFromUriAsync(Windows.Foundation.Uri)
     def load_from_uri_async(cls, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[XmlDocument]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Xml.Dom.XmlDocument> Windows.Data.Xml.Dom.XmlDocument::LoadFromUriAsync(Windows.Foundation.Uri,Windows.Data.Xml.Dom.XmlLoadSettings)
+    def load_from_uri_async(cls, uri: windows_foundation.Uri, load_settings: XmlLoadSettings, /) -> windows_foundation.IAsyncOperation[XmlDocument]: ...
+    # Deprecated alias of load_from_uri_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Data.Xml.Dom.XmlDocument> Windows.Data.Xml.Dom.XmlDocument::LoadFromUriAsync(Windows.Foundation.Uri,Windows.Data.Xml.Dom.XmlLoadSettings)
+    @deprecated("Use load_from_uri_async() instead.")
     def load_from_uri_with_settings_async(cls, uri: windows_foundation.Uri, load_settings: XmlLoadSettings, /) -> windows_foundation.IAsyncOperation[XmlDocument]: ...
 
 @typing.final
@@ -541,14 +554,26 @@ class XmlDocument(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSel
     def import_node(self, node: IXmlNode, deep: bool, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocument::InsertBefore(Windows.Data.Xml.Dom.IXmlNode,Windows.Data.Xml.Dom.IXmlNode)
     def insert_before(self, new_child: IXmlNode, reference_child: IXmlNode, /) -> IXmlNode: ...
+    @typing.overload
     # System.Void Windows.Data.Xml.Dom.XmlDocument::LoadXml(System.String)
     def load_xml(self, xml: str, /) -> None: ...
+    @typing.overload
+    # System.Void Windows.Data.Xml.Dom.XmlDocument::LoadXml(System.String,Windows.Data.Xml.Dom.XmlLoadSettings)
+    def load_xml(self, xml: str, load_settings: XmlLoadSettings, /) -> None: ...
+    # Deprecated alias of load_xml() for pywinrt v3.x compatibility.
+    # System.Void Windows.Data.Xml.Dom.XmlDocument::LoadXml(System.String,Windows.Data.Xml.Dom.XmlLoadSettings)
+    @deprecated("Use load_xml() instead.")
+    def load_xml_with_settings(self, xml: str, load_settings: XmlLoadSettings, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Data.Xml.Dom.XmlDocument::LoadXmlFromBuffer(Windows.Storage.Streams.IBuffer)
     def load_xml_from_buffer(self, buffer: winrt.system.Buffer, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Data.Xml.Dom.XmlDocument::LoadXmlFromBuffer(Windows.Storage.Streams.IBuffer,Windows.Data.Xml.Dom.XmlLoadSettings)
+    def load_xml_from_buffer(self, buffer: winrt.system.Buffer, load_settings: XmlLoadSettings, /) -> None: ...
+    # Deprecated alias of load_xml_from_buffer() for pywinrt v3.x compatibility.
+    # System.Void Windows.Data.Xml.Dom.XmlDocument::LoadXmlFromBuffer(Windows.Storage.Streams.IBuffer,Windows.Data.Xml.Dom.XmlLoadSettings)
+    @deprecated("Use load_xml_from_buffer() instead.")
     def load_xml_from_buffer_with_settings(self, buffer: winrt.system.Buffer, load_settings: XmlLoadSettings, /) -> None: ...
-    # System.Void Windows.Data.Xml.Dom.XmlDocument::LoadXml(System.String,Windows.Data.Xml.Dom.XmlLoadSettings)
-    def load_xml_with_settings(self, xml: str, load_settings: XmlLoadSettings, /) -> None: ...
     # System.Void Windows.Data.Xml.Dom.XmlDocument::Normalize()
     def normalize(self) -> None: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocument::RemoveChild(Windows.Data.Xml.Dom.IXmlNode)

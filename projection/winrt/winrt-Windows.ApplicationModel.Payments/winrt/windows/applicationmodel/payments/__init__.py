@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_payments import (
     PaymentAddress,
@@ -85,4 +86,5 @@ class PaymentShippingType(enum.IntEnum):
     DELIVERY = 1
     PICKUP = 2
 
+winrt.runtime._internals.alias_method(PaymentMediator, "submit_payment_request_with_change_handler_async", "submit_payment_request_async")
 PaymentRequestChangedHandler = typing.Callable[[PaymentRequest, PaymentRequestChangedArgs], None]

@@ -62,13 +62,11 @@ class ProjectedMethod
                 }
             }
 
-            Name = overloadName ?? method.Name;
+            BaseName = method.Name;
+            OverloadName = overloadName;
             CppName = method.IsSpecialName
                 ? method.Name.Substring(method.Name.IndexOf('_') + 1)
                 : method.Name;
-            PyName =
-                (method.IsPublic ? "" : "_")
-                + Name.ToPythonIdentifier(isTypeMethod: method.IsStatic);
             Signature = method.ToString();
             DeprecatedMessage = deprecated?.ConstructorArguments[0].Value as string;
 
@@ -105,9 +103,9 @@ class ProjectedMethod
             }
         }
 
-        public string Name { get; }
+        public string BaseName { get; }
+        public string? OverloadName { get; }
         public string CppName { get; }
-        public string PyName { get; }
         public string Signature { get; }
         public bool IsDefaultOverload { get; }
         public bool IsExclusiveTo { get; }
@@ -122,26 +120,53 @@ class ProjectedMethod
 
     private readonly MethodInfo info;
 
+    /// <param name="projectedName">
+    /// The name to project the method as or <c>null</c> to use the WinRT method
+    /// name. This is used for overloads that would otherwise be shadowed by
+    /// another overload with the same number of arguments and for overridable
+    /// methods, which are always projected using the name from the
+    /// <c>Overload</c> attribute.
+    /// </param>
     public ProjectedMethod(
         MethodDefinition method,
         IEnumerable<TypeReference> inheritance,
-        IReadOnlyDictionary<GenericParameter, TypeReference>? genericArgMap
+        IReadOnlyDictionary<GenericParameter, TypeReference>? genericArgMap,
+        string? projectedName = null
     )
     {
         Method = method;
         info = methodInfoCache.GetOrAdd(method, static m => new MethodInfo(m));
         Inheritance = inheritance.ToList();
         GenericArgMap = genericArgMap;
+        Name = projectedName ?? info.BaseName;
+        PyName = ToPyName(Name);
+        LegacyPyName = ToPyName(info.OverloadName ?? info.BaseName);
     }
+
+    private string ToPyName(string name) =>
+        (Method.IsPublic ? "" : "_") + name.ToPythonIdentifier(isTypeMethod: Method.IsStatic);
 
     // TODO: this should eventually made private
     public readonly MethodDefinition Method;
 
     /// <summary>
-    /// Gets the projected name of the method. For many overloaded methods, this
-    /// is different from the C++/WinRT name.
+    /// Gets the projected name of the method. For shadowed overloads and for
+    /// overridable methods, this is the name from the <c>Overload</c> attribute
+    /// instead of the WinRT method name.
     /// </summary>
-    public string Name => info.Name;
+    public string Name { get; }
+
+    /// <summary>
+    /// Gets the WinRT name of the method, without regard to the <c>Overload</c>
+    /// attribute.
+    /// </summary>
+    public string BaseName => info.BaseName;
+
+    /// <summary>
+    /// Gets the name from the <c>Overload</c> attribute or <c>null</c> if the
+    /// method does not have that attribute.
+    /// </summary>
+    public string? OverloadName => info.OverloadName;
 
     /// <summary>
     /// Gets the C++/WinRT name of the method.
@@ -151,7 +176,30 @@ class ProjectedMethod
     /// <summary>
     /// Gets the Python name of the method.
     /// </summary>
-    public string PyName => info.PyName;
+    public string PyName { get; }
+
+    /// <summary>
+    /// Gets the Python name that this method had in pywinrt v3.x, where the
+    /// <c>Overload</c> attribute was always used for the method name.
+    /// </summary>
+    /// <remarks>
+    /// When this differs from <see cref="PyName"/>, a deprecated alias is
+    /// generated so that code written for pywinrt v3.x keeps working.
+    /// </remarks>
+    public string LegacyPyName { get; }
+
+    /// <summary>
+    /// Gets the number of parameters that are passed from Python when calling
+    /// the method.
+    /// </summary>
+    /// <remarks>
+    /// This is computed on demand since not all methods have parameters that
+    /// can be projected, e.g. the constructors of metadata attributes.
+    /// </remarks>
+    public int PyInParamCount =>
+        pyInParamCount ??= Method.Parameters.Count(p => p.IsPythonInParam());
+
+    private int? pyInParamCount;
 
     /// <summary>
     /// Gets the signature of the method.

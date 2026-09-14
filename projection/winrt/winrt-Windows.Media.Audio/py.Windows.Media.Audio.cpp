@@ -57,18 +57,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioDeviceInputNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -738,7 +727,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyMethodDef _methods_AudioDeviceInputNode[] = {
         { "add_outgoing_connection", reinterpret_cast<PyCFunction>(AudioDeviceInputNode_AddOutgoingConnection), METH_VARARGS, nullptr },
-        { "add_outgoing_connection_with_gain", reinterpret_cast<PyCFunction>(AudioDeviceInputNode_AddOutgoingConnectionWithGain), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(AudioDeviceInputNode_Close), METH_VARARGS, nullptr },
         { "disable_effects_by_definition", reinterpret_cast<PyCFunction>(AudioDeviceInputNode_DisableEffectsByDefinition), METH_VARARGS, nullptr },
         { "enable_effects_by_definition", reinterpret_cast<PyCFunction>(AudioDeviceInputNode_EnableEffectsByDefinition), METH_VARARGS, nullptr },
@@ -1808,18 +1796,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioFileInputNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2933,7 +2910,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyMethodDef _methods_AudioFileInputNode[] = {
         { "add_outgoing_connection", reinterpret_cast<PyCFunction>(AudioFileInputNode_AddOutgoingConnection), METH_VARARGS, nullptr },
-        { "add_outgoing_connection_with_gain", reinterpret_cast<PyCFunction>(AudioFileInputNode_AddOutgoingConnectionWithGain), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(AudioFileInputNode_Close), METH_VARARGS, nullptr },
         { "disable_effects_by_definition", reinterpret_cast<PyCFunction>(AudioFileInputNode_DisableEffectsByDefinition), METH_VARARGS, nullptr },
         { "enable_effects_by_definition", reinterpret_cast<PyCFunction>(AudioFileInputNode_EnableEffectsByDefinition), METH_VARARGS, nullptr },
@@ -3819,18 +3795,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioFrameInputNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -4741,7 +4706,6 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioFrameInputNode[] = {
         { "add_frame", reinterpret_cast<PyCFunction>(AudioFrameInputNode_AddFrame), METH_VARARGS, nullptr },
         { "add_outgoing_connection", reinterpret_cast<PyCFunction>(AudioFrameInputNode_AddOutgoingConnection), METH_VARARGS, nullptr },
-        { "add_outgoing_connection_with_gain", reinterpret_cast<PyCFunction>(AudioFrameInputNode_AddOutgoingConnectionWithGain), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(AudioFrameInputNode_Close), METH_VARARGS, nullptr },
         { "disable_effects_by_definition", reinterpret_cast<PyCFunction>(AudioFrameInputNode_DisableEffectsByDefinition), METH_VARARGS, nullptr },
         { "discard_queued_frames", reinterpret_cast<PyCFunction>(AudioFrameInputNode_DiscardQueuedFrames), METH_VARARGS, nullptr },
@@ -5547,63 +5511,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateDeviceInputNodeWithFormatAndEmitterOnDeviceAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 3);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.CreateDeviceInputNodeAsync(param0, param1, param2, param3);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateDeviceInputNodeWithFormatAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -5635,18 +5543,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateDeviceInputNodeWithFormatOnDeviceAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -5671,6 +5568,40 @@ namespace py::cpp::Windows::Media::Audio
                 {
                     auto _gil = release_gil();
                     return self->obj.CreateDeviceInputNodeAsync(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 3);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDeviceInputNodeAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -5761,18 +5692,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateFileInputNodeWithEmitterAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -5846,18 +5766,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateFileOutputNodeWithFileProfileAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -5929,18 +5838,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateFrameInputNodeWithFormat(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -5971,18 +5869,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateFrameInputNodeWithFormatAndEmitter(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -6054,18 +5941,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateFrameOutputNodeWithFormat(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -6138,18 +6014,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateMediaSourceAudioInputNodeWithEmitterAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -6221,18 +6086,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateSubmixNodeWithFormat(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -6263,18 +6117,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioGraph_CreateSubmixNodeWithFormatAndEmitter(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -6862,24 +6705,13 @@ namespace py::cpp::Windows::Media::Audio
         { "close", reinterpret_cast<PyCFunction>(AudioGraph_Close), METH_VARARGS, nullptr },
         { "create_batch_updater", reinterpret_cast<PyCFunction>(AudioGraph_CreateBatchUpdater), METH_VARARGS, nullptr },
         { "create_device_input_node_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateDeviceInputNodeAsync), METH_VARARGS, nullptr },
-        { "create_device_input_node_with_format_and_emitter_on_device_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateDeviceInputNodeWithFormatAndEmitterOnDeviceAsync), METH_VARARGS, nullptr },
-        { "create_device_input_node_with_format_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateDeviceInputNodeWithFormatAsync), METH_VARARGS, nullptr },
-        { "create_device_input_node_with_format_on_device_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateDeviceInputNodeWithFormatOnDeviceAsync), METH_VARARGS, nullptr },
         { "create_device_output_node_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateDeviceOutputNodeAsync), METH_VARARGS, nullptr },
         { "create_file_input_node_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateFileInputNodeAsync), METH_VARARGS, nullptr },
-        { "create_file_input_node_with_emitter_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateFileInputNodeWithEmitterAsync), METH_VARARGS, nullptr },
         { "create_file_output_node_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateFileOutputNodeAsync), METH_VARARGS, nullptr },
-        { "create_file_output_node_with_file_profile_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateFileOutputNodeWithFileProfileAsync), METH_VARARGS, nullptr },
         { "create_frame_input_node", reinterpret_cast<PyCFunction>(AudioGraph_CreateFrameInputNode), METH_VARARGS, nullptr },
-        { "create_frame_input_node_with_format", reinterpret_cast<PyCFunction>(AudioGraph_CreateFrameInputNodeWithFormat), METH_VARARGS, nullptr },
-        { "create_frame_input_node_with_format_and_emitter", reinterpret_cast<PyCFunction>(AudioGraph_CreateFrameInputNodeWithFormatAndEmitter), METH_VARARGS, nullptr },
         { "create_frame_output_node", reinterpret_cast<PyCFunction>(AudioGraph_CreateFrameOutputNode), METH_VARARGS, nullptr },
-        { "create_frame_output_node_with_format", reinterpret_cast<PyCFunction>(AudioGraph_CreateFrameOutputNodeWithFormat), METH_VARARGS, nullptr },
         { "create_media_source_audio_input_node_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateMediaSourceAudioInputNodeAsync), METH_VARARGS, nullptr },
-        { "create_media_source_audio_input_node_with_emitter_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateMediaSourceAudioInputNodeWithEmitterAsync), METH_VARARGS, nullptr },
         { "create_submix_node", reinterpret_cast<PyCFunction>(AudioGraph_CreateSubmixNode), METH_VARARGS, nullptr },
-        { "create_submix_node_with_format", reinterpret_cast<PyCFunction>(AudioGraph_CreateSubmixNodeWithFormat), METH_VARARGS, nullptr },
-        { "create_submix_node_with_format_and_emitter", reinterpret_cast<PyCFunction>(AudioGraph_CreateSubmixNodeWithFormatAndEmitter), METH_VARARGS, nullptr },
         { "reset_all_nodes", reinterpret_cast<PyCFunction>(AudioGraph_ResetAllNodes), METH_VARARGS, nullptr },
         { "start", reinterpret_cast<PyCFunction>(AudioGraph_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(AudioGraph_Stop), METH_VARARGS, nullptr },
@@ -10470,18 +10302,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioStateMonitor_CreateForCaptureMonitoringWithCategory(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -10504,6 +10325,38 @@ namespace py::cpp::Windows::Media::Audio
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForCaptureMonitoring", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring(param0, param1);
                 }());
             }
             catch (...)
@@ -10562,49 +10415,6 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* AudioStateMonitor_CreateForCaptureMonitoringWithCategoryAndDeviceRole(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForCaptureMonitoring", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* AudioStateMonitor_CreateForRenderMonitoring(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -10638,18 +10448,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioStateMonitor_CreateForRenderMonitoringWithCategory(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -10672,6 +10471,38 @@ namespace py::cpp::Windows::Media::Audio
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForRenderMonitoring", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring(param0, param1);
                 }());
             }
             catch (...)
@@ -10715,49 +10546,6 @@ namespace py::cpp::Windows::Media::Audio
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoringWithCategoryAndDeviceId(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioStateMonitor_CreateForRenderMonitoringWithCategoryAndDeviceRole(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForRenderMonitoring", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring(param0, param1);
                 }());
             }
             catch (...)
@@ -10922,13 +10710,9 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyMethodDef methods_AudioStateMonitor_Static[] = {
         { "create_for_capture_monitoring", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForCaptureMonitoring), METH_VARARGS, nullptr },
-        { "create_for_capture_monitoring_with_category", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForCaptureMonitoringWithCategory), METH_VARARGS, nullptr },
         { "create_for_capture_monitoring_with_category_and_device_id", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForCaptureMonitoringWithCategoryAndDeviceId), METH_VARARGS, nullptr },
-        { "create_for_capture_monitoring_with_category_and_device_role", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForCaptureMonitoringWithCategoryAndDeviceRole), METH_VARARGS, nullptr },
         { "create_for_render_monitoring", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForRenderMonitoring), METH_VARARGS, nullptr },
-        { "create_for_render_monitoring_with_category", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForRenderMonitoringWithCategory), METH_VARARGS, nullptr },
         { "create_for_render_monitoring_with_category_and_device_id", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForRenderMonitoringWithCategoryAndDeviceId), METH_VARARGS, nullptr },
-        { "create_for_render_monitoring_with_category_and_device_role", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForRenderMonitoringWithCategoryAndDeviceRole), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_AudioStateMonitor_Static[] = 
@@ -10999,18 +10783,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AudioSubmixNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -11650,7 +11423,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyMethodDef _methods_AudioSubmixNode[] = {
         { "add_outgoing_connection", reinterpret_cast<PyCFunction>(AudioSubmixNode_AddOutgoingConnection), METH_VARARGS, nullptr },
-        { "add_outgoing_connection_with_gain", reinterpret_cast<PyCFunction>(AudioSubmixNode_AddOutgoingConnectionWithGain), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(AudioSubmixNode_Close), METH_VARARGS, nullptr },
         { "disable_effects_by_definition", reinterpret_cast<PyCFunction>(AudioSubmixNode_DisableEffectsByDefinition), METH_VARARGS, nullptr },
         { "enable_effects_by_definition", reinterpret_cast<PyCFunction>(AudioSubmixNode_EnableEffectsByDefinition), METH_VARARGS, nullptr },
@@ -13871,18 +13643,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaSourceAudioInputNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -14996,7 +14757,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyMethodDef _methods_MediaSourceAudioInputNode[] = {
         { "add_outgoing_connection", reinterpret_cast<PyCFunction>(MediaSourceAudioInputNode_AddOutgoingConnection), METH_VARARGS, nullptr },
-        { "add_outgoing_connection_with_gain", reinterpret_cast<PyCFunction>(MediaSourceAudioInputNode_AddOutgoingConnectionWithGain), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(MediaSourceAudioInputNode_Close), METH_VARARGS, nullptr },
         { "disable_effects_by_definition", reinterpret_cast<PyCFunction>(MediaSourceAudioInputNode_DisableEffectsByDefinition), METH_VARARGS, nullptr },
         { "enable_effects_by_definition", reinterpret_cast<PyCFunction>(MediaSourceAudioInputNode_EnableEffectsByDefinition), METH_VARARGS, nullptr },
@@ -17902,18 +17662,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IAudioInputNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -18499,7 +18248,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyMethodDef _methods_IAudioInputNode[] = {
         { "add_outgoing_connection", reinterpret_cast<PyCFunction>(IAudioInputNode_AddOutgoingConnection), METH_VARARGS, nullptr },
-        { "add_outgoing_connection_with_gain", reinterpret_cast<PyCFunction>(IAudioInputNode_AddOutgoingConnectionWithGain), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(IAudioInputNode_Close), METH_VARARGS, nullptr },
         { "disable_effects_by_definition", reinterpret_cast<PyCFunction>(IAudioInputNode_DisableEffectsByDefinition), METH_VARARGS, nullptr },
         { "enable_effects_by_definition", reinterpret_cast<PyCFunction>(IAudioInputNode_EnableEffectsByDefinition), METH_VARARGS, nullptr },
@@ -18585,7 +18333,17 @@ namespace py::cpp::Windows::Media::Audio
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_outgoing_connection_with_gain")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "add_outgoing_connection"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};
@@ -19088,18 +18846,7 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IAudioInputNode2_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -19715,7 +19462,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyMethodDef _methods_IAudioInputNode2[] = {
         { "add_outgoing_connection", reinterpret_cast<PyCFunction>(IAudioInputNode2_AddOutgoingConnection), METH_VARARGS, nullptr },
-        { "add_outgoing_connection_with_gain", reinterpret_cast<PyCFunction>(IAudioInputNode2_AddOutgoingConnectionWithGain), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(IAudioInputNode2_Close), METH_VARARGS, nullptr },
         { "disable_effects_by_definition", reinterpret_cast<PyCFunction>(IAudioInputNode2_DisableEffectsByDefinition), METH_VARARGS, nullptr },
         { "enable_effects_by_definition", reinterpret_cast<PyCFunction>(IAudioInputNode2_EnableEffectsByDefinition), METH_VARARGS, nullptr },
@@ -19802,7 +19548,17 @@ namespace py::cpp::Windows::Media::Audio
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_outgoing_connection_with_gain")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "add_outgoing_connection"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};

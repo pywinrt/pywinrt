@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel import (
     PackageInstallProgress,
@@ -163,3 +164,6 @@ class StartupTaskState(enum.IntEnum):
     DISABLED_BY_POLICY = 3
     ENABLED_BY_POLICY = 4
 
+winrt.runtime._internals.alias_static_method(FullTrustProcessLauncher, "launch_full_trust_process_for_app_with_parameters_async", "launch_full_trust_process_for_app_async")
+winrt.runtime._internals.alias_static_method(FullTrustProcessLauncher, "launch_full_trust_process_for_current_app_with_parameters_async", "launch_full_trust_process_for_current_app_async")
+winrt.runtime._internals.alias_method(Package, "stage_content_groups_with_priority_async", "stage_content_groups_async")

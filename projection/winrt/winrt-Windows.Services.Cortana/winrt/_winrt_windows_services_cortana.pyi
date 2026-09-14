@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -33,24 +34,45 @@ class CortanaActionableInsights(winrt.system.Object, metaclass=CortanaActionable
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Services.Cortana.CortanaActionableInsights::IsAvailableAsync()
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_available_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsAsync(Windows.ApplicationModel.DataTransfer.DataPackage)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_insights_async(self, datapackage: windows_applicationmodel_datatransfer.DataPackage, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsAsync(Windows.ApplicationModel.DataTransfer.DataPackage,Windows.Services.Cortana.CortanaActionableInsightsOptions)
+    # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def show_insights_async(self, datapackage: windows_applicationmodel_datatransfer.DataPackage, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of show_insights_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsAsync(Windows.ApplicationModel.DataTransfer.DataPackage,Windows.Services.Cortana.CortanaActionableInsightsOptions)
+    # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use show_insights_async() instead.")
+    def show_insights_with_options_async(self, datapackage: windows_applicationmodel_datatransfer.DataPackage, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsForImageAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_insights_for_image_async(self, image_stream: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsForImageAsync(Windows.Storage.Streams.IRandomAccessStreamReference,Windows.Services.Cortana.CortanaActionableInsightsOptions)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def show_insights_for_image_async(self, image_stream: windows_storage_streams.IRandomAccessStreamReference, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of show_insights_for_image_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsForImageAsync(Windows.Storage.Streams.IRandomAccessStreamReference,Windows.Services.Cortana.CortanaActionableInsightsOptions)
+    # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use show_insights_for_image_async() instead.")
     def show_insights_for_image_with_options_async(self, image_stream: windows_storage_streams.IRandomAccessStreamReference, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsForTextAsync(System.String)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_insights_for_text_async(self, text: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsForTextAsync(System.String,Windows.Services.Cortana.CortanaActionableInsightsOptions)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def show_insights_for_text_with_options_async(self, text: str, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsAsync(Windows.ApplicationModel.DataTransfer.DataPackage,Windows.Services.Cortana.CortanaActionableInsightsOptions)
+    def show_insights_for_text_async(self, text: str, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of show_insights_for_text_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsForTextAsync(System.String,Windows.Services.Cortana.CortanaActionableInsightsOptions)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def show_insights_with_options_async(self, datapackage: windows_applicationmodel_datatransfer.DataPackage, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
+    @deprecated("Use show_insights_for_text_async() instead.")
+    def show_insights_for_text_with_options_async(self, text: str, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
     # Windows.System.User Windows.Services.Cortana.CortanaActionableInsights::get_User()
     @_property
     def user(self) -> windows_system.User: ...
