@@ -42,7 +42,7 @@ Once a local build of `PyWinRT.exe` is built, it can be used to update
 the generated files of the projection. This requires that the Windows SDK is
 installed either via the Visual Studio Installer or standalone.
 
-    py .\scripts\generate-python.py
+    py .\scripts\generate-pywinrt.py
 
 Some additional files are also generated instead by:
 
@@ -106,13 +106,19 @@ To build the nuget package for the `PyWinRT.exe` tool.
 
 ## Building Python wheels
 
-To build Python wheels of the projection packages:
+To build the binary wheels of the projection packages:
 
     py .\scripts\build-bdist.py
 
 To only build for a specific Python and target architecture:
 
     py .\scripts\build-bdist.py --only cp312-win_amd64
+
+A release also needs the source distributions. Those are built separately and
+require `winrt-sdk`, `winrt-Microsoft.UI.Xaml` and `winrt-WindowsAppSDK` to be
+installed first, since every package's `setup.py` imports them:
+
+    py .\scripts\build-sdist.py
 
 
 ## Profiling
