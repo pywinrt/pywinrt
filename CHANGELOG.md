@@ -34,6 +34,12 @@
   namespace instead of including its full header, which C++/WinRT does by
   default even though it only uses the declarations. The full header is
   included by the generated PyWinRT code where it is actually needed.
+- The CMake build now precompiles headers per group of packages instead of once
+  for everything. The XAML packages share a large amount of header material
+  with each other but not with the rest of the projection, so they each get a
+  precompiled header of their own. Groups too small to pay for one fall back to
+  the common precompiled header, so this does not slow down
+  `PYWINRT_FULL_PROJECTION=OFF` builds.
 
 ### Deprecated
 - The method names that v3.x generated from the

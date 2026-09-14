@@ -213,30 +213,84 @@ else()
     )
 endif()
 
+# Precompiled header groups
+################################################################################
+#
+# The XAML namespaces are by far the most expensive thing to compile, and the
+# reason is shared between them: every winrt/impl/Microsoft.UI.Xaml.*.2.h pulls
+# in the whole declaration layer of Microsoft.UI.Xaml and
+# Microsoft.UI.Xaml.Controls (and likewise for Windows.UI.Xaml), which is over
+# ten seconds of parsing repeated in each of the ~25 translation units of the
+# group. They get their own precompiled header so that it is parsed once.
+#
+# A group only earns a precompiled header of its own if it has enough members
+# to pay for building it, so with PYWINRT_FULL_PROJECTION=OFF, where only a
+# couple of XAML packages are built, everything shares the common one.
+
+function(pywinrt_pch_group package out_var)
+    if (package MATCHES "^winrt/winrt-Windows[.]UI[.]Xaml" AND winrt_xaml_package_count GREATER 3)
+        set(${out_var} "winrt_xaml" PARENT_SCOPE)
+    elseif (package MATCHES "^winui3/winui3-Microsoft[.]UI[.]Xaml" AND winui3_xaml_package_count GREATER 3)
+        set(${out_var} "winui3_xaml" PARENT_SCOPE)
+    elseif (package MATCHES "^winui2/" AND winui2_package_count GREATER 3)
+        set(${out_var} "winui2" PARENT_SCOPE)
+    else()
+        set(${out_var} "common" PARENT_SCOPE)
+    endif()
+endfunction()
+
+set(winrt_xaml_packages ${packages})
+list(FILTER winrt_xaml_packages INCLUDE REGEX "^winrt/winrt-Windows[.]UI[.]Xaml")
+list(LENGTH winrt_xaml_packages winrt_xaml_package_count)
+
+set(winui3_xaml_packages ${winui3_packages})
+list(FILTER winui3_xaml_packages INCLUDE REGEX "^winui3/winui3-Microsoft[.]UI[.]Xaml")
+list(LENGTH winui3_xaml_packages winui3_xaml_package_count)
+
+list(LENGTH winui2_packages winui2_package_count)
+
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    # GCC can't allocate enough memory for more than this
+    set(pch_headers_common "${WINRT_SDK_PATH}/pywinrt/py.Windows.Foundation.h")
+else()
+    set(pch_headers_common
+        "${WINRT_SDK_PATH}/pywinrt/py.Windows.Foundation.h"
+        "${WINRT_SDK_PATH}/pywinrt/py.Windows.Storage.Streams.h"
+    )
+endif()
+
+set(pch_headers_winrt_xaml ${pch_headers_common}
+    "${WINRT_SDK_PATH}/pywinrt/py.Windows.UI.Xaml.types.h"
+    "${WINRT_SDK_PATH}/pywinrt/py.Windows.UI.Xaml.Controls.types.h"
+)
+set(pch_headers_winui3_xaml ${pch_headers_common}
+    "${WINRT_WINDOWS_APP_SDK_PATH}/pywinrt/py.Microsoft.UI.Xaml.types.h"
+    "${WINRT_WINDOWS_APP_SDK_PATH}/pywinrt/py.Microsoft.UI.Xaml.Controls.types.h"
+)
+# WinUI 2 has no Microsoft.UI.Xaml namespace of its own: its controls derive
+# from the Windows SDK's Windows.UI.Xaml, which is where its cost is.
+set(pch_headers_winui2 ${pch_headers_common}
+    "${WINRT_SDK_PATH}/pywinrt/py.Windows.UI.Xaml.types.h"
+    "${WINRT_SDK_PATH}/pywinrt/py.Windows.UI.Xaml.Controls.types.h"
+    "${WINRT_MICROSOFT_UI_XAML_PATH}/pywinrt/py.Microsoft.UI.Xaml.Controls.types.h"
+)
+
 foreach(package ${packages} ${winui2_packages} ${winui3_packages} ${webview2_packages} ${interop_packages} ${winui3_interop_packages})
     pywinrt_add_namespace_package(${package})
 
     # speed up builds by precompiling frequently used headers
     if (NOT package IN_LIST winui3_interop_packages)
-        if (NOT first_target)
-            set(first_target ${package_target})
+        pywinrt_pch_group("${package}" pch_group)
 
-            if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-                # GCC can't allocate enough memory for more than this
-                target_precompile_headers(${first_target} PRIVATE
-                    "${WINRT_SDK_PATH}/pywinrt/py.Windows.Foundation.h"
-                )
-            else()
-                target_precompile_headers(${first_target} PRIVATE
-                    "${WINRT_SDK_PATH}/pywinrt/py.Windows.Foundation.h"
-                    "${WINRT_SDK_PATH}/pywinrt/py.Windows.Storage.Streams.h"
-                )
-            endif()
+        if (NOT DEFINED pch_root_${pch_group})
+            set(pch_root_${pch_group} ${package_target})
+            target_precompile_headers(${package_target} PRIVATE ${pch_headers_${pch_group}})
         else()
-            target_precompile_headers(${package_target} REUSE_FROM ${first_target})
-            if (${package} IN_LIST circular_dependency_packages)
-                target_precompile_headers(${package_target}_2 REUSE_FROM ${first_target})
-            endif()
+            target_precompile_headers(${package_target} REUSE_FROM ${pch_root_${pch_group}})
+        endif()
+
+        if (${package} IN_LIST circular_dependency_packages)
+            target_precompile_headers(${package_target}_2 REUSE_FROM ${pch_root_${pch_group}})
         endif()
     endif()
 
@@ -314,7 +368,7 @@ endforeach()
 ################################################################################
 
 pywinrt_add_namespace_package("test-winrt/test-winrt-TestComponent")
-target_precompile_headers(${package_target} REUSE_FROM ${first_target})
+target_precompile_headers(${package_target} REUSE_FROM ${pch_root_common})
 set_target_properties(${package_target} PROPERTIES DEFINE_SYMBOL "")
 install(FILES "../_tools/PyWinRT.TestWinRT.${TEST_WINRT_VERSION}/runtimes/win10-${WINDOWS_APP_SDK_ARCH}/native/TestComponent.dll"
     DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/test_winrt/testcomponent/")
