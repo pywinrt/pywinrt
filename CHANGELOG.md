@@ -83,7 +83,8 @@
   headers it ships, `runtime/src/` for the C++ sources of the extension module.
   Everything under `projection/` is now generated except for the interop
   modules. `pyruntime.h`, which is private to the runtime's own translation
-  units, is no longer shipped in the `winrt-sdk` wheel.
+  units, moved there as `module_state.h` and is no longer shipped in the
+  `winrt-sdk` wheel.
 - The projection is now compiled without RTTI (`/GR-` on MSVC, `-fno-rtti`
   otherwise). Nothing in it uses `dynamic_cast`, and the only uses of `typeid`
   were a dozen `typeid(T).name()` calls in the messages of
