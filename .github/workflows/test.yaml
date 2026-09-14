@@ -13,6 +13,11 @@ on:
       - '!projection/**/*.txt'
       - '!projection/**/setup.py'
       - projection/CMakeLists.txt
+      - interop/**
+      - '!interop/**/*.md'
+      - '!interop/**/*.toml'
+      - '!interop/**/*.txt'
+      - '!interop/**/setup.py'
       - runtime/**
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'

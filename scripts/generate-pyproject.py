@@ -217,6 +217,7 @@ instead.
 
 PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
 RUNTIME_PATH = (Path(__file__).parent.parent / "runtime").resolve()
+INTEROP_PATH = (Path(__file__).parent.parent / "interop").resolve()
 
 PYTHON_KEYWORDS = {
     "and",
@@ -601,8 +602,8 @@ write_project_files(
 )
 
 for package_path in chain(
-    (PROJECTION_PATH / "interop").glob("winrt-*"),
-    (PROJECTION_PATH / "interop").glob("winui3-*"),
+    INTEROP_PATH.glob("winrt-*"),
+    INTEROP_PATH.glob("winui3-*"),
     (PROJECTION_PATH / "winrt").glob("winrt-*"),
     (PROJECTION_PATH / "winui2").glob("winui2-*"),
     (PROJECTION_PATH / "winui3").glob("winui3-*"),
@@ -644,8 +645,8 @@ for path in itertools.chain(
     (PROJECTION_PATH / "webview2").glob("webview2-*"),
     (PROJECTION_PATH / "winui2").glob("winui2-*"),
     (PROJECTION_PATH / "winui3").glob("winui3-*"),
-    (PROJECTION_PATH / "interop").glob("winrt-*"),
-    (PROJECTION_PATH / "interop").glob("winui3-*"),
+    INTEROP_PATH.glob("winrt-*"),
+    INTEROP_PATH.glob("winui3-*"),
 ):
     try:
         shutil.copy(

@@ -35,8 +35,8 @@ os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
 
 for package_path in chain(
     [PROJECT_DIR / "runtime"],
-    (PROJECTION_PATH / "interop").glob("winrt-*"),
-    (PROJECTION_PATH / "interop").glob("winui3-*"),
+    (PROJECT_DIR / "interop").glob("winrt-*"),
+    (PROJECT_DIR / "interop").glob("winui3-*"),
     (PROJECTION_PATH / "webview2").glob("webview2-*"),
     (PROJECTION_PATH / "winui2").glob("winui2-*"),
     (PROJECTION_PATH / "winui3").glob("winui3-*"),
