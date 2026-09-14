@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.Devices.I2c.2.h>
 
 namespace py::proj::Windows::Devices::I2c

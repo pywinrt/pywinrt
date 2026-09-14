@@ -33,7 +33,7 @@ __CRT_UUID_DECL(
 #endif
 #endif
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include "py.Windows.Graphics.Capture.h"
 #include <winrt/Windows.Graphics.Capture.h>
 

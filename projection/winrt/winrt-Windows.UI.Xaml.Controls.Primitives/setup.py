@@ -2,6 +2,7 @@
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
+from winrt._include import get_include
 from winrt_sdk import get_include_dirs
 
 
@@ -32,13 +33,13 @@ setup(
         Extension(
             "winrt._winrt_windows_ui_xaml_controls_primitives",
             sources=["py.Windows.UI.Xaml.Controls.Primitives.cpp"],
-            include_dirs=get_include_dirs(),
+            include_dirs=[get_include()] + get_include_dirs(),
             libraries=["windowsapp"],
         ),
         Extension(
             "winrt._winrt_windows_ui_xaml_controls_primitives_2",
             sources=["py.Windows.UI.Xaml.Controls.Primitives_2.cpp"],
-            include_dirs=get_include_dirs(),
+            include_dirs=[get_include()] + get_include_dirs(),
             libraries=["windowsapp"],
         ),
 

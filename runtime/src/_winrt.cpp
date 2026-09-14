@@ -3,7 +3,7 @@
 #include <libloaderapi.h>
 
 #define PYWINRT_RUNTIME_MODULE
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include "pyruntime.h"
 #include <winrt/base.h>
 

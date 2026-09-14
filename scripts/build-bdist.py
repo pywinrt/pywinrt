@@ -34,7 +34,7 @@ os.environ["MICROSOFT_UI_XAML_PATH"] = os.fspath(MICROSOFT_UI_XAML_PATH)
 os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
 
 for package_path in chain(
-    [PROJECTION_PATH / "winrt-runtime"],
+    [PROJECT_DIR / "runtime"],
     (PROJECTION_PATH / "interop").glob("winrt-*"),
     (PROJECTION_PATH / "interop").glob("winui3-*"),
     (PROJECTION_PATH / "webview2").glob("webview2-*"),

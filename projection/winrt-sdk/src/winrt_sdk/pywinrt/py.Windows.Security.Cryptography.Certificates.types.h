@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.Security.Cryptography.Certificates.2.h>
 
 namespace py::proj::Windows::Security::Cryptography::Certificates

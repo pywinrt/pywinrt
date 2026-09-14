@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Microsoft.Security.Authentication.OAuth.2.h>
 
 namespace py::proj::Microsoft::Security::Authentication::OAuth

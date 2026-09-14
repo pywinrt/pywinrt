@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.Gaming.Preview.GamesEnumeration.2.h>
 
 namespace py::proj::Windows::Gaming::Preview::GamesEnumeration

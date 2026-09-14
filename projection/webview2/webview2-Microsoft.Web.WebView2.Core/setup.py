@@ -2,6 +2,7 @@
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
+from winrt._include import get_include
 from winrt_sdk import get_include_dirs
 
 
@@ -32,7 +33,7 @@ setup(
         Extension(
             "webview2._webview2_microsoft_web_webview2_core",
             sources=["py.Microsoft.Web.WebView2.Core.cpp"],
-            include_dirs=get_include_dirs() + ["./webview2/cppwinrt", "./webview2/pywinrt"],
+            include_dirs=[get_include()] + get_include_dirs() + ["./webview2/cppwinrt", "./webview2/pywinrt"],
             libraries=["windowsapp"],
         )
     ],

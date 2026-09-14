@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.Management.Policies.2.h>
 
 namespace py::proj::Windows::Management::Policies

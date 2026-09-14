@@ -10,7 +10,7 @@ Example use in a `pyproject.toml` file:
 
 ```toml
 [build-system]
-requires = ["setuptools", "winrt-sdk", "winrt-Microsoft.UI.Xaml"]
+requires = ["setuptools", "winrt-runtime", "winrt-sdk", "winrt-Microsoft.UI.Xaml"]
 build-backend = "setuptools.build_meta"
 ```
 
@@ -18,11 +18,12 @@ Then in your `setup.py`:
 
 ```python
 from setuptools import setup
+from winrt._include import get_include
 from winrt_sdk import get_include_dirs
 
 setup(
     ...
-    include_dirs=get_include_dirs()
+    include_dirs=[get_include()] + get_include_dirs()
 )
 ```
 

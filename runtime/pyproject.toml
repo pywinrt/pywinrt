@@ -29,15 +29,15 @@ version = { file = "version.txt" }
 dependencies = { file = "requirements.txt" }
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["python"]
 
 [tool.setuptools.package-data]
-"*" = ["*.pyi", "py.typed"]
+"*" = ["*.pyi", "py.typed", "*.h"]
 
 [tool.cibuildwheel]
-# use local winrt-sdk build dependency
-environment = { PYTHONPATH="../winrt-sdk/src" }
-# don't install winrt-sdk from PyPI
+# use local winrt-sdk and winrt-runtime build dependencies
+environment = { PYTHONPATH="../projection/winrt-sdk/src;./python" }
+# don't install winrt-sdk or winrt-runtime from PyPI
 build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
 before-build = "uv pip install setuptools"
 # don't build for PyPy

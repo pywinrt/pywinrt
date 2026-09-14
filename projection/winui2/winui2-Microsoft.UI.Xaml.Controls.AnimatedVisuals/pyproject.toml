@@ -1,7 +1,7 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools>=78", "winrt-sdk", "winrt-Microsoft.UI.Xaml"]
+requires = ["setuptools>=78", "winrt-runtime", "winrt-sdk", "winrt-Microsoft.UI.Xaml"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -33,9 +33,9 @@ optional-dependencies.all = { file = "all-requirements.txt" }
 "*" = ["*.pyi", "py.typed"]
 
 [tool.cibuildwheel]
-# use local winrt-sdk build dependency
-environment = { PYTHONPATH="../../winrt-sdk/src;../../winrt-Microsoft.UI.Xaml/src" }
-# don't install winrt-sdk from PyPI
+# use local winrt-sdk and winrt-runtime build dependencies
+environment = { PYTHONPATH="../../winrt-sdk/src;../../../runtime/python;../../winrt-Microsoft.UI.Xaml/src" }
+# don't install winrt-sdk or winrt-runtime from PyPI
 build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
 before-build = "uv pip install setuptools"
 # don't build for PyPy

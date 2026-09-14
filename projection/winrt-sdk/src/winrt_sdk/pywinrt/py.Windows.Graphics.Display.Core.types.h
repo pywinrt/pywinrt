@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.Graphics.Display.Core.2.h>
 
 namespace py::proj::Windows::Graphics::Display::Core

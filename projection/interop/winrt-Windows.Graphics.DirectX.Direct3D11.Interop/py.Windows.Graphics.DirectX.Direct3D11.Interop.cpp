@@ -55,7 +55,7 @@ __CRT_UUID_DECL(
 #endif
 
 #include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include "py.Windows.Graphics.DirectX.Direct3D11.h"
 
 // https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/

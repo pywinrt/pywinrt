@@ -2,6 +2,7 @@
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
+from winrt._include import get_include
 from winrt_sdk import get_include_dirs
 
 
@@ -32,7 +33,7 @@ setup(
         Extension(
             "winrt._winrt_windows_media_interop",
             sources=["py.Windows.Media.Interop.cpp"],
-            include_dirs=get_include_dirs(),
+            include_dirs=[get_include()] + get_include_dirs(),
             libraries=["windowsapp"],
         )
     ],

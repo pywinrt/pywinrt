@@ -2,6 +2,7 @@
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
+from winrt._include import get_include
 from winrt_sdk import get_include_dirs
 from winrt_microsoft_ui_xaml import get_include_dirs as get_winui2_include_dirs
 
@@ -33,7 +34,7 @@ setup(
         Extension(
             "winui2._winui2_microsoft_ui_xaml_automation_peers",
             sources=["py.Microsoft.UI.Xaml.Automation.Peers.cpp"],
-            include_dirs=get_include_dirs() + get_winui2_include_dirs(),
+            include_dirs=[get_include()] + get_include_dirs() + get_winui2_include_dirs(),
             libraries=["windowsapp"],
         )
     ],

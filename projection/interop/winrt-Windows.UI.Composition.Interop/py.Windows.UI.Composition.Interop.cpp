@@ -46,7 +46,7 @@ __CRT_UUID_DECL(
 
 #include <Python.h>
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <py.Windows.UI.Composition.h>
 #include <py.Windows.UI.Composition.Desktop.h>
 

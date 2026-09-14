@@ -4,8 +4,8 @@
 #include <Python.h>
 #include <datetime.h>
 #include <structmember.h>
-#include "pythoncapi_compat.h"
-#include "pywinrt_version.h"
+#include <pythoncapi_compat.h>
+#include <pywinrt/version.h>
 
 #define COM_NO_WINDOWS_H
 #ifndef NOMINMAX

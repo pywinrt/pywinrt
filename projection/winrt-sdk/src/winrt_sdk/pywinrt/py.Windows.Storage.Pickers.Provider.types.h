@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.Storage.Pickers.Provider.2.h>
 
 namespace py::proj::Windows::Storage::Pickers::Provider

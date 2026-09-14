@@ -341,7 +341,7 @@ sealed class Members
                 Collect(arg);
             }
 
-            // The runtime wrappers in pybase.h and the generated headers use
+            // The runtime wrappers in pywinrt/base.h and the generated headers use
             // these related instances to implement the collection and async
             // interfaces, so they are needed too.
             foreach (var related in WinRtGuid.GetRelatedInstances(gen))
@@ -399,7 +399,7 @@ sealed class Members
     /// generated header; generic interfaces and delegates, whose Python
     /// wrapper templates are in the full generated header (in practice only
     /// Windows.Foundation and Windows.Foundation.Collections, which are
-    /// included by pybase.h anyway); and the interfaces that declare the
+    /// included by pywinrt/base.h anyway); and the interfaces that declare the
     /// members being called (e.g. a required interface from another
     /// namespace), whose C++/WinRT consume methods are defined in the full
     /// C++/WinRT header; and, for composable classes, the base classes whose

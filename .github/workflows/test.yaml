@@ -13,6 +13,11 @@ on:
       - '!projection/**/*.txt'
       - '!projection/**/setup.py'
       - projection/CMakeLists.txt
+      - runtime/**
+      - '!runtime/**/*.md'
+      - '!runtime/**/*.toml'
+      - '!runtime/**/*.txt'
+      - '!runtime/setup.py'
       - test/**
 
 jobs:

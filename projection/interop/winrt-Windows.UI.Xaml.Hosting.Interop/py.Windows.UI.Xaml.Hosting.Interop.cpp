@@ -1,5 +1,5 @@
 #include <windows.ui.xaml.hosting.desktopwindowxamlsource.h>
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/base.h>
 
 // https://learn.microsoft.com/en-us/windows/win32/api/windows.ui.xaml.hosting.desktopwindowxamlsource/

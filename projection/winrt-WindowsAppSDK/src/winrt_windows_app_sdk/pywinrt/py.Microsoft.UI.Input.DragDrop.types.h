@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Microsoft.UI.Input.DragDrop.2.h>
 
 namespace py::proj::Microsoft::UI::Input::DragDrop

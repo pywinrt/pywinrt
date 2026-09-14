@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.Security.Credentials.2.h>
 
 namespace py::proj::Windows::Security::Credentials

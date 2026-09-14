@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.Devices.SerialCommunication.2.h>
 
 namespace py::proj::Windows::Devices::SerialCommunication

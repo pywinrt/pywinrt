@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.ApplicationModel.UserActivities.Core.2.h>
 
 namespace py::proj::Windows::ApplicationModel::UserActivities::Core

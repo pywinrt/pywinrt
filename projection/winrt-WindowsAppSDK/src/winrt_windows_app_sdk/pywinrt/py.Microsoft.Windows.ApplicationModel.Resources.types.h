@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Microsoft.Windows.ApplicationModel.Resources.2.h>
 
 namespace py::proj::Microsoft::Windows::ApplicationModel::Resources

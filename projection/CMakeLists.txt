@@ -56,6 +56,13 @@ find_package(Python3 REQUIRED COMPONENTS Development.Module)
 ################################################################################
 
 set(WINRT_SDK_PATH "winrt-sdk/src/winrt_sdk")
+# The runtime is hand-written, so it lives outside of projection/. Its public
+# C++ headers sit inside its Python package, the way numpy and pybind11 ship
+# theirs, so that they are found at the same place in a wheel and here.
+set(WINRT_RUNTIME_PATH "../runtime")
+set(WINRT_RUNTIME_SRC_PATH "${WINRT_RUNTIME_PATH}/src")
+set(WINRT_RUNTIME_PYTHON_PATH "${WINRT_RUNTIME_PATH}/python/winrt")
+set(WINRT_RUNTIME_INCLUDE_PATH "${WINRT_RUNTIME_PYTHON_PATH}/include")
 set(WINRT_MICROSOFT_UI_XAML_PATH "winrt-Microsoft.UI.Xaml/src/winrt_microsoft_ui_xaml")
 set(WINRT_WINDOWS_APP_SDK_PATH "winrt-WindowsAppSDK/src/winrt_windows_app_sdk")
 set(WINRT_WEBVIEW2_PATH "webview2/webview2-Microsoft.Web.WebView2.Core/webview2")
@@ -80,7 +87,11 @@ message(STATUS "Windows App SDK architecture: ${WINDOWS_APP_SDK_ARCH}")
 function(pywinrt_add_library target sources)
     Python3_add_library(${target} MODULE "${sources}")
     set_target_properties(${target} PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG ${target}_d)
-    target_include_directories(${target} PRIVATE "${WINRT_SDK_PATH}/cppwinrt" "${WINRT_SDK_PATH}/pywinrt")
+    target_include_directories(${target} PRIVATE
+        "${WINRT_RUNTIME_INCLUDE_PATH}"
+        "${WINRT_SDK_PATH}/cppwinrt"
+        "${WINRT_SDK_PATH}/pywinrt"
+    )
 
     if (MSVC)
         target_link_options(${target} PRIVATE $<$<CONFIG:RelWithDebInfo>:/PROFILE /INCREMENTAL:NO>)
@@ -149,17 +160,16 @@ endfunction()
 # main runtime package
 ################################################################################
 
-set(WINRT_RUNTIME_PATH "winrt-runtime")
 set(WINRT_RUNTIME_SOURCES
-    "${WINRT_RUNTIME_PATH}/_winrt.cpp"
-    "${WINRT_RUNTIME_PATH}/_winrt_array.cpp"
-    "${WINRT_RUNTIME_PATH}/_winrt_box.cpp"
-    "${WINRT_RUNTIME_PATH}/_winrt_buffer.cpp"
-    "${WINRT_RUNTIME_PATH}/runtime.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/_winrt.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/_winrt_array.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/_winrt_box.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/_winrt_buffer.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/runtime.cpp"
 )
 pywinrt_add_library(_winrt "${WINRT_RUNTIME_SOURCES}")
 install(TARGETS _winrt DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
-install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+install(DIRECTORY "${WINRT_RUNTIME_PYTHON_PATH}/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
 
 # windows sdk packages
 ################################################################################
@@ -264,11 +274,11 @@ endif()
 
 # The runtime module gets a precompiled header of its own rather than sharing
 # the common one. Its five translation units all define PYWINRT_RUNTIME_MODULE,
-# which selects the implementation side of pybase.h's runtime API; the other
+# which selects the implementation side of pywinrt/base.h's runtime API; the other
 # packages get the client side, a set of inline forwarders through the
 # winrt._winrt capsule that would collide with the real definitions here. So
 # the two cannot share a precompiled header, but the runtime still parses the
-# same ~6 s of pybase.h and cppwinrt headers in every one of its translation
+# same ~6 s of pywinrt/base.h and cppwinrt headers in every one of its translation
 # units, and those are rebuilt on exactly the edits the iteration loop is made
 # of.
 #
