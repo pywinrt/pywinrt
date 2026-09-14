@@ -6,7 +6,7 @@
 #include "winrt/base.h"
 static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.250303.1"), "Mismatched C++/WinRT headers.");
 #define CPPWINRT_VERSION "2.0.250303.1"
-#include "winrt/Windows.UI.Input.Preview.h"
+#include "winrt/impl/Windows.UI.Input.Preview.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Gaming.Input.2.h"
 #include "winrt/impl/Windows.UI.Input.Preview.Injection.2.h"

@@ -6,7 +6,7 @@
 #include "winrt/base.h"
 static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.250303.1"), "Mismatched C++/WinRT headers.");
 #define CPPWINRT_VERSION "2.0.250303.1"
-#include "winrt/Windows.Devices.Printers.h"
+#include "winrt/impl/Windows.Devices.Printers.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Devices.Printers.Extensions.2.h"
 namespace winrt::impl
