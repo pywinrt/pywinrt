@@ -40,6 +40,10 @@
   precompiled header of their own. Groups too small to pay for one fall back to
   the common precompiled header, so this does not slow down
   `PYWINRT_FULL_PROJECTION=OFF` builds.
+- The CMake build now gives the `winrt-runtime` module a precompiled header
+  too. It cannot share the one the other packages use because its sources define
+  `PYWINRT_RUNTIME_MODULE`, so it gets one of its own, built from the same
+  headers.
 - Members of a runtime class or interface that are declared by another interface
   are now reached by querying that interface instead of by first asking
   `ApiInformation` whether this version of Windows has the member. C++/WinRT
